@@ -4,7 +4,7 @@ Begleitprojekt zum Blogpost auf rubeen.dev. These: Jede Eval-Methode hat einen b
 
 ## Ergebnis
 
-Kein Grader findet alle zwölf Fehlerarten, ohne auch Fehlerfreies abzulehnen: `judge-sourced` lässt alle 24 Kontrollen durchfallen, `judge-ref` findet alles im Text, aber keine Fehler in Sandbox und Weg. Werte aus Mutationen übertragen sich schlecht auf den echten Agenten: `judge-ref` findet 47 von 47 Fehlern im Text, lässt aber nur 2 von 24 Agent-Texten bestehen, und ohne Labels bleibt offen, wie viele dieser Ablehnungen berechtigt sind. Die erwartete Ablenkung durch selbstbewussten Ton trat nicht ein, er machte 0 Urteile milder und 7 strenger, allerdings mit Wörtern, die die Rubric ohnehin verbietet.
+Kein Grader findet alle zwölf Fehlerarten: `judge-ref` findet alles im Text, aber nichts in Sandbox und Weg, und der strengste, `judge-sourced`, lässt auch alle 24 Kontrollen durchfallen. Werte aus Mutationen übertragen sich schlecht auf den echten Agenten: `judge-ref` findet 47 von 47 Fehlern im Text, lässt aber nur 2 von 24 Agent-Texten bestehen, und ohne Labels bleibt offen, wie viele dieser Ablehnungen berechtigt sind. Die erwartete Ablenkung durch selbstbewussten Ton trat nicht ein, er machte 0 Urteile milder und 7 strenger, allerdings mit Wörtern, die die Rubric ohnehin verbietet.
 
 Details in [docs/findings.md](docs/findings.md), Ablauf und Pannen in [docs/run-log.md](docs/run-log.md).
 
@@ -16,7 +16,9 @@ Details in [docs/findings.md](docs/findings.md), Ablauf und Pannen in [docs/run-
 python3 -m http.server -d site 8000
 ```
 
-`npm run report` kopiert `summary.json` und `demo.json` nach `site/data/`, die Demo rechnet keine eigenen Kennzahlen. Einzige Ausnahme ist der Regler zur Pass-Rate, ein Test hält seine Formel gleich mit `src/aggregate.mjs`.
+`npm run report` kopiert `summary.json` und `demo.json` nach `site/data/`. Alle Tabellen kommen von dort. Im Browser rechnet nur zweierlei: der Regler zur Pass-Rate, ein Test hält seine Formel gleich mit `src/aggregate.mjs`, und die Treffer-Balken im Bewertungsspiel, gezählt aus den Urteilen in `demo.json`.
+
+`scripts/check-site.cjs` spielt die Seite mit Playwright durch. Playwright ist bewusst keine Abhängigkeit, die Kopfzeile des Skripts sagt, wie es läuft.
 
 ## Aufbau
 

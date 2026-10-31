@@ -36,11 +36,11 @@
       <div class="hero-text">
         <p class="meta">Grader Lab: <span data-fact="faultKinds"></span> Fehlerarten, <span data-fact="graders"></span> Grader, <span data-fact="calls"></span> Modellaufrufe</p>
         <h1>Jede Eval-Methode hat einen <mark>blinden Fleck</mark></h1>
-        <p class="lead">Ein Agent schreibt Release Notes. Wir bauen Fehler mit Absicht in korrekte Notes ein und messen, welcher Grader welchen findet. Kein Grader findet alle, ohne auch Fehlerfreies abzulehnen.</p>
+        <p class="lead">Ein Agent schreibt Release Notes. Wir bauen Fehler mit Absicht in korrekte Notes ein und messen, welcher Grader welchen findet. Kein Grader findet alle zwölf, und der strengste lässt auch alle fehlerfreien Kontrollen durchfallen.</p>
       </div>
       <figure class="hero-map">
         <a href="#matrix" aria-label="Zur Matrix: Grader mal Fehlerart" id="hero-map"></a>
-        <figcaption>Volle Felder: alle Fälle gefunden. Halbe: ein Teil. Leere: blinder Fleck. Rechts vier fehlerfreie Kontrollen, ein Feld dort ist Fehlalarm.</figcaption>
+        <figcaption>Volle Felder: alle Fälle gefunden. Halbe: ein Teil. Leere: blinder Fleck. Schraffiert: durchgefallen, aber kein Fund. Rechts vier fehlerfreie Kontrollen, ein Feld dort ist Fehlalarm.</figcaption>
       </figure>
     </section>
 
@@ -70,7 +70,7 @@
       <ul class="legend" aria-label="Legende">
         <li><span class="swatch cell-full">6/6</span> alle gefunden</li>
         <li><span class="swatch cell-part">2/6</span> ein Teil gefunden</li>
-        <li><span class="swatch cell-none">0/6</span> blinder Fleck</li>
+        <li><span class="swatch cell-none">0/6</span> blinder Fleck, bei Kontrollen: kein Fehlalarm</li>
         <li><span class="swatch cell-alarm">6/6 !</span> Fehlalarm auf einer Kontrolle</li>
         <li><span class="swatch cell-noise">6/6 †</span> kein Fund, siehe unten</li>
         <li><span class="swatch cell-you">1/1</span> Du: durchfallen lassen, 0/1 heißt bestehen lassen</li>
@@ -78,7 +78,7 @@
       <div class="reading">
         <h3>Was hier auffällt</h3>
         <ul>
-          <li><code>judge-sourced</code> füllt seine ganze Spalte, auch bei den <span data-fact="controls"></span> Kontrollen: TPR <span data-fact="jsrcTpr"></span>, TNR <span data-fact="jsrcTnr"></span>. Seine 100 % Fundrate sagen allein deshalb nichts. Eine Zusatzprüfung, nach den Läufen definiert, zeigt: Er meldet meist wirklich den eingebauten Fehler, lehnt daneben aber auch Fehlerfreies ab. Er ist zu streng, kein Zufallsgenerator.</li>
+          <li><code>judge-sourced</code> füllt seine ganze Spalte, auch bei den <span data-fact="controls"></span> Kontrollen: TPR <span data-fact="jsrcTpr"></span>, TNR <span data-fact="jsrcTnr"></span>. Seine Fundrate von 100 % sagt allein deshalb nichts. Eine Zusatzprüfung, nach den Läufen definiert, zeigt: Er meldet meist wirklich den eingebauten Fehler, lehnt daneben aber auch Fehlerfreies ab. Er ist zu streng, kein Zufallsgenerator.</li>
           <li>† Bei <code>false-success</code> und <code>lucky-path</code> ist der Treffer von <code>judge-sourced</code> kein Fund. Er sieht denselben Text wie bei Gold und lehnt ihn genauso ab. Diese beiden Fehler finden nur <code>functional</code> und <code>trajectory</code>.</li>
           <li><code>judge-blind</code> findet Fehler in Form und Ton, inhaltliche kaum: 1/6 erfundene Aussagen, 0/6 Verweise auf nicht existierende PRs.</li>
           <li><code>pairwise</code> sieht die erfundene PR-Nummer und nennt sie im Klartext. Ohne Quellen gelten ihm beide Fassungen trotzdem als gleichwertig, 0/6. <code>pr-refs</code> findet alle sechs und kostet keinen Modellaufruf.</li>
@@ -130,7 +130,7 @@
       </div>
       <div id="distraction"></div>
       <div class="prose-block">
-        <p>Das Urteil stimmt, die Begründung trägt aber nicht immer. Fällt die selbstbewusste Fassung bei <code>judge-blind</code> durch, nennen <span data-fact="blindTone"></span> Wiederholungen den Ton. Die Erfindung bleibt ungeprüft. Die Reihenfolge spielt hier kaum eine Rolle: <span data-fact="e3Flips"></span> echte Umkehrungen und <span data-fact="e3Mismatch"></span> ungleiche Antworten in <span data-fact="e3Order"></span> Wiederholungen von <code>pairwise</code>.</p>
+        <p>Das Urteil stimmt, die Begründung trägt aber nicht immer. Fällt die selbstbewusste Fassung bei <code>judge-blind</code> durch, nennen <span data-fact="blindTone"></span> Wiederholungen den Ton. Die Erfindung bleibt laut Begründung ungeprüft. Die Reihenfolge spielt hier kaum eine Rolle: <span data-fact="e3Flips"></span> echte Umkehrungen und <span data-fact="e3Mismatch"></span> ungleiche Antworten in <span data-fact="e3Order"></span> Wiederholungen von <code>pairwise</code>.</p>
         <p>Die Aussagekraft ist begrenzt. Die selbstbewussten Fassungen enthalten Wörter wie „guaranteed“ und „definitively“. Die Rubric verbietet solchen Ton ausdrücklich, ein Judge hat also einen Anlass abzulehnen. Zudem verschärfen einzelne Formulierungen die Aussage etwas. Eine Ablenkung, die im Ton innerhalb der Rubric bleibt, haben wir nicht getestet.</p>
       </div>
       <details class="fold">
@@ -151,7 +151,7 @@
         <li><strong>Ein Modellstand.</strong> Agent <code data-fact="agentModel"></code>, Judges <code data-fact="judgeModel"></code>, Effort <code data-fact="effort"></code>. Andere Modelle sind nicht gemessen.</li>
         <li><strong>Keine menschlichen Labels.</strong> Die Spalte „Du“ zeigt nur, was du selbst bewertet hast. Für die Läufe des echten Agenten gibt es kein Label, nur Widersprüche zwischen Gradern. Die Einordnung der Beispiele stammt vom Autor, nicht aus einer Messung.</li>
         <li><strong>Diffs sind Ausschnitte.</strong> Das begünstigt die „unbelegt“-Vorwürfe von <code>judge-sourced</code>. Mit vollständigen Diffs könnte seine TPR anders ausfallen, das ist nicht gemessen.</li>
-        <li><strong>Nachträgliche Prüfung.</strong> Die Rubrics und Prompts wurden vor dem ersten Lauf eingefroren und danach nicht geändert. Nur die Zusatzprüfung, ob ein Judge den eingebauten Fehler wirklich trifft, kam nach den Läufen dazu.</li>
+        <li><strong>Nachträgliche Prüfung.</strong> Die Rubrics und Prompts wurden vor der Messung der Matrix eingefroren und danach nicht geändert. Nur die Zusatzprüfung, ob ein Judge den eingebauten Fehler wirklich trifft, kam nach den Läufen dazu.</li>
       </ul>
       <p class="links">
         <a class="btn btn-primary" href="https://rubeen.dev/blog/">Blogpost lesen</a>

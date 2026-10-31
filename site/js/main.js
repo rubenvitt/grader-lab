@@ -78,6 +78,8 @@ function main(demo, summary) {
   const controls = Object.keys(summary.matrix.schema).filter((v) => !mutations.includes(v));
   const passCount = (grader) => summary.e4.byPrompt.naive.passes[grader] + summary.e4.byPrompt.careful.passes[grader];
   const countOf = ({ tnr, faulty }) => Math.round(tnr * faulty);
+  // Same text as gold, rejected just like gold: durchgefallen, but not a find.
+  const isNoise = (grader, variant) => grader === 'judge-sourced' && ['false-success', 'lucky-path'].includes(variant);
 
   function fillFacts() {
     const { rogan: rg, runs } = summary.e4;
@@ -104,7 +106,7 @@ function main(demo, summary) {
   function heroMap() {
     const cell = (grader, variant, control) => {
       const { found, total } = summary.matrix[grader][variant];
-      const state = !found ? 'none' : found < total ? 'part' : 'full';
+      const state = !found ? 'none' : isNoise(grader, variant) ? 'noise' : found < total ? 'part' : 'full';
       return h('span', { class: `dot dot-${state}${control ? ' dot-control' : ''}` });
     };
     const rows = graders.map((grader) => [
@@ -327,7 +329,6 @@ function main(demo, summary) {
 
   function matrixSection() {
     const humanCells = new Map();
-    const isNoise = (grader, variant) => grader === 'judge-sourced' && ['false-success', 'lucky-path'].includes(variant);
 
     const cell = (grader, variant, r, c) => {
       const { found, total } = summary.matrix[grader][variant];
