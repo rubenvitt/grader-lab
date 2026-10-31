@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { changedTokens, hitsTarget, orderAgreement, uniqueByText } from '../src/report.mjs';
+import { changedTokens, hitsTarget, orderAgreement, uniqueByText, wilson } from '../src/report.mjs';
 
 test('changed tokens are the symmetric difference, so a removed name counts too', () => {
   const changed = changedTokens('set timeoutMs now', 'set timeout now');
@@ -24,4 +24,11 @@ test('unique text keeps the control when a mutation shares its text', () => {
 test('order agreement separates consistent answers, one-sided equal and flips', () => {
   const row = (g, c, flip = false) => ({ reason: `Gold zuerst: ${g}, x | Kandidat zuerst: ${c}, y`, order_flip: flip });
   assert.deepEqual(orderAgreement([row('A', 'B'), row('equal', 'equal'), row('A', 'equal'), row('A', 'A', true)]), { total: 4, consistent: 2, inconsistent: 2, one_equal: 1, flips: 1 });
+});
+
+test('Wilson interval stays within 0 to 1 and widens with small n', () => {
+  const round = ({ low, high }) => [low.toFixed(2), high.toFixed(2)];
+  assert.deepEqual(round(wilson(3, 3)), ['0.44', '1.00']);
+  assert.deepEqual(round(wilson(1, 3)), ['0.06', '0.79']);
+  assert.deepEqual(round(wilson(0, 18)), ['0.00', '0.18']);
 });

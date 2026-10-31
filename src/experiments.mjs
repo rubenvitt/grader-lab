@@ -11,8 +11,8 @@ function context(fixture, prompts) {
 export function codeRows(item, fixture, prompts, experiment) {
   const ctx = context(fixture, prompts);
   return Object.entries(CODE_GRADERS).map(([grader, fn]) => {
-    const { pass, findings } = fn(item.artifact, ctx);
-    return { experiment, release: item.release, variant: item.variant, kind: item.kind, grader, rep: 0, pass, model: null, prompt_version: prompts.version, findings };
+    const { pass, findings, score } = fn(item.artifact, ctx);
+    return { experiment, release: item.release, variant: item.variant, kind: item.kind, grader, rep: 0, pass, model: null, prompt_version: prompts.version, findings, ...(score != null ? { score } : {}) };
   });
 }
 

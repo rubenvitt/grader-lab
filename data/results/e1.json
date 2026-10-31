@@ -63,7 +63,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.8136573038330959
   },
   {
    "experiment": "e1",
@@ -149,7 +150,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9927710843373495
   },
   {
    "experiment": "e1",
@@ -235,7 +237,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9927710843373495
   },
   {
    "experiment": "e1",
@@ -319,7 +322,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9638817016159272
   },
   {
    "experiment": "e1",
@@ -403,7 +407,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9879255873154226
   },
   {
    "experiment": "e1",
@@ -489,7 +494,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9573262465601622
   },
   {
    "experiment": "e1",
@@ -580,7 +586,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9630406865801252
   },
   {
    "experiment": "e1",
@@ -674,7 +681,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.7753645807536691
   },
   {
    "experiment": "e1",
@@ -762,7 +770,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.329 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.32867505211442694
   },
   {
    "experiment": "e1",
@@ -846,7 +855,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1.0000000000000002
   },
   {
    "experiment": "e1",
@@ -932,7 +942,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1.0000000000000002
   },
   {
    "experiment": "e1",
@@ -1026,7 +1037,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1.0000000000000002
   },
   {
    "experiment": "e1",
@@ -1112,7 +1124,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.641 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.6413268764693938
   },
   {
    "experiment": "e1",
@@ -1196,7 +1209,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9951807228915664
   },
   {
    "experiment": "e1",
@@ -1280,7 +1294,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1.0000000000000002
   },
   {
    "experiment": "e1",
@@ -1366,7 +1381,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9899665551839465
   },
   {
    "experiment": "e1",
@@ -1450,7 +1466,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9255088125349132
   },
   {
    "experiment": "e1",
@@ -1534,7 +1551,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9899384596484759
   },
   {
    "experiment": "e1",
@@ -1621,7 +1639,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.8825553047035566
   },
   {
    "experiment": "e1",
@@ -1708,7 +1727,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9461911363472405
   },
   {
    "experiment": "e1",
@@ -1801,7 +1821,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.7288403431811691
   },
   {
    "experiment": "e1",
@@ -1887,7 +1908,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.270 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.2697255448185043
   },
   {
    "experiment": "e1",
@@ -1971,7 +1993,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1
   },
   {
    "experiment": "e1",
@@ -2057,7 +2080,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1
   },
   {
    "experiment": "e1",
@@ -2149,7 +2173,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1
   },
   {
    "experiment": "e1",
@@ -2235,7 +2260,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.610 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.6098920047979691
   },
   {
    "experiment": "e1",
@@ -2319,7 +2345,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9933110367892977
   },
   {
    "experiment": "e1",
@@ -2403,7 +2430,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1
   },
   {
    "experiment": "e1",
@@ -2487,7 +2515,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9047435824665512
   },
   {
    "experiment": "e1",
@@ -2573,7 +2602,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9942418426103649
   },
   {
    "experiment": "e1",
@@ -2659,7 +2689,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9942418426103649
   },
   {
    "experiment": "e1",
@@ -2743,7 +2774,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.984935046376627
   },
   {
    "experiment": "e1",
@@ -2827,7 +2859,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9942326076803383
   },
   {
    "experiment": "e1",
@@ -2911,7 +2944,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9361358873930018
   },
   {
    "experiment": "e1",
@@ -2997,7 +3031,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9817535760024686
   },
   {
    "experiment": "e1",
@@ -3087,7 +3122,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.8709400460758043
   },
   {
    "experiment": "e1",
@@ -3173,7 +3209,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.408 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.40798796540817317
   },
   {
    "experiment": "e1",
@@ -3257,7 +3294,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1.0000000000000002
   },
   {
    "experiment": "e1",
@@ -3343,7 +3381,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1.0000000000000002
   },
   {
    "experiment": "e1",
@@ -3437,7 +3476,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1.0000000000000002
   },
   {
    "experiment": "e1",
@@ -3523,7 +3563,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.685 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.6852207293666028
   },
   {
    "experiment": "e1",
@@ -3607,7 +3648,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.99616122840691
   },
   {
    "experiment": "e1",
@@ -3691,7 +3733,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1.0000000000000002
   },
   {
    "experiment": "e1",
@@ -3777,7 +3820,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9813664596273292
   },
   {
    "experiment": "e1",
@@ -3861,7 +3905,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9004176858455201
   },
   {
    "experiment": "e1",
@@ -3945,7 +3990,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9813664596273292
   },
   {
    "experiment": "e1",
@@ -4031,7 +4077,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.8770166919756175
   },
   {
    "experiment": "e1",
@@ -4120,7 +4167,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9036999324875021
   },
   {
    "experiment": "e1",
@@ -4210,7 +4258,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.7442879147997413
   },
   {
    "experiment": "e1",
@@ -4298,7 +4347,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.332 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.3323604212205244
   },
   {
    "experiment": "e1",
@@ -4382,7 +4432,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1
   },
   {
    "experiment": "e1",
@@ -4468,7 +4519,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1
   },
   {
    "experiment": "e1",
@@ -4559,7 +4611,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1
   },
   {
    "experiment": "e1",
@@ -4645,7 +4698,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.585 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.5854638164637433
   },
   {
    "experiment": "e1",
@@ -4729,7 +4783,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9937888198757764
   },
   {
    "experiment": "e1",
@@ -4813,7 +4868,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1
   },
   {
    "experiment": "e1",
@@ -4897,7 +4953,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.930834183391316
   },
   {
    "experiment": "e1",
@@ -4985,7 +5042,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9937369519832986
   },
   {
    "experiment": "e1",
@@ -5071,7 +5129,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9937369519832986
   },
   {
    "experiment": "e1",
@@ -5155,7 +5214,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9819633729894124
   },
   {
    "experiment": "e1",
@@ -5239,7 +5299,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9937521565825409
   },
   {
    "experiment": "e1",
@@ -5325,7 +5386,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9636827669903371
   },
   {
    "experiment": "e1",
@@ -5414,7 +5476,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.8697229490299373
   },
   {
    "experiment": "e1",
@@ -5502,7 +5565,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.414 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.41355240860233505
   },
   {
    "experiment": "e1",
@@ -5586,7 +5650,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1
   },
   {
    "experiment": "e1",
@@ -5672,7 +5737,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1
   },
   {
    "experiment": "e1",
@@ -5767,7 +5833,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1
   },
   {
    "experiment": "e1",
@@ -5853,7 +5920,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.677 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.6773535624093329
   },
   {
    "experiment": "e1",
@@ -5937,7 +6005,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9958246346555324
   },
   {
    "experiment": "e1",
@@ -6021,7 +6090,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1
   },
   {
    "experiment": "e1",
@@ -6107,7 +6177,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9849246231155779
   },
   {
    "experiment": "e1",
@@ -6191,7 +6262,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9589241036279633
   },
   {
    "experiment": "e1",
@@ -6279,7 +6351,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9465350615298745
   },
   {
    "experiment": "e1",
@@ -6367,7 +6440,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.8668490604111776
   },
   {
    "experiment": "e1",
@@ -6456,7 +6530,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9179412412770663
   },
   {
    "experiment": "e1",
@@ -6542,7 +6617,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.804163147574008
   },
   {
    "experiment": "e1",
@@ -6630,7 +6706,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.326 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.326310186224881
   },
   {
    "experiment": "e1",
@@ -6714,7 +6791,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1
   },
   {
    "experiment": "e1",
@@ -6800,7 +6878,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1
   },
   {
    "experiment": "e1",
@@ -6892,7 +6971,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1
   },
   {
    "experiment": "e1",
@@ -6978,7 +7058,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.650 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.6503725760328994
   },
   {
    "experiment": "e1",
@@ -7062,7 +7143,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9899497487437185
   },
   {
    "experiment": "e1",
@@ -7146,7 +7228,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 1
   },
   {
    "experiment": "e1",

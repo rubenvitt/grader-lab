@@ -61,7 +61,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9638817016159272
   },
   {
    "experiment": "e3",
@@ -145,7 +146,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9002198192771954
   },
   {
    "experiment": "e3",
@@ -229,7 +231,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9255088125349132
   },
   {
    "experiment": "e3",
@@ -313,7 +316,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.8465939066058501
   },
   {
    "experiment": "e3",
@@ -397,7 +401,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.984935046376627
   },
   {
    "experiment": "e3",
@@ -481,7 +486,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9625059123899878
   },
   {
    "experiment": "e3",
@@ -565,7 +571,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9004176858455201
   },
   {
    "experiment": "e3",
@@ -649,7 +656,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.8575568358470909
   },
   {
    "experiment": "e3",
@@ -733,7 +741,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9819633729894124
   },
   {
    "experiment": "e3",
@@ -817,7 +826,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9625481976929839
   },
   {
    "experiment": "e3",
@@ -901,7 +911,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9589241036279633
   },
   {
    "experiment": "e3",
@@ -985,7 +996,8 @@
    "pass": true,
    "model": null,
    "prompt_version": "v1",
-   "findings": []
+   "findings": [],
+   "score": 0.9038325351062257
   },
   {
    "experiment": "e3",

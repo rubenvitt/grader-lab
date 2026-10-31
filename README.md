@@ -4,7 +4,7 @@ Begleitprojekt zum Blogpost auf rubeen.dev. These: Jede Eval-Methode hat einen b
 
 ## Ergebnis
 
-Kein Grader findet alle zwölf Fehlerarten: `judge-ref` findet alles im Text, aber nichts in Sandbox und Weg, und der strengste, `judge-sourced`, lässt auch alle 24 Kontrollen durchfallen. Werte aus Mutationen übertragen sich schlecht auf den echten Agenten: `judge-ref` findet 47 von 47 Fehlern im Text, lässt aber nur 2 von 24 Agent-Texten bestehen, und ohne Labels bleibt offen, wie viele dieser Ablehnungen berechtigt sind. Die erwartete Ablenkung durch selbstbewussten Ton trat nicht ein, er machte 0 Urteile milder und 7 strenger, allerdings mit Wörtern, die die Rubric ohnehin verbietet.
+Kein Grader findet alle zwölf Fehlerarten: `judge-ref` findet alles im Text, aber nichts in Sandbox und Weg, und der strengste, `judge-sourced`, lässt auch alle 24 Kontrollen durchfallen. Das ist kein bloßer Fehlalarm: Die Kontrollen sind nur annähernd fehlerfrei, und in 5 von 6 Releases wiederholt er Vorwürfe gegen Gold in allen drei Wiederholungen. Er ist streng und zugleich teils im Recht, ohne Labels ist das nicht trennbar. Werte aus Mutationen übertragen sich schlecht auf den echten Agenten: `judge-ref` findet 47 von 47 Fehlern im Text (47 von 59 über alle Mutationen), lässt aber nur 2 von 24 Agent-Texten bestehen, und ohne Labels bleibt offen, wie viele dieser Ablehnungen berechtigt sind. Seine 0 Fehlalarme tragen wenig, denn 12 der 24 Kontrollen sind Gold selbst, echt gefordert ist er nur auf 6 Paraphrasen. Die Ablenkung durch selbstbewussten Ton ist mit diesem Aufbau nicht prüfbar: Die selbstbewussten Fassungen verletzen die Rubric zusätzlich und ändern den Inhalt.
 
 Details in [docs/findings.md](docs/findings.md), Ablauf und Pannen in [docs/run-log.md](docs/run-log.md).
 
@@ -55,6 +55,9 @@ Der Runner begrenzt auf 6 parallele Aufrufe und 1.500 insgesamt, gezählt über 
 - Mutationen stammen vom selben Autor wie die Grader
 - Ein Modellstand, keine menschlichen Labels
 - Gold ist von Hand geschrieben und nicht fehlerfrei, die Kontrollen sind also nur annähernd fehlerfrei. Beispiele in [docs/findings.md](docs/findings.md).
+- Ein Teil der Kontrollen vergleicht Gold mit sich selbst, echt gefordert sind die Grader nur auf 6 Paraphrasen.
+- Die Prompts von `judge-blind` und `pairwise` bestimmen deren Fundraten mit: `judge-blind` wertet Ungeprüftes als erfüllt, `pairwise` erfährt nicht, welche Fassung die Referenz ist.
+- Nachträglich entstanden die Auswertungen je Text, die Zuordnung der Hypothesen, die Trefferprüfung und die Schwellen-Tabelle zu `ref-similarity`. Die eingefrorenen Regeln und Spec-Zahlen stehen daneben.
 - Die Wortlisten von `wording` sind nach den Mutationen entstanden, ihre Fundrate dort ist eine Obergrenze. Mehr dazu in [graders/prompts/v1/README.md](graders/prompts/v1/README.md).
 - Fassungen mit identischem Text teilen sich die Judge-Aufrufe. `gold`, `false-success`, `lucky-path` und `extra-diligent` sehen für Judges gleich aus und bekommen darum dasselbe Urteil. Das ist die Konstruktion, kein Zufall.
 

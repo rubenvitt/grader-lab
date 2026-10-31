@@ -1024,6 +1024,300 @@
    "faulty": 47
   }
  },
+ "gold_claims": [
+  {
+   "release": "r1",
+   "topic": "#304: Der Diff gibt nur das Lock frei und zeigt keine Statusänderung.",
+   "hits": 3,
+   "reps": 3
+  },
+  {
+   "release": "r1",
+   "topic": "#307: Die Folge für Nutzer steht nicht im Diff.",
+   "hits": 2,
+   "reps": 3
+  },
+  {
+   "release": "r2",
+   "topic": "Die Migration bildet `graceMs` nicht auf `olderThanMs` ab.",
+   "hits": 3,
+   "reps": 3
+  },
+  {
+   "release": "r2",
+   "topic": "„details will follow in a separate advisory“ steht in keiner Quelle.",
+   "hits": 0,
+   "reps": 3
+  },
+  {
+   "release": "r3",
+   "topic": "„silently ignored“ ist durch den Diff von #351 nicht belegt.",
+   "hits": 3,
+   "reps": 3
+  },
+  {
+   "release": "r3",
+   "topic": "Die Garantie zu Cron-Jobs ist durch #357 nicht belegt.",
+   "hits": 3,
+   "reps": 3
+  },
+  {
+   "release": "r3",
+   "topic": "„details will follow in a separate advisory“ steht in keiner Quelle.",
+   "hits": 3,
+   "reps": 3
+  },
+  {
+   "release": "r3",
+   "topic": "„ein Befehl pro Job“ zu #360 ist durch den Diff nicht belegt.",
+   "hits": 2,
+   "reps": 3
+  },
+  {
+   "release": "r4",
+   "topic": "Die strikte Obergrenze zu #376 ist nicht belegt.",
+   "hits": 2,
+   "reps": 3
+  },
+  {
+   "release": "r5",
+   "topic": "Die Migration übergeht `pause(false)`.",
+   "hits": 3,
+   "reps": 3
+  },
+  {
+   "release": "r5",
+   "topic": "Jitter schließt gleichzeitige Retries nicht aus (#395).",
+   "hits": 3,
+   "reps": 3
+  },
+  {
+   "release": "r6",
+   "topic": "#414 ist laut R1 und R9 ein Breaking Change.",
+   "hits": 3,
+   "reps": 3
+  },
+  {
+   "release": "r6",
+   "topic": "„details will follow in a separate advisory“ steht in keiner Quelle.",
+   "hits": 0,
+   "reps": 3
+  }
+ ],
+ "gold_claim_releases": 5,
+ "tpr_without_self": {
+  "judge-ref": {
+   "passes": 12,
+   "total": 12,
+   "paraphrase_passes": 6
+  },
+  "judge-sourced": {
+   "passes": 0,
+   "total": 12,
+   "paraphrase_passes": 0
+  },
+  "judge-blind": {
+   "passes": 12,
+   "total": 12,
+   "paraphrase_passes": 6
+  },
+  "pairwise": {
+   "passes": 12,
+   "total": 12,
+   "paraphrase_passes": 6
+  }
+ },
+ "pairwise_self_reps": 72,
+ "ref_similarity": {
+  "by_variant": {
+   "missing-breaking": {
+    "min": 0.8136573038330959,
+    "max": 0.930834183391316
+   },
+   "wrong-bump": {
+    "min": 0.9927710843373495,
+    "max": 0.9942418426103649
+   },
+   "ghost-pr": {
+    "min": 0.9813664596273292,
+    "max": 0.9942418426103649
+   },
+   "invented-claim": {
+    "min": 0.9004176858455201,
+    "max": 0.984935046376627
+   },
+   "wrong-migration": {
+    "min": 0.9813664596273292,
+    "max": 0.9942326076803383
+   },
+   "reverted-listed": {
+    "min": 0.8770166919756175,
+    "max": 0.9573262465601622
+   },
+   "internal-noise": {
+    "min": 0.9036999324875021,
+    "max": 0.9817535760024686
+   },
+   "hype-tone": {
+    "min": 0.7288403431811691,
+    "max": 0.8709400460758043
+   },
+   "useless-true": {
+    "min": 0.2697255448185043,
+    "max": 0.41355240860233505
+   },
+   "false-success": {
+    "min": 1,
+    "max": 1.0000000000000002
+   },
+   "lucky-path": {
+    "min": 1,
+    "max": 1.0000000000000002
+   },
+   "gold": {
+    "min": 1,
+    "max": 1.0000000000000002
+   },
+   "paraphrase": {
+    "min": 0.5854638164637433,
+    "max": 0.6852207293666028
+   },
+   "reordered": {
+    "min": 0.9899497487437185,
+    "max": 0.99616122840691
+   },
+   "extra-diligent": {
+    "min": 1,
+    "max": 1.0000000000000002
+   },
+   "embargo-leak": {
+    "min": 0.8668490604111776,
+    "max": 0.9361358873930018
+   }
+  },
+  "thresholds": [
+   {
+    "threshold": 0.7,
+    "clean_pass": 18,
+    "clean": 24,
+    "faulty_fail": 6,
+    "faulty": 59,
+    "paraphrase_pass": 0,
+    "paraphrases": 6,
+    "agent_pass": 0,
+    "agents": 24
+   },
+   {
+    "threshold": 0.6,
+    "clean_pass": 23,
+    "clean": 24,
+    "faulty_fail": 6,
+    "faulty": 59,
+    "paraphrase_pass": 5,
+    "paraphrases": 6,
+    "agent_pass": 0,
+    "agents": 24
+   },
+   {
+    "threshold": 0.58,
+    "clean_pass": 24,
+    "clean": 24,
+    "faulty_fail": 6,
+    "faulty": 59,
+    "paraphrase_pass": 6,
+    "paraphrases": 6,
+    "agent_pass": 1,
+    "agents": 24
+   },
+   {
+    "threshold": 0.55,
+    "clean_pass": 24,
+    "clean": 24,
+    "faulty_fail": 6,
+    "faulty": 59,
+    "paraphrase_pass": 6,
+    "paraphrases": 6,
+    "agent_pass": 1,
+    "agents": 24
+   },
+   {
+    "threshold": 0.5,
+    "clean_pass": 24,
+    "clean": 24,
+    "faulty_fail": 6,
+    "faulty": 59,
+    "paraphrase_pass": 6,
+    "paraphrases": 6,
+    "agent_pass": 5,
+    "agents": 24
+   },
+   {
+    "threshold": 0.45,
+    "clean_pass": 24,
+    "clean": 24,
+    "faulty_fail": 6,
+    "faulty": 59,
+    "paraphrase_pass": 6,
+    "paraphrases": 6,
+    "agent_pass": 12,
+    "agents": 24
+   }
+  ]
+ },
+ "r2_in_controls": {
+  "reps": 54,
+  "total": 72
+ },
+ "ranges": {
+  "jsrc_tpr_text": {
+   "k": 0,
+   "n": 18,
+   "low": 0,
+   "high": 0.1758845505823749
+  },
+  "jref_tnr_text": {
+   "k": 47,
+   "n": 47,
+   "low": 0.9244398288016114,
+   "high": 1
+  },
+  "blind_tnr_text": {
+   "k": 24,
+   "n": 47,
+   "low": 0.37242217589372884,
+   "high": 0.6472467566339649
+  },
+  "pair_tnr_text": {
+   "k": 28,
+   "n": 47,
+   "low": 0.45341868236312644,
+   "high": 0.7236017103861182
+  },
+  "jref_e4": {
+   "k": 2,
+   "n": 24,
+   "low": 0.023158327842973503,
+   "high": 0.258492152014506
+  },
+  "jsrc_e4": {
+   "k": 11,
+   "n": 24,
+   "low": 0.2789105835168143,
+   "high": 0.6492544644689336
+  },
+  "cell_full_3": {
+   "k": 3,
+   "n": 3,
+   "low": 0.43849391955098227,
+   "high": 1
+  },
+  "cell_one_3": {
+   "k": 1,
+   "n": 3,
+   "low": 0.0614903152761605,
+   "high": 0.7923450448735121
+  }
+ },
  "flakiness": {
   "judge-ref": {
    "disagreeing": 0,
@@ -1161,6 +1455,13 @@
   "one_equal": 14,
   "flips": 1
  },
+ "pairwise_order_without_self": {
+  "total": 177,
+  "consistent": 162,
+  "inconsistent": 15,
+  "one_equal": 14,
+  "flips": 1
+ },
  "pass_violation_mismatch": 0,
  "hypotheses": [
   {
@@ -1213,7 +1514,8 @@
     "judge-blind",
     "pairwise"
    ],
-   "outcome": "teilweise"
+   "outcome": "eingetreten",
+   "note": "Labels geben major nur in r5 her, dort 1 von 1."
   },
   {
    "variant": "ghost-pr",
@@ -1252,7 +1554,8 @@
     "judge-blind",
     "pairwise"
    ],
-   "outcome": "eingetreten"
+   "outcome": "nicht entscheidbar",
+   "note": "Beruht allein auf `judge-sourced`, nach Trefferprüfung 4/6."
   },
   {
    "variant": "wrong-migration",
@@ -1478,7 +1781,8 @@
    "others": [
     "judge-sourced"
    ],
-   "outcome": "teilweise"
+   "outcome": "eingetreten",
+   "note": "`judge-sourced` zählt nicht: gleicher Text wie Gold, gleiche Ablehnung."
   },
   {
    "variant": "lucky-path",
@@ -1496,7 +1800,8 @@
    "others": [
     "judge-sourced"
    ],
-   "outcome": "teilweise"
+   "outcome": "eingetreten",
+   "note": "`judge-sourced` zählt nicht: gleicher Text wie Gold, gleiche Ablehnung."
   }
  ],
  "on_target": {
@@ -1505,61 +1810,81 @@
     "total": 3,
     "failed": 3,
     "criterion": 3,
-    "word": 3
+    "word": 3,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "wrong-bump": {
     "total": 3,
     "failed": 3,
     "criterion": 3,
-    "word": 3
+    "word": 3,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "ghost-pr": {
     "total": 6,
     "failed": 6,
     "criterion": 6,
-    "word": 6
+    "word": 6,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "invented-claim": {
     "total": 6,
     "failed": 6,
     "criterion": 6,
-    "word": 5
+    "word": 5,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "wrong-migration": {
     "total": 5,
     "failed": 5,
     "criterion": 5,
-    "word": 5
+    "word": 5,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "reverted-listed": {
     "total": 3,
     "failed": 3,
     "criterion": 0,
-    "word": 0
+    "word": 0,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "internal-noise": {
     "total": 6,
     "failed": 6,
     "criterion": 6,
-    "word": 6
+    "word": 6,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "hype-tone": {
     "total": 6,
     "failed": 6,
     "criterion": 6,
-    "word": 6
+    "word": 6,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "useless-true": {
     "total": 6,
     "failed": 6,
     "criterion": 6,
-    "word": 6
+    "word": 6,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "embargo-leak": {
     "total": 3,
     "failed": 3,
     "criterion": 3,
-    "word": 3
+    "word": 3,
+    "gold_criterion": 0,
+    "gold_word": 0
    }
   },
   "judge-sourced": {
@@ -1567,61 +1892,81 @@
     "total": 3,
     "failed": 3,
     "criterion": 3,
-    "word": 3
+    "word": 3,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "wrong-bump": {
     "total": 3,
     "failed": 3,
     "criterion": 3,
-    "word": 3
+    "word": 3,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "ghost-pr": {
     "total": 6,
     "failed": 6,
     "criterion": 6,
-    "word": 6
+    "word": 6,
+    "gold_criterion": 4,
+    "gold_word": 1
    },
    "invented-claim": {
     "total": 6,
     "failed": 6,
     "criterion": 6,
-    "word": 4
+    "word": 4,
+    "gold_criterion": 4,
+    "gold_word": 0
    },
    "wrong-migration": {
     "total": 5,
     "failed": 5,
     "criterion": 5,
-    "word": 5
+    "word": 5,
+    "gold_criterion": 2,
+    "gold_word": 1
    },
    "reverted-listed": {
     "total": 3,
     "failed": 3,
     "criterion": 3,
-    "word": 3
+    "word": 3,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "internal-noise": {
     "total": 6,
     "failed": 6,
     "criterion": 6,
-    "word": 6
+    "word": 6,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "hype-tone": {
     "total": 6,
     "failed": 6,
     "criterion": 6,
-    "word": 6
+    "word": 6,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "useless-true": {
     "total": 6,
     "failed": 6,
     "criterion": 6,
-    "word": 6
+    "word": 6,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "embargo-leak": {
     "total": 3,
     "failed": 3,
     "criterion": 3,
-    "word": 3
+    "word": 3,
+    "gold_criterion": 0,
+    "gold_word": 0
    }
   },
   "judge-blind": {
@@ -1629,61 +1974,81 @@
     "total": 3,
     "failed": 0,
     "criterion": 0,
-    "word": 0
+    "word": 0,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "wrong-bump": {
     "total": 3,
     "failed": 2,
     "criterion": 2,
-    "word": 2
+    "word": 2,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "ghost-pr": {
     "total": 6,
     "failed": 0,
     "criterion": 0,
-    "word": 0
+    "word": 0,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "invented-claim": {
     "total": 6,
     "failed": 1,
     "criterion": 0,
-    "word": 0
+    "word": 0,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "wrong-migration": {
     "total": 5,
     "failed": 1,
     "criterion": 1,
-    "word": 1
+    "word": 1,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "reverted-listed": {
     "total": 3,
     "failed": 1,
     "criterion": 0,
-    "word": 0
+    "word": 0,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "internal-noise": {
     "total": 6,
     "failed": 6,
     "criterion": 6,
-    "word": 6
+    "word": 6,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "hype-tone": {
     "total": 6,
     "failed": 6,
     "criterion": 6,
-    "word": 6
+    "word": 6,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "useless-true": {
     "total": 6,
     "failed": 6,
     "criterion": 6,
-    "word": 6
+    "word": 6,
+    "gold_criterion": 0,
+    "gold_word": 0
    },
    "embargo-leak": {
     "total": 3,
     "failed": 1,
     "criterion": 1,
-    "word": 1
+    "word": 1,
+    "gold_criterion": 0,
+    "gold_word": 0
    }
   }
  },
@@ -2031,7 +2396,12 @@
   },
   "code_unchanged": true,
   "blind_confident_fails": 13,
-  "blind_confident_fails_tone": 12
+  "blind_confident_fails_tone": 12,
+  "pair_confident_fails": 18,
+  "pair_confident_total": 18,
+  "pair_confident_unsupported": 18,
+  "pair_neutral_fails": 7,
+  "pair_neutral_total": 18
  },
  "e4": {
   "runs": [
@@ -2058,6 +2428,7 @@
      "judge-blind": false,
      "pairwise": false
     },
+    "whitespace_only": false,
     "llm_split": false,
     "all_split": true
    },
@@ -2084,6 +2455,7 @@
      "judge-blind": false,
      "pairwise": false
     },
+    "whitespace_only": false,
     "llm_split": false,
     "all_split": true
    },
@@ -2110,6 +2482,7 @@
      "judge-blind": true,
      "pairwise": true
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2136,6 +2509,7 @@
      "judge-blind": true,
      "pairwise": true
     },
+    "whitespace_only": false,
     "llm_split": false,
     "all_split": true
    },
@@ -2162,6 +2536,7 @@
      "judge-blind": false,
      "pairwise": true
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2188,6 +2563,7 @@
      "judge-blind": true,
      "pairwise": true
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2214,6 +2590,7 @@
      "judge-blind": true,
      "pairwise": true
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2240,6 +2617,7 @@
      "judge-blind": true,
      "pairwise": true
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2266,6 +2644,7 @@
      "judge-blind": true,
      "pairwise": false
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2292,6 +2671,7 @@
      "judge-blind": true,
      "pairwise": false
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2318,6 +2698,7 @@
      "judge-blind": true,
      "pairwise": false
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2344,6 +2725,7 @@
      "judge-blind": true,
      "pairwise": true
     },
+    "whitespace_only": true,
     "llm_split": true,
     "all_split": true
    },
@@ -2370,6 +2752,7 @@
      "judge-blind": true,
      "pairwise": false
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2396,6 +2779,7 @@
      "judge-blind": true,
      "pairwise": false
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2422,6 +2806,7 @@
      "judge-blind": true,
      "pairwise": true
     },
+    "whitespace_only": true,
     "llm_split": true,
     "all_split": true
    },
@@ -2448,6 +2833,7 @@
      "judge-blind": true,
      "pairwise": false
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2474,6 +2860,7 @@
      "judge-blind": true,
      "pairwise": true
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2500,6 +2887,7 @@
      "judge-blind": true,
      "pairwise": true
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2526,6 +2914,7 @@
      "judge-blind": true,
      "pairwise": true
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2552,6 +2941,7 @@
      "judge-blind": true,
      "pairwise": true
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2578,6 +2968,7 @@
      "judge-blind": false,
      "pairwise": false
     },
+    "whitespace_only": false,
     "llm_split": false,
     "all_split": true
    },
@@ -2604,6 +2995,7 @@
      "judge-blind": true,
      "pairwise": false
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2630,6 +3022,7 @@
      "judge-blind": true,
      "pairwise": true
     },
+    "whitespace_only": false,
     "llm_split": true,
     "all_split": true
    },
@@ -2656,6 +3049,7 @@
      "judge-blind": false,
      "pairwise": false
     },
+    "whitespace_only": false,
     "llm_split": false,
     "all_split": true
    }
@@ -2678,6 +3072,10 @@
      "judge-sourced": 4,
      "judge-blind": 8,
      "pairwise": 4
+    },
+    "functional_clean": {
+     "passes": 7,
+     "runs": 10
     }
    },
    "careful": {
@@ -2697,6 +3095,10 @@
      "judge-sourced": 7,
      "judge-blind": 11,
      "pairwise": 9
+    },
+    "functional_clean": {
+     "passes": 8,
+     "runs": 9
     }
    }
   },
@@ -2750,25 +3152,53 @@
     "observed": 0.08333333333333333,
     "tpr": 1,
     "tnr": 0.7966101694915254,
-    "corrected": 0
+    "corrected": 0,
+    "raw": -0.15070921985815597,
+    "by_text": {
+     "tpr": 1,
+     "tnr": 1,
+     "corrected": 0.08333333333333326,
+     "raw": 0.08333333333333326
+    }
    },
    "judge-sourced": {
     "observed": 0.4583333333333333,
     "tpr": 0,
     "tnr": 1,
-    "corrected": null
+    "corrected": null,
+    "raw": null,
+    "by_text": {
+     "tpr": 0,
+     "tnr": 1,
+     "corrected": null,
+     "raw": null
+    }
    },
    "judge-blind": {
     "observed": 0.7916666666666666,
     "tpr": 1,
     "tnr": 0.4067796610169492,
-    "corrected": 0.48784722222222243
+    "corrected": 0.48784722222222243,
+    "raw": 0.48784722222222243,
+    "by_text": {
+     "tpr": 1,
+     "tnr": 0.5106382978723404,
+     "corrected": 0.592013888888889,
+     "raw": 0.592013888888889
+    }
    },
    "pairwise": {
     "observed": 0.5416666666666666,
     "tpr": 1,
     "tnr": 0.4745762711864407,
-    "corrected": 0.0342261904761903
+    "corrected": 0.0342261904761903,
+    "raw": 0.0342261904761903,
+    "by_text": {
+     "tpr": 1,
+     "tnr": 0.5957446808510638,
+     "corrected": 0.2306547619047616,
+     "raw": 0.2306547619047616
+    }
    }
   },
   "llm_split": 19,

@@ -3444,7 +3444,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.278 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.27789505104325646
   },
   {
    "experiment": "e4",
@@ -3540,7 +3541,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.351 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.35052009744203727
   },
   {
    "experiment": "e4",
@@ -3634,7 +3636,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.532 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.5324167523692928
   },
   {
    "experiment": "e4",
@@ -3720,7 +3723,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.491 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.49088069367381604
   },
   {
    "experiment": "e4",
@@ -3808,7 +3812,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.508 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.5080257208209875
   },
   {
    "experiment": "e4",
@@ -3903,7 +3908,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.444 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.4442820948466417
   },
   {
    "experiment": "e4",
@@ -3993,7 +3999,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.410 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.4100214041824654
   },
   {
    "experiment": "e4",
@@ -4081,7 +4088,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.446 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.4457553297562794
   },
   {
    "experiment": "e4",
@@ -4173,7 +4181,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.461 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.46100942685383123
   },
   {
    "experiment": "e4",
@@ -4273,7 +4282,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.000 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0
   },
   {
    "experiment": "e4",
@@ -4367,7 +4377,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.432 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.4324346942815079
   },
   {
    "experiment": "e4",
@@ -4455,7 +4466,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.529 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.5294060203828607
   },
   {
    "experiment": "e4",
@@ -4543,7 +4555,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.466 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.4662927705462851
   },
   {
    "experiment": "e4",
@@ -4636,7 +4649,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.447 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.44694132356350624
   },
   {
    "experiment": "e4",
@@ -4729,7 +4743,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.486 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.48638609002666655
   },
   {
    "experiment": "e4",
@@ -4823,7 +4838,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.000 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0
   },
   {
    "experiment": "e4",
@@ -4914,7 +4930,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.463 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.4630795365540631
   },
   {
    "experiment": "e4",
@@ -5005,7 +5022,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.476 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.4756681725633619
   },
   {
    "experiment": "e4",
@@ -5091,7 +5109,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.546 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.5459663368514396
   },
   {
    "experiment": "e4",
@@ -5177,7 +5196,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.593 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.5925228358135528
   },
   {
    "experiment": "e4",
@@ -5267,7 +5287,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.258 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.25840014470412154
   },
   {
    "experiment": "e4",
@@ -5359,7 +5380,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.378 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.3780699760044458
   },
   {
    "experiment": "e4",
@@ -5453,7 +5475,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.463 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.4627245924990226
   },
   {
    "experiment": "e4",
@@ -5541,7 +5564,8 @@
    "prompt_version": "v1",
    "findings": [
     "Ähnlichkeit 0.430 unter Schwelle 0.7"
-   ]
+   ],
+   "score": 0.43027152907874117
   },
   {
    "experiment": "e4",

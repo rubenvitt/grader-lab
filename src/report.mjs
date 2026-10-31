@@ -4,6 +4,7 @@ import { copyFileSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path';
 import { flakiness, matrix, ratesByGrader, roganGladen, verdicts } from './aggregate.mjs';
 import { loadReleases } from './fixtures.mjs';
+import { bumpSignal } from './graders/code.mjs';
 import { loadPrompts } from './graders/llm.mjs';
 import { artifactsFor, distractionPair } from './mutate.mjs';
 import { renderFindings } from './findings-text.mjs';
@@ -40,6 +41,25 @@ export const CRITERIA = {
   'reverted-listed': ['R4'], 'embargo-leak': ['R5'], 'internal-noise': ['R6'], 'hype-tone': ['R7'], 'useless-true': ['R8'],
 };
 
+// Hand-written topics of what judge-sourced holds against gold, counted in the result rows. Needles match "<criterion> <evidence>".
+export const GOLD_CLAIMS = [
+  { release: 'r1', topic: '#304: Der Diff gibt nur das Lock frei und zeigt keine Statusänderung.', needle: /#304/ },
+  { release: 'r1', topic: '#307: Die Folge für Nutzer steht nicht im Diff.', needle: /#307/ },
+  { release: 'r2', topic: 'Die Migration bildet `graceMs` nicht auf `olderThanMs` ab.', needle: /graceMs/ },
+  { release: 'r2', topic: '„details will follow in a separate advisory“ steht in keiner Quelle.', needle: /advisory/i, optional: true },
+  { release: 'r3', topic: '„silently ignored“ ist durch den Diff von #351 nicht belegt.', needle: /silently ignored/ },
+  { release: 'r3', topic: 'Die Garantie zu Cron-Jobs ist durch #357 nicht belegt.', needle: /#357/ },
+  { release: 'r3', topic: '„details will follow in a separate advisory“ steht in keiner Quelle.', needle: /advisory/i },
+  { release: 'r3', topic: '„ein Befehl pro Job“ zu #360 ist durch den Diff nicht belegt.', needle: /#360/ },
+  { release: 'r4', topic: 'Die strikte Obergrenze zu #376 ist nicht belegt.', needle: /#376/ },
+  { release: 'r5', topic: 'Die Migration übergeht `pause(false)`.', needle: /pause\(false\)/ },
+  { release: 'r5', topic: 'Jitter schließt gleichzeitige Retries nicht aus (#395).', needle: /Jitter/i },
+  { release: 'r6', topic: '#414 ist laut R1 und R9 ein Breaking Change.', needle: /^R1 .*#414/ },
+  { release: 'r6', topic: '„details will follow in a separate advisory“ steht in keiner Quelle.', needle: /advisory/i, optional: true },
+];
+
+const SIMILARITY_THRESHOLDS = [0.7, 0.6, 0.58, 0.55, 0.5, 0.45];
+
 const tokens = (text) => new Set(text.toLowerCase().match(/[#\w][\w.\-]+\w/g) ?? []);
 
 export function changedTokens(a, b) {
@@ -63,6 +83,15 @@ export function uniqueByText(items, notesOf) {
     seen.add(k);
     return true;
   });
+}
+
+// Wilson score interval, 95 %. Treats the cases as independent, which six releases by one author are not.
+export function wilson(k, n, z = 1.96) {
+  const p = k / n;
+  const denominator = 1 + (z * z) / n;
+  const center = (p + (z * z) / (2 * n)) / denominator;
+  const margin = (z * Math.sqrt((p * (1 - p)) / n + (z * z) / (4 * n * n))) / denominator;
+  return { k, n, low: Math.max(0, center - margin), high: Math.min(1, center + margin) };
 }
 
 export function orderAgreement(rows) {
@@ -111,11 +140,15 @@ function onTarget(rows, fixtures, artifacts, key) {
         const changed = changedTokens(f.gold.notes_md, artifacts.get(key(f.release.id, variant)).notes_md);
         const hits = reps.map((r) => hitsTarget(r, wanted, changed));
         const majority = (fn) => reps.filter(fn).length * 2 > reps.length;
-        const cell = ((out[grader] ??= {})[variant] ??= { total: 0, failed: 0, criterion: 0, word: 0 });
+        // Placebo: the same check on the unchanged gold text of this release.
+        const gold = rows.filter((r) => r.grader === grader && r.release === f.release.id && r.variant === 'gold').map((r) => hitsTarget(r, wanted, changed));
+        const cell = ((out[grader] ??= {})[variant] ??= { total: 0, failed: 0, criterion: 0, word: 0, gold_criterion: 0, gold_word: 0 });
         cell.total++;
         if (majority((r) => !r.pass)) cell.failed++;
         if (hits.filter((h) => h.criterion).length * 2 > reps.length) cell.criterion++;
         if (hits.filter((h) => h.word).length * 2 > reps.length) cell.word++;
+        if (gold.filter((h) => h.criterion).length * 2 > gold.length) cell.gold_criterion++;
+        if (gold.filter((h) => h.word).length * 2 > gold.length) cell.gold_word++;
       }
     }
   }
@@ -137,15 +170,25 @@ function e3Table(e3) {
     return [g, { pass_neutral: by((c) => c.neutral.pass), pass_confident: by((c) => c.confident.pass), harsher: by((c) => c.neutral.pass && !c.confident.pass), softer: by((c) => !c.neutral.pass && c.confident.pass) }];
   }));
   const blindFails = e3.rows.filter((r) => r.grader === 'judge-blind' && r.variant.endsWith(':confident') && !r.pass);
+  const pairConfident = pairRows.filter((r) => r.variant.endsWith(':confident'));
+  const pairNeutral = pairRows.filter((r) => r.variant.endsWith(':neutral'));
   return {
     rows, change, order: orderAgreement(pairRows),
     code_unchanged: ['wording', 'ref-similarity'].every((g) => v.filter((x) => x.grader === g).every((x) => x.pass)),
     blind_confident_fails: blindFails.length,
     blind_confident_fails_tone: blindFails.filter((r) => r.violations.some((x) => x.criterion === 'R7')).length,
+    pair_confident_fails: pairConfident.filter((r) => !r.pass).length, pair_confident_total: pairConfident.length,
+    pair_confident_unsupported: pairConfident.filter((r) => !r.pass && /beleg|garanti|zusicherung/i.test(r.reason)).length,
+    pair_neutral_fails: pairNeutral.filter((r) => !r.pass).length, pair_neutral_total: pairNeutral.length,
   };
 }
 
-function e4Tables(e4, ratesSpec) {
+function correction(observed, { tpr, tnr }) {
+  const denominator = tpr + tnr - 1;
+  return { tpr, tnr, corrected: roganGladen(observed, tpr, tnr), raw: denominator > 0 ? (observed + tnr - 1) / denominator : null };
+}
+
+function e4Tables(e4, ratesSpec, ratesText) {
   const verdict = (r, g) => e4.rows.find((x) => x.release === r.release && x.variant === r.variant && x.grader === g).pass;
   const runs = e4.runs.map((r) => {
     const a = r.artifact;
@@ -153,6 +196,7 @@ function e4Tables(e4, ratesSpec) {
     return {
       release: r.release, variant: r.variant, status: r.status, turns: r.turns, published: a.sandbox.published, version: a.sandbox.version, plan_bump: a.plan.bump,
       empty_notes: !a.notes_md.trim(), plan_missing: a.plan.bump == null, passes,
+      whitespace_only: a.sandbox.published && a.sandbox.notes !== a.notes_md && a.sandbox.notes.trimEnd() === a.notes_md.trimEnd(),
       llm_split: new Set(LLM.map((g) => passes[g])).size > 1,
       all_split: new Set(GRADERS.map((g) => passes[g])).size > 1,
     };
@@ -160,31 +204,87 @@ function e4Tables(e4, ratesSpec) {
   const prompt = (name) => runs.filter((r) => r.variant.startsWith(name));
   const byPrompt = Object.fromEntries(['naive', 'careful'].map((name) => {
     const list = prompt(name);
+    // Reading only: nothing is removed from the counts above, this figure stands beside them.
+    const clean = list.filter((r) => !r.plan_missing && !r.whitespace_only);
     return [name, {
       runs: list.length, published: list.filter((r) => r.published).length, empty_notes: list.filter((r) => r.empty_notes).length, plan_missing: list.filter((r) => r.plan_missing).length,
       passes: Object.fromEntries(GRADERS.map((g) => [g, list.filter((r) => r.passes[g]).length])),
+      functional_clean: { passes: clean.filter((r) => r.passes.functional).length, runs: clean.length },
     }];
   }));
   const pairs = LLM.flatMap((a, i) => LLM.slice(i + 1).map((b) => ({ a, b, disagree: runs.filter((r) => r.passes[a] !== r.passes[b]).length })));
   const observed = Object.fromEntries(GRADERS.map((g) => [g, runs.filter((r) => r.passes[g]).length / runs.length]));
-  const rogan = Object.fromEntries(LLM.map((g) => [g, { observed: observed[g], tpr: ratesSpec[g].tpr, tnr: ratesSpec[g].tnr, corrected: roganGladen(observed[g], ratesSpec[g].tpr, ratesSpec[g].tnr) }]));
+  const rogan = Object.fromEntries(LLM.map((g) => [g, { observed: observed[g], ...correction(observed[g], ratesSpec[g]), by_text: correction(observed[g], ratesText[g]) }]));
   return { runs, byPrompt, pairs, observed, rogan, llm_split: runs.filter((r) => r.llm_split).length, all_split: runs.filter((r) => r.all_split).length };
 }
 
-function hypotheses(cells) {
+// Post-hoc reading of the spec's wording, written after the runs. It only classifies, no find count changes.
+function hypotheses(cells, { labelled, inventedOnTarget }) {
   return Object.entries(EXPECTED).map(([variant, { text, graders, only }]) => {
     const cell = (g) => cells[g][variant];
     const full = graders.filter((g) => cell(g).found === cell(g).total);
     const some = graders.filter((g) => cell(g).found > 0);
     const others = GRADERS.filter((g) => !graders.includes(g) && cell(g).found > 0);
-    const outcome = full.length === graders.length && !(only && others.length) ? 'eingetreten' : some.length ? 'teilweise' : 'nicht eingetreten';
-    return { variant, expected: text, graders, found: Object.fromEntries(graders.map((g) => [g, cell(g)])), others, outcome };
+    // judge-sourced fails these texts exactly as it fails gold, which is no find.
+    const finders = only ? others.filter((g) => g !== 'judge-sourced') : others;
+    let outcome = full.length === graders.length && !(only && finders.length) ? 'eingetreten' : some.length ? 'teilweise' : 'nicht eingetreten';
+    let note;
+    if (only) note = '`judge-sourced` zählt nicht: gleicher Text wie Gold, gleiche Ablehnung.';
+    if (variant === 'wrong-bump') {
+      outcome = labelled.found === labelled.total ? 'eingetreten' : 'teilweise';
+      note = `Labels geben major nur in ${labelled.releases.join(', ')} her, dort ${labelled.found} von ${labelled.total}.`;
+    }
+    if (variant === 'invented-claim') {
+      outcome = 'nicht entscheidbar';
+      note = `Beruht allein auf \`judge-sourced\`, nach Trefferprüfung ${inventedOnTarget.word}/${inventedOnTarget.total}.`;
+    }
+    return { variant, expected: text, graders, found: Object.fromEntries(graders.map((g) => [g, cell(g)])), others, outcome, note };
   });
 }
 
-function compactArtifact(a, keep) {
+function goldClaims(rows) {
+  return GOLD_CLAIMS.map(({ release, topic, needle, optional }) => {
+    const reps = rows.filter((r) => r.grader === 'judge-sourced' && r.release === release && r.variant === 'gold');
+    const hits = reps.filter((r) => (r.violations ?? []).some((v) => needle.test(`${v.criterion} ${v.evidence}`))).length;
+    if (!hits && !optional) throw new Error(`gold claim not found: ${release} ${needle}`);
+    return { release, topic, hits, reps: reps.length };
+  });
+}
+
+// Scores were already computed by the frozen grader, the alternative thresholds are a post-hoc reading only.
+function similaritySensitivity(e1, e4) {
+  const rows = e1.rows.filter((r) => r.grader === 'ref-similarity');
+  const agents = e4.rows.filter((r) => r.grader === 'ref-similarity');
+  const by_variant = {};
+  for (const r of rows) {
+    const range = (by_variant[r.variant] ??= { min: r.score, max: r.score });
+    range.min = Math.min(range.min, r.score);
+    range.max = Math.max(range.max, r.score);
+  }
+  const passing = (list, t) => list.filter((r) => r.score >= t).length;
+  const [clean, faulty] = ['control', 'mutation'].map((kind) => rows.filter((r) => r.kind === kind));
+  const paraphrases = rows.filter((r) => r.variant === 'paraphrase');
   return {
-    notes_md: a.notes_md, plan: a.plan, sandbox: { published: a.sandbox.published, version: a.sandbox.version, same_text: a.sandbox.notes === a.notes_md },
+    by_variant,
+    thresholds: SIMILARITY_THRESHOLDS.map((t) => ({
+      threshold: t, clean_pass: passing(clean, t), clean: clean.length, faulty_fail: faulty.length - passing(faulty, t), faulty: faulty.length,
+      paraphrase_pass: passing(paraphrases, t), paraphrases: paraphrases.length, agent_pass: passing(agents, t), agents: agents.length,
+    })),
+  };
+}
+
+function compactArtifact(a, keep) {
+  const [reported, published] = [a.notes_md, a.sandbox.notes ?? ''];
+  const same = published === reported;
+  // Where a published text departs from the reported one, as a short excerpt: a trailing space is invisible otherwise.
+  const at = same || !a.sandbox.published ? null : [...reported].findIndex((c, i) => c !== published[i]);
+  const from = Math.max(0, (at === -1 ? reported.length : at) - 24);
+  return {
+    notes_md: a.notes_md, plan: a.plan,
+    sandbox: {
+      published: a.sandbox.published, version: a.sandbox.version, same_text: same,
+      ...(at == null ? {} : { differs: { reported: reported.slice(from, from + 40), published: published.slice(from, from + 40) } }),
+    },
     ...(keep ? { transcript: a.transcript.map((c) => ({ turn: c.turn, tool: c.tool, id: c.args.id ?? null, ok: c.ok })) } : {}),
   };
 }
@@ -209,6 +309,7 @@ function demoData({ e1, e3, e4, fixtures, artifacts, key }, prompts) {
   };
   return {
     models: prompts.params.models,
+    rubric: prompts.rubric.split('\n').map((line) => line.match(/^(R\d+) ([^:]+): (.+)$/).slice(1)),
     limits: { not_applicable: e1.not_applicable },
     releases: fixtures.map(({ release, gold }) => ({ id: release.id, package: release.package, previous_version: release.previous_version, prs: release.prs, issues: release.issues, gold: { notes_md: gold.notes_md, plan: gold.plan } })),
     e1: group(e1.rows), e3: group(e3.rows), e4: group(e4.rows),
@@ -222,17 +323,42 @@ export function buildSummary(inputs, prompts) {
   const llmOnly = v.filter((i) => LLM.includes(i.grader));
   const unique = uniqueByText(llmOnly, notesOf);
   const rates = ratesByGrader(v);
+  const ratesText = ratesByGrader(unique);
   const cells = matrix(v);
+  const on_target = onTarget(e1.rows, fixtures, artifacts, key);
+  const isGoldText = (i) => notesOf(i) === artifacts.get(key(i.release, 'gold')).notes_md;
+  const noSelf = unique.filter((i) => i.kind === 'control' && !isGoldText(i));
+  const ownPass = (g, list) => list.filter((i) => i.grader === g && i.pass).length;
+  const labelledReleases = fixtures.filter((f) => f.release.prs.some((p) => bumpSignal(p) === 'major')).map((f) => f.release.id);
+  const wrongBump = v.filter((i) => i.grader === 'semver-labels' && i.variant === 'wrong-bump' && labelledReleases.includes(i.release));
+  const controlReps = e1.rows.filter((r) => r.grader === 'judge-sourced' && r.kind === 'control');
+  const passesOf = (g) => e4.rows.filter((r) => r.grader === g && r.pass).length;
+  const fails = (rate) => Math.round(rate.tnr * rate.faulty);
+  const claims = goldClaims(e1.rows);
   return {
     prompt_version: prompts.version, models: prompts.params.models, raw: rawStats(),
     counts: { artifacts: new Set(v.map((i) => `${i.release}|${i.variant}`)).size, controls: rates.schema.clean, mutations: rates.schema.faulty, not_applicable: e1.not_applicable.length },
-    matrix: cells, rates, rates_unique_text: ratesByGrader(unique),
+    matrix: cells, rates, rates_unique_text: ratesText,
+    gold_claims: claims, gold_claim_releases: new Set(claims.filter((c) => c.hits === c.reps).map((c) => c.release)).size,
+    tpr_without_self: Object.fromEntries(LLM.map((g) => [g, { passes: ownPass(g, noSelf), total: noSelf.filter((i) => i.grader === g).length, paraphrase_passes: ownPass(g, noSelf.filter((i) => i.variant === 'paraphrase')) }])),
+    pairwise_self_reps: e1.rows.filter((r) => r.grader === 'pairwise' && isGoldText(r)).length,
+    ref_similarity: similaritySensitivity(e1, e4),
+    r2_in_controls: { reps: controlReps.filter((r) => (r.violations ?? []).some((x) => x.criterion === 'R2')).length, total: controlReps.length },
+    ranges: {
+      jsrc_tpr_text: wilson(Math.round(ratesText['judge-sourced'].tpr * ratesText['judge-sourced'].clean), ratesText['judge-sourced'].clean),
+      jref_tnr_text: wilson(fails(ratesText['judge-ref']), ratesText['judge-ref'].faulty),
+      blind_tnr_text: wilson(fails(ratesText['judge-blind']), ratesText['judge-blind'].faulty),
+      pair_tnr_text: wilson(fails(ratesText.pairwise), ratesText.pairwise.faulty),
+      jref_e4: wilson(passesOf('judge-ref'), e4.runs.length), jsrc_e4: wilson(passesOf('judge-sourced'), e4.runs.length),
+      cell_full_3: wilson(3, 3), cell_one_3: wilson(1, 3),
+    },
     flakiness: flakiness(v), flakiness_unique_text: flakiness(unique),
     disagreements: llmOnly.filter((i) => !i.unanimous).map((i) => ({ release: i.release, variant: i.variant, grader: i.grader, passes: i.passes, reps: i.reps })),
     pairwise_order: orderAgreement(e1.rows.filter((r) => r.grader === 'pairwise')),
+    pairwise_order_without_self: orderAgreement(e1.rows.filter((r) => r.grader === 'pairwise' && !isGoldText(r))),
     pass_violation_mismatch: [...e1.rows, ...e3.rows, ...e4.rows].filter((r) => r.violations && r.pass !== (r.violations.length === 0)).length,
-    hypotheses: hypotheses(cells), on_target: onTarget(e1.rows, fixtures, artifacts, key),
-    e3: e3Table(e3), e4: e4Tables(e4, rates),
+    hypotheses: hypotheses(cells, { labelled: { releases: labelledReleases, total: wrongBump.length, found: wrongBump.filter((i) => !i.pass).length }, inventedOnTarget: on_target['judge-sourced']['invented-claim'] }), on_target,
+    e3: e3Table(e3), e4: e4Tables(e4, rates, ratesText),
   };
 }
 

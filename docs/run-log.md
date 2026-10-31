@@ -30,7 +30,7 @@ Probelauf `--only r1`: 34 Aufrufe, alle 4 Läufe beendet, Grader bewerten sie. E
 
 Voller Lauf: 175 neue Aufrufe, 34 aus dem Probelauf wiederverwendet. Vollständig, keine Wiederholungen reduziert. Die Datei `data/results/e4-r1.json` aus dem Probelauf ist entfernt, sie war eine Teilmenge von `e4.json`. Die Rohantworten liegen weiter unter `data/raw/`.
 
-Agent-Verhalten, das kein Bug ist und so in der Auswertung bleibt: Drei Läufe rufen `finish` mit lauter `null` auf (r3 `naive-1`, r3 `naive-2`, r4 `careful-2`). Ihr Status lautet trotzdem `finished`. Das Protokoll erlaubt diese Nullen, und der Agent unter Test nutzt das. In `runs[].turns` zählen nur Züge mit Tool-Aufruf, der reine `finish`-Zug nicht.
+Leeres `finish`, das so in der Auswertung bleibt: Drei Läufe rufen `finish` mit lauter `null` auf (r3 `naive-1`, r3 `naive-2`, r4 `careful-2`). Ihr Status lautet trotzdem `finished`. Das Protokoll erlaubt ein leeres `finish`, das Harness beendet den Lauf, in r4 `careful-2` widerspricht das der erklärten Absicht des Modells. Die Ursache ist nicht bewiesen, `finish` als missverstandener Zugabschluss liegt nahe. Die Läufe werden weder wiederholt noch herausgerechnet, Einordnung in `docs/findings.md`. In `runs[].turns` zählen nur Züge mit Tool-Aufruf, der reine `finish`-Zug nicht.
 
 ## Verbrauch
 
@@ -52,6 +52,11 @@ Kein Rate-Limit, Budget nicht ausgeschöpft (1265 von 1500). Prompts unveränder
 - **Gold-Lücken** (r5 `pause(false)`, r6 #414) bleiben in den Fixtures, sie sind Teil des Befunds.
 - **`functional`** vergleicht bytegenau und fällt bei Leerzeichen am Zeilenende durch (r3 `careful-2`, r4 `careful-1`). Das ist die eingefrorene Regel.
 - **`tainted`** bleibt in den Rohdaten, wie es geschrieben wurde.
+
+## Nachträglich ergänzt
+
+- **`score` in den Ergebniszeilen:** `codeRows` hat den Wert von `ref-similarity` verworfen. Jetzt steht er in `e1.json`, `e3.json` und `e4.json`, damit die Schwellen-Tabelle aus den Ergebnisdaten belegbar ist. Sonst ändert sich an diesen Dateien nichts, kein Urteil und keine Rohantwort. Der Grader selbst ist unverändert.
+- **Auswertungen:** Die Tabellen zu Gold-Vorwürfen, Placebo, Schwelle, Rogan-Gladen je Text und die Einstufung der Hypothesen sind nach den Läufen entstanden und in `docs/findings.md` so gekennzeichnet.
 
 ## Auswertung
 

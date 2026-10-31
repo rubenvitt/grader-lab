@@ -1,5 +1,6 @@
 // Serves site/ under /grader-lab/ like GitHub Pages and plays through the page, screenshots land in .tmp/site-check.
 // Playwright is no dependency of this project: NODE_PATH=<dir with node_modules/playwright> node scripts/check-site.cjs
+// CHROMIUM_PATH optionally names a browser binary when the Playwright version has no matching download.
 const http = require('http'), fs = require('fs'), path = require('path');
 const { chromium } = require('playwright');
 const SITE = path.join(__dirname, '../site');
@@ -29,6 +30,10 @@ async function run(browser, { name, viewport, colorScheme, blockStorage, everyCo
   await page.waitForSelector('.matrix');
 
   const label = (t) => `[${name}] ${t}`;
+  await page.keyboard.press('Tab');
+  check(await page.evaluate(() => document.activeElement.classList.contains('skip')), label('first Tab reaches the skip link'));
+  check((await page.locator('#agent-app .seg button[data-value="r1"]').getAttribute('aria-pressed')) === 'true', label('initial selection is exposed and visible'));
+  check((await page.locator('#agent-app .seg button[data-value="r2"]').getAttribute('aria-pressed')) === 'false', label('other options carry aria-pressed="false"'));
   check(await page.evaluate(() => [...document.querySelectorAll('[data-fact]')].every((el) => el.textContent.trim() && el.textContent !== 'undefined')), label('all data-fact filled'));
   const samePrefix = requests.filter((u) => u.startsWith('http://localhost')).every((u) => new URL(u).pathname.startsWith('/grader-lab/'));
   check(samePrefix, label('all same-origin requests stay under /grader-lab/'));
@@ -58,8 +63,14 @@ async function run(browser, { name, viewport, colorScheme, blockStorage, everyCo
   }
 
   // Game: back button, then all six, then reveal
+  const liveRegion = await page.locator('#game-app [aria-live]').elementHandle();
   await page.click('#game-app .game-actions button:has-text("Durchfallen")');
+  await page.waitForTimeout(600);
+  const statusTop = await page.evaluate(() => document.querySelector('.game-status').getBoundingClientRect().top);
+  check(statusTop >= 0 && statusTop < 200, label(`next version starts in view: ${Math.round(statusTop)}`));
+  check(await liveRegion.evaluate((el) => el.isConnected && el === document.activeElement), label('live region survives the step and takes focus'));
   await page.click('#game-app .game-actions button:has-text("Zurück")');
+  check((await page.locator('#game-app .game-actions button:has-text("Durchfallen")').getAttribute('aria-pressed')) === 'true', label('back shows the earlier choice'));
   await page.click('#game-app .game-actions button:has-text("Bestehen")');
   await page.locator('#grader').screenshot({ path: `${SHOTS}/${name}-game.png` });
   for (const verdict of ['Bestehen', 'Bestehen', 'Durchfallen', 'Bestehen', 'Bestehen']) await page.click(`#game-app .game-actions button:has-text("${verdict}")`);
@@ -82,6 +93,19 @@ async function run(browser, { name, viewport, colorScheme, blockStorage, everyCo
   const focused = await page.evaluate(() => document.activeElement.getAttribute('aria-label'));
   check(focused?.startsWith('judge-blind, wrong-bump'), label(`arrow keys reach cell: ${focused}`));
   check(await page.locator('button.cell[tabindex="0"]').count() === 1, label('exactly one roving tab stop'));
+  if (viewport.width < 500) {
+    await page.locator('button.cell[data-r="2"][data-c="10"]').focus();
+    let covered = 0;
+    for (let i = 0; i < 10; i++) {
+      await page.keyboard.press('ArrowLeft');
+      covered += await page.evaluate(() => {
+        const cell = document.activeElement;
+        return cell.getBoundingClientRect().left < cell.closest('tr').querySelector('th').getBoundingClientRect().right ? 1 : 0;
+      });
+    }
+    check(covered === 0, label(`focused cell never under the row header: ${covered}`));
+    await page.locator('button.cell[data-r="1"][data-c="9"]').focus();
+  }
   await page.keyboard.press('Enter');
   await page.waitForSelector('dialog[open]');
   check((await page.textContent('#detail-title')) === 'wrong-bump', label('Enter opens the cell detail'));
@@ -98,8 +122,10 @@ async function run(browser, { name, viewport, colorScheme, blockStorage, everyCo
   await page.click('button.cell[aria-label^="wording, embargo-leak"]');
   await page.waitForSelector('dialog[open]');
   check((await page.textContent('#detail-body')).includes('nicht definiert'), label('undefined releases named'));
-  await page.locator('#detail .seg button').last().click();
+  await page.locator('#detail .seg button').last().focus();
+  await page.keyboard.press('Enter');
   await page.waitForTimeout(100);
+  check(await page.evaluate(() => document.activeElement.closest('#detail .seg')?.querySelector('[aria-pressed="true"]') === document.activeElement), label('focus stays on the picked release'));
   await page.screenshot({ path: `${SHOTS}/${name}-dialog.png` });
   check(await page.evaluate(() => { const d = document.getElementById('detail'); return d.scrollWidth <= d.clientWidth; }), label('dialog without horizontal scroll'));
   await page.keyboard.press('Escape');
@@ -114,8 +140,8 @@ async function run(browser, { name, viewport, colorScheme, blockStorage, everyCo
     }
   }
 
-  await page.locator('#matrix details summary').click();
-  check(await noHScroll(), label('no horizontal scroll with hypotheses open'));
+  for (const summary of await page.locator('#matrix details summary').all()) await summary.click();
+  check(await noHScroll(), label('no horizontal scroll with hypotheses and gold claims open'));
 
   // Cases, slider, grader switch, distraction fold
   for (let i = 0; i < 4; i++) {
@@ -131,6 +157,9 @@ async function run(browser, { name, viewport, colorScheme, blockStorage, everyCo
   check((await page.textContent('.rogan-result strong')) === 'nicht definiert', label('rogan undefined for judge-sourced'));
   await page.click('#rogan .seg button[data-value="judge-blind"]');
   check((await page.textContent('.rogan-result strong')) === '0,49', label(`rogan default 0,49, after one step ${blind}`));
+  await page.click('#rogan .seg button[data-value="text"]');
+  check((await page.textContent('.rogan-result strong')) === '0,59', label('rogan per text 0,59'));
+  await page.click('#rogan .seg button[data-value="artifact"]');
   await page.locator('#vertrauen').screenshot({ path: `${SHOTS}/${name}-trust.png` });
   await page.locator('#ablenkung details summary').click();
   await page.locator('#ablenkung').screenshot({ path: `${SHOTS}/${name}-e3.png` });
@@ -143,6 +172,9 @@ async function run(browser, { name, viewport, colorScheme, blockStorage, everyCo
   check(await page.locator('.human .cell-you').count() === (blockStorage ? 0 : 6), label('ratings after reload'));
   if (!blockStorage) {
     await page.click('#game-app button:has-text("Noch einmal")');
+    await page.waitForTimeout(600);
+    const top = await page.evaluate(() => document.querySelector('.game-status').getBoundingClientRect().top);
+    check(top >= 0 && top < 200, label(`restart shows the first version: ${Math.round(top)}`));
     check(await page.locator('.human .cell-you').count() === 0, label('reset clears the column'));
   }
   const relevant = errors.filter((e) => !/fonts\.g/.test(e));
@@ -152,7 +184,7 @@ async function run(browser, { name, viewport, colorScheme, blockStorage, everyCo
 
 (async () => {
   await new Promise((r) => server.listen(4173, r));
-  const browser = await chromium.launch();
+  const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH });
   await run(browser, { name: 'desktop-light', viewport: { width: 1280, height: 800 }, colorScheme: 'light', everyCombination: true });
   await run(browser, { name: 'desktop-dark', viewport: { width: 1280, height: 800 }, colorScheme: 'dark' });
   await run(browser, { name: 'mobile-light', viewport: { width: 375, height: 812 }, colorScheme: 'light', everyCombination: true });

@@ -12,6 +12,8 @@ const pct = (x) => `${Math.round(x * 100)} %`;
 const table = (head, rows) => [`| ${head.join(' | ')} |`, `|${head.map(() => '---').join('|')}|`, ...rows.map((r) => `| ${r.join(' | ')} |`)].join('\n');
 const clip = (text, max = 420) => (text.length > max ? `${text.slice(0, text.lastIndexOf(' ', max))} …` : text);
 const count = (rate, total) => Math.round(rate * total);
+const range = (w) => `${num(w.low)} bis ${num(w.high)}`;
+const words = (text) => text.split(/\s+/).filter(Boolean).length;
 
 function matrixTable(s) {
   const rows = VARIANTS.map((v) => [CONTROLS.has(v) ? `${v} (Kontrolle)` : v, ...GRADERS.map((g) => { const c = s.matrix[g][v]; return `${c.found}/${c.total}`; })]);
@@ -29,7 +31,7 @@ function ratesTable(s) {
 
 function hypothesisTable(s) {
   const counts = (h) => Object.entries(h.found).map(([g, c]) => `${g} ${c.found}/${c.total}`).join(', ');
-  return table(['Fehler', 'Erwartung der Spec', 'Gemessen bei den Erwarteten', 'Ergebnis', 'Fanden außerdem'], s.hypotheses.map((h) => [h.variant, h.expected, counts(h), h.outcome, h.others.join(', ') || '–']));
+  return table(['Fehler', 'Erwartung der Spec', 'Gemessen bei den Erwarteten', 'Ergebnis', 'Anmerkung', 'Fanden außerdem'], s.hypotheses.map((h) => [h.variant, h.expected, counts(h), h.outcome, h.note ?? '–', h.others.join(', ') || '–']));
 }
 
 function onTargetTable(s) {
@@ -38,6 +40,20 @@ function onTargetTable(s) {
     const c = s.on_target[g][v];
     return [`${c.failed}/${c.total}`, `${c.criterion}/${c.total}`, `${c.word}/${c.total}`];
   })]));
+}
+
+function placeboTable(s) {
+  const cells = s.on_target['judge-sourced'];
+  return table(['Fehler', 'Mutation Kriterium', 'Gold Kriterium', 'Mutation Kriterium + Wort', 'Gold Kriterium + Wort'], Object.entries(cells).map(([v, c]) => [v, `${c.criterion}/${c.total}`, `${c.gold_criterion}/${c.total}`, `${c.word}/${c.total}`, `${c.gold_word}/${c.total}`]));
+}
+
+function goldClaimsTable(s) {
+  return table(['Release', 'Vorwurf von `judge-sourced`', 'Wiederholungen'], s.gold_claims.map((c) => [c.release, c.topic, `${c.hits}/${c.reps}`]));
+}
+
+function similarityTable(s) {
+  return table(['Schwelle', 'Kontrollen bestanden', 'Paraphrasen bestanden', 'Mutationen durchgefallen', 'Agent-Texte bestanden'], s.ref_similarity.thresholds.map((t) => [
+    num(t.threshold), `${t.clean_pass}/${t.clean}`, `${t.paraphrase_pass}/${t.paraphrases}`, `${t.faulty_fail}/${t.faulty}`, `${t.agent_pass}/${t.agents}`]));
 }
 
 function flakinessTable(s) {
@@ -63,9 +79,10 @@ function e4Prompts(s) {
 }
 
 function roganTable(s) {
-  return table(['Grader', 'beobachtet', 'TPR', 'TNR', 'korrigiert'], LLM.map((g) => {
+  const shown = (x) => (x.corrected == null ? 'nicht definiert (TPR + TNR − 1 = 0)' : x.raw === x.corrected ? num(x.corrected) : `${num(x.corrected)} (roh ${num(x.raw)})`);
+  return table(['Grader', 'beobachtet', 'TPR', 'TNR', 'korrigiert', 'TPR je Text', 'TNR je Text', 'korrigiert je Text'], LLM.map((g) => {
     const r = s.e4.rogan[g];
-    return [g, num(r.observed), num(r.tpr), num(r.tnr), r.corrected == null ? 'nicht definiert (TPR + TNR − 1 = 0)' : num(r.corrected)];
+    return [g, num(r.observed), num(r.tpr), num(r.tnr), shown(r), num(r.by_text.tpr), num(r.by_text.tnr), shown(r.by_text)];
   }));
 }
 
@@ -125,8 +142,27 @@ export function renderFindings(s, inputs) {
   const cell = (g, v) => `${s.matrix[g][v].found}/${s.matrix[g][v].total}`;
   const obs = (g) => count(s.e4.observed[g], total);
   const pairDisagree = (a, b) => s.e4.pairs.find((p) => p.a === a && p.b === b).disagree;
-  const corrected = LLM.map((g) => s.e4.rogan[g].corrected).filter((x) => x != null);
-  const [low, high] = [Math.min(...corrected), Math.max(...corrected)];
+  const spread = (pick) => {
+    const values = LLM.map(pick).filter((x) => x != null);
+    return [Math.min(...values), Math.max(...values)];
+  };
+  const [low, high] = spread((g) => s.e4.rogan[g].corrected);
+  const [lowText, highText] = spread((g) => s.e4.rogan[g].by_text.corrected);
+  const jref = s.e4.rogan['judge-ref'];
+  const notesWords = (release, variant) => words(inputs.artifacts.get(inputs.key(release, variant)).notes_md);
+  const goldWords = (release) => words(inputs.fixtures.find((f) => f.release.id === release).gold.notes_md);
+  const self = s.tpr_without_self['judge-ref'];
+  const selfControls = r['judge-ref'].clean - self.total;
+  const paraphrases = s.matrix.schema.paraphrase.total;
+  const nThree = VARIANTS.filter((v) => !CONTROLS.has(v) && s.matrix.schema[v].total === 3).length;
+  const softerText = softer ? `${softer} Urteile` : 'kein Urteil';
+  const order = s.pairwise_order_without_self;
+  const { naive: { functional_clean: cleanNaive }, careful: { functional_clean: cleanCareful } } = s.e4.byPrompt;
+  const sim = s.ref_similarity.by_variant;
+  const otherMin = Math.min(...VARIANTS.filter((v) => !CONTROLS.has(v) && !['hype-tone', 'useless-true'].includes(v)).map((v) => sim[v].min));
+  const threshold = (t) => s.ref_similarity.thresholds.find((x) => x.threshold === t);
+  const worst = Math.max(...LLM.map((g) => s.flakiness[g].disagreeing));
+  const jsrcInvented = s.on_target['judge-sourced']['invented-claim'];
   const blindNeutralR1 = s.e3.rows.find((x) => x.release === 'r1')['judge-blind'].neutral;
 
   const examples = [
@@ -134,7 +170,7 @@ export function renderFindings(s, inputs) {
       title: 'Fehlalarm auf Gold: eine offensichtliche Folge gilt als unbelegt',
       exp: 'e1', release: 'r1', variant: 'gold', needle: 'Completed jobs are now removed by default',
       show: [{ grader: 'judge-sourced', rep: 3, evidence: 'Abrufverhalten' }, { grader: 'judge-sourced', rep: 1, evidence: 'finally' }],
-      note: `Der Diff zeigt den neuen Default, die Folge für Nutzer steht nicht wörtlich darin. Die Rubric sagt: „Der PR-Text allein belegt nichts, was der Diff nicht hergibt.“ Der Judge nimmt das genau, und unsere Diffs sind Ausschnitte. Alle ${s.rates['judge-sourced'].clean} Kontrollen fallen bei ihm durch. In diesem Fall ist es ein echter Fehlalarm.`,
+      note: `Der Diff zeigt den neuen Default, die Folge für Nutzer steht nicht wörtlich darin. Die Rubric sagt: „Der PR-Text allein belegt nichts, was der Diff nicht hergibt.“ Der Judge nimmt das genau, und unsere Diffs sind Ausschnitte. Alle ${s.rates['judge-sourced'].clean} Kontrollen fallen bei ihm durch. Bei #307 hält der Autor das für einen echten Fehlalarm, die Folge ergibt sich aus dem Default. Dieses Urteil gilt nur für #307, und der Vorwurf kommt nur in 2 von 3 Wiederholungen. Bei #304 ist es weniger klar: Der Diff gibt das Lock frei und zeigt keine Statusänderung, Gold nennt aber eine. Dieser Vorwurf kommt in allen drei Wiederholungen, ob er trifft, entscheidet hier kein Label.`,
     }),
     example({
       title: 'Der Grader hat recht, das Label nicht',
@@ -146,31 +182,31 @@ export function renderFindings(s, inputs) {
       title: 'Pairwise sieht die erfundene PR-Nummer und zuckt mit den Schultern',
       exp: 'e1', release: 'r1', variant: 'ghost-pr', needle: '#319',
       show: [{ grader: 'pairwise', rep: 1 }],
-      note: `\`pairwise\` findet ${cell('pairwise', 'ghost-pr')} erfundene Verweise, obwohl er den Unterschied im Klartext benennt. Ohne Quellen gelten beide Fassungen als gleichwertig, und \`equal\` zählt nach der eingefrorenen Regel nicht als Bevorzugen. \`pr-refs\` kostet dagegen keinen einzigen Modellaufruf. Unerwartet: Auch \`judge-ref\` (${cell('judge-ref', 'ghost-pr')}) und \`judge-sourced\` (${cell('judge-sourced', 'ghost-pr')}) finden alle, die Hypothese „Code“ war zu eng.`,
+      note: `\`pairwise\` findet ${cell('pairwise', 'ghost-pr')} erfundene Verweise, obwohl er den Unterschied im Klartext benennt. Ohne Quellen gelten beide Fassungen als gleichwertig, und \`equal\` zählt nach der eingefrorenen Regel nicht als Bevorzugen. \`pr-refs\` kostet dagegen keinen einzigen Modellaufruf. Das liegt auch am Prompt: \`pairwise\` erfährt nicht, welche Fassung Gold ist, und bewertet nur, „soweit sie sich aus den beiden Texten beurteilen lässt“. Unerwartet: Auch \`judge-ref\` (${cell('judge-ref', 'ghost-pr')}) und \`judge-sourced\` (${cell('judge-sourced', 'ghost-pr')}) finden alle, die Hypothese „Code“ war zu eng.`,
     }),
     example({
       title: 'Der fehlende Breaking Change fällt beim Vergleich nicht auf',
       exp: 'e1', release: 'r3', variant: 'missing-breaking', absent: 'stalledIntervalMs',
       show: [{ grader: 'pairwise', rep: 1 }, { grader: 'judge-ref', rep: 1 }],
-      note: `\`pairwise\` findet ${cell('pairwise', 'missing-breaking')}. Er sieht, dass ein Breaking Change nur in einer Fassung steht, wertet das aber nicht in beiden Reihenfolgen als Vorteil, solange die Quellen fehlen. Der Vergleich liefert hier also keine Referenz, sondern zwei Behauptungen. Die Hypothese „Referenz findet das“ stimmt nur für \`judge-ref\`, nicht für \`ref-similarity\` (${cell('ref-similarity', 'missing-breaking')}).`,
+      note: `\`pairwise\` findet ${cell('pairwise', 'missing-breaking')}. Er sieht, dass ein Breaking Change nur in einer Fassung steht, wertet das aber nicht in beiden Reihenfolgen als Vorteil, solange die Quellen fehlen. Der Prompt sagt ihm nicht, welche Fassung die Referenz ist, der Vergleich liefert hier also zwei Behauptungen. Die Hypothese „Referenz findet das“ stimmt nur für \`judge-ref\`, nicht für \`ref-similarity\` (${cell('ref-similarity', 'missing-breaking')}).`,
     }),
     example({
-      title: 'Selbstbewusster Ton schadet, aber aus dem falschen Grund',
+      title: 'Die selbstbewusste Fassung fällt durch, die Erfindung bleibt ungeprüft',
       exp: 'e3', release: 'r1', variant: 'invented-claim:confident', needle: 'definitively resolves',
       show: [{ grader: 'judge-blind', rep: 1 }, { grader: 'pairwise', rep: 1 }],
-      note: `Dieselbe erfundene Aussage besteht bei \`judge-blind\` in neutraler Fassung ${blindNeutralR1.passes} von ${blindNeutralR1.reps} Wiederholungen. In selbstbewusster Fassung fällt sie durch, aber wegen des Tons: ${s.e3.blind_confident_fails_tone} von ${s.e3.blind_confident_fails} durchgefallenen Wiederholungen über alle Releases nennen R7. Die Erfindung selbst bleibt laut Begründung ungeprüft. Das Urteil stimmt, die Begründung trägt nicht. \`pairwise\` benennt die unbelegte Garantie dagegen, die zugespitzte Formulierung lenkt den Blick eher darauf.`,
+      note: `Die neutrale Fassung besteht bei \`judge-blind\` in ${blindNeutralR1.passes} von ${blindNeutralR1.reps} Wiederholungen. Die selbstbewusste fällt durch, weil sie gegen R7 verstößt: ${s.e3.blind_confident_fails_tone} von ${s.e3.blind_confident_fails} durchgefallenen Wiederholungen über alle Releases nennen R7. Das ist korrekt angewandte Rubric, keine Ablenkung, und die Erfindung selbst bleibt laut Begründung ungeprüft. \`pairwise\` benennt eine unbelegte Garantie, aber die hat erst die selbstbewusste Fassung hinzugefügt: „guaranteed“ steht nicht in der neutralen.`,
     }),
     example({
       title: 'Leere Notes bestehen den blinden Judge',
       exp: 'e4', release: 'r3', variant: 'naive-2',
       show: [{ grader: 'judge-blind', rep: 1 }, { grader: 'judge-sourced', rep: 1 }],
-      note: `Der Agent hat \`finish\` mit lauter \`null\` aufgerufen, ohne je zu veröffentlichen. Das passierte in ${empty} von ${total} Läufen, einmal sogar mit dem sorgfältigen Prompt (r4, \`careful-2\`). \`judge-blind\` lässt die leeren Notes bestehen. Beide Läufe teilen sich dabei ein und denselben Aufruf, denn der blinde Prompt enthält nichts Release-Spezifisches, das Urteil ist also nur einmal gefallen. \`pr-refs\` besteht ebenfalls: Keine Verweise heißt keine falschen Verweise. Wer nichts sagt, sagt nichts Falsches.`,
+      note: `Der Lauf endet mit \`finish\` und lauter \`null\`, veröffentlicht wurde nichts. Das Protokoll erlaubt ein leeres \`finish\`, das Harness beendet den Lauf. Das ist keine belegte Entscheidung des Agenten: Hier steht \`finish\` im selben Zug hinter vier Leseaufrufen, deren Ergebnisse er nie sehen konnte, und in r4 \`careful-2\` widerspricht es der erklärten Absicht des Modells (siehe E4). Leere Notes gab es in ${empty} von ${total} Läufen. \`judge-blind\` lässt sie bestehen, und seine Begründung setzt fast wörtlich den Prompt um: „Was sich ohne Quellen nicht prüfen lässt, gilt als erfüllt.“ Beide Läufe teilen sich dabei ein und denselben Aufruf, denn der blinde Prompt enthält nichts Release-Spezifisches, das Urteil ist also nur einmal gefallen. \`pr-refs\` besteht ebenfalls: Keine Verweise heißt keine falschen Verweise. Wer nichts sagt, sagt nichts Falsches.`,
     }),
     example({
       title: 'Fast perfekt, nie veröffentlicht, und die Referenz straft die bessere Migration ab',
       exp: 'e4', release: 'r5', variant: 'careful-2', needle: 'worker.pause(true|false)',
       show: [{ grader: 'judge-ref', rep: 1, evidence: 'drain: true|false' }, { grader: 'judge-sourced', rep: 1 }, { grader: 'pairwise', rep: 1 }],
-      note: 'Drei Dinge in einem Lauf. Erstens ein echter `false-success`: `judge-sourced`, `judge-blind` und `pairwise` sind zufrieden, nur `functional` sieht, dass nichts veröffentlicht wurde. Die Hypothese „nur Functional“ hält auch beim echten Agenten. Zweitens deckt der Agent `pause(false)` ab, was Gold versäumt (Beispiel 2), und `pairwise` zieht seine Fassung in beiden Reihenfolgen vor. Drittens wertet `judge-ref` genau das als Verstoß, weil die Referenz es nicht enthält. Eine lückenhafte Referenz vererbt ihre Lücke an den Grader.',
+      note: 'Drei Dinge in einem Lauf. Erstens ein echter `false-success`: `judge-sourced`, `judge-blind` und `pairwise` sind zufrieden, nur `functional` sieht, dass nichts veröffentlicht wurde. Für die Hypothese „nur Functional“ ist das beim echten Agenten ein Beleg, n = 1. Zweitens deckt der Agent `pause(false)` ab, was Gold versäumt (Beispiel 2), und `pairwise` zieht seine Fassung in beiden Reihenfolgen vor. Drittens wertet `judge-ref` genau das als Verstoß, weil die Referenz es nicht enthält. Eine lückenhafte Referenz vererbt ihre Lücke an den Grader.',
     }),
     example({
       title: 'Versteckter Breaking Change: Struktur-Grader sind zufrieden, Judges nicht',
@@ -198,16 +234,18 @@ Alle Tabellen, Kennzahlen und Zitate erzeugt \`npm run report\` aus \`data/raw/\
 
 ## Das Wichtigste
 
-- **Der beste Grader auf den Mutationen urteilt auf echten Texten am härtesten.** \`judge-ref\` findet auf den Mutationen alles, was im Text steht (${count(u['judge-ref'].tnr, u['judge-ref'].faulty)} von ${u['judge-ref'].faulty} Texten, ${u['judge-ref'].clean - count(u['judge-ref'].tpr, u['judge-ref'].clean)} Fehlalarme). Auf echten Agent-Texten lässt er nur ${obs('judge-ref')} von ${total} bestehen. Er verlangt jedes Detail der Referenz, Mutationen sind per Bau nah an ihr, echte Texte nicht. Ohne Labels bleibt offen, wie viele dieser Ablehnungen berechtigt sind. Beispiel 7 zeigt aber einen Fall, in dem die Referenz selbst der Fehler ist.
-- **\`judge-sourced\` lässt alle ${s.rates['judge-sourced'].clean} Kontrollen durchfallen.** TPR ${num(r['judge-sourced'].tpr)}, TNR ${num(r['judge-sourced'].tnr)}. Seine Fundrate von 100 % sagt allein deshalb nichts. Auf den Texten des Agenten lässt er dagegen ${obs('judge-sourced')} von ${total} bestehen. Vermutlich bieten die erklärenden Gold-Texte mehr Angriffsfläche als die knappen Agent-Texte. Ein Teil seiner Vorwürfe gegen Gold ist berechtigt.
-- **Die Ablenkung aus E3 trat nicht ein, eher das Gegenteil.** Selbstbewusster Ton machte ${softer} Urteile milder und ${blind.harsher + pair.harsher} strenger, allerdings mit Wörtern, die die Rubric ohnehin verbietet.
-- **Mutationen ersetzen keine echten Läufe.** TPR und TNR aus E1 übertragen sich schlecht auf E4. Die Korrektur nach Rogan-Gladen ergibt für dieselben Texte je nach Grader Werte zwischen ${num(low)} und ${num(high)}.
+- **Der Grader mit der höchsten Fundrate auf Mutationen urteilt auf echten Texten am härtesten.** \`judge-ref\` findet auf den Mutationen alles, was im Text steht (${count(u['judge-ref'].tnr, u['judge-ref'].faulty)} von ${u['judge-ref'].faulty} Texten, Bereich ${range(s.ranges.jref_tnr_text)}, Spec-Zählung ${count(r['judge-ref'].tnr, r['judge-ref'].faulty)} von ${r['judge-ref'].faulty}). Die ${u['judge-ref'].clean - count(u['judge-ref'].tpr, u['judge-ref'].clean)} Fehlalarme tragen aber wenig: ${selfControls} der ${r['judge-ref'].clean} Kontrollen sind Gold selbst, echt gefordert ist er nur auf ${paraphrases} Paraphrasen vom selben Autor. Auf echten Agent-Texten lässt er nur ${obs('judge-ref')} von ${total} bestehen (Bereich ${range(s.ranges.jref_e4)}). Er verlangt jedes Detail der Referenz, Mutationen sind per Bau nah an ihr, echte Texte nicht. Ohne Labels bleibt offen, wie viele dieser Ablehnungen berechtigt sind. Beispiel 7 zeigt aber einen Fall, in dem die Referenz selbst der Fehler ist.
+- **\`judge-sourced\` lässt alle ${s.rates['judge-sourced'].clean} Kontrollen durchfallen.** TPR ${num(r['judge-sourced'].tpr)}, TNR ${num(r['judge-sourced'].tnr)}. Seine Fundrate von 100 % sagt allein deshalb nichts. Die TPR ${num(r['judge-sourced'].tpr)} ist eine Eigenschaft von Grader, Rubric, Gold und Diff-Ausschnitten zusammen: In ${s.gold_claim_releases} von ${s.e3.rows.length} Releases wiederholt er Vorwürfe gegen Gold in allen drei Wiederholungen, und ein Teil davon trifft. Er ist streng und zugleich teils im Recht, ohne Labels ist das nicht trennbar. Auf den Texten des Agenten lässt er dagegen ${obs('judge-sourced')} von ${total} bestehen (Bereich ${range(s.ranges.jsrc_e4)}). Woran das liegt, ist offen. Die Textlänge erklärt es nicht: r2 \`careful-1\` (${notesWords('r2', 'careful-1')} Wörter, Gold ${goldWords('r2')}) und r5 \`careful-2\` (${notesWords('r5', 'careful-2')}, Gold ${goldWords('r5')}) bestehen. Beide nennen die Abbildung von \`graceMs\` auf \`olderThanMs\`, die in Gold fehlt, r5 \`careful-2\` dazu \`pause(false)\`.
+- **Die Ablenkung aus E3 ist mit diesem Aufbau nicht prüfbar.** Die selbstbewussten Fassungen verletzen die Rubric zusätzlich und ändern den Inhalt. Selbstbewusster Ton machte ${softerText} milder und ${blind.harsher + pair.harsher} strenger, das ist korrektes Anwenden der Regeln und sagt über Ablenkung nichts.
+- **Mutationen ersetzen keine echten Läufe.** TPR und TNR aus E1 übertragen sich schlecht auf E4. Die Korrektur nach Rogan-Gladen ergibt für dieselben Texte je nach Grader Werte zwischen ${num(low)} und ${num(high)} (je Artefakt) oder ${num(lowText)} und ${num(highText)} (je Text). Die genaue Spanne hängt an der Zählweise, dass die Korrektur streut, nicht.
 
 ## Kennzahlen
 
 Definition wie im Skill \`validate-evaluator\` und damit andersherum als oft üblich: „positiv“ heißt bestanden. **TPR** ist der Anteil fehlerfreier Fälle, die der Grader bestehen lässt. **TNR** ist der Anteil fehlerhafter Fälle, die er durchfallen lässt.
 
 Das Urteil pro Artefakt ist die Mehrheit der Wiederholungen. E1 umfasst ${s.counts.artifacts} Artefakte (${s.counts.controls} Kontrollen, ${s.counts.mutations} Mutationen). ${s.counts.not_applicable} Kombinationen aus Release und Fehlerart sind nicht definiert, etwa ein Embargo-Leck ohne Embargo-Fix. Sie stehen in \`data/results/e1.json\`.
+
+„Bereich“ heißt hier 95-%-Wilson-Intervall. Es setzt unabhängige Fälle voraus, sechs Releases eines Autors sind das nicht, die Bereiche sind also eher zu eng. ${nThree} von 12 Fehlerarten haben n = 3: 3/3 entspricht ${range(s.ranges.cell_full_3)}, 1/3 entspricht ${range(s.ranges.cell_one_3)}. Weitere Kernzahlen je Text: TPR von \`judge-sourced\` ${range(s.ranges.jsrc_tpr_text)}, TNR von \`judge-blind\` ${range(s.ranges.blind_tnr_text)}, TNR von \`pairwise\` ${range(s.ranges.pair_tnr_text)}.
 
 ## E1: Matrix
 
@@ -223,18 +261,29 @@ ${ratesTable(s)}
 
 Die Spalten „je Text“ gelten nur für LLM-Grader. \`gold\`, \`extra-diligent\`, \`false-success\` und \`lucky-path\` haben denselben Text und teilen sich dieselben Judge-Aufrufe. Die Spec-Zahl zählt sie mehrfach, \`false-success\` und \`lucky-path\` senken die TNR jedes Judges, obwohl kein Judge sie sehen kann. Je Text bleiben ${u['judge-ref'].clean} Kontrollen und ${u['judge-ref'].faulty} Mutationen.
 
+Die TPR von 1,00 bei \`judge-ref\`, \`judge-blind\` und \`pairwise\` entsteht zum großen Teil durch die Konstruktion. ${selfControls} der ${r['judge-ref'].clean} Kontrollen (\`gold\`, \`extra-diligent\`) und ${u['judge-ref'].clean - self.total} der ${u['judge-ref'].clean} Texte vergleichen Gold mit sich selbst, die \`reordered\`-Texte liegen bei Ähnlichkeit ${num(sim.reordered.min)} oder höher. Ohne Selbstvergleich bestehen ${self.passes} von ${self.total} Texten, davon sind nur ${paraphrases} Paraphrasen, geschrieben vom selben Autor. Bei \`judge-sourced\` sind es ${s.tpr_without_self['judge-sourced'].passes} von ${s.tpr_without_self['judge-sourced'].total}.
+
 ### Hypothesen der Spec
 
-Lesart: „Judge“ heißt \`judge-ref\`, \`judge-sourced\`, \`judge-blind\`. „Referenz“ heißt \`judge-ref\`, \`ref-similarity\`. „Eingetreten“ heißt: Alle Erwarteten finden alle Fälle, bei „nur“ findet zudem kein anderer etwas.
+Lesart: „Judge“ heißt \`judge-ref\`, \`judge-sourced\`, \`judge-blind\`. „Referenz“ heißt \`judge-ref\`, \`ref-similarity\`. „Eingetreten“ heißt: Alle Erwarteten finden alle Fälle, bei „nur“ findet zudem kein anderer etwas. **Die Spalte „Ergebnis“ ist eine nachträgliche Lesart.** Die Regel steht in \`src/report.mjs\` und entstand nach den Läufen, ebenso die Zuordnung der Spec-Wörter zu Gradern. Keine Fundzahl ändert sich dadurch.
 
 ${hypothesisTable(s)}
 
-Was davon nicht eintrat:
+Zur Tabelle:
 
-- \`ref-similarity\` findet keinen fehlenden Breaking Change (${cell('ref-similarity', 'missing-breaking')}) und keine falsche Migration (${cell('ref-similarity', 'wrong-migration')}). Eine fehlende Zeile oder ein falscher Optionsname bewegt die Ähnlichkeit kaum unter 0,7. Dafür schlägt der Grader bei allen ${s.matrix['ref-similarity'].paraphrase.total} Paraphrasen falsch an und bei allen ${total} Agent-Texten.
-- \`semver-labels\` findet den falschen Bump in ${cell('semver-labels', 'wrong-bump')} Fällen. \`schema\` findet ihn in ${cell('schema', 'wrong-bump')}, ohne dafür gebaut zu sein: Ein Abschnitt „Breaking Changes“ bei Minor verstößt gegen die Strukturregel.
-- \`judge-blind\` findet Fehler in Form und Ton, inhaltliche kaum: ${cell('judge-blind', 'invented-claim')} erfundene Aussagen, ${cell('judge-blind', 'ghost-pr')} Geister-PRs. Das steht nicht in der Spec, passt aber zur These.
+- \`ref-similarity\` findet keinen fehlenden Breaking Change (${cell('ref-similarity', 'missing-breaking')}) und keine falsche Migration (${cell('ref-similarity', 'wrong-migration')}). Beide bleiben über der Schwelle von 0,7. Dazu schlägt der Grader bei allen ${paraphrases} Paraphrasen falsch an und bei allen ${total} Agent-Texten. Das hängt an einer knappen Schwelle, siehe unten. Stabil ist: Fehlerfälle liegen näher an Gold als korrekte Paraphrasen.
+- \`semver-labels\` findet den falschen Bump in ${cell('semver-labels', 'wrong-bump')} Fällen, das ist genau das Release, in dem Labels ihn hergeben. \`schema\` findet ihn in ${cell('schema', 'wrong-bump')} über eine Regel, die kurz vor dem Einfrieren genau dafür ergänzt wurde (Commit \`0d9f202\`). Dasselbe gilt für \`reverted-listed\` in r6, das \`schema\` über die zweite dort ergänzte Regel findet.
+- \`judge-blind\` findet Fehler in Form und Ton, inhaltliche kaum: ${cell('judge-blind', 'invented-claim')} erfundene Aussagen, ${cell('judge-blind', 'ghost-pr')} Geister-PRs. Das ist nur zum Teil eine Eigenschaft der Methode, denn sein Prompt sagt: „Was sich ohne Quellen nicht prüfen lässt, gilt als erfüllt“ und „Unterstelle keine Fehler“. Ähnlich bei \`pairwise\`: Er erfährt nicht, welche Fassung Gold ist, und bewertet nur, „soweit sie sich aus den beiden Texten beurteilen lässt“. Beide Anweisungen bestimmen die Fundraten mit, als Beleg für die These taugen diese Zeilen also nur eingeschränkt.
 - \`false-success\` und \`lucky-path\` sind nur scheinbar von \`judge-sourced\` gefunden. Er sieht denselben Text wie bei Gold und lehnt ihn genauso ab. Das ist kein Fund, sondern sein Grundrauschen.
+- \`schema\` findet ${cell('schema', 'internal-noise')} bei \`internal-noise\` nur, weil vier dieser Mutationen eine eigene Überschrift „Internal“ oder „Maintenance“ mitbringen, die nicht in \`allowed_sections\` steht. Das ist ein Artefakt unserer Mutationen, kein inhaltlicher Fund. In r2 und r3 hängen die Einträge in bestehenden Abschnitten, dort findet \`schema\` nichts.
+
+### \`ref-similarity\`: wie knapp die Schwelle ist
+
+Nachträgliche Angabe, die eingefrorene Schwelle 0,7 gilt weiter. Paraphrasen liegen bei ${num(sim.paraphrase.min, 3)} bis ${num(sim.paraphrase.max, 3)}, also knapp darunter. \`useless-true\` liegt bei höchstens ${num(sim['useless-true'].max, 3)}, \`hype-tone\` ab ${num(sim['hype-tone'].min, 3)}, alle anderen Mutationen ab ${num(otherMin, 3)}.
+
+${similarityTable(s)}
+
+Jede Schwelle von ${num(Math.ceil(sim['useless-true'].max * 100) / 100)} bis ${num(Math.floor(sim.paraphrase.min * 100) / 100)} wäre auf E1 also strikt besser, ohne dass ein Fund verloren geht. Auch die Aussage zu den ${total} Agent-Texten hängt an der Schwelle: Bei ${num(0.55)} bestehen ${threshold(0.55).agent_pass}, bei ${num(0.5)} schon ${threshold(0.5).agent_pass}, bei ${num(0.45)} sind es ${threshold(0.45).agent_pass}.
 
 ### Trifft der Judge wirklich den eingebauten Fehler?
 
@@ -242,7 +291,19 @@ Eine Fundrate zählt nur das Durchfallen. Bei einem Judge, der alles ablehnt, is
 
 ${onTargetTable(s)}
 
-\`judge-sourced\` meldet den eingebauten Fehler also meist tatsächlich, lehnt daneben aber auch Fehlerfreies ab. Er ist kein Zufallsgenerator, sondern zu streng. Der Prompt bleibt trotzdem unverändert: Eine Nachschärfung bis zur schönen Matrix wäre genau das, was die Spec ausschließt.
+Die Spalte „Kriterium“ belegt bei \`judge-sourced\` für sich nichts. Dieselbe Prüfung auf dem unveränderten Gold desselben Releases, mit denselben Wörtern, liefert bei \`ghost-pr\` und \`invented-claim\` schon ${s.on_target['judge-sourced']['ghost-pr'].gold_criterion}/${s.on_target['judge-sourced']['ghost-pr'].total} und ${jsrcInvented.gold_criterion}/${jsrcInvented.total}, denn R2 steht in ${s.r2_in_controls.reps} von ${s.r2_in_controls.total} Kontroll-Wiederholungen. Erst „Kriterium + Wort“ trennt:
+
+${placeboTable(s)}
+
+\`judge-sourced\` meldet den eingebauten Fehler also meist tatsächlich, lehnt daneben aber auch Texte ohne eingebauten Fehler ab. Er ist kein Zufallsgenerator. Er ist streng und zugleich teils im Recht, ohne Labels ist das nicht trennbar. Der Prompt bleibt trotzdem unverändert: Eine Nachschärfung bis zur schönen Matrix wäre genau das, was die Spec ausschließt.
+
+### Was \`judge-sourced\` Gold vorwirft
+
+Die Kontrollen sind nur annähernd fehlerfrei. Die Tabelle zählt Vorwürfe gegen die Gold-Texte über die drei Wiederholungen, Vorwürfe aus nur einer Wiederholung fehlen. Die Themen sind von Hand benannt, die Zahlen aus den Rohdaten. In ${s.gold_claim_releases} von ${s.e3.rows.length} Releases kommt mindestens ein Vorwurf in allen Wiederholungen. Ob er trifft, entscheidet hier kein Label, die Einordnung bleibt Sache des Lesers.
+
+${goldClaimsTable(s)}
+
+Der Satz „details will follow in a separate advisory“ steht in den Gold-Texten von r2, r3 und r6 und in keiner Quelle. Gemeldet wird er nur in r3, in den beiden anderen Releases nicht. Auch Strenge ist also nicht gleichmäßig.
 
 ## E2: Stabilität
 
@@ -254,11 +315,11 @@ Alle uneinigen Fälle:
 
 ${table(['Release', 'Fassung', 'Grader', 'bestanden'], s.disagreements.map((d) => [d.release, d.variant, d.grader, `${d.passes}/${d.reps}`]))}
 
-Die Flakiness ist gering. Die Reihenfolge wirkt stärker: Bei \`pairwise\` antworten die beiden Reihenfolgen in ${s.pairwise_order.inconsistent} von ${s.pairwise_order.total} Wiederholungen nicht gleich, davon ${s.pairwise_order.one_equal}-mal als Präferenz gegen „equal“. Eine echte Umkehr gab es ${s.pairwise_order.flips}-mal. Die eingefrorene Regel fängt das ab, weil eine Fassung nur durchfällt, wenn Gold in beiden Reihenfolgen gewinnt. Das drückt aber auch die Fundrate von \`pairwise\`.
+Auf diesen gold-nahen Texten ist die Flakiness gering, höchstens ${worst} von ${s.counts.artifacts} Artefakten je Grader. Für echte Texte ist sie nicht gemessen: In E4 urteilt jeder LLM-Grader genau einmal. Die Reihenfolge wirkt stärker: Bei \`pairwise\` antworten die beiden Reihenfolgen in ${s.pairwise_order.inconsistent} von ${s.pairwise_order.total} Wiederholungen nicht gleich, davon ${s.pairwise_order.one_equal}-mal als Präferenz gegen „equal“. Von den ${s.pairwise_order.total} sind ${s.pairwise_self_reps} Selbstvergleiche, in denen beide Reihenfolgen derselbe Aufruf sind. Ohne sie lautet die Quote ${order.inconsistent} von ${order.total}, rund ${Math.round((order.inconsistent / order.total) * 100)} statt ${Math.round((s.pairwise_order.inconsistent / s.pairwise_order.total) * 100)} %. Eine echte Umkehr gab es ${s.pairwise_order.flips}-mal. Die eingefrorene Regel fängt das ab, weil eine Fassung nur durchfällt, wenn Gold in beiden Reihenfolgen gewinnt. Das drückt aber auch die Fundrate von \`pairwise\`.
 
 ## E3: Ablenkung
 
-Pro Release dieselbe erfundene Aussage (\`invented-claim\`), neutral und selbstbewusst formuliert. Die Zellen zeigen bestandene Wiederholungen. Alle Fassungen sind fehlerhaft, jedes Bestehen ist also ein Fehlurteil.
+Pro Release eine erfundene Aussage (\`invented-claim\`), einmal neutral und einmal selbstbewusst formuliert. Die Zellen zeigen bestandene Wiederholungen. Alle Fassungen sind fehlerhaft, jedes Bestehen ist also ein Fehlurteil.
 
 ${e3Table(s)}
 
@@ -267,7 +328,7 @@ ${e3Table(s)}
 - \`pairwise\` lässt die neutrale Fassung in ${pair.pass_neutral} von ${s.e3.rows.length} bestehen, die selbstbewusste in ${pair.pass_confident}.
 - Bei \`pairwise\` gab es in ${s.e3.order.total} Wiederholungen ${s.e3.order.flips} echte Umkehrungen durch die Reihenfolge und ${s.e3.order.inconsistent} ungleiche Antworten.
 
-Die Spec fragt nach Tripathi et al., ob sich ein Vergleich durch selbstbewussten Ton eher täuschen lässt als eine absolute Bewertung. Dieser kleine Aufbau zeigt das nicht. Die Aussagekraft ist aber begrenzt: Unsere selbstbewussten Fassungen enthalten Wörter wie „guaranteed“ und „definitively“. Die Rubric verbietet solchen Ton in R7 ausdrücklich, ein Judge hat also einen Anlass abzulehnen. Zudem verschärfen einzelne Formulierungen die Aussage etwas, der Inhalt ist nur annähernd gleich. Eine Ablenkung, die im Ton innerhalb der Rubric bleibt, haben wir nicht getestet.
+**Mit diesem Aufbau nicht prüfbar:** Die selbstbewussten Fassungen verletzen die Rubric zusätzlich und ändern den Inhalt. Die Spec fragt nach Tripathi et al., ob sich ein Vergleich durch selbstbewussten Ton eher täuschen lässt als eine absolute Bewertung, und verlangt dafür gleichen Inhalt. Davon weichen die Fassungen ab: In allen ${s.e3.rows.length} Releases ändern sie die Einleitung und fügen neue Zusicherungen hinzu, etwa „guaranteed“, „without exception“, „proven“ oder „permanently eliminates“. Damit verstoßen sie gegen R7 und gegen R2. Bei \`pairwise\` fallen alle ${s.e3.pair_confident_fails} selbstbewussten Wiederholungen durch (neutral ${s.e3.pair_neutral_fails} von ${s.e3.pair_neutral_total}), und in ${s.e3.pair_confident_unsupported} dieser Begründungen stehen unbelegte Garantien oder Aussagen, nicht nur der Ton. Das strengere Urteil ist also korrektes Anwenden der Regeln und sagt über Ablenkung nichts. \`pairwise\` vergleicht zudem nur gegen Gold, nie neutral gegen selbstbewusst, und n sind ${s.e3.rows.length} Releases. Eine Variante, die im Ton innerhalb der Rubric bleibt und den Inhalt nicht ändert, wäre ein neuer Lauf als \`v2\` und ist nicht Teil dieser Auswertung.
 
 ## E4: Echter Agent
 
@@ -281,9 +342,10 @@ Bei \`judge-blind\` stecken zwei Läufe in einem Aufruf: Die leeren Notes aus r3
 
 Was auffällt:
 
-- Sorgfalt hilft messbar, aber nicht überall. \`trajectory\` steigt von ${naive.passes.trajectory} auf ${careful.passes.trajectory}, \`schema\` von ${naive.passes.schema} auf ${careful.passes.schema}. Bei \`functional\` ändert sich fast nichts (${naive.passes.functional} zu ${careful.passes.functional}). ${careful.runs - careful.published} sorgfältige und ${naive.runs - naive.published} naive Läufe veröffentlichen nie.
-- ${unpublished} von ${total} Läufen haben nichts veröffentlicht, ${planMissing} haben \`finish\` ohne Plan aufgerufen, ${empty} davon ohne Notes. Der Status \`finished\` in \`e4.json\` sagt nur, dass \`finish\` kam.
-- Die vier LLM-Grader sind sich in ${s.e4.llm_split} von ${total} Läufen uneinig. Über alle Grader gilt das für alle ${s.e4.all_split}, schon weil \`pr-refs\` jeden und \`ref-similarity\` keinen Lauf bestehen lässt.
+- Sorgfalt hilft messbar, aber nicht überall, n sind je ${naive.runs} Läufe. \`trajectory\` steigt von ${naive.passes.trajectory} auf ${careful.passes.trajectory}, wobei der sorgfältige Prompt die Grader-Regel fast wörtlich vorgibt („Lies zu jeder PR den Text und den Diff, bevor du veröffentlichst“). Das misst teils nur, dass der Agent die Anweisung befolgt. \`schema\` steigt von ${naive.passes.schema} auf ${careful.passes.schema}. Bei \`functional\` ändert sich fast nichts (${naive.passes.functional} zu ${careful.passes.functional}). ${careful.runs - careful.published} sorgfältige und ${naive.runs - naive.published} naive Läufe veröffentlichen nie.
+- Der Vergleich ${naive.passes.functional} zu ${careful.passes.functional} enthält die zwei Leerzeichen-Fälle aus Beispiel 10 und die drei Läufe mit leerem \`finish\`. Ohne diese fünf Läufe steht es ${cleanNaive.passes} von ${cleanNaive.runs} zu ${cleanCareful.passes} von ${cleanCareful.runs}. Das ist nur eine zusätzliche Lesart, gewertet bleibt jeder Lauf.
+- ${unpublished} von ${total} Läufen haben nichts veröffentlicht, ${planMissing} haben \`finish\` ohne Plan aufgerufen, ${empty} davon ohne Notes. Der Status \`finished\` in \`e4.json\` sagt nur, dass \`finish\` kam. Das Protokoll erlaubt ein leeres \`finish\`, das Harness beendet den Lauf, \`publish_release\` lehnt fehlende Felder dagegen ab. In r4 \`careful-2\` widerspricht das der erklärten Absicht des Modells: Es schreibt im selben Zug, es hole noch die PR-Inhalte, „bevor ich veröffentliche“, und sendet dann \`finish\` mit lauter \`null\`. In r3 \`naive-2\` steht \`finish\` hinter vier Leseaufrufen im selben Zug, in r3 \`naive-1\` folgt es auf \`publish_release\`. Das spricht dafür, dass das Modell \`finish\` als Zugabschluss missversteht, bewiesen ist die Ursache nicht. Es betrifft 2 der ${unpublished} Läufe ohne Veröffentlichung, und r3 \`naive-1\` fällt bei \`schema\`, \`semver-labels\` und \`functional\` durch, obwohl korrekt 4.0.0 veröffentlicht wurde.
+- Die vier LLM-Grader sind sich in ${s.e4.llm_split} von ${total} Läufen uneinig. Weil jeder von ihnen hier nur einmal urteilt, können diese Widersprüche auch Rauschen enthalten. Über alle Grader gilt das für alle ${s.e4.all_split}, schon weil \`pr-refs\` jeden und \`ref-similarity\` keinen Lauf bestehen lässt.
 - Am weitesten auseinander liegen \`judge-ref\` und \`judge-blind\` mit ${pairDisagree('judge-ref', 'judge-blind')} widersprüchlichen Läufen. \`judge-ref\` lehnt ab, wenn ein Detail der Referenz fehlt oder etwas hinzukommt, \`judge-blind\` lässt durch, was in sich sauber klingt.
 - \`wording\` schlägt auf Agent-Texten kaum an: ${wordingHits} Treffer, davon ${empty} auf leeren Notes und einer wegen eines Embargo-Begriffs. Der Agent schreibt keinen Werbeton. Die hohen Fundraten aus E1 bleiben darum, wie in \`graders/prompts/v1/README.md\` angekündigt, eine Obergrenze ohne Gegenprobe.
 
@@ -293,7 +355,7 @@ Die beobachtete Pass-Rate eines Graders auf E4 lässt sich mit seinen Werten aus
 
 ${roganTable(s)}
 
-Dieselben ${total} Texte, und die geschätzte Rate reicht je nach Grader von ${num(low)} bis ${num(high)}. Bei \`judge-ref\` wird das Ergebnis auf 0 begrenzt, bei \`judge-sourced\` ist die Formel gar nicht definiert. Die Korrektur setzt voraus, dass TPR und TNR auf den neuen Daten gelten. Hier tun sie das nachweislich nicht: \`judge-sourced\` hat auf den Kontrollen TPR ${num(r['judge-sourced'].tpr)} und lässt trotzdem ${obs('judge-sourced')} Agent-Texte bestehen. Das Beispiel zeigt deshalb vor allem die Grenze der Korrektur, nicht die Qualität des Agenten.
+Dieselben ${total} Texte, und die geschätzte Rate reicht je nach Grader von ${num(low)} bis ${num(high)}. Rechnet man mit den Werten je Text, sind es ${num(lowText)} bis ${num(highText)}. Der Unterschied kommt aus der Zählweise: Die TNR je Artefakt enthält \`false-success\` und \`lucky-path\`, die kein Judge sehen kann. Bei \`judge-ref\` entsteht die Begrenzung auf 0 (Rohwert ${num(jref.raw)}) allein durch diese ${r['judge-ref'].faulty - u['judge-ref'].faulty} Fälle, je Text ergibt sich ${num(jref.by_text.corrected)}. Bei \`judge-sourced\` ist die Formel in beiden Rechnungen nicht definiert. Die Korrektur setzt voraus, dass TPR und TNR auf den neuen Daten gelten. Hier tun sie das nachweislich nicht: \`judge-sourced\` hat auf den Kontrollen TPR ${num(r['judge-sourced'].tpr)} und lässt trotzdem ${obs('judge-sourced')} Agent-Texte bestehen. Das Beispiel zeigt deshalb vor allem die Grenze der Korrektur, nicht die Qualität des Agenten.
 
 ## Beispiele
 
@@ -307,6 +369,8 @@ ${examples}
 - Synthetische Fixtures, kleine Fallzahl, ein Modellstand, Effort \`${s.models.effort}\`. Mutationen, Gold und Grader stammen vom selben Autor. Gold ist nicht fehlerfrei (Beispiel 2), die Kontrollen sind also nur annähernd fehlerfrei.
 - Die Diffs in den Fixtures sind Ausschnitte. Das begünstigt die „unbelegt“-Vorwürfe von \`judge-sourced\`. Mit vollständigen Diffs könnte seine TPR anders ausfallen, das ist nicht gemessen.
 - Die Wortlisten von \`wording\` sind nach den Mutationen entstanden.
+- Die Anweisungen in den Prompts von \`judge-blind\` und \`pairwise\` bestimmen deren Fundraten mit. \`pairwise\` kennt die Referenz nicht als solche.
+- Die Rubrics und Prompts blieben unverändert. Nachträglich entstanden die Auswertungen je Text, die Zuordnung der Hypothesen, die Trefferprüfung und die Schwellen-Tabelle zu \`ref-similarity\`. Die Zahlen „je Text“ sind also keine vorab festgelegten Kennzahlen, die Spec-Zahlen stehen daneben.
 - Keine menschlichen Labels. Die Einordnungen in den Beispielen stammen vom Autor, nicht aus einer Messung.
 `;
 }
