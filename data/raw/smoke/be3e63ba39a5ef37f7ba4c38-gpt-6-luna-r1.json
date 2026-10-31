@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "be3e63ba39a5ef37f7ba4c38",
+ "meta": {
+  "experiment": "e4",
+  "release": "toy",
+  "prompt": "careful",
+  "run": 1,
+  "turn": 1
+ },
+ "duration_ms": 9727,
+ "text": "{\"calls\":[{\"tool\":\"list_prs\",\"id\":null,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}] }",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "list_prs",
+    "id": null,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 65416,
+  "cached_input_tokens": 42112,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 428,
+  "reasoning_output_tokens": 276
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a193fc-884f-7292-a964-52896fec84eb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "Ich ermittle die gemergten PRs und hole für jede den Beschreibungstext sowie den Diff, bevor ich Release Notes und Versionssprung festlege."
+   }
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_1",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"list_prs\",\"id\":null,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}] }"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 65416,
+    "cached_input_tokens": 42112,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 428,
+    "reasoning_output_tokens": 276
+   }
+  }
+ ]
+}

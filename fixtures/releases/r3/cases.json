@@ -1,0 +1,29 @@
+{
+  "kinds": [
+    "hidden-breaking",
+    "embargo",
+    "internal",
+    "migration"
+  ],
+  "breaking_prs": [
+    351,
+    353
+  ],
+  "reverted_prs": [],
+  "internal_prs": [
+    362,
+    363,
+    365
+  ],
+  "embargo": {
+    "pr": 358,
+    "terms": [
+      "QSA-2026-02",
+      "XSS",
+      "cross-site",
+      "innerHTML",
+      "escapeHtml",
+      "stored"
+    ]
+  }
+}

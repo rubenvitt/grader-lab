@@ -1,0 +1,50 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d855d8a54e23f6403304309f",
+ "meta": {
+  "experiment": "smoke"
+ },
+ "duration_ms": 3921,
+ "text": "{\"reason\":\"Beide Fassungen beschreiben dieselbe Funktion; „installed version“ präzisiert lediglich, welche Version der Befehl ausgibt. Ohne Quellen lässt sich daraus kein belastbarer Qualitätsunterschied ableiten.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen beschreiben dieselbe Funktion; „installed version“ präzisiert lediglich, welche Version der Befehl ausgibt. Ohne Quellen lässt sich daraus kein belastbarer Qualitätsunterschied ableiten.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25136,
+  "cached_input_tokens": 0,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 60,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a193fc-bb96-7743-96cb-35a1f32ea1f8"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen beschreiben dieselbe Funktion; „installed version“ präzisiert lediglich, welche Version der Befehl ausgibt. Ohne Quellen lässt sich daraus kein belastbarer Qualitätsunterschied ableiten.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25136,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 60,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

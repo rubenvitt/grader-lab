@@ -1,0 +1,109 @@
+{
+  "variants": {
+    "missing-breaking": {
+      "edits": [
+        {
+          "find": "This release makes the Redis connection explicit, removes two deprecated APIs, adds",
+          "replace": "This release makes the Redis connection explicit, adds"
+        },
+        {
+          "find": "- `queue.clean()` and the job option `timeout`, both deprecated in earlier releases, have been removed (#393).\n  Migration: call `queue.purge({ status, olderThanMs })` and set `timeoutMs`.",
+          "replace": ""
+        }
+      ]
+    },
+    "wrong-bump": {
+      "plan": {
+        "bump": "minor",
+        "version": "4.2.0"
+      },
+      "edits": [
+        {
+          "find": "# quaykit 5.0.0",
+          "replace": "# quaykit 4.2.0"
+        }
+      ]
+    },
+    "ghost-pr": {
+      "edits": [
+        {
+          "find": "(#401)",
+          "replace": "(#400)"
+        }
+      ]
+    },
+    "invented-claim": {
+      "edits": [
+        {
+          "find": "spreads retries randomly so that they do not all arrive at once. It is opt-in (#395).",
+          "replace": "spreads retries randomly so that they do not all arrive at once. It is now the default for new queues (#395)."
+        }
+      ]
+    },
+    "wrong-migration": {
+      "edits": [
+        {
+          "find": "Migration: call `worker.pause({ drain: true })`.",
+          "replace": "Migration: call `worker.pause({ graceful: true })`."
+        }
+      ]
+    },
+    "reverted-listed": {
+      "na": "Dieses Release enthält keinen Revert."
+    },
+    "embargo-leak": {
+      "na": "Dieses Release enthält keinen Embargo-Fix."
+    },
+    "internal-noise": {
+      "plan": {
+        "sections": [
+          "Breaking Changes",
+          "Features",
+          "Fixes",
+          "Deprecations",
+          "Internal"
+        ]
+      },
+      "edits": [
+        {
+          "find": "Migration: call `worker.pause({ drain: true })`.",
+          "replace": "Migration: call `worker.pause({ drain: true })`.\n\n## Internal\n\n- The release workflow now publishes with `--provenance` (#403).\n- The key builder moved to a shared module (#404)."
+        }
+      ]
+    },
+    "hype-tone": {
+      "notes_md": "# quaykit 5.0.0\n\nThe wait is over: quaykit 5.0.0 has landed! Experience explicit Redis connections, a radically leaner API, a stunning new jitter retry strategy and flawless graceful shutdown.\n\n## Breaking Changes\n\n- No more surprises: `new RedisStore()` without `connection` now throws instead of connecting to `localhost:6379` (#391).\n  Migration: simply pass `connection` explicitly, for example `new RedisStore({ connection: { host: 'localhost', port: 6379 } })`.\n- Leaner than ever: `queue.clean()` and the job option `timeout`, both deprecated in earlier releases, have been removed (#393).\n  Migration: call `queue.purge({ status, olderThanMs })` and set `timeoutMs`.\n\n## Features\n\n- Meet the game-changing `backoff: { type: 'jitter', baseMs }`: it spreads retries randomly so that they do not all arrive at once. It is opt-in (#395).\n\n## Fixes\n\n- Shut down with confidence: `worker.close()` now respects `shutdownTimeoutMs` instead of waiting for active jobs forever (#397).\n- `quaykit inspect` now exits with a non-zero code when it fails (#401).\n\n## Deprecations\n\n- Passing a boolean to `worker.pause()` is deprecated and logs a warning once (#399).\n  Migration: enjoy the far more elegant `worker.pause({ drain: true })`."
+    },
+    "useless-true": {
+      "notes_md": "# quaykit 5.0.0\n\nThis major version contains API changes and various improvements.\n\n## Breaking Changes\n\n- Store construction changed (#391).\n- Old APIs were removed (#393).\n\n## Features\n\n- More retry options (#395).\n\n## Fixes\n\n- Shutdown behaviour improved (#397).\n- CLI improvements (#401).\n\n## Deprecations\n\n- A worker argument is deprecated (#399)."
+    },
+    "false-success": {},
+    "lucky-path": {},
+    "gold": {},
+    "paraphrase": {
+      "notes_md": "# quaykit 5.0.0\n\nRedis connections must now be given explicitly, and two deprecated APIs are gone. On top of that there is a jitter option for retries and a fix for graceful shutdown.\n\n## Breaking Changes\n\n- Calling `new RedisStore()` without a `connection` raises an error now. It used to fall back to `localhost:6379` (#391).\n  Migration: always hand over a `connection`, such as `new RedisStore({ connection: { host: 'localhost', port: 6379 } })`.\n- Both `queue.clean()` and the job option `timeout` are gone, after being deprecated in earlier releases (#393).\n  Migration: use `queue.purge({ status, olderThanMs })` and `timeoutMs` in their place.\n\n## Features\n\n- Retries can opt in to `backoff: { type: 'jitter', baseMs }`, which randomises the delay so that jobs do not all come back at the same moment (#395).\n\n## Fixes\n\n- `shutdownTimeoutMs` is now honoured by `worker.close()`, which previously waited for active jobs without any limit (#397).\n- A failing `quaykit inspect` now ends with a non-zero exit code (#401).\n\n## Deprecations\n\n- `worker.pause()` with a boolean argument is deprecated and warns once (#399).\n  Migration: write `worker.pause({ drain: true })`."
+    },
+    "reordered": {
+      "reorder": [
+        "Features",
+        "Fixes",
+        "Breaking Changes",
+        "Deprecations"
+      ]
+    },
+    "extra-diligent": {}
+  },
+  "e3": {
+    "base": "invented-claim",
+    "edits": [
+      {
+        "find": "This release makes the Redis connection explicit, removes two deprecated APIs, adds a jitter retry strategy and fixes graceful shutdown.",
+        "replace": "This release definitively makes the Redis connection explicit, fully removes two deprecated APIs, adds a proven jitter retry strategy and conclusively fixes graceful shutdown."
+      },
+      {
+        "find": "It is now the default for new queues (#395).",
+        "replace": "It is, without question, now the default for new queues (#395)."
+      }
+    ]
+  }
+}

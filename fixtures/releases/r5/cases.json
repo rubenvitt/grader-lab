@@ -1,0 +1,19 @@
+{
+  "kinds": [
+    "hidden-breaking",
+    "internal",
+    "migration",
+    "deprecation"
+  ],
+  "breaking_prs": [
+    391,
+    393
+  ],
+  "reverted_prs": [],
+  "internal_prs": [
+    402,
+    403,
+    404,
+    405
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "notes_md": "# quaykit 5.0.1\n\nThis patch release fixes a double ack after lock loss and contains a security fix.\n\n## Fixes\n\n- A worker that lost its job lock no longer acks the job and overwrites the state set by the worker that took over. It emits `lockLost` instead (#413).\n\n## Security\n\n- Fixes a security issue in `PostgresStore`. We recommend upgrading; details will follow in a separate advisory (#414).",
+  "plan": {
+    "bump": "patch",
+    "version": "5.0.1",
+    "sections": [
+      "Fixes",
+      "Security"
+    ]
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "tool": "list_prs",
+      "args": {},
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 411
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 413
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 414
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 416
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 417
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 418
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 419
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 411
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 413
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 414
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 416
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 417
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 418
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 419
+      },
+      "ok": true
+    },
+    {
+      "turn": 4,
+      "tool": "publish_release",
+      "args": {
+        "version": "5.0.1",
+        "notes": "# quaykit 5.0.1\n\nThis patch release fixes a double ack after lock loss and contains a security fix.\n\n## Fixes\n\n- A worker that lost its job lock no longer acks the job and overwrites the state set by the worker that took over. It emits `lockLost` instead (#413).\n\n## Security\n\n- Fixes a security issue in `PostgresStore`. We recommend upgrading; details will follow in a separate advisory (#414)."
+      },
+      "ok": true
+    }
+  ],
+  "sandbox": {
+    "published": true,
+    "version": "5.0.1",
+    "notes": "# quaykit 5.0.1\n\nThis patch release fixes a double ack after lock loss and contains a security fix.\n\n## Fixes\n\n- A worker that lost its job lock no longer acks the job and overwrites the state set by the worker that took over. It emits `lockLost` instead (#413).\n\n## Security\n\n- Fixes a security issue in `PostgresStore`. We recommend upgrading; details will follow in a separate advisory (#414)."
+  }
+}

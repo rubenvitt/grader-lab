@@ -1,0 +1,30 @@
+{
+  "id": "toy",
+  "package": "quaykit",
+  "previous_version": "1.2.3",
+  "prs": [
+    {
+      "number": 11,
+      "title": "feat(cli): add quaykit version",
+      "labels": [
+        "feature"
+      ],
+      "author": "harbormaster",
+      "merged_at": "2026-01-05",
+      "body": "Prints the installed version.",
+      "diff": "--- a/src/cli/index.ts\n+++ b/src/cli/index.ts\n@@ -4,1 +4,2 @@\n+program.command('version').action(() => console.log(pkg.version));"
+    },
+    {
+      "number": 12,
+      "title": "ci: run tests on Node 24",
+      "labels": [
+        "ci"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-01-06",
+      "body": "Adds Node 24 to the matrix.",
+      "diff": "--- a/.github/workflows/test.yml\n+++ b/.github/workflows/test.yml\n@@ -9,1 +9,1 @@\n-        node: [22]\n+        node: [22, 24]"
+    }
+  ],
+  "issues": []
+}

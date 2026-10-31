@@ -1,0 +1,83 @@
+{
+  "id": "r4",
+  "package": "quaykit",
+  "previous_version": "4.0.0",
+  "prs": [
+    {
+      "number": 371,
+      "title": "feat(worker): add rate limiter",
+      "labels": [
+        "feature"
+      ],
+      "author": "harbormaster",
+      "merged_at": "2026-06-01",
+      "body": "Adds `limiter: { max, durationMs }` to the worker options, so a worker can stay below the limits of a downstream API.\n\nCloses #369",
+      "diff": "--- a/src/types.ts\n+++ b/src/types.ts\n@@ -44,4 +44,5 @@ export interface WorkerOptions {\n   shutdownTimeoutMs?: number;\n+  limiter?: { max: number; durationMs: number };\n }\n--- a/src/worker.ts\n+++ b/src/worker.ts\n@@ -120,2 +120,3 @@ export class Worker extends EventEmitter {\n+    if (this.limiter) await this.limiter.wait();\n     const job = await this.store.next(this.keys.wait, this.opts.pollMs);"
+    },
+    {
+      "number": 373,
+      "title": "Revert \"feat(worker): add rate limiter\"",
+      "labels": [
+        "revert"
+      ],
+      "author": "tidewatcher",
+      "merged_at": "2026-06-03",
+      "body": "This reverts #371. Waiting in the poll loop blocks lock renewal, jobs got marked as stalled under load.",
+      "diff": "--- a/src/types.ts\n+++ b/src/types.ts\n@@ -44,5 +44,4 @@ export interface WorkerOptions {\n   shutdownTimeoutMs?: number;\n-  limiter?: { max: number; durationMs: number };\n }\n--- a/src/worker.ts\n+++ b/src/worker.ts\n@@ -120,3 +120,2 @@ export class Worker extends EventEmitter {\n-    if (this.limiter) await this.limiter.wait();\n     const job = await this.store.next(this.keys.wait, this.opts.pollMs);"
+    },
+    {
+      "number": 376,
+      "title": "feat(worker): add rate limiter (reland)",
+      "labels": [
+        "feature"
+      ],
+      "author": "harbormaster",
+      "merged_at": "2026-06-08",
+      "body": "Second attempt at #371. The limiter now runs outside the poll loop so lock renewal keeps going. The option is `limiter: { max, perMs }`, `durationMs` read like the job duration in review.\n\nCloses #369",
+      "diff": "--- a/src/types.ts\n+++ b/src/types.ts\n@@ -44,4 +44,5 @@ export interface WorkerOptions {\n   shutdownTimeoutMs?: number;\n+  limiter?: { max: number; perMs: number };\n }\n--- a/src/worker.ts\n+++ b/src/worker.ts\n@@ -72,3 +72,5 @@ export class Worker extends EventEmitter {\n   private async loop() {\n+    // One token bucket per worker instance, deliberately not shared.\n+    this.bucket = this.opts.limiter ? new TokenBucket(this.opts.limiter) : null;\n     while (this.running) {\n@@ -120,2 +122,3 @@ export class Worker extends EventEmitter {\n+    if (this.bucket && !this.bucket.take()) return this.scheduleWake(this.bucket.nextInMs());\n     const job = await this.store.next(this.keys.wait, this.opts.pollMs);"
+    },
+    {
+      "number": 378,
+      "title": "chore(queue): deprecate job option timeout in favour of timeoutMs",
+      "labels": [
+        "deprecation"
+      ],
+      "author": "tidewatcher",
+      "merged_at": "2026-06-10",
+      "body": "All other durations carry a unit. Both names work, `timeout` logs a warning once.",
+      "diff": "--- a/src/types.ts\n+++ b/src/types.ts\n@@ -12,3 +12,5 @@ export interface JobOptions {\n   backoffMs?: number;\n+  /** @deprecated Use timeoutMs. */\n   timeout?: number;\n+  timeoutMs?: number;\n }\n--- a/src/job.ts\n+++ b/src/job.ts\n@@ -21,2 +21,5 @@ export function normalize(opts: JobOptions) {\n+  if (opts.timeout !== undefined) {\n+    warnOnce('job option timeout is deprecated, use timeoutMs');\n+    opts.timeoutMs ??= opts.timeout;\n+  }\n   return opts;"
+    },
+    {
+      "number": 379,
+      "title": "ci: add CodeQL workflow",
+      "labels": [
+        "ci"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-06-11",
+      "body": "Runs on push to main.",
+      "diff": "--- /dev/null\n+++ b/.github/workflows/codeql.yml\n@@ -0,0 +1,4 @@\n+name: CodeQL\n+on:\n+  push:\n+    branches: [main]"
+    },
+    {
+      "number": 381,
+      "title": "chore(deps-dev): bump eslint from 9.3.0 to 9.10.0",
+      "labels": [
+        "dependencies"
+      ],
+      "author": "dependabot[bot]",
+      "merged_at": "2026-06-12",
+      "body": "Bumps eslint from 9.3.0 to 9.10.0.",
+      "diff": "--- a/package.json\n+++ b/package.json\n@@ -37,1 +37,1 @@\n-    \"eslint\": \"^9.3.0\",\n+    \"eslint\": \"^9.10.0\","
+    }
+  ],
+  "issues": [
+    {
+      "number": 369,
+      "title": "Throttle job processing",
+      "labels": [
+        "enhancement"
+      ],
+      "body": "We call an API that allows 100 requests per minute. It would be great if the worker could stay below that."
+    }
+  ]
+}

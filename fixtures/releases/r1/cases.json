@@ -1,0 +1,20 @@
+{
+  "kinds": [
+    "hidden-breaking",
+    "feature-revert",
+    "internal",
+    "migration"
+  ],
+  "breaking_prs": [
+    307
+  ],
+  "reverted_prs": [
+    301,
+    312
+  ],
+  "internal_prs": [
+    309,
+    320,
+    322
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "variants": {
+    "missing-breaking": {
+      "plan": {
+        "sections": [
+          "Features",
+          "Fixes"
+        ]
+      },
+      "edits": [
+        {
+          "find": "This release changes how long completed jobs are kept, adds JSON output",
+          "replace": "This release adds JSON output"
+        },
+        {
+          "find": "## Breaking Changes\n\n- Completed jobs are now removed by default: `removeOnComplete` defaults to `true` instead of `false`, so a finished job can no longer be fetched from the queue unless you opt in (#307).\n  Migration: to keep the old behaviour, pass `defaultJobOptions: { removeOnComplete: false }` when you create the `Queue`.",
+          "replace": ""
+        }
+      ]
+    },
+    "wrong-bump": {
+      "plan": {
+        "bump": "minor",
+        "version": "2.4.0"
+      },
+      "edits": [
+        {
+          "find": "# quaykit 3.0.0",
+          "replace": "# quaykit 2.4.0"
+        }
+      ]
+    },
+    "ghost-pr": {
+      "edits": [
+        {
+          "find": "(#318)",
+          "replace": "(#319)"
+        }
+      ]
+    },
+    "invented-claim": {
+      "edits": [
+        {
+          "find": "so the job no longer sits in active until the lock expires (#304).",
+          "replace": "and the job is retried on the next poll instead of sitting in active until the lock expires (#304)."
+        }
+      ]
+    },
+    "wrong-migration": {
+      "edits": [
+        {
+          "find": "pass `defaultJobOptions: { removeOnComplete: false }`",
+          "replace": "pass `defaultJobOptions: { keepCompleted: true }`"
+        }
+      ]
+    },
+    "reverted-listed": {
+      "edits": [
+        {
+          "find": "- `quaykit inspect --json` prints",
+          "replace": "- Priority lanes: pass `lanes` to a `Queue` and `lane` to `add()` so that urgent jobs overtake the backlog (#301).\n- `quaykit inspect --json` prints"
+        }
+      ]
+    },
+    "embargo-leak": {
+      "na": "Dieses Release enthält keinen Embargo-Fix."
+    },
+    "internal-noise": {
+      "plan": {
+        "sections": [
+          "Breaking Changes",
+          "Features",
+          "Fixes",
+          "Internal"
+        ]
+      },
+      "edits": [
+        {
+          "find": "until the lock expires (#304).",
+          "replace": "until the lock expires (#304).\n\n## Internal\n\n- CI now caches the pnpm store in GitHub Actions (#320).\n- Bumped vitest to 2.1.1 (#322)."
+        }
+      ]
+    },
+    "hype-tone": {
+      "notes_md": "# quaykit 3.0.0\n\nSay hello to the leanest quaykit ever! This game-changing release supercharges your Redis, unleashes JSON output in the CLI and makes workers more bulletproof than ever.\n\n## Breaking Changes\n\n- Enjoy a dramatically cleaner queue: `removeOnComplete` now defaults to `true` instead of `false`, which means finished jobs vanish automatically and can no longer be fetched unless you opt in (#307).\n  Migration: craving the old behaviour? Just pass `defaultJobOptions: { removeOnComplete: false }` when you create the `Queue`.\n\n## Features\n\n- Unleash the power of automation: `quaykit inspect --json` delivers your queue statistics as beautiful JSON instead of a table (#318).\n\n## Fixes\n\n- Rock-solid locks: a worker now effortlessly releases the job lock when the handler throws synchronously, so the job no longer sits in active until the lock expires (#304)."
+    },
+    "useless-true": {
+      "notes_md": "# quaykit 3.0.0\n\nThis release contains changes to job handling and tooling.\n\n## Breaking Changes\n\n- Some default behaviour has changed (#307).\n\n## Features\n\n- The CLI has been improved (#318).\n\n## Fixes\n\n- Various improvements to worker reliability (#304)."
+    },
+    "false-success": {},
+    "lucky-path": {},
+    "gold": {},
+    "paraphrase": {
+      "notes_md": "# quaykit 3.0.0\n\nWith this version finished jobs are cleaned up automatically, the command line tool can emit JSON, and a worker lock leak is gone.\n\n## Breaking Changes\n\n- `removeOnComplete` is now `true` out of the box (previously `false`). Jobs disappear as soon as they complete and cannot be retrieved from the queue afterwards unless you opt in (#307).\n  Migration: set `defaultJobOptions: { removeOnComplete: false }` on your `Queue` to get the previous behaviour back.\n\n## Features\n\n- Pass `--json` to `quaykit inspect` to get the queue statistics as JSON rather than a table (#318).\n\n## Fixes\n\n- Handlers that throw synchronously no longer leave the lock held: the worker frees it right away, instead of the job staying in active until the lock runs out (#304)."
+    },
+    "reordered": {
+      "reorder": [
+        "Fixes",
+        "Features",
+        "Breaking Changes"
+      ]
+    },
+    "extra-diligent": {}
+  },
+  "e3": {
+    "base": "invented-claim",
+    "edits": [
+      {
+        "find": "This release changes how long completed jobs are kept, adds JSON output to the CLI and fixes a lock leak in workers.",
+        "replace": "This release definitively resolves job retention, fully delivers JSON output in the CLI and permanently eliminates the lock leak in workers."
+      },
+      {
+        "find": "A worker now releases the job lock when the handler throws synchronously, and the job is retried",
+        "replace": "A worker now always releases the job lock when the handler throws synchronously, and the job is guaranteed to be retried"
+      }
+    ]
+  }
+}

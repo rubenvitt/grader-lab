@@ -1,0 +1,125 @@
+{
+  "id": "r3",
+  "package": "quaykit",
+  "previous_version": "3.1.0",
+  "prs": [
+    {
+      "number": 351,
+      "title": "chore(worker): consolidate timing option names",
+      "labels": [
+        "chore"
+      ],
+      "author": "tidewatcher",
+      "merged_at": "2026-05-04",
+      "body": "Our timing options were named inconsistently, this aligns them with `lockDurationMs` and cleans up a private helper while at it. No functional change.",
+      "diff": "--- a/src/types.ts\n+++ b/src/types.ts\n@@ -40,7 +40,7 @@ export interface WorkerOptions {\n   concurrency?: number;\n   lockDurationMs?: number;\n-  stalledIntervalMs?: number;\n+  stallCheckMs?: number;\n   shutdownTimeoutMs?: number;\n }\n--- a/src/worker.ts\n+++ b/src/worker.ts\n@@ -58,10 +58,10 @@ export class Worker extends EventEmitter {\n-    this._lockTick = setInterval(() => this.renewLocks(), this.opts.lockDurationMs / 2);\n-    this.stallTimer = setInterval(() => this.checkStalled(), this.opts.stalledIntervalMs);\n+    this.lockTimer = setInterval(() => this.renewLocks(), this.opts.lockDurationMs / 2);\n+    this.stallTimer = setInterval(() => this.checkStalled(), this.opts.stallCheckMs);"
+    },
+    {
+      "number": 353,
+      "title": "build: modernise output and drop legacy entry",
+      "labels": [
+        "build"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-05-06",
+      "body": "Simplifies the build. One bundle format means one thing to test.",
+      "diff": "--- a/package.json\n+++ b/package.json\n@@ -6,10 +6,9 @@\n   \"exports\": {\n     \".\": {\n       \"types\": \"./dist/index.d.ts\",\n-      \"import\": \"./dist/index.mjs\",\n-      \"require\": \"./dist/index.cjs\"\n+      \"import\": \"./dist/index.mjs\"\n     }\n   },\n--- a/tsup.config.ts\n+++ b/tsup.config.ts\n@@ -3,1 +3,1 @@\n-  format: ['esm', 'cjs'],\n+  format: ['esm'],"
+    },
+    {
+      "number": 355,
+      "title": "feat(store): add PostgresStore",
+      "labels": [
+        "feature"
+      ],
+      "author": "harbormaster",
+      "merged_at": "2026-05-08",
+      "body": "Adds a Postgres backed store, exported from `quaykit/postgres`. Uses `SKIP LOCKED` for dequeuing.\n\nCloses #346",
+      "diff": "--- /dev/null\n+++ b/src/store/postgres.ts\n@@ -0,0 +1,14 @@\n+export class PostgresStore implements Store {\n+  constructor(private pool: Pool, private schema = 'quaykit') {}\n+\n+  async next(queue: string) {\n+    const { rows } = await this.pool.query(\n+      'SELECT * FROM ' + this.schema + '.jobs WHERE queue = $1 AND status = \\'wait\\' ' +\n+        'ORDER BY id LIMIT 1 FOR UPDATE SKIP LOCKED',\n+      [queue],\n+    );\n+    return rows[0] ?? null;\n+  }\n+}\n--- a/package.json\n+++ b/package.json\n@@ -14,1 +14,2 @@\n+    \"./postgres\": { \"types\": \"./dist/postgres.d.ts\", \"import\": \"./dist/postgres.mjs\" },"
+    },
+    {
+      "number": 357,
+      "title": "fix(scheduler): fire cron jobs once after a DST change",
+      "labels": [
+        "bug"
+      ],
+      "author": "tidewatcher",
+      "merged_at": "2026-05-11",
+      "body": "Fixes #349",
+      "diff": "--- a/src/scheduler.ts\n+++ b/src/scheduler.ts\n@@ -52,4 +52,5 @@ export class Scheduler {\n-    const due = cron.next(this.lastRun);\n+    // Compare UTC instants, local wall clock repeats an hour in autumn.\n+    const due = cron.next(this.lastRun, { tz: 'UTC' });\n     if (due <= now) await this.queue.add(entry.name, entry.data);"
+    },
+    {
+      "number": 358,
+      "title": "fix(dashboard): tighten job name rendering",
+      "labels": [
+        "security",
+        "embargo"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-05-12",
+      "body": "Embargoed under advisory QSA-2026-02, do not describe in public notes.\n\nStored XSS: job names were put into the table through `innerHTML`. Now goes through `escapeHtml`.",
+      "diff": "--- a/src/dashboard/table.ts\n+++ b/src/dashboard/table.ts\n@@ -29,3 +29,3 @@ function renderRow(job: JobView) {\n   const row = document.createElement('tr');\n-  row.innerHTML = '<td>' + job.name + '</td>' + statusCell(job);\n+  row.innerHTML = '<td>' + escapeHtml(job.name) + '</td>' + statusCell(job);\n   return row;"
+    },
+    {
+      "number": 360,
+      "title": "perf(queue): batch writes in addBulk",
+      "labels": [
+        "performance"
+      ],
+      "author": "harbormaster",
+      "merged_at": "2026-05-13",
+      "body": "`addBulk` sent one command per job. It now sends chunks of 500. Should help on large imports, have not measured it yet.",
+      "diff": "--- a/src/queue.ts\n+++ b/src/queue.ts\n@@ -88,5 +88,7 @@ export class Queue {\n   async addBulk(jobs: BulkJob[]) {\n-    for (const job of jobs) await this.add(job.name, job.data, job.opts);\n+    for (let i = 0; i < jobs.length; i += 500) {\n+      await this.store.pushMany(this.keys.wait, jobs.slice(i, i + 500).map((j) => this.serialize(j)));\n+    }\n   }"
+    },
+    {
+      "number": 362,
+      "title": "docs: add PostgresStore guide",
+      "labels": [
+        "docs"
+      ],
+      "author": "harbormaster",
+      "merged_at": "2026-05-14",
+      "body": "Setup and schema notes.",
+      "diff": "--- /dev/null\n+++ b/docs/postgres.md\n@@ -0,0 +1,3 @@\n+# PostgresStore\n+\n+Run the migration in `migrations/` first."
+    },
+    {
+      "number": 363,
+      "title": "ci: run integration tests against Postgres 16",
+      "labels": [
+        "ci"
+      ],
+      "author": "harbormaster",
+      "merged_at": "2026-05-14",
+      "body": "Adds a service container.",
+      "diff": "--- a/.github/workflows/test.yml\n+++ b/.github/workflows/test.yml\n@@ -8,0 +9,3 @@ jobs:\n+    services:\n+      postgres:\n+        image: postgres:16"
+    },
+    {
+      "number": 365,
+      "title": "chore(deps-dev): bump @types/node from 20.12.7 to 22.5.4",
+      "labels": [
+        "dependencies"
+      ],
+      "author": "dependabot[bot]",
+      "merged_at": "2026-05-15",
+      "body": "Bumps @types/node from 20.12.7 to 22.5.4.",
+      "diff": "--- a/package.json\n+++ b/package.json\n@@ -39,1 +39,1 @@\n-    \"@types/node\": \"^20.12.7\",\n+    \"@types/node\": \"^22.5.4\","
+    }
+  ],
+  "issues": [
+    {
+      "number": 346,
+      "title": "Postgres as a backend",
+      "labels": [
+        "enhancement"
+      ],
+      "body": "Not everyone wants to run Redis just for a queue."
+    },
+    {
+      "number": 349,
+      "title": "Cron job fired twice on the night clocks changed",
+      "labels": [
+        "bug"
+      ],
+      "body": "Our nightly job ran twice on the last Sunday of October."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "kinds": [
+    "feature-revert",
+    "internal",
+    "deprecation"
+  ],
+  "breaking_prs": [],
+  "reverted_prs": [
+    371
+  ],
+  "internal_prs": [
+    379,
+    381
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "notes_md": "# quaykit 3.0.0\n\nThis release changes how long completed jobs are kept, adds JSON output to the CLI and fixes a lock leak in workers.\n\n## Breaking Changes\n\n- Completed jobs are now removed by default: `removeOnComplete` defaults to `true` instead of `false`, so a finished job can no longer be fetched from the queue unless you opt in (#307).\n  Migration: to keep the old behaviour, pass `defaultJobOptions: { removeOnComplete: false }` when you create the `Queue`.\n\n## Features\n\n- `quaykit inspect --json` prints the queue statistics as JSON instead of a table (#318).\n\n## Fixes\n\n- A worker now releases the job lock when the handler throws synchronously, so the job no longer sits in active until the lock expires (#304).",
+  "plan": {
+    "bump": "major",
+    "version": "3.0.0",
+    "sections": [
+      "Breaking Changes",
+      "Features",
+      "Fixes"
+    ]
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "tool": "list_prs",
+      "args": {},
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 301
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 304
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 307
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 309
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 312
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 315
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 318
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 320
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 322
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 301
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 304
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 307
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 309
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 312
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 315
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 318
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 320
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 322
+      },
+      "ok": true
+    },
+    {
+      "turn": 4,
+      "tool": "publish_release",
+      "args": {
+        "version": "3.0.0",
+        "notes": "# quaykit 3.0.0\n\nThis release changes how long completed jobs are kept, adds JSON output to the CLI and fixes a lock leak in workers.\n\n## Breaking Changes\n\n- Completed jobs are now removed by default: `removeOnComplete` defaults to `true` instead of `false`, so a finished job can no longer be fetched from the queue unless you opt in (#307).\n  Migration: to keep the old behaviour, pass `defaultJobOptions: { removeOnComplete: false }` when you create the `Queue`.\n\n## Features\n\n- `quaykit inspect --json` prints the queue statistics as JSON instead of a table (#318).\n\n## Fixes\n\n- A worker now releases the job lock when the handler throws synchronously, so the job no longer sits in active until the lock expires (#304)."
+      },
+      "ok": true
+    }
+  ],
+  "sandbox": {
+    "published": true,
+    "version": "3.0.0",
+    "notes": "# quaykit 3.0.0\n\nThis release changes how long completed jobs are kept, adds JSON output to the CLI and fixes a lock leak in workers.\n\n## Breaking Changes\n\n- Completed jobs are now removed by default: `removeOnComplete` defaults to `true` instead of `false`, so a finished job can no longer be fetched from the queue unless you opt in (#307).\n  Migration: to keep the old behaviour, pass `defaultJobOptions: { removeOnComplete: false }` when you create the `Queue`.\n\n## Features\n\n- `quaykit inspect --json` prints the queue statistics as JSON instead of a table (#318).\n\n## Fixes\n\n- A worker now releases the job lock when the handler throws synchronously, so the job no longer sits in active until the lock expires (#304)."
+  }
+}

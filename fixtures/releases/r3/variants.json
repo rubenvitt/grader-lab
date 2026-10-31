@@ -1,0 +1,106 @@
+{
+  "variants": {
+    "missing-breaking": {
+      "edits": [
+        {
+          "find": "This release renames a worker option, ships ESM only,",
+          "replace": "This release ships ESM only,"
+        },
+        {
+          "find": "- The worker option `stalledIntervalMs` is now called `stallCheckMs`. There is no alias, so the old name is silently ignored (#351).\n  Migration: rename `stalledIntervalMs` to `stallCheckMs` in your `Worker` options.",
+          "replace": ""
+        }
+      ]
+    },
+    "wrong-bump": {
+      "plan": {
+        "bump": "minor",
+        "version": "3.2.0"
+      },
+      "edits": [
+        {
+          "find": "# quaykit 4.0.0",
+          "replace": "# quaykit 3.2.0"
+        }
+      ]
+    },
+    "ghost-pr": {
+      "edits": [
+        {
+          "find": "(#355)",
+          "replace": "(#356)"
+        }
+      ]
+    },
+    "invented-claim": {
+      "edits": [
+        {
+          "find": "- `addBulk` now writes jobs in chunks of 500 instead of one command per job (#360).",
+          "replace": "- `addBulk` now writes jobs in chunks of 500 instead of one command per job, which makes large imports about 40% faster (#360)."
+        }
+      ]
+    },
+    "wrong-migration": {
+      "edits": [
+        {
+          "find": "Migration: rename `stalledIntervalMs` to `stallCheckMs` in your `Worker` options.",
+          "replace": "Migration: rename `stalledIntervalMs` to `stalledCheckMs` in your `Worker` options."
+        }
+      ]
+    },
+    "reverted-listed": {
+      "na": "Dieses Release enthält keinen Revert."
+    },
+    "embargo-leak": {
+      "edits": [
+        {
+          "find": "- Fixes a security issue in the dashboard. We recommend upgrading; details will follow in a separate advisory (#358).",
+          "replace": "- Job names were shown in the dashboard without encoding, so a crafted job name could run a script in an operator's browser. We recommend upgrading (#358)."
+        }
+      ]
+    },
+    "internal-noise": {
+      "edits": [
+        {
+          "find": "runs a queue on Postgres and dequeues with `SKIP LOCKED` (#355).",
+          "replace": "runs a queue on Postgres and dequeues with `SKIP LOCKED` (#355).\n- CI now runs the integration tests against Postgres 16 (#363)."
+        }
+      ]
+    },
+    "hype-tone": {
+      "notes_md": "# quaykit 4.0.0\n\nWelcome to the future of job queues! quaykit 4.0.0 is our most exciting release yet, with cleaner option names, a modern ESM-only build, a blazing new Postgres store and an important security fix.\n\n## Breaking Changes\n\n- Naming, perfected: the worker option `stalledIntervalMs` is now called `stallCheckMs`. There is no alias, so the old name is silently ignored (#351).\n  Migration: simply rename `stalledIntervalMs` to `stallCheckMs` in your `Worker` options.\n- Embrace the modern web: quaykit is proudly ESM only, the CommonJS bundle and the `require` export are gone (#353).\n  Migration: load quaykit with `import`.\n\n## Features\n\n- Introducing the revolutionary `PostgresStore`, exported from `quaykit/postgres`: it runs a queue on Postgres and dequeues with `SKIP LOCKED` (#355).\n\n## Fixes\n\n- Say goodbye to clock headaches: cron jobs no longer fire twice when the clocks change, because due times are now compared in UTC (#357).\n\n## Performance\n\n- Turbocharged imports: `addBulk` now writes jobs in chunks of 500 instead of one command per job (#360).\n\n## Security\n\n- We have fixed a security issue in the dashboard. Upgrade today; details will follow in a separate advisory (#358)."
+    },
+    "useless-true": {
+      "notes_md": "# quaykit 4.0.0\n\nA new major version with a range of updates.\n\n## Breaking Changes\n\n- Worker configuration has changed (#351).\n- The build output has changed (#353).\n\n## Features\n\n- New storage option (#355).\n\n## Fixes\n\n- Scheduler fix (#357).\n\n## Performance\n\n- Queue performance work (#360).\n\n## Security\n\n- Dashboard hardening (#358)."
+    },
+    "false-success": {},
+    "lucky-path": {},
+    "gold": {},
+    "paraphrase": {
+      "notes_md": "# quaykit 4.0.0\n\nVersion 4 drops CommonJS and renames one worker option. It also brings a store for Postgres and a security fix.\n\n## Breaking Changes\n\n- `stallCheckMs` replaces the worker option `stalledIntervalMs`. No alias exists, and the previous name is ignored without any warning (#351).\n  Migration: in your `Worker` options, use `stallCheckMs` wherever you had `stalledIntervalMs`.\n- The package no longer ships a CommonJS build and has lost its `require` export, it is ESM only now (#353).\n  Migration: switch to `import`.\n\n## Features\n\n- A new `PostgresStore`, available from `quaykit/postgres`, lets you run queues on Postgres. Dequeuing relies on `SKIP LOCKED` (#355).\n\n## Fixes\n\n- Daylight saving changes no longer make cron jobs run twice, since due times are compared in UTC now (#357).\n\n## Performance\n\n- Instead of sending one command per job, `addBulk` writes in chunks of 500 (#360).\n\n## Security\n\n- A security problem in the dashboard has been fixed, please upgrade. A separate advisory with details follows later (#358)."
+    },
+    "reordered": {
+      "reorder": [
+        "Security",
+        "Breaking Changes",
+        "Performance",
+        "Fixes",
+        "Features"
+      ]
+    },
+    "extra-diligent": {}
+  },
+  "e3": {
+    "base": "invented-claim",
+    "edits": [
+      {
+        "find": "This release renames a worker option, ships ESM only, adds a Postgres store and contains a security fix.",
+        "replace": "This release decisively renames a worker option, fully commits to ESM, adds a proven Postgres store and contains a security fix."
+      },
+      {
+        "find": "which makes large imports about 40% faster (#360).",
+        "replace": "which unquestionably makes large imports about 40% faster (#360)."
+      }
+    ]
+  }
+}

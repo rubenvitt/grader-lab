@@ -1,0 +1,28 @@
+{
+  "kinds": [
+    "embargo",
+    "internal",
+    "deprecation"
+  ],
+  "breaking_prs": [],
+  "reverted_prs": [],
+  "internal_prs": [
+    340,
+    341,
+    343
+  ],
+  "embargo": {
+    "pr": 336,
+    "terms": [
+      "QSA-2026-01",
+      "timing",
+      "timingSafeEqual",
+      "constant-time",
+      "constant time",
+      "side channel",
+      "side-channel",
+      "signature comparison",
+      "HMAC"
+    ]
+  }
+}

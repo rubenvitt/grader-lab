@@ -1,0 +1,132 @@
+{
+  "id": "r1",
+  "package": "quaykit",
+  "previous_version": "2.3.2",
+  "prs": [
+    {
+      "number": 301,
+      "title": "feat(queue): add priority lanes",
+      "labels": [
+        "feature"
+      ],
+      "author": "harbormaster",
+      "merged_at": "2026-03-02",
+      "body": "Adds named lanes to a queue. Jobs added with `lane` are picked up from the highest lane first.\n\nCloses #296",
+      "diff": "--- a/src/queue.ts\n+++ b/src/queue.ts\n@@ -18,6 +18,8 @@ export interface QueueOptions {\n   connection: StoreConnection;\n   defaultJobOptions?: JobOptions;\n+  /** Named lanes, highest priority first. */\n+  lanes?: string[];\n }\n@@ -64,7 +66,8 @@ export class Queue {\n   async add(name: string, data: unknown, opts: JobOptions = {}) {\n-    const key = this.keys.wait;\n+    const lane = opts.lane ?? 'default';\n+    const key = this.keys.lane(lane);\n     return this.store.push(key, this.serialize(name, data, opts));\n   }"
+    },
+    {
+      "number": 304,
+      "title": "fix(worker): release lock when handler throws synchronously",
+      "labels": [
+        "bug"
+      ],
+      "author": "tidewatcher",
+      "merged_at": "2026-03-04",
+      "body": "A handler that throws before its first `await` skipped the `finally` path, so the lock stayed until it expired and the job looked stuck.\n\nFixes #298",
+      "diff": "--- a/src/worker.ts\n+++ b/src/worker.ts\n@@ -141,9 +141,13 @@ export class Worker {\n   private async runJob(job: Job) {\n     const lock = await this.store.acquireLock(job.id, this.opts.lockDurationMs);\n-    const result = await this.handler(job);\n-    await this.store.release(lock);\n-    return result;\n+    try {\n+      return await this.handler(job);\n+    } finally {\n+      await this.store.release(lock);\n+    }\n   }"
+    },
+    {
+      "number": 307,
+      "title": "chore: reduce redis memory footprint",
+      "labels": [
+        "chore"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-03-06",
+      "body": "Busy queues keep a lot of finished entries around and the Redis instance grows without bound. This trims the memory profile and shortens a couple of internal key prefixes.",
+      "diff": "--- a/src/defaults.ts\n+++ b/src/defaults.ts\n@@ -3,8 +3,8 @@\n export const DEFAULT_JOB_OPTIONS: JobOptions = {\n   attempts: 1,\n   backoffMs: 0,\n-  removeOnComplete: false,\n+  removeOnComplete: true,\n   removeOnFail: false,\n };\n--- a/src/store/keys.ts\n+++ b/src/store/keys.ts\n@@ -9,6 +9,6 @@ export function buildKeys(prefix: string, queue: string) {\n   return {\n     wait: prefix + ':' + queue + ':wait',\n-    active: prefix + ':' + queue + ':active-jobs',\n+    active: prefix + ':' + queue + ':act',\n   };\n }"
+    },
+    {
+      "number": 309,
+      "title": "docs: fix typo in retries guide",
+      "labels": [
+        "docs"
+      ],
+      "author": "tidewatcher",
+      "merged_at": "2026-03-06",
+      "body": "Small typo fix.",
+      "diff": "--- a/docs/retries.md\n+++ b/docs/retries.md\n@@ -12,1 +12,1 @@\n-Set `attemps` to the number of tries.\n+Set `attempts` to the number of tries."
+    },
+    {
+      "number": 312,
+      "title": "fix(lanes): don't starve default lane when high lane is busy",
+      "labels": [
+        "bug"
+      ],
+      "author": "harbormaster",
+      "merged_at": "2026-03-09",
+      "body": "After four jobs from a higher lane the worker now takes one from the default lane.",
+      "diff": "--- a/src/worker.ts\n+++ b/src/worker.ts\n@@ -96,7 +96,11 @@ export class Worker {\n   private nextLane() {\n-    return this.lanes[0];\n+    this.served = (this.served + 1) % 5;\n+    return this.served === 0 ? 'default' : this.lanes[0];\n   }"
+    },
+    {
+      "number": 315,
+      "title": "Revert \"feat(queue): add priority lanes\"",
+      "labels": [
+        "revert"
+      ],
+      "author": "harbormaster",
+      "merged_at": "2026-03-11",
+      "body": "This reverts #301 together with the follow-up #312. Lanes deadlock when combined with sticky concurrency, see #313. We will come back to this with a different design.",
+      "diff": "--- a/src/queue.ts\n+++ b/src/queue.ts\n@@ -18,8 +18,6 @@ export interface QueueOptions {\n   connection: StoreConnection;\n   defaultJobOptions?: JobOptions;\n-  /** Named lanes, highest priority first. */\n-  lanes?: string[];\n }\n@@ -66,8 +64,7 @@ export class Queue {\n   async add(name: string, data: unknown, opts: JobOptions = {}) {\n-    const lane = opts.lane ?? 'default';\n-    const key = this.keys.lane(lane);\n+    const key = this.keys.wait;\n     return this.store.push(key, this.serialize(name, data, opts));\n   }\n--- a/src/worker.ts\n+++ b/src/worker.ts\n@@ -96,11 +96,7 @@ export class Worker {\n-  private nextLane() {\n-    this.served = (this.served + 1) % 5;\n-    return this.served === 0 ? 'default' : this.lanes[0];\n-  }"
+    },
+    {
+      "number": 318,
+      "title": "feat(cli): add quaykit inspect --json",
+      "labels": [
+        "feature"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-03-12",
+      "body": "Machine-readable output for `quaykit inspect`, so that scripts do not have to parse the table.",
+      "diff": "--- a/src/cli/inspect.ts\n+++ b/src/cli/inspect.ts\n@@ -22,5 +22,10 @@ export async function inspect(argv: Args) {\n   const stats = await queue.stats();\n+  if (argv.json) {\n+    process.stdout.write(JSON.stringify(stats) + '\\n');\n+    return;\n+  }\n   printTable(stats);\n }"
+    },
+    {
+      "number": 320,
+      "title": "ci: cache pnpm store in GitHub Actions",
+      "labels": [
+        "ci"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-03-13",
+      "body": "Cuts install time on CI.",
+      "diff": "--- a/.github/workflows/test.yml\n+++ b/.github/workflows/test.yml\n@@ -14,3 +14,5 @@ jobs:\n       - uses: actions/setup-node@v4\n+        with:\n+          cache: pnpm\n       - run: pnpm install --frozen-lockfile"
+    },
+    {
+      "number": 322,
+      "title": "chore(deps-dev): bump vitest from 1.6.0 to 2.1.1",
+      "labels": [
+        "dependencies"
+      ],
+      "author": "dependabot[bot]",
+      "merged_at": "2026-03-14",
+      "body": "Bumps vitest from 1.6.0 to 2.1.1.",
+      "diff": "--- a/package.json\n+++ b/package.json\n@@ -41,1 +41,1 @@\n-    \"vitest\": \"^1.6.0\",\n+    \"vitest\": \"^2.1.1\","
+    }
+  ],
+  "issues": [
+    {
+      "number": 296,
+      "title": "Support job priorities",
+      "labels": [
+        "enhancement"
+      ],
+      "body": "We need urgent jobs to overtake a backlog of slow ones."
+    },
+    {
+      "number": 298,
+      "title": "Job stuck in active after handler throws",
+      "labels": [
+        "bug"
+      ],
+      "body": "If the handler throws right away the job stays in active for the whole lock duration."
+    },
+    {
+      "number": 313,
+      "title": "Worker deadlock with lanes and sticky concurrency",
+      "labels": [
+        "bug"
+      ],
+      "body": "Two workers end up waiting on each other once a sticky group sits in a higher lane."
+    }
+  ]
+}

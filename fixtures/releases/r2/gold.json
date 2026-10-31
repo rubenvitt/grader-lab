@@ -1,0 +1,147 @@
+{
+  "notes_md": "# quaykit 3.1.0\n\nThis release adds a `drained` event, makes lock renewal retry once after a dropped connection, deprecates `queue.clean()` and contains a security fix.\n\n## Features\n\n- `Worker` emits `drained` when a poll finds no job and no job is active, for example to scale down (#331).\n\n## Fixes\n\n- Lock renewal retries once after `ECONNRESET` instead of failing straight away (#334).\n\n## Deprecations\n\n- `queue.clean(graceMs, status)` is deprecated and logs a warning once. It keeps working for now (#338).\n  Migration: call `queue.purge({ status, olderThanMs })` instead.\n\n## Security\n\n- Fixes a security issue. We recommend upgrading; details will follow in a separate advisory (#336).",
+  "plan": {
+    "bump": "minor",
+    "version": "3.1.0",
+    "sections": [
+      "Features",
+      "Fixes",
+      "Deprecations",
+      "Security"
+    ]
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "tool": "list_prs",
+      "args": {},
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 331
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 334
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 336
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 338
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 340
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 341
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 343
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 331
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 334
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 336
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 338
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 340
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 341
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 343
+      },
+      "ok": true
+    },
+    {
+      "turn": 4,
+      "tool": "publish_release",
+      "args": {
+        "version": "3.1.0",
+        "notes": "# quaykit 3.1.0\n\nThis release adds a `drained` event, makes lock renewal retry once after a dropped connection, deprecates `queue.clean()` and contains a security fix.\n\n## Features\n\n- `Worker` emits `drained` when a poll finds no job and no job is active, for example to scale down (#331).\n\n## Fixes\n\n- Lock renewal retries once after `ECONNRESET` instead of failing straight away (#334).\n\n## Deprecations\n\n- `queue.clean(graceMs, status)` is deprecated and logs a warning once. It keeps working for now (#338).\n  Migration: call `queue.purge({ status, olderThanMs })` instead.\n\n## Security\n\n- Fixes a security issue. We recommend upgrading; details will follow in a separate advisory (#336)."
+      },
+      "ok": true
+    }
+  ],
+  "sandbox": {
+    "published": true,
+    "version": "3.1.0",
+    "notes": "# quaykit 3.1.0\n\nThis release adds a `drained` event, makes lock renewal retry once after a dropped connection, deprecates `queue.clean()` and contains a security fix.\n\n## Features\n\n- `Worker` emits `drained` when a poll finds no job and no job is active, for example to scale down (#331).\n\n## Fixes\n\n- Lock renewal retries once after `ECONNRESET` instead of failing straight away (#334).\n\n## Deprecations\n\n- `queue.clean(graceMs, status)` is deprecated and logs a warning once. It keeps working for now (#338).\n  Migration: call `queue.purge({ status, olderThanMs })` instead.\n\n## Security\n\n- Fixes a security issue. We recommend upgrading; details will follow in a separate advisory (#336)."
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "notes_md": "# quaykit 5.0.0\n\nThis release makes the Redis connection explicit, removes two deprecated APIs, adds a jitter retry strategy and fixes graceful shutdown.\n\n## Breaking Changes\n\n- `new RedisStore()` without `connection` now throws instead of connecting to `localhost:6379` (#391).\n  Migration: pass `connection` explicitly, for example `new RedisStore({ connection: { host: 'localhost', port: 6379 } })`.\n- `queue.clean()` and the job option `timeout`, both deprecated in earlier releases, have been removed (#393).\n  Migration: call `queue.purge({ status, olderThanMs })` and set `timeoutMs`.\n\n## Features\n\n- New retry strategy `backoff: { type: 'jitter', baseMs }` spreads retries randomly so that they do not all arrive at once. It is opt-in (#395).\n\n## Fixes\n\n- `worker.close()` now respects `shutdownTimeoutMs` instead of waiting for active jobs forever (#397).\n- `quaykit inspect` exits with a non-zero code when it fails (#401).\n\n## Deprecations\n\n- Passing a boolean to `worker.pause()` is deprecated and logs a warning once (#399).\n  Migration: call `worker.pause({ drain: true })`.",
+  "plan": {
+    "bump": "major",
+    "version": "5.0.0",
+    "sections": [
+      "Breaking Changes",
+      "Features",
+      "Fixes",
+      "Deprecations"
+    ]
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "tool": "list_prs",
+      "args": {},
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 391
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 393
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 395
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 397
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 399
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 401
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 402
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 403
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 404
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 405
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 391
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 393
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 395
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 397
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 399
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 401
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 402
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 403
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 404
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 405
+      },
+      "ok": true
+    },
+    {
+      "turn": 4,
+      "tool": "publish_release",
+      "args": {
+        "version": "5.0.0",
+        "notes": "# quaykit 5.0.0\n\nThis release makes the Redis connection explicit, removes two deprecated APIs, adds a jitter retry strategy and fixes graceful shutdown.\n\n## Breaking Changes\n\n- `new RedisStore()` without `connection` now throws instead of connecting to `localhost:6379` (#391).\n  Migration: pass `connection` explicitly, for example `new RedisStore({ connection: { host: 'localhost', port: 6379 } })`.\n- `queue.clean()` and the job option `timeout`, both deprecated in earlier releases, have been removed (#393).\n  Migration: call `queue.purge({ status, olderThanMs })` and set `timeoutMs`.\n\n## Features\n\n- New retry strategy `backoff: { type: 'jitter', baseMs }` spreads retries randomly so that they do not all arrive at once. It is opt-in (#395).\n\n## Fixes\n\n- `worker.close()` now respects `shutdownTimeoutMs` instead of waiting for active jobs forever (#397).\n- `quaykit inspect` exits with a non-zero code when it fails (#401).\n\n## Deprecations\n\n- Passing a boolean to `worker.pause()` is deprecated and logs a warning once (#399).\n  Migration: call `worker.pause({ drain: true })`."
+      },
+      "ok": true
+    }
+  ],
+  "sandbox": {
+    "published": true,
+    "version": "5.0.0",
+    "notes": "# quaykit 5.0.0\n\nThis release makes the Redis connection explicit, removes two deprecated APIs, adds a jitter retry strategy and fixes graceful shutdown.\n\n## Breaking Changes\n\n- `new RedisStore()` without `connection` now throws instead of connecting to `localhost:6379` (#391).\n  Migration: pass `connection` explicitly, for example `new RedisStore({ connection: { host: 'localhost', port: 6379 } })`.\n- `queue.clean()` and the job option `timeout`, both deprecated in earlier releases, have been removed (#393).\n  Migration: call `queue.purge({ status, olderThanMs })` and set `timeoutMs`.\n\n## Features\n\n- New retry strategy `backoff: { type: 'jitter', baseMs }` spreads retries randomly so that they do not all arrive at once. It is opt-in (#395).\n\n## Fixes\n\n- `worker.close()` now respects `shutdownTimeoutMs` instead of waiting for active jobs forever (#397).\n- `quaykit inspect` exits with a non-zero code when it fails (#401).\n\n## Deprecations\n\n- Passing a boolean to `worker.pause()` is deprecated and logs a warning once (#399).\n  Migration: call `worker.pause({ drain: true })`."
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "id": "r5",
+  "package": "quaykit",
+  "previous_version": "4.1.0",
+  "prs": [
+    {
+      "number": 391,
+      "title": "feat(store)!: require an explicit connection for RedisStore",
+      "labels": [
+        "breaking",
+        "feature"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-07-06",
+      "body": "Connecting to `localhost:6379` by default hid misconfigured deployments until the first job got lost.\n\nBREAKING CHANGE: `new RedisStore()` without `connection` now throws.",
+      "diff": "--- a/src/store/redis.ts\n+++ b/src/store/redis.ts\n@@ -21,6 +21,8 @@ export class RedisStore implements Store {\n-  constructor(opts: RedisStoreOptions = {}) {\n-    this.client = new Redis(opts.connection ?? { host: 'localhost', port: 6379 });\n+  constructor(opts: RedisStoreOptions) {\n+    if (!opts?.connection) throw new QuaykitError('RedisStore needs a connection');\n+    this.client = new Redis(opts.connection);\n   }"
+    },
+    {
+      "number": 393,
+      "title": "chore: drop legacy option shims",
+      "labels": [
+        "chore"
+      ],
+      "author": "tidewatcher",
+      "merged_at": "2026-07-07",
+      "body": "Removes code paths that have been sitting around for a while. Less code, less to maintain.",
+      "diff": "--- a/src/queue.ts\n+++ b/src/queue.ts\n@@ -131,6 +131,0 @@ export class Queue {\n-  /** @deprecated Use {@link Queue.purge}. */\n-  async clean(graceMs: number, status: JobStatus) {\n-    warnOnce('queue.clean() is deprecated, use queue.purge({ status, olderThanMs })');\n-    return this.purge({ status, olderThanMs: graceMs });\n-  }\n-\n--- a/src/job.ts\n+++ b/src/job.ts\n@@ -21,5 +21,1 @@ export function normalize(opts: JobOptions) {\n-  if (opts.timeout !== undefined) {\n-    warnOnce('job option timeout is deprecated, use timeoutMs');\n-    opts.timeoutMs ??= opts.timeout;\n-  }\n   return opts;\n--- a/src/types.ts\n+++ b/src/types.ts\n@@ -13,3 +13,1 @@ export interface JobOptions {\n-  /** @deprecated Use timeoutMs. */\n-  timeout?: number;\n   timeoutMs?: number;"
+    },
+    {
+      "number": 395,
+      "title": "feat(retry): add exponential jitter strategy",
+      "labels": [
+        "feature"
+      ],
+      "author": "harbormaster",
+      "merged_at": "2026-07-08",
+      "body": "Opt in with `backoff: { type: 'jitter', baseMs }`. Helps against retry storms.\n\nCloses #388",
+      "diff": "--- a/src/retry.ts\n+++ b/src/retry.ts\n@@ -7,4 +7,7 @@ export function nextDelay(attempt: number, backoff: Backoff) {\n   if (backoff.type === 'fixed') return backoff.baseMs;\n+  if (backoff.type === 'jitter') {\n+    return Math.floor(Math.random() * backoff.baseMs * 2 ** attempt);\n+  }\n   return backoff.baseMs * 2 ** attempt;\n }"
+    },
+    {
+      "number": 397,
+      "title": "fix(worker): honor shutdownTimeoutMs during graceful close",
+      "labels": [
+        "bug"
+      ],
+      "author": "tidewatcher",
+      "merged_at": "2026-07-09",
+      "body": "`worker.close()` waited for active jobs forever and ignored the option.\n\nFixes #392",
+      "diff": "--- a/src/worker.ts\n+++ b/src/worker.ts\n@@ -203,3 +203,6 @@ export class Worker extends EventEmitter {\n   async close() {\n     this.running = false;\n-    await Promise.all(this.active.values());\n+    await Promise.race([\n+      Promise.all(this.active.values()),\n+      sleep(this.opts.shutdownTimeoutMs),\n+    ]);\n   }"
+    },
+    {
+      "number": 399,
+      "title": "chore(worker): deprecate boolean argument of worker.pause()",
+      "labels": [
+        "deprecation"
+      ],
+      "author": "tidewatcher",
+      "merged_at": "2026-07-10",
+      "body": "`pause(true)` does not say what it does. The boolean keeps working and warns once.",
+      "diff": "--- a/src/worker.ts\n+++ b/src/worker.ts\n@@ -188,3 +188,7 @@ export class Worker extends EventEmitter {\n-  async pause(drain = false) {\n+  async pause(opts: boolean | { drain?: boolean } = {}) {\n+    if (typeof opts === 'boolean') {\n+      warnOnce('worker.pause(boolean) is deprecated, use worker.pause({ drain })');\n+      opts = { drain: opts };\n+    }\n+    const { drain = false } = opts;\n     this.paused = true;"
+    },
+    {
+      "number": 401,
+      "title": "fix(cli): exit non-zero when inspect fails",
+      "labels": [
+        "bug"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-07-13",
+      "body": "`quaykit inspect` printed the error and exited with 0.",
+      "diff": "--- a/src/cli/index.ts\n+++ b/src/cli/index.ts\n@@ -18,3 +18,4 @@ main().catch((err) => {\n   console.error(err.message);\n+  process.exitCode = 1;\n });"
+    },
+    {
+      "number": 402,
+      "title": "docs: migration guide for v5",
+      "labels": [
+        "docs"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-07-14",
+      "body": "Covers the store change.",
+      "diff": "--- /dev/null\n+++ b/docs/migrate-v5.md\n@@ -0,0 +1,3 @@\n+# Migrating to v5\n+\n+Pass a `connection` to `RedisStore`."
+    },
+    {
+      "number": 403,
+      "title": "ci: publish with provenance",
+      "labels": [
+        "ci"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-07-14",
+      "body": "Adds --provenance to the release workflow.",
+      "diff": "--- a/.github/workflows/release.yml\n+++ b/.github/workflows/release.yml\n@@ -20,1 +20,1 @@\n-      - run: pnpm publish\n+      - run: pnpm publish --provenance"
+    },
+    {
+      "number": 404,
+      "title": "refactor(store): extract key builder",
+      "labels": [
+        "refactor"
+      ],
+      "author": "harbormaster",
+      "merged_at": "2026-07-15",
+      "body": "Pure move, shared with the Postgres store.",
+      "diff": "--- a/src/store/redis.ts\n+++ b/src/store/redis.ts\n@@ -3,2 +3,2 @@\n-import { buildKeys } from './keys.js';\n+import { buildKeys } from '../keys.js';"
+    },
+    {
+      "number": 405,
+      "title": "chore(deps-dev): bump vitest from 2.1.1 to 2.1.4",
+      "labels": [
+        "dependencies"
+      ],
+      "author": "dependabot[bot]",
+      "merged_at": "2026-07-15",
+      "body": "Bumps vitest from 2.1.1 to 2.1.4.",
+      "diff": "--- a/package.json\n+++ b/package.json\n@@ -41,1 +41,1 @@\n-    \"vitest\": \"^2.1.1\",\n+    \"vitest\": \"^2.1.4\","
+    }
+  ],
+  "issues": [
+    {
+      "number": 388,
+      "title": "Retry storms after an outage",
+      "labels": [
+        "enhancement"
+      ],
+      "body": "All failed jobs come back at the same moment and knock the service over again."
+    },
+    {
+      "number": 392,
+      "title": "worker.close() hangs on deploy",
+      "labels": [
+        "bug"
+      ],
+      "body": "A stuck job keeps the process alive until the orchestrator kills it."
+    }
+  ]
+}

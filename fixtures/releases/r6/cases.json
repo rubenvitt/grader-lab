@@ -1,0 +1,27 @@
+{
+  "kinds": [
+    "feature-revert",
+    "embargo",
+    "internal"
+  ],
+  "breaking_prs": [],
+  "reverted_prs": [
+    411
+  ],
+  "internal_prs": [
+    417,
+    418,
+    419
+  ],
+  "embargo": {
+    "pr": 414,
+    "terms": [
+      "QSA-2026-03",
+      "SQL injection",
+      "injection",
+      "interpolated",
+      "schema name",
+      "query text"
+    ]
+  }
+}

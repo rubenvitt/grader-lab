@@ -1,0 +1,103 @@
+{
+  "id": "r2",
+  "package": "quaykit",
+  "previous_version": "3.0.0",
+  "prs": [
+    {
+      "number": 331,
+      "title": "feat(worker): emit 'drained' when the queue runs empty",
+      "labels": [
+        "feature"
+      ],
+      "author": "tidewatcher",
+      "merged_at": "2026-04-01",
+      "body": "Lets callers react once a worker has nothing left to do, for example to scale down.\n\nCloses #327",
+      "diff": "--- a/src/worker.ts\n+++ b/src/worker.ts\n@@ -118,6 +118,10 @@ export class Worker extends EventEmitter {\n     const job = await this.store.next(this.keys.wait, this.opts.pollMs);\n-    if (!job) return;\n+    if (!job) {\n+      if (this.active.size === 0) this.emit('drained');\n+      return;\n+    }\n     await this.runJob(job);"
+    },
+    {
+      "number": 334,
+      "title": "fix(store): survive redis reconnects during lock renewal",
+      "labels": [
+        "bug"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-04-03",
+      "body": "We saw `ECONNRESET` from renewal timers when Redis restarted. Should make workers much more robust against connection problems.\n\nFixes #329",
+      "diff": "--- a/src/store/redis.ts\n+++ b/src/store/redis.ts\n@@ -77,7 +77,14 @@ export class RedisStore implements Store {\n   async renewLock(lock: Lock) {\n-    await this.client.pexpire(lock.key, lock.ttlMs);\n+    try {\n+      await this.client.pexpire(lock.key, lock.ttlMs);\n+    } catch (err) {\n+      if ((err as NodeJS.ErrnoException).code !== 'ECONNRESET') throw err;\n+      await this.client.pexpire(lock.key, lock.ttlMs);\n+    }\n   }"
+    },
+    {
+      "number": 336,
+      "title": "fix(signing): harden payload verification",
+      "labels": [
+        "security",
+        "embargo"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-04-06",
+      "body": "Embargoed under advisory QSA-2026-01 until 14 days after the release. Do not describe in public notes.\n\nSignature comparison used `===` and leaks timing. Replaced with `timingSafeEqual`.",
+      "diff": "--- a/src/signing.ts\n+++ b/src/signing.ts\n@@ -1,9 +1,12 @@\n-import { createHmac } from 'node:crypto';\n+import { createHmac, timingSafeEqual } from 'node:crypto';\n\n export function verify(payload: string, signature: string, key: string) {\n   const expected = createHmac('sha256', key).update(payload).digest('hex');\n-  return expected === signature;\n+  const a = Buffer.from(expected);\n+  const b = Buffer.from(signature);\n+  return a.length === b.length && timingSafeEqual(a, b);\n }"
+    },
+    {
+      "number": 338,
+      "title": "chore(queue): deprecate queue.clean() in favour of queue.purge()",
+      "labels": [
+        "deprecation"
+      ],
+      "author": "harbormaster",
+      "merged_at": "2026-04-08",
+      "body": "`clean()` took a positional grace period and a status string nobody remembered the order of. `purge()` takes an options object. `clean()` keeps working and logs a warning once.",
+      "diff": "--- a/src/queue.ts\n+++ b/src/queue.ts\n@@ -131,7 +131,18 @@ export class Queue {\n+  /** @deprecated Use {@link Queue.purge}. */\n   async clean(graceMs: number, status: JobStatus) {\n-    return this.store.removeOlderThan(this.keys[status], graceMs);\n+    warnOnce('queue.clean() is deprecated, use queue.purge({ status, olderThanMs })');\n+    return this.purge({ status, olderThanMs: graceMs });\n+  }\n+\n+  async purge({ status, olderThanMs = 0 }: PurgeOptions) {\n+    return this.store.removeOlderThan(this.keys[status], olderThanMs);\n   }"
+    },
+    {
+      "number": 340,
+      "title": "ci: pin actions to commit SHAs",
+      "labels": [
+        "ci"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-04-09",
+      "body": "Supply chain hygiene.",
+      "diff": "--- a/.github/workflows/test.yml\n+++ b/.github/workflows/test.yml\n@@ -12,2 +12,2 @@ jobs:\n-      - uses: actions/checkout@v4\n+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11\n-      - uses: actions/setup-node@v4\n+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8"
+    },
+    {
+      "number": 341,
+      "title": "chore(deps-dev): bump typescript from 5.4.5 to 5.6.2",
+      "labels": [
+        "dependencies"
+      ],
+      "author": "dependabot[bot]",
+      "merged_at": "2026-04-10",
+      "body": "Bumps typescript from 5.4.5 to 5.6.2.",
+      "diff": "--- a/package.json\n+++ b/package.json\n@@ -44,1 +44,1 @@\n-    \"typescript\": \"~5.4.5\",\n+    \"typescript\": \"~5.6.2\","
+    },
+    {
+      "number": 343,
+      "title": "test(worker): deflake stalled job test",
+      "labels": [
+        "test"
+      ],
+      "author": "tidewatcher",
+      "merged_at": "2026-04-10",
+      "body": "Replaces a fixed sleep with fake timers.",
+      "diff": "--- a/test/worker.stalled.test.ts\n+++ b/test/worker.stalled.test.ts\n@@ -30,2 +30,2 @@\n-  await sleep(200);\n+  await vi.advanceTimersByTimeAsync(200);\n   expect(stalled).toHaveBeenCalledOnce();"
+    }
+  ],
+  "issues": [
+    {
+      "number": 327,
+      "title": "Hook for when a worker is idle",
+      "labels": [
+        "enhancement"
+      ],
+      "body": "We would like to scale down once there is nothing left to process."
+    },
+    {
+      "number": 329,
+      "title": "Unhandled ECONNRESET from lock renewal",
+      "labels": [
+        "bug"
+      ],
+      "body": "Redis restarted and the worker process crashed with an unhandled rejection from the renewal timer."
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "variants": {
+    "missing-breaking": {
+      "na": "Dieses Release enthält keinen Breaking Change."
+    },
+    "wrong-bump": {
+      "na": "Das Release ist kein Major-Release, „minor statt major“ ist nicht definiert."
+    },
+    "ghost-pr": {
+      "edits": [
+        {
+          "find": "(#376)",
+          "replace": "(#377)"
+        }
+      ]
+    },
+    "invented-claim": {
+      "edits": [
+        {
+          "find": "Each worker instance has its own limit (#376).",
+          "replace": "The limit is shared across all workers of a queue (#376)."
+        }
+      ]
+    },
+    "wrong-migration": {
+      "edits": [
+        {
+          "find": "Migration: use `timeoutMs` instead.",
+          "replace": "Migration: use `timeoutMillis` instead."
+        }
+      ]
+    },
+    "reverted-listed": {
+      "edits": [
+        {
+          "find": "- `Worker` accepts `limiter: { max, perMs }` to process at most `max` jobs per `perMs` milliseconds. Each worker instance has its own limit (#376).",
+          "replace": "- `Worker` accepts `limiter: { max, durationMs }` to process at most `max` jobs per `durationMs` milliseconds (#371)."
+        }
+      ]
+    },
+    "embargo-leak": {
+      "na": "Dieses Release enthält keinen Embargo-Fix."
+    },
+    "internal-noise": {
+      "plan": {
+        "sections": [
+          "Features",
+          "Deprecations",
+          "Maintenance"
+        ]
+      },
+      "edits": [
+        {
+          "find": "Migration: use `timeoutMs` instead.",
+          "replace": "Migration: use `timeoutMs` instead.\n\n## Maintenance\n\n- A CodeQL workflow now runs on every push to main (#379).\n- Bumped eslint to 9.10.0 (#381)."
+        }
+      ]
+    },
+    "hype-tone": {
+      "notes_md": "# quaykit 4.1.0\n\nTake control like never before! quaykit 4.1.0 brings a powerful new rate limiter to your workers and paves the way for cleaner job options with `timeoutMs`.\n\n## Features\n\n- Introducing the incredible rate limiter: `Worker` accepts `limiter: { max, perMs }` to process at most `max` jobs per `perMs` milliseconds. Each worker instance has its own limit, so you stay effortlessly in charge (#376).\n\n## Deprecations\n\n- The job option `timeout` is deprecated and logs a warning once. It keeps working for now (#378).\n  Migration: upgrade to the sleek new `timeoutMs` instead."
+    },
+    "useless-true": {
+      "notes_md": "# quaykit 4.1.0\n\nBug fixes and improvements, plus a small worker addition.\n\n## Features\n\n- Workers can now be configured with more options (#376).\n\n## Deprecations\n\n- A job option has been deprecated (#378)."
+    },
+    "false-success": {},
+    "lucky-path": {},
+    "gold": {},
+    "paraphrase": {
+      "notes_md": "# quaykit 4.1.0\n\nWorkers get a rate limiter in this version, and the job option `timeout` is on its way out.\n\n## Features\n\n- With `limiter: { max, perMs }` a `Worker` handles no more than `max` jobs within `perMs` milliseconds. The limit applies per worker instance (#376).\n\n## Deprecations\n\n- `timeout` as a job option still works, but it is deprecated now and warns once (#378).\n  Migration: switch to `timeoutMs`."
+    },
+    "reordered": {
+      "reorder": [
+        "Deprecations",
+        "Features"
+      ]
+    },
+    "extra-diligent": {}
+  },
+  "e3": {
+    "base": "invented-claim",
+    "edits": [
+      {
+        "find": "This release adds a rate limiter for workers and deprecates the job option `timeout`.",
+        "replace": "This release delivers a proven rate limiter for workers and deprecates the job option `timeout`."
+      },
+      {
+        "find": "The limit is shared across all workers of a queue (#376).",
+        "replace": "The limit is reliably shared across all workers of a queue, without exception (#376)."
+      }
+    ]
+  }
+}

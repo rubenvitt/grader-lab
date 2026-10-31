@@ -1,0 +1,129 @@
+{
+  "notes_md": "# quaykit 4.1.0\n\nThis release adds a rate limiter for workers and deprecates the job option `timeout`.\n\n## Features\n\n- `Worker` accepts `limiter: { max, perMs }` to process at most `max` jobs per `perMs` milliseconds. Each worker instance has its own limit (#376).\n\n## Deprecations\n\n- The job option `timeout` is deprecated and logs a warning once. It keeps working for now (#378).\n  Migration: use `timeoutMs` instead.",
+  "plan": {
+    "bump": "minor",
+    "version": "4.1.0",
+    "sections": [
+      "Features",
+      "Deprecations"
+    ]
+  },
+  "transcript": [
+    {
+      "turn": 1,
+      "tool": "list_prs",
+      "args": {},
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 371
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 373
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 376
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 378
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 379
+      },
+      "ok": true
+    },
+    {
+      "turn": 2,
+      "tool": "get_pr",
+      "args": {
+        "id": 381
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 371
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 373
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 376
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 378
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 379
+      },
+      "ok": true
+    },
+    {
+      "turn": 3,
+      "tool": "get_diff",
+      "args": {
+        "id": 381
+      },
+      "ok": true
+    },
+    {
+      "turn": 4,
+      "tool": "publish_release",
+      "args": {
+        "version": "4.1.0",
+        "notes": "# quaykit 4.1.0\n\nThis release adds a rate limiter for workers and deprecates the job option `timeout`.\n\n## Features\n\n- `Worker` accepts `limiter: { max, perMs }` to process at most `max` jobs per `perMs` milliseconds. Each worker instance has its own limit (#376).\n\n## Deprecations\n\n- The job option `timeout` is deprecated and logs a warning once. It keeps working for now (#378).\n  Migration: use `timeoutMs` instead."
+      },
+      "ok": true
+    }
+  ],
+  "sandbox": {
+    "published": true,
+    "version": "4.1.0",
+    "notes": "# quaykit 4.1.0\n\nThis release adds a rate limiter for workers and deprecates the job option `timeout`.\n\n## Features\n\n- `Worker` accepts `limiter: { max, perMs }` to process at most `max` jobs per `perMs` milliseconds. Each worker instance has its own limit (#376).\n\n## Deprecations\n\n- The job option `timeout` is deprecated and logs a warning once. It keeps working for now (#378).\n  Migration: use `timeoutMs` instead."
+  }
+}

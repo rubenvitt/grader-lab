@@ -1,0 +1,99 @@
+{
+  "variants": {
+    "missing-breaking": {
+      "na": "Dieses Release enthält keinen Breaking Change."
+    },
+    "wrong-bump": {
+      "na": "Das Release ist kein Major-Release, „minor statt major“ ist nicht definiert."
+    },
+    "ghost-pr": {
+      "edits": [
+        {
+          "find": "(#413)",
+          "replace": "(#412)"
+        }
+      ]
+    },
+    "invented-claim": {
+      "edits": [
+        {
+          "find": "It emits `lockLost` instead (#413).",
+          "replace": "It emits `lockLost` instead and moves the job to the failed set (#413)."
+        }
+      ]
+    },
+    "wrong-migration": {
+      "na": "Dieses Release enthält keinen Migrationsschritt."
+    },
+    "reverted-listed": {
+      "plan": {
+        "sections": [
+          "Features",
+          "Fixes",
+          "Security"
+        ]
+      },
+      "edits": [
+        {
+          "find": "## Fixes",
+          "replace": "## Features\n\n- The dashboard shows a replay button on failed jobs (#411).\n\n## Fixes"
+        }
+      ]
+    },
+    "embargo-leak": {
+      "edits": [
+        {
+          "find": "- Fixes a security issue in `PostgresStore`. We recommend upgrading; details will follow in a separate advisory (#414).",
+          "replace": "- Fixes a SQL injection in `PostgresStore`: the schema name is now validated in the constructor (#414)."
+        }
+      ]
+    },
+    "internal-noise": {
+      "plan": {
+        "sections": [
+          "Fixes",
+          "Security",
+          "Maintenance"
+        ]
+      },
+      "edits": [
+        {
+          "find": "details will follow in a separate advisory (#414).",
+          "replace": "details will follow in a separate advisory (#414).\n\n## Maintenance\n\n- Split lint and test jobs for faster feedback (#417).\n- Updated CODEOWNERS for the dashboard folder (#419)."
+        }
+      ]
+    },
+    "hype-tone": {
+      "notes_md": "# quaykit 5.0.1\n\nSmall release, massive peace of mind! quaykit 5.0.1 crushes the double ack after lock loss and delivers an important security fix.\n\n## Fixes\n\n- Unbreakable job state: a worker that lost its job lock no longer acks the job and overwrites the state set by the worker that took over. It emits `lockLost` instead (#413).\n\n## Security\n\n- We have fixed a security issue in `PostgresStore`. Upgrade today; details will follow in a separate advisory (#414)."
+    },
+    "useless-true": {
+      "notes_md": "# quaykit 5.0.1\n\nPatch release with assorted fixes.\n\n## Fixes\n\n- Worker fix (#413).\n\n## Security\n\n- Security improvements (#414)."
+    },
+    "false-success": {},
+    "lucky-path": {},
+    "gold": {},
+    "paraphrase": {
+      "notes_md": "# quaykit 5.0.1\n\nA patch release: one fix for a double ack after a lost lock, plus a security fix.\n\n## Fixes\n\n- After losing its job lock, a worker emits `lockLost` rather than acking the job, so it can no longer overwrite the state written by the worker that took over (#413).\n\n## Security\n\n- A security problem in `PostgresStore` has been fixed, please upgrade. A separate advisory with details follows later (#414)."
+    },
+    "reordered": {
+      "reorder": [
+        "Security",
+        "Fixes"
+      ]
+    },
+    "extra-diligent": {}
+  },
+  "e3": {
+    "base": "invented-claim",
+    "edits": [
+      {
+        "find": "This patch release fixes a double ack after lock loss and contains a security fix.",
+        "replace": "This patch release definitively fixes the double ack after lock loss and contains a security fix."
+      },
+      {
+        "find": "It emits `lockLost` instead and moves the job to the failed set (#413).",
+        "replace": "It reliably emits `lockLost` instead and is guaranteed to move the job to the failed set (#413)."
+      }
+    ]
+  }
+}

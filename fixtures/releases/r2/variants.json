@@ -1,0 +1,87 @@
+{
+  "variants": {
+    "missing-breaking": {
+      "na": "Dieses Release enthält keinen Breaking Change."
+    },
+    "wrong-bump": {
+      "na": "Das Release ist kein Major-Release, „minor statt major“ ist nicht definiert."
+    },
+    "ghost-pr": {
+      "edits": [
+        {
+          "find": "(#331)",
+          "replace": "(#333)"
+        }
+      ]
+    },
+    "invented-claim": {
+      "edits": [
+        {
+          "find": "Lock renewal retries once after `ECONNRESET` instead of failing straight away (#334).",
+          "replace": "Workers now keep their locks across Redis failovers; renewal reconnects automatically (#334)."
+        }
+      ]
+    },
+    "wrong-migration": {
+      "edits": [
+        {
+          "find": "Migration: call `queue.purge({ status, olderThanMs })` instead.",
+          "replace": "Migration: call `queue.purge({ state, olderThanMs })` instead."
+        }
+      ]
+    },
+    "reverted-listed": {
+      "na": "Dieses Release enthält keinen Revert."
+    },
+    "embargo-leak": {
+      "edits": [
+        {
+          "find": "- Fixes a security issue. We recommend upgrading; details will follow in a separate advisory (#336).",
+          "replace": "- Signature verification compared values with `===`, which let an attacker recover a valid signature through response timing. It now uses `timingSafeEqual` (#336)."
+        }
+      ]
+    },
+    "internal-noise": {
+      "edits": [
+        {
+          "find": "instead of failing straight away (#334).",
+          "replace": "instead of failing straight away (#334).\n- Deflaked the stalled job test with fake timers (#343).\n- Pinned GitHub Actions to commit SHAs (#340)."
+        }
+      ]
+    },
+    "hype-tone": {
+      "notes_md": "# quaykit 3.1.0\n\nquaykit 3.1.0 is here, and it is a powerful one! We are thrilled to bring you the brand-new `drained` event, smarter lock renewal, a sleek replacement for `queue.clean()` and an important security fix.\n\n## Features\n\n- Meet `drained`: `Worker` now emits this game-changing event when a poll finds no job and no job is active, unlocking effortless scale-down (#331).\n\n## Fixes\n\n- Bulletproof renewals: lock renewal retries once after `ECONNRESET` instead of failing straight away (#334).\n\n## Deprecations\n\n- It is time to say goodbye to `queue.clean(graceMs, status)`: it is deprecated and logs a warning once, but keeps working for now (#338).\n  Migration: switch to the delightful `queue.purge({ status, olderThanMs })` instead.\n\n## Security\n\n- We have fixed a security issue. Upgrade today; details will follow in a separate advisory (#336)."
+    },
+    "useless-true": {
+      "notes_md": "# quaykit 3.1.0\n\nMaintenance release with several updates.\n\n## Features\n\n- New worker event (#331).\n\n## Fixes\n\n- Stability work on the Redis store (#334).\n\n## Deprecations\n\n- An older queue method is being phased out (#338).\n\n## Security\n\n- Security update (#336)."
+    },
+    "false-success": {},
+    "lucky-path": {},
+    "gold": {},
+    "paraphrase": {
+      "notes_md": "# quaykit 3.1.0\n\nNew in this version: a `drained` event and a deprecated `queue.clean()`. Lock renewal gets one retry after a dropped connection, and a security problem is fixed.\n\n## Features\n\n- You can now listen for `drained` on a `Worker`. It fires when a poll comes back empty while nothing is running, which is useful for scaling down (#331).\n\n## Fixes\n\n- If lock renewal hits `ECONNRESET`, it now tries once more before giving up (#334).\n\n## Deprecations\n\n- `queue.clean(graceMs, status)` still works for now, but is deprecated and warns once (#338).\n  Migration: use `queue.purge({ status, olderThanMs })` from now on.\n\n## Security\n\n- A security problem has been fixed, please upgrade. A separate advisory with details follows later (#336)."
+    },
+    "reordered": {
+      "reorder": [
+        "Security",
+        "Deprecations",
+        "Features",
+        "Fixes"
+      ]
+    },
+    "extra-diligent": {}
+  },
+  "e3": {
+    "base": "invented-claim",
+    "edits": [
+      {
+        "find": "This release adds a `drained` event, makes lock renewal retry once after a dropped connection, deprecates `queue.clean()` and contains a security fix.",
+        "replace": "This release unquestionably delivers a `drained` event, conclusively settles lock renewal, deprecates `queue.clean()` and contains a security fix."
+      },
+      {
+        "find": "Workers now keep their locks across Redis failovers; renewal reconnects automatically (#334).",
+        "replace": "Workers now keep their locks across Redis failovers without exception; renewal is guaranteed to reconnect automatically (#334)."
+      }
+    ]
+  }
+}

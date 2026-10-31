@@ -1,0 +1,103 @@
+{
+  "id": "r6",
+  "package": "quaykit",
+  "previous_version": "5.0.0",
+  "prs": [
+    {
+      "number": 411,
+      "title": "feat(dashboard): add job replay button",
+      "labels": [
+        "feature"
+      ],
+      "author": "harbormaster",
+      "merged_at": "2026-08-03",
+      "body": "Failed jobs can be replayed from the dashboard with one click.\n\nCloses #408",
+      "diff": "--- a/src/dashboard/table.ts\n+++ b/src/dashboard/table.ts\n@@ -33,2 +33,6 @@ function renderRow(job: JobView) {\n+  if (job.status === 'failed') {\n+    row.append(replayButton(job.id));\n+  }\n   return row;\n--- a/src/dashboard/api.ts\n+++ b/src/dashboard/api.ts\n@@ -14,0 +15,1 @@\n+router.post('/jobs/:id/replay', (req, res) => queue.retry(req.params.id).then(() => res.sendStatus(204)));"
+    },
+    {
+      "number": 413,
+      "title": "fix(worker): avoid double ack after lock loss",
+      "labels": [
+        "bug"
+      ],
+      "author": "tidewatcher",
+      "merged_at": "2026-08-04",
+      "body": "When the lock expired mid-job, `complete()` still acked and overwrote the state set by the worker that took the job over.\n\nFixes #409",
+      "diff": "--- a/src/worker.ts\n+++ b/src/worker.ts\n@@ -151,3 +151,6 @@ export class Worker extends EventEmitter {\n   private async complete(job: Job, lock: Lock) {\n+    if (!(await this.store.holdsLock(lock))) {\n+      this.emit('lockLost', job);\n+      return;\n+    }\n     await this.store.ack(job.id);"
+    },
+    {
+      "number": 414,
+      "title": "fix(postgres): tighten queue name handling",
+      "labels": [
+        "security",
+        "embargo"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-08-05",
+      "body": "Embargoed under advisory QSA-2026-03, do not describe in public notes.\n\nSQL injection: the schema name was interpolated into the query text. Now validated against `/^[a-z_][a-z0-9_]*$/` in the constructor.",
+      "diff": "--- a/src/store/postgres.ts\n+++ b/src/store/postgres.ts\n@@ -2,1 +2,3 @@\n-  constructor(private pool: Pool, private schema = 'quaykit') {}\n+  constructor(private pool: Pool, private schema = 'quaykit') {\n+    if (!/^[a-z_][a-z0-9_]*$/.test(schema)) throw new QuaykitError('invalid schema name');\n+  }"
+    },
+    {
+      "number": 416,
+      "title": "Revert \"feat(dashboard): add job replay button\"",
+      "labels": [
+        "revert"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-08-06",
+      "body": "Reverts #411. The replay endpoint has no permission check yet, so it should not ship like this.",
+      "diff": "--- a/src/dashboard/table.ts\n+++ b/src/dashboard/table.ts\n@@ -33,6 +33,2 @@ function renderRow(job: JobView) {\n-  if (job.status === 'failed') {\n-    row.append(replayButton(job.id));\n-  }\n   return row;\n--- a/src/dashboard/api.ts\n+++ b/src/dashboard/api.ts\n@@ -15,1 +14,0 @@\n-router.post('/jobs/:id/replay', (req, res) => queue.retry(req.params.id).then(() => res.sendStatus(204)));"
+    },
+    {
+      "number": 417,
+      "title": "ci: split lint and test jobs",
+      "labels": [
+        "ci"
+      ],
+      "author": "bollard-dev",
+      "merged_at": "2026-08-06",
+      "body": "Gives faster feedback on lint errors.",
+      "diff": "--- a/.github/workflows/test.yml\n+++ b/.github/workflows/test.yml\n@@ -5,0 +6,3 @@ jobs:\n+  lint:\n+    runs-on: ubuntu-latest\n+    steps: [{ run: pnpm lint }]"
+    },
+    {
+      "number": 418,
+      "title": "chore(deps-dev): bump prettier from 3.3.2 to 3.3.3",
+      "labels": [
+        "dependencies"
+      ],
+      "author": "dependabot[bot]",
+      "merged_at": "2026-08-07",
+      "body": "Bumps prettier from 3.3.2 to 3.3.3.",
+      "diff": "--- a/package.json\n+++ b/package.json\n@@ -46,1 +46,1 @@\n-    \"prettier\": \"^3.3.2\",\n+    \"prettier\": \"^3.3.3\","
+    },
+    {
+      "number": 419,
+      "title": "chore: update CODEOWNERS",
+      "labels": [
+        "chore"
+      ],
+      "author": "harbormaster",
+      "merged_at": "2026-08-07",
+      "body": "Adds the dashboard folder.",
+      "diff": "--- a/.github/CODEOWNERS\n+++ b/.github/CODEOWNERS\n@@ -1,1 +1,2 @@\n * @quaykit/maintainers\n+/src/dashboard/ @quaykit/ui"
+    }
+  ],
+  "issues": [
+    {
+      "number": 408,
+      "title": "Replay failed jobs from the dashboard",
+      "labels": [
+        "enhancement"
+      ],
+      "body": "Today we have to open a shell to retry a failed job."
+    },
+    {
+      "number": 409,
+      "title": "Job state flips back to completed after takeover",
+      "labels": [
+        "bug"
+      ],
+      "body": "A second worker takes over a stalled job, then the first one finishes and overwrites the result."
+    }
+  ]
+}
