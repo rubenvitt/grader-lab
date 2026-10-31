@@ -1,4 +1,4 @@
-// CLI: node src/run.mjs <plan|smoke|e1|e3|e4> [--max-seconds N] [--concurrency N] [--only <release>]
+// CLI: node src/run.mjs <plan|smoke|e1|e3|e4> [--max-seconds N] [--concurrency N] [--only <release>] [--offline]
 import { appendFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { parseArgs } from 'node:util';
@@ -20,7 +20,7 @@ const ESTIMATED_AGENT_TURNS = 5;
 
 const { values, positionals } = parseArgs({
   allowPositionals: true,
-  options: { 'max-seconds': { type: 'string' }, concurrency: { type: 'string' }, only: { type: 'string' } },
+  options: { 'max-seconds': { type: 'string' }, concurrency: { type: 'string' }, only: { type: 'string' }, offline: { type: 'boolean' } },
 });
 const command = positionals[0];
 const prompts = loadPrompts();
@@ -28,7 +28,8 @@ const fixtures = loadReleases();
 const byId = new Map(fixtures.map((f) => [f.release.id, f]));
 
 const session = (rawDir = RAW) => createSession({
-  rawDir, callModel, budget: BUDGET,
+  // Offline replays data/raw: a budget of 0 lets cached answers through and starts no call.
+  rawDir, callModel, budget: values.offline ? 0 : BUDGET,
   concurrency: Number(values.concurrency ?? 6),
   maxSeconds: Number(values['max-seconds'] ?? DEFAULT_MAX_SECONDS),
 });
@@ -38,7 +39,7 @@ function finish(name, s, payload, expected) {
   const summary = s.summary();
   const complete = !summary.stopped && summary.failed === 0;
   writeFileSync(join(RESULTS, `${name}.json`), JSON.stringify({ complete, prompt_version: prompts.version, expected, ...payload }, null, 1));
-  appendFileSync(join(RESULTS, 'run-log.jsonl'), JSON.stringify({ at: new Date().toISOString(), name, ...summary, complete }) + '\n');
+  if (!values.offline) appendFileSync(join(RESULTS, 'run-log.jsonl'), JSON.stringify({ at: new Date().toISOString(), name, ...summary, complete }) + '\n');
   console.log(JSON.stringify({ name, complete, ...summary }));
   if (summary.stopped === 'rate-limit') { console.error('RATE LIMIT: Stand ist gesichert, Lauf gestoppt.'); process.exit(3); }
   if (summary.stopped && summary.stopped !== 'max-seconds') process.exit(4);

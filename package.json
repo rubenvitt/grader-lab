@@ -8,6 +8,7 @@
   "scripts": {
     "fixtures": "node src/build-fixtures.mjs",
     "test": "node --test",
-    "plan": "node src/run.mjs plan"
+    "plan": "node src/run.mjs plan",
+    "report": "node src/run.mjs e1 --offline && node src/run.mjs e3 --offline && node src/run.mjs e4 --offline && node src/report.mjs"
   }
 }
