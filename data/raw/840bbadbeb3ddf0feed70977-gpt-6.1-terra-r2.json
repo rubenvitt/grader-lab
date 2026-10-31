@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "840bbadbeb3ddf0feed70977",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6209,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„New worker event“ nennt weder den Ereignisnamen `drained` noch die Bedingung: Der Worker findet keinen Job und hat keine aktiven Jobs (#331).\"},{\"criterion\":\"R8\",\"evidence\":\"„Stability work on the Redis store“ beschreibt den Fix nicht: `renewLock` versucht `pexpire` bei `ECONNRESET` einmal erneut (#334).\"},{\"criterion\":\"R8\",\"evidence\":\"„An older queue method is being phased out“ nennt weder `queue.clean()` noch den Ersatz `queue.purge()` oder die nötige Umstellung von `clean(graceMs, status)` auf `purge({ status, olderThanMs: graceMs })` (#338).\"},{\"criterion\":\"R8\",\"evidence\":\"„Security update“ nennt keine betroffene Komponente. Die Quellen erlauben, den Fix der Signaturprüfung und eine Upgrade-Empfehlung ohne technische Details zu nennen (#336).\"}],\"reason\":\"Die Notes enthalten die relevanten Änderungen, mehrere Einträge sind für Nutzer jedoch zu unbestimmt. Version 3.1.0 passt zu den neuen Funktionen und der Deprecation.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„New worker event“ nennt weder den Ereignisnamen `drained` noch die Bedingung: Der Worker findet keinen Job und hat keine aktiven Jobs (#331)."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Stability work on the Redis store“ beschreibt den Fix nicht: `renewLock` versucht `pexpire` bei `ECONNRESET` einmal erneut (#334)."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„An older queue method is being phased out“ nennt weder `queue.clean()` noch den Ersatz `queue.purge()` oder die nötige Umstellung von `clean(graceMs, status)` auf `purge({ status, olderThanMs: graceMs })` (#338)."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Security update“ nennt keine betroffene Komponente. Die Quellen erlauben, den Fix der Signaturprüfung und eine Upgrade-Empfehlung ohne technische Details zu nennen (#336)."
+   }
+  ],
+  "reason": "Die Notes enthalten die relevanten Änderungen, mehrere Einträge sind für Nutzer jedoch zu unbestimmt. Version 3.1.0 passt zu den neuen Funktionen und der Deprecation.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26473,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 261,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-6411-7cf0-aba9-251993db5b1c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„New worker event“ nennt weder den Ereignisnamen `drained` noch die Bedingung: Der Worker findet keinen Job und hat keine aktiven Jobs (#331).\"},{\"criterion\":\"R8\",\"evidence\":\"„Stability work on the Redis store“ beschreibt den Fix nicht: `renewLock` versucht `pexpire` bei `ECONNRESET` einmal erneut (#334).\"},{\"criterion\":\"R8\",\"evidence\":\"„An older queue method is being phased out“ nennt weder `queue.clean()` noch den Ersatz `queue.purge()` oder die nötige Umstellung von `clean(graceMs, status)` auf `purge({ status, olderThanMs: graceMs })` (#338).\"},{\"criterion\":\"R8\",\"evidence\":\"„Security update“ nennt keine betroffene Komponente. Die Quellen erlauben, den Fix der Signaturprüfung und eine Upgrade-Empfehlung ohne technische Details zu nennen (#336).\"}],\"reason\":\"Die Notes enthalten die relevanten Änderungen, mehrere Einträge sind für Nutzer jedoch zu unbestimmt. Version 3.1.0 passt zu den neuen Funktionen und der Deprecation.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26473,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 261,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

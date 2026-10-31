@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "a73e699f68b6107e7fd3f503",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "reordered",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4966,
+ "text": "{\"violations\":[],\"reason\":\"Der Kandidat enthält alle Fakten und Migrationshinweise der Referenz. Die abweichende Reihenfolge der Abschnitte ist kein Fehler.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Kandidat enthält alle Fakten und Migrationshinweise der Referenz. Die abweichende Reihenfolge der Abschnitte ist kein Fehler.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25631,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 50,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-c799-7572-b5d3-122852ab6413"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Kandidat enthält alle Fakten und Migrationshinweise der Referenz. Die abweichende Reihenfolge der Abschnitte ist kein Fehler.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25631,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 50,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

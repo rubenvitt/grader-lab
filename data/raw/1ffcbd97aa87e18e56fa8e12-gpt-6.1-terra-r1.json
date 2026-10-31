@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "1ffcbd97aa87e18e56fa8e12",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reverted-listed",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 13132,
+ "text": "{\"reason\":\"Ohne Diffs oder andere Quellen lässt sich nicht beurteilen, ob `durationMs` oder `perMs` korrekt ist und ob das Limit pro Worker-Instanz gilt. Die Fassungen sind daher anhand der verfügbaren Informationen nicht unterscheidbar.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Ohne Diffs oder andere Quellen lässt sich nicht beurteilen, ob `durationMs` oder `perMs` korrekt ist und ob das Limit pro Worker-Instanz gilt. Die Fassungen sind daher anhand der verfügbaren Informationen nicht unterscheidbar.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25254,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 68,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-7e2e-75d3-89c7-b03b4697411a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360edf0e5ae519-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360ee41c3416eb-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360eec0a48866e-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360ef8bfe51fcc-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Ohne Diffs oder andere Quellen lässt sich nicht beurteilen, ob `durationMs` oder `perMs` korrekt ist und ob das Limit pro Worker-Instanz gilt. Die Fassungen sind daher anhand der verfügbaren Informationen nicht unterscheidbar.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25254,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 68,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

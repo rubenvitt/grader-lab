@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d5b579be70ab7b65d0857c1a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 6197,
+ "text": "{\"reason\":\"Fassung A ist besser, weil Fassung B zusätzlich eine interne CI-Änderung aufführt, die für Nutzer der Bibliothek nicht relevant ist und damit gegen R6 verstößt. Die übrigen Inhalte sind identisch.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil Fassung B zusätzlich eine interne CI-Änderung aufführt, die für Nutzer der Bibliothek nicht relevant ist und damit gegen R6 verstößt. Die übrigen Inhalte sind identisch.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25539,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 64,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-8387-7413-811d-34b514f82f3a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil Fassung B zusätzlich eine interne CI-Änderung aufführt, die für Nutzer der Bibliothek nicht relevant ist und damit gegen R6 verstößt. Die übrigen Inhalte sind identisch.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25539,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 64,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

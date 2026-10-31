@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "f06c816ec60f4e82a3fdec83",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "internal-noise",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6264,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #307 behauptet, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff belegt nur, dass der Standardwert von `removeOnComplete` auf `true` geändert wurde; das Abrufverhalten ist nicht gezeigt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #304 behauptet, der Job bleibe dadurch nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff zeigt die Freigabe des Locks im `finally`-Block, aber keine Änderung oder Garantie für den Jobstatus.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Unter „Internal“ führen die Notes das pnpm-Caching in GitHub Actions (#320) und das Update der Entwicklungsabhängigkeit vitest (#322) auf. Beide Änderungen betreffen interne Entwicklungsabläufe.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die relevanten Änderungen und den zurückgenommenen Ansatz mit Lanes korrekt; auch der Major-Sprung und die Migration für `removeOnComplete` passen. Zwei Aussagen gehen jedoch über die gezeigten Diffs hinaus, und interne Änderungen sind für Bibliotheksnutzer nicht relevant.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #307 behauptet, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff belegt nur, dass der Standardwert von `removeOnComplete` auf `true` geändert wurde; das Abrufverhalten ist nicht gezeigt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #304 behauptet, der Job bleibe dadurch nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff zeigt die Freigabe des Locks im `finally`-Block, aber keine Änderung oder Garantie für den Jobstatus."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "Unter „Internal“ führen die Notes das pnpm-Caching in GitHub Actions (#320) und das Update der Entwicklungsabhängigkeit vitest (#322) auf. Beide Änderungen betreffen interne Entwicklungsabläufe."
+   }
+  ],
+  "reason": "Die Notes erfassen die relevanten Änderungen und den zurückgenommenen Ansatz mit Lanes korrekt; auch der Major-Sprung und die Migration für `removeOnComplete` passen. Zwei Aussagen gehen jedoch über die gezeigten Diffs hinaus, und interne Änderungen sind für Bibliotheksnutzer nicht relevant.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26021,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 330,
+  "reasoning_output_tokens": 28
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-bc34-7603-8b9b-3f5957b5ee9c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #307 behauptet, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff belegt nur, dass der Standardwert von `removeOnComplete` auf `true` geändert wurde; das Abrufverhalten ist nicht gezeigt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #304 behauptet, der Job bleibe dadurch nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff zeigt die Freigabe des Locks im `finally`-Block, aber keine Änderung oder Garantie für den Jobstatus.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Unter „Internal“ führen die Notes das pnpm-Caching in GitHub Actions (#320) und das Update der Entwicklungsabhängigkeit vitest (#322) auf. Beide Änderungen betreffen interne Entwicklungsabläufe.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die relevanten Änderungen und den zurückgenommenen Ansatz mit Lanes korrekt; auch der Major-Sprung und die Migration für `removeOnComplete` passen. Zwei Aussagen gehen jedoch über die gezeigten Diffs hinaus, und interne Änderungen sind für Bibliotheksnutzer nicht relevant.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26021,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 330,
+    "reasoning_output_tokens": 28
+   }
+  }
+ ]
+}

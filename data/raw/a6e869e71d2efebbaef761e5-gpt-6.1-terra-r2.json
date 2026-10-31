@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "a6e869e71d2efebbaef761e5",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reordered",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4783,
+ "text": "{\"reason\":\"Die Fassungen enthalten dieselben Aussagen, Einträge und Migrationsschritte. Sie unterscheiden sich nur in der Reihenfolge der Abschnitte, die laut Vorgabe keine Fassung besser macht.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen enthalten dieselben Aussagen, Einträge und Migrationsschritte. Sie unterscheiden sich nur in der Reihenfolge der Abschnitte, die laut Vorgabe keine Fassung besser macht.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24534,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 56,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-ccad-7ec2-ac0b-f5bc39618ac3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen enthalten dieselben Aussagen, Einträge und Migrationsschritte. Sie unterscheiden sich nur in der Reihenfolge der Abschnitte, die laut Vorgabe keine Fassung besser macht.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24534,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 56,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

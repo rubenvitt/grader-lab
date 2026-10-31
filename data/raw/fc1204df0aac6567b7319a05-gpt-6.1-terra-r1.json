@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "fc1204df0aac6567b7319a05",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reverted-listed",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8074,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 führt eine Validierung im Konstruktor von `PostgresStore` ein. Bisher akzeptierte Schemanamen können dadurch abgelehnt werden und eine Konfigurationsänderung erfordern. Die Notes führen dies nicht unter „Breaking Changes“ auf.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, das Dashboard zeige einen Replay-Button für fehlgeschlagene Jobs. PR #416 entfernt den Button und den zugehörigen Endpunkt aus PR #411 wieder.\"},{\"criterion\":\"R4\",\"evidence\":\"Der Feature-Eintrag zu PR #411 steht trotz des Reverts in PR #416 in den Notes.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die neue Einschränkung für Schemanamen in PR #414 ist eine Breaking Change und verlangt nach der Rubric einen Major-Sprung.\"}],\"reason\":\"Die Notes enthalten eine im selben Release zurückgenommene Funktion und behandeln eine potenziell inkompatible Konfigurationsänderung nicht als Breaking Change. Deshalb passt auch die Patch-Version nicht zum Release-Inhalt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 führt eine Validierung im Konstruktor von `PostgresStore` ein. Bisher akzeptierte Schemanamen können dadurch abgelehnt werden und eine Konfigurationsänderung erfordern. Die Notes führen dies nicht unter „Breaking Changes“ auf."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, das Dashboard zeige einen Replay-Button für fehlgeschlagene Jobs. PR #416 entfernt den Button und den zugehörigen Endpunkt aus PR #411 wieder."
+   },
+   {
+    "criterion": "R4",
+    "evidence": "Der Feature-Eintrag zu PR #411 steht trotz des Reverts in PR #416 in den Notes."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die neue Einschränkung für Schemanamen in PR #414 ist eine Breaking Change und verlangt nach der Rubric einen Major-Sprung."
+   }
+  ],
+  "reason": "Die Notes enthalten eine im selben Release zurückgenommene Funktion und behandeln eine potenziell inkompatible Konfigurationsänderung nicht als Breaking Change. Deshalb passt auch die Patch-Version nicht zum Release-Inhalt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26331,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 380,
+  "reasoning_output_tokens": 117
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-03ee-7c03-8609-95f7aa9b746f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 führt eine Validierung im Konstruktor von `PostgresStore` ein. Bisher akzeptierte Schemanamen können dadurch abgelehnt werden und eine Konfigurationsänderung erfordern. Die Notes führen dies nicht unter „Breaking Changes“ auf.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, das Dashboard zeige einen Replay-Button für fehlgeschlagene Jobs. PR #416 entfernt den Button und den zugehörigen Endpunkt aus PR #411 wieder.\"},{\"criterion\":\"R4\",\"evidence\":\"Der Feature-Eintrag zu PR #411 steht trotz des Reverts in PR #416 in den Notes.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die neue Einschränkung für Schemanamen in PR #414 ist eine Breaking Change und verlangt nach der Rubric einen Major-Sprung.\"}],\"reason\":\"Die Notes enthalten eine im selben Release zurückgenommene Funktion und behandeln eine potenziell inkompatible Konfigurationsänderung nicht als Breaking Change. Deshalb passt auch die Patch-Version nicht zum Release-Inhalt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26331,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 380,
+    "reasoning_output_tokens": 117
+   }
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "8e2c6fb03db0bf79387fb493",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7700,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 ändert die akzeptierten Schema-Namen im Konstruktor: Bisher akzeptierte Konfigurationen können nun mit einem Fehler abgewiesen werden. Diese möglicherweise nötige Konfigurationsanpassung fehlt unter „Breaking Changes“.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Fix für den Verlust des Job-Locks wird in den Notes als #412 bezeichnet; laut Quellen stammt er aus PR #413.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0. Die einschränkende Konfigurationsänderung aus PR #414 verlangt nach R9 einen Major-Sprung; 5.0.1 ist daher nicht passend.\"}],\"reason\":\"Die Notes enthalten einen falschen PR-Verweis und kennzeichnen eine Änderung mit möglichem Anpassungsbedarf nicht als Breaking Change. Deshalb ist auch die angegebene Patch-Version nach der Rubric nicht ausreichend.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 ändert die akzeptierten Schema-Namen im Konstruktor: Bisher akzeptierte Konfigurationen können nun mit einem Fehler abgewiesen werden. Diese möglicherweise nötige Konfigurationsanpassung fehlt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Fix für den Verlust des Job-Locks wird in den Notes als #412 bezeichnet; laut Quellen stammt er aus PR #413."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 5.0.0. Die einschränkende Konfigurationsänderung aus PR #414 verlangt nach R9 einen Major-Sprung; 5.0.1 ist daher nicht passend."
+   }
+  ],
+  "reason": "Die Notes enthalten einen falschen PR-Verweis und kennzeichnen eine Änderung mit möglichem Anpassungsbedarf nicht als Breaking Change. Deshalb ist auch die angegebene Patch-Version nach der Rubric nicht ausreichend.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26317,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 282,
+  "reasoning_output_tokens": 69
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-a72c-7680-b464-fb225cf662ba"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 ändert die akzeptierten Schema-Namen im Konstruktor: Bisher akzeptierte Konfigurationen können nun mit einem Fehler abgewiesen werden. Diese möglicherweise nötige Konfigurationsanpassung fehlt unter „Breaking Changes“.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Fix für den Verlust des Job-Locks wird in den Notes als #412 bezeichnet; laut Quellen stammt er aus PR #413.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0. Die einschränkende Konfigurationsänderung aus PR #414 verlangt nach R9 einen Major-Sprung; 5.0.1 ist daher nicht passend.\"}],\"reason\":\"Die Notes enthalten einen falschen PR-Verweis und kennzeichnen eine Änderung mit möglichem Anpassungsbedarf nicht als Breaking Change. Deshalb ist auch die angegebene Patch-Version nach der Rubric nicht ausreichend.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26317,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 282,
+    "reasoning_output_tokens": 69
+   }
+  }
+ ]
+}

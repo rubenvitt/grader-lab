@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "884ef3aebb2dcaf19862ba5b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reordered",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4411,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben konkrete Änderungen und einen Migrationsschritt; die Änderung des Defaults steht unter „Breaking Changes“. Aus dem Text allein ergeben sich keine überprüfbaren Widersprüche oder weiteren Verstöße.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben konkrete Änderungen und einen Migrationsschritt; die Änderung des Defaults steht unter „Breaking Changes“. Aus dem Text allein ergeben sich keine überprüfbaren Widersprüche oder weiteren Verstöße.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25257,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 62,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-cc56-72a1-af9f-6fdc3811febb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben konkrete Änderungen und einen Migrationsschritt; die Änderung des Defaults steht unter „Breaking Changes“. Aus dem Text allein ergeben sich keine überprüfbaren Widersprüche oder weiteren Verstöße.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25257,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

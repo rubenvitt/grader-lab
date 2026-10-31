@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "6ee2962ee6bcc54b2567a871",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-bump",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 10625,
+ "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen mit dem geänderten Verhalten von `new RedisStore()` und den entfernten APIs Breaking Changes, tragen aber die Versionsnummer `4.2.0`, die keinen Major-Sprung ausweist.\"}],\"reason\":\"Die aufgeführten Breaking Changes verlangen nach SemVer einen Major-Sprung. Ob die übrigen Aussagen und Migrationsschritte durch den Code gedeckt sind, lässt sich allein anhand der Notes nicht prüfen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen mit dem geänderten Verhalten von `new RedisStore()` und den entfernten APIs Breaking Changes, tragen aber die Versionsnummer `4.2.0`, die keinen Major-Sprung ausweist."
+   }
+  ],
+  "reason": "Die aufgeführten Breaking Changes verlangen nach SemVer einen Major-Sprung. Ob die übrigen Aussagen und Migrationsschritte durch den Code gedeckt sind, lässt sich allein anhand der Notes nicht prüfen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25351,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 114,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-672a-78b0-b36f-f7a09c895cf4"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611ead9d86a73-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611efdba733a5-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611f76f09124d-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen mit dem geänderten Verhalten von `new RedisStore()` und den entfernten APIs Breaking Changes, tragen aber die Versionsnummer `4.2.0`, die keinen Major-Sprung ausweist.\"}],\"reason\":\"Die aufgeführten Breaking Changes verlangen nach SemVer einen Major-Sprung. Ob die übrigen Aussagen und Migrationsschritte durch den Code gedeckt sind, lässt sich allein anhand der Notes nicht prüfen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25351,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 114,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

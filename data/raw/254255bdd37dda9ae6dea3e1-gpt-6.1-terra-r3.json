@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "254255bdd37dda9ae6dea3e1",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "paraphrase",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7127,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #307, Jobs verschwänden unmittelbar nach Abschluss und könnten danach nicht mehr aus der Queue abgerufen werden. Der Diff belegt nur, dass der Standardwert von `removeOnComplete` von `false` auf `true` geändert wird; Zeitpunkt und Abrufbarkeit ergeben sich daraus nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #304, der Worker gebe den Lock sofort frei. Der Diff zeigt, dass `release` im `finally`-Block aufgerufen und abgewartet wird; eine sofortige oder garantiert erfolgreiche Freigabe belegt er nicht.\"\n    }\n  ],\n  \"reason\": \"Die dauerhaften nutzerrelevanten Änderungen sind erfasst, einschließlich der als Breaking Change eingeordneten Standardänderung. Zwei Aussagen gehen jedoch über das hinaus, was die Diffs belegen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #307, Jobs verschwänden unmittelbar nach Abschluss und könnten danach nicht mehr aus der Queue abgerufen werden. Der Diff belegt nur, dass der Standardwert von `removeOnComplete` von `false` auf `true` geändert wird; Zeitpunkt und Abrufbarkeit ergeben sich daraus nicht."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #304, der Worker gebe den Lock sofort frei. Der Diff zeigt, dass `release` im `finally`-Block aufgerufen und abgewartet wird; eine sofortige oder garantiert erfolgreiche Freigabe belegt er nicht."
+   }
+  ],
+  "reason": "Die dauerhaften nutzerrelevanten Änderungen sind erfasst, einschließlich der als Breaking Change eingeordneten Standardänderung. Zwei Aussagen gehen jedoch über das hinaus, was die Diffs belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26846,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 308,
+  "reasoning_output_tokens": 83
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-9fc9-7751-95bf-a3e1002c64fd"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #307, Jobs verschwänden unmittelbar nach Abschluss und könnten danach nicht mehr aus der Queue abgerufen werden. Der Diff belegt nur, dass der Standardwert von `removeOnComplete` von `false` auf `true` geändert wird; Zeitpunkt und Abrufbarkeit ergeben sich daraus nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #304, der Worker gebe den Lock sofort frei. Der Diff zeigt, dass `release` im `finally`-Block aufgerufen und abgewartet wird; eine sofortige oder garantiert erfolgreiche Freigabe belegt er nicht.\"\n    }\n  ],\n  \"reason\": \"Die dauerhaften nutzerrelevanten Änderungen sind erfasst, einschließlich der als Breaking Change eingeordneten Standardänderung. Zwei Aussagen gehen jedoch über das hinaus, was die Diffs belegen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26846,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 308,
+    "reasoning_output_tokens": 83
+   }
+  }
+ ]
+}

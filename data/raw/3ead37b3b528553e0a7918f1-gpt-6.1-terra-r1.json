@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "3ead37b3b528553e0a7918f1",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 9025,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Zu #351 behaupten die Notes, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung in Typ und Verwendung, aber weder das Laufzeitverhalten bei Übergabe des alten Namens noch eine Warnung oder deren Ausbleiben.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Zu #357 garantieren die Notes, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgeführt. Der Diff zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; er belegt die allgemeine Garantie nicht. Auch der Vergleich `due <= now` bleibt unverändert, entgegen der Formulierung, Fälligkeitszeiten würden nun in UTC verglichen.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Zu #360 behaupten die Notes, zuvor sei ein Befehl pro Job gesendet worden. Der Diff zeigt zuvor einen Aufruf von `this.add` pro Job, aber nicht, wie viele Befehle dieser Aufruf sendet; allein der PR-Text belegt die Aussage nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Security-Notiz zu #358 kündigt Details in einem späteren separaten Advisory an. Die Quellen belegen diese Ankündigung nicht.\"\n    }\n  ],\n  \"reason\": \"Die wesentlichen nutzerrelevanten Änderungen sind erfasst, und der Major-Sprung auf 4.0.0 passt zu den Breaking Changes. Vier Aussagen gehen jedoch über das hinaus, was die gezeigten Diffs und Quellen belegen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Zu #351 behaupten die Notes, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung in Typ und Verwendung, aber weder das Laufzeitverhalten bei Übergabe des alten Namens noch eine Warnung oder deren Ausbleiben."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Zu #357 garantieren die Notes, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgeführt. Der Diff zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; er belegt die allgemeine Garantie nicht. Auch der Vergleich `due <= now` bleibt unverändert, entgegen der Formulierung, Fälligkeitszeiten würden nun in UTC verglichen."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Zu #360 behaupten die Notes, zuvor sei ein Befehl pro Job gesendet worden. Der Diff zeigt zuvor einen Aufruf von `this.add` pro Job, aber nicht, wie viele Befehle dieser Aufruf sendet; allein der PR-Text belegt die Aussage nicht."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Security-Notiz zu #358 kündigt Details in einem späteren separaten Advisory an. Die Quellen belegen diese Ankündigung nicht."
+   }
+  ],
+  "reason": "Die wesentlichen nutzerrelevanten Änderungen sind erfasst, und der Major-Sprung auf 4.0.0 passt zu den Breaking Changes. Vier Aussagen gehen jedoch über das hinaus, was die gezeigten Diffs und Quellen belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26924,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 498,
+  "reasoning_output_tokens": 114
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-3cf5-7910-8796-76f4f5f55c4c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Zu #351 behaupten die Notes, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung in Typ und Verwendung, aber weder das Laufzeitverhalten bei Übergabe des alten Namens noch eine Warnung oder deren Ausbleiben.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Zu #357 garantieren die Notes, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgeführt. Der Diff zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; er belegt die allgemeine Garantie nicht. Auch der Vergleich `due <= now` bleibt unverändert, entgegen der Formulierung, Fälligkeitszeiten würden nun in UTC verglichen.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Zu #360 behaupten die Notes, zuvor sei ein Befehl pro Job gesendet worden. Der Diff zeigt zuvor einen Aufruf von `this.add` pro Job, aber nicht, wie viele Befehle dieser Aufruf sendet; allein der PR-Text belegt die Aussage nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Security-Notiz zu #358 kündigt Details in einem späteren separaten Advisory an. Die Quellen belegen diese Ankündigung nicht.\"\n    }\n  ],\n  \"reason\": \"Die wesentlichen nutzerrelevanten Änderungen sind erfasst, und der Major-Sprung auf 4.0.0 passt zu den Breaking Changes. Vier Aussagen gehen jedoch über das hinaus, was die gezeigten Diffs und Quellen belegen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26924,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 498,
+    "reasoning_output_tokens": 114
+   }
+  }
+ ]
+}

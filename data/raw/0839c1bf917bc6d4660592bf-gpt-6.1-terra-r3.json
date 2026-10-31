@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "0839c1bf917bc6d4660592bf",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4452,
+ "text": "{\"reason\":\"Beide Fassungen nennen dieselben Änderungen, denselben Migrationsschritt und dieselbe Major-Version. Die Unterschiede betreffen nur die Formulierung; anhand des vorliegenden Materials ist keine Fassung sachlich besser belegt oder brauchbarer.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen nennen dieselben Änderungen, denselben Migrationsschritt und dieselbe Major-Version. Die Unterschiede betreffen nur die Formulierung; anhand des vorliegenden Materials ist keine Fassung sachlich besser belegt oder brauchbarer.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24546,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 66,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-ab3b-7690-89ac-c091fda3819e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen nennen dieselben Änderungen, denselben Migrationsschritt und dieselbe Major-Version. Die Unterschiede betreffen nur die Formulierung; anhand des vorliegenden Materials ist keine Fassung sachlich besser belegt oder brauchbarer.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24546,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 66,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

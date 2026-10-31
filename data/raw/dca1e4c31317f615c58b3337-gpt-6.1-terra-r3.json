@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "dca1e4c31317f615c58b3337",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "missing-breaking",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5003,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die Entfernung von `queue.clean()` und der Joboption `timeout` fehlt unter „Breaking Changes“.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migrationsschritte für die entfernten APIs fehlen: `queue.purge({ status, olderThanMs })` aufrufen und `timeoutMs` setzen.\"}],\"reason\":\"Der Kandidat lässt zwei entfernte öffentliche APIs und die zugehörigen Migrationsschritte aus. Nutzer können deshalb nicht erkennen, welche Anpassungen beim Upgrade erforderlich sind.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "Die Entfernung von `queue.clean()` und der Joboption `timeout` fehlt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migrationsschritte für die entfernten APIs fehlen: `queue.purge({ status, olderThanMs })` aufrufen und `timeoutMs` setzen."
+   }
+  ],
+  "reason": "Der Kandidat lässt zwei entfernte öffentliche APIs und die zugehörigen Migrationsschritte aus. Nutzer können deshalb nicht erkennen, welche Anpassungen beim Upgrade erforderlich sind.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25626,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 128,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-3bf1-7a22-b9de-5fe52c450f6c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die Entfernung von `queue.clean()` und der Joboption `timeout` fehlt unter „Breaking Changes“.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migrationsschritte für die entfernten APIs fehlen: `queue.purge({ status, olderThanMs })` aufrufen und `timeoutMs` setzen.\"}],\"reason\":\"Der Kandidat lässt zwei entfernte öffentliche APIs und die zugehörigen Migrationsschritte aus. Nutzer können deshalb nicht erkennen, welche Anpassungen beim Upgrade erforderlich sind.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25626,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 128,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

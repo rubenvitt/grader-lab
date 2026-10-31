@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "564d94e7fa9a9f58ac68b0d8",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "missing-breaking",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5381,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #351 benennt die öffentliche Worker-Option `stalledIntervalMs` in `stallCheckMs` um. Diese notwendige Konfigurationsänderung fehlt unter „Breaking Changes“ und in den Notes.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes versprechen, Cron-Jobs würden beim Wechsel der Uhrzeit nicht mehr doppelt ausgelöst. Der Diff in PR #357 setzt für `cron.next` die Zeitzone auf UTC, belegt aber nicht, dass doppelte Ausführungen bei jeder Zeitumstellung ausgeschlossen sind.\"}],\"reason\":\"Der Major-Sprung auf 4.0.0 passt zu den Breaking Changes. Die Notes lassen jedoch eine öffentliche Umbenennung aus und formulieren für den Scheduler eine Garantie, die der Diff nicht belegt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #351 benennt die öffentliche Worker-Option `stalledIntervalMs` in `stallCheckMs` um. Diese notwendige Konfigurationsänderung fehlt unter „Breaking Changes“ und in den Notes."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes versprechen, Cron-Jobs würden beim Wechsel der Uhrzeit nicht mehr doppelt ausgelöst. Der Diff in PR #357 setzt für `cron.next` die Zeitzone auf UTC, belegt aber nicht, dass doppelte Ausführungen bei jeder Zeitumstellung ausgeschlossen sind."
+   }
+  ],
+  "reason": "Der Major-Sprung auf 4.0.0 passt zu den Breaking Changes. Die Notes lassen jedoch eine öffentliche Umbenennung aus und formulieren für den Scheduler eine Garantie, die der Diff nicht belegt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26864,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 185,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-3440-72e1-8f8a-170f76f72bed"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #351 benennt die öffentliche Worker-Option `stalledIntervalMs` in `stallCheckMs` um. Diese notwendige Konfigurationsänderung fehlt unter „Breaking Changes“ und in den Notes.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes versprechen, Cron-Jobs würden beim Wechsel der Uhrzeit nicht mehr doppelt ausgelöst. Der Diff in PR #357 setzt für `cron.next` die Zeitzone auf UTC, belegt aber nicht, dass doppelte Ausführungen bei jeder Zeitumstellung ausgeschlossen sind.\"}],\"reason\":\"Der Major-Sprung auf 4.0.0 passt zu den Breaking Changes. Die Notes lassen jedoch eine öffentliche Umbenennung aus und formulieren für den Scheduler eine Garantie, die der Diff nicht belegt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26864,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 185,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

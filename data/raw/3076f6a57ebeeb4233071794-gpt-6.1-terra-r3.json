@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "3076f6a57ebeeb4233071794",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reverted-listed",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6049,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Der Feature-Eintrag nennt `limiter: { max, durationMs }`. Der endgültige Diff von PR #376 definiert stattdessen `limiter: { max, perMs }`; mit `durationMs` entspricht die Konfiguration nicht der öffentlichen Option.\"},{\"criterion\":\"R4\",\"evidence\":\"Der Feature-Eintrag verweist auf PR #371 und verwendet deren Option `durationMs`. PR #373 nimmt diese Fassung zurück; der Reland in PR #376 verwendet `perMs`.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage, der Worker verarbeite höchstens `max` Jobs pro `durationMs` Millisekunden, ist durch den endgültigen Diff nicht belegt. Dieser zeigt einen Token-Bucket mit `max` und `perMs`, aber nicht dessen Implementierung oder eine solche Garantie.\"}],\"reason\":\"Der Rate-Limiter ist in den Notes anhand der zurückgenommenen Fassung beschrieben; sein endgültiger Optionsname und die behauptete Verarbeitungsgrenze stimmen nicht mit der Quellenlage überein. Die Deprecation und die Versionsnummer 4.1.0 passen zu den Quellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Der Feature-Eintrag nennt `limiter: { max, durationMs }`. Der endgültige Diff von PR #376 definiert stattdessen `limiter: { max, perMs }`; mit `durationMs` entspricht die Konfiguration nicht der öffentlichen Option."
+   },
+   {
+    "criterion": "R4",
+    "evidence": "Der Feature-Eintrag verweist auf PR #371 und verwendet deren Option `durationMs`. PR #373 nimmt diese Fassung zurück; der Reland in PR #376 verwendet `perMs`."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage, der Worker verarbeite höchstens `max` Jobs pro `durationMs` Millisekunden, ist durch den endgültigen Diff nicht belegt. Dieser zeigt einen Token-Bucket mit `max` und `perMs`, aber nicht dessen Implementierung oder eine solche Garantie."
+   }
+  ],
+  "reason": "Der Rate-Limiter ist in den Notes anhand der zurückgenommenen Fassung beschrieben; sein endgültiger Optionsname und die behauptete Verarbeitungsgrenze stimmen nicht mit der Quellenlage überein. Die Deprecation und die Versionsnummer 4.1.0 passen zu den Quellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25453,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 263,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-b3e3-77e2-9849-e0daeea36757"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Der Feature-Eintrag nennt `limiter: { max, durationMs }`. Der endgültige Diff von PR #376 definiert stattdessen `limiter: { max, perMs }`; mit `durationMs` entspricht die Konfiguration nicht der öffentlichen Option.\"},{\"criterion\":\"R4\",\"evidence\":\"Der Feature-Eintrag verweist auf PR #371 und verwendet deren Option `durationMs`. PR #373 nimmt diese Fassung zurück; der Reland in PR #376 verwendet `perMs`.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage, der Worker verarbeite höchstens `max` Jobs pro `durationMs` Millisekunden, ist durch den endgültigen Diff nicht belegt. Dieser zeigt einen Token-Bucket mit `max` und `perMs`, aber nicht dessen Implementierung oder eine solche Garantie.\"}],\"reason\":\"Der Rate-Limiter ist in den Notes anhand der zurückgenommenen Fassung beschrieben; sein endgültiger Optionsname und die behauptete Verarbeitungsgrenze stimmen nicht mit der Quellenlage überein. Die Deprecation und die Versionsnummer 4.1.0 passen zu den Quellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25453,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 263,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

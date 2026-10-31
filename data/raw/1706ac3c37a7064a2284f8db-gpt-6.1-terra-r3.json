@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "1706ac3c37a7064a2284f8db",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7161,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Feature-Eintrag verweist auf PR #319. Die Änderung für `quaykit inspect --json` steht in den Quellen unter PR #318.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, abgeschlossene Jobs könnten ohne die genannte Konfiguration nicht mehr aus der Queue abgerufen werden. Der Diff von PR #307 belegt die Änderung des Defaults von `removeOnComplete`, zeigt aber weder das Abrufverhalten noch die behauptete Garantie.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, ein Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. PR #304 belegt die Freigabe des Locks im `finally`-Block, aber keine Änderung des Jobstatus.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die Änderung des Defaults und den Major-Sprung korrekt; die zurückgenommenen Lanes erscheinen nicht. Einzelne Aussagen gehen jedoch über die gezeigten Diffs hinaus, und ein PR-Verweis ist falsch.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Feature-Eintrag verweist auf PR #319. Die Änderung für `quaykit inspect --json` steht in den Quellen unter PR #318."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, abgeschlossene Jobs könnten ohne die genannte Konfiguration nicht mehr aus der Queue abgerufen werden. Der Diff von PR #307 belegt die Änderung des Defaults von `removeOnComplete`, zeigt aber weder das Abrufverhalten noch die behauptete Garantie."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, ein Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. PR #304 belegt die Freigabe des Locks im `finally`-Block, aber keine Änderung des Jobstatus."
+   }
+  ],
+  "reason": "Die Notes erfassen die Änderung des Defaults und den Major-Sprung korrekt; die zurückgenommenen Lanes erscheinen nicht. Einzelne Aussagen gehen jedoch über die gezeigten Diffs hinaus, und ein PR-Verweis ist falsch.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26834,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 352,
+  "reasoning_output_tokens": 80
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-bc8e-7441-adfb-dd83031de140"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Feature-Eintrag verweist auf PR #319. Die Änderung für `quaykit inspect --json` steht in den Quellen unter PR #318.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, abgeschlossene Jobs könnten ohne die genannte Konfiguration nicht mehr aus der Queue abgerufen werden. Der Diff von PR #307 belegt die Änderung des Defaults von `removeOnComplete`, zeigt aber weder das Abrufverhalten noch die behauptete Garantie.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, ein Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. PR #304 belegt die Freigabe des Locks im `finally`-Block, aber keine Änderung des Jobstatus.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die Änderung des Defaults und den Major-Sprung korrekt; die zurückgenommenen Lanes erscheinen nicht. Einzelne Aussagen gehen jedoch über die gezeigten Diffs hinaus, und ein PR-Verweis ist falsch.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26834,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 352,
+    "reasoning_output_tokens": 80
+   }
+  }
+ ]
+}

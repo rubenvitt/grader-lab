@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "da8e4ece87f7e6aea779e58d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "missing-breaking",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4385,
+ "text": "{\"reason\":\"Fassung A nennt zusätzlich die Umbenennung von `stalledIntervalMs` zu `stallCheckMs` als Breaking Change und gibt einen konkreten Migrationsschritt an. Fassung B lässt diese Änderung aus; allerdings liegen keine Diffs oder anderen Quellen vor, um die Angaben unabhängig zu überprüfen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A nennt zusätzlich die Umbenennung von `stalledIntervalMs` zu `stallCheckMs` als Breaking Change und gibt einen konkreten Migrationsschritt an. Fassung B lässt diese Änderung aus; allerdings liegen keine Diffs oder anderen Quellen vor, um die Angaben unabhängig zu überprüfen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25464,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 78,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-3f9c-7041-ab6d-b9b843e3b505"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A nennt zusätzlich die Umbenennung von `stalledIntervalMs` zu `stallCheckMs` als Breaking Change und gibt einen konkreten Migrationsschritt an. Fassung B lässt diese Änderung aus; allerdings liegen keine Diffs oder anderen Quellen vor, um die Angaben unabhängig zu überprüfen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25464,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 78,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

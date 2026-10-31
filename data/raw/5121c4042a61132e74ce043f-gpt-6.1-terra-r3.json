@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "5121c4042a61132e74ce043f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "hype-tone",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4321,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Der Kandidat verwendet Werbesprache und Superlative, etwa „The wait is over“, „game-changing“, „stunning“ und „Leaner than ever“.\"},{\"criterion\":\"R2\",\"evidence\":\"„flawless graceful shutdown“ behauptet eine fehlerfreie Funktion; die Referenz belegt lediglich, dass `worker.close()` nun `shutdownTimeoutMs` berücksichtigt.\"}],\"reason\":\"Die nutzerrelevanten Änderungen, Migrationsschritte und die Version stimmen mit der Referenz überein. Der Kandidat enthält jedoch eine nicht belegte Garantie und weicht deutlich vom sachlichen Ton ab.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Der Kandidat verwendet Werbesprache und Superlative, etwa „The wait is over“, „game-changing“, „stunning“ und „Leaner than ever“."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "„flawless graceful shutdown“ behauptet eine fehlerfreie Funktion; die Referenz belegt lediglich, dass `worker.close()` nun `shutdownTimeoutMs` berücksichtigt."
+   }
+  ],
+  "reason": "Die nutzerrelevanten Änderungen, Migrationsschritte und die Version stimmen mit der Referenz überein. Der Kandidat enthält jedoch eine nicht belegte Garantie und weicht deutlich vom sachlichen Ton ab.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24864,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 154,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-a216-7d73-87fd-48e5f73b99d2"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Der Kandidat verwendet Werbesprache und Superlative, etwa „The wait is over“, „game-changing“, „stunning“ und „Leaner than ever“.\"},{\"criterion\":\"R2\",\"evidence\":\"„flawless graceful shutdown“ behauptet eine fehlerfreie Funktion; die Referenz belegt lediglich, dass `worker.close()` nun `shutdownTimeoutMs` berücksichtigt.\"}],\"reason\":\"Die nutzerrelevanten Änderungen, Migrationsschritte und die Version stimmen mit der Referenz überein. Der Kandidat enthält jedoch eine nicht belegte Garantie und weicht deutlich vom sachlichen Ton ab.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24864,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 154,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

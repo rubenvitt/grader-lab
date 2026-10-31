@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "33c7c72e485648b21082a28e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reordered",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 3879,
+ "text": "{\"reason\":\"Beide Fassungen enthalten dieselben Aussagen und Migrationsschritte; nur die Reihenfolge der Abschnitte unterscheidet sich. Daraus ergibt sich nach der Rubrik kein sachlicher Vorteil.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen enthalten dieselben Aussagen und Migrationsschritte; nur die Reihenfolge der Abschnitte unterscheidet sich. Daraus ergibt sich nach der Rubrik kein sachlicher Vorteil.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25380,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 57,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-cdf4-77d3-a313-04f943b445dd"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen enthalten dieselben Aussagen und Migrationsschritte; nur die Reihenfolge der Abschnitte unterscheidet sich. Daraus ergibt sich nach der Rubrik kein sachlicher Vorteil.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25380,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 57,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

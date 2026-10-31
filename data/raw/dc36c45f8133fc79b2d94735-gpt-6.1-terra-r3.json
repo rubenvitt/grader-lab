@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "dc36c45f8133fc79b2d94735",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "internal-noise",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8327,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 lässt den Konstruktor für bisher akzeptierte Schemanamen einen Fehler auslösen, wenn sie das neue Muster nicht erfüllen. Betroffene Nutzer müssen ihre Konfiguration anpassen; ein Eintrag unter „Breaking Changes“ fehlt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, der Worker überschreibe nach einem Lock-Verlust nicht mehr den vom übernehmenden Worker gesetzten Zustand. Der Diff von #413 belegt die unterlassene `ack`-Operation und das Ereignis `lockLost`, zeigt aber nicht, welche Zustandsänderung `ack` bewirkt.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Unter „Maintenance“ nennen die Notes die Aufteilung der CI-Jobs (#417) und eine CODEOWNERS-Änderung (#419). Beide betreffen interne Abläufe und gehören nicht in nutzerorientierte Release Notes.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 5.0.1. Die durch #414 eingeführte inkompatible Einschränkung der Schemanamen erfordert nach SemVer ausgehend von 5.0.0 einen Major-Sprung.\"\n    }\n  ],\n  \"reason\": \"Die Änderung an der Schemanamenprüfung ist trotz ihres Security-Labels eine inkompatible Änderung. Außerdem enthalten die Notes eine durch den Diff nicht belegte Aussage und interne Wartungsarbeiten.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 lässt den Konstruktor für bisher akzeptierte Schemanamen einen Fehler auslösen, wenn sie das neue Muster nicht erfüllen. Betroffene Nutzer müssen ihre Konfiguration anpassen; ein Eintrag unter „Breaking Changes“ fehlt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, der Worker überschreibe nach einem Lock-Verlust nicht mehr den vom übernehmenden Worker gesetzten Zustand. Der Diff von #413 belegt die unterlassene `ack`-Operation und das Ereignis `lockLost`, zeigt aber nicht, welche Zustandsänderung `ack` bewirkt."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "Unter „Maintenance“ nennen die Notes die Aufteilung der CI-Jobs (#417) und eine CODEOWNERS-Änderung (#419). Beide betreffen interne Abläufe und gehören nicht in nutzerorientierte Release Notes."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 5.0.1. Die durch #414 eingeführte inkompatible Einschränkung der Schemanamen erfordert nach SemVer ausgehend von 5.0.0 einen Major-Sprung."
+   }
+  ],
+  "reason": "Die Änderung an der Schemanamenprüfung ist trotz ihres Security-Labels eine inkompatible Änderung. Außerdem enthalten die Notes eine durch den Diff nicht belegte Aussage und interne Wartungsarbeiten.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26338,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 482,
+  "reasoning_output_tokens": 132
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-a564-7462-9ce3-7db0f2db5fc4"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 lässt den Konstruktor für bisher akzeptierte Schemanamen einen Fehler auslösen, wenn sie das neue Muster nicht erfüllen. Betroffene Nutzer müssen ihre Konfiguration anpassen; ein Eintrag unter „Breaking Changes“ fehlt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, der Worker überschreibe nach einem Lock-Verlust nicht mehr den vom übernehmenden Worker gesetzten Zustand. Der Diff von #413 belegt die unterlassene `ack`-Operation und das Ereignis `lockLost`, zeigt aber nicht, welche Zustandsänderung `ack` bewirkt.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Unter „Maintenance“ nennen die Notes die Aufteilung der CI-Jobs (#417) und eine CODEOWNERS-Änderung (#419). Beide betreffen interne Abläufe und gehören nicht in nutzerorientierte Release Notes.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 5.0.1. Die durch #414 eingeführte inkompatible Einschränkung der Schemanamen erfordert nach SemVer ausgehend von 5.0.0 einen Major-Sprung.\"\n    }\n  ],\n  \"reason\": \"Die Änderung an der Schemanamenprüfung ist trotz ihres Security-Labels eine inkompatible Änderung. Außerdem enthalten die Notes eine durch den Diff nicht belegte Aussage und interne Wartungsarbeiten.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26338,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 482,
+    "reasoning_output_tokens": 132
+   }
+  }
+ ]
+}

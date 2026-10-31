@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "dea8872715ba9ac324c354ae",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "internal-noise",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6142,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration ersetzt `queue.clean(graceMs, status)` durch `queue.purge({ status, olderThanMs })`, ohne `graceMs` auf `olderThanMs` abzubilden. Der Diff verwendet `queue.purge({ status, olderThanMs: graceMs })`; andernfalls ist `olderThanMs` möglicherweise nicht definiert oder erhält einen anderen Wert.\"},{\"criterion\":\"R6\",\"evidence\":\"Die Fixes nennen den stabilisierten Test aus PR #343 und die auf Commit-SHAs festgelegten GitHub Actions aus PR #340. Beide Änderungen betreffen interne Tests beziehungsweise CI und sind für Nutzer der Bibliothek nicht relevant.\"}],\"reason\":\"Die Notes geben die wesentlichen Nutzeränderungen und den Sicherheitsfix unter Einhaltung des Embargos wieder. Die Migration bildet jedoch den bisherigen Parameter nicht korrekt ab, und zwei Einträge betreffen interne Arbeiten.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration ersetzt `queue.clean(graceMs, status)` durch `queue.purge({ status, olderThanMs })`, ohne `graceMs` auf `olderThanMs` abzubilden. Der Diff verwendet `queue.purge({ status, olderThanMs: graceMs })`; andernfalls ist `olderThanMs` möglicherweise nicht definiert oder erhält einen anderen Wert."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "Die Fixes nennen den stabilisierten Test aus PR #343 und die auf Commit-SHAs festgelegten GitHub Actions aus PR #340. Beide Änderungen betreffen interne Tests beziehungsweise CI und sind für Nutzer der Bibliothek nicht relevant."
+   }
+  ],
+  "reason": "Die Notes geben die wesentlichen Nutzeränderungen und den Sicherheitsfix unter Einhaltung des Embargos wieder. Die Migration bildet jedoch den bisherigen Parameter nicht korrekt ab, und zwei Einträge betreffen interne Arbeiten.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26604,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 279,
+  "reasoning_output_tokens": 71
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-d7da-7111-896c-54a9ad3d5990"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration ersetzt `queue.clean(graceMs, status)` durch `queue.purge({ status, olderThanMs })`, ohne `graceMs` auf `olderThanMs` abzubilden. Der Diff verwendet `queue.purge({ status, olderThanMs: graceMs })`; andernfalls ist `olderThanMs` möglicherweise nicht definiert oder erhält einen anderen Wert.\"},{\"criterion\":\"R6\",\"evidence\":\"Die Fixes nennen den stabilisierten Test aus PR #343 und die auf Commit-SHAs festgelegten GitHub Actions aus PR #340. Beide Änderungen betreffen interne Tests beziehungsweise CI und sind für Nutzer der Bibliothek nicht relevant.\"}],\"reason\":\"Die Notes geben die wesentlichen Nutzeränderungen und den Sicherheitsfix unter Einhaltung des Embargos wieder. Die Migration bildet jedoch den bisherigen Parameter nicht korrekt ab, und zwei Einträge betreffen interne Arbeiten.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26604,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 279,
+    "reasoning_output_tokens": 71
+   }
+  }
+ ]
+}

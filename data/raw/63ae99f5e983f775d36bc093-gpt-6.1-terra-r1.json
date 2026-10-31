@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "63ae99f5e983f775d36bc093",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "invented-claim",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8375,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #334 behauptet, Worker behielten ihre Locks bei Redis-Failovern und die Erneuerung verbinde sich automatisch erneut. Der Diff zeigt nur einen erneuten Aufruf von `pexpire` bei `ECONNRESET`; er belegt weder eine erneute Verbindung noch den Erhalt des Locks.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung spricht von einem erneuten Versuch nach einer unterbrochenen Verbindung. Der Diff zu #334 behandelt ausschließlich Fehler mit dem Code `ECONNRESET`, nicht nachweislich jeden Verbindungsabbruch.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` übernimmt `graceMs` nicht. Wie der Diff zeigt, muss der entsprechende Aufruf `queue.purge({ status, olderThanMs: graceMs })` lauten.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Sicherheitseintrag nennt nur ein allgemeines Sicherheitsproblem. Die Quelle #336 zeigt, dass die Signaturprüfung betroffen ist; diese Komponente darf gemäß R5 genannt werden und würde den Eintrag nutzbar machen, ohne Details preiszugeben.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten unbelegte Aussagen zur Lock-Erneuerung und einen unvollständigen Migrationsaufruf. Außerdem bleibt der Sicherheitseintrag zu allgemein, obwohl die betroffene Komponente genannt werden darf.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #334 behauptet, Worker behielten ihre Locks bei Redis-Failovern und die Erneuerung verbinde sich automatisch erneut. Der Diff zeigt nur einen erneuten Aufruf von `pexpire` bei `ECONNRESET`; er belegt weder eine erneute Verbindung noch den Erhalt des Locks."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung spricht von einem erneuten Versuch nach einer unterbrochenen Verbindung. Der Diff zu #334 behandelt ausschließlich Fehler mit dem Code `ECONNRESET`, nicht nachweislich jeden Verbindungsabbruch."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` übernimmt `graceMs` nicht. Wie der Diff zeigt, muss der entsprechende Aufruf `queue.purge({ status, olderThanMs: graceMs })` lauten."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Sicherheitseintrag nennt nur ein allgemeines Sicherheitsproblem. Die Quelle #336 zeigt, dass die Signaturprüfung betroffen ist; diese Komponente darf gemäß R5 genannt werden und würde den Eintrag nutzbar machen, ohne Details preiszugeben."
+   }
+  ],
+  "reason": "Die Notes enthalten unbelegte Aussagen zur Lock-Erneuerung und einen unvollständigen Migrationsaufruf. Außerdem bleibt der Sicherheitseintrag zu allgemein, obwohl die betroffene Komponente genannt werden darf.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26577,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 449,
+  "reasoning_output_tokens": 77
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-2d11-7931-a086-f1357679a11b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #334 behauptet, Worker behielten ihre Locks bei Redis-Failovern und die Erneuerung verbinde sich automatisch erneut. Der Diff zeigt nur einen erneuten Aufruf von `pexpire` bei `ECONNRESET`; er belegt weder eine erneute Verbindung noch den Erhalt des Locks.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung spricht von einem erneuten Versuch nach einer unterbrochenen Verbindung. Der Diff zu #334 behandelt ausschließlich Fehler mit dem Code `ECONNRESET`, nicht nachweislich jeden Verbindungsabbruch.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` übernimmt `graceMs` nicht. Wie der Diff zeigt, muss der entsprechende Aufruf `queue.purge({ status, olderThanMs: graceMs })` lauten.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Sicherheitseintrag nennt nur ein allgemeines Sicherheitsproblem. Die Quelle #336 zeigt, dass die Signaturprüfung betroffen ist; diese Komponente darf gemäß R5 genannt werden und würde den Eintrag nutzbar machen, ohne Details preiszugeben.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten unbelegte Aussagen zur Lock-Erneuerung und einen unvollständigen Migrationsaufruf. Außerdem bleibt der Sicherheitseintrag zu allgemein, obwohl die betroffene Komponente genannt werden darf.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26577,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 449,
+    "reasoning_output_tokens": 77
+   }
+  }
+ ]
+}

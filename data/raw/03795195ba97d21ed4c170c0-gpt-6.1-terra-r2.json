@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "03795195ba97d21ed4c170c0",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 6036,
+ "text": "{\"reason\":\"Fassung B enthält dieselben konkreten Änderungen und Migrationshinweise wie A, verwendet aber einen sachlichen Ton. Fassung A verstößt durch Werbesprache gegen R7.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B enthält dieselben konkreten Änderungen und Migrationshinweise wie A, verwendet aber einen sachlichen Ton. Fassung A verstößt durch Werbesprache gegen R7.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25300,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 55,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-3f5e-7790-aec1-0f2b8e729988"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B enthält dieselben konkreten Änderungen und Migrationshinweise wie A, verwendet aber einen sachlichen Ton. Fassung A verstößt durch Werbesprache gegen R7.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25300,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 55,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "1d537d595a352453221a851e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "wrong-migration",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6297,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der Limiter verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff in PR #376 zeigt einen Token-Bucket-Aufruf, belegt aber keine solche strikte Grenze für jedes Zeitfenster.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration empfiehlt `timeoutMillis`. PR #378 führt jedoch `timeoutMs` ein und nennt diesen Namen auch in der Deprecation-Warnung.\"}],\"reason\":\"Die Versionsnummer und die übrigen Einträge passen zu den gezeigten Änderungen. Die Aussage zur Rate ist jedoch nicht hinreichend belegt, und der Migrationsschritt verwendet einen falschen Optionsnamen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, der Limiter verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff in PR #376 zeigt einen Token-Bucket-Aufruf, belegt aber keine solche strikte Grenze für jedes Zeitfenster."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration empfiehlt `timeoutMillis`. PR #378 führt jedoch `timeoutMs` ein und nennt diesen Namen auch in der Deprecation-Warnung."
+   }
+  ],
+  "reason": "Die Versionsnummer und die übrigen Einträge passen zu den gezeigten Änderungen. Die Aussage zur Rate ist jedoch nicht hinreichend belegt, und der Migrationsschritt verwendet einen falschen Optionsnamen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25461,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 230,
+  "reasoning_output_tokens": 60
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-6593-74f3-b119-1df020926f51"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der Limiter verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff in PR #376 zeigt einen Token-Bucket-Aufruf, belegt aber keine solche strikte Grenze für jedes Zeitfenster.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration empfiehlt `timeoutMillis`. PR #378 führt jedoch `timeoutMs` ein und nennt diesen Namen auch in der Deprecation-Warnung.\"}],\"reason\":\"Die Versionsnummer und die übrigen Einträge passen zu den gezeigten Änderungen. Die Aussage zur Rate ist jedoch nicht hinreichend belegt, und der Migrationsschritt verwendet einen falschen Optionsnamen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25461,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 230,
+    "reasoning_output_tokens": 60
+   }
+  }
+ ]
+}

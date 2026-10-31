@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "f6f62871f2ec54bba151879e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4819,
+ "text": "{\"reason\":\"Fassung B ist besser, weil sie die internen Änderungen an Tests und GitHub Actions weglässt. Diese Einträge in Fassung A sind für Nutzer der Bibliothek nicht relevant; ansonsten sind die Fassungen gleich.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist besser, weil sie die internen Änderungen an Tests und GitHub Actions weglässt. Diese Einträge in Fassung A sind für Nutzer der Bibliothek nicht relevant; ansonsten sind die Fassungen gleich.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25411,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 62,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-111a-7123-b422-b004eda7c537"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist besser, weil sie die internen Änderungen an Tests und GitHub Actions weglässt. Diese Einträge in Fassung A sind für Nutzer der Bibliothek nicht relevant; ansonsten sind die Fassungen gleich.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25411,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

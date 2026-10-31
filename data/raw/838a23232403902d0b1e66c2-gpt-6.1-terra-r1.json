@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "838a23232403902d0b1e66c2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "ghost-pr",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4403,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Änderungen und den Migrationsschritt konkret. Ohne Quellen lassen sich die tatsächlichen Namen und das Verhalten nicht überprüfen; die Minor-Version passt zu den genannten Features und Deprecations.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben die Änderungen und den Migrationsschritt konkret. Ohne Quellen lassen sich die tatsächlichen Namen und das Verhalten nicht überprüfen; die Minor-Version passt zu den genannten Features und Deprecations.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25195,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 62,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-e426-71f2-a38d-f9ae53cd342b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Änderungen und den Migrationsschritt konkret. Ohne Quellen lassen sich die tatsächlichen Namen und das Verhalten nicht überprüfen; die Minor-Version passt zu den genannten Features und Deprecations.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25195,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

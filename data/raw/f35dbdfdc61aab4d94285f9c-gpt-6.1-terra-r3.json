@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "f35dbdfdc61aab4d94285f9c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "useless-true",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5095,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„New worker event“ nennt weder den Namen des Ereignisses noch seinen konkreten Zweck.\"},{\"criterion\":\"R8\",\"evidence\":\"„Stability work on the Redis store“ beschreibt nicht, welches Verhalten sich geändert hat.\"},{\"criterion\":\"R8\",\"evidence\":\"„An older queue method is being phased out“ nennt weder die betroffene Methode noch eine mögliche Alternative oder einen erforderlichen Schritt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security update“ nennt keine betroffene Komponente und keine Upgrade-Empfehlung.\"}],\"reason\":\"Mehrere Einträge sind zu allgemein, um die Änderung oder einen möglichen Handlungsbedarf zu erkennen. Ob die Aussagen durch Quellen gedeckt sind und die Version zum vollständigen Inhalt passt, lässt sich anhand der Notes nicht prüfen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„New worker event“ nennt weder den Namen des Ereignisses noch seinen konkreten Zweck."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Stability work on the Redis store“ beschreibt nicht, welches Verhalten sich geändert hat."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„An older queue method is being phased out“ nennt weder die betroffene Methode noch eine mögliche Alternative oder einen erforderlichen Schritt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Security update“ nennt keine betroffene Komponente und keine Upgrade-Empfehlung."
+   }
+  ],
+  "reason": "Mehrere Einträge sind zu allgemein, um die Änderung oder einen möglichen Handlungsbedarf zu erkennen. Ob die Aussagen durch Quellen gedeckt sind und die Version zum vollständigen Inhalt passt, lässt sich anhand der Notes nicht prüfen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25149,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 183,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-7729-7bb0-ad84-5251b4608a17"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„New worker event“ nennt weder den Namen des Ereignisses noch seinen konkreten Zweck.\"},{\"criterion\":\"R8\",\"evidence\":\"„Stability work on the Redis store“ beschreibt nicht, welches Verhalten sich geändert hat.\"},{\"criterion\":\"R8\",\"evidence\":\"„An older queue method is being phased out“ nennt weder die betroffene Methode noch eine mögliche Alternative oder einen erforderlichen Schritt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security update“ nennt keine betroffene Komponente und keine Upgrade-Empfehlung.\"}],\"reason\":\"Mehrere Einträge sind zu allgemein, um die Änderung oder einen möglichen Handlungsbedarf zu erkennen. Ob die Aussagen durch Quellen gedeckt sind und die Version zum vollständigen Inhalt passt, lässt sich anhand der Notes nicht prüfen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25149,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 183,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "317ca9bd848396657e9e70dc",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "missing-breaking",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5998,
+ "text": "{\"reason\":\"Fassung B nennt zusätzlich eine umbenannte Worker-Option als Breaking Change; Fassung A erwähnt sie nicht. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, ob diese Änderung tatsächlich im Release enthalten ist und ob B damit besser ist.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung B nennt zusätzlich eine umbenannte Worker-Option als Breaking Change; Fassung A erwähnt sie nicht. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, ob diese Änderung tatsächlich im Release enthalten ist und ob B damit besser ist.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25464,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 158,
+  "reasoning_output_tokens": 90
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-4433-7380-b100-ce3b12ebdc7c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt zusätzlich eine umbenannte Worker-Option als Breaking Change; Fassung A erwähnt sie nicht. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, ob diese Änderung tatsächlich im Release enthalten ist und ob B damit besser ist.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25464,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 158,
+    "reasoning_output_tokens": 90
+   }
+  }
+ ]
+}

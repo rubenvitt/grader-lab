@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "1706ac3c37a7064a2284f8db",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7552,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu `quaykit inspect --json` verweist auf #319. Die belegende Änderung steht in PR #318; eine PR #319 ist in den Quellen nicht enthalten.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Fix-Eintrag zu #304 behauptet, dass der Job nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks in `active` bleibt. Der Diff belegt das Freigeben des Locks im `finally`-Block, zeigt aber keine Änderung des Job-Status.\"}],\"reason\":\"Die Notes geben die verbleibenden nutzerrelevanten Änderungen und die Migration für den geänderten Default wieder. Zwei Aussagen beziehungsweise Quellenverweise sind jedoch nicht durch die vorgelegten Quellen gedeckt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu `quaykit inspect --json` verweist auf #319. Die belegende Änderung steht in PR #318; eine PR #319 ist in den Quellen nicht enthalten."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Fix-Eintrag zu #304 behauptet, dass der Job nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks in `active` bleibt. Der Diff belegt das Freigeben des Locks im `finally`-Block, zeigt aber keine Änderung des Job-Status."
+   }
+  ],
+  "reason": "Die Notes geben die verbleibenden nutzerrelevanten Änderungen und die Migration für den geänderten Default wieder. Zwei Aussagen beziehungsweise Quellenverweise sind jedoch nicht durch die vorgelegten Quellen gedeckt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25986,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 256,
+  "reasoning_output_tokens": 75
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-9b71-7bb3-a255-2f0a7da18d92"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu `quaykit inspect --json` verweist auf #319. Die belegende Änderung steht in PR #318; eine PR #319 ist in den Quellen nicht enthalten.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Fix-Eintrag zu #304 behauptet, dass der Job nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks in `active` bleibt. Der Diff belegt das Freigeben des Locks im `finally`-Block, zeigt aber keine Änderung des Job-Status.\"}],\"reason\":\"Die Notes geben die verbleibenden nutzerrelevanten Änderungen und die Migration für den geänderten Default wieder. Zwei Aussagen beziehungsweise Quellenverweise sind jedoch nicht durch die vorgelegten Quellen gedeckt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25986,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 256,
+    "reasoning_output_tokens": 75
+   }
+  }
+ ]
+}

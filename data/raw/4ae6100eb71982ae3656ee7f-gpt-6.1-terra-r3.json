@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "4ae6100eb71982ae3656ee7f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "false-success",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 6325,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Änderungen und den Migrationsschritt konkret und sachlich. Aus dem Text selbst ergeben sich keine Verstöße; ohne Quellen nicht prüfbare Punkte gelten als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben die Änderungen und den Migrationsschritt konkret und sachlich. Aus dem Text selbst ergeben sich keine Verstöße; ohne Quellen nicht prüfbare Punkte gelten als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25257,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 59,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-7039-7c02-993f-ef6641f7cd26"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Änderungen und den Migrationsschritt konkret und sachlich. Aus dem Text selbst ergeben sich keine Verstöße; ohne Quellen nicht prüfbare Punkte gelten als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25257,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

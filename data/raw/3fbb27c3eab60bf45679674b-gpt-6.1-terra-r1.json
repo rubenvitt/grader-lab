@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "3fbb27c3eab60bf45679674b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "invented-claim",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5359,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat behauptet, das Limit werde von allen Workern einer Queue gemeinsam genutzt. Laut Referenz hat jede Worker-Instanz ein eigenes Limit.\"}],\"reason\":\"Die Beschreibung des Rate-Limiters widerspricht der Referenz in einem wesentlichen Punkt. Die übrigen Angaben stimmen überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Kandidat behauptet, das Limit werde von allen Workern einer Queue gemeinsam genutzt. Laut Referenz hat jede Worker-Instanz ein eigenes Limit."
+   }
+  ],
+  "reason": "Die Beschreibung des Rate-Limiters widerspricht der Referenz in einem wesentlichen Punkt. Die übrigen Angaben stimmen überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25370,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 89,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-08d6-7270-a5bd-4d674ee9c5a3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat behauptet, das Limit werde von allen Workern einer Queue gemeinsam genutzt. Laut Referenz hat jede Worker-Instanz ein eigenes Limit.\"}],\"reason\":\"Die Beschreibung des Rate-Limiters widerspricht der Referenz in einem wesentlichen Punkt. Die übrigen Angaben stimmen überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25370,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 89,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

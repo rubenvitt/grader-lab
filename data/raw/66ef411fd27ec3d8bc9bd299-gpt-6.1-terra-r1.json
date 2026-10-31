@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "66ef411fd27ec3d8bc9bd299",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "hype-tone",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4664,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"„Small release, massive peace of mind!“, „crushes“ und „Unbreakable job state“ verwenden Werbesprache und eine unbelegte absolute Aussage.\"}],\"reason\":\"Die Notes enthalten werbliche und übersteigerte Formulierungen. Weitere Verstöße lassen sich ohne Quellen nicht feststellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "„Small release, massive peace of mind!“, „crushes“ und „Unbreakable job state“ verwenden Werbesprache und eine unbelegte absolute Aussage."
+   }
+  ],
+  "reason": "Die Notes enthalten werbliche und übersteigerte Formulierungen. Weitere Verstöße lassen sich ohne Quellen nicht feststellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25202,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 88,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-ba47-7a53-a9d9-c4e033003356"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"„Small release, massive peace of mind!“, „crushes“ und „Unbreakable job state“ verwenden Werbesprache und eine unbelegte absolute Aussage.\"}],\"reason\":\"Die Notes enthalten werbliche und übersteigerte Formulierungen. Weitere Verstöße lassen sich ohne Quellen nicht feststellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25202,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 88,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

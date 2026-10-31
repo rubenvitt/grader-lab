@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "26497db867fa27e9f08e8a27",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "missing-breaking",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 6520,
+ "text": "{\"reason\":\"Fassung B nennt die geänderte Standardeinstellung als Breaking Change und beschreibt einen konkreten Migrationsschritt; Fassung A lässt beides aus. Ob die Angaben durch den Diff gedeckt sind und der Migrationsschritt funktioniert, lässt sich ohne die Quellen nicht prüfen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B nennt die geänderte Standardeinstellung als Breaking Change und beschreibt einen konkreten Migrationsschritt; Fassung A lässt beides aus. Ob die Angaben durch den Diff gedeckt sind und der Migrationsschritt funktioniert, lässt sich ohne die Quellen nicht prüfen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25297,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 197,
+  "reasoning_output_tokens": 121
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-64d2-7472-be7f-23ae7c7496d3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt die geänderte Standardeinstellung als Breaking Change und beschreibt einen konkreten Migrationsschritt; Fassung A lässt beides aus. Ob die Angaben durch den Diff gedeckt sind und der Migrationsschritt funktioniert, lässt sich ohne die Quellen nicht prüfen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25297,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 197,
+    "reasoning_output_tokens": 121
+   }
+  }
+ ]
+}

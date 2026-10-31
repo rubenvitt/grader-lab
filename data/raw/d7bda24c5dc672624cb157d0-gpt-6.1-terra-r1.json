@@ -1,0 +1,79 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d7bda24c5dc672624cb157d0",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7214,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„Store construction changed“ nennt weder RedisStore noch die erforderliche Option connection. Laut Diff #391 muss connection beim Erstellen angegeben werden.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„Old APIs were removed“ benennt die entfernten APIs und ihre Nachfolger nicht. Diff #393 entfernt Queue.clean und JobOptions.timeout; die im Diff genannten Alternativen sind Queue.purge und timeoutMs.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„More retry options“ beschreibt die neue Option nicht. Diff #395 ergänzt die Backoff-Strategie jitter mit baseMs.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„Shutdown behaviour improved“ erklärt nicht, was sich für worker.close() ändert. Diff #397 begrenzt das Warten auf aktive Jobs durch shutdownTimeoutMs.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„CLI improvements“ nennt die Verhaltensänderung nicht. Laut Diff #401 endet die CLI bei einem von main() abgefangenen Fehler mit Exit-Code 1.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„A worker argument is deprecated“ benennt weder das Argument noch den Ersatz. Diff #399 markiert das boolesche Argument von worker.pause() als veraltet und nennt worker.pause({ drain }) als Alternative.\"\n    }\n  ],\n  \"reason\": \"Die Notes ordnen die Breaking Changes richtig ein und verwenden mit 5.0.0 eine passende Major-Version. Die einzelnen Einträge sind jedoch zu allgemein, um die Änderungen und notwendige Anpassungen zu erkennen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Store construction changed“ nennt weder RedisStore noch die erforderliche Option connection. Laut Diff #391 muss connection beim Erstellen angegeben werden."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Old APIs were removed“ benennt die entfernten APIs und ihre Nachfolger nicht. Diff #393 entfernt Queue.clean und JobOptions.timeout; die im Diff genannten Alternativen sind Queue.purge und timeoutMs."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„More retry options“ beschreibt die neue Option nicht. Diff #395 ergänzt die Backoff-Strategie jitter mit baseMs."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Shutdown behaviour improved“ erklärt nicht, was sich für worker.close() ändert. Diff #397 begrenzt das Warten auf aktive Jobs durch shutdownTimeoutMs."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„CLI improvements“ nennt die Verhaltensänderung nicht. Laut Diff #401 endet die CLI bei einem von main() abgefangenen Fehler mit Exit-Code 1."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„A worker argument is deprecated“ benennt weder das Argument noch den Ersatz. Diff #399 markiert das boolesche Argument von worker.pause() als veraltet und nennt worker.pause({ drain }) als Alternative."
+   }
+  ],
+  "reason": "Die Notes ordnen die Breaking Changes richtig ein und verwenden mit 5.0.0 eine passende Major-Version. Die einzelnen Einträge sind jedoch zu allgemein, um die Änderungen und notwendige Anpassungen zu erkennen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26746,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 448,
+  "reasoning_output_tokens": 55
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-b8df-7433-bc1a-afec2af93f34"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„Store construction changed“ nennt weder RedisStore noch die erforderliche Option connection. Laut Diff #391 muss connection beim Erstellen angegeben werden.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„Old APIs were removed“ benennt die entfernten APIs und ihre Nachfolger nicht. Diff #393 entfernt Queue.clean und JobOptions.timeout; die im Diff genannten Alternativen sind Queue.purge und timeoutMs.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„More retry options“ beschreibt die neue Option nicht. Diff #395 ergänzt die Backoff-Strategie jitter mit baseMs.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„Shutdown behaviour improved“ erklärt nicht, was sich für worker.close() ändert. Diff #397 begrenzt das Warten auf aktive Jobs durch shutdownTimeoutMs.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„CLI improvements“ nennt die Verhaltensänderung nicht. Laut Diff #401 endet die CLI bei einem von main() abgefangenen Fehler mit Exit-Code 1.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„A worker argument is deprecated“ benennt weder das Argument noch den Ersatz. Diff #399 markiert das boolesche Argument von worker.pause() als veraltet und nennt worker.pause({ drain }) als Alternative.\"\n    }\n  ],\n  \"reason\": \"Die Notes ordnen die Breaking Changes richtig ein und verwenden mit 5.0.0 eine passende Major-Version. Die einzelnen Einträge sind jedoch zu allgemein, um die Änderungen und notwendige Anpassungen zu erkennen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26746,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 448,
+    "reasoning_output_tokens": 55
+   }
+  }
+ ]
+}

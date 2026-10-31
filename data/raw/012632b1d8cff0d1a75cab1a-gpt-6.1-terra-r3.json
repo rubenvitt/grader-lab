@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "012632b1d8cff0d1a75cab1a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5006,
+ "text": "{\"reason\":\"Die Fassungen enthalten dieselben Änderungen, Migrationshinweise und Sicherheitshinweise. Ihre Unterschiede beschränken sich auf die Formulierung; anhand des vorliegenden Materials ist keine in der Sache besser.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen enthalten dieselben Änderungen, Migrationshinweise und Sicherheitshinweise. Ihre Unterschiede beschränken sich auf die Formulierung; anhand des vorliegenden Materials ist keine in der Sache besser.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25540,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 58,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-99eb-71e1-bd82-69cc0c009c39"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen enthalten dieselben Änderungen, Migrationshinweise und Sicherheitshinweise. Ihre Unterschiede beschränken sich auf die Formulierung; anhand des vorliegenden Materials ist keine in der Sache besser.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25540,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 58,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

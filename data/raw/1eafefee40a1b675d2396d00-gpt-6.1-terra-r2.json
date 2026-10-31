@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "1eafefee40a1b675d2396d00",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4062,
+ "text": "{\"reason\":\"Fassung A vermittelt dieselben konkreten Änderungen sachlich. Fassung B verwendet Werbesprache und behauptet mit „Unbreakable job state“ eine nicht belegte Garantie.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A vermittelt dieselben konkreten Änderungen sachlich. Fassung B verwendet Werbesprache und behauptet mit „Unbreakable job state“ eine nicht belegte Garantie.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24407,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 53,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-cc7f-75a1-89cd-23adc140ecff"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A vermittelt dieselben konkreten Änderungen sachlich. Fassung B verwendet Werbesprache und behauptet mit „Unbreakable job state“ eine nicht belegte Garantie.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24407,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "a80eb328568efbc65efab28d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5980,
+ "text": "{\"reason\":\"A beschreibt den Fix konkret als einmaligen Wiederholungsversuch nach `ECONNRESET`. B behauptet dagegen, dass Worker ihre Locks bei Redis-Failovern behalten; diese weitergehende Zusicherung lässt sich ohne Diff nicht belegen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "A beschreibt den Fix konkret als einmaligen Wiederholungsversuch nach `ECONNRESET`. B behauptet dagegen, dass Worker ihre Locks bei Redis-Failovern behalten; diese weitergehende Zusicherung lässt sich ohne Diff nicht belegen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24536,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 151,
+  "reasoning_output_tokens": 82
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-4c2e-7880-a618-98d98c4fcb7e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"A beschreibt den Fix konkret als einmaligen Wiederholungsversuch nach `ECONNRESET`. B behauptet dagegen, dass Worker ihre Locks bei Redis-Failovern behalten; diese weitergehende Zusicherung lässt sich ohne Diff nicht belegen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24536,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 151,
+    "reasoning_output_tokens": 82
+   }
+  }
+ ]
+}

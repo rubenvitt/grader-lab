@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "3ead37b3b528553e0a7918f1",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8818,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage, `stalledIntervalMs` werde „silently ignored“, ist durch PR #351 nicht belegt. Der Diff zeigt die Umbenennung der öffentlichen Option und ihrer Verwendung, aber nicht, wie unbekannte Optionen zur Laufzeit behandelt werden.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage, `PostgresStore` betreibe eine Queue auf Postgres, geht über den Diff von PR #355 hinaus. Gezeigt werden der Export und eine `next`-Methode zum Abrufen eines Jobs; eine vollständige Queue-Implementierung ist daraus nicht ersichtlich.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Garantie, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgelöst, ist durch PR #357 nicht belegt. Der Diff übergibt `tz: 'UTC'` an `cron.next`, zeigt aber keinen Nachweis für alle Zeitumstellungen.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Für `addBulk` ist die frühere Anzahl von einem Befehl pro Job nicht durch den Diff von PR #360 belegt: Dieser zeigt zuvor einen Aufruf von `this.add` pro Job, aber nicht dessen interne Befehle.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Ankündigung „details will follow in a separate advisory“ ist nicht durch die Quellen gedeckt. PR #358 nennt zwar eine Advisory-Kennung, belegt aber keine spätere Veröffentlichung von Details.\"\n    }\n  ],\n  \"reason\": \"Die Notes decken die erkennbaren nutzerrelevanten Änderungen ab und ordnen die Breaking Changes sowie die Major-Version passend ein. Mehrere Aussagen gehen jedoch über das hinaus, was die Diffs und übrigen Quellen belegen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage, `stalledIntervalMs` werde „silently ignored“, ist durch PR #351 nicht belegt. Der Diff zeigt die Umbenennung der öffentlichen Option und ihrer Verwendung, aber nicht, wie unbekannte Optionen zur Laufzeit behandelt werden."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage, `PostgresStore` betreibe eine Queue auf Postgres, geht über den Diff von PR #355 hinaus. Gezeigt werden der Export und eine `next`-Methode zum Abrufen eines Jobs; eine vollständige Queue-Implementierung ist daraus nicht ersichtlich."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Garantie, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgelöst, ist durch PR #357 nicht belegt. Der Diff übergibt `tz: 'UTC'` an `cron.next`, zeigt aber keinen Nachweis für alle Zeitumstellungen."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Für `addBulk` ist die frühere Anzahl von einem Befehl pro Job nicht durch den Diff von PR #360 belegt: Dieser zeigt zuvor einen Aufruf von `this.add` pro Job, aber nicht dessen interne Befehle."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Ankündigung „details will follow in a separate advisory“ ist nicht durch die Quellen gedeckt. PR #358 nennt zwar eine Advisory-Kennung, belegt aber keine spätere Veröffentlichung von Details."
+   }
+  ],
+  "reason": "Die Notes decken die erkennbaren nutzerrelevanten Änderungen ab und ordnen die Breaking Changes sowie die Major-Version passend ein. Mehrere Aussagen gehen jedoch über das hinaus, was die Diffs und übrigen Quellen belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26926,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 531,
+  "reasoning_output_tokens": 105
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-4d7a-78b1-9123-a5362ba2c20f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage, `stalledIntervalMs` werde „silently ignored“, ist durch PR #351 nicht belegt. Der Diff zeigt die Umbenennung der öffentlichen Option und ihrer Verwendung, aber nicht, wie unbekannte Optionen zur Laufzeit behandelt werden.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage, `PostgresStore` betreibe eine Queue auf Postgres, geht über den Diff von PR #355 hinaus. Gezeigt werden der Export und eine `next`-Methode zum Abrufen eines Jobs; eine vollständige Queue-Implementierung ist daraus nicht ersichtlich.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Garantie, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgelöst, ist durch PR #357 nicht belegt. Der Diff übergibt `tz: 'UTC'` an `cron.next`, zeigt aber keinen Nachweis für alle Zeitumstellungen.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Für `addBulk` ist die frühere Anzahl von einem Befehl pro Job nicht durch den Diff von PR #360 belegt: Dieser zeigt zuvor einen Aufruf von `this.add` pro Job, aber nicht dessen interne Befehle.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Ankündigung „details will follow in a separate advisory“ ist nicht durch die Quellen gedeckt. PR #358 nennt zwar eine Advisory-Kennung, belegt aber keine spätere Veröffentlichung von Details.\"\n    }\n  ],\n  \"reason\": \"Die Notes decken die erkennbaren nutzerrelevanten Änderungen ab und ordnen die Breaking Changes sowie die Major-Version passend ein. Mehrere Aussagen gehen jedoch über das hinaus, was die Diffs und übrigen Quellen belegen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26926,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 531,
+    "reasoning_output_tokens": 105
+   }
+  }
+ ]
+}

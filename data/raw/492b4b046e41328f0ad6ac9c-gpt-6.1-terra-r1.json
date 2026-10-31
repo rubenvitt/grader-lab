@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "492b4b046e41328f0ad6ac9c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 3959,
+ "text": "{\"reason\":\"Fassung A ist sachlich formuliert, während Fassung B mehrfach Werbesprache und unbelegte Superlative verwendet. Inhaltlich beschreiben beide dieselben Änderungen und denselben Migrationsschritt.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist sachlich formuliert, während Fassung B mehrfach Werbesprache und unbelegte Superlative verwendet. Inhaltlich beschreiben beide dieselben Änderungen und denselben Migrationsschritt.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24556,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 58,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-d53f-7521-b297-2d1a094137df"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist sachlich formuliert, während Fassung B mehrfach Werbesprache und unbelegte Superlative verwendet. Inhaltlich beschreiben beide dieselben Änderungen und denselben Migrationsschritt.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24556,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 58,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

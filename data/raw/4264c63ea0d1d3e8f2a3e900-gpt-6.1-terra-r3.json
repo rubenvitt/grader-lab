@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "4264c63ea0d1d3e8f2a3e900",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-migration",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4430,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migrationsanweisung nennt `stalledCheckMs` als neuen Optionsnamen. Der korrekte Name lautet `stallCheckMs`; die angegebene Umbenennung führt daher nicht zum Ziel.\"}],\"reason\":\"Der Kandidat stimmt ansonsten mit der Referenz überein, enthält aber einen falschen Optionsnamen im Migrationsschritt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migrationsanweisung nennt `stalledCheckMs` als neuen Optionsnamen. Der korrekte Name lautet `stallCheckMs`; die angegebene Umbenennung führt daher nicht zum Ziel."
+   }
+  ],
+  "reason": "Der Kandidat stimmt ansonsten mit der Referenz überein, enthält aber einen falschen Optionsnamen im Migrationsschritt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25634,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 98,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-2ec1-7822-9d39-6253a07bc1ae"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migrationsanweisung nennt `stalledCheckMs` als neuen Optionsnamen. Der korrekte Name lautet `stallCheckMs`; die angegebene Umbenennung führt daher nicht zum Ziel.\"}],\"reason\":\"Der Kandidat stimmt ansonsten mit der Referenz überein, enthält aber einen falschen Optionsnamen im Migrationsschritt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25634,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 98,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

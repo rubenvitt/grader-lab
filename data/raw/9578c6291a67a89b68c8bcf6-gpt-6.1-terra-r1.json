@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "9578c6291a67a89b68c8bcf6",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-bump",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7016,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, die Jitter-Strategie sorge dafür, dass Retries nicht alle gleichzeitig eintreffen. Der Diff zu #395 berechnet eine zufällige ganzzahlige Verzögerung; gleiche Werte und damit gleichzeitige Retries bleiben möglich.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für das veraltete boolesche Argument empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff zu #399 entspricht `worker.pause(false)` jedoch `worker.pause({ drain: false })`; die vorgeschlagene Migration ändert in diesem Fall das Verhalten.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 4.2.0 nach 4.1.0. Die verpflichtende `connection` für `RedisStore` (#391) und die entfernten öffentlichen Optionen und Methoden (#393) sind Breaking Changes und erfordern einen Major-Sprung.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine nicht belegte Garantie zur Jitter-Strategie und einen für `worker.pause(false)` falschen Migrationsschritt. Außerdem passt die Versionsnummer nicht zu den Breaking Changes.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, die Jitter-Strategie sorge dafür, dass Retries nicht alle gleichzeitig eintreffen. Der Diff zu #395 berechnet eine zufällige ganzzahlige Verzögerung; gleiche Werte und damit gleichzeitige Retries bleiben möglich."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für das veraltete boolesche Argument empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff zu #399 entspricht `worker.pause(false)` jedoch `worker.pause({ drain: false })`; die vorgeschlagene Migration ändert in diesem Fall das Verhalten."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 4.2.0 nach 4.1.0. Die verpflichtende `connection` für `RedisStore` (#391) und die entfernten öffentlichen Optionen und Methoden (#393) sind Breaking Changes und erfordern einen Major-Sprung."
+   }
+  ],
+  "reason": "Die Notes enthalten eine nicht belegte Garantie zur Jitter-Strategie und einen für `worker.pause(false)` falschen Migrationsschritt. Außerdem passt die Versionsnummer nicht zu den Breaking Changes.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26934,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 352,
+  "reasoning_output_tokens": 59
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-4f76-73a0-8388-51e29783a85a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, die Jitter-Strategie sorge dafür, dass Retries nicht alle gleichzeitig eintreffen. Der Diff zu #395 berechnet eine zufällige ganzzahlige Verzögerung; gleiche Werte und damit gleichzeitige Retries bleiben möglich.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für das veraltete boolesche Argument empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff zu #399 entspricht `worker.pause(false)` jedoch `worker.pause({ drain: false })`; die vorgeschlagene Migration ändert in diesem Fall das Verhalten.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 4.2.0 nach 4.1.0. Die verpflichtende `connection` für `RedisStore` (#391) und die entfernten öffentlichen Optionen und Methoden (#393) sind Breaking Changes und erfordern einen Major-Sprung.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine nicht belegte Garantie zur Jitter-Strategie und einen für `worker.pause(false)` falschen Migrationsschritt. Außerdem passt die Versionsnummer nicht zu den Breaking Changes.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26934,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 352,
+    "reasoning_output_tokens": 59
+   }
+  }
+ ]
+}

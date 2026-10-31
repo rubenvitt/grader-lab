@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "188515307ac74c432168dd37",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "hype-tone",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4731,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Werbliche und begeisterte Formulierungen wie „a powerful one“, „We are thrilled“, „game-changing“, „Bulletproof“ und „delightful“ widersprechen dem sachlichen Ton.\"}],\"reason\":\"Die Notes enthalten mehrere werbliche und begeisterte Formulierungen. Weitere Verstöße lassen sich ohne Quellen oder zusätzliche Angaben aus dem Text nicht zuverlässig feststellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Werbliche und begeisterte Formulierungen wie „a powerful one“, „We are thrilled“, „game-changing“, „Bulletproof“ und „delightful“ widersprechen dem sachlichen Ton."
+   }
+  ],
+  "reason": "Die Notes enthalten mehrere werbliche und begeisterte Formulierungen. Weitere Verstöße lassen sich ohne Quellen oder zusätzliche Angaben aus dem Text nicht zuverlässig feststellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25298,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 103,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-40c1-7931-97dd-7a6420697224"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Werbliche und begeisterte Formulierungen wie „a powerful one“, „We are thrilled“, „game-changing“, „Bulletproof“ und „delightful“ widersprechen dem sachlichen Ton.\"}],\"reason\":\"Die Notes enthalten mehrere werbliche und begeisterte Formulierungen. Weitere Verstöße lassen sich ohne Quellen oder zusätzliche Angaben aus dem Text nicht zuverlässig feststellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25298,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 103,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

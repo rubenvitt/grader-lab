@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "e3a9b71b433895cae515b0c4",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5589,
+ "text": "{\"reason\":\"Fassung A bezeichnet die Jitter-Strategie als neuen Standard, führt diese Änderung aber nicht unter „Breaking Changes“ auf. Fassung B beschreibt sie als Opt-in und vermeidet damit diesen Widerspruch; welche Beschreibung dem tatsächlichen Diff entspricht, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung A bezeichnet die Jitter-Strategie als neuen Standard, führt diese Änderung aber nicht unter „Breaking Changes“ auf. Fassung B beschreibt sie als Opt-in und vermeidet damit diesen Widerspruch; welche Beschreibung dem tatsächlichen Diff entspricht, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25572,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 133,
+  "reasoning_output_tokens": 55
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-eaa8-7490-871d-e6224c0fe482"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A bezeichnet die Jitter-Strategie als neuen Standard, führt diese Änderung aber nicht unter „Breaking Changes“ auf. Fassung B beschreibt sie als Opt-in und vermeidet damit diesen Widerspruch; welche Beschreibung dem tatsächlichen Diff entspricht, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25572,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 133,
+    "reasoning_output_tokens": 55
+   }
+  }
+ ]
+}

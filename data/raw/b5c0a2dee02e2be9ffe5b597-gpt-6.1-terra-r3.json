@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "b5c0a2dee02e2be9ffe5b597",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reordered",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6878,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, ein Worker verarbeite „at most `max` jobs per `perMs` milliseconds“. Der Diff von #376 zeigt einen `TokenBucket` und eine Planung des nächsten Aufwachens, aber weder dessen Implementierung noch eine Garantie für diese feste Höchstzahl in jedem Zeitraum.\"}],\"reason\":\"Die strikte Mengenbegrenzung ist durch den gezeigten Diff nicht belegt. Die übrigen Angaben entsprechen den Quellen und der Versionierung.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, ein Worker verarbeite „at most `max` jobs per `perMs` milliseconds“. Der Diff von #376 zeigt einen `TokenBucket` und eine Planung des nächsten Aufwachens, aber weder dessen Implementierung noch eine Garantie für diese feste Höchstzahl in jedem Zeitraum."
+   }
+  ],
+  "reason": "Die strikte Mengenbegrenzung ist durch den gezeigten Diff nicht belegt. Die übrigen Angaben entsprechen den Quellen und der Versionierung.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26311,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 211,
+  "reasoning_output_tokens": 86
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-043c-7d80-b823-5d64cb076f02"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, ein Worker verarbeite „at most `max` jobs per `perMs` milliseconds“. Der Diff von #376 zeigt einen `TokenBucket` und eine Planung des nächsten Aufwachens, aber weder dessen Implementierung noch eine Garantie für diese feste Höchstzahl in jedem Zeitraum.\"}],\"reason\":\"Die strikte Mengenbegrenzung ist durch den gezeigten Diff nicht belegt. Die übrigen Angaben entsprechen den Quellen und der Versionierung.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26311,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 211,
+    "reasoning_output_tokens": 86
+   }
+  }
+ ]
+}

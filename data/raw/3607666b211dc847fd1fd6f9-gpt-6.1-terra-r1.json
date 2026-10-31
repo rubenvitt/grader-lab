@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "3607666b211dc847fd1fd6f9",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-bump",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4820,
+ "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Der Kandidat nennt Version 4.2.0. Wegen der Breaking Changes ist ein Major-Sprung erforderlich; die Referenz nennt 5.0.0.\"}],\"reason\":\"Die Inhalte stimmen mit der Referenz überein, aber die Versionsnummer weicht ab und ist für die Breaking Changes nicht passend.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R9",
+    "evidence": "Der Kandidat nennt Version 4.2.0. Wegen der Breaking Changes ist ein Major-Sprung erforderlich; die Referenz nennt 5.0.0."
+   }
+  ],
+  "reason": "Die Inhalte stimmen mit der Referenz überein, aber die Versionsnummer weicht ab und ist für die Breaking Changes nicht passend.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24829,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 92,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-48a4-7f31-88e8-bdc3d3a045a5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Der Kandidat nennt Version 4.2.0. Wegen der Breaking Changes ist ein Major-Sprung erforderlich; die Referenz nennt 5.0.0.\"}],\"reason\":\"Die Inhalte stimmen mit der Referenz überein, aber die Versionsnummer weicht ab und ist für die Breaking Changes nicht passend.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24829,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 92,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

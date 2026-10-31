@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "868dbee0a867f701ea367241",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4118,
+ "text": "{\"reason\":\"Fassung B vermittelt dieselben konkreten Änderungen sachlich und vermeidet die Werbesprache und unbelegten Wertungen in Fassung A. Ob die technischen Aussagen und Migrationsschritte durch die Quellen gedeckt sind, lässt sich anhand der vorliegenden Texte nicht prüfen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B vermittelt dieselben konkreten Änderungen sachlich und vermeidet die Werbesprache und unbelegten Wertungen in Fassung A. Ob die technischen Aussagen und Migrationsschritte durch die Quellen gedeckt sind, lässt sich anhand der vorliegenden Texte nicht prüfen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25427,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 72,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-492d-7510-89b3-5b02527ee2c8"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B vermittelt dieselben konkreten Änderungen sachlich und vermeidet die Werbesprache und unbelegten Wertungen in Fassung A. Ob die technischen Aussagen und Migrationsschritte durch die Quellen gedeckt sind, lässt sich anhand der vorliegenden Texte nicht prüfen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25427,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 72,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

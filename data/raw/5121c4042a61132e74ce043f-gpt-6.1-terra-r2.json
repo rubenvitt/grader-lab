@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "5121c4042a61132e74ce043f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "hype-tone",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4660,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Der Kandidat verwendet durchgehend Werbesprache, etwa „The wait is over“, „game-changing“, „stunning“ und „far more elegant“.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Formulierung „flawless graceful shutdown“ behauptet eine Fehlerfreiheit, die durch die Referenz nicht belegt ist.\"}],\"reason\":\"Die nutzerrelevanten Änderungen, Migrationsschritte und die Versionsnummer stimmen mit der Referenz überein. Der werbliche Ton und die unbelegte Garantie der Fehlerfreiheit verletzen jedoch die Rubrik.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Der Kandidat verwendet durchgehend Werbesprache, etwa „The wait is over“, „game-changing“, „stunning“ und „far more elegant“."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Formulierung „flawless graceful shutdown“ behauptet eine Fehlerfreiheit, die durch die Referenz nicht belegt ist."
+   }
+  ],
+  "reason": "Die nutzerrelevanten Änderungen, Migrationsschritte und die Versionsnummer stimmen mit der Referenz überein. Der werbliche Ton und die unbelegte Garantie der Fehlerfreiheit verletzen jedoch die Rubrik.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24866,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 143,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-97a6-75c1-81d8-7a48ffea5702"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Der Kandidat verwendet durchgehend Werbesprache, etwa „The wait is over“, „game-changing“, „stunning“ und „far more elegant“.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Formulierung „flawless graceful shutdown“ behauptet eine Fehlerfreiheit, die durch die Referenz nicht belegt ist.\"}],\"reason\":\"Die nutzerrelevanten Änderungen, Migrationsschritte und die Versionsnummer stimmen mit der Referenz überein. Der werbliche Ton und die unbelegte Garantie der Fehlerfreiheit verletzen jedoch die Rubrik.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24866,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 143,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

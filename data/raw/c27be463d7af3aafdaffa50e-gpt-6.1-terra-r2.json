@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "c27be463d7af3aafdaffa50e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "false-success",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4432,
+ "text": "{\"violations\":[],\"reason\":\"Der Text enthält konkrete Änderungen und passende Migrationshinweise; Ton und Versionssprung sind stimmig. Ob die Aussagen durch die Änderungen und Labels belegt sind, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Text enthält konkrete Änderungen und passende Migrationshinweise; Ton und Versionssprung sind stimmig. Ob die Aussagen durch die Änderungen und Labels belegt sind, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25328,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 67,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-50f6-7ee1-bae6-853311ae9a0d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Text enthält konkrete Änderungen und passende Migrationshinweise; Ton und Versionssprung sind stimmig. Ob die Aussagen durch die Änderungen und Labels belegt sind, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25328,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 67,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

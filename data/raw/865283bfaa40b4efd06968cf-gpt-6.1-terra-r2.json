@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "865283bfaa40b4efd06968cf",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "internal-noise",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5385,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Die Einträge zu aufgeteilten Lint- und Testjobs (#417) sowie zur Aktualisierung von CODEOWNERS (#419) betreffen interne Abläufe und sind für Nutzer der Bibliothek nicht relevant.\"}],\"reason\":\"Der Kandidat gibt die relevanten Inhalte der Referenz korrekt wieder, enthält aber zusätzlich zwei interne Wartungseinträge.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Die Einträge zu aufgeteilten Lint- und Testjobs (#417) sowie zur Aktualisierung von CODEOWNERS (#419) betreffen interne Abläufe und sind für Nutzer der Bibliothek nicht relevant."
+   }
+  ],
+  "reason": "Der Kandidat gibt die relevanten Inhalte der Referenz korrekt wieder, enthält aber zusätzlich zwei interne Wartungseinträge.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24520,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 98,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-9051-7f92-9b17-b66bf6536cca"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Die Einträge zu aufgeteilten Lint- und Testjobs (#417) sowie zur Aktualisierung von CODEOWNERS (#419) betreffen interne Abläufe und sind für Nutzer der Bibliothek nicht relevant.\"}],\"reason\":\"Der Kandidat gibt die relevanten Inhalte der Referenz korrekt wieder, enthält aber zusätzlich zwei interne Wartungseinträge.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24520,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 98,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

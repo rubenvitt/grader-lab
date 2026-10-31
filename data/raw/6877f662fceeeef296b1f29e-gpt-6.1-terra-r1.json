@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "6877f662fceeeef296b1f29e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4519,
+ "text": "{\"reason\":\"Fassung B ist brauchbarer, weil sie die Änderungen und erforderlichen Migrationsschritte konkret benennt; Fassung A bleibt weitgehend unbestimmt. Ob die zusätzlichen Details in B durch die Diffs belegt sind und Reverts korrekt berücksichtigt wurden, lässt sich anhand der vorliegenden Texte nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist brauchbarer, weil sie die Änderungen und erforderlichen Migrationsschritte konkret benennt; Fassung A bleibt weitgehend unbestimmt. Ob die zusätzlichen Details in B durch die Diffs belegt sind und Reverts korrekt berücksichtigt wurden, lässt sich anhand der vorliegenden Texte nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25366,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 80,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-11ca-7de3-b038-f508f9024f5a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist brauchbarer, weil sie die Änderungen und erforderlichen Migrationsschritte konkret benennt; Fassung A bleibt weitgehend unbestimmt. Ob die zusätzlichen Details in B durch die Diffs belegt sind und Reverts korrekt berücksichtigt wurden, lässt sich anhand der vorliegenden Texte nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25366,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 80,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

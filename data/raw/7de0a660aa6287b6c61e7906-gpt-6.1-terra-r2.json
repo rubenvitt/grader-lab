@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "7de0a660aa6287b6c61e7906",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6744,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration ersetzt `queue.clean(graceMs, status)` durch `queue.purge({ status, olderThanMs })`, ohne `graceMs` auf `olderThanMs` abzubilden. Der Diff zeigt die korrekte Zuordnung: `queue.purge({ status, olderThanMs: graceMs })`. Die angegebene Kurzschreibweise setzt dagegen eine Variable `olderThanMs` voraus.\"}],\"reason\":\"Die nutzerrelevanten Änderungen sind in den Notes erfasst und die Versionsnummer 3.1.0 passt zum Funktionsumfang. Der Migrationsschritt übernimmt jedoch den bisherigen Wert `graceMs` nicht ausdrücklich in die neue Option.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration ersetzt `queue.clean(graceMs, status)` durch `queue.purge({ status, olderThanMs })`, ohne `graceMs` auf `olderThanMs` abzubilden. Der Diff zeigt die korrekte Zuordnung: `queue.purge({ status, olderThanMs: graceMs })`. Die angegebene Kurzschreibweise setzt dagegen eine Variable `olderThanMs` voraus."
+   }
+  ],
+  "reason": "Die nutzerrelevanten Änderungen sind in den Notes erfasst und die Versionsnummer 3.1.0 passt zum Funktionsumfang. Der Migrationsschritt übernimmt jedoch den bisherigen Wert `graceMs` nicht ausdrücklich in die neue Option.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26577,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 270,
+  "reasoning_output_tokens": 101
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-8f66-7b41-8745-89ec4a96d62d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration ersetzt `queue.clean(graceMs, status)` durch `queue.purge({ status, olderThanMs })`, ohne `graceMs` auf `olderThanMs` abzubilden. Der Diff zeigt die korrekte Zuordnung: `queue.purge({ status, olderThanMs: graceMs })`. Die angegebene Kurzschreibweise setzt dagegen eine Variable `olderThanMs` voraus.\"}],\"reason\":\"Die nutzerrelevanten Änderungen sind in den Notes erfasst und die Versionsnummer 3.1.0 passt zum Funktionsumfang. Der Migrationsschritt übernimmt jedoch den bisherigen Wert `graceMs` nicht ausdrücklich in die neue Option.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26577,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 270,
+    "reasoning_output_tokens": 101
+   }
+  }
+ ]
+}

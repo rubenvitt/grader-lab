@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "6dc36fbfeef79f9ef51fbfb4",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "ghost-pr",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 12950,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer des `drained`-Eintrags. Ohne die zugehörigen Quellen lässt sich nicht beurteilen, welche Nummer korrekt ist; ansonsten sind die Texte gleich.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur in der PR-Nummer des `drained`-Eintrags. Ohne die zugehörigen Quellen lässt sich nicht beurteilen, welche Nummer korrekt ist; ansonsten sind die Texte gleich.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25386,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 61,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-fa7a-74f0-ad9b-5efe21aa9b15"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536060a694b452e-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536060fafc77db4-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53606170de777fb-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53606236a1dfb31-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer des `drained`-Eintrags. Ohne die zugehörigen Quellen lässt sich nicht beurteilen, welche Nummer korrekt ist; ansonsten sind die Texte gleich.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25386,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 61,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

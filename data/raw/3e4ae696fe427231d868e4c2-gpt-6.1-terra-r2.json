@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "3e4ae696fe427231d868e4c2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4402,
+ "text": "{\"reason\":\"Fassung A benennt die neuen Optionen und die erforderliche Migration konkret; Fassung B bleibt bei beiden Einträgen zu allgemein. Ob die Angaben in A durch den Diff belegt sind, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A benennt die neuen Optionen und die erforderliche Migration konkret; Fassung B bleibt bei beiden Einträgen zu allgemein. Ob die Angaben in A durch den Diff belegt sind, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25203,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 64,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-7326-7683-a152-da56f88fa6f8"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A benennt die neuen Optionen und die erforderliche Migration konkret; Fassung B bleibt bei beiden Einträgen zu allgemein. Ob die Angaben in A durch den Diff belegt sind, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25203,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 64,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

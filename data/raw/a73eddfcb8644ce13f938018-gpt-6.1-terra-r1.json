@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "a73eddfcb8644ce13f938018",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "missing-breaking",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6382,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #307 ändert den öffentlichen Standardwert von `removeOnComplete` von `false` auf `true`. Diese Änderung fehlt unter „Breaking Changes“: Nutzer, die abgeschlossene Jobs weiterhin behalten möchten, müssen den Wert ausdrücklich auf `false` setzen.\"}],\"reason\":\"Die Notes lassen die Änderung des Standardwerts aus PR #307 aus. Die übrigen aufgeführten Änderungen sind durch die Diffs belegt; die zurückgenommenen Lanes erscheinen nicht in den Notes und der Major-Sprung auf 3.0.0 passt zur Breaking Change.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #307 ändert den öffentlichen Standardwert von `removeOnComplete` von `false` auf `true`. Diese Änderung fehlt unter „Breaking Changes“: Nutzer, die abgeschlossene Jobs weiterhin behalten möchten, müssen den Wert ausdrücklich auf `false` setzen."
+   }
+  ],
+  "reason": "Die Notes lassen die Änderung des Standardwerts aus PR #307 aus. Die übrigen aufgeführten Änderungen sind durch die Diffs belegt; die zurückgenommenen Lanes erscheinen nicht in den Notes und der Major-Sprung auf 3.0.0 passt zur Breaking Change.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26753,
+  "cached_input_tokens": 0,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 140,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-3abc-7d41-8d4f-bb72e15e9be7"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #307 ändert den öffentlichen Standardwert von `removeOnComplete` von `false` auf `true`. Diese Änderung fehlt unter „Breaking Changes“: Nutzer, die abgeschlossene Jobs weiterhin behalten möchten, müssen den Wert ausdrücklich auf `false` setzen.\"}],\"reason\":\"Die Notes lassen die Änderung des Standardwerts aus PR #307 aus. Die übrigen aufgeführten Änderungen sind durch die Diffs belegt; die zurückgenommenen Lanes erscheinen nicht in den Notes und der Major-Sprung auf 3.0.0 passt zur Breaking Change.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26753,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 140,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

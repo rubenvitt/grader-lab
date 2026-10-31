@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d9a939c3f46da8224fe930b2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4764,
+ "text": "{\"reason\":\"Fassung A beschreibt die Änderungen und die nötige Migration konkret; Fassung B bleibt bei allen drei Einträgen so allgemein, dass Nutzer weder die Auswirkungen noch einen Handlungsbedarf erkennen können (R8). Ob die konkreten Aussagen und die Migration in A durch die Diffs gedeckt sind, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A beschreibt die Änderungen und die nötige Migration konkret; Fassung B bleibt bei allen drei Einträgen so allgemein, dass Nutzer weder die Auswirkungen noch einen Handlungsbedarf erkennen können (R8). Ob die konkreten Aussagen und die Migration in A durch die Diffs gedeckt sind, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24422,
+  "cached_input_tokens": 12800,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 85,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-0c17-7522-bbd3-307daa2af5e2"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A beschreibt die Änderungen und die nötige Migration konkret; Fassung B bleibt bei allen drei Einträgen so allgemein, dass Nutzer weder die Auswirkungen noch einen Handlungsbedarf erkennen können (R8). Ob die konkreten Aussagen und die Migration in A durch die Diffs gedeckt sind, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24422,
+    "cached_input_tokens": 12800,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 85,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "a843e4b9c358e1cabdb94be5",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "internal-noise",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4146,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Internal“ stehen Änderungen am Release-Workflow („publishes with `--provenance`“) und ein reines Refactoring („The key builder moved to a shared module“).\"}],\"reason\":\"Die beiden internen Änderungen sind für Nutzer der Bibliothek nicht relevant. Weitere Verstöße lassen sich aus dem Text allein nicht erkennen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Unter „Internal“ stehen Änderungen am Release-Workflow („publishes with `--provenance`“) und ein reines Refactoring („The key builder moved to a shared module“)."
+   }
+  ],
+  "reason": "Die beiden internen Änderungen sind für Nutzer der Bibliothek nicht relevant. Weitere Verstöße lassen sich aus dem Text allein nicht erkennen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24532,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 95,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-31d8-7073-9c2b-96b0ec83d046"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Internal“ stehen Änderungen am Release-Workflow („publishes with `--provenance`“) und ein reines Refactoring („The key builder moved to a shared module“).\"}],\"reason\":\"Die beiden internen Änderungen sind für Nutzer der Bibliothek nicht relevant. Weitere Verstöße lassen sich aus dem Text allein nicht erkennen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24532,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 95,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

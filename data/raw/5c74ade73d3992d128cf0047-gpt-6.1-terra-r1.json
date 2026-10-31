@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "5c74ade73d3992d128cf0047",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 6403,
+ "text": "{\"reason\":\"Fassung B ist sachlich formuliert, während Fassung A mehrfach Werbesprache und Superlative verwendet. Inhaltlich sind die Fassungen gleich; ob ihre Aussagen durch die Quellen gedeckt sind, lässt sich ohne Diffs nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist sachlich formuliert, während Fassung A mehrfach Werbesprache und Superlative verwendet. Inhaltlich sind die Fassungen gleich; ob ihre Aussagen durch die Quellen gedeckt sind, lässt sich ohne Diffs nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25404,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 67,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-d857-7d63-9bfe-d99b34b785bc"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist sachlich formuliert, während Fassung A mehrfach Werbesprache und Superlative verwendet. Inhaltlich sind die Fassungen gleich; ob ihre Aussagen durch die Quellen gedeckt sind, lässt sich ohne Diffs nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25404,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 67,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

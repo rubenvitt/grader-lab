@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "227aabfd00ca57fede2b7fab",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5737,
+ "text": "{\"reason\":\"Fassung B ergänzt eine Leistungssteigerung von etwa 40 %, für die kein Beleg vorliegt. Fassung A enthält diese zusätzliche unbelegte Aussage nicht; ansonsten sind die Fassungen inhaltlich gleich.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung B ergänzt eine Leistungssteigerung von etwa 40 %, für die kein Beleg vorliegt. Fassung A enthält diese zusätzliche unbelegte Aussage nicht; ansonsten sind die Fassungen inhaltlich gleich.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25540,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 87,
+  "reasoning_output_tokens": 26
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-0464-70f2-8173-d426d11030cb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ergänzt eine Leistungssteigerung von etwa 40 %, für die kein Beleg vorliegt. Fassung A enthält diese zusätzliche unbelegte Aussage nicht; ansonsten sind die Fassungen inhaltlich gleich.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25540,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 87,
+    "reasoning_output_tokens": 26
+   }
+  }
+ ]
+}

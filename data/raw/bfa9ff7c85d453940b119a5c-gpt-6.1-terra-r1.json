@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "bfa9ff7c85d453940b119a5c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "ghost-pr",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4631,
+ "text": "{\"violations\":[],\"reason\":\"Die Einträge beschreiben konkrete Korrekturen und nennen beim Sicherheitsfix keine verbotenen Details. Aus dem Text allein ergibt sich kein überprüfbarer Verstoß gegen die Rubrik.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Einträge beschreiben konkrete Korrekturen und nennen beim Sicherheitsfix keine verbotenen Details. Aus dem Text allein ergibt sich kein überprüfbarer Verstoß gegen die Rubrik.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25179,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 59,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-9fe2-74f2-ad54-3d38e0eece4b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Einträge beschreiben konkrete Korrekturen und nennen beim Sicherheitsfix keine verbotenen Details. Aus dem Text allein ergibt sich kein überprüfbarer Verstoß gegen die Rubrik.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25179,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

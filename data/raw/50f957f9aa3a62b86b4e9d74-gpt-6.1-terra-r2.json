@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "50f957f9aa3a62b86b4e9d74",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reordered",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6044,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff belegt das Freigeben des Locks, zeigt aber keine Änderung des Jobstatus.\"}],\"reason\":\"Die nutzerrelevanten Änderungen sind erfasst und die Versionsnummer passt zum geänderten Standardwert. Die behauptete Auswirkung auf den Status „active“ ist durch den Diff nicht belegt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff belegt das Freigeben des Locks, zeigt aber keine Änderung des Jobstatus."
+   }
+  ],
+  "reason": "Die nutzerrelevanten Änderungen sind erfasst und die Versionsnummer passt zum geänderten Standardwert. Die behauptete Auswirkung auf den Status „active“ ist durch den Diff nicht belegt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26834,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 232,
+  "reasoning_output_tokens": 110
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-bfd0-7e62-a37d-ea624ad63fed"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff belegt das Freigeben des Locks, zeigt aber keine Änderung des Jobstatus.\"}],\"reason\":\"Die nutzerrelevanten Änderungen sind erfasst und die Versionsnummer passt zum geänderten Standardwert. Die behauptete Auswirkung auf den Status „active“ ist durch den Diff nicht belegt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26834,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 232,
+    "reasoning_output_tokens": 110
+   }
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "c3dc2cc076362f7dbb6a79de",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 9279,
+ "text": "{\"reason\":\"Fassung B beschreibt konkrete Änderungen und nennt einen Migrationsschritt, während Fassung A weitgehend unbrauchbare Allgemeinplätze enthält. Ob die Details von B durch die Diffs gedeckt sind oder ein Embargo verletzen, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt konkrete Änderungen und nennt einen Migrationsschritt, während Fassung A weitgehend unbrauchbare Allgemeinplätze enthält. Ob die Details von B durch die Diffs gedeckt sind oder ein Embargo verletzen, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25268,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 72,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-1eb0-7fe3-9778-bd3a354f3301"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604ab68c77bfe-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604b02e522ecf-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604b7eabe4522-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt konkrete Änderungen und nennt einen Migrationsschritt, während Fassung A weitgehend unbrauchbare Allgemeinplätze enthält. Ob die Details von B durch die Diffs gedeckt sind oder ein Embargo verletzen, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25268,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 72,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

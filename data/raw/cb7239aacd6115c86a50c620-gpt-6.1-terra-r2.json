@@ -1,0 +1,79 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "cb7239aacd6115c86a50c620",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "internal-noise",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 13705,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Der Abschnitt „Internal“ enthält einen internen Release-Workflow mit `--provenance` und ein reines Refactoring des Key-Builders. Beide Einträge sind für Nutzer der Bibliothek nicht relevant.\"},{\"criterion\":\"R2\",\"evidence\":\"Für die Aussagen zum Release-Workflow (#403) und zum verschobenen Key-Builder (#404) gibt es in der Referenz keine Entsprechung.\"}],\"reason\":\"Die nutzerrelevanten Release Notes entsprechen der Referenz. Der Kandidat ergänzt jedoch zwei nicht belegte interne Änderungen, die nicht in die Notes gehören.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Der Abschnitt „Internal“ enthält einen internen Release-Workflow mit `--provenance` und ein reines Refactoring des Key-Builders. Beide Einträge sind für Nutzer der Bibliothek nicht relevant."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Für die Aussagen zum Release-Workflow (#403) und zum verschobenen Key-Builder (#404) gibt es in der Referenz keine Entsprechung."
+   }
+  ],
+  "reason": "Die nutzerrelevanten Release Notes entsprechen der Referenz. Der Kandidat ergänzt jedoch zwei nicht belegte interne Änderungen, die nicht in die Notes gehören.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25710,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 147,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-40c5-7500-b485-7f7ae6b45a2a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361347af9e4480-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536134c4df3b173-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53613547cb5e533-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361360cec7e526-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Der Abschnitt „Internal“ enthält einen internen Release-Workflow mit `--provenance` und ein reines Refactoring des Key-Builders. Beide Einträge sind für Nutzer der Bibliothek nicht relevant.\"},{\"criterion\":\"R2\",\"evidence\":\"Für die Aussagen zum Release-Workflow (#403) und zum verschobenen Key-Builder (#404) gibt es in der Referenz keine Entsprechung.\"}],\"reason\":\"Die nutzerrelevanten Release Notes entsprechen der Referenz. Der Kandidat ergänzt jedoch zwei nicht belegte interne Änderungen, die nicht in die Notes gehören.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25710,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 147,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

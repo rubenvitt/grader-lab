@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "0d901d4cb6ccc3972cdf2844",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7845,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker configuration has changed“ (#351) nennt weder die Umbenennung von `stalledIntervalMs` in `stallCheckMs` noch die erforderliche Anpassung bestehender Konfigurationen.\"},{\"criterion\":\"R8\",\"evidence\":\"„The build output has changed“ (#353) lässt offen, dass der öffentliche `require`-Export und das CommonJS-Bundle entfallen. Nutzer erkennen dadurch nicht, ob sie ihre Imports umstellen müssen.\"},{\"criterion\":\"R8\",\"evidence\":\"„New storage option“ (#355) nennt weder `PostgresStore` noch den Importpfad `quaykit/postgres`.\"},{\"criterion\":\"R8\",\"evidence\":\"„Scheduler fix“ (#357) beschreibt nicht, dass der Scheduler Fälligkeiten anhand von UTC statt der lokalen Uhrzeit berechnet.\"},{\"criterion\":\"R8\",\"evidence\":\"„Queue performance work“ (#360) beschreibt nicht, dass `addBulk` Aufträge in Blöcken von bis zu 500 an den Store übergibt.\"}],\"reason\":\"Die Diffs zeigen zwei nutzerrelevante Breaking Changes, ein neues Backend und konkrete Änderungen an Scheduler und Queue. Die Notes ordnen die Breaking Changes zwar richtig ein und wählen mit 4.0.0 einen passenden Major-Sprung, beschreiben die Änderungen aber nicht ausreichend konkret.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Worker configuration has changed“ (#351) nennt weder die Umbenennung von `stalledIntervalMs` in `stallCheckMs` noch die erforderliche Anpassung bestehender Konfigurationen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„The build output has changed“ (#353) lässt offen, dass der öffentliche `require`-Export und das CommonJS-Bundle entfallen. Nutzer erkennen dadurch nicht, ob sie ihre Imports umstellen müssen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„New storage option“ (#355) nennt weder `PostgresStore` noch den Importpfad `quaykit/postgres`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Scheduler fix“ (#357) beschreibt nicht, dass der Scheduler Fälligkeiten anhand von UTC statt der lokalen Uhrzeit berechnet."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Queue performance work“ (#360) beschreibt nicht, dass `addBulk` Aufträge in Blöcken von bis zu 500 an den Store übergibt."
+   }
+  ],
+  "reason": "Die Diffs zeigen zwei nutzerrelevante Breaking Changes, ein neues Backend und konkrete Änderungen an Scheduler und Queue. Die Notes ordnen die Breaking Changes zwar richtig ein und wählen mit 4.0.0 einen passenden Major-Sprung, beschreiben die Änderungen aber nicht ausreichend konkret.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26764,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 297,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-0934-78a2-9655-46248ea2853e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker configuration has changed“ (#351) nennt weder die Umbenennung von `stalledIntervalMs` in `stallCheckMs` noch die erforderliche Anpassung bestehender Konfigurationen.\"},{\"criterion\":\"R8\",\"evidence\":\"„The build output has changed“ (#353) lässt offen, dass der öffentliche `require`-Export und das CommonJS-Bundle entfallen. Nutzer erkennen dadurch nicht, ob sie ihre Imports umstellen müssen.\"},{\"criterion\":\"R8\",\"evidence\":\"„New storage option“ (#355) nennt weder `PostgresStore` noch den Importpfad `quaykit/postgres`.\"},{\"criterion\":\"R8\",\"evidence\":\"„Scheduler fix“ (#357) beschreibt nicht, dass der Scheduler Fälligkeiten anhand von UTC statt der lokalen Uhrzeit berechnet.\"},{\"criterion\":\"R8\",\"evidence\":\"„Queue performance work“ (#360) beschreibt nicht, dass `addBulk` Aufträge in Blöcken von bis zu 500 an den Store übergibt.\"}],\"reason\":\"Die Diffs zeigen zwei nutzerrelevante Breaking Changes, ein neues Backend und konkrete Änderungen an Scheduler und Queue. Die Notes ordnen die Breaking Changes zwar richtig ein und wählen mit 4.0.0 einen passenden Major-Sprung, beschreiben die Änderungen aber nicht ausreichend konkret.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26764,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 297,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

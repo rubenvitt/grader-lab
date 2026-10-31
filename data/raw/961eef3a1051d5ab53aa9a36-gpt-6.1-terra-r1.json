@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "961eef3a1051d5ab53aa9a36",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "missing-breaking",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5934,
+ "text": "{\"reason\":\"Fassung A dokumentiert zusätzlich die Änderung des Defaults von `removeOnComplete` als Breaking Change und nennt einen konkreten Migrationsschritt. Fassung B lässt diese nutzerrelevante Änderung aus; anhand der vorliegenden Texte lässt sich allerdings nicht prüfen, ob sie durch den Diff belegt ist.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A dokumentiert zusätzlich die Änderung des Defaults von `removeOnComplete` als Breaking Change und nennt einen konkreten Migrationsschritt. Fassung B lässt diese nutzerrelevante Änderung aus; anhand der vorliegenden Texte lässt sich allerdings nicht prüfen, ob sie durch den Diff belegt ist.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25295,
+  "cached_input_tokens": 0,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 79,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-3abc-7ee3-bf1b-ab9cd4086696"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A dokumentiert zusätzlich die Änderung des Defaults von `removeOnComplete` als Breaking Change und nennt einen konkreten Migrationsschritt. Fassung B lässt diese nutzerrelevante Änderung aus; anhand der vorliegenden Texte lässt sich allerdings nicht prüfen, ob sie durch den Diff belegt ist.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25295,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 79,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

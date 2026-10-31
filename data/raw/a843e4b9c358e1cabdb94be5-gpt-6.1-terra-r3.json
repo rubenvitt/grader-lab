@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "a843e4b9c358e1cabdb94be5",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "internal-noise",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 6287,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Internal“ stehen der Release-Workflow mit `--provenance` und das Verschieben des Key-Builders in ein gemeinsames Modul. Beides sind interne Änderungen ohne erkennbaren Nutzen für Bibliotheksnutzer.\"}],\"reason\":\"Die Notes enthalten zwei interne Änderungen, die für Nutzer der Bibliothek nicht relevant sind. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Unter „Internal“ stehen der Release-Workflow mit `--provenance` und das Verschieben des Key-Builders in ein gemeinsames Modul. Beides sind interne Änderungen ohne erkennbaren Nutzen für Bibliotheksnutzer."
+   }
+  ],
+  "reason": "Die Notes enthalten zwei interne Änderungen, die für Nutzer der Bibliothek nicht relevant sind. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25382,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 108,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-78c2-7ac3-a9c3-0a1dbe1b2cce"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Internal“ stehen der Release-Workflow mit `--provenance` und das Verschieben des Key-Builders in ein gemeinsames Modul. Beides sind interne Änderungen ohne erkennbaren Nutzen für Bibliotheksnutzer.\"}],\"reason\":\"Die Notes enthalten zwei interne Änderungen, die für Nutzer der Bibliothek nicht relevant sind. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25382,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 108,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

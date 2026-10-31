@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "4b81873354b2c9435e16755b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "hype-tone",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5046,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Werbliche Formulierungen wie „Welcome to the future of job queues!“, „our most exciting release yet“, „revolutionary“ und „Turbocharged imports“ sind nicht sachlich.\"}],\"reason\":\"Die Notes enthalten mehrfach Werbesprache und verstoßen damit gegen den sachlichen Ton. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Werbliche Formulierungen wie „Welcome to the future of job queues!“, „our most exciting release yet“, „revolutionary“ und „Turbocharged imports“ sind nicht sachlich."
+   }
+  ],
+  "reason": "Die Notes enthalten mehrfach Werbesprache und verstoßen damit gegen den sachlichen Ton. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25377,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 100,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-e305-7202-afc0-26962586de82"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Werbliche Formulierungen wie „Welcome to the future of job queues!“, „our most exciting release yet“, „revolutionary“ und „Turbocharged imports“ sind nicht sachlich.\"}],\"reason\":\"Die Notes enthalten mehrfach Werbesprache und verstoßen damit gegen den sachlichen Ton. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25377,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 100,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "c0883259a22edd54ea3c43e9",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4413,
+ "text": "{\"reason\":\"Fassung A ist besser, weil Fassung B zusätzlich CI- und Dev-Dependency-Änderungen aufführt, die für Nutzer der Bibliothek nicht in die Release Notes gehören (R6). Die übrigen Inhalte sind identisch.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil Fassung B zusätzlich CI- und Dev-Dependency-Änderungen aufführt, die für Nutzer der Bibliothek nicht in die Release Notes gehören (R6). Die übrigen Inhalte sind identisch.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25413,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 65,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-a17d-70b1-8184-001c5f1ce999"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil Fassung B zusätzlich CI- und Dev-Dependency-Änderungen aufführt, die für Nutzer der Bibliothek nicht in die Release Notes gehören (R6). Die übrigen Inhalte sind identisch.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25413,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 65,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

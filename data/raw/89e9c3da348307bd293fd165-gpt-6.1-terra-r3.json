@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "89e9c3da348307bd293fd165",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4668,
+ "text": "{\"reason\":\"Fassung A beschreibt die Änderungen und die erforderliche Migration konkret; Fassung B bleibt bei allen Einträgen zu allgemein, um Nutzern zu sagen, was sich geändert hat oder was sie tun müssen. Ob die Aussagen von A durch die Diffs gedeckt sind und die Version korrekt ist, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A beschreibt die Änderungen und die erforderliche Migration konkret; Fassung B bleibt bei allen Einträgen zu allgemein, um Nutzern zu sagen, was sich geändert hat oder was sie tun müssen. Ob die Aussagen von A durch die Diffs gedeckt sind und die Version korrekt ist, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25278,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 84,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-79bb-7862-b5e7-9596c42b9cfa"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A beschreibt die Änderungen und die erforderliche Migration konkret; Fassung B bleibt bei allen Einträgen zu allgemein, um Nutzern zu sagen, was sich geändert hat oder was sie tun müssen. Ob die Aussagen von A durch die Diffs gedeckt sind und die Version korrekt ist, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25278,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 84,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

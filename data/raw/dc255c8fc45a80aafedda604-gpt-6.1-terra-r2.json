@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "dc255c8fc45a80aafedda604",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "wrong-migration",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 3885,
+ "text": "{\"reason\":\"Fassung B nennt für die Migration die im Eintrag genannte Option `removeOnComplete` und setzt sie auf den bisherigen Standardwert `false`. Fassung A verwendet dagegen `keepCompleted`, wofür im vorliegenden Material kein Beleg steht.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B nennt für die Migration die im Eintrag genannte Option `removeOnComplete` und setzt sie auf den bisherigen Standardwert `false`. Fassung A verwendet dagegen `keepCompleted`, wofür im vorliegenden Material kein Beleg steht.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25381,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 68,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19406-4219-7af1-8954-41b43d606b0d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt für die Migration die im Eintrag genannte Option `removeOnComplete` und setzt sie auf den bisherigen Standardwert `false`. Fassung A verwendet dagegen `keepCompleted`, wofür im vorliegenden Material kein Beleg steht.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25381,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 68,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

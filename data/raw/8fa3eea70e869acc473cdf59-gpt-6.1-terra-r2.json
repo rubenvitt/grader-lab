@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "8fa3eea70e869acc473cdf59",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7982,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 ändert den Konstruktor so, dass zuvor akzeptierte Schema-Namen abgelehnt werden. Nutzer mit betroffenen Konfigurationen müssen diese anpassen; ein Abschnitt „Breaking Changes“ fehlt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"„Unbreakable job state“ behauptet eine umfassende Garantie. Der Diff von #413 belegt nur die Prüfung des Locks vor dem Ack in `complete()`.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"„massive peace of mind“, „crushes“ und „Unbreakable job state“ sind werbliche beziehungsweise übersteigerte Formulierungen.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Sicherheitseintrag zu #414 empfiehlt ein Upgrade, lässt aber unerwähnt, dass bestehende Konfigurationen betroffen sein können und gegebenenfalls angepasst werden müssen. Ein entsprechender Hinweis ist ohne Einzelheiten zum Sicherheitsproblem möglich.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen 5.0.1 nach 5.0.0. Die inkompatible Änderung in #414 verlangt laut Rubric einen Major-Sprung auf mindestens 6.0.0.\"\n    }\n  ],\n  \"reason\": \"Die Notes übersehen eine inkompatible Konfigurationsänderung und wählen deshalb eine unpassende Versionsnummer. Außerdem enthalten sie eine unbelegte Garantie und werbliche Formulierungen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 ändert den Konstruktor so, dass zuvor akzeptierte Schema-Namen abgelehnt werden. Nutzer mit betroffenen Konfigurationen müssen diese anpassen; ein Abschnitt „Breaking Changes“ fehlt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "„Unbreakable job state“ behauptet eine umfassende Garantie. Der Diff von #413 belegt nur die Prüfung des Locks vor dem Ack in `complete()`."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "„massive peace of mind“, „crushes“ und „Unbreakable job state“ sind werbliche beziehungsweise übersteigerte Formulierungen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Sicherheitseintrag zu #414 empfiehlt ein Upgrade, lässt aber unerwähnt, dass bestehende Konfigurationen betroffen sein können und gegebenenfalls angepasst werden müssen. Ein entsprechender Hinweis ist ohne Einzelheiten zum Sicherheitsproblem möglich."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen 5.0.1 nach 5.0.0. Die inkompatible Änderung in #414 verlangt laut Rubric einen Major-Sprung auf mindestens 6.0.0."
+   }
+  ],
+  "reason": "Die Notes übersehen eine inkompatible Konfigurationsänderung und wählen deshalb eine unpassende Versionsnummer. Außerdem enthalten sie eine unbelegte Garantie und werbliche Formulierungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26334,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 463,
+  "reasoning_output_tokens": 106
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-c669-7c31-9fa7-bfd6caa86ba2"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 ändert den Konstruktor so, dass zuvor akzeptierte Schema-Namen abgelehnt werden. Nutzer mit betroffenen Konfigurationen müssen diese anpassen; ein Abschnitt „Breaking Changes“ fehlt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"„Unbreakable job state“ behauptet eine umfassende Garantie. Der Diff von #413 belegt nur die Prüfung des Locks vor dem Ack in `complete()`.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"„massive peace of mind“, „crushes“ und „Unbreakable job state“ sind werbliche beziehungsweise übersteigerte Formulierungen.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Sicherheitseintrag zu #414 empfiehlt ein Upgrade, lässt aber unerwähnt, dass bestehende Konfigurationen betroffen sein können und gegebenenfalls angepasst werden müssen. Ein entsprechender Hinweis ist ohne Einzelheiten zum Sicherheitsproblem möglich.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen 5.0.1 nach 5.0.0. Die inkompatible Änderung in #414 verlangt laut Rubric einen Major-Sprung auf mindestens 6.0.0.\"\n    }\n  ],\n  \"reason\": \"Die Notes übersehen eine inkompatible Konfigurationsänderung und wählen deshalb eine unpassende Versionsnummer. Außerdem enthalten sie eine unbelegte Garantie und werbliche Formulierungen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26334,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 463,
+    "reasoning_output_tokens": 106
+   }
+  }
+ ]
+}

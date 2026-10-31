@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "aa6c67d4391c3c7e3f422a37",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "ghost-pr",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4606,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer des JSON-Features. Ohne Quellen lässt sich nicht beurteilen, welche Nummer korrekt ist; inhaltlich sind sie gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur in der PR-Nummer des JSON-Features. Ohne Quellen lässt sich nicht beurteilen, welche Nummer korrekt ist; inhaltlich sind sie gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25380,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 56,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-b8f2-74a0-a059-1863a1090566"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer des JSON-Features. Ohne Quellen lässt sich nicht beurteilen, welche Nummer korrekt ist; inhaltlich sind sie gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25380,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 56,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

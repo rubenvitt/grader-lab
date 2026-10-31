@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "94cb6244e02cf2794fab528a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reverted-listed",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6920,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R4\",\n      \"evidence\": \"Die Notes führen Priority Lanes aus PR #301 als Feature auf. PR #315 nimmt #301 und den zugehörigen Fix #312 jedoch im selben Release zurück; ein Reland ist nicht angegeben.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht länger bis zum Ablauf des Locks im Status „active“. Der Diff belegt, dass der Lock im `finally`-Block freigegeben wird, zeigt aber keine Änderung des Jobstatus.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten ein zurückgenommenes Feature und eine Aussage zum Jobstatus, die der gezeigte Diff nicht belegt. Die Änderung des Defaults ist als Breaking Change mit passender Migration aufgeführt; der Major-Sprung auf 3.0.0 ist dafür angemessen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R4",
+    "evidence": "Die Notes führen Priority Lanes aus PR #301 als Feature auf. PR #315 nimmt #301 und den zugehörigen Fix #312 jedoch im selben Release zurück; ein Reland ist nicht angegeben."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht länger bis zum Ablauf des Locks im Status „active“. Der Diff belegt, dass der Lock im `finally`-Block freigegeben wird, zeigt aber keine Änderung des Jobstatus."
+   }
+  ],
+  "reason": "Die Notes enthalten ein zurückgenommenes Feature und eine Aussage zum Jobstatus, die der gezeigte Diff nicht belegt. Die Änderung des Defaults ist als Breaking Change mit passender Migration aufgeführt; der Major-Sprung auf 3.0.0 ist dafür angemessen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26867,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 294,
+  "reasoning_output_tokens": 72
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-83ba-7bb0-bdd4-4ef341a837f0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R4\",\n      \"evidence\": \"Die Notes führen Priority Lanes aus PR #301 als Feature auf. PR #315 nimmt #301 und den zugehörigen Fix #312 jedoch im selben Release zurück; ein Reland ist nicht angegeben.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht länger bis zum Ablauf des Locks im Status „active“. Der Diff belegt, dass der Lock im `finally`-Block freigegeben wird, zeigt aber keine Änderung des Jobstatus.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten ein zurückgenommenes Feature und eine Aussage zum Jobstatus, die der gezeigte Diff nicht belegt. Die Änderung des Defaults ist als Breaking Change mit passender Migration aufgeführt; der Major-Sprung auf 3.0.0 ist dafür angemessen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26867,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 294,
+    "reasoning_output_tokens": 72
+   }
+  }
+ ]
+}

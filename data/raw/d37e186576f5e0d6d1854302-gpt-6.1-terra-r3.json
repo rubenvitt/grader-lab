@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "d37e186576f5e0d6d1854302",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "wrong-migration",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5442,
+ "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst ergibt sich kein eindeutiger Verstoß. Ob der Migrationsschritt und die einzelnen Aussagen mit dem Code übereinstimmen, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Aus dem Text selbst ergibt sich kein eindeutiger Verstoß. Ob der Migrationsschritt und die einzelnen Aussagen mit dem Code übereinstimmen, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25252,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 103,
+  "reasoning_output_tokens": 37
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-570f-79e2-b8c6-3300376319ea"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst ergibt sich kein eindeutiger Verstoß. Ob der Migrationsschritt und die einzelnen Aussagen mit dem Code übereinstimmen, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25252,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 103,
+    "reasoning_output_tokens": 37
+   }
+  }
+ ]
+}

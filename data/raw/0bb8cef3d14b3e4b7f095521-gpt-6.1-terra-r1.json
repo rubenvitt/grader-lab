@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "0bb8cef3d14b3e4b7f095521",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "false-success",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5184,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Änderungen und den Migrationsschritt konkret. Die Minor-Version passt zu einem neuen Feature und einer Deprecation; unbelegte Fehler lassen sich aus dem Text allein nicht erkennen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben die Änderungen und den Migrationsschritt konkret. Die Minor-Version passt zu einem neuen Feature und einer Deprecation; unbelegte Fehler lassen sich aus dem Text allein nicht erkennen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25197,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 61,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-9347-7a22-9a11-e3bb9e7775eb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Änderungen und den Migrationsschritt konkret. Die Minor-Version passt zu einem neuen Feature und einer Deprecation; unbelegte Fehler lassen sich aus dem Text allein nicht erkennen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25197,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 61,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

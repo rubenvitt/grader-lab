@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "f06c816ec60f4e82a3fdec83",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "internal-noise",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7618,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff von #307 belegt nur, dass `removeOnComplete` standardmäßig auf `true` gesetzt wird; das Abrufverhalten ist dort nicht gezeigt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff belegt die Freigabe des Locks im `finally`-Block, zeigt aber keine Änderung des Jobstatus.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Der Abschnitt „Internal“ nennt das pnpm-Caching in GitHub Actions (#320) und das Update der Dev-Dependency vitest (#322). Beides sind interne Änderungen ohne erkennbaren Nutzen für Bibliotheksanwender.\"\n    }\n  ],\n  \"reason\": \"Die Notes beschreiben die nach dem Revert verbleibenden Änderungen und ordnen den geänderten Standardwert als Breaking Change ein. Zwei Aussagen gehen über die gezeigten Diffs hinaus; außerdem enthalten die Notes zwei interne Änderungen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff von #307 belegt nur, dass `removeOnComplete` standardmäßig auf `true` gesetzt wird; das Abrufverhalten ist dort nicht gezeigt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff belegt die Freigabe des Locks im `finally`-Block, zeigt aber keine Änderung des Jobstatus."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "Der Abschnitt „Internal“ nennt das pnpm-Caching in GitHub Actions (#320) und das Update der Dev-Dependency vitest (#322). Beides sind interne Änderungen ohne erkennbaren Nutzen für Bibliotheksanwender."
+   }
+  ],
+  "reason": "Die Notes beschreiben die nach dem Revert verbleibenden Änderungen und ordnen den geänderten Standardwert als Breaking Change ein. Zwei Aussagen gehen über die gezeigten Diffs hinaus; außerdem enthalten die Notes zwei interne Änderungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26021,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 356,
+  "reasoning_output_tokens": 64
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-9800-7342-b4a4-bb94fbe39646"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff von #307 belegt nur, dass `removeOnComplete` standardmäßig auf `true` gesetzt wird; das Abrufverhalten ist dort nicht gezeigt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff belegt die Freigabe des Locks im `finally`-Block, zeigt aber keine Änderung des Jobstatus.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Der Abschnitt „Internal“ nennt das pnpm-Caching in GitHub Actions (#320) und das Update der Dev-Dependency vitest (#322). Beides sind interne Änderungen ohne erkennbaren Nutzen für Bibliotheksanwender.\"\n    }\n  ],\n  \"reason\": \"Die Notes beschreiben die nach dem Revert verbleibenden Änderungen und ordnen den geänderten Standardwert als Breaking Change ein. Zwei Aussagen gehen über die gezeigten Diffs hinaus; außerdem enthalten die Notes zwei interne Änderungen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26021,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 356,
+    "reasoning_output_tokens": 64
+   }
+  }
+ ]
+}

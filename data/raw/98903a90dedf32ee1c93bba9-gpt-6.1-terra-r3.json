@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "98903a90dedf32ee1c93bba9",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "hype-tone",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5430,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Der Kandidat verwendet Werbesprache und Begeisterung, etwa „powerful“, „thrilled“, „game-changing“, „effortless“, „bulletproof“ und „delightful“.\"},{\"criterion\":\"R2\",\"evidence\":\"„Bulletproof renewals“ suggeriert eine Ausfallsicherheit, die durch den belegten einmaligen Wiederholungsversuch nach ECONNRESET nicht gedeckt ist.\"}],\"reason\":\"Die nutzerrelevanten Änderungen, die Migration und die Version stimmen mit der Referenz überein. Der werbliche Ton und die unbelegte Zusicherung zur Ausfallsicherheit verstoßen jedoch gegen die Rubrik.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Der Kandidat verwendet Werbesprache und Begeisterung, etwa „powerful“, „thrilled“, „game-changing“, „effortless“, „bulletproof“ und „delightful“."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "„Bulletproof renewals“ suggeriert eine Ausfallsicherheit, die durch den belegten einmaligen Wiederholungsversuch nach ECONNRESET nicht gedeckt ist."
+   }
+  ],
+  "reason": "Die nutzerrelevanten Änderungen, die Migration und die Version stimmen mit der Referenz überein. Der werbliche Ton und die unbelegte Zusicherung zur Ausfallsicherheit verstoßen jedoch gegen die Rubrik.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25534,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 160,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-37e8-7a61-b5da-e69904dd2bbb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Der Kandidat verwendet Werbesprache und Begeisterung, etwa „powerful“, „thrilled“, „game-changing“, „effortless“, „bulletproof“ und „delightful“.\"},{\"criterion\":\"R2\",\"evidence\":\"„Bulletproof renewals“ suggeriert eine Ausfallsicherheit, die durch den belegten einmaligen Wiederholungsversuch nach ECONNRESET nicht gedeckt ist.\"}],\"reason\":\"Die nutzerrelevanten Änderungen, die Migration und die Version stimmen mit der Referenz überein. Der werbliche Ton und die unbelegte Zusicherung zur Ausfallsicherheit verstoßen jedoch gegen die Rubrik.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25534,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 160,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

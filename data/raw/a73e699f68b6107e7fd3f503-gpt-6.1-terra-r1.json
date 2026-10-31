@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "a73e699f68b6107e7fd3f503",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "reordered",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4929,
+ "text": "{\"violations\":[],\"reason\":\"Der Kandidat enthält dieselben nutzerrelevanten Fakten wie die Referenz. Lediglich die Reihenfolge der Abschnitte unterscheidet sich.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Kandidat enthält dieselben nutzerrelevanten Fakten wie die Referenz. Lediglich die Reihenfolge der Abschnitte unterscheidet sich.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25633,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 52,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-9b69-75e3-a620-d601b55d98ca"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Kandidat enthält dieselben nutzerrelevanten Fakten wie die Referenz. Lediglich die Reihenfolge der Abschnitte unterscheidet sich.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25633,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 52,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

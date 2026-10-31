@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "078e20a530913bf746887bdb",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "invented-claim",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6573,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes zu #351 behaupten, `stalledIntervalMs` werde stillschweigend ignoriert. Der Diff zeigt die Umbenennung der Option, belegt aber weder das Fehlen eines Alias noch das Verhalten bei Verwendung des alten Namens.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes zu #357 garantieren, dass Cron-Jobs beim Wechsel der Uhrzeit nicht mehr doppelt ausgeführt werden. Der Diff zeigt den Aufruf von `cron.next` mit `{ tz: 'UTC' }`, belegt diese allgemeine Garantie aber nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes zu #360 behaupten, große Importe seien etwa 40 % schneller. Der Diff zeigt Chargen von 500 Jobs; laut PR-Text wurde die Verbesserung nicht gemessen.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten Aussagen, die über die vorgelegten Diffs und Quellen hinausgehen. Die Versionsnummer und die Einordnung der Breaking Changes passen zu den belegten Änderungen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes zu #351 behaupten, `stalledIntervalMs` werde stillschweigend ignoriert. Der Diff zeigt die Umbenennung der Option, belegt aber weder das Fehlen eines Alias noch das Verhalten bei Verwendung des alten Namens."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes zu #357 garantieren, dass Cron-Jobs beim Wechsel der Uhrzeit nicht mehr doppelt ausgeführt werden. Der Diff zeigt den Aufruf von `cron.next` mit `{ tz: 'UTC' }`, belegt diese allgemeine Garantie aber nicht."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes zu #360 behaupten, große Importe seien etwa 40 % schneller. Der Diff zeigt Chargen von 500 Jobs; laut PR-Text wurde die Verbesserung nicht gemessen."
+   }
+  ],
+  "reason": "Die Notes enthalten Aussagen, die über die vorgelegten Diffs und Quellen hinausgehen. Die Versionsnummer und die Einordnung der Breaking Changes passen zu den belegten Änderungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26934,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 314,
+  "reasoning_output_tokens": 48
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-0073-72c3-8311-aa753affc696"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes zu #351 behaupten, `stalledIntervalMs` werde stillschweigend ignoriert. Der Diff zeigt die Umbenennung der Option, belegt aber weder das Fehlen eines Alias noch das Verhalten bei Verwendung des alten Namens.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes zu #357 garantieren, dass Cron-Jobs beim Wechsel der Uhrzeit nicht mehr doppelt ausgeführt werden. Der Diff zeigt den Aufruf von `cron.next` mit `{ tz: 'UTC' }`, belegt diese allgemeine Garantie aber nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes zu #360 behaupten, große Importe seien etwa 40 % schneller. Der Diff zeigt Chargen von 500 Jobs; laut PR-Text wurde die Verbesserung nicht gemessen.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten Aussagen, die über die vorgelegten Diffs und Quellen hinausgehen. Die Versionsnummer und die Einordnung der Breaking Changes passen zu den belegten Änderungen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26934,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 314,
+    "reasoning_output_tokens": 48
+   }
+  }
+ ]
+}

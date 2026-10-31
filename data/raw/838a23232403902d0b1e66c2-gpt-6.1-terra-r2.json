@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "838a23232403902d0b1e66c2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "ghost-pr",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4053,
+ "text": "{\"violations\":[],\"reason\":\"Die Einträge benennen die Änderungen und den Migrationsschritt konkret und sachlich. Ob die Angaben mit dem Code übereinstimmen, lässt sich aus den Notes allein nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Einträge benennen die Änderungen und den Migrationsschritt konkret und sachlich. Ob die Angaben mit dem Code übereinstimmen, lässt sich aus den Notes allein nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24345,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 59,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-f55a-7fe1-b75a-c3f652ac65fb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Einträge benennen die Änderungen und den Migrationsschritt konkret und sachlich. Ob die Angaben mit dem Code übereinstimmen, lässt sich aus den Notes allein nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24345,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

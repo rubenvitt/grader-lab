@@ -1,0 +1,79 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "078e20a530913bf746887bdb",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "invented-claim",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 10541,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der alte Optionsname `stalledIntervalMs` werde „silently ignored“ (#351). Der Diff zeigt die Umbenennung, aber nicht, wie eine unbekannte Option zur Laufzeit behandelt wird.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes versprechen, dass Details zum Sicherheitsproblem in einem separaten Advisory folgen (#358). Die Quellen belegen keine solche Veröffentlichung.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, große Importe seien durch #360 etwa 40 % schneller. Der PR-Text sagt ausdrücklich, dass die Verbesserung noch nicht gemessen wurde.\"}],\"reason\":\"Die Diffs belegen die aufgeführten Änderungen und den Major-Sprung auf 4.0.0. Drei Aussagen der Notes gehen jedoch über die Quellen hinaus.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, der alte Optionsname `stalledIntervalMs` werde „silently ignored“ (#351). Der Diff zeigt die Umbenennung, aber nicht, wie eine unbekannte Option zur Laufzeit behandelt wird."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes versprechen, dass Details zum Sicherheitsproblem in einem separaten Advisory folgen (#358). Die Quellen belegen keine solche Veröffentlichung."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, große Importe seien durch #360 etwa 40 % schneller. Der PR-Text sagt ausdrücklich, dass die Verbesserung noch nicht gemessen wurde."
+   }
+  ],
+  "reason": "Die Diffs belegen die aufgeführten Änderungen und den Major-Sprung auf 4.0.0. Drei Aussagen der Notes gehen jedoch über die Quellen hinaus.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26936,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 189,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-c7b1-7261-a2c2-08669d379737"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360a88cf3e518e-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360a8d8956e664-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360a94ad62d81e-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der alte Optionsname `stalledIntervalMs` werde „silently ignored“ (#351). Der Diff zeigt die Umbenennung, aber nicht, wie eine unbekannte Option zur Laufzeit behandelt wird.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes versprechen, dass Details zum Sicherheitsproblem in einem separaten Advisory folgen (#358). Die Quellen belegen keine solche Veröffentlichung.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, große Importe seien durch #360 etwa 40 % schneller. Der PR-Text sagt ausdrücklich, dass die Verbesserung noch nicht gemessen wurde.\"}],\"reason\":\"Die Diffs belegen die aufgeführten Änderungen und den Major-Sprung auf 4.0.0. Drei Aussagen der Notes gehen jedoch über die Quellen hinaus.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26936,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 189,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

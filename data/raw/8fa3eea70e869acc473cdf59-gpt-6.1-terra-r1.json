@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "8fa3eea70e869acc473cdf59",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7517,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 führt im Konstruktor eine Validierung für schema ein und wirft bei bisher akzeptierten Namen einen Fehler. Betroffene Nutzer müssen ihre Konfiguration anpassen; diese Änderung fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"„Unbreakable job state“ behauptet eine allgemeine Garantie für den Jobzustand. Der Diff von #413 belegt nur, dass complete() nach Verlust des Locks kein ack ausführt und lockLost auslöst.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"„massive peace of mind“, „crushes“ und „Unbreakable job state“ sind werbliche beziehungsweise übertreibende Formulierungen.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die letzte Version ist 5.0.0. Die inkompatible Schema-Validierung aus #414 verlangt einen Major-Sprung; 5.0.1 ist daher nicht passend.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen den Worker-Fix und erwähnen den Sicherheitsfix ohne verbotene Details. Sie kennzeichnen jedoch dessen inkompatible Auswirkung nicht als Breaking Change und verwenden eine zu niedrige Versionsnummer sowie unbelegte und werbliche Formulierungen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 führt im Konstruktor eine Validierung für schema ein und wirft bei bisher akzeptierten Namen einen Fehler. Betroffene Nutzer müssen ihre Konfiguration anpassen; diese Änderung fehlt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "„Unbreakable job state“ behauptet eine allgemeine Garantie für den Jobzustand. Der Diff von #413 belegt nur, dass complete() nach Verlust des Locks kein ack ausführt und lockLost auslöst."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "„massive peace of mind“, „crushes“ und „Unbreakable job state“ sind werbliche beziehungsweise übertreibende Formulierungen."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 5.0.0. Die inkompatible Schema-Validierung aus #414 verlangt einen Major-Sprung; 5.0.1 ist daher nicht passend."
+   }
+  ],
+  "reason": "Die Notes erfassen den Worker-Fix und erwähnen den Sicherheitsfix ohne verbotene Details. Sie kennzeichnen jedoch dessen inkompatible Auswirkung nicht als Breaking Change und verwenden eine zu niedrige Versionsnummer sowie unbelegte und werbliche Formulierungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25486,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 399,
+  "reasoning_output_tokens": 82
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-b538-79c2-8837-d920de057d01"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 führt im Konstruktor eine Validierung für schema ein und wirft bei bisher akzeptierten Namen einen Fehler. Betroffene Nutzer müssen ihre Konfiguration anpassen; diese Änderung fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"„Unbreakable job state“ behauptet eine allgemeine Garantie für den Jobzustand. Der Diff von #413 belegt nur, dass complete() nach Verlust des Locks kein ack ausführt und lockLost auslöst.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"„massive peace of mind“, „crushes“ und „Unbreakable job state“ sind werbliche beziehungsweise übertreibende Formulierungen.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die letzte Version ist 5.0.0. Die inkompatible Schema-Validierung aus #414 verlangt einen Major-Sprung; 5.0.1 ist daher nicht passend.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen den Worker-Fix und erwähnen den Sicherheitsfix ohne verbotene Details. Sie kennzeichnen jedoch dessen inkompatible Auswirkung nicht als Breaking Change und verwenden eine zu niedrige Versionsnummer sowie unbelegte und werbliche Formulierungen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25486,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 399,
+    "reasoning_output_tokens": 82
+   }
+  }
+ ]
+}

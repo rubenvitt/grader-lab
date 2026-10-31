@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "cd156e55685cd3507f271260",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-migration",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7368,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung, aber weder eine Laufzeitprüfung noch das Verhalten bei Verwendung des alten Namens.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration zu #351 nennt `stalledCheckMs`. Im Code heißt die neue Option `stallCheckMs`.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes zu #357 garantieren, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgelöst werden, und begründen dies mit einem Vergleich der Fälligkeiten in UTC. Der Diff zeigt, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; er belegt weder die allgemeine Garantie noch diese Beschreibung des Vergleichs.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes zu #358 kündigen Details in einem separaten Advisory an. Die Quellen nennen zwar ein Advisory, belegen aber nicht, dass dort später Details veröffentlicht werden.\"}],\"reason\":\"Die Notes enthalten eine falsche Migrationsanweisung und mehrere Aussagen, die über die gezeigten Diffs oder Quellen hinausgehen. Die Versionsnummer 4.0.0 berücksichtigt den erforderlichen Major-Sprung.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung, aber weder eine Laufzeitprüfung noch das Verhalten bei Verwendung des alten Namens."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration zu #351 nennt `stalledCheckMs`. Im Code heißt die neue Option `stallCheckMs`."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes zu #357 garantieren, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgelöst werden, und begründen dies mit einem Vergleich der Fälligkeiten in UTC. Der Diff zeigt, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; er belegt weder die allgemeine Garantie noch diese Beschreibung des Vergleichs."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes zu #358 kündigen Details in einem separaten Advisory an. Die Quellen nennen zwar ein Advisory, belegen aber nicht, dass dort später Details veröffentlicht werden."
+   }
+  ],
+  "reason": "Die Notes enthalten eine falsche Migrationsanweisung und mehrere Aussagen, die über die gezeigten Diffs oder Quellen hinausgehen. Die Versionsnummer 4.0.0 berücksichtigt den erforderlichen Major-Sprung.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26929,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 356,
+  "reasoning_output_tokens": 77
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-2297-7a81-bf8d-8e636d04e8b6"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung, aber weder eine Laufzeitprüfung noch das Verhalten bei Verwendung des alten Namens.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration zu #351 nennt `stalledCheckMs`. Im Code heißt die neue Option `stallCheckMs`.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes zu #357 garantieren, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgelöst werden, und begründen dies mit einem Vergleich der Fälligkeiten in UTC. Der Diff zeigt, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; er belegt weder die allgemeine Garantie noch diese Beschreibung des Vergleichs.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes zu #358 kündigen Details in einem separaten Advisory an. Die Quellen nennen zwar ein Advisory, belegen aber nicht, dass dort später Details veröffentlicht werden.\"}],\"reason\":\"Die Notes enthalten eine falsche Migrationsanweisung und mehrere Aussagen, die über die gezeigten Diffs oder Quellen hinausgehen. Die Versionsnummer 4.0.0 berücksichtigt den erforderlichen Major-Sprung.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26929,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 356,
+    "reasoning_output_tokens": 77
+   }
+  }
+ ]
+}

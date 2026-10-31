@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "ac78483444b144e35e94fba8",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6911,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Jitter-Eintrag behauptet, Retries kämen dadurch nicht alle gleichzeitig an. Der Diff in PR #395 berechnet zufällige, auf ganze Millisekunden abgerundete Verzögerungen; gleiche Verzögerungen bleiben möglich.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für das veraltete boolesche Argument von `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff in PR #399 entspricht `pause(false)` jedoch `pause({ drain: false })`; die Empfehlung ändert für diesen Aufruf das Verhalten.\"}],\"reason\":\"Die Notes decken die nutzerrelevanten Änderungen und die erforderliche Major-Version ab. Die Aussage zur Jitter-Strategie verspricht jedoch mehr als der Diff garantiert, und die Pause-Migration erhält nicht für beide bisherigen Argumentwerte das Verhalten.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Jitter-Eintrag behauptet, Retries kämen dadurch nicht alle gleichzeitig an. Der Diff in PR #395 berechnet zufällige, auf ganze Millisekunden abgerundete Verzögerungen; gleiche Verzögerungen bleiben möglich."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für das veraltete boolesche Argument von `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff in PR #399 entspricht `pause(false)` jedoch `pause({ drain: false })`; die Empfehlung ändert für diesen Aufruf das Verhalten."
+   }
+  ],
+  "reason": "Die Notes decken die nutzerrelevanten Änderungen und die erforderliche Major-Version ab. Die Aussage zur Jitter-Strategie verspricht jedoch mehr als der Diff garantiert, und die Pause-Migration erhält nicht für beide bisherigen Argumentwerte das Verhalten.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26082,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 250,
+  "reasoning_output_tokens": 46
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-1563-7530-9618-585153922450"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Jitter-Eintrag behauptet, Retries kämen dadurch nicht alle gleichzeitig an. Der Diff in PR #395 berechnet zufällige, auf ganze Millisekunden abgerundete Verzögerungen; gleiche Verzögerungen bleiben möglich.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für das veraltete boolesche Argument von `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff in PR #399 entspricht `pause(false)` jedoch `pause({ drain: false })`; die Empfehlung ändert für diesen Aufruf das Verhalten.\"}],\"reason\":\"Die Notes decken die nutzerrelevanten Änderungen und die erforderliche Major-Version ab. Die Aussage zur Jitter-Strategie verspricht jedoch mehr als der Diff garantiert, und die Pause-Migration erhält nicht für beide bisherigen Argumentwerte das Verhalten.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26082,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 250,
+    "reasoning_output_tokens": 46
+   }
+  }
+ ]
+}

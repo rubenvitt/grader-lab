@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "4b730357e22fb5ec34508786",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "false-success",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4416,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Änderungen konkret und sachlich. Der Sicherheitseintrag nennt nur die betroffene Komponente und die Upgrade-Empfehlung; weitere Verstöße lassen sich ohne Quellen nicht feststellen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben die Änderungen konkret und sachlich. Der Sicherheitseintrag nennt nur die betroffene Komponente und die Upgrade-Empfehlung; weitere Verstöße lassen sich ohne Quellen nicht feststellen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25181,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 61,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-4c8c-74b3-82e1-87534c0de408"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Änderungen konkret und sachlich. Der Sicherheitseintrag nennt nur die betroffene Komponente und die Upgrade-Empfehlung; weitere Verstöße lassen sich ohne Quellen nicht feststellen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25181,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 61,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

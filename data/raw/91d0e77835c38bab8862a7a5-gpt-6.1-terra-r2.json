@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "91d0e77835c38bab8862a7a5",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8140,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #351 behauptet, `stalledIntervalMs` werde stillschweigend ignoriert und es gebe keinen Alias. Der Diff zeigt die Umbenennung und die Verwendung von `stallCheckMs`, belegt aber weder das Fehlen einer Alias-Behandlung an anderer Stelle noch das Verhalten beim alten Namen.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu `PostgresStore` verweist auf #356. Die Funktion stammt laut Quellen aus PR #355.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #357 garantiert, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgelöst werden. Der Diff zeigt die Verwendung von `{ tz: 'UTC' }`, belegt aber nicht diese allgemeine Garantie.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Sicherheitseintrag kündigt Details in einem separaten Advisory an. Die Quellen nennen zwar QSA-2026-02, belegen aber nicht, dass Details später veröffentlicht werden.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Eintrag zu `PostgresStore` nennt keinen Einrichtungsschritt. Laut der mit PR #362 hinzugefügten Anleitung muss zuerst die Migration in `migrations/` ausgeführt werden.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die wesentlichen nutzerrelevanten Änderungen und verwenden wegen der Breaking Changes zutreffend Version 4.0.0. Einige Aussagen gehen jedoch über die Belege hinaus, ein PR-Verweis ist falsch und ein notwendiger Einrichtungsschritt fehlt.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #351 behauptet, `stalledIntervalMs` werde stillschweigend ignoriert und es gebe keinen Alias. Der Diff zeigt die Umbenennung und die Verwendung von `stallCheckMs`, belegt aber weder das Fehlen einer Alias-Behandlung an anderer Stelle noch das Verhalten beim alten Namen."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu `PostgresStore` verweist auf #356. Die Funktion stammt laut Quellen aus PR #355."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #357 garantiert, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgelöst werden. Der Diff zeigt die Verwendung von `{ tz: 'UTC' }`, belegt aber nicht diese allgemeine Garantie."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Sicherheitseintrag kündigt Details in einem separaten Advisory an. Die Quellen nennen zwar QSA-2026-02, belegen aber nicht, dass Details später veröffentlicht werden."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Eintrag zu `PostgresStore` nennt keinen Einrichtungsschritt. Laut der mit PR #362 hinzugefügten Anleitung muss zuerst die Migration in `migrations/` ausgeführt werden."
+   }
+  ],
+  "reason": "Die Notes erfassen die wesentlichen nutzerrelevanten Änderungen und verwenden wegen der Breaking Changes zutreffend Version 4.0.0. Einige Aussagen gehen jedoch über die Belege hinaus, ein PR-Verweis ist falsch und ein notwendiger Einrichtungsschritt fehlt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26076,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 484,
+  "reasoning_output_tokens": 92
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-a7a4-73b0-89c2-5f9259b97c89"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #351 behauptet, `stalledIntervalMs` werde stillschweigend ignoriert und es gebe keinen Alias. Der Diff zeigt die Umbenennung und die Verwendung von `stallCheckMs`, belegt aber weder das Fehlen einer Alias-Behandlung an anderer Stelle noch das Verhalten beim alten Namen.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu `PostgresStore` verweist auf #356. Die Funktion stammt laut Quellen aus PR #355.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #357 garantiert, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgelöst werden. Der Diff zeigt die Verwendung von `{ tz: 'UTC' }`, belegt aber nicht diese allgemeine Garantie.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Sicherheitseintrag kündigt Details in einem separaten Advisory an. Die Quellen nennen zwar QSA-2026-02, belegen aber nicht, dass Details später veröffentlicht werden.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Eintrag zu `PostgresStore` nennt keinen Einrichtungsschritt. Laut der mit PR #362 hinzugefügten Anleitung muss zuerst die Migration in `migrations/` ausgeführt werden.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die wesentlichen nutzerrelevanten Änderungen und verwenden wegen der Breaking Changes zutreffend Version 4.0.0. Einige Aussagen gehen jedoch über die Belege hinaus, ein PR-Verweis ist falsch und ein notwendiger Einrichtungsschritt fehlt.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26076,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 484,
+    "reasoning_output_tokens": 92
+   }
+  }
+ ]
+}

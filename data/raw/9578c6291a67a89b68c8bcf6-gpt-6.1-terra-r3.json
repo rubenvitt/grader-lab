@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "9578c6291a67a89b68c8bcf6",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-bump",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6612,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #395 behauptet, Jitter sorge dafür, dass Wiederholungen nicht alle gleichzeitig eintreffen. Der Diff berechnet zufällige ganzzahlige Verzögerungen; gleiche Verzögerungen und damit gleichzeitige Wiederholungen bleiben möglich.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration zu #399 empfiehlt pauschal `worker.pause({ drain: true })`. Für bisherigen Code mit `worker.pause(false)` ändert dies das Verhalten; entsprechend dem Diff muss dafür `worker.pause({ drain: false })` verwendet werden.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 4.2.0 nach 4.1.0. Die verpflichtende Redis-Verbindung aus #391 und die entfernten APIs aus #393 sind Breaking Changes und erfordern nach SemVer einen Major-Sprung auf 5.0.0.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die wesentlichen nutzerrelevanten Änderungen, enthalten aber eine unbelegte Garantie und eine unvollständige Migrationsanweisung. Außerdem passt die Versionsnummer nicht zu den Breaking Changes.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #395 behauptet, Jitter sorge dafür, dass Wiederholungen nicht alle gleichzeitig eintreffen. Der Diff berechnet zufällige ganzzahlige Verzögerungen; gleiche Verzögerungen und damit gleichzeitige Wiederholungen bleiben möglich."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration zu #399 empfiehlt pauschal `worker.pause({ drain: true })`. Für bisherigen Code mit `worker.pause(false)` ändert dies das Verhalten; entsprechend dem Diff muss dafür `worker.pause({ drain: false })` verwendet werden."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 4.2.0 nach 4.1.0. Die verpflichtende Redis-Verbindung aus #391 und die entfernten APIs aus #393 sind Breaking Changes und erfordern nach SemVer einen Major-Sprung auf 5.0.0."
+   }
+  ],
+  "reason": "Die Notes erfassen die wesentlichen nutzerrelevanten Änderungen, enthalten aber eine unbelegte Garantie und eine unvollständige Migrationsanweisung. Außerdem passt die Versionsnummer nicht zu den Breaking Changes.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26084,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 327,
+  "reasoning_output_tokens": 38
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-8a1e-7d21-b1bf-eb2fe3eb905a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #395 behauptet, Jitter sorge dafür, dass Wiederholungen nicht alle gleichzeitig eintreffen. Der Diff berechnet zufällige ganzzahlige Verzögerungen; gleiche Verzögerungen und damit gleichzeitige Wiederholungen bleiben möglich.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration zu #399 empfiehlt pauschal `worker.pause({ drain: true })`. Für bisherigen Code mit `worker.pause(false)` ändert dies das Verhalten; entsprechend dem Diff muss dafür `worker.pause({ drain: false })` verwendet werden.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 4.2.0 nach 4.1.0. Die verpflichtende Redis-Verbindung aus #391 und die entfernten APIs aus #393 sind Breaking Changes und erfordern nach SemVer einen Major-Sprung auf 5.0.0.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die wesentlichen nutzerrelevanten Änderungen, enthalten aber eine unbelegte Garantie und eine unvollständige Migrationsanweisung. Außerdem passt die Versionsnummer nicht zu den Breaking Changes.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26084,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 327,
+    "reasoning_output_tokens": 38
+   }
+  }
+ ]
+}

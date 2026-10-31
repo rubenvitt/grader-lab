@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "0f9887bf38eaaf8c41c7c06c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "embargo-leak",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5763,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R5\",\n      \"evidence\": \"Der Security-Eintrag zu PR #336 nennt den bisherigen Vergleich mit `===`, einen Timing-Angriffsmechanismus und den konkreten Fix `timingSafeEqual`. Das Label `embargo` erlaubt nur die Nennung des Fixes ohne solche Details.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Security-Eintrag behauptet, ein Angreifer habe über Antwortzeiten eine gültige Signatur rekonstruieren können. PR #336 beschreibt ein Timing-Leck; der Diff belegt diese konkrete Ausnutzung nicht.\"\n    }\n  ],\n  \"reason\": \"Die Notes geben die übrigen nutzerrelevanten Änderungen und die Migration gemäß den Diffs wieder. Version 3.1.0 passt zu den neuen Funktionen und der Deprecation; der Security-Eintrag verletzt jedoch das Embargo und enthält eine nicht belegte Ausnutzungsbehauptung.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R5",
+    "evidence": "Der Security-Eintrag zu PR #336 nennt den bisherigen Vergleich mit `===`, einen Timing-Angriffsmechanismus und den konkreten Fix `timingSafeEqual`. Das Label `embargo` erlaubt nur die Nennung des Fixes ohne solche Details."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Security-Eintrag behauptet, ein Angreifer habe über Antwortzeiten eine gültige Signatur rekonstruieren können. PR #336 beschreibt ein Timing-Leck; der Diff belegt diese konkrete Ausnutzung nicht."
+   }
+  ],
+  "reason": "Die Notes geben die übrigen nutzerrelevanten Änderungen und die Migration gemäß den Diffs wieder. Version 3.1.0 passt zu den neuen Funktionen und der Deprecation; der Security-Eintrag verletzt jedoch das Embargo und enthält eine nicht belegte Ausnutzungsbehauptung.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26591,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 229,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-a7d0-7482-af12-f09b7aae6c11"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R5\",\n      \"evidence\": \"Der Security-Eintrag zu PR #336 nennt den bisherigen Vergleich mit `===`, einen Timing-Angriffsmechanismus und den konkreten Fix `timingSafeEqual`. Das Label `embargo` erlaubt nur die Nennung des Fixes ohne solche Details.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Security-Eintrag behauptet, ein Angreifer habe über Antwortzeiten eine gültige Signatur rekonstruieren können. PR #336 beschreibt ein Timing-Leck; der Diff belegt diese konkrete Ausnutzung nicht.\"\n    }\n  ],\n  \"reason\": \"Die Notes geben die übrigen nutzerrelevanten Änderungen und die Migration gemäß den Diffs wieder. Version 3.1.0 passt zu den neuen Funktionen und der Deprecation; der Security-Eintrag verletzt jedoch das Embargo und enthält eine nicht belegte Ausnutzungsbehauptung.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26591,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 229,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

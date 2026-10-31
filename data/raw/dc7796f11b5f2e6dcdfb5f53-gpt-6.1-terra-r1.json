@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "dc7796f11b5f2e6dcdfb5f53",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "invented-claim",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5493,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #334 behauptet, dass Worker ihre Locks über Redis-Failover hinweg behalten und die Erneuerung automatisch erneut verbindet. Die Referenz belegt lediglich einen einmaligen Wiederholungsversuch der Lock-Erneuerung nach `ECONNRESET`.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag zu #334 nennt weder `ECONNRESET` als Auslöser noch die Beschränkung auf einen Wiederholungsversuch. Dadurch ist das tatsächliche Verhalten für Nutzer nicht erkennbar.\"}],\"reason\":\"Der Kandidat ersetzt die konkrete Beschreibung des Fixes durch nicht belegte Aussagen und lässt wesentliche Bedingungen des tatsächlichen Verhaltens weg.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #334 behauptet, dass Worker ihre Locks über Redis-Failover hinweg behalten und die Erneuerung automatisch erneut verbindet. Die Referenz belegt lediglich einen einmaligen Wiederholungsversuch der Lock-Erneuerung nach `ECONNRESET`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Eintrag zu #334 nennt weder `ECONNRESET` als Auslöser noch die Beschränkung auf einen Wiederholungsversuch. Dadurch ist das tatsächliche Verhalten für Nutzer nicht erkennbar."
+   }
+  ],
+  "reason": "Der Kandidat ersetzt die konkrete Beschreibung des Fixes durch nicht belegte Aussagen und lässt wesentliche Bedingungen des tatsächlichen Verhaltens weg.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25491,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 170,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-2b02-7752-9279-4bbd7f73a7b3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #334 behauptet, dass Worker ihre Locks über Redis-Failover hinweg behalten und die Erneuerung automatisch erneut verbindet. Die Referenz belegt lediglich einen einmaligen Wiederholungsversuch der Lock-Erneuerung nach `ECONNRESET`.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag zu #334 nennt weder `ECONNRESET` als Auslöser noch die Beschränkung auf einen Wiederholungsversuch. Dadurch ist das tatsächliche Verhalten für Nutzer nicht erkennbar.\"}],\"reason\":\"Der Kandidat ersetzt die konkrete Beschreibung des Fixes durch nicht belegte Aussagen und lässt wesentliche Bedingungen des tatsächlichen Verhaltens weg.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25491,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 170,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

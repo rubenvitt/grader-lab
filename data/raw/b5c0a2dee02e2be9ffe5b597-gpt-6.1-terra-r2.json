@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "b5c0a2dee02e2be9ffe5b597",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reordered",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7183,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der Worker verarbeite „at most `max` jobs per `perMs` milliseconds“. Der Diff zu #376 zeigt zwar die Option und einen Token Bucket pro Worker, aber weder dessen Implementierung noch eine Garantie für diese feste Obergrenze in jedem solchen Zeitraum.\"}],\"reason\":\"Die übrigen Aussagen entsprechen den gezeigten Änderungen; insbesondere verwendet der Eintrag zur Drosselung die endgültigen Optionsnamen aus dem Reland. Die Versionsnummer 4.1.0 passt zu Feature und Deprecation.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, der Worker verarbeite „at most `max` jobs per `perMs` milliseconds“. Der Diff zu #376 zeigt zwar die Option und einen Token Bucket pro Worker, aber weder dessen Implementierung noch eine Garantie für diese feste Obergrenze in jedem solchen Zeitraum."
+   }
+  ],
+  "reason": "Die übrigen Aussagen entsprechen den gezeigten Änderungen; insbesondere verwendet der Eintrag zur Drosselung die endgültigen Optionsnamen aus dem Reland. Die Versionsnummer 4.1.0 passt zu Feature und Deprecation.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26311,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 233,
+  "reasoning_output_tokens": 93
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-f2bc-7d90-9929-657925937601"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der Worker verarbeite „at most `max` jobs per `perMs` milliseconds“. Der Diff zu #376 zeigt zwar die Option und einen Token Bucket pro Worker, aber weder dessen Implementierung noch eine Garantie für diese feste Obergrenze in jedem solchen Zeitraum.\"}],\"reason\":\"Die übrigen Aussagen entsprechen den gezeigten Änderungen; insbesondere verwendet der Eintrag zur Drosselung die endgültigen Optionsnamen aus dem Reland. Die Versionsnummer 4.1.0 passt zu Feature und Deprecation.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26311,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 233,
+    "reasoning_output_tokens": 93
+   }
+  }
+ ]
+}

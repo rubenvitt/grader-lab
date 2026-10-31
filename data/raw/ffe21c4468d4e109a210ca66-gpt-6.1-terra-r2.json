@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "ffe21c4468d4e109a210ca66",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "paraphrase",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 9670,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration empfiehlt `queue.purge({ status, olderThanMs })`, erklärt aber nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Der Diff verwendet `this.purge({ status, olderThanMs: graceMs })`; die angegebene Kurzschreibweise funktioniert nur, wenn eine Variable `olderThanMs` bereits existiert.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag nennt nur „A security problem“ und lässt damit offen, welche Komponente betroffen ist. PR #336 ändert `src/signing.ts`; die Nennung dieser Komponente ist nach R5 erlaubt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes versprechen „A separate advisory with details follows later“. Die Quelle nennt ein Embargo für Advisory QSA-2026-01 bis 14 Tage nach dem Release, belegt aber nicht, dass später ein separates Advisory mit Details veröffentlicht wird.\"}],\"reason\":\"Die Migration muss den bisherigen Parameter korrekt auf die neue Option abbilden. Der Sicherheitseintrag kann die betroffene Komponente nennen, ohne das Embargo zu verletzen; die angekündigte spätere Veröffentlichung ist nicht belegt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration empfiehlt `queue.purge({ status, olderThanMs })`, erklärt aber nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Der Diff verwendet `this.purge({ status, olderThanMs: graceMs })`; die angegebene Kurzschreibweise funktioniert nur, wenn eine Variable `olderThanMs` bereits existiert."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Sicherheitseintrag nennt nur „A security problem“ und lässt damit offen, welche Komponente betroffen ist. PR #336 ändert `src/signing.ts`; die Nennung dieser Komponente ist nach R5 erlaubt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes versprechen „A separate advisory with details follows later“. Die Quelle nennt ein Embargo für Advisory QSA-2026-01 bis 14 Tage nach dem Release, belegt aber nicht, dass später ein separates Advisory mit Details veröffentlicht wird."
+   }
+  ],
+  "reason": "Die Migration muss den bisherigen Parameter korrekt auf die neue Option abbilden. Der Sicherheitseintrag kann die betroffene Komponente nennen, ohne das Embargo zu verletzen; die angekündigte spätere Veröffentlichung ist nicht belegt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26590,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 452,
+  "reasoning_output_tokens": 178
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-bdc9-7940-a4a0-f096e13e0801"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration empfiehlt `queue.purge({ status, olderThanMs })`, erklärt aber nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Der Diff verwendet `this.purge({ status, olderThanMs: graceMs })`; die angegebene Kurzschreibweise funktioniert nur, wenn eine Variable `olderThanMs` bereits existiert.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag nennt nur „A security problem“ und lässt damit offen, welche Komponente betroffen ist. PR #336 ändert `src/signing.ts`; die Nennung dieser Komponente ist nach R5 erlaubt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes versprechen „A separate advisory with details follows later“. Die Quelle nennt ein Embargo für Advisory QSA-2026-01 bis 14 Tage nach dem Release, belegt aber nicht, dass später ein separates Advisory mit Details veröffentlicht wird.\"}],\"reason\":\"Die Migration muss den bisherigen Parameter korrekt auf die neue Option abbilden. Der Sicherheitseintrag kann die betroffene Komponente nennen, ohne das Embargo zu verletzen; die angekündigte spätere Veröffentlichung ist nicht belegt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26590,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 452,
+    "reasoning_output_tokens": 178
+   }
+  }
+ ]
+}

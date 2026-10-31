@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "865283bfaa40b4efd06968cf",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "internal-noise",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5397,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Die Maintenance-Einträge zu aufgeteilten Lint- und Test-Jobs (#417) sowie zu CODEOWNERS (#419) betreffen interne Abläufe und gehören nicht in die Release Notes für Bibliotheksnutzer.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Referenz enthält keine Entsprechung für die Maintenance-Einträge oder die behauptete schnellere Rückmeldung (#417 und #419).\"}],\"reason\":\"Der Kandidat übernimmt die nutzerrelevanten Angaben der Referenz vollständig, ergänzt aber nicht belegte interne Änderungen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Die Maintenance-Einträge zu aufgeteilten Lint- und Test-Jobs (#417) sowie zu CODEOWNERS (#419) betreffen interne Abläufe und gehören nicht in die Release Notes für Bibliotheksnutzer."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Referenz enthält keine Entsprechung für die Maintenance-Einträge oder die behauptete schnellere Rückmeldung (#417 und #419)."
+   }
+  ],
+  "reason": "Der Kandidat übernimmt die nutzerrelevanten Angaben der Referenz vollständig, ergänzt aber nicht belegte interne Änderungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25368,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 139,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-7ee4-7861-b403-99b653840934"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Die Maintenance-Einträge zu aufgeteilten Lint- und Test-Jobs (#417) sowie zu CODEOWNERS (#419) betreffen interne Abläufe und gehören nicht in die Release Notes für Bibliotheksnutzer.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Referenz enthält keine Entsprechung für die Maintenance-Einträge oder die behauptete schnellere Rückmeldung (#417 und #419).\"}],\"reason\":\"Der Kandidat übernimmt die nutzerrelevanten Angaben der Referenz vollständig, ergänzt aber nicht belegte interne Änderungen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25368,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 139,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

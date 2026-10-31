@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "90fa73c90001e11f40c45f83",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 9149,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der Limiter verarbeite „at most `max` jobs per `perMs` milliseconds“. Der Diff von #376 zeigt einen Token-Bucket pro Worker und einen Aufruf von `take()`, aber keine Implementierung, die diese Grenze für jedes Zeitfenster belegt.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „Take control like never before!“, „powerful“, „incredible“, „effortlessly in charge“ und „sleek new“ sind Werbesprache statt sachlicher Beschreibung.\"}],\"reason\":\"Der Reland und die Deprecation sind in ihrer endgültigen Form enthalten; der Minor-Sprung auf 4.1.0 passt zum Inhalt. Die zugesicherte Rate ist durch den gezeigten Diff nicht belegt, und mehrere Formulierungen verstoßen gegen den geforderten Ton.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, der Limiter verarbeite „at most `max` jobs per `perMs` milliseconds“. Der Diff von #376 zeigt einen Token-Bucket pro Worker und einen Aufruf von `take()`, aber keine Implementierung, die diese Grenze für jedes Zeitfenster belegt."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „Take control like never before!“, „powerful“, „incredible“, „effortlessly in charge“ und „sleek new“ sind Werbesprache statt sachlicher Beschreibung."
+   }
+  ],
+  "reason": "Der Reland und die Deprecation sind in ihrer endgültigen Form enthalten; der Minor-Sprung auf 4.1.0 passt zum Inhalt. Die zugesicherte Rate ist durch den gezeigten Diff nicht belegt, und mehrere Formulierungen verstoßen gegen den geforderten Ton.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25499,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 261,
+  "reasoning_output_tokens": 53
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-4370-7c23-a648-d2c67a2ec7c0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der Limiter verarbeite „at most `max` jobs per `perMs` milliseconds“. Der Diff von #376 zeigt einen Token-Bucket pro Worker und einen Aufruf von `take()`, aber keine Implementierung, die diese Grenze für jedes Zeitfenster belegt.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „Take control like never before!“, „powerful“, „incredible“, „effortlessly in charge“ und „sleek new“ sind Werbesprache statt sachlicher Beschreibung.\"}],\"reason\":\"Der Reland und die Deprecation sind in ihrer endgültigen Form enthalten; der Minor-Sprung auf 4.1.0 passt zum Inhalt. Die zugesicherte Rate ist durch den gezeigten Diff nicht belegt, und mehrere Formulierungen verstoßen gegen den geforderten Ton.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25499,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 261,
+    "reasoning_output_tokens": 53
+   }
+  }
+ ]
+}

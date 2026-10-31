@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "aefaffeaf2875c61b5d09a75",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "useless-true",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5771,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker fix“ lässt offen, dass ein Worker nach dem Verlust des Job-Locks den Job nicht mehr bestätigt und stattdessen `lockLost` ausgibt. Auch die verhinderte Überschreibung des Zustands wird nicht genannt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security improvements“ nennt weder die betroffene Komponente `PostgresStore` noch die Upgrade-Empfehlung.\"}],\"reason\":\"Der Kandidat nennt beide Einträge und die korrekte Patch-Version, vermittelt aber ihre wesentlichen Aussagen nicht brauchbar. Insbesondere fehlen das konkrete Verhalten bei Lock-Verlust und die für den Sicherheitsfix relevante Upgrade-Empfehlung.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Worker fix“ lässt offen, dass ein Worker nach dem Verlust des Job-Locks den Job nicht mehr bestätigt und stattdessen `lockLost` ausgibt. Auch die verhinderte Überschreibung des Zustands wird nicht genannt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Security improvements“ nennt weder die betroffene Komponente `PostgresStore` noch die Upgrade-Empfehlung."
+   }
+  ],
+  "reason": "Der Kandidat nennt beide Einträge und die korrekte Patch-Version, vermittelt aber ihre wesentlichen Aussagen nicht brauchbar. Insbesondere fehlen das konkrete Verhalten bei Lock-Verlust und die für den Sicherheitsfix relevante Upgrade-Empfehlung.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24432,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 161,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-f804-7510-bc8f-0cf01bd2dd47"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker fix“ lässt offen, dass ein Worker nach dem Verlust des Job-Locks den Job nicht mehr bestätigt und stattdessen `lockLost` ausgibt. Auch die verhinderte Überschreibung des Zustands wird nicht genannt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security improvements“ nennt weder die betroffene Komponente `PostgresStore` noch die Upgrade-Empfehlung.\"}],\"reason\":\"Der Kandidat nennt beide Einträge und die korrekte Patch-Version, vermittelt aber ihre wesentlichen Aussagen nicht brauchbar. Insbesondere fehlen das konkrete Verhalten bei Lock-Verlust und die für den Sicherheitsfix relevante Upgrade-Empfehlung.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24432,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 161,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

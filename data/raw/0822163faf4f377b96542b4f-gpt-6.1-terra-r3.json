@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "0822163faf4f377b96542b4f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reverted-listed",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4091,
+ "text": "{\"violations\":[],\"reason\":\"Die Release Notes sind sachlich und beschreiben konkrete Änderungen sowie einen Migrationsschritt. Aus dem Text selbst ist kein Verstoß erkennbar; Aussagen, die Quellen erfordern, gelten gemäß Vorgabe als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Release Notes sind sachlich und beschreiben konkrete Änderungen sowie einen Migrationsschritt. Aus dem Text selbst ist kein Verstoß erkennbar; Aussagen, die Quellen erfordern, gelten gemäß Vorgabe als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25290,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 65,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-9180-74f2-adce-15e11b5881b4"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Release Notes sind sachlich und beschreiben konkrete Änderungen sowie einen Migrationsschritt. Aus dem Text selbst ist kein Verstoß erkennbar; Aussagen, die Quellen erfordern, gelten gemäß Vorgabe als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25290,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 65,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

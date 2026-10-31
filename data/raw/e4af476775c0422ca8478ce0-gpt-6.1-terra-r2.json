@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "e4af476775c0422ca8478ce0",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6998,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zur Jitter-Strategie, Wiederholungen kämen damit nicht alle gleichzeitig an, ist nicht garantiert: Der Diff in PR #395 berechnet einen zufälligen ganzzahligen Wert; mehrere Aufrufe können denselben Wert ergeben.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Fix für den Exit-Code von `quaykit inspect` wird in den Notes mit #400 bezeichnet. Laut Quellen stammt der entsprechende Diff aus PR #401.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Für bisheriges `worker.pause(false)` ändert das das Verhalten; laut Diff in PR #399 entspricht es `worker.pause({ drain: false })`.\"}],\"reason\":\"Die Notes enthalten eine nicht belegte Garantie und eine falsche PR-Referenz. Außerdem bewahrt die angegebene Migration für `worker.pause(false)` das bisherige Verhalten nicht.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zur Jitter-Strategie, Wiederholungen kämen damit nicht alle gleichzeitig an, ist nicht garantiert: Der Diff in PR #395 berechnet einen zufälligen ganzzahligen Wert; mehrere Aufrufe können denselben Wert ergeben."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Fix für den Exit-Code von `quaykit inspect` wird in den Notes mit #400 bezeichnet. Laut Quellen stammt der entsprechende Diff aus PR #401."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Für bisheriges `worker.pause(false)` ändert das das Verhalten; laut Diff in PR #399 entspricht es `worker.pause({ drain: false })`."
+   }
+  ],
+  "reason": "Die Notes enthalten eine nicht belegte Garantie und eine falsche PR-Referenz. Außerdem bewahrt die angegebene Migration für `worker.pause(false)` das bisherige Verhalten nicht.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26932,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 306,
+  "reasoning_output_tokens": 82
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-a87a-7ea3-ae8d-0767b5cb63f0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zur Jitter-Strategie, Wiederholungen kämen damit nicht alle gleichzeitig an, ist nicht garantiert: Der Diff in PR #395 berechnet einen zufälligen ganzzahligen Wert; mehrere Aufrufe können denselben Wert ergeben.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Fix für den Exit-Code von `quaykit inspect` wird in den Notes mit #400 bezeichnet. Laut Quellen stammt der entsprechende Diff aus PR #401.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Für bisheriges `worker.pause(false)` ändert das das Verhalten; laut Diff in PR #399 entspricht es `worker.pause({ drain: false })`.\"}],\"reason\":\"Die Notes enthalten eine nicht belegte Garantie und eine falsche PR-Referenz. Außerdem bewahrt die angegebene Migration für `worker.pause(false)` das bisherige Verhalten nicht.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26932,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 306,
+    "reasoning_output_tokens": 82
+   }
+  }
+ ]
+}

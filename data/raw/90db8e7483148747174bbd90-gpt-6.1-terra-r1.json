@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "90db8e7483148747174bbd90",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reverted-listed",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5455,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Limiter verwendet laut Referenz `perMs`, nicht `durationMs`. Außerdem gehört der Eintrag zu #376, nicht zu #371.\"},{\"criterion\":\"R8\",\"evidence\":\"Es fehlt der Hinweis, dass jede Worker-Instanz ihr eigenes Limit hat. Zudem nennt der Eintrag mit `durationMs` einen falschen Optionsnamen.\"}],\"reason\":\"Der Kandidat weicht beim Optionsnamen und bei der Referenznummer von der Referenz ab und lässt die Geltung des Limits pro Worker-Instanz aus.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Limiter verwendet laut Referenz `perMs`, nicht `durationMs`. Außerdem gehört der Eintrag zu #376, nicht zu #371."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Es fehlt der Hinweis, dass jede Worker-Instanz ihr eigenes Limit hat. Zudem nennt der Eintrag mit `durationMs` einen falschen Optionsnamen."
+   }
+  ],
+  "reason": "Der Kandidat weicht beim Optionsnamen und bei der Referenznummer von der Referenz ab und lässt die Geltung des Limits pro Worker-Instanz aus.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25361,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 136,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-6eaf-7a00-bf03-f8ca95abe217"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Limiter verwendet laut Referenz `perMs`, nicht `durationMs`. Außerdem gehört der Eintrag zu #376, nicht zu #371.\"},{\"criterion\":\"R8\",\"evidence\":\"Es fehlt der Hinweis, dass jede Worker-Instanz ihr eigenes Limit hat. Zudem nennt der Eintrag mit `durationMs` einen falschen Optionsnamen.\"}],\"reason\":\"Der Kandidat weicht beim Optionsnamen und bei der Referenznummer von der Referenz ab und lässt die Geltung des Limits pro Worker-Instanz aus.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25361,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 136,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "bd85b9c41ca11abc186f007e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "missing-breaking",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5811,
+ "text": "{\"reason\":\"Fassung A nennt zusätzlich die Entfernung von `queue.clean()` und `timeout` samt Migration; Fassung B lässt diese Änderung aus. Da keine Quellen oder Diffs vorliegen, lässt sich jedoch nicht beurteilen, ob die Änderung tatsächlich enthalten oder zurückgenommen wurde und ob die Migrationsschritte stimmen. Die Fassungen sind daher anhand der vorliegenden Informationen gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung A nennt zusätzlich die Entfernung von `queue.clean()` und `timeout` samt Migration; Fassung B lässt diese Änderung aus. Da keine Quellen oder Diffs vorliegen, lässt sich jedoch nicht beurteilen, ob die Änderung tatsächlich enthalten oder zurückgenommen wurde und ob die Migrationsschritte stimmen. Die Fassungen sind daher anhand der vorliegenden Informationen gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25519,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 92,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-2137-7db1-b349-d4ef5e8f9d67"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A nennt zusätzlich die Entfernung von `queue.clean()` und `timeout` samt Migration; Fassung B lässt diese Änderung aus. Da keine Quellen oder Diffs vorliegen, lässt sich jedoch nicht beurteilen, ob die Änderung tatsächlich enthalten oder zurückgenommen wurde und ob die Migrationsschritte stimmen. Die Fassungen sind daher anhand der vorliegenden Informationen gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25519,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 92,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

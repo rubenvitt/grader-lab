@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "33c7c72e485648b21082a28e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reordered",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4733,
+ "text": "{\"reason\":\"Die Fassungen enthalten dieselben Aussagen, Migrationsschritte und Versionsnummern. Sie unterscheiden sich nur in der Reihenfolge der Abschnitte, die laut Aufgabenstellung nicht ausschlaggebend ist.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen enthalten dieselben Aussagen, Migrationsschritte und Versionsnummern. Sie unterscheiden sich nur in der Reihenfolge der Abschnitte, die laut Aufgabenstellung nicht ausschlaggebend ist.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25380,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 58,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-dd91-7000-9ecf-af04e899cc8e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen enthalten dieselben Aussagen, Migrationsschritte und Versionsnummern. Sie unterscheiden sich nur in der Reihenfolge der Abschnitte, die laut Aufgabenstellung nicht ausschlaggebend ist.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25380,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 58,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

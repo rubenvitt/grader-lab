@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "1b086dff59a111704924828a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reverted-listed",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5996,
+ "text": "{\"reason\":\"Fassung B enthält zusätzlich einen Eintrag zu Priority Lanes. Aus den vorliegenden Texten lässt sich jedoch nicht beurteilen, ob diese Funktion belegt ist oder im Release zurückgenommen wurde; ein sachlicher Vorteil ist daher nicht feststellbar.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung B enthält zusätzlich einen Eintrag zu Priority Lanes. Aus den vorliegenden Texten lässt sich jedoch nicht beurteilen, ob diese Funktion belegt ist oder im Release zurückgenommen wurde; ein sachlicher Vorteil ist daher nicht feststellbar.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25415,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 166,
+  "reasoning_output_tokens": 97
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-6c50-78c2-ab08-cd36c11878fc"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B enthält zusätzlich einen Eintrag zu Priority Lanes. Aus den vorliegenden Texten lässt sich jedoch nicht beurteilen, ob diese Funktion belegt ist oder im Release zurückgenommen wurde; ein sachlicher Vorteil ist daher nicht feststellbar.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25415,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 166,
+    "reasoning_output_tokens": 97
+   }
+  }
+ ]
+}

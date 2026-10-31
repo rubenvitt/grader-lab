@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "a73eddfcb8644ce13f938018",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "missing-breaking",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 4605,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #307 ändert den Standardwert von `removeOnComplete` von `false` auf `true`. Diese nutzerrelevante Änderung fehlt unter „Breaking Changes“.\"}],\"reason\":\"Der geänderte Standardwert kann Nutzer zur Anpassung ihrer Konfiguration zwingen und muss als Breaking Change genannt werden. Die Versionsnummer 3.0.0 trägt dem Major-Sprung Rechnung; die aufgeführten Features und Fixes sind durch die Diffs gedeckt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #307 ändert den Standardwert von `removeOnComplete` von `false` auf `true`. Diese nutzerrelevante Änderung fehlt unter „Breaking Changes“."
+   }
+  ],
+  "reason": "Der geänderte Standardwert kann Nutzer zur Anpassung ihrer Konfiguration zwingen und muss als Breaking Change genannt werden. Die Versionsnummer 3.0.0 trägt dem Major-Sprung Rechnung; die aufgeführten Features und Fixes sind durch die Diffs gedeckt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26751,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 122,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-5549-7251-984a-b8252f5e3c91"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #307 ändert den Standardwert von `removeOnComplete` von `false` auf `true`. Diese nutzerrelevante Änderung fehlt unter „Breaking Changes“.\"}],\"reason\":\"Der geänderte Standardwert kann Nutzer zur Anpassung ihrer Konfiguration zwingen und muss als Breaking Change genannt werden. Die Versionsnummer 3.0.0 trägt dem Major-Sprung Rechnung; die aufgeführten Features und Fixes sind durch die Diffs gedeckt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26751,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 122,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

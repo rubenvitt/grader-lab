@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "482a4d6aa41ac40fba4b8625",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "invented-claim",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4597,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Fix-Eintrag behauptet, der Job werde beim nächsten Poll erneut versucht. Die Referenz belegt lediglich, dass die Sperre freigegeben wird und der Job nicht bis zu deren Ablauf aktiv bleibt.\"}],\"reason\":\"Der Kandidat ergänzt eine nicht belegte Aussage zum Zeitpunkt des erneuten Versuchs. Die übrigen Angaben entsprechen der Referenz.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Fix-Eintrag behauptet, der Job werde beim nächsten Poll erneut versucht. Die Referenz belegt lediglich, dass die Sperre freigegeben wird und der Job nicht bis zu deren Ablauf aktiv bleibt."
+   }
+  ],
+  "reason": "Der Kandidat ergänzt eine nicht belegte Aussage zum Zeitpunkt des erneuten Versuchs. Die übrigen Angaben entsprechen der Referenz.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25496,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 100,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-cd3f-7e91-9c59-65f946980bd4"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Fix-Eintrag behauptet, der Job werde beim nächsten Poll erneut versucht. Die Referenz belegt lediglich, dass die Sperre freigegeben wird und der Job nicht bis zu deren Ablauf aktiv bleibt.\"}],\"reason\":\"Der Kandidat ergänzt eine nicht belegte Aussage zum Zeitpunkt des erneuten Versuchs. Die übrigen Angaben entsprechen der Referenz.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25496,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 100,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

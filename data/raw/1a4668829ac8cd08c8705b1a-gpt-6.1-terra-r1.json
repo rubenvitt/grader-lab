@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "1a4668829ac8cd08c8705b1a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "wrong-bump",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4711,
+ "text": "{\"reason\":\"Fassung B verwendet mit 3.0.0 einen Major-Sprung, der zur beschriebenen Breaking Change passt. Fassung A bezeichnet dieselbe Änderung als Version 2.4.0 und verletzt damit die SemVer-Vorgabe; inhaltlich sind die Fassungen ansonsten gleich.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B verwendet mit 3.0.0 einen Major-Sprung, der zur beschriebenen Breaking Change passt. Fassung A bezeichnet dieselbe Änderung als Version 2.4.0 und verletzt damit die SemVer-Vorgabe; inhaltlich sind die Fassungen ansonsten gleich.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25380,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 76,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-74bf-7790-92fe-d963fcd15d2a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B verwendet mit 3.0.0 einen Major-Sprung, der zur beschriebenen Breaking Change passt. Fassung A bezeichnet dieselbe Änderung als Version 2.4.0 und verletzt damit die SemVer-Vorgabe; inhaltlich sind die Fassungen ansonsten gleich.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25380,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 76,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

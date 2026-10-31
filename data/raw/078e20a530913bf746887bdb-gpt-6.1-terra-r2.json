@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "078e20a530913bf746887bdb",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "invented-claim",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8733,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Angabe, große Importe seien „about 40% faster“ (#360), ist nicht belegt: Der PR-Text sagt ausdrücklich, dass keine Messung vorgenommen wurde; der Diff zeigt lediglich die Verarbeitung in 500er-Chunks.\"},{\"criterion\":\"R2\",\"evidence\":\"Bei #351 behaupten die Notes, der alte Optionsname werde stillschweigend ignoriert. Der gezeigte Diff entfernt den Namen aus dem Typ und ersetzt den Zugriff, belegt aber weder das Laufzeitverhalten bei Übergabe der alten Option noch das vollständige Fehlen eines Alias.\"}],\"reason\":\"Die Breaking Changes, die Migration, das Embargo und der Major-Sprung auf 4.0.0 sind durch die Quellen gedeckt beziehungsweise mit der Rubric vereinbar. Zwei Aussagen gehen jedoch über das hinaus, was die gezeigten Quellen belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Angabe, große Importe seien „about 40% faster“ (#360), ist nicht belegt: Der PR-Text sagt ausdrücklich, dass keine Messung vorgenommen wurde; der Diff zeigt lediglich die Verarbeitung in 500er-Chunks."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Bei #351 behaupten die Notes, der alte Optionsname werde stillschweigend ignoriert. Der gezeigte Diff entfernt den Namen aus dem Typ und ersetzt den Zugriff, belegt aber weder das Laufzeitverhalten bei Übergabe der alten Option noch das vollständige Fehlen eines Alias."
+   }
+  ],
+  "reason": "Die Breaking Changes, die Migration, das Embargo und der Major-Sprung auf 4.0.0 sind durch die Quellen gedeckt beziehungsweise mit der Rubric vereinbar. Zwei Aussagen gehen jedoch über das hinaus, was die gezeigten Quellen belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26936,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 203,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-ef15-79a1-8516-c81795829aea"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Angabe, große Importe seien „about 40% faster“ (#360), ist nicht belegt: Der PR-Text sagt ausdrücklich, dass keine Messung vorgenommen wurde; der Diff zeigt lediglich die Verarbeitung in 500er-Chunks.\"},{\"criterion\":\"R2\",\"evidence\":\"Bei #351 behaupten die Notes, der alte Optionsname werde stillschweigend ignoriert. Der gezeigte Diff entfernt den Namen aus dem Typ und ersetzt den Zugriff, belegt aber weder das Laufzeitverhalten bei Übergabe der alten Option noch das vollständige Fehlen eines Alias.\"}],\"reason\":\"Die Breaking Changes, die Migration, das Embargo und der Major-Sprung auf 4.0.0 sind durch die Quellen gedeckt beziehungsweise mit der Rubric vereinbar. Zwei Aussagen gehen jedoch über das hinaus, was die gezeigten Quellen belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26936,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 203,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

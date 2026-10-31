@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "51cc07b26409bd3f9522db73",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reverted-listed",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5391,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu Priority Lanes behauptet, dass `lanes` bei `Queue` und `lane` bei `add()` dringende Jobs bevorzugen (#301). Dafür gibt es in der Referenz keine Entsprechung.\"}],\"reason\":\"Der Kandidat enthält eine nicht durch die Referenz belegte Funktion. Die übrigen Angaben stimmen mit der Referenz überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu Priority Lanes behauptet, dass `lanes` bei `Queue` und `lane` bei `add()` dringende Jobs bevorzugen (#301). Dafür gibt es in der Referenz keine Entsprechung."
+   }
+  ],
+  "reason": "Der Kandidat enthält eine nicht durch die Referenz belegte Funktion. Die übrigen Angaben stimmen mit der Referenz überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25520,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 105,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-82f0-7bd0-802c-18e99c328280"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu Priority Lanes behauptet, dass `lanes` bei `Queue` und `lane` bei `add()` dringende Jobs bevorzugen (#301). Dafür gibt es in der Referenz keine Entsprechung.\"}],\"reason\":\"Der Kandidat enthält eine nicht durch die Referenz belegte Funktion. Die übrigen Angaben stimmen mit der Referenz überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25520,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 105,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

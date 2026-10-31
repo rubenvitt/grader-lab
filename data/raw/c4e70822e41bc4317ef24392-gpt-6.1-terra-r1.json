@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "c4e70822e41bc4317ef24392",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7112,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"#307 ändert den Standardwert von `removeOnComplete` von `false` auf `true`. Der Eintrag „Some default behaviour has changed“ nennt weder diese Änderung noch, dass Nutzer `removeOnComplete: false` setzen müssen, um das bisherige Verhalten beizubehalten.\"},{\"criterion\":\"R8\",\"evidence\":\"#318 gibt die Statistik bei `argv.json` als JSON statt als Tabelle aus. „The CLI has been improved“ nennt weder `quaykit inspect --json` noch die konkrete Änderung.\"},{\"criterion\":\"R8\",\"evidence\":\"#304 gibt den Lock im `finally`-Block auch dann frei, wenn der Handler einen Fehler wirft. „Various improvements to worker reliability“ beschreibt diese Korrektur nicht.\"}],\"reason\":\"Die Notes ordnen die Änderung des Standardwerts als Breaking Change ein und wählen dafür mit 3.0.0 die passende Major-Version. Die drei Einträge sind jedoch zu allgemein, um die konkreten Änderungen und den nötigen Migrationsschritt erkennbar zu machen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "#307 ändert den Standardwert von `removeOnComplete` von `false` auf `true`. Der Eintrag „Some default behaviour has changed“ nennt weder diese Änderung noch, dass Nutzer `removeOnComplete: false` setzen müssen, um das bisherige Verhalten beizubehalten."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "#318 gibt die Statistik bei `argv.json` als JSON statt als Tabelle aus. „The CLI has been improved“ nennt weder `quaykit inspect --json` noch die konkrete Änderung."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "#304 gibt den Lock im `finally`-Block auch dann frei, wenn der Handler einen Fehler wirft. „Various improvements to worker reliability“ beschreibt diese Korrektur nicht."
+   }
+  ],
+  "reason": "Die Notes ordnen die Änderung des Standardwerts als Breaking Change ein und wählen dafür mit 3.0.0 die passende Major-Version. Die drei Einträge sind jedoch zu allgemein, um die konkreten Änderungen und den nötigen Migrationsschritt erkennbar zu machen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26724,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 241,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-01e1-71f0-993e-d91748acd4f1"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"#307 ändert den Standardwert von `removeOnComplete` von `false` auf `true`. Der Eintrag „Some default behaviour has changed“ nennt weder diese Änderung noch, dass Nutzer `removeOnComplete: false` setzen müssen, um das bisherige Verhalten beizubehalten.\"},{\"criterion\":\"R8\",\"evidence\":\"#318 gibt die Statistik bei `argv.json` als JSON statt als Tabelle aus. „The CLI has been improved“ nennt weder `quaykit inspect --json` noch die konkrete Änderung.\"},{\"criterion\":\"R8\",\"evidence\":\"#304 gibt den Lock im `finally`-Block auch dann frei, wenn der Handler einen Fehler wirft. „Various improvements to worker reliability“ beschreibt diese Korrektur nicht.\"}],\"reason\":\"Die Notes ordnen die Änderung des Standardwerts als Breaking Change ein und wählen dafür mit 3.0.0 die passende Major-Version. Die drei Einträge sind jedoch zu allgemein, um die konkreten Änderungen und den nötigen Migrationsschritt erkennbar zu machen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26724,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 241,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

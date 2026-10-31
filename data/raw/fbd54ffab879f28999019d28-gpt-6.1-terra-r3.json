@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "fbd54ffab879f28999019d28",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-bump",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4374,
+ "text": "{\"reason\":\"Fassung A verwendet mit 4.0.0 einen Major-Sprung, der zu den aufgeführten Breaking Changes passt. Fassung B verwendet dafür die Minor-Version 3.2.0 und verstößt damit gegen R9; inhaltlich sind die Fassungen ansonsten gleich.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A verwendet mit 4.0.0 einen Major-Sprung, der zu den aufgeführten Breaking Changes passt. Fassung B verwendet dafür die Minor-Version 3.2.0 und verstößt damit gegen R9; inhaltlich sind die Fassungen ansonsten gleich.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25526,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 75,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-84e2-7951-9930-9838c61f663c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A verwendet mit 4.0.0 einen Major-Sprung, der zu den aufgeführten Breaking Changes passt. Fassung B verwendet dafür die Minor-Version 3.2.0 und verstößt damit gegen R9; inhaltlich sind die Fassungen ansonsten gleich.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25526,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 75,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

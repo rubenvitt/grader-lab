@@ -1,0 +1,79 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "d7bda24c5dc672624cb157d0",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8924,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„Store construction changed“ (#391) nennt weder die nun erforderliche Option `connection` noch, dass `new RedisStore()` ohne sie einen Fehler auslöst.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„Old APIs were removed“ (#393) nennt die entfernte Methode `Queue.clean` und die entfernte Job-Option `timeout` nicht. Die Quellen nennen `Queue.purge({ status, olderThanMs })` und `timeoutMs` als Ersatz.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„More retry options“ (#395) erklärt die neue Jitter-Strategie nicht und nennt die Aktivierung über `backoff: { type: 'jitter', baseMs }` nicht.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„Shutdown behaviour improved“ (#397) lässt offen, dass `worker.close()` jetzt höchstens bis zum Ablauf von `shutdownTimeoutMs` auf aktive Jobs wartet.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„CLI improvements“ (#401) nennt die konkrete Änderung nicht: Bei einem Fehler von `quaykit inspect` wird nun der Exit-Code 1 gesetzt.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„A worker argument is deprecated“ (#399) nennt weder das betroffene `worker.pause(boolean)` noch den Ersatz `worker.pause({ drain })` oder dass das bisherige Argument weiterhin funktioniert.\"\n    }\n  ],\n  \"reason\": \"Die Versionsnummer 5.0.0 passt zu den Breaking Changes, und die Änderungen stehen in den passenden Abschnitten. Die Einträge sind jedoch zu allgemein, um die konkreten Auswirkungen und nötigen Anpassungen zu erkennen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Store construction changed“ (#391) nennt weder die nun erforderliche Option `connection` noch, dass `new RedisStore()` ohne sie einen Fehler auslöst."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Old APIs were removed“ (#393) nennt die entfernte Methode `Queue.clean` und die entfernte Job-Option `timeout` nicht. Die Quellen nennen `Queue.purge({ status, olderThanMs })` und `timeoutMs` als Ersatz."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„More retry options“ (#395) erklärt die neue Jitter-Strategie nicht und nennt die Aktivierung über `backoff: { type: 'jitter', baseMs }` nicht."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Shutdown behaviour improved“ (#397) lässt offen, dass `worker.close()` jetzt höchstens bis zum Ablauf von `shutdownTimeoutMs` auf aktive Jobs wartet."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„CLI improvements“ (#401) nennt die konkrete Änderung nicht: Bei einem Fehler von `quaykit inspect` wird nun der Exit-Code 1 gesetzt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„A worker argument is deprecated“ (#399) nennt weder das betroffene `worker.pause(boolean)` noch den Ersatz `worker.pause({ drain })` oder dass das bisherige Argument weiterhin funktioniert."
+   }
+  ],
+  "reason": "Die Versionsnummer 5.0.0 passt zu den Breaking Changes, und die Änderungen stehen in den passenden Abschnitten. Die Einträge sind jedoch zu allgemein, um die konkreten Auswirkungen und nötigen Anpassungen zu erkennen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26748,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 489,
+  "reasoning_output_tokens": 71
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-e011-77f0-b8db-6b4bc42eb98a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„Store construction changed“ (#391) nennt weder die nun erforderliche Option `connection` noch, dass `new RedisStore()` ohne sie einen Fehler auslöst.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„Old APIs were removed“ (#393) nennt die entfernte Methode `Queue.clean` und die entfernte Job-Option `timeout` nicht. Die Quellen nennen `Queue.purge({ status, olderThanMs })` und `timeoutMs` als Ersatz.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„More retry options“ (#395) erklärt die neue Jitter-Strategie nicht und nennt die Aktivierung über `backoff: { type: 'jitter', baseMs }` nicht.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„Shutdown behaviour improved“ (#397) lässt offen, dass `worker.close()` jetzt höchstens bis zum Ablauf von `shutdownTimeoutMs` auf aktive Jobs wartet.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„CLI improvements“ (#401) nennt die konkrete Änderung nicht: Bei einem Fehler von `quaykit inspect` wird nun der Exit-Code 1 gesetzt.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„A worker argument is deprecated“ (#399) nennt weder das betroffene `worker.pause(boolean)` noch den Ersatz `worker.pause({ drain })` oder dass das bisherige Argument weiterhin funktioniert.\"\n    }\n  ],\n  \"reason\": \"Die Versionsnummer 5.0.0 passt zu den Breaking Changes, und die Änderungen stehen in den passenden Abschnitten. Die Einträge sind jedoch zu allgemein, um die konkreten Auswirkungen und nötigen Anpassungen zu erkennen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26748,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 489,
+    "reasoning_output_tokens": 71
+   }
+  }
+ ]
+}

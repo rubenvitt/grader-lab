@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "e70c6efa5986d3f2b389462b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reverted-listed",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 12953,
+ "text": "{\"reason\":\"Beide Fassungen enthalten dieselben Fixes. Für das zusätzliche Feature in B ist keine Quelle oder Versionshistorie angegeben; seine Aufnahme und die Patch-Version lassen sich daher nicht ausreichend beurteilen.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen enthalten dieselben Fixes. Für das zusätzliche Feature in B ist keine Quelle oder Versionshistorie angegeben; seine Aufnahme und die Patch-Version lassen sich daher nicht ausreichend beurteilen.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25248,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 56,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-21f9-77b3-9ef5-12484a5934c2"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361649987ba5b6-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536164e3b84f694-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53616564b2558e4-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361663ba912dfd-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen enthalten dieselben Fixes. Für das zusätzliche Feature in B ist keine Quelle oder Versionshistorie angegeben; seine Aufnahme und die Patch-Version lassen sich daher nicht ausreichend beurteilen.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25248,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 56,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

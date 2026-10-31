@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "b5f918e77861c7e7394e97e6",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "missing-breaking",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7558,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #393 entfernt die öffentliche Methode `Queue.clean(graceMs, status)` und die Job-Option `timeout`. Beide Änderungen fehlen unter „Breaking Changes“. Nutzer müssen auf `Queue.purge({ status, olderThanMs })` beziehungsweise `timeoutMs` umstellen.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Jitter-Eintrag behauptet, Retries kämen dadurch nicht alle gleichzeitig an. Der Diff in PR #395 berechnet zufällige, auf ganze Millisekunden abgerundete Verzögerungen; gleiche Verzögerungen bleiben daher möglich.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für das als veraltet markierte boolesche Argument empfiehlt allgemein `worker.pause({ drain: true })`. Laut PR #399 entspricht dies nur `worker.pause(true)`; für `worker.pause(false)` ist `worker.pause({ drain: false })` die entsprechende Umstellung.\"\n    }\n  ],\n  \"reason\": \"Die Notes lassen zwei Breaking Changes aus, versprechen eine durch den Diff nicht garantierte Wirkung und geben einen unvollständigen Migrationsschritt an. Die Versionsnummer 5.0.0 passt zum Major-Sprung.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #393 entfernt die öffentliche Methode `Queue.clean(graceMs, status)` und die Job-Option `timeout`. Beide Änderungen fehlen unter „Breaking Changes“. Nutzer müssen auf `Queue.purge({ status, olderThanMs })` beziehungsweise `timeoutMs` umstellen."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Jitter-Eintrag behauptet, Retries kämen dadurch nicht alle gleichzeitig an. Der Diff in PR #395 berechnet zufällige, auf ganze Millisekunden abgerundete Verzögerungen; gleiche Verzögerungen bleiben daher möglich."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für das als veraltet markierte boolesche Argument empfiehlt allgemein `worker.pause({ drain: true })`. Laut PR #399 entspricht dies nur `worker.pause(true)`; für `worker.pause(false)` ist `worker.pause({ drain: false })` die entsprechende Umstellung."
+   }
+  ],
+  "reason": "Die Notes lassen zwei Breaking Changes aus, versprechen eine durch den Diff nicht garantierte Wirkung und geben einen unvollständigen Migrationsschritt an. Die Versionsnummer 5.0.0 passt zum Major-Sprung.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26879,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 357,
+  "reasoning_output_tokens": 59
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-2621-7270-bdf4-d8be0473d803"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #393 entfernt die öffentliche Methode `Queue.clean(graceMs, status)` und die Job-Option `timeout`. Beide Änderungen fehlen unter „Breaking Changes“. Nutzer müssen auf `Queue.purge({ status, olderThanMs })` beziehungsweise `timeoutMs` umstellen.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Jitter-Eintrag behauptet, Retries kämen dadurch nicht alle gleichzeitig an. Der Diff in PR #395 berechnet zufällige, auf ganze Millisekunden abgerundete Verzögerungen; gleiche Verzögerungen bleiben daher möglich.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für das als veraltet markierte boolesche Argument empfiehlt allgemein `worker.pause({ drain: true })`. Laut PR #399 entspricht dies nur `worker.pause(true)`; für `worker.pause(false)` ist `worker.pause({ drain: false })` die entsprechende Umstellung.\"\n    }\n  ],\n  \"reason\": \"Die Notes lassen zwei Breaking Changes aus, versprechen eine durch den Diff nicht garantierte Wirkung und geben einen unvollständigen Migrationsschritt an. Die Versionsnummer 5.0.0 passt zum Major-Sprung.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26879,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 357,
+    "reasoning_output_tokens": 59
+   }
+  }
+ ]
+}

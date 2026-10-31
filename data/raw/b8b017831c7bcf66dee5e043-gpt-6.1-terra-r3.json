@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "b8b017831c7bcf66dee5e043",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 12862,
+ "text": "{\"reason\":\"Fassung B ist besser, weil sie den für Bibliotheksnutzer irrelevanten CI-Eintrag auslässt. Die übrigen Aussagen sind identisch; ihre Übereinstimmung mit den Quellen lässt sich anhand der vorliegenden Texte nicht prüfen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist besser, weil sie den für Bibliotheksnutzer irrelevanten CI-Eintrag auslässt. Die übrigen Aussagen sind identisch; ihre Übereinstimmung mit den Quellen lässt sich anhand der vorliegenden Texte nicht prüfen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25543,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 69,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-a7be-7dd3-991f-9b8500ad62d5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360becf8ff2153-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360bf1c8444c5a-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360bf90a24e50b-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360c059e96c4d0-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist besser, weil sie den für Bibliotheksnutzer irrelevanten CI-Eintrag auslässt. Die übrigen Aussagen sind identisch; ihre Übereinstimmung mit den Quellen lässt sich anhand der vorliegenden Texte nicht prüfen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25543,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 69,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

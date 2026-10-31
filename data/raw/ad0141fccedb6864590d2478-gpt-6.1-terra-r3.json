@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "ad0141fccedb6864590d2478",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "hype-tone",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5776,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Werbesprache und Superlative finden sich etwa in „the leanest quaykit ever“, „game-changing release“, „Unleash the power of automation“ und „Rock-solid locks“.\"}],\"reason\":\"Die Notes enthalten mehrfach werbliche und übersteigerte Formulierungen. Die weiteren Kriterien lassen sich aus dem Text selbst nicht als verletzt erkennen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Werbesprache und Superlative finden sich etwa in „the leanest quaykit ever“, „game-changing release“, „Unleash the power of automation“ und „Rock-solid locks“."
+   }
+  ],
+  "reason": "Die Notes enthalten mehrfach werbliche und übersteigerte Formulierungen. Die weiteren Kriterien lassen sich aus dem Text selbst nicht als verletzt erkennen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25279,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 99,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-f581-7752-9254-62e709f1a1a5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Werbesprache und Superlative finden sich etwa in „the leanest quaykit ever“, „game-changing release“, „Unleash the power of automation“ und „Rock-solid locks“.\"}],\"reason\":\"Die Notes enthalten mehrfach werbliche und übersteigerte Formulierungen. Die weiteren Kriterien lassen sich aus dem Text selbst nicht als verletzt erkennen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25279,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 99,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

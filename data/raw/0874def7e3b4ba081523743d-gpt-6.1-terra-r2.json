@@ -1,0 +1,87 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "0874def7e3b4ba081523743d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "useless-true",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 7298,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker configuration has changed“ nennt weder die Umbenennung von `stalledIntervalMs` zu `stallCheckMs` noch, dass der alte Name ohne Alias stillschweigend ignoriert wird.\"},{\"criterion\":\"R3\",\"evidence\":\"Für die Worker-Option fehlt der Migrationsschritt, `stalledIntervalMs` in den `Worker`-Optionen durch `stallCheckMs` zu ersetzen.\"},{\"criterion\":\"R8\",\"evidence\":\"„The build output has changed“ lässt offen, dass quaykit nur noch ESM unterstützt und das CommonJS-Bundle sowie der `require`-Export entfallen.\"},{\"criterion\":\"R3\",\"evidence\":\"Für die Umstellung auf ESM fehlt der Migrationsschritt, quaykit mit `import` zu laden.\"},{\"criterion\":\"R8\",\"evidence\":\"„New storage option“ nennt weder `PostgresStore` und den Export `quaykit/postgres` noch Postgres und `SKIP LOCKED`.\"},{\"criterion\":\"R8\",\"evidence\":\"„Scheduler fix“ beschreibt nicht, dass Cron-Jobs beim Wechsel der Uhrzeit nicht mehr doppelt ausgelöst werden und Fälligkeitszeiten nun in UTC verglichen werden.\"},{\"criterion\":\"R8\",\"evidence\":\"„Queue performance work“ lässt offen, dass `addBulk` Jobs nun in Blöcken zu 500 statt mit einem Befehl pro Job schreibt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Dashboard hardening“ vermittelt den Sicherheitsfix nicht klar und lässt die Upgrade-Empfehlung sowie den Hinweis auf ein separates Advisory aus.\"}],\"reason\":\"Der Kandidat nennt die betroffenen Bereiche, beschreibt die Änderungen aber nicht ausreichend, um ihre Auswirkungen zu erkennen oder die Migration durchzuführen. Auch die Upgrade-Empfehlung zum Sicherheitsfix fehlt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Worker configuration has changed“ nennt weder die Umbenennung von `stalledIntervalMs` zu `stallCheckMs` noch, dass der alte Name ohne Alias stillschweigend ignoriert wird."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Für die Worker-Option fehlt der Migrationsschritt, `stalledIntervalMs` in den `Worker`-Optionen durch `stallCheckMs` zu ersetzen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„The build output has changed“ lässt offen, dass quaykit nur noch ESM unterstützt und das CommonJS-Bundle sowie der `require`-Export entfallen."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Für die Umstellung auf ESM fehlt der Migrationsschritt, quaykit mit `import` zu laden."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„New storage option“ nennt weder `PostgresStore` und den Export `quaykit/postgres` noch Postgres und `SKIP LOCKED`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Scheduler fix“ beschreibt nicht, dass Cron-Jobs beim Wechsel der Uhrzeit nicht mehr doppelt ausgelöst werden und Fälligkeitszeiten nun in UTC verglichen werden."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Queue performance work“ lässt offen, dass `addBulk` Jobs nun in Blöcken zu 500 statt mit einem Befehl pro Job schreibt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Dashboard hardening“ vermittelt den Sicherheitsfix nicht klar und lässt die Upgrade-Empfehlung sowie den Hinweis auf ein separates Advisory aus."
+   }
+  ],
+  "reason": "Der Kandidat nennt die betroffenen Bereiche, beschreibt die Änderungen aber nicht ausreichend, um ihre Auswirkungen zu erkennen oder die Migration durchzuführen. Auch die Upgrade-Empfehlung zum Sicherheitsfix fehlt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25471,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 394,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-11f3-7010-86d2-98cfdcda606f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker configuration has changed“ nennt weder die Umbenennung von `stalledIntervalMs` zu `stallCheckMs` noch, dass der alte Name ohne Alias stillschweigend ignoriert wird.\"},{\"criterion\":\"R3\",\"evidence\":\"Für die Worker-Option fehlt der Migrationsschritt, `stalledIntervalMs` in den `Worker`-Optionen durch `stallCheckMs` zu ersetzen.\"},{\"criterion\":\"R8\",\"evidence\":\"„The build output has changed“ lässt offen, dass quaykit nur noch ESM unterstützt und das CommonJS-Bundle sowie der `require`-Export entfallen.\"},{\"criterion\":\"R3\",\"evidence\":\"Für die Umstellung auf ESM fehlt der Migrationsschritt, quaykit mit `import` zu laden.\"},{\"criterion\":\"R8\",\"evidence\":\"„New storage option“ nennt weder `PostgresStore` und den Export `quaykit/postgres` noch Postgres und `SKIP LOCKED`.\"},{\"criterion\":\"R8\",\"evidence\":\"„Scheduler fix“ beschreibt nicht, dass Cron-Jobs beim Wechsel der Uhrzeit nicht mehr doppelt ausgelöst werden und Fälligkeitszeiten nun in UTC verglichen werden.\"},{\"criterion\":\"R8\",\"evidence\":\"„Queue performance work“ lässt offen, dass `addBulk` Jobs nun in Blöcken zu 500 statt mit einem Befehl pro Job schreibt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Dashboard hardening“ vermittelt den Sicherheitsfix nicht klar und lässt die Upgrade-Empfehlung sowie den Hinweis auf ein separates Advisory aus.\"}],\"reason\":\"Der Kandidat nennt die betroffenen Bereiche, beschreibt die Änderungen aber nicht ausreichend, um ihre Auswirkungen zu erkennen oder die Migration durchzuführen. Auch die Upgrade-Empfehlung zum Sicherheitsfix fehlt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25471,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 394,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

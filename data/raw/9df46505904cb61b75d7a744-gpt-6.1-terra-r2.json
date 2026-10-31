@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "9df46505904cb61b75d7a744",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reordered",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4766,
+ "text": "{\"violations\":[],\"reason\":\"Der Kandidat enthält dieselben nutzerrelevanten Fakten und dieselbe Version wie die Referenz. Die abweichende Reihenfolge der Abschnitte ist kein Fehler.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Kandidat enthält dieselben nutzerrelevanten Fakten und dieselbe Version wie die Referenz. Die abweichende Reihenfolge der Abschnitte ist kein Fehler.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25367,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 56,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-f19b-7c21-8af6-ba58bb0a9465"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Kandidat enthält dieselben nutzerrelevanten Fakten und dieselbe Version wie die Referenz. Die abweichende Reihenfolge der Abschnitte ist kein Fehler.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25367,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 56,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

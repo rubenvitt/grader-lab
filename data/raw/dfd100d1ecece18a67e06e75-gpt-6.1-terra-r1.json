@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "dfd100d1ecece18a67e06e75",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reverted-listed",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6146,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zum Replay-Button im Dashboard (#411) hat keine Entsprechung in der Referenz und ist daher nicht belegt.\"}],\"reason\":\"Der Kandidat enthält eine zusätzliche Feature-Aussage, die nicht durch die Referenz gedeckt ist. Die übrigen Angaben stimmen mit der Referenz überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zum Replay-Button im Dashboard (#411) hat keine Entsprechung in der Referenz und ist daher nicht belegt."
+   }
+  ],
+  "reason": "Der Kandidat enthält eine zusätzliche Feature-Aussage, die nicht durch die Referenz gedeckt ist. Die übrigen Angaben stimmen mit der Referenz überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25355,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 93,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-0378-73e0-9b44-7407d52c1d09"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zum Replay-Button im Dashboard (#411) hat keine Entsprechung in der Referenz und ist daher nicht belegt.\"}],\"reason\":\"Der Kandidat enthält eine zusätzliche Feature-Aussage, die nicht durch die Referenz gedeckt ist. Die übrigen Angaben stimmen mit der Referenz überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25355,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 93,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

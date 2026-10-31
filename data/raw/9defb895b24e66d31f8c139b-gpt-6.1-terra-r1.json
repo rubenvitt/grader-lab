@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "9defb895b24e66d31f8c139b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "internal-noise",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5779,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Maintenance“ stehen das Aufteilen der Lint- und Test-Jobs sowie eine Änderung an CODEOWNERS. Beides betrifft interne Abläufe und ist für Bibliotheksnutzer nicht relevant.\"}],\"reason\":\"Die beiden Maintenance-Einträge verstoßen gegen das Relevanzkriterium. Die übrigen Einträge lassen anhand des Textes selbst keinen Verstoß erkennen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Unter „Maintenance“ stehen das Aufteilen der Lint- und Test-Jobs sowie eine Änderung an CODEOWNERS. Beides betrifft interne Abläufe und ist für Bibliotheksnutzer nicht relevant."
+   }
+  ],
+  "reason": "Die beiden Maintenance-Einträge verstoßen gegen das Relevanzkriterium. Die übrigen Einträge lassen anhand des Textes selbst keinen Verstoß erkennen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25206,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 106,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-8b17-7312-9b8b-5be4a998476d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Maintenance“ stehen das Aufteilen der Lint- und Test-Jobs sowie eine Änderung an CODEOWNERS. Beides betrifft interne Abläufe und ist für Bibliotheksnutzer nicht relevant.\"}],\"reason\":\"Die beiden Maintenance-Einträge verstoßen gegen das Relevanzkriterium. Die übrigen Einträge lassen anhand des Textes selbst keinen Verstoß erkennen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25206,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 106,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "80739376c1aab896d802c584",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "paraphrase",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4283,
+ "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst ist kein Verstoß erkennbar. Ob die technischen Aussagen und der Migrationsschritt mit dem Code übereinstimmen, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Aus dem Text selbst ist kein Verstoß erkennbar. Ob die technischen Aussagen und der Migrationsschritt mit dem Code übereinstimmen, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25268,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 63,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-d692-72c1-ba90-bc5020f0f57a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst ist kein Verstoß erkennbar. Ob die technischen Aussagen und der Migrationsschritt mit dem Code übereinstimmen, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25268,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 63,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

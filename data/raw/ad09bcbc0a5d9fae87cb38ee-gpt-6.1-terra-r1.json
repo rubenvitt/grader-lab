@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "ad09bcbc0a5d9fae87cb38ee",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4932,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur darin, ob die Jitter-Strategie optional oder für neue Queues voreingestellt ist. Ohne den zugrunde liegenden Diff lässt sich nicht beurteilen, welche Aussage zutrifft und ob eine Änderung des Defaults als Breaking Change aufgeführt werden müsste.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur darin, ob die Jitter-Strategie optional oder für neue Queues voreingestellt ist. Ohne den zugrunde liegenden Diff lässt sich nicht beurteilen, welche Aussage zutrifft und ob eine Änderung des Defaults als Breaking Change aufgeführt werden müsste.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25576,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 74,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-d49c-7fa2-b3de-343deea90931"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur darin, ob die Jitter-Strategie optional oder für neue Queues voreingestellt ist. Ohne den zugrunde liegenden Diff lässt sich nicht beurteilen, welche Aussage zutrifft und ob eine Änderung des Defaults als Breaking Change aufgeführt werden müsste.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25576,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 74,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

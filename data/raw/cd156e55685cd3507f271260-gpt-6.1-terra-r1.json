@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "cd156e55685cd3507f271260",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-migration",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8562,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff entfernt ihn aus `WorkerOptions` und verwendet `stallCheckMs`, belegt aber weder, dass es keinen Alias gibt, noch, dass der alte Name ohne Fehlermeldung ignoriert wird.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Der Migrationsschritt zu #351 empfiehlt `stalledCheckMs`. Im Diff heißt die neue öffentliche Option `stallCheckMs`.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes garantieren, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgeführt werden. Der Diff zu #357 zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; er belegt die allgemeine Garantie nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Ankündigung, dass Details zum Sicherheitsfix in einem separaten Advisory folgen werden, ist durch die Quellen nicht belegt. Diese nennen lediglich das bestehende Embargo und eine Advisory-Kennung.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die nutzerrelevanten Änderungen und ordnen die Breaking Changes korrekt ein. Der Migrationsschritt für die Worker-Option enthält jedoch einen falschen Namen; außerdem gehen mehrere Aussagen über die belegten Quellen hinaus.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff entfernt ihn aus `WorkerOptions` und verwendet `stallCheckMs`, belegt aber weder, dass es keinen Alias gibt, noch, dass der alte Name ohne Fehlermeldung ignoriert wird."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Der Migrationsschritt zu #351 empfiehlt `stalledCheckMs`. Im Diff heißt die neue öffentliche Option `stallCheckMs`."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes garantieren, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgeführt werden. Der Diff zu #357 zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; er belegt die allgemeine Garantie nicht."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Ankündigung, dass Details zum Sicherheitsfix in einem separaten Advisory folgen werden, ist durch die Quellen nicht belegt. Diese nennen lediglich das bestehende Embargo und eine Advisory-Kennung."
+   }
+  ],
+  "reason": "Die Notes erfassen die nutzerrelevanten Änderungen und ordnen die Breaking Changes korrekt ein. Der Migrationsschritt für die Worker-Option enthält jedoch einen falschen Namen; außerdem gehen mehrere Aussagen über die belegten Quellen hinaus.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26077,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 471,
+  "reasoning_output_tokens": 134
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-173b-7e10-95e9-c84c0ea1837f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff entfernt ihn aus `WorkerOptions` und verwendet `stallCheckMs`, belegt aber weder, dass es keinen Alias gibt, noch, dass der alte Name ohne Fehlermeldung ignoriert wird.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Der Migrationsschritt zu #351 empfiehlt `stalledCheckMs`. Im Diff heißt die neue öffentliche Option `stallCheckMs`.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes garantieren, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgeführt werden. Der Diff zu #357 zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; er belegt die allgemeine Garantie nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Ankündigung, dass Details zum Sicherheitsfix in einem separaten Advisory folgen werden, ist durch die Quellen nicht belegt. Diese nennen lediglich das bestehende Embargo und eine Advisory-Kennung.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die nutzerrelevanten Änderungen und ordnen die Breaking Changes korrekt ein. Der Migrationsschritt für die Worker-Option enthält jedoch einen falschen Namen; außerdem gehen mehrere Aussagen über die belegten Quellen hinaus.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26077,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 471,
+    "reasoning_output_tokens": 134
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "87bb62bf01124c13b9aae8ca",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4451,
+ "text": "{\"reason\":\"Fassung A ist sachlich und vermeidet die Werbesprache und unbelegten Wertungen in Fassung B, etwa „game-changing“ und „bulletproof“. Inhaltlich enthalten beide Fassungen dieselben Änderungen und Migrationshinweise; deren Übereinstimmung mit den Diffs lässt sich anhand der vorliegenden Texte nicht prüfen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist sachlich und vermeidet die Werbesprache und unbelegten Wertungen in Fassung B, etwa „game-changing“ und „bulletproof“. Inhaltlich enthalten beide Fassungen dieselben Änderungen und Migrationshinweise; deren Übereinstimmung mit den Diffs lässt sich anhand der vorliegenden Texte nicht prüfen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25425,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 85,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-420a-7922-9cff-eddffd868796"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist sachlich und vermeidet die Werbesprache und unbelegten Wertungen in Fassung B, etwa „game-changing“ und „bulletproof“. Inhaltlich enthalten beide Fassungen dieselben Änderungen und Migrationshinweise; deren Übereinstimmung mit den Diffs lässt sich anhand der vorliegenden Texte nicht prüfen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25425,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 85,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

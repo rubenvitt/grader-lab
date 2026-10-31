@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "6a5821feed39beb467e3c619",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5207,
+ "text": "{\"reason\":\"Fassung B beschreibt die Änderungen und erforderlichen Migrationsschritte konkret; Fassung A bleibt bei nahezu allen Einträgen zu allgemein. Beide verwenden eine zum ausgewiesenen Breaking Change passende Major-Version. Ob die konkreten Angaben in B durch die Diffs belegt sind, lässt sich anhand der vorliegenden Texte nicht prüfen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt die Änderungen und erforderlichen Migrationsschritte konkret; Fassung A bleibt bei nahezu allen Einträgen zu allgemein. Beide verwenden eine zum ausgewiesenen Breaking Change passende Major-Version. Ob die konkreten Angaben in B durch die Diffs belegt sind, lässt sich anhand der vorliegenden Texte nicht prüfen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 24536,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 121,
+  "reasoning_output_tokens": 36
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-f1a3-79c2-ac6c-f1f4446ee175"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt die Änderungen und erforderlichen Migrationsschritte konkret; Fassung A bleibt bei nahezu allen Einträgen zu allgemein. Beide verwenden eine zum ausgewiesenen Breaking Change passende Major-Version. Ob die konkreten Angaben in B durch die Diffs belegt sind, lässt sich anhand der vorliegenden Texte nicht prüfen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24536,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 121,
+    "reasoning_output_tokens": 36
+   }
+  }
+ ]
+}

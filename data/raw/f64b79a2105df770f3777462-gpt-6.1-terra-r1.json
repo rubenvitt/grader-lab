@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "f64b79a2105df770f3777462",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "wrong-migration",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 9001,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration nennt `defaultJobOptions: { keepCompleted: true }`. Im Diff zu #307 heißt die geänderte Option jedoch `removeOnComplete`; um den bisherigen Standard wiederherzustellen, muss sie auf `false` gesetzt werden.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf der Sperre in `active`. Der Diff belegt die Freigabe der Sperre im `finally`-Block, aber keine Änderung des Jobstatus.\"\n    }\n  ],\n  \"reason\": \"Die Migration verwendet einen nicht belegten Optionsnamen und führt damit nicht nachweislich zum bisherigen Verhalten. Außerdem geht eine Aussage über die durch den Diff belegte Wirkung des Worker-Fixes hinaus.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration nennt `defaultJobOptions: { keepCompleted: true }`. Im Diff zu #307 heißt die geänderte Option jedoch `removeOnComplete`; um den bisherigen Standard wiederherzustellen, muss sie auf `false` gesetzt werden."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf der Sperre in `active`. Der Diff belegt die Freigabe der Sperre im `finally`-Block, aber keine Änderung des Jobstatus."
+   }
+  ],
+  "reason": "Die Migration verwendet einen nicht belegten Optionsnamen und führt damit nicht nachweislich zum bisherigen Verhalten. Außerdem geht eine Aussage über die durch den Diff belegte Wirkung des Worker-Fixes hinaus.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26833,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 337,
+  "reasoning_output_tokens": 127
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-42fa-72a2-93fb-8f47e3864d25"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration nennt `defaultJobOptions: { keepCompleted: true }`. Im Diff zu #307 heißt die geänderte Option jedoch `removeOnComplete`; um den bisherigen Standard wiederherzustellen, muss sie auf `false` gesetzt werden.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf der Sperre in `active`. Der Diff belegt die Freigabe der Sperre im `finally`-Block, aber keine Änderung des Jobstatus.\"\n    }\n  ],\n  \"reason\": \"Die Migration verwendet einen nicht belegten Optionsnamen und führt damit nicht nachweislich zum bisherigen Verhalten. Außerdem geht eine Aussage über die durch den Diff belegte Wirkung des Worker-Fixes hinaus.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26833,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 337,
+    "reasoning_output_tokens": 127
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d37e186576f5e0d6d1854302",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "wrong-migration",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 6523,
+ "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst ist kein Verstoß erkennbar. Ob der angegebene Migrationsschritt und die übrigen technischen Aussagen durch den Code gedeckt sind, lässt sich ohne Quellen nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Aus dem Text selbst ist kein Verstoß erkennbar. Ob der angegebene Migrationsschritt und die übrigen technischen Aussagen durch den Code gedeckt sind, lässt sich ohne Quellen nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25252,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 82,
+  "reasoning_output_tokens": 18
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-42f8-79e2-ba96-e7603721ba0e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst ist kein Verstoß erkennbar. Ob der angegebene Migrationsschritt und die übrigen technischen Aussagen durch den Code gedeckt sind, lässt sich ohne Quellen nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25252,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 82,
+    "reasoning_output_tokens": 18
+   }
+  }
+ ]
+}

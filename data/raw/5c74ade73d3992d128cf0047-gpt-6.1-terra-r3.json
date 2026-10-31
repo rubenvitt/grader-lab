@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "5c74ade73d3992d128cf0047",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4546,
+ "text": "{\"reason\":\"Beide Fassungen enthalten sachlich dieselben Änderungen und Migrationsschritte. Fassung B erfüllt den Maßstab für sachlichen Ton besser; Fassung A verwendet Werbesprache und Superlative.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Beide Fassungen enthalten sachlich dieselben Änderungen und Migrationsschritte. Fassung B erfüllt den Maßstab für sachlichen Ton besser; Fassung A verwendet Werbesprache und Superlative.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 24560,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 58,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-fa5a-7571-b5f0-9378d32e2b46"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen enthalten sachlich dieselben Änderungen und Migrationsschritte. Fassung B erfüllt den Maßstab für sachlichen Ton besser; Fassung A verwendet Werbesprache und Superlative.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24560,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 58,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

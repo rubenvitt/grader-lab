@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "a0bc19b06e06c14687bb194f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "internal-noise",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4345,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Der Eintrag zum stabilisierten Test für blockierte Jobs (#343) betrifft Tests und gehört nicht in nutzerorientierte Release Notes.\"},{\"criterion\":\"R6\",\"evidence\":\"Das Fixieren von GitHub Actions auf Commit-SHAs (#340) betrifft CI-Interna und gehört nicht in nutzerorientierte Release Notes.\"}],\"reason\":\"Der Kandidat vermittelt die relevanten Fakten der Referenz vollständig und korrekt, enthält aber zwei für Bibliotheksnutzer irrelevante interne Änderungen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Der Eintrag zum stabilisierten Test für blockierte Jobs (#343) betrifft Tests und gehört nicht in nutzerorientierte Release Notes."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "Das Fixieren von GitHub Actions auf Commit-SHAs (#340) betrifft CI-Interna und gehört nicht in nutzerorientierte Release Notes."
+   }
+  ],
+  "reason": "Der Kandidat vermittelt die relevanten Fakten der Referenz vollständig und korrekt, enthält aber zwei für Bibliotheksnutzer irrelevante interne Änderungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25520,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 128,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-d387-71b1-8725-3da780f22224"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Der Eintrag zum stabilisierten Test für blockierte Jobs (#343) betrifft Tests und gehört nicht in nutzerorientierte Release Notes.\"},{\"criterion\":\"R6\",\"evidence\":\"Das Fixieren von GitHub Actions auf Commit-SHAs (#340) betrifft CI-Interna und gehört nicht in nutzerorientierte Release Notes.\"}],\"reason\":\"Der Kandidat vermittelt die relevanten Fakten der Referenz vollständig und korrekt, enthält aber zwei für Bibliotheksnutzer irrelevante interne Änderungen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25520,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 128,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

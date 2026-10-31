@@ -120,6 +120,15 @@ test('interpret marks a judge that ran a command', () => {
   assert.equal(interpret({ code: 0, stdout, stderr: '' }).tainted, true);
 });
 
+test('interpret keeps an answer that arrived after reconnect notices', () => {
+  const notice = line({ type: 'error', message: 'Reconnecting... 2/5 (unexpected status 403 Forbidden)' });
+  const done = line({ type: 'turn.completed', usage: { input_tokens: 1 } });
+  const r = interpret({ code: 0, stdout: [notice, message('{"pass":true}'), done].join('\n'), stderr: '' });
+  assert.deepEqual(r.parsed, { pass: true });
+  assert.throws(() => interpret({ code: 0, stdout: [notice, message('{"pass":true}'), line({ type: 'turn.failed', error: {} })].join('\n'), stderr: '' }), ModelError);
+  assert.throws(() => interpret({ code: 1, stdout: line({ type: 'error', message: 'usage limit reached' }), stderr: '' }), RateLimitError);
+});
+
 test('interpret separates rate limits from other failures', () => {
   assert.throws(() => interpret({ code: 1, stdout: line({ type: 'turn.failed', error: { message: 'You hit your usage limit' } }), stderr: '' }), RateLimitError);
   assert.throws(() => interpret({ code: 1, stdout: '', stderr: 'HTTP 429 Too Many Requests' }), RateLimitError);

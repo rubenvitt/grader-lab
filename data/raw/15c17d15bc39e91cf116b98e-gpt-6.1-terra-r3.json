@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "15c17d15bc39e91cf116b98e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "invented-claim",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7206,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, `jitter` sei der neue Standard für Queues. Der Diff zu PR #395 ergänzt nur einen Zweig für `backoff.type === 'jitter'`; eine Änderung des Standardwerts ist nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, durch Jitter träfen Retries nicht mehr alle gleichzeitig ein. PR #395 berechnet zwar zufällige Verzögerungen, garantiert aber keine unterschiedlichen Werte; mehrere Retries können denselben Wert erhalten.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause(boolean)` nennt ausschließlich `worker.pause({ drain: true })`. Für bisheriges `worker.pause(false)` muss `worker.pause({ drain: false })` verwendet oder das Argument weggelassen werden, um das bisherige Verhalten zu erhalten.\"\n    }\n  ],\n  \"reason\": \"Die meisten nutzerrelevanten Änderungen und die erforderlichen Breaking Changes sind erfasst. Die Aussagen zu Jitter gehen jedoch über den Diff hinaus, und die Pause-Migration deckt den bisherigen Wert `false` nicht korrekt ab.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, `jitter` sei der neue Standard für Queues. Der Diff zu PR #395 ergänzt nur einen Zweig für `backoff.type === 'jitter'`; eine Änderung des Standardwerts ist nicht belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, durch Jitter träfen Retries nicht mehr alle gleichzeitig ein. PR #395 berechnet zwar zufällige Verzögerungen, garantiert aber keine unterschiedlichen Werte; mehrere Retries können denselben Wert erhalten."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause(boolean)` nennt ausschließlich `worker.pause({ drain: true })`. Für bisheriges `worker.pause(false)` muss `worker.pause({ drain: false })` verwendet oder das Argument weggelassen werden, um das bisherige Verhalten zu erhalten."
+   }
+  ],
+  "reason": "Die meisten nutzerrelevanten Änderungen und die erforderlichen Breaking Changes sind erfasst. Die Aussagen zu Jitter gehen jedoch über den Diff hinaus, und die Pause-Migration deckt den bisherigen Wert `false` nicht korrekt ab.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26088,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 343,
+  "reasoning_output_tokens": 59
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-eb3a-7c50-847f-2408e18dc2c1"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, `jitter` sei der neue Standard für Queues. Der Diff zu PR #395 ergänzt nur einen Zweig für `backoff.type === 'jitter'`; eine Änderung des Standardwerts ist nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, durch Jitter träfen Retries nicht mehr alle gleichzeitig ein. PR #395 berechnet zwar zufällige Verzögerungen, garantiert aber keine unterschiedlichen Werte; mehrere Retries können denselben Wert erhalten.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause(boolean)` nennt ausschließlich `worker.pause({ drain: true })`. Für bisheriges `worker.pause(false)` muss `worker.pause({ drain: false })` verwendet oder das Argument weggelassen werden, um das bisherige Verhalten zu erhalten.\"\n    }\n  ],\n  \"reason\": \"Die meisten nutzerrelevanten Änderungen und die erforderlichen Breaking Changes sind erfasst. Die Aussagen zu Jitter gehen jedoch über den Diff hinaus, und die Pause-Migration deckt den bisherigen Wert `false` nicht korrekt ab.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26088,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 343,
+    "reasoning_output_tokens": 59
+   }
+  }
+ ]
+}

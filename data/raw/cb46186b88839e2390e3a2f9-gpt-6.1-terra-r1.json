@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "cb46186b88839e2390e3a2f9",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4345,
+ "text": "{\"reason\":\"Beide Fassungen enthalten dieselben inhaltlichen Aussagen, Migrationshinweise und dieselbe Versionsnummer. Die Unterschiede betreffen nur die Formulierung und begründen nach der Rubric keinen Qualitätsunterschied.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen enthalten dieselben inhaltlichen Aussagen, Migrationshinweise und dieselbe Versionsnummer. Die Unterschiede betreffen nur die Formulierung und begründen nach der Rubric keinen Qualitätsunterschied.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25540,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 60,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-72e5-7b61-bb01-b19aa2984ec5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen enthalten dieselben inhaltlichen Aussagen, Migrationshinweise und dieselbe Versionsnummer. Die Unterschiede betreffen nur die Formulierung und begründen nach der Rubric keinen Qualitätsunterschied.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25540,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 60,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "4471e3e338fc1c72fde29d15",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "paraphrase",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6937,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren, dass ein Worker innerhalb von `perMs` Millisekunden höchstens `max` Jobs verarbeitet. PR #376 zeigt zwar einen Token Bucket pro Worker-Instanz und dessen Abfrage, aber nicht dessen Implementierung oder eine solche Garantie für jedes Zeitfenster.\"}],\"reason\":\"Die übrigen Angaben entsprechen der erneut eingeführten Fassung und der Deprecation; die Versionsnummer ist dafür passend. Die konkrete Mengenbegrenzung ist durch den gezeigten Diff nicht belegt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes garantieren, dass ein Worker innerhalb von `perMs` Millisekunden höchstens `max` Jobs verarbeitet. PR #376 zeigt zwar einen Token Bucket pro Worker-Instanz und dessen Abfrage, aber nicht dessen Implementierung oder eine solche Garantie für jedes Zeitfenster."
+   }
+  ],
+  "reason": "Die übrigen Angaben entsprechen der erneut eingeführten Fassung und der Deprecation; die Versionsnummer ist dafür passend. Die konkrete Mengenbegrenzung ist durch den gezeigten Diff nicht belegt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26311,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 184,
+  "reasoning_output_tokens": 51
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-c537-7c80-9a14-37ae6f9f0a2c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren, dass ein Worker innerhalb von `perMs` Millisekunden höchstens `max` Jobs verarbeitet. PR #376 zeigt zwar einen Token Bucket pro Worker-Instanz und dessen Abfrage, aber nicht dessen Implementierung oder eine solche Garantie für jedes Zeitfenster.\"}],\"reason\":\"Die übrigen Angaben entsprechen der erneut eingeführten Fassung und der Deprecation; die Versionsnummer ist dafür passend. Die konkrete Mengenbegrenzung ist durch den gezeigten Diff nicht belegt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26311,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 184,
+    "reasoning_output_tokens": 51
+   }
+  }
+ ]
+}

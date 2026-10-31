@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "e5f77599cfbec2bf733fc491",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7729,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Zu #351 behaupten die Notes, der alte Optionsname werde stillschweigend ignoriert und es gebe keinen Alias. Der gezeigte Diff belegt die Umbenennung, aber weder das Verhalten bei Verwendung des alten Namens noch das Fehlen eines Alias im übrigen Code.\"},{\"criterion\":\"R2\",\"evidence\":\"Zu #357 behaupten die Notes, Cron-Jobs würden bei einer Zeitumstellung nicht mehr doppelt ausgeführt. Der Diff zeigt die Übergabe von `tz: 'UTC'` an `cron.next`, belegt aber nicht die allgemeine Garantie für alle Zeitumstellungen.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Sicherheitseintrag zu #358 kündigt Details in einem separaten Advisory an. Die Quellen nennen zwar ein Advisory, belegen aber nicht, dass dort später Details veröffentlicht werden.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung und mehrere Einträge verwenden Werbesprache und Superlative, darunter „Welcome to the future of job queues“, „our most exciting release yet“, „revolutionary“ und „Turbocharged imports“.\"}],\"reason\":\"Die Notes erfassen die beiden Breaking Changes und verwenden mit 4.0.0 einen passenden Major-Sprung. Einzelne Aussagen gehen jedoch über die gezeigten Diffs hinaus; außerdem ist der Ton stellenweise werblich.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Zu #351 behaupten die Notes, der alte Optionsname werde stillschweigend ignoriert und es gebe keinen Alias. Der gezeigte Diff belegt die Umbenennung, aber weder das Verhalten bei Verwendung des alten Namens noch das Fehlen eines Alias im übrigen Code."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Zu #357 behaupten die Notes, Cron-Jobs würden bei einer Zeitumstellung nicht mehr doppelt ausgeführt. Der Diff zeigt die Übergabe von `tz: 'UTC'` an `cron.next`, belegt aber nicht die allgemeine Garantie für alle Zeitumstellungen."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Sicherheitseintrag zu #358 kündigt Details in einem separaten Advisory an. Die Quellen nennen zwar ein Advisory, belegen aber nicht, dass dort später Details veröffentlicht werden."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Einleitung und mehrere Einträge verwenden Werbesprache und Superlative, darunter „Welcome to the future of job queues“, „our most exciting release yet“, „revolutionary“ und „Turbocharged imports“."
+   }
+  ],
+  "reason": "Die Notes erfassen die beiden Breaking Changes und verwenden mit 4.0.0 einen passenden Major-Sprung. Einzelne Aussagen gehen jedoch über die gezeigten Diffs hinaus; außerdem ist der Ton stellenweise werblich.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26127,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 366,
+  "reasoning_output_tokens": 63
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-f399-7fe2-b941-a2853e351754"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Zu #351 behaupten die Notes, der alte Optionsname werde stillschweigend ignoriert und es gebe keinen Alias. Der gezeigte Diff belegt die Umbenennung, aber weder das Verhalten bei Verwendung des alten Namens noch das Fehlen eines Alias im übrigen Code.\"},{\"criterion\":\"R2\",\"evidence\":\"Zu #357 behaupten die Notes, Cron-Jobs würden bei einer Zeitumstellung nicht mehr doppelt ausgeführt. Der Diff zeigt die Übergabe von `tz: 'UTC'` an `cron.next`, belegt aber nicht die allgemeine Garantie für alle Zeitumstellungen.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Sicherheitseintrag zu #358 kündigt Details in einem separaten Advisory an. Die Quellen nennen zwar ein Advisory, belegen aber nicht, dass dort später Details veröffentlicht werden.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung und mehrere Einträge verwenden Werbesprache und Superlative, darunter „Welcome to the future of job queues“, „our most exciting release yet“, „revolutionary“ und „Turbocharged imports“.\"}],\"reason\":\"Die Notes erfassen die beiden Breaking Changes und verwenden mit 4.0.0 einen passenden Major-Sprung. Einzelne Aussagen gehen jedoch über die gezeigten Diffs hinaus; außerdem ist der Ton stellenweise werblich.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26127,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 366,
+    "reasoning_output_tokens": 63
+   }
+  }
+ ]
+}

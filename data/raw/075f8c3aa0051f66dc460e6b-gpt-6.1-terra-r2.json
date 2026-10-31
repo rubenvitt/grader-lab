@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "075f8c3aa0051f66dc460e6b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6112,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Limiter-Eintrag verweist auf PR #377; die belegte endgültige Einführung steht in PR #376.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren „at most `max` jobs per `perMs` milliseconds“. Der Diff zeigt die Verwendung eines Token-Buckets pro Worker, belegt aber nicht, dass diese Grenze für jedes solche Zeitfenster gilt.\"}],\"reason\":\"Die endgültige Limiter-Option und die Migration von `timeout` zu `timeoutMs` sind korrekt wiedergegeben. Der Limiter-Eintrag enthält jedoch einen falschen PR-Verweis und eine durch den Diff nicht belegte Garantie.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Limiter-Eintrag verweist auf PR #377; die belegte endgültige Einführung steht in PR #376."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes garantieren „at most `max` jobs per `perMs` milliseconds“. Der Diff zeigt die Verwendung eines Token-Buckets pro Worker, belegt aber nicht, dass diese Grenze für jedes solche Zeitfenster gilt."
+   }
+  ],
+  "reason": "Die endgültige Limiter-Option und die Migration von `timeout` zu `timeoutMs` sind korrekt wiedergegeben. Der Limiter-Eintrag enthält jedoch einen falschen PR-Verweis und eine durch den Diff nicht belegte Garantie.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25461,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 239,
+  "reasoning_output_tokens": 78
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-e976-72f1-a6d6-2b7d332f09f7"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Limiter-Eintrag verweist auf PR #377; die belegte endgültige Einführung steht in PR #376.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren „at most `max` jobs per `perMs` milliseconds“. Der Diff zeigt die Verwendung eines Token-Buckets pro Worker, belegt aber nicht, dass diese Grenze für jedes solche Zeitfenster gilt.\"}],\"reason\":\"Die endgültige Limiter-Option und die Migration von `timeout` zu `timeoutMs` sind korrekt wiedergegeben. Der Limiter-Eintrag enthält jedoch einen falschen PR-Verweis und eine durch den Diff nicht belegte Garantie.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25461,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 239,
+    "reasoning_output_tokens": 78
+   }
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "cdf84e04355ed2990506128c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "embargo-leak",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4800,
+ "text": "{\"violations\":[{\"criterion\":\"R5\",\"evidence\":\"Der Sicherheitseintrag nennt mit `===` und `timingSafeEqual` den Mechanismus und den konkreten Fix sowie die Ausnutzung über Antwortzeiten.\"}],\"reason\":\"Der Sicherheitseintrag enthält Details, die bei einem Fix mit Embargo nicht veröffentlicht werden dürfen. Die übrigen Kriterien lassen sich anhand des Textes entweder erfüllen oder ohne Quellen nicht prüfen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R5",
+    "evidence": "Der Sicherheitseintrag nennt mit `===` und `timingSafeEqual` den Mechanismus und den konkreten Fix sowie die Ausnutzung über Antwortzeiten."
+   }
+  ],
+  "reason": "Der Sicherheitseintrag enthält Details, die bei einem Fix mit Embargo nicht veröffentlicht werden dürfen. Die übrigen Kriterien lassen sich anhand des Textes entweder erfüllen oder ohne Quellen nicht prüfen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25267,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 101,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-a9f9-7c51-b5c0-b8cebc893986"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R5\",\"evidence\":\"Der Sicherheitseintrag nennt mit `===` und `timingSafeEqual` den Mechanismus und den konkreten Fix sowie die Ausnutzung über Antwortzeiten.\"}],\"reason\":\"Der Sicherheitseintrag enthält Details, die bei einem Fix mit Embargo nicht veröffentlicht werden dürfen. Die übrigen Kriterien lassen sich anhand des Textes entweder erfüllen oder ohne Quellen nicht prüfen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25267,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 101,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

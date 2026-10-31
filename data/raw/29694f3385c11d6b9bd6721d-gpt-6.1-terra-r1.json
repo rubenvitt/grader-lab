@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "29694f3385c11d6b9bd6721d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "embargo-leak",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5915,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 lässt den Konstruktor bei Schemanamen, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen, mit `invalid schema name` fehlschlagen. Bisher akzeptierte Namen müssen deshalb angepasst werden; die Änderung fehlt unter „Breaking Changes“.\"},{\"criterion\":\"R5\",\"evidence\":\"PR #414 trägt das Label `embargo`. Der Security-Eintrag nennt dennoch die Art der Schwachstelle („SQL injection“) und den konkreten Fix („the schema name is now validated in the constructor“).\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0. Die durch PR #414 eingeführte inkompatible Einschränkung verlangt einen Major-Sprung; 5.0.1 ist dafür nicht ausreichend.\"}],\"reason\":\"Der Worker-Fix ist durch den Diff gedeckt; die Replay-Funktion wurde im selben Release zurückgenommen und fehlt zu Recht. Die neue Einschränkung für PostgreSQL-Schemanamen ist jedoch eine inkompatible Änderung, und der Security-Eintrag gibt durch das Embargo verbotene Details preis.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 lässt den Konstruktor bei Schemanamen, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen, mit `invalid schema name` fehlschlagen. Bisher akzeptierte Namen müssen deshalb angepasst werden; die Änderung fehlt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R5",
+    "evidence": "PR #414 trägt das Label `embargo`. Der Security-Eintrag nennt dennoch die Art der Schwachstelle („SQL injection“) und den konkreten Fix („the schema name is now validated in the constructor“)."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 5.0.0. Die durch PR #414 eingeführte inkompatible Einschränkung verlangt einen Major-Sprung; 5.0.1 ist dafür nicht ausreichend."
+   }
+  ],
+  "reason": "Der Worker-Fix ist durch den Diff gedeckt; die Replay-Funktion wurde im selben Release zurückgenommen und fehlt zu Recht. Die neue Einschränkung für PostgreSQL-Schemanamen ist jedoch eine inkompatible Änderung, und der Security-Eintrag gibt durch das Embargo verbotene Details preis.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26309,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 259,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-5241-76e2-9117-87d3595af238"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 lässt den Konstruktor bei Schemanamen, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen, mit `invalid schema name` fehlschlagen. Bisher akzeptierte Namen müssen deshalb angepasst werden; die Änderung fehlt unter „Breaking Changes“.\"},{\"criterion\":\"R5\",\"evidence\":\"PR #414 trägt das Label `embargo`. Der Security-Eintrag nennt dennoch die Art der Schwachstelle („SQL injection“) und den konkreten Fix („the schema name is now validated in the constructor“).\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0. Die durch PR #414 eingeführte inkompatible Einschränkung verlangt einen Major-Sprung; 5.0.1 ist dafür nicht ausreichend.\"}],\"reason\":\"Der Worker-Fix ist durch den Diff gedeckt; die Replay-Funktion wurde im selben Release zurückgenommen und fehlt zu Recht. Die neue Einschränkung für PostgreSQL-Schemanamen ist jedoch eine inkompatible Änderung, und der Security-Eintrag gibt durch das Embargo verbotene Details preis.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26309,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 259,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "01d19e3ad07ee6d29ad674da",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 6995,
+ "text": "{\"reason\":\"Fassung A ist sachlich formuliert. Fassung B enthält dagegen mehrere werbliche und begeisterte Formulierungen und verstößt damit gegen R7; inhaltlich sind die Fassungen gleichwertig.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist sachlich formuliert. Fassung B enthält dagegen mehrere werbliche und begeisterte Formulierungen und verstößt damit gegen R7; inhaltlich sind die Fassungen gleichwertig.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25296,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 61,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-281d-7680-919a-9fa6b10f2cc3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist sachlich formuliert. Fassung B enthält dagegen mehrere werbliche und begeisterte Formulierungen und verstößt damit gegen R7; inhaltlich sind die Fassungen gleichwertig.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25296,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 61,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

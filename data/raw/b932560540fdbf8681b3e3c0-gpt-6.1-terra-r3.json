@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "b932560540fdbf8681b3e3c0",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4799,
+ "text": "{\"reason\":\"Fassung A ist besser, weil Fassung B zusätzlich CI-Interna und eine Dev-Dependency aufführt, die für Bibliotheksnutzer nicht relevant sind (R6). Die übrigen Inhalte sind identisch.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil Fassung B zusätzlich CI-Interna und eine Dev-Dependency aufführt, die für Bibliotheksnutzer nicht relevant sind (R6). Die übrigen Inhalte sind identisch.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25294,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 62,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-12c0-7200-b275-593f10e36fc1"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil Fassung B zusätzlich CI-Interna und eine Dev-Dependency aufführt, die für Bibliotheksnutzer nicht relevant sind (R6). Die übrigen Inhalte sind identisch.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25294,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "652e8f5c509c1b63c6203518",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "useless-true",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 9924,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Some default behaviour has changed (#307)“ nennt weder das geänderte Standardverhalten noch erforderliche Anpassungen.\"},{\"criterion\":\"R8\",\"evidence\":\"„The CLI has been improved (#318)“ beschreibt keine konkrete Änderung oder erforderliche Handlung.\"},{\"criterion\":\"R8\",\"evidence\":\"„Various improvements to worker reliability (#304)“ beschreibt keine konkrete Änderung oder erforderliche Handlung.\"}],\"reason\":\"Die drei Einträge sind zu allgemein, um Nutzern die konkreten Änderungen und einen möglichen Handlungsbedarf zu vermitteln. Weitere Verstöße lassen sich allein aus dem Text nicht feststellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Some default behaviour has changed (#307)“ nennt weder das geänderte Standardverhalten noch erforderliche Anpassungen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„The CLI has been improved (#318)“ beschreibt keine konkrete Änderung oder erforderliche Handlung."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Various improvements to worker reliability (#304)“ beschreibt keine konkrete Änderung oder erforderliche Handlung."
+   }
+  ],
+  "reason": "Die drei Einträge sind zu allgemein, um Nutzern die konkreten Änderungen und einen möglichen Handlungsbedarf zu vermitteln. Weitere Verstöße lassen sich allein aus dem Text nicht feststellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25141,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 148,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-1dac-7961-938a-54dd0d10eb48"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604abcfeb452e-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604b05c02daed-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604b78abc4c3b-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Some default behaviour has changed (#307)“ nennt weder das geänderte Standardverhalten noch erforderliche Anpassungen.\"},{\"criterion\":\"R8\",\"evidence\":\"„The CLI has been improved (#318)“ beschreibt keine konkrete Änderung oder erforderliche Handlung.\"},{\"criterion\":\"R8\",\"evidence\":\"„Various improvements to worker reliability (#304)“ beschreibt keine konkrete Änderung oder erforderliche Handlung.\"}],\"reason\":\"Die drei Einträge sind zu allgemein, um Nutzern die konkreten Änderungen und einen möglichen Handlungsbedarf zu vermitteln. Weitere Verstöße lassen sich allein aus dem Text nicht feststellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25141,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 148,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

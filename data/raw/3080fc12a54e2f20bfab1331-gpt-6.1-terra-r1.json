@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "3080fc12a54e2f20bfab1331",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4148,
+ "text": "{\"reason\":\"Fassung A ist besser, weil B zusätzlich behauptet, dass der Job beim nächsten Poll erneut versucht wird. Da keine Quellen oder Diffs vorliegen, ist diese zusätzliche Aussage nicht belegt.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil B zusätzlich behauptet, dass der Job beim nächsten Poll erneut versucht wird. Da keine Quellen oder Diffs vorliegen, ist diese zusätzliche Aussage nicht belegt.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24543,
+  "cached_input_tokens": 0,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 56,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-d884-74a3-a931-30645ea6d4f2"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil B zusätzlich behauptet, dass der Job beim nächsten Poll erneut versucht wird. Da keine Quellen oder Diffs vorliegen, ist diese zusätzliche Aussage nicht belegt.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24543,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 56,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

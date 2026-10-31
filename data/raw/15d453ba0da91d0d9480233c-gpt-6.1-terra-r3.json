@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "15d453ba0da91d0d9480233c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "wrong-bump",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8087,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 2.4.0 nach 2.3.2. PR #307 ändert den Default von `removeOnComplete` von `false` auf `true` und verlangt für das bisherige Verhalten eine Konfigurationsänderung. Diese Breaking Change erfordert einen Major-Sprung auf mindestens 3.0.0.\"\n    }\n  ],\n  \"reason\": \"Die Änderung des Defaults ist korrekt unter „Breaking Changes“ samt Migration aufgeführt, aber die angegebene Versionsnummer berücksichtigt sie nicht.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 2.4.0 nach 2.3.2. PR #307 ändert den Default von `removeOnComplete` von `false` auf `true` und verlangt für das bisherige Verhalten eine Konfigurationsänderung. Diese Breaking Change erfordert einen Major-Sprung auf mindestens 3.0.0."
+   }
+  ],
+  "reason": "Die Änderung des Defaults ist korrekt unter „Breaking Changes“ samt Migration aufgeführt, aber die angegebene Versionsnummer berücksichtigt sie nicht.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26834,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 196,
+  "reasoning_output_tokens": 47
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-8d5d-7412-ba13-d4705b02ad33"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 2.4.0 nach 2.3.2. PR #307 ändert den Default von `removeOnComplete` von `false` auf `true` und verlangt für das bisherige Verhalten eine Konfigurationsänderung. Diese Breaking Change erfordert einen Major-Sprung auf mindestens 3.0.0.\"\n    }\n  ],\n  \"reason\": \"Die Änderung des Defaults ist korrekt unter „Breaking Changes“ samt Migration aufgeführt, aber die angegebene Versionsnummer berücksichtigt sie nicht.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26834,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 196,
+    "reasoning_output_tokens": 47
+   }
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "f870ccf9535fbc59c8df64ef",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "internal-noise",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7021,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage, dass die alte Option `stalledIntervalMs` „silently ignored“ wird, ist durch den Diff nicht belegt. Er zeigt die Umbenennung zu `stallCheckMs`, aber nicht, wie unbekannte Optionen behandelt werden.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgeführt, ist als allgemeine Garantie nicht durch den Diff gedeckt. Dieser zeigt nur den Aufruf von `cron.next` mit `{ tz: 'UTC' }`; Issue #349 belegt einen konkreten Doppelstart.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Ankündigung „details will follow in a separate advisory“ ist durch die Quellen nicht belegt. PR #358 nennt zwar QSA-2026-02, verspricht aber keine spätere Veröffentlichung von Details.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Der Feature-Eintrag zu Integrationstests mit Postgres 16 beschreibt eine interne CI-Änderung aus PR #363 und gehört nicht in nutzergerichtete Release Notes.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten nicht belegte Zusicherungen und eine interne CI-Änderung. Die Breaking Changes und ihre Migrationshinweise sind erfasst; der Major-Sprung auf 4.0.0 passt dazu.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage, dass die alte Option `stalledIntervalMs` „silently ignored“ wird, ist durch den Diff nicht belegt. Er zeigt die Umbenennung zu `stallCheckMs`, aber nicht, wie unbekannte Optionen behandelt werden."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgeführt, ist als allgemeine Garantie nicht durch den Diff gedeckt. Dieser zeigt nur den Aufruf von `cron.next` mit `{ tz: 'UTC' }`; Issue #349 belegt einen konkreten Doppelstart."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Ankündigung „details will follow in a separate advisory“ ist durch die Quellen nicht belegt. PR #358 nennt zwar QSA-2026-02, verspricht aber keine spätere Veröffentlichung von Details."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "Der Feature-Eintrag zu Integrationstests mit Postgres 16 beschreibt eine interne CI-Änderung aus PR #363 und gehört nicht in nutzergerichtete Release Notes."
+   }
+  ],
+  "reason": "Die Notes enthalten nicht belegte Zusicherungen und eine interne CI-Änderung. Die Breaking Changes und ihre Migrationshinweise sind erfasst; der Major-Sprung auf 4.0.0 passt dazu.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26939,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 407,
+  "reasoning_output_tokens": 65
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-79c8-79e2-981c-35c78cc9091f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage, dass die alte Option `stalledIntervalMs` „silently ignored“ wird, ist durch den Diff nicht belegt. Er zeigt die Umbenennung zu `stallCheckMs`, aber nicht, wie unbekannte Optionen behandelt werden.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgeführt, ist als allgemeine Garantie nicht durch den Diff gedeckt. Dieser zeigt nur den Aufruf von `cron.next` mit `{ tz: 'UTC' }`; Issue #349 belegt einen konkreten Doppelstart.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Ankündigung „details will follow in a separate advisory“ ist durch die Quellen nicht belegt. PR #358 nennt zwar QSA-2026-02, verspricht aber keine spätere Veröffentlichung von Details.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Der Feature-Eintrag zu Integrationstests mit Postgres 16 beschreibt eine interne CI-Änderung aus PR #363 und gehört nicht in nutzergerichtete Release Notes.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten nicht belegte Zusicherungen und eine interne CI-Änderung. Die Breaking Changes und ihre Migrationshinweise sind erfasst; der Major-Sprung auf 4.0.0 passt dazu.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26939,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 407,
+    "reasoning_output_tokens": 65
+   }
+  }
+ ]
+}

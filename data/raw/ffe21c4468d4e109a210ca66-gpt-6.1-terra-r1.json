@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "ffe21c4468d4e109a210ca66",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "paraphrase",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8075,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration empfiehlt `queue.purge({ status, olderThanMs })`, obwohl der bisherige Parameter `graceMs` heißt. Der Diff ordnet ihn mit `olderThanMs: graceMs` zu; diese Zuordnung fehlt im Migrationsschritt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Security-Notiz kündigt ein separates Advisory mit Details an. Die Quelle nennt ein Advisory und eine Embargofrist, belegt aber nicht, dass später ein separates Advisory veröffentlicht wird.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Die Security-Notiz nennt nur „a security problem“. Sie könnte die betroffene Komponente Signing benennen, ohne die nach R5 verbotenen Details offenzulegen.\"\n    }\n  ],\n  \"reason\": \"Die Notes beschreiben die wesentlichen nutzerrelevanten Änderungen und verwenden mit 3.1.0 eine passende Version. Der Migrationsschritt ist jedoch nicht exakt genug, und die Security-Notiz enthält eine unbelegte Ankündigung und benennt die betroffene Komponente nicht.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration empfiehlt `queue.purge({ status, olderThanMs })`, obwohl der bisherige Parameter `graceMs` heißt. Der Diff ordnet ihn mit `olderThanMs: graceMs` zu; diese Zuordnung fehlt im Migrationsschritt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Security-Notiz kündigt ein separates Advisory mit Details an. Die Quelle nennt ein Advisory und eine Embargofrist, belegt aber nicht, dass später ein separates Advisory veröffentlicht wird."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Die Security-Notiz nennt nur „a security problem“. Sie könnte die betroffene Komponente Signing benennen, ohne die nach R5 verbotenen Details offenzulegen."
+   }
+  ],
+  "reason": "Die Notes beschreiben die wesentlichen nutzerrelevanten Änderungen und verwenden mit 3.1.0 eine passende Version. Der Migrationsschritt ist jedoch nicht exakt genug, und die Security-Notiz enthält eine unbelegte Ankündigung und benennt die betroffene Komponente nicht.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25742,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 434,
+  "reasoning_output_tokens": 159
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-ad21-78d2-9465-2bf67d627268"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration empfiehlt `queue.purge({ status, olderThanMs })`, obwohl der bisherige Parameter `graceMs` heißt. Der Diff ordnet ihn mit `olderThanMs: graceMs` zu; diese Zuordnung fehlt im Migrationsschritt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Security-Notiz kündigt ein separates Advisory mit Details an. Die Quelle nennt ein Advisory und eine Embargofrist, belegt aber nicht, dass später ein separates Advisory veröffentlicht wird.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Die Security-Notiz nennt nur „a security problem“. Sie könnte die betroffene Komponente Signing benennen, ohne die nach R5 verbotenen Details offenzulegen.\"\n    }\n  ],\n  \"reason\": \"Die Notes beschreiben die wesentlichen nutzerrelevanten Änderungen und verwenden mit 3.1.0 eine passende Version. Der Migrationsschritt ist jedoch nicht exakt genug, und die Security-Notiz enthält eine unbelegte Ankündigung und benennt die betroffene Komponente nicht.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25742,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 434,
+    "reasoning_output_tokens": 159
+   }
+  }
+ ]
+}

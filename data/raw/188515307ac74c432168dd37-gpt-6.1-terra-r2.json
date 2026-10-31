@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "188515307ac74c432168dd37",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "hype-tone",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5297,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Werbesprache und Begeisterung in „it is a powerful one“, „We are thrilled“, „game-changing“, „effortless“, „Bulletproof“ und „delightful“.\"}],\"reason\":\"Die Notes enthalten mehrfach werbliche und begeisterte Formulierungen statt eines sachlichen Tons. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Werbesprache und Begeisterung in „it is a powerful one“, „We are thrilled“, „game-changing“, „effortless“, „Bulletproof“ und „delightful“."
+   }
+  ],
+  "reason": "Die Notes enthalten mehrfach werbliche und begeisterte Formulierungen statt eines sachlichen Tons. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25298,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 103,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-2d59-7cf3-9d86-5955f14c21b6"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Werbesprache und Begeisterung in „it is a powerful one“, „We are thrilled“, „game-changing“, „effortless“, „Bulletproof“ und „delightful“.\"}],\"reason\":\"Die Notes enthalten mehrfach werbliche und begeisterte Formulierungen statt eines sachlichen Tons. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25298,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 103,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

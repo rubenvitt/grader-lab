@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d5ca7b8a6c9f4ea05369e71c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "wrong-migration",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4891,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur im Namen der Migrationsoption. Da kein Diff oder anderer Quellbeleg vorliegt, lässt sich nicht beurteilen, welcher Name im Code steht; anhand der vorliegenden Informationen sind sie gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur im Namen der Migrationsoption. Da kein Diff oder anderer Quellbeleg vorliegt, lässt sich nicht beurteilen, welcher Name im Code steht; anhand der vorliegenden Informationen sind sie gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25260,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 65,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-49db-7f33-9974-0f04c7036c26"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur im Namen der Migrationsoption. Da kein Diff oder anderer Quellbeleg vorliegt, lässt sich nicht beurteilen, welcher Name im Code steht; anhand der vorliegenden Informationen sind sie gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25260,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 65,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

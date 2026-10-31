@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "bd85b9c41ca11abc186f007e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "missing-breaking",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 6249,
+ "text": "{\"reason\":\"Fassung A nennt zusätzlich die Entfernung von `queue.clean()` und `timeout` samt Migration. Ohne Quellen lässt sich nicht beurteilen, ob diese Angaben zutreffen oder ob Fassung B eine relevante Änderung auslässt; die übrigen Einträge sind sachlich gleich.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung A nennt zusätzlich die Entfernung von `queue.clean()` und `timeout` samt Migration. Ohne Quellen lässt sich nicht beurteilen, ob diese Angaben zutreffen oder ob Fassung B eine relevante Änderung auslässt; die übrigen Einträge sind sachlich gleich.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25517,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 122,
+  "reasoning_output_tokens": 49
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-2f3f-75a0-8c83-d7a1bc2eb585"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A nennt zusätzlich die Entfernung von `queue.clean()` und `timeout` samt Migration. Ohne Quellen lässt sich nicht beurteilen, ob diese Angaben zutreffen oder ob Fassung B eine relevante Änderung auslässt; die übrigen Einträge sind sachlich gleich.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25517,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 122,
+    "reasoning_output_tokens": 49
+   }
+  }
+ ]
+}

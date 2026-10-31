@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "5c74ade73d3992d128cf0047",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5180,
+ "text": "{\"reason\":\"Fassung B ist sachlich und vermeidet die Werbesprache und Superlative von Fassung A. Inhaltlich sind die Einträge ansonsten gleich; ihre Belegbarkeit lässt sich ohne die Diffs nicht prüfen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist sachlich und vermeidet die Werbesprache und Superlative von Fassung A. Inhaltlich sind die Einträge ansonsten gleich; ihre Belegbarkeit lässt sich ohne die Diffs nicht prüfen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 24556,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 61,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-ec25-7943-90e8-3cc8ae7af669"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist sachlich und vermeidet die Werbesprache und Superlative von Fassung A. Inhaltlich sind die Einträge ansonsten gleich; ihre Belegbarkeit lässt sich ohne die Diffs nicht prüfen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24556,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 61,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

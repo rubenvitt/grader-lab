@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "63ae99f5e983f775d36bc093",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "invented-claim",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8049,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage zu #334, Worker behielten ihre Locks bei Redis-Failovers und die Verlängerung verbinde sich automatisch neu, ist nicht belegt. Der Diff versucht `pexpire` nur nach einem Fehler mit Code `ECONNRESET` einmal erneut; er garantiert weder einen Erhalt des Locks noch eine automatische Neuverbindung.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` übernimmt den vorhandenen Wert `graceMs` nicht. Der entsprechende Aufruf lautet `queue.purge({ status, olderThanMs: graceMs })`.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Security-Eintrag nennt nur ein allgemeines Sicherheitsproblem. Die betroffene Komponente `signing` wird nicht genannt, obwohl ihre Nennung nach R5 erlaubt ist; Nutzer können daher nicht erkennen, welcher Teil der Bibliothek betroffen ist.\"\n    }\n  ],\n  \"reason\": \"Die Diffs belegen das Ereignis, die Deprecation und einen begrenzten Wiederholungsversuch bei der Lock-Verlängerung. Die Notes überzeichnen jedoch den Fix, enthalten einen unvollständigen Migrationsschritt und benennen die vom Sicherheitsfix betroffene Komponente nicht.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zu #334, Worker behielten ihre Locks bei Redis-Failovers und die Verlängerung verbinde sich automatisch neu, ist nicht belegt. Der Diff versucht `pexpire` nur nach einem Fehler mit Code `ECONNRESET` einmal erneut; er garantiert weder einen Erhalt des Locks noch eine automatische Neuverbindung."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` übernimmt den vorhandenen Wert `graceMs` nicht. Der entsprechende Aufruf lautet `queue.purge({ status, olderThanMs: graceMs })`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Security-Eintrag nennt nur ein allgemeines Sicherheitsproblem. Die betroffene Komponente `signing` wird nicht genannt, obwohl ihre Nennung nach R5 erlaubt ist; Nutzer können daher nicht erkennen, welcher Teil der Bibliothek betroffen ist."
+   }
+  ],
+  "reason": "Die Diffs belegen das Ereignis, die Deprecation und einen begrenzten Wiederholungsversuch bei der Lock-Verlängerung. Die Notes überzeichnen jedoch den Fix, enthalten einen unvollständigen Migrationsschritt und benennen die vom Sicherheitsfix betroffene Komponente nicht.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25729,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 404,
+  "reasoning_output_tokens": 77
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-4fab-71c1-8da7-da9ddaf777c0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage zu #334, Worker behielten ihre Locks bei Redis-Failovers und die Verlängerung verbinde sich automatisch neu, ist nicht belegt. Der Diff versucht `pexpire` nur nach einem Fehler mit Code `ECONNRESET` einmal erneut; er garantiert weder einen Erhalt des Locks noch eine automatische Neuverbindung.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` übernimmt den vorhandenen Wert `graceMs` nicht. Der entsprechende Aufruf lautet `queue.purge({ status, olderThanMs: graceMs })`.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Security-Eintrag nennt nur ein allgemeines Sicherheitsproblem. Die betroffene Komponente `signing` wird nicht genannt, obwohl ihre Nennung nach R5 erlaubt ist; Nutzer können daher nicht erkennen, welcher Teil der Bibliothek betroffen ist.\"\n    }\n  ],\n  \"reason\": \"Die Diffs belegen das Ereignis, die Deprecation und einen begrenzten Wiederholungsversuch bei der Lock-Verlängerung. Die Notes überzeichnen jedoch den Fix, enthalten einen unvollständigen Migrationsschritt und benennen die vom Sicherheitsfix betroffene Komponente nicht.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25729,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 404,
+    "reasoning_output_tokens": 77
+   }
+  }
+ ]
+}

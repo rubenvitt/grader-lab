@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "91987301ae86082a5b05a6f3",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "internal-noise",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5126,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Die Maintenance-Einträge nennen den CodeQL-Workflow aus PR #379 und das Update der Dev-Dependency eslint aus PR #381. Beide betreffen interne Entwicklung statt die Nutzung der Bibliothek.\"}],\"reason\":\"Die nutzerrelevanten Änderungen entsprechen den Diffs: Der Reland verwendet `perMs`, und die Migration von `timeout` zu `timeoutMs` ist korrekt. Die Version 4.1.0 passt zu Feature und Deprecation; die internen Maintenance-Einträge verstoßen jedoch gegen R6.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Die Maintenance-Einträge nennen den CodeQL-Workflow aus PR #379 und das Update der Dev-Dependency eslint aus PR #381. Beide betreffen interne Entwicklung statt die Nutzung der Bibliothek."
+   }
+  ],
+  "reason": "Die nutzerrelevanten Änderungen entsprechen den Diffs: Der Reland verwendet `perMs`, und die Migration von `timeout` zu `timeoutMs` ist korrekt. Die Version 4.1.0 passt zu Feature und Deprecation; die internen Maintenance-Einträge verstoßen jedoch gegen R6.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26341,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 137,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-c74c-7b80-a30b-114e7f514ec3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Die Maintenance-Einträge nennen den CodeQL-Workflow aus PR #379 und das Update der Dev-Dependency eslint aus PR #381. Beide betreffen interne Entwicklung statt die Nutzung der Bibliothek.\"}],\"reason\":\"Die nutzerrelevanten Änderungen entsprechen den Diffs: Der Reland verwendet `perMs`, und die Migration von `timeout` zu `timeoutMs` ist korrekt. Die Version 4.1.0 passt zu Feature und Deprecation; die internen Maintenance-Einträge verstoßen jedoch gegen R6.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26341,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 137,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

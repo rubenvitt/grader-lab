@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "15d453ba0da91d0d9480233c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "wrong-bump",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6058,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #307, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff zeigt nur, dass `removeOnComplete` standardmäßig von `false` auf `true` wechselt; das Abrufverhalten ist nicht belegt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks in `active`. Der Diff belegt die Freigabe des Locks im `finally`-Block, aber keine Änderung des Jobstatus.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version `2.4.0` nach `2.3.2`. Die Änderung des Defaults `removeOnComplete` in #307 ist ein Breaking Change und verlangt gemäß Rubrik einen Major-Sprung, mindestens auf `3.0.0`.\"}],\"reason\":\"Der zurückgenommene Lane-Code fehlt zu Recht in den Notes. Der geänderte Default ist als Breaking Change mit passendem Migrationsschritt aufgeführt, zwei Aussagen gehen jedoch über die Diffs hinaus und die Versionsnummer ist zu niedrig.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #307, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff zeigt nur, dass `removeOnComplete` standardmäßig von `false` auf `true` wechselt; das Abrufverhalten ist nicht belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks in `active`. Der Diff belegt die Freigabe des Locks im `finally`-Block, aber keine Änderung des Jobstatus."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version `2.4.0` nach `2.3.2`. Die Änderung des Defaults `removeOnComplete` in #307 ist ein Breaking Change und verlangt gemäß Rubrik einen Major-Sprung, mindestens auf `3.0.0`."
+   }
+  ],
+  "reason": "Der zurückgenommene Lane-Code fehlt zu Recht in den Notes. Der geänderte Default ist als Breaking Change mit passendem Migrationsschritt aufgeführt, zwei Aussagen gehen jedoch über die Diffs hinaus und die Versionsnummer ist zu niedrig.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26834,
+  "cached_input_tokens": 0,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 266,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-7e48-7ac0-a544-e3ef1089807a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #307, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff zeigt nur, dass `removeOnComplete` standardmäßig von `false` auf `true` wechselt; das Abrufverhalten ist nicht belegt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks in `active`. Der Diff belegt die Freigabe des Locks im `finally`-Block, aber keine Änderung des Jobstatus.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version `2.4.0` nach `2.3.2`. Die Änderung des Defaults `removeOnComplete` in #307 ist ein Breaking Change und verlangt gemäß Rubrik einen Major-Sprung, mindestens auf `3.0.0`.\"}],\"reason\":\"Der zurückgenommene Lane-Code fehlt zu Recht in den Notes. Der geänderte Default ist als Breaking Change mit passendem Migrationsschritt aufgeführt, zwei Aussagen gehen jedoch über die Diffs hinaus und die Versionsnummer ist zu niedrig.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26834,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 266,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

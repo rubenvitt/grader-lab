@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "57e01ad7f6dfe7e930d126a3",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "wrong-migration",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4317,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben eine neue Funktion und eine Deprecation mit konkretem Migrationshinweis; die Minor-Version passt dazu. Ohne Quellen lassen sich die technischen Aussagen nicht weiter überprüfen und gelten daher als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben eine neue Funktion und eine Deprecation mit konkretem Migrationshinweis; die Minor-Version passt dazu. Ohne Quellen lassen sich die technischen Aussagen nicht weiter überprüfen und gelten daher als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24347,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 63,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-4755-7123-88ab-0da2aac7a71e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben eine neue Funktion und eine Deprecation mit konkretem Migrationshinweis; die Minor-Version passt dazu. Ohne Quellen lassen sich die technischen Aussagen nicht weiter überprüfen und gelten daher als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24347,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 63,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

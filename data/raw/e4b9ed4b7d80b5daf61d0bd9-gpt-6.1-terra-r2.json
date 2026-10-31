@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "e4b9ed4b7d80b5daf61d0bd9",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5637,
+ "text": "{\"reason\":\"Fassung B lässt die CI- und Entwicklungsabhängigkeitsänderungen weg, die für Nutzer der Bibliothek nicht relevant sind. Im Übrigen sind die Fassungen inhaltlich gleich.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B lässt die CI- und Entwicklungsabhängigkeitsänderungen weg, die für Nutzer der Bibliothek nicht relevant sind. Im Übrigen sind die Fassungen inhaltlich gleich.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25292,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 56,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-12bf-7af1-a74c-fd965f708d5f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B lässt die CI- und Entwicklungsabhängigkeitsänderungen weg, die für Nutzer der Bibliothek nicht relevant sind. Im Übrigen sind die Fassungen inhaltlich gleich.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25292,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 56,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

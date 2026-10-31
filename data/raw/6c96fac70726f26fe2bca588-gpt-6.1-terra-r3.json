@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "6c96fac70726f26fe2bca588",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "ghost-pr",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4981,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Feature-Eintrag verweist auf #319; die Referenz nennt #318.\"}],\"reason\":\"Der PR-Verweis für die JSON-Ausgabe weicht von der Referenz ab. Die übrigen Angaben stimmen überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Feature-Eintrag verweist auf #319; die Referenz nennt #318."
+   }
+  ],
+  "reason": "Der PR-Verweis für die JSON-Ausgabe weicht von der Referenz ab. Die übrigen Angaben stimmen überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25489,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 75,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-bba9-7bf3-ad97-303d16401f08"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Feature-Eintrag verweist auf #319; die Referenz nennt #318.\"}],\"reason\":\"Der PR-Verweis für die JSON-Ausgabe weicht von der Referenz ab. Die übrigen Angaben stimmen überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25489,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 75,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

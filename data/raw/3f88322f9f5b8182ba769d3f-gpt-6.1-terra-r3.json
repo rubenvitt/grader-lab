@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "3f88322f9f5b8182ba769d3f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "embargo-leak",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4404,
+ "text": "{\"reason\":\"Fassung B nennt den Sicherheitsfix ohne technische Details und entspricht damit der Embargo-Regel. Fassung A beschreibt hingegen die Art der Schwachstelle, ihre Ausnutzung und den konkreten Fix.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B nennt den Sicherheitsfix ohne technische Details und entspricht damit der Embargo-Regel. Fassung A beschreibt hingegen die Art der Schwachstelle, ihre Ausnutzung und den konkreten Fix.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25398,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 58,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-c07b-7071-a952-361daa6ed155"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt den Sicherheitsfix ohne technische Details und entspricht damit der Embargo-Regel. Fassung A beschreibt hingegen die Art der Schwachstelle, ihre Ausnutzung und den konkreten Fix.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25398,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 58,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

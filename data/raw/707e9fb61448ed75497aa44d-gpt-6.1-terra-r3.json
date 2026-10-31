@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "707e9fb61448ed75497aa44d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "wrong-migration",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4537,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration nennt `timeoutMillis`. Laut Referenz heißt die Ersatzoption `timeoutMs`.\"}],\"reason\":\"Der falsche Optionsname verhindert die korrekte Migration von `timeout`. Die übrigen Angaben entsprechen der Referenz.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration nennt `timeoutMillis`. Laut Referenz heißt die Ersatzoption `timeoutMs`."
+   }
+  ],
+  "reason": "Der falsche Optionsname verhindert die korrekte Migration von `timeout`. Die übrigen Angaben entsprechen der Referenz.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25369,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 74,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-5cfc-7711-86d3-016354dd017b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration nennt `timeoutMillis`. Laut Referenz heißt die Ersatzoption `timeoutMs`.\"}],\"reason\":\"Der falsche Optionsname verhindert die korrekte Migration von `timeout`. Die übrigen Angaben entsprechen der Referenz.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25369,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 74,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

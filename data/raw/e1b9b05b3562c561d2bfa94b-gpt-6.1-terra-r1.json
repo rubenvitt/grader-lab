@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "e1b9b05b3562c561d2bfa94b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "paraphrase",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4943,
+ "text": "{\"violations\":[],\"reason\":\"Die Release Notes sind konkret und sachlich; aus ihrem Text ergibt sich kein überprüfbarer Verstoß. Ob die technischen Aussagen und Migrationsschritte den Änderungen entsprechen, lässt sich ohne Quellen nicht prüfen und gilt daher gemäß Vorgabe als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Release Notes sind konkret und sachlich; aus ihrem Text ergibt sich kein überprüfbarer Verstoß. Ob die technischen Aussagen und Migrationsschritte den Änderungen entsprechen, lässt sich ohne Quellen nicht prüfen und gilt daher gemäß Vorgabe als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25376,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 70,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-2715-7b22-bef8-7532f4196635"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Release Notes sind konkret und sachlich; aus ihrem Text ergibt sich kein überprüfbarer Verstoß. Ob die technischen Aussagen und Migrationsschritte den Änderungen entsprechen, lässt sich ohne Quellen nicht prüfen und gilt daher gemäß Vorgabe als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25376,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 70,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

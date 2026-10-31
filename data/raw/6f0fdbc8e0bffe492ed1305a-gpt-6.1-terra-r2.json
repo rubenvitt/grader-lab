@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "6f0fdbc8e0bffe492ed1305a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "paraphrase",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7229,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #351, für `stalledIntervalMs` existiere kein Alias und der alte Name werde ohne Warnung ignoriert. Der Diff zeigt die Umbenennung in Typ und Timer, belegt aber weder das Fehlen eines Alias noch das Verhalten oder die Warnungen bei Verwendung des alten Namens.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes garantieren zu #357, dass Zeitumstellungen Cron-Jobs nicht mehr doppelt auslösen. Der Diff zeigt lediglich, dass `cron.next` mit `tz: 'UTC'` aufgerufen wird; er belegt diese allgemeine Garantie nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes kündigen zu #358 ein separates Advisory mit späteren Details an. Die Quellen nennen zwar ein Advisory, belegen aber keine spätere Veröffentlichung.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die beiden Breaking Changes und wählen mit 4.0.0 einen passenden Major-Sprung. Mehrere Aussagen gehen jedoch über das hinaus, was die Quellen belegen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #351, für `stalledIntervalMs` existiere kein Alias und der alte Name werde ohne Warnung ignoriert. Der Diff zeigt die Umbenennung in Typ und Timer, belegt aber weder das Fehlen eines Alias noch das Verhalten oder die Warnungen bei Verwendung des alten Namens."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes garantieren zu #357, dass Zeitumstellungen Cron-Jobs nicht mehr doppelt auslösen. Der Diff zeigt lediglich, dass `cron.next` mit `tz: 'UTC'` aufgerufen wird; er belegt diese allgemeine Garantie nicht."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes kündigen zu #358 ein separates Advisory mit späteren Details an. Die Quellen nennen zwar ein Advisory, belegen aber keine spätere Veröffentlichung."
+   }
+  ],
+  "reason": "Die Notes erfassen die beiden Breaking Changes und wählen mit 4.0.0 einen passenden Major-Sprung. Mehrere Aussagen gehen jedoch über das hinaus, was die Quellen belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26936,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 346,
+  "reasoning_output_tokens": 72
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-7f38-7470-a21d-b81f2fcc8f06"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #351, für `stalledIntervalMs` existiere kein Alias und der alte Name werde ohne Warnung ignoriert. Der Diff zeigt die Umbenennung in Typ und Timer, belegt aber weder das Fehlen eines Alias noch das Verhalten oder die Warnungen bei Verwendung des alten Namens.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes garantieren zu #357, dass Zeitumstellungen Cron-Jobs nicht mehr doppelt auslösen. Der Diff zeigt lediglich, dass `cron.next` mit `tz: 'UTC'` aufgerufen wird; er belegt diese allgemeine Garantie nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes kündigen zu #358 ein separates Advisory mit späteren Details an. Die Quellen nennen zwar ein Advisory, belegen aber keine spätere Veröffentlichung.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die beiden Breaking Changes und wählen mit 4.0.0 einen passenden Major-Sprung. Mehrere Aussagen gehen jedoch über das hinaus, was die Quellen belegen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26936,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 346,
+    "reasoning_output_tokens": 72
+   }
+  }
+ ]
+}

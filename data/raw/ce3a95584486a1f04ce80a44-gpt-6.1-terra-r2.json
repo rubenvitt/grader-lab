@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "ce3a95584486a1f04ce80a44",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "invented-claim",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5236,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes zu #304 behaupten, der Job werde „on the next poll“ erneut versucht. Der Diff belegt nur, dass die Sperre im `finally`-Block freigegeben wird; Zeitpunkt und Verhalten eines erneuten Versuchs sind nicht belegt.\"}],\"reason\":\"Die Release Notes enthalten eine nicht durch die Quellen belegte Aussage zum erneuten Versuch nach einem Handler-Fehler.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes zu #304 behaupten, der Job werde „on the next poll“ erneut versucht. Der Diff belegt nur, dass die Sperre im `finally`-Block freigegeben wird; Zeitpunkt und Verhalten eines erneuten Versuchs sind nicht belegt."
+   }
+  ],
+  "reason": "Die Release Notes enthalten eine nicht durch die Quellen belegte Aussage zum erneuten Versuch nach einem Handler-Fehler.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26841,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 151,
+  "reasoning_output_tokens": 41
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-e264-7b80-8d78-253e41458046"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes zu #304 behaupten, der Job werde „on the next poll“ erneut versucht. Der Diff belegt nur, dass die Sperre im `finally`-Block freigegeben wird; Zeitpunkt und Verhalten eines erneuten Versuchs sind nicht belegt.\"}],\"reason\":\"Die Release Notes enthalten eine nicht durch die Quellen belegte Aussage zum erneuten Versuch nach einem Handler-Fehler.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26841,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 151,
+    "reasoning_output_tokens": 41
+   }
+  }
+ ]
+}

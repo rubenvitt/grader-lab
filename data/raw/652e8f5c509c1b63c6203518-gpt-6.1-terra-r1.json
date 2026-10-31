@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "652e8f5c509c1b63c6203518",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "useless-true",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5104,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Some default behaviour has changed“ nennt weder das betroffene Standardverhalten noch eine erforderliche Anpassung.\"},{\"criterion\":\"R8\",\"evidence\":\"„The CLI has been improved“ beschreibt keine konkrete Änderung und lässt offen, ob Nutzer etwas tun müssen.\"},{\"criterion\":\"R8\",\"evidence\":\"„Various improvements to worker reliability“ nennt keine konkrete Änderung und lässt offen, ob Nutzer etwas tun müssen.\"}],\"reason\":\"Alle drei Einträge sind zu allgemein, um die Änderungen oder einen möglichen Handlungsbedarf zu erkennen. Ob weitere Verstöße vorliegen, lässt sich aus den Notes allein nicht prüfen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Some default behaviour has changed“ nennt weder das betroffene Standardverhalten noch eine erforderliche Anpassung."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„The CLI has been improved“ beschreibt keine konkrete Änderung und lässt offen, ob Nutzer etwas tun müssen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Various improvements to worker reliability“ nennt keine konkrete Änderung und lässt offen, ob Nutzer etwas tun müssen."
+   }
+  ],
+  "reason": "Alle drei Einträge sind zu allgemein, um die Änderungen oder einen möglichen Handlungsbedarf zu erkennen. Ob weitere Verstöße vorliegen, lässt sich aus den Notes allein nicht prüfen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25141,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 149,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-0a8e-7361-bc22-a02fa2145e82"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Some default behaviour has changed“ nennt weder das betroffene Standardverhalten noch eine erforderliche Anpassung.\"},{\"criterion\":\"R8\",\"evidence\":\"„The CLI has been improved“ beschreibt keine konkrete Änderung und lässt offen, ob Nutzer etwas tun müssen.\"},{\"criterion\":\"R8\",\"evidence\":\"„Various improvements to worker reliability“ nennt keine konkrete Änderung und lässt offen, ob Nutzer etwas tun müssen.\"}],\"reason\":\"Alle drei Einträge sind zu allgemein, um die Änderungen oder einen möglichen Handlungsbedarf zu erkennen. Ob weitere Verstöße vorliegen, lässt sich aus den Notes allein nicht prüfen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25141,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 149,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

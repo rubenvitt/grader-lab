@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "e5f77599cfbec2bf733fc491",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 11074,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Bei #351 behaupten die Notes, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung, aber weder eine Prüfung auf unbekannte Optionen noch deren Verhalten.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Bei #357 behaupten die Notes allgemein, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgeführt. Der Diff zeigt nur, dass `cron.next` mit der Zeitzone UTC aufgerufen wird; er belegt die allgemeine Garantie nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Bei #360 behaupten die Notes, zuvor sei ein Kommando pro Job gesendet worden. Der Diff zeigt einen Aufruf von `this.add` pro Job, aber nicht, wie viele Kommandos dieser ausführt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Sicherheitseintrag verspricht, dass Details in einem separaten Advisory folgen. Die Quellen nennen ein Advisory, belegen aber diese Veröffentlichungsaussage nicht.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Formulierungen wie „Welcome to the future of job queues“, „our most exciting release yet“, „revolutionary“, „blazing“ und „Turbocharged“ sind Werbesprache und Superlative.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten mehrere Aussagen, die über die belegten Änderungen hinausgehen, sowie Werbesprache. Die Breaking Changes und die Major-Version sind dagegen passend eingeordnet.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Bei #351 behaupten die Notes, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung, aber weder eine Prüfung auf unbekannte Optionen noch deren Verhalten."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Bei #357 behaupten die Notes allgemein, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgeführt. Der Diff zeigt nur, dass `cron.next` mit der Zeitzone UTC aufgerufen wird; er belegt die allgemeine Garantie nicht."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Bei #360 behaupten die Notes, zuvor sei ein Kommando pro Job gesendet worden. Der Diff zeigt einen Aufruf von `this.add` pro Job, aber nicht, wie viele Kommandos dieser ausführt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Sicherheitseintrag verspricht, dass Details in einem separaten Advisory folgen. Die Quellen nennen ein Advisory, belegen aber diese Veröffentlichungsaussage nicht."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „Welcome to the future of job queues“, „our most exciting release yet“, „revolutionary“, „blazing“ und „Turbocharged“ sind Werbesprache und Superlative."
+   }
+  ],
+  "reason": "Die Notes enthalten mehrere Aussagen, die über die belegten Änderungen hinausgehen, sowie Werbesprache. Die Breaking Changes und die Major-Version sind dagegen passend eingeordnet.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26127,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 509,
+  "reasoning_output_tokens": 142
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-de3b-73a2-8640-bd7ccb3c47e9"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Bei #351 behaupten die Notes, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung, aber weder eine Prüfung auf unbekannte Optionen noch deren Verhalten.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Bei #357 behaupten die Notes allgemein, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgeführt. Der Diff zeigt nur, dass `cron.next` mit der Zeitzone UTC aufgerufen wird; er belegt die allgemeine Garantie nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Bei #360 behaupten die Notes, zuvor sei ein Kommando pro Job gesendet worden. Der Diff zeigt einen Aufruf von `this.add` pro Job, aber nicht, wie viele Kommandos dieser ausführt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Sicherheitseintrag verspricht, dass Details in einem separaten Advisory folgen. Die Quellen nennen ein Advisory, belegen aber diese Veröffentlichungsaussage nicht.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Formulierungen wie „Welcome to the future of job queues“, „our most exciting release yet“, „revolutionary“, „blazing“ und „Turbocharged“ sind Werbesprache und Superlative.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten mehrere Aussagen, die über die belegten Änderungen hinausgehen, sowie Werbesprache. Die Breaking Changes und die Major-Version sind dagegen passend eingeordnet.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26127,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 509,
+    "reasoning_output_tokens": 142
+   }
+  }
+ ]
+}

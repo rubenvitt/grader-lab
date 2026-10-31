@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "4264c63ea0d1d3e8f2a3e900",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-migration",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4451,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt nennt `stalledCheckMs` als neuen Optionsnamen. Korrekt ist `stallCheckMs`; mit dem angegebenen Namen gelingt die Migration nicht.\"}],\"reason\":\"Der Migrationsschritt für die Worker-Option enthält einen falschen Namen. Die übrigen Angaben entsprechen der Referenz.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Der Migrationsschritt nennt `stalledCheckMs` als neuen Optionsnamen. Korrekt ist `stallCheckMs`; mit dem angegebenen Namen gelingt die Migration nicht."
+   }
+  ],
+  "reason": "Der Migrationsschritt für die Worker-Option enthält einen falschen Namen. Die übrigen Angaben entsprechen der Referenz.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25636,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 92,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-1133-7f13-8b29-05349c457021"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt nennt `stalledCheckMs` als neuen Optionsnamen. Korrekt ist `stallCheckMs`; mit dem angegebenen Namen gelingt die Migration nicht.\"}],\"reason\":\"Der Migrationsschritt für die Worker-Option enthält einen falschen Namen. Die übrigen Angaben entsprechen der Referenz.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25636,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 92,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

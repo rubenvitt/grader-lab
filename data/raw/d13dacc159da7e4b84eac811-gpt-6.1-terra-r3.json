@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "d13dacc159da7e4b84eac811",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 6782,
+ "text": "{\"reason\":\"Fassung B ist besser, weil sie die internen Änderungen am Release-Workflow und am Key Builder weglässt. Diese sind für Nutzer der Bibliothek laut R6 nicht relevant; ansonsten sind die Fassungen inhaltlich gleich.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist besser, weil sie die internen Änderungen am Release-Workflow und am Key Builder weglässt. Diese sind für Nutzer der Bibliothek laut R6 nicht relevant; ansonsten sind die Fassungen inhaltlich gleich.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25603,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 64,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-7e3e-7872-8a7d-72de78695abd"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist besser, weil sie die internen Änderungen am Release-Workflow und am Key Builder weglässt. Diese sind für Nutzer der Bibliothek laut R6 nicht relevant; ansonsten sind die Fassungen inhaltlich gleich.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25603,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 64,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

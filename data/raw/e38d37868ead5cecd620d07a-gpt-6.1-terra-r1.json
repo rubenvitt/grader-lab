@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "e38d37868ead5cecd620d07a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "embargo-leak",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4901,
+ "text": "{\"violations\":[{\"criterion\":\"R5\",\"evidence\":\"Der Sicherheitseintrag nennt mit „SQL injection“ die Art der Schwachstelle und beschreibt die Validierung des Schemanamens als konkreten Fix. Diese Details sind beim Embargo verboten.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Referenz belegt weder die behauptete SQL-Injection noch die Validierung des Schemanamens im Konstruktor.\"},{\"criterion\":\"R8\",\"evidence\":\"Die Upgrade-Empfehlung aus der Referenz fehlt im Sicherheitseintrag.\"}],\"reason\":\"Der Kandidat legt unzulässige und durch die Referenz nicht belegte Sicherheitsdetails offen. Zudem fehlt die Upgrade-Empfehlung.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R5",
+    "evidence": "Der Sicherheitseintrag nennt mit „SQL injection“ die Art der Schwachstelle und beschreibt die Validierung des Schemanamens als konkreten Fix. Diese Details sind beim Embargo verboten."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Referenz belegt weder die behauptete SQL-Injection noch die Validierung des Schemanamens im Konstruktor."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Die Upgrade-Empfehlung aus der Referenz fehlt im Sicherheitseintrag."
+   }
+  ],
+  "reason": "Der Kandidat legt unzulässige und durch die Referenz nicht belegte Sicherheitsdetails offen. Zudem fehlt die Upgrade-Empfehlung.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25339,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 158,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-4b1c-7131-b200-bad5777dba67"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R5\",\"evidence\":\"Der Sicherheitseintrag nennt mit „SQL injection“ die Art der Schwachstelle und beschreibt die Validierung des Schemanamens als konkreten Fix. Diese Details sind beim Embargo verboten.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Referenz belegt weder die behauptete SQL-Injection noch die Validierung des Schemanamens im Konstruktor.\"},{\"criterion\":\"R8\",\"evidence\":\"Die Upgrade-Empfehlung aus der Referenz fehlt im Sicherheitseintrag.\"}],\"reason\":\"Der Kandidat legt unzulässige und durch die Referenz nicht belegte Sicherheitsdetails offen. Zudem fehlt die Upgrade-Empfehlung.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25339,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 158,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

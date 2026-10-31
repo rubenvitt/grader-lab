@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "8e2c6fb03db0bf79387fb493",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7349,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 ändert den Konstruktor so, dass bisher akzeptierte Schemanamen außerhalb von `/^[a-z_][a-z0-9_]*$/` abgelehnt werden. Betroffene Nutzer müssen ihre Konfiguration anpassen; die Änderung fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Worker-Eintrag verweist auf #412. Der zugehörige Fix ist laut Quelle PR #413.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die letzte Version ist 5.0.0. Wegen der inkompatiblen Änderung an akzeptierten Schemanamen in PR #414 ist 5.0.1 kein ausreichender Versionssprung; erforderlich ist eine neue Major-Version.\"\n    }\n  ],\n  \"reason\": \"Die Notes beschreiben den Worker-Fix und den Sicherheitsfix weitgehend passend, kennzeichnen die inkompatible Konfigurationsänderung aber nicht und verweisen beim Worker-Fix auf die falsche PR. Die Versionsnummer berücksichtigt den Breaking Change ebenfalls nicht.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 ändert den Konstruktor so, dass bisher akzeptierte Schemanamen außerhalb von `/^[a-z_][a-z0-9_]*$/` abgelehnt werden. Betroffene Nutzer müssen ihre Konfiguration anpassen; die Änderung fehlt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Worker-Eintrag verweist auf #412. Der zugehörige Fix ist laut Quelle PR #413."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 5.0.0. Wegen der inkompatiblen Änderung an akzeptierten Schemanamen in PR #414 ist 5.0.1 kein ausreichender Versionssprung; erforderlich ist eine neue Major-Version."
+   }
+  ],
+  "reason": "Die Notes beschreiben den Worker-Fix und den Sicherheitsfix weitgehend passend, kennzeichnen die inkompatible Konfigurationsänderung aber nicht und verweisen beim Worker-Fix auf die falsche PR. Die Versionsnummer berücksichtigt den Breaking Change ebenfalls nicht.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26315,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 267,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-9331-7cd3-afe4-38cb85d66ebe"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 ändert den Konstruktor so, dass bisher akzeptierte Schemanamen außerhalb von `/^[a-z_][a-z0-9_]*$/` abgelehnt werden. Betroffene Nutzer müssen ihre Konfiguration anpassen; die Änderung fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Worker-Eintrag verweist auf #412. Der zugehörige Fix ist laut Quelle PR #413.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die letzte Version ist 5.0.0. Wegen der inkompatiblen Änderung an akzeptierten Schemanamen in PR #414 ist 5.0.1 kein ausreichender Versionssprung; erforderlich ist eine neue Major-Version.\"\n    }\n  ],\n  \"reason\": \"Die Notes beschreiben den Worker-Fix und den Sicherheitsfix weitgehend passend, kennzeichnen die inkompatible Konfigurationsänderung aber nicht und verweisen beim Worker-Fix auf die falsche PR. Die Versionsnummer berücksichtigt den Breaking Change ebenfalls nicht.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26315,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 267,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

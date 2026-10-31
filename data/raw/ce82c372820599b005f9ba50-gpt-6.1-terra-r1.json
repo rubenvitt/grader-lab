@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "ce82c372820599b005f9ba50",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "reordered",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 9056,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration nennt `queue.purge({ status, olderThanMs })`, ordnet den bisherigen Wert `graceMs` aber nicht zu. Der Diff verwendet `this.purge({ status, olderThanMs: graceMs })`; ohne eine vorhandene Variable `olderThanMs` funktioniert der angegebene Aufruf nicht.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Sicherheitseintrag nennt nur „a security issue“. PR #336 betrifft die Signaturprüfung in `src/signing.ts`; die Komponente könnte genannt werden, ohne das Embargo zu verletzen.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten die wesentlichen Nutzeränderungen und verwenden mit 3.1.0 eine passende Version. Der Migrationshinweis ist jedoch nicht vollständig, und dem Sicherheitseintrag fehlt die betroffene Komponente.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration nennt `queue.purge({ status, olderThanMs })`, ordnet den bisherigen Wert `graceMs` aber nicht zu. Der Diff verwendet `this.purge({ status, olderThanMs: graceMs })`; ohne eine vorhandene Variable `olderThanMs` funktioniert der angegebene Aufruf nicht."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Sicherheitseintrag nennt nur „a security issue“. PR #336 betrifft die Signaturprüfung in `src/signing.ts`; die Komponente könnte genannt werden, ohne das Embargo zu verletzen."
+   }
+  ],
+  "reason": "Die Notes enthalten die wesentlichen Nutzeränderungen und verwenden mit 3.1.0 eine passende Version. Der Migrationshinweis ist jedoch nicht vollständig, und dem Sicherheitseintrag fehlt die betroffene Komponente.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25729,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 302,
+  "reasoning_output_tokens": 82
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-e391-7981-b42f-6f62635d8dc7"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536091a782b03e4-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536091fe9b0f558-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration nennt `queue.purge({ status, olderThanMs })`, ordnet den bisherigen Wert `graceMs` aber nicht zu. Der Diff verwendet `this.purge({ status, olderThanMs: graceMs })`; ohne eine vorhandene Variable `olderThanMs` funktioniert der angegebene Aufruf nicht.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Sicherheitseintrag nennt nur „a security issue“. PR #336 betrifft die Signaturprüfung in `src/signing.ts`; die Komponente könnte genannt werden, ohne das Embargo zu verletzen.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten die wesentlichen Nutzeränderungen und verwenden mit 3.1.0 eine passende Version. Der Migrationshinweis ist jedoch nicht vollständig, und dem Sicherheitseintrag fehlt die betroffene Komponente.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25729,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 302,
+    "reasoning_output_tokens": 82
+   }
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "171d14e4b43bf7014764a5dc",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7319,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #307, abgeschlossene Jobs könnten ohne Anpassung nicht mehr abgerufen werden. Der Diff belegt nur, dass `removeOnComplete` standardmäßig von `false` auf `true` wechselt; das Abrufverhalten zeigt er nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #304, der Job bleibe dadurch nicht mehr bis zum Ablauf der Sperre im Status „active“. Der Diff belegt die Freigabe der Sperre im `finally`-Block, zeigt aber keine Änderung des Jobstatus.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Die Einleitung verwendet Werbesprache und unbelegte Superlative wie „the leanest quaykit ever“, „game-changing“ und „more bulletproof than ever“. Auch Formulierungen wie „Unleash the power of automation“ und „Rock-solid locks“ sind nicht sachlich.\"\n    }\n  ],\n  \"reason\": \"Die Breaking Change und ihre Migration sind korrekt eingeordnet; zurückgenommene und rein interne Änderungen werden nicht aufgeführt. Die Notes enthalten jedoch Aussagen, die über die Diffs hinausgehen, sowie werbliche Formulierungen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #307, abgeschlossene Jobs könnten ohne Anpassung nicht mehr abgerufen werden. Der Diff belegt nur, dass `removeOnComplete` standardmäßig von `false` auf `true` wechselt; das Abrufverhalten zeigt er nicht."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #304, der Job bleibe dadurch nicht mehr bis zum Ablauf der Sperre im Status „active“. Der Diff belegt die Freigabe der Sperre im `finally`-Block, zeigt aber keine Änderung des Jobstatus."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Einleitung verwendet Werbesprache und unbelegte Superlative wie „the leanest quaykit ever“, „game-changing“ und „more bulletproof than ever“. Auch Formulierungen wie „Unleash the power of automation“ und „Rock-solid locks“ sind nicht sachlich."
+   }
+  ],
+  "reason": "Die Breaking Change und ihre Migration sind korrekt eingeordnet; zurückgenommene und rein interne Änderungen werden nicht aufgeführt. Die Notes enthalten jedoch Aussagen, die über die Diffs hinausgehen, sowie werbliche Formulierungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26862,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 356,
+  "reasoning_output_tokens": 58
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-f15c-7571-ba63-9749ce118db6"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #307, abgeschlossene Jobs könnten ohne Anpassung nicht mehr abgerufen werden. Der Diff belegt nur, dass `removeOnComplete` standardmäßig von `false` auf `true` wechselt; das Abrufverhalten zeigt er nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #304, der Job bleibe dadurch nicht mehr bis zum Ablauf der Sperre im Status „active“. Der Diff belegt die Freigabe der Sperre im `finally`-Block, zeigt aber keine Änderung des Jobstatus.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Die Einleitung verwendet Werbesprache und unbelegte Superlative wie „the leanest quaykit ever“, „game-changing“ und „more bulletproof than ever“. Auch Formulierungen wie „Unleash the power of automation“ und „Rock-solid locks“ sind nicht sachlich.\"\n    }\n  ],\n  \"reason\": \"Die Breaking Change und ihre Migration sind korrekt eingeordnet; zurückgenommene und rein interne Änderungen werden nicht aufgeführt. Die Notes enthalten jedoch Aussagen, die über die Diffs hinausgehen, sowie werbliche Formulierungen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26862,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 356,
+    "reasoning_output_tokens": 58
+   }
+  }
+ ]
+}

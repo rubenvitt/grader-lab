@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "b425ec0f977b3596d91740fb",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-bump",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 12793,
+ "text": "{\"reason\":\"Fassung B ist besser, weil die beschriebenen Breaking Changes einen Major-Sprung auf 5.0.0 verlangen; 4.2.0 erfüllt das nicht. Inhaltlich unterscheiden sich die Fassungen ansonsten nicht.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist besser, weil die beschriebenen Breaking Changes einen Major-Sprung auf 5.0.0 verlangen; 4.2.0 erfüllt das nicht. Inhaltlich unterscheiden sich die Fassungen ansonsten nicht.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25570,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 62,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-56c9-70f1-9368-78992ee799f5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611d16a62b0e4-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611d5d956e52f-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611dcba04e567-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611ea28925c2a-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist besser, weil die beschriebenen Breaking Changes einen Major-Sprung auf 5.0.0 verlangen; 4.2.0 erfüllt das nicht. Inhaltlich unterscheiden sich die Fassungen ansonsten nicht.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25570,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

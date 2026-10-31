@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "9aa8297fd0aca48b036fbbf6",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reverted-listed",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5498,
+ "text": "{\"reason\":\"Fassung A nennt ein neues Feature, bezeichnet die Version aber als Patch-Release; nach SemVer wäre dafür mindestens ein Minor-Sprung nötig. Fassung B vermeidet diesen Widerspruch, wobei sich ohne Quelldaten nicht beurteilen lässt, ob der Feature-Eintrag sachlich zutrifft oder fehlt.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung A nennt ein neues Feature, bezeichnet die Version aber als Patch-Release; nach SemVer wäre dafür mindestens ein Minor-Sprung nötig. Fassung B vermeidet diesen Widerspruch, wobei sich ohne Quelldaten nicht beurteilen lässt, ob der Feature-Eintrag sachlich zutrifft oder fehlt.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25248,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 158,
+  "reasoning_output_tokens": 76
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-4a89-7eb3-9992-19c81ebad021"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A nennt ein neues Feature, bezeichnet die Version aber als Patch-Release; nach SemVer wäre dafür mindestens ein Minor-Sprung nötig. Fassung B vermeidet diesen Widerspruch, wobei sich ohne Quelldaten nicht beurteilen lässt, ob der Feature-Eintrag sachlich zutrifft oder fehlt.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25248,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 158,
+    "reasoning_output_tokens": 76
+   }
+  }
+ ]
+}

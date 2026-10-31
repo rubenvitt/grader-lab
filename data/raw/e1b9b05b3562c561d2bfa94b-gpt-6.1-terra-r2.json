@@ -1,0 +1,66 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "e1b9b05b3562c561d2bfa94b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "paraphrase",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 10418,
+ "text": "{\"violations\":[],\"reason\":\"Der Text enthält keine erkennbaren inneren Widersprüche oder anderen Verstöße gegen die aus den Notes selbst prüfbaren Kriterien. Ob die Aussagen und Migrationsschritte mit den Quellen übereinstimmen, lässt sich ohne diese nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Text enthält keine erkennbaren inneren Widersprüche oder anderen Verstöße gegen die aus den Notes selbst prüfbaren Kriterien. Ob die Aussagen und Migrationsschritte mit den Quellen übereinstimmen, lässt sich ohne diese nicht prüfen und gilt daher als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25376,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 76,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-3a65-7ee3-af2f-b1b177772d13"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53614da39df58d8-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53614e08b2aca63-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53614e7288d452e-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Text enthält keine erkennbaren inneren Widersprüche oder anderen Verstöße gegen die aus den Notes selbst prüfbaren Kriterien. Ob die Aussagen und Migrationsschritte mit den Quellen übereinstimmen, lässt sich ohne diese nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25376,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 76,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

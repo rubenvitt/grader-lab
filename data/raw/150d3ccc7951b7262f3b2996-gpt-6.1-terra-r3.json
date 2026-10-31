@@ -1,0 +1,79 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "150d3ccc7951b7262f3b2996",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "internal-noise",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 12298,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"„Deflaked the stalled job test with fake timers“ beschreibt eine reine Teständerung.\"},{\"criterion\":\"R6\",\"evidence\":\"„Pinned GitHub Actions to commit SHAs“ betrifft die CI-Konfiguration.\"}],\"reason\":\"Die Notes enthalten zwei Einträge zu Test- und CI-Interna, die für Nutzer der Bibliothek nicht relevant sind. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "„Deflaked the stalled job test with fake timers“ beschreibt eine reine Teständerung."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "„Pinned GitHub Actions to commit SHAs“ betrifft die CI-Konfiguration."
+   }
+  ],
+  "reason": "Die Notes enthalten zwei Einträge zu Test- und CI-Interna, die für Nutzer der Bibliothek nicht relevant sind. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24436,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 113,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-ee8d-7db2-8fff-5d4d94b181db"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53607908fd07cc3-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360795ceb8e9da-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536079d6b86ff26-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53607aa6f401931-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"„Deflaked the stalled job test with fake timers“ beschreibt eine reine Teständerung.\"},{\"criterion\":\"R6\",\"evidence\":\"„Pinned GitHub Actions to commit SHAs“ betrifft die CI-Konfiguration.\"}],\"reason\":\"Die Notes enthalten zwei Einträge zu Test- und CI-Interna, die für Nutzer der Bibliothek nicht relevant sind. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24436,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 113,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

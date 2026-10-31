@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "f8d359703a484d95f7972e09",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "invented-claim",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4496,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat behauptet, die Jitter-Strategie sei für neue Queues der Standard. Laut Referenz ist sie opt-in und muss ausdrücklich aktiviert werden.\"}],\"reason\":\"Die Aussage zum Standardverhalten der Retry-Strategie widerspricht der Referenz. Die übrigen Einträge und die Versionsnummer stimmen überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Kandidat behauptet, die Jitter-Strategie sei für neue Queues der Standard. Laut Referenz ist sie opt-in und muss ausdrücklich aktiviert werden."
+   }
+  ],
+  "reason": "Die Aussage zum Standardverhalten der Retry-Strategie widerspricht der Referenz. Die übrigen Einträge und die Versionsnummer stimmen überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25677,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 95,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-c65b-7e52-adb5-9e3b72e40388"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat behauptet, die Jitter-Strategie sei für neue Queues der Standard. Laut Referenz ist sie opt-in und muss ausdrücklich aktiviert werden.\"}],\"reason\":\"Die Aussage zum Standardverhalten der Retry-Strategie widerspricht der Referenz. Die übrigen Einträge und die Versionsnummer stimmen überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25677,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 95,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

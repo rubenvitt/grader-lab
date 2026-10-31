@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "e4062a9b5cc6e99aaeb35af0",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 6071,
+ "text": "{\"reason\":\"Fassung A enthält zusätzlich die Aussage, dass der Job in den Failed-Set verschoben wird. Da der Diff nicht vorliegt, lässt sich weder diese Aussage noch die übrigen technischen Aussagen überprüfen; ein sachlicher Qualitätsunterschied ist daher nicht belegt.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung A enthält zusätzlich die Aussage, dass der Job in den Failed-Set verschoben wird. Da der Diff nicht vorliegt, lässt sich weder diese Aussage noch die übrigen technischen Aussagen überprüfen; ein sachlicher Qualitätsunterschied ist daher nicht belegt.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25244,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 135,
+  "reasoning_output_tokens": 64
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-fee7-7591-8705-4b164d3f96e3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A enthält zusätzlich die Aussage, dass der Job in den Failed-Set verschoben wird. Da der Diff nicht vorliegt, lässt sich weder diese Aussage noch die übrigen technischen Aussagen überprüfen; ein sachlicher Qualitätsunterschied ist daher nicht belegt.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25244,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 135,
+    "reasoning_output_tokens": 64
+   }
+  }
+ ]
+}

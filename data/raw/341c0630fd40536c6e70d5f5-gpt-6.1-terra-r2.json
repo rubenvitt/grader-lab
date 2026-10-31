@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "341c0630fd40536c6e70d5f5",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "false-success",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5020,
+ "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst ergeben sich keine überprüfbaren Verstöße oder inneren Widersprüche. Ob die Aussagen und Migrationsschritte dem Code entsprechen, lässt sich ohne Quellen nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Aus dem Text selbst ergeben sich keine überprüfbaren Verstöße oder inneren Widersprüche. Ob die Aussagen und Migrationsschritte dem Code entsprechen, lässt sich ohne Quellen nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24501,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 59,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-0745-73d2-87b9-1c1ce18f6819"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst ergeben sich keine überprüfbaren Verstöße oder inneren Widersprüche. Ob die Aussagen und Migrationsschritte dem Code entsprechen, lässt sich ohne Quellen nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24501,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

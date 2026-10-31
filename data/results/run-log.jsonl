@@ -1,0 +1,3 @@
+{"at":"2026-10-31T22:13:24.388Z","name":"e1","made":70,"cached":0,"failed":6,"used":73,"budget":1500,"stopped":"repeated-failures","complete":false}
+{"at":"2026-10-31T22:22:51.690Z","name":"e1","made":506,"cached":64,"failed":0,"used":579,"budget":1500,"stopped":"max-seconds","complete":false}
+{"at":"2026-10-31T22:29:18.062Z","name":"e1","made":387,"cached":714,"failed":0,"used":966,"budget":1500,"stopped":null,"complete":true}

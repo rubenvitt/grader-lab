@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "a0adddc3fabf786f8e0e2989",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reordered",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 3807,
+ "text": "{\"reason\":\"Die Fassungen enthalten dieselben Aussagen; lediglich die Reihenfolge der Abschnitte unterscheidet sich. Nach der Rubric sind sie daher gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen enthalten dieselben Aussagen; lediglich die Reihenfolge der Abschnitte unterscheidet sich. Nach der Rubric sind sie daher gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25236,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 49,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-c83a-7ee2-a2c2-d01ae816f505"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen enthalten dieselben Aussagen; lediglich die Reihenfolge der Abschnitte unterscheidet sich. Nach der Rubric sind sie daher gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25236,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

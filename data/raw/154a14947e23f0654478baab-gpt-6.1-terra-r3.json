@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "154a14947e23f0654478baab",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reverted-listed",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 7799,
+ "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 als Patch-Release, führen unter „Features“ aber einen neuen Replay-Button im Dashboard auf. Ein neues Feature erfordert mindestens einen Minor-Sprung.\"}],\"reason\":\"Der neue Replay-Button widerspricht der angegebenen Patch-Version. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 5.0.1 als Patch-Release, führen unter „Features“ aber einen neuen Replay-Button im Dashboard auf. Ein neues Feature erfordert mindestens einen Minor-Sprung."
+   }
+  ],
+  "reason": "Der neue Replay-Button widerspricht der angegebenen Patch-Version. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25197,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 97,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-2ca4-7bb1-935e-b4f0309db56b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536165dfd76e664-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361663189d4c3b-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 als Patch-Release, führen unter „Features“ aber einen neuen Replay-Button im Dashboard auf. Ein neues Feature erfordert mindestens einen Minor-Sprung.\"}],\"reason\":\"Der neue Replay-Button widerspricht der angegebenen Patch-Version. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25197,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 97,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

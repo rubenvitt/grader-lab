@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "b60d16720edd99e5163b65ed",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "hype-tone",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5490,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung verwendet Werbesprache und unbelegte Superlative wie „The wait is over“, „radically leaner“, „stunning“ und „flawless“. Auch Formulierungen wie „game-changing“ und „Shut down with confidence“ sind nicht sachlich.\"}],\"reason\":\"Die Release Notes enthalten mehrfach werbliche und überschwängliche Formulierungen. Weitere Verstöße lassen sich allein aus dem vorliegenden Text nicht sicher erkennen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Die Einleitung verwendet Werbesprache und unbelegte Superlative wie „The wait is over“, „radically leaner“, „stunning“ und „flawless“. Auch Formulierungen wie „game-changing“ und „Shut down with confidence“ sind nicht sachlich."
+   }
+  ],
+  "reason": "Die Release Notes enthalten mehrfach werbliche und überschwängliche Formulierungen. Weitere Verstöße lassen sich allein aus dem vorliegenden Text nicht sicher erkennen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25386,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 120,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-b16f-7121-9388-f91bf172983f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung verwendet Werbesprache und unbelegte Superlative wie „The wait is over“, „radically leaner“, „stunning“ und „flawless“. Auch Formulierungen wie „game-changing“ und „Shut down with confidence“ sind nicht sachlich.\"}],\"reason\":\"Die Release Notes enthalten mehrfach werbliche und überschwängliche Formulierungen. Weitere Verstöße lassen sich allein aus dem vorliegenden Text nicht sicher erkennen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25386,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 120,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

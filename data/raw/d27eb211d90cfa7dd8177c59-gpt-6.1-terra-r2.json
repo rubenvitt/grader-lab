@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "d27eb211d90cfa7dd8177c59",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4804,
+ "text": "{\"reason\":\"Fassung B beschreibt die Änderungen und den Migrationsschritt deutlich konkreter und ist damit für Nutzer brauchbarer. Ob die Details durch die Diffs gedeckt sind oder weitere Anforderungen etwa zu Breaking Changes und Reverts erfüllen, lässt sich anhand der vorliegenden Fassungen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt die Änderungen und den Migrationsschritt deutlich konkreter und ist damit für Nutzer brauchbarer. Ob die Details durch die Diffs gedeckt sind oder weitere Anforderungen etwa zu Breaking Changes und Reverts erfüllen, lässt sich anhand der vorliegenden Fassungen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25278,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 74,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-6b56-7b43-99a4-eab258336f22"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt die Änderungen und den Migrationsschritt deutlich konkreter und ist damit für Nutzer brauchbarer. Ob die Details durch die Diffs gedeckt sind oder weitere Anforderungen etwa zu Breaking Changes und Reverts erfüllen, lässt sich anhand der vorliegenden Fassungen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25278,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 74,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

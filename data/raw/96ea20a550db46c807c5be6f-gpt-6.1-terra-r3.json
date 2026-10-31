@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "96ea20a550db46c807c5be6f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reverted-listed",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4579,
+ "text": "{\"reason\":\"Fassung A enthält zusätzlich Priority Lanes, Fassung B lässt sie weg. Da keine Quellen oder Diffs vorliegen, lässt sich nicht beurteilen, ob das Feature belegt ist oder im selben Release zurückgenommen wurde; damit ist keine der Fassungen nachweislich besser.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung A enthält zusätzlich Priority Lanes, Fassung B lässt sie weg. Da keine Quellen oder Diffs vorliegen, lässt sich nicht beurteilen, ob das Feature belegt ist oder im selben Release zurückgenommen wurde; damit ist keine der Fassungen nachweislich besser.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25415,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 73,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-9573-7a32-a858-d7ba87d5a446"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A enthält zusätzlich Priority Lanes, Fassung B lässt sie weg. Da keine Quellen oder Diffs vorliegen, lässt sich nicht beurteilen, ob das Feature belegt ist oder im selben Release zurückgenommen wurde; damit ist keine der Fassungen nachweislich besser.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25415,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 73,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "52f37a1476061a3cf6c18a01",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 9413,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"„Bulletproof renewals“ behauptet eine umfassende Zuverlässigkeit. Der Diff zu #334 zeigt lediglich einen erneuten Versuch bei `ECONNRESET`; andere Fehler und ein Fehler beim zweiten Versuch werden weiterhin durchgereicht.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration empfiehlt `queue.purge({ status, olderThanMs })`, ordnet aber den bisherigen Parameter `graceMs` nicht zu. Für eine entsprechende Umstellung lautet der Aufruf `queue.purge({ status, olderThanMs: graceMs })`, wie der Diff zu #338 zeigt.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „powerful one“, „game-changing“, „effortless scale-down“ und „delightful“ sind Werbesprache statt sachlicher Beschreibung.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag nennt nur „a security issue“ und lässt die betroffene Komponente offen. Der Diff zu #336 betrifft `signing`; deren Nennung ist nach R5 erlaubt und würde den Eintrag für Nutzer brauchbarer machen.\"}],\"reason\":\"Die Quellen zeigen ein neues Worker-Ereignis, einen begrenzten Wiederholungsversuch, eine Deprecation mit Ersatzmethode und einen Sicherheitspatch. Die Notes enthalten dazu eine unbelegte Garantie, eine unvollständige Migration, Werbesprache und einen zu allgemeinen Sicherheitseintrag.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "„Bulletproof renewals“ behauptet eine umfassende Zuverlässigkeit. Der Diff zu #334 zeigt lediglich einen erneuten Versuch bei `ECONNRESET`; andere Fehler und ein Fehler beim zweiten Versuch werden weiterhin durchgereicht."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration empfiehlt `queue.purge({ status, olderThanMs })`, ordnet aber den bisherigen Parameter `graceMs` nicht zu. Für eine entsprechende Umstellung lautet der Aufruf `queue.purge({ status, olderThanMs: graceMs })`, wie der Diff zu #338 zeigt."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „powerful one“, „game-changing“, „effortless scale-down“ und „delightful“ sind Werbesprache statt sachlicher Beschreibung."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Sicherheitseintrag nennt nur „a security issue“ und lässt die betroffene Komponente offen. Der Diff zu #336 betrifft `signing`; deren Nennung ist nach R5 erlaubt und würde den Eintrag für Nutzer brauchbarer machen."
+   }
+  ],
+  "reason": "Die Quellen zeigen ein neues Worker-Ereignis, einen begrenzten Wiederholungsversuch, eine Deprecation mit Ersatzmethode und einen Sicherheitspatch. Die Notes enthalten dazu eine unbelegte Garantie, eine unvollständige Migration, Werbesprache und einen zu allgemeinen Sicherheitseintrag.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26618,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 426,
+  "reasoning_output_tokens": 112
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-2c0c-7c50-975e-f7a967642602"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"„Bulletproof renewals“ behauptet eine umfassende Zuverlässigkeit. Der Diff zu #334 zeigt lediglich einen erneuten Versuch bei `ECONNRESET`; andere Fehler und ein Fehler beim zweiten Versuch werden weiterhin durchgereicht.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration empfiehlt `queue.purge({ status, olderThanMs })`, ordnet aber den bisherigen Parameter `graceMs` nicht zu. Für eine entsprechende Umstellung lautet der Aufruf `queue.purge({ status, olderThanMs: graceMs })`, wie der Diff zu #338 zeigt.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „powerful one“, „game-changing“, „effortless scale-down“ und „delightful“ sind Werbesprache statt sachlicher Beschreibung.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag nennt nur „a security issue“ und lässt die betroffene Komponente offen. Der Diff zu #336 betrifft `signing`; deren Nennung ist nach R5 erlaubt und würde den Eintrag für Nutzer brauchbarer machen.\"}],\"reason\":\"Die Quellen zeigen ein neues Worker-Ereignis, einen begrenzten Wiederholungsversuch, eine Deprecation mit Ersatzmethode und einen Sicherheitspatch. Die Notes enthalten dazu eine unbelegte Garantie, eine unvollständige Migration, Werbesprache und einen zu allgemeinen Sicherheitseintrag.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26618,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 426,
+    "reasoning_output_tokens": 112
+   }
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "6a00b26d84a788ca9492b1d2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "invented-claim",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 4978,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, das Limit werde von allen Workern einer Queue geteilt. Der Diff von PR #376 legt dagegen ausdrücklich einen eigenen Token-Bucket pro Worker-Instanz an, der nicht geteilt wird.\"}],\"reason\":\"Die Notes geben die endgültigen Änderungen und den Migrationsnamen wieder; Version 4.1.0 passt zu Feature und Deprecation. Die Aussage zur gemeinsamen Nutzung des Limits widerspricht jedoch dem Diff.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, das Limit werde von allen Workern einer Queue geteilt. Der Diff von PR #376 legt dagegen ausdrücklich einen eigenen Token-Bucket pro Worker-Instanz an, der nicht geteilt wird."
+   }
+  ],
+  "reason": "Die Notes geben die endgültigen Änderungen und den Migrationsnamen wieder; Version 4.1.0 passt zu Feature und Deprecation. Die Aussage zur gemeinsamen Nutzung des Limits widerspricht jedoch dem Diff.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26310,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 117,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-0cf2-7682-9fe3-abe8df1843b4"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, das Limit werde von allen Workern einer Queue geteilt. Der Diff von PR #376 legt dagegen ausdrücklich einen eigenen Token-Bucket pro Worker-Instanz an, der nicht geteilt wird.\"}],\"reason\":\"Die Notes geben die endgültigen Änderungen und den Migrationsnamen wieder; Version 4.1.0 passt zu Feature und Deprecation. Die Aussage zur gemeinsamen Nutzung des Limits widerspricht jedoch dem Diff.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26310,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 117,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

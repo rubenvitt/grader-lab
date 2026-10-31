@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "a3849dde299c1a87143d7253",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8013,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Der Feature-Eintrag „Workers can now be configured with more options“ nennt weder die neue Option `limiter: { max, perMs }` noch ihren Zweck, die Jobverarbeitung pro Worker zu begrenzen (Diff #376).\"},{\"criterion\":\"R8\",\"evidence\":\"Der Deprecation-Eintrag nennt weder die veraltete Joboption `timeout` noch ihren Ersatz `timeoutMs`. Nutzer erkennen daher nicht, was sie anpassen sollten (Diff #378).\"}],\"reason\":\"Die veröffentlichten Diffs enthalten eine neue Worker-Option und eine Deprecation; beide sind in den Notes zu unbestimmt beschrieben. Version 4.1.0 ist dafür nach SemVer passend.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "Der Feature-Eintrag „Workers can now be configured with more options“ nennt weder die neue Option `limiter: { max, perMs }` noch ihren Zweck, die Jobverarbeitung pro Worker zu begrenzen (Diff #376)."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Deprecation-Eintrag nennt weder die veraltete Joboption `timeout` noch ihren Ersatz `timeoutMs`. Nutzer erkennen daher nicht, was sie anpassen sollten (Diff #378)."
+   }
+  ],
+  "reason": "Die veröffentlichten Diffs enthalten eine neue Worker-Option und eine Deprecation; beide sind in den Notes zu unbestimmt beschrieben. Version 4.1.0 ist dafür nach SemVer passend.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26250,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 171,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-6c1f-7752-a4fb-1f48f58c724e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Der Feature-Eintrag „Workers can now be configured with more options“ nennt weder die neue Option `limiter: { max, perMs }` noch ihren Zweck, die Jobverarbeitung pro Worker zu begrenzen (Diff #376).\"},{\"criterion\":\"R8\",\"evidence\":\"Der Deprecation-Eintrag nennt weder die veraltete Joboption `timeout` noch ihren Ersatz `timeoutMs`. Nutzer erkennen daher nicht, was sie anpassen sollten (Diff #378).\"}],\"reason\":\"Die veröffentlichten Diffs enthalten eine neue Worker-Option und eine Deprecation; beide sind in den Notes zu unbestimmt beschrieben. Version 4.1.0 ist dafür nach SemVer passend.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26250,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 171,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "0822163faf4f377b96542b4f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reverted-listed",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5450,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und konkret; der geänderte Standardwert steht mit einem Migrationsschritt unter „Breaking Changes“. Aus dem Text selbst ergibt sich kein Widerspruch oder anderer Verstoß; die inhaltliche Richtigkeit gegenüber den Quellen lässt sich hier nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes sind sachlich und konkret; der geänderte Standardwert steht mit einem Migrationsschritt unter „Breaking Changes“. Aus dem Text selbst ergibt sich kein Widerspruch oder anderer Verstoß; die inhaltliche Richtigkeit gegenüber den Quellen lässt sich hier nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24436,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 77,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-7c37-7a10-bec0-9423922834a1"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und konkret; der geänderte Standardwert steht mit einem Migrationsschritt unter „Breaking Changes“. Aus dem Text selbst ergibt sich kein Widerspruch oder anderer Verstoß; die inhaltliche Richtigkeit gegenüber den Quellen lässt sich hier nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24436,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 77,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

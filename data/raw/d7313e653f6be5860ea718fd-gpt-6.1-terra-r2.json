@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "d7313e653f6be5860ea718fd",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 13061,
+ "text": "{\"reason\":\"Fassung A beschreibt die Änderung am Worker konkret und nennt beim Sicherheitsfix die betroffene Komponente sowie die Upgrade-Empfehlung. Fassung B bleibt bei beiden Einträgen zu allgemein, um Nutzern eine Handlung oder Auswirkung zu vermitteln.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A beschreibt die Änderung am Worker konkret und nennt beim Sicherheitsfix die betroffene Komponente sowie die Upgrade-Empfehlung. Fassung B bleibt bei beiden Einträgen zu allgemein, um Nutzern eine Handlung oder Auswirkung zu vermitteln.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24325,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 67,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-0544-7542-bbbc-de409b8a9529"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617b7bc3933a5-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617bc4e77cce1-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617c399583314-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617cfcab5e529-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A beschreibt die Änderung am Worker konkret und nennt beim Sicherheitsfix die betroffene Komponente sowie die Upgrade-Empfehlung. Fassung B bleibt bei beiden Einträgen zu allgemein, um Nutzern eine Handlung oder Auswirkung zu vermitteln.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24325,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 67,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

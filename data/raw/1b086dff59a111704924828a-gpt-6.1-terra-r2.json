@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "1b086dff59a111704924828a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reverted-listed",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5766,
+ "text": "{\"reason\":\"Fassung B enthält zusätzlich Priority Lanes, während die übrigen Einträge inhaltlich gleich sind. Ohne die zugehörigen Quellen lässt sich nicht beurteilen, ob dieser zusätzliche Eintrag belegt und für das Release gültig ist; anhand des vorliegenden Materials sind die Fassungen daher gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung B enthält zusätzlich Priority Lanes, während die übrigen Einträge inhaltlich gleich sind. Ohne die zugehörigen Quellen lässt sich nicht beurteilen, ob dieser zusätzliche Eintrag belegt und für das Release gültig ist; anhand des vorliegenden Materials sind die Fassungen daher gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25413,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 124,
+  "reasoning_output_tokens": 43
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-7eed-7c33-9811-7881a07cf972"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B enthält zusätzlich Priority Lanes, während die übrigen Einträge inhaltlich gleich sind. Ohne die zugehörigen Quellen lässt sich nicht beurteilen, ob dieser zusätzliche Eintrag belegt und für das Release gültig ist; anhand des vorliegenden Materials sind die Fassungen daher gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25413,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 124,
+    "reasoning_output_tokens": 43
+   }
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "91987301ae86082a5b05a6f3",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "internal-noise",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7584,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, der Worker verarbeite „at most `max` jobs per `perMs` milliseconds“. Der Diff zu #376 zeigt einen Token-Bucket-Aufruf, aber weder dessen Implementierung noch eine Garantie für jedes Zeitfenster dieser Länge.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Unter „Maintenance“ nennen die Notes den CodeQL-Workflow aus #379 und das eslint-Update aus #381. Das sind CI beziehungsweise eine Dev-Dependency und damit keine nutzerrelevanten Release Notes.\"\n    }\n  ],\n  \"reason\": \"Die finale Limiter-Option und die Migration von `timeout` zu `timeoutMs` sind korrekt benannt. Die Notes enthalten jedoch eine nicht belegte Garantie und zwei für Bibliotheksnutzer irrelevante Einträge.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, der Worker verarbeite „at most `max` jobs per `perMs` milliseconds“. Der Diff zu #376 zeigt einen Token-Bucket-Aufruf, aber weder dessen Implementierung noch eine Garantie für jedes Zeitfenster dieser Länge."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "Unter „Maintenance“ nennen die Notes den CodeQL-Workflow aus #379 und das eslint-Update aus #381. Das sind CI beziehungsweise eine Dev-Dependency und damit keine nutzerrelevanten Release Notes."
+   }
+  ],
+  "reason": "Die finale Limiter-Option und die Migration von `timeout` zu `timeoutMs` sind korrekt benannt. Die Notes enthalten jedoch eine nicht belegte Garantie und zwei für Bibliotheksnutzer irrelevante Einträge.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26343,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 259,
+  "reasoning_output_tokens": 48
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-12bd-7d82-a69b-49443a3e37ed"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, der Worker verarbeite „at most `max` jobs per `perMs` milliseconds“. Der Diff zu #376 zeigt einen Token-Bucket-Aufruf, aber weder dessen Implementierung noch eine Garantie für jedes Zeitfenster dieser Länge.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Unter „Maintenance“ nennen die Notes den CodeQL-Workflow aus #379 und das eslint-Update aus #381. Das sind CI beziehungsweise eine Dev-Dependency und damit keine nutzerrelevanten Release Notes.\"\n    }\n  ],\n  \"reason\": \"Die finale Limiter-Option und die Migration von `timeout` zu `timeoutMs` sind korrekt benannt. Die Notes enthalten jedoch eine nicht belegte Garantie und zwei für Bibliotheksnutzer irrelevante Einträge.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26343,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 259,
+    "reasoning_output_tokens": 48
+   }
+  }
+ ]
+}

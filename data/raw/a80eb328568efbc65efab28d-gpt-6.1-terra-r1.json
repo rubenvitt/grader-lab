@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "a80eb328568efbc65efab28d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 6007,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur bei #334. B behauptet zusätzlich den Erhalt von Locks bei Redis-Failovers und eine automatische Wiederverbindung; dafür liegt im Prüfmaterial kein Beleg vor, während A den Retry nach `ECONNRESET` konkreter beschreibt.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur bei #334. B behauptet zusätzlich den Erhalt von Locks bei Redis-Failovers und eine automatische Wiederverbindung; dafür liegt im Prüfmaterial kein Beleg vor, während A den Retry nach `ECONNRESET` konkreter beschreibt.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25384,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 73,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-34b7-7c82-a508-dc332a2b7d01"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur bei #334. B behauptet zusätzlich den Erhalt von Locks bei Redis-Failovers und eine automatische Wiederverbindung; dafür liegt im Prüfmaterial kein Beleg vor, während A den Retry nach `ECONNRESET` konkreter beschreibt.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25384,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 73,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

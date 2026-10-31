@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "3f88322f9f5b8182ba769d3f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "embargo-leak",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5096,
+ "text": "{\"reason\":\"Fassung B nennt den Sicherheitsfix und empfiehlt das Upgrade, ohne technische Details offenzulegen. Fassung A beschreibt dagegen Schwachstelle, Ausnutzung und Fix; ob das Embargo-Label gilt, lässt sich aus dem Prüfmaterial nicht feststellen, sodass dieser Unterschied allein keine Abwertung nach R5 belegt.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung B nennt den Sicherheitsfix und empfiehlt das Upgrade, ohne technische Details offenzulegen. Fassung A beschreibt dagegen Schwachstelle, Ausnutzung und Fix; ob das Embargo-Label gilt, lässt sich aus dem Prüfmaterial nicht feststellen, sodass dieser Unterschied allein keine Abwertung nach R5 belegt.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25396,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 81,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-b2ad-7b21-9024-e031feecf219"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt den Sicherheitsfix und empfiehlt das Upgrade, ohne technische Details offenzulegen. Fassung A beschreibt dagegen Schwachstelle, Ausnutzung und Fix; ob das Embargo-Label gilt, lässt sich aus dem Prüfmaterial nicht feststellen, sodass dieser Unterschied allein keine Abwertung nach R5 belegt.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25396,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 81,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

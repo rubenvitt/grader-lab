@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "ad3f768ed74666afca8f4a63",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5807,
+ "text": "{\"reason\":\"Fassung B ist sachlich formuliert. Fassung A verwendet dagegen durchgehend Werbesprache und Superlative und verstößt damit gegen R7; in den fachlichen Aussagen sind die Fassungen gleich.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist sachlich formuliert. Fassung A verwendet dagegen durchgehend Werbesprache und Superlative und verstößt damit gegen R7; in den fachlichen Aussagen sind die Fassungen gleich.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25607,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 60,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-a1bb-7372-bd2c-1dfadb6f9429"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist sachlich formuliert. Fassung A verwendet dagegen durchgehend Werbesprache und Superlative und verstößt damit gegen R7; in den fachlichen Aussagen sind die Fassungen gleich.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25607,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 60,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

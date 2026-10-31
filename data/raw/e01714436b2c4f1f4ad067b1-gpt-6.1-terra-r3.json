@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "e01714436b2c4f1f4ad067b1",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-migration",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6116,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zu #395, Jitter sorge dafür, dass Retries nicht alle gleichzeitig eintreffen, ist nicht garantiert. Der Diff berechnet zufällige ganzzahlige Verzögerungen; mehrere Retries können denselben Wert erhalten.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration zu #399 empfiehlt `worker.pause({ graceful: true })`. Der Diff definiert stattdessen die Option `drain`; für `pause(true)` lautet der entsprechende Aufruf `worker.pause({ drain: true })`.\"}],\"reason\":\"Die Notes enthalten eine nicht belegte Garantie und einen fehlerhaften Migrationsschritt. Die Versionsnummer 5.0.0 passt zu den belegten Breaking Changes.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zu #395, Jitter sorge dafür, dass Retries nicht alle gleichzeitig eintreffen, ist nicht garantiert. Der Diff berechnet zufällige ganzzahlige Verzögerungen; mehrere Retries können denselben Wert erhalten."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration zu #399 empfiehlt `worker.pause({ graceful: true })`. Der Diff definiert stattdessen die Option `drain`; für `pause(true)` lautet der entsprechende Aufruf `worker.pause({ drain: true })`."
+   }
+  ],
+  "reason": "Die Notes enthalten eine nicht belegte Garantie und einen fehlerhaften Migrationsschritt. Die Versionsnummer 5.0.0 passt zu den belegten Breaking Changes.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26082,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 229,
+  "reasoning_output_tokens": 56
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-210a-7d10-81c6-38004a28f594"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zu #395, Jitter sorge dafür, dass Retries nicht alle gleichzeitig eintreffen, ist nicht garantiert. Der Diff berechnet zufällige ganzzahlige Verzögerungen; mehrere Retries können denselben Wert erhalten.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration zu #399 empfiehlt `worker.pause({ graceful: true })`. Der Diff definiert stattdessen die Option `drain`; für `pause(true)` lautet der entsprechende Aufruf `worker.pause({ drain: true })`.\"}],\"reason\":\"Die Notes enthalten eine nicht belegte Garantie und einen fehlerhaften Migrationsschritt. Die Versionsnummer 5.0.0 passt zu den belegten Breaking Changes.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26082,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 229,
+    "reasoning_output_tokens": 56
+   }
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "0d901d4cb6ccc3972cdf2844",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6718,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker configuration has changed“ (#351) nennt weder die Umbenennung von `stalledIntervalMs` in `stallCheckMs` noch die nötige Anpassung der Konfiguration.\"},{\"criterion\":\"R8\",\"evidence\":\"„The build output has changed“ (#353) lässt offen, dass der CommonJS-Export `require` entfällt und betroffene Nutzer ihre Imports anpassen müssen.\"},{\"criterion\":\"R8\",\"evidence\":\"„New storage option“ (#355) benennt weder `PostgresStore` noch den Importpfad `quaykit/postgres`.\"},{\"criterion\":\"R8\",\"evidence\":\"„Scheduler fix“ (#357) beschreibt nicht die Änderung bei Cron-Jobs rund um die Zeitumstellung.\"},{\"criterion\":\"R8\",\"evidence\":\"„Queue performance work“ (#360) beschreibt nicht, dass `addBulk` Aufträge nun in Gruppen von bis zu 500 über `pushMany` schreibt.\"}],\"reason\":\"Die Notes ordnen die belegten Breaking Changes richtig ein und wählen dafür eine passende Major-Version. Mehrere Einträge sind jedoch zu allgemein, um die konkrete Änderung oder den notwendigen Handlungsbedarf zu erkennen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Worker configuration has changed“ (#351) nennt weder die Umbenennung von `stalledIntervalMs` in `stallCheckMs` noch die nötige Anpassung der Konfiguration."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„The build output has changed“ (#353) lässt offen, dass der CommonJS-Export `require` entfällt und betroffene Nutzer ihre Imports anpassen müssen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„New storage option“ (#355) benennt weder `PostgresStore` noch den Importpfad `quaykit/postgres`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Scheduler fix“ (#357) beschreibt nicht die Änderung bei Cron-Jobs rund um die Zeitumstellung."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Queue performance work“ (#360) beschreibt nicht, dass `addBulk` Aufträge nun in Gruppen von bis zu 500 über `pushMany` schreibt."
+   }
+  ],
+  "reason": "Die Notes ordnen die belegten Breaking Changes richtig ein und wählen dafür eine passende Major-Version. Mehrere Einträge sind jedoch zu allgemein, um die konkrete Änderung oder den notwendigen Handlungsbedarf zu erkennen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26764,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 264,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-1dc3-7431-94c5-4c568364611b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker configuration has changed“ (#351) nennt weder die Umbenennung von `stalledIntervalMs` in `stallCheckMs` noch die nötige Anpassung der Konfiguration.\"},{\"criterion\":\"R8\",\"evidence\":\"„The build output has changed“ (#353) lässt offen, dass der CommonJS-Export `require` entfällt und betroffene Nutzer ihre Imports anpassen müssen.\"},{\"criterion\":\"R8\",\"evidence\":\"„New storage option“ (#355) benennt weder `PostgresStore` noch den Importpfad `quaykit/postgres`.\"},{\"criterion\":\"R8\",\"evidence\":\"„Scheduler fix“ (#357) beschreibt nicht die Änderung bei Cron-Jobs rund um die Zeitumstellung.\"},{\"criterion\":\"R8\",\"evidence\":\"„Queue performance work“ (#360) beschreibt nicht, dass `addBulk` Aufträge nun in Gruppen von bis zu 500 über `pushMany` schreibt.\"}],\"reason\":\"Die Notes ordnen die belegten Breaking Changes richtig ein und wählen dafür eine passende Major-Version. Mehrere Einträge sind jedoch zu allgemein, um die konkrete Änderung oder den notwendigen Handlungsbedarf zu erkennen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26764,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 264,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

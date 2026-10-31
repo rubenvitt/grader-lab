@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "26497db867fa27e9f08e8a27",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "missing-breaking",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 6243,
+ "text": "{\"reason\":\"Fassung B nennt zusätzlich eine Änderung des Standardverhaltens als Breaking Change und bietet einen konkreten Migrationsschritt. Ob diese Angaben durch den Diff gedeckt sind und die Migration funktioniert, lässt sich ohne die Quellen nicht beurteilen; damit ist keine Fassung anhand der vorliegenden Texte als besser belegt.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung B nennt zusätzlich eine Änderung des Standardverhaltens als Breaking Change und bietet einen konkreten Migrationsschritt. Ob diese Angaben durch den Diff gedeckt sind und die Migration funktioniert, lässt sich ohne die Quellen nicht beurteilen; damit ist keine Fassung anhand der vorliegenden Texte als besser belegt.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25297,
+  "cached_input_tokens": 0,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 80,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-3abc-7be0-952e-5832223fdef4"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt zusätzlich eine Änderung des Standardverhaltens als Breaking Change und bietet einen konkreten Migrationsschritt. Ob diese Angaben durch den Diff gedeckt sind und die Migration funktioniert, lässt sich ohne die Quellen nicht beurteilen; damit ist keine Fassung anhand der vorliegenden Texte als besser belegt.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25297,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 80,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

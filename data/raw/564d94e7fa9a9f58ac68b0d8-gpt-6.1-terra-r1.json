@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "564d94e7fa9a9f58ac68b0d8",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "missing-breaking",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 9816,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #351 benennt die öffentliche Option `WorkerOptions.stalledIntervalMs` in `stallCheckMs` um; auch der Worker verwendet anschließend den neuen Namen. Diese Änderung fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #357 garantiert, dass Cronjobs bei Zeitumstellungen nicht mehr doppelt ausgelöst werden. Der Diff zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; er belegt diese allgemeine Garantie nicht. Auch der Vergleich `due <= now` selbst wurde nicht geändert.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Sicherheitseintrag kündigt an, dass Details in einem separaten Advisory folgen werden. Die Quellen nennen zwar ein Advisory, belegen aber keine solche Veröffentlichung.\"\n    }\n  ],\n  \"reason\": \"Die Notes lassen eine öffentliche, inkompatible Umbenennung aus und enthalten zwei Aussagen, die durch die Quellen nicht ausreichend belegt sind.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #351 benennt die öffentliche Option `WorkerOptions.stalledIntervalMs` in `stallCheckMs` um; auch der Worker verwendet anschließend den neuen Namen. Diese Änderung fehlt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #357 garantiert, dass Cronjobs bei Zeitumstellungen nicht mehr doppelt ausgelöst werden. Der Diff zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; er belegt diese allgemeine Garantie nicht. Auch der Vergleich `due <= now` selbst wurde nicht geändert."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Sicherheitseintrag kündigt an, dass Details in einem separaten Advisory folgen werden. Die Quellen nennen zwar ein Advisory, belegen aber keine solche Veröffentlichung."
+   }
+  ],
+  "reason": "Die Notes lassen eine öffentliche, inkompatible Umbenennung aus und enthalten zwei Aussagen, die durch die Quellen nicht ausreichend belegt sind.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26864,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 363,
+  "reasoning_output_tokens": 106
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-2125-78c2-b1f0-8e4391040ef2"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #351 benennt die öffentliche Option `WorkerOptions.stalledIntervalMs` in `stallCheckMs` um; auch der Worker verwendet anschließend den neuen Namen. Diese Änderung fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #357 garantiert, dass Cronjobs bei Zeitumstellungen nicht mehr doppelt ausgelöst werden. Der Diff zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; er belegt diese allgemeine Garantie nicht. Auch der Vergleich `due <= now` selbst wurde nicht geändert.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Sicherheitseintrag kündigt an, dass Details in einem separaten Advisory folgen werden. Die Quellen nennen zwar ein Advisory, belegen aber keine solche Veröffentlichung.\"\n    }\n  ],\n  \"reason\": \"Die Notes lassen eine öffentliche, inkompatible Umbenennung aus und enthalten zwei Aussagen, die durch die Quellen nicht ausreichend belegt sind.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26864,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 363,
+    "reasoning_output_tokens": 106
+   }
+  }
+ ]
+}

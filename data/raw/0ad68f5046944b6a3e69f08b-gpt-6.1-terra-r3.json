@@ -1,0 +1,87 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "0ad68f5046944b6a3e69f08b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 14933,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 lehnt im Konstruktor Schemanamen ab, die nicht dem Muster `/^[a-z_][a-z0-9_]*$/` entsprechen. Bestehende Konfigurationen können dadurch Anpassungen benötigen; unter „Breaking Changes“ steht dazu nichts.\"},{\"criterion\":\"R5\",\"evidence\":\"PR #414 trägt das Label `embargo`. Die Notes nennen zwar „Security improvements“, aber weder die betroffene Postgres-Komponente noch eine Upgrade-Empfehlung.\"},{\"criterion\":\"R8\",\"evidence\":\"„Worker fix (#413)“ erklärt weder, dass nach Verlust des Locks kein Ack mehr erfolgt und `lockLost` ausgelöst wird, noch welche Bedeutung das für Nutzer hat. Auch „Security improvements (#414)“ benennt nicht die betroffene Komponente.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die durch PR #414 eingeführte Einschränkung bisher akzeptierter Schemanamen ist eine Breaking Change und verlangt einen Major-Sprung.\"}],\"reason\":\"Die Notes enthalten eine nicht als Breaking Change ausgewiesene Einschränkung bestehender Konfigurationen und wählen daher eine unpassende Version. Zudem sind die Einträge für Nutzer zu unkonkret; beim Embargo-Fix fehlen die zulässigen Angaben zu Komponente und Upgrade-Empfehlung.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 lehnt im Konstruktor Schemanamen ab, die nicht dem Muster `/^[a-z_][a-z0-9_]*$/` entsprechen. Bestehende Konfigurationen können dadurch Anpassungen benötigen; unter „Breaking Changes“ steht dazu nichts."
+   },
+   {
+    "criterion": "R5",
+    "evidence": "PR #414 trägt das Label `embargo`. Die Notes nennen zwar „Security improvements“, aber weder die betroffene Postgres-Komponente noch eine Upgrade-Empfehlung."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Worker fix (#413)“ erklärt weder, dass nach Verlust des Locks kein Ack mehr erfolgt und `lockLost` ausgelöst wird, noch welche Bedeutung das für Nutzer hat. Auch „Security improvements (#414)“ benennt nicht die betroffene Komponente."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die durch PR #414 eingeführte Einschränkung bisher akzeptierter Schemanamen ist eine Breaking Change und verlangt einen Major-Sprung."
+   }
+  ],
+  "reason": "Die Notes enthalten eine nicht als Breaking Change ausgewiesene Einschränkung bestehender Konfigurationen und wählen daher eine unpassende Version. Zudem sind die Einträge für Nutzer zu unkonkret; beim Embargo-Fix fehlen die zulässigen Angaben zu Komponente und Upgrade-Empfehlung.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26252,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 309,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-0e8f-7ec1-aa28-0daf668d098b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617c47923c3c8-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617c9ee826ab9-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617d1ad7a1fcc-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617dd2aac2281-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 lehnt im Konstruktor Schemanamen ab, die nicht dem Muster `/^[a-z_][a-z0-9_]*$/` entsprechen. Bestehende Konfigurationen können dadurch Anpassungen benötigen; unter „Breaking Changes“ steht dazu nichts.\"},{\"criterion\":\"R5\",\"evidence\":\"PR #414 trägt das Label `embargo`. Die Notes nennen zwar „Security improvements“, aber weder die betroffene Postgres-Komponente noch eine Upgrade-Empfehlung.\"},{\"criterion\":\"R8\",\"evidence\":\"„Worker fix (#413)“ erklärt weder, dass nach Verlust des Locks kein Ack mehr erfolgt und `lockLost` ausgelöst wird, noch welche Bedeutung das für Nutzer hat. Auch „Security improvements (#414)“ benennt nicht die betroffene Komponente.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die durch PR #414 eingeführte Einschränkung bisher akzeptierter Schemanamen ist eine Breaking Change und verlangt einen Major-Sprung.\"}],\"reason\":\"Die Notes enthalten eine nicht als Breaking Change ausgewiesene Einschränkung bestehender Konfigurationen und wählen daher eine unpassende Version. Zudem sind die Einträge für Nutzer zu unkonkret; beim Embargo-Fix fehlen die zulässigen Angaben zu Komponente und Upgrade-Empfehlung.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26252,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 309,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

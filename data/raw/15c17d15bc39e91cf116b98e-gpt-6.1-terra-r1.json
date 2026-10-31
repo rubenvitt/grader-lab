@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "15c17d15bc39e91cf116b98e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "invented-claim",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6298,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, die Jitter-Strategie sei „now the default for new queues“. Der Diff von PR #395 fügt sie nur für `backoff.type === 'jitter'` hinzu; eine Änderung des Defaults ist nicht belegt. Auch die Aussage, die Retries kämen dadurch nicht alle gleichzeitig an, ist als Garantie nicht gedeckt: Die zufällig berechneten und abgerundeten Verzögerungen können gleich sein.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration in den Notes empfiehlt pauschal `worker.pause({ drain: true })`. Laut PR #399 wird der bisherige boolesche Wert direkt auf `drain` übertragen; für `worker.pause(false)` muss die Migration daher `worker.pause({ drain: false })` verwenden, um das Verhalten beizubehalten.\"}],\"reason\":\"Die Notes enthalten eine unbelegte Aussage zum Jitter-Default und eine nicht garantierte Wirkung. Außerdem erhält der angegebene Migrationsschritt für `worker.pause(false)` das bisherige Verhalten nicht.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, die Jitter-Strategie sei „now the default for new queues“. Der Diff von PR #395 fügt sie nur für `backoff.type === 'jitter'` hinzu; eine Änderung des Defaults ist nicht belegt. Auch die Aussage, die Retries kämen dadurch nicht alle gleichzeitig an, ist als Garantie nicht gedeckt: Die zufällig berechneten und abgerundeten Verzögerungen können gleich sein."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration in den Notes empfiehlt pauschal `worker.pause({ drain: true })`. Laut PR #399 wird der bisherige boolesche Wert direkt auf `drain` übertragen; für `worker.pause(false)` muss die Migration daher `worker.pause({ drain: false })` verwenden, um das Verhalten beizubehalten."
+   }
+  ],
+  "reason": "Die Notes enthalten eine unbelegte Aussage zum Jitter-Default und eine nicht garantierte Wirkung. Außerdem erhält der angegebene Migrationsschritt für `worker.pause(false)` das bisherige Verhalten nicht.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26936,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 281,
+  "reasoning_output_tokens": 39
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-c77c-7b11-9000-6d1b89e1ace9"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, die Jitter-Strategie sei „now the default for new queues“. Der Diff von PR #395 fügt sie nur für `backoff.type === 'jitter'` hinzu; eine Änderung des Defaults ist nicht belegt. Auch die Aussage, die Retries kämen dadurch nicht alle gleichzeitig an, ist als Garantie nicht gedeckt: Die zufällig berechneten und abgerundeten Verzögerungen können gleich sein.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration in den Notes empfiehlt pauschal `worker.pause({ drain: true })`. Laut PR #399 wird der bisherige boolesche Wert direkt auf `drain` übertragen; für `worker.pause(false)` muss die Migration daher `worker.pause({ drain: false })` verwenden, um das Verhalten beizubehalten.\"}],\"reason\":\"Die Notes enthalten eine unbelegte Aussage zum Jitter-Default und eine nicht garantierte Wirkung. Außerdem erhält der angegebene Migrationsschritt für `worker.pause(false)` das bisherige Verhalten nicht.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26936,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 281,
+    "reasoning_output_tokens": 39
+   }
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d920314a197f6ae71efcba95",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "paraphrase",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6572,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #395 behauptet, die Zufallsverzögerung sorge dafür, dass Jobs nicht gleichzeitig zurückkommen. Der Diff berechnet `Math.floor(Math.random() * baseMs * 2 ** attempt)`; mehrere Jobs können denselben Wert erhalten.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff entspricht `worker.pause(false)` jedoch `worker.pause({ drain: false })`; die Empfehlung ändert für diesen Aufruf das Verhalten.\"}],\"reason\":\"Die Notes geben die wesentlichen nutzerrelevanten Änderungen und die erforderliche Major-Version wieder. Bei der Jitter-Strategie versprechen sie jedoch mehr, als der Diff belegt, und die Migration für `worker.pause(false)` ist nicht verhaltensgleich.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #395 behauptet, die Zufallsverzögerung sorge dafür, dass Jobs nicht gleichzeitig zurückkommen. Der Diff berechnet `Math.floor(Math.random() * baseMs * 2 ** attempt)`; mehrere Jobs können denselben Wert erhalten."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff entspricht `worker.pause(false)` jedoch `worker.pause({ drain: false })`; die Empfehlung ändert für diesen Aufruf das Verhalten."
+   }
+  ],
+  "reason": "Die Notes geben die wesentlichen nutzerrelevanten Änderungen und die erforderliche Major-Version wieder. Bei der Jitter-Strategie versprechen sie jedoch mehr, als der Diff belegt, und die Migration für `worker.pause(false)` ist nicht verhaltensgleich.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26963,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 247,
+  "reasoning_output_tokens": 46
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-2609-79e1-a015-bd1aacd10ec2"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #395 behauptet, die Zufallsverzögerung sorge dafür, dass Jobs nicht gleichzeitig zurückkommen. Der Diff berechnet `Math.floor(Math.random() * baseMs * 2 ** attempt)`; mehrere Jobs können denselben Wert erhalten.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff entspricht `worker.pause(false)` jedoch `worker.pause({ drain: false })`; die Empfehlung ändert für diesen Aufruf das Verhalten.\"}],\"reason\":\"Die Notes geben die wesentlichen nutzerrelevanten Änderungen und die erforderliche Major-Version wieder. Bei der Jitter-Strategie versprechen sie jedoch mehr, als der Diff belegt, und die Migration für `worker.pause(false)` ist nicht verhaltensgleich.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26963,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 247,
+    "reasoning_output_tokens": 46
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "6bdb6e3c93c00fc51c8016d2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-bump",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4335,
+ "text": "{\"reason\":\"Die Fassungen sind bis auf die Versionsnummer identisch. Die aufgeführten Breaking Changes erfordern nach SemVer einen Major-Sprung; 5.0.0 erfüllt das, 4.2.0 nicht.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Die Fassungen sind bis auf die Versionsnummer identisch. Die aufgeführten Breaking Changes erfordern nach SemVer einen Major-Sprung; 5.0.0 erfüllt das, 4.2.0 nicht.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25568,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 61,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-90a3-7de0-bba2-31e203f41d31"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen sind bis auf die Versionsnummer identisch. Die aufgeführten Breaking Changes erfordern nach SemVer einen Major-Sprung; 5.0.0 erfüllt das, 4.2.0 nicht.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25568,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 61,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

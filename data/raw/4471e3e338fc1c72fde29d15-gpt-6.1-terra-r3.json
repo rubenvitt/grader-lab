@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "4471e3e338fc1c72fde29d15",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "paraphrase",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5368,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren, dass ein Worker innerhalb von `perMs` Millisekunden höchstens `max` Jobs verarbeitet. Der Diff von #376 zeigt einen Token-Bucket und einen Aufruf von `take()`, aber weder dessen Implementierung noch eine Garantie für jedes solche Zeitfenster.\"}],\"reason\":\"Die endgültigen Optionsnamen, die Deprecation und die Versionsnummer stimmen mit den Quellen überein. Die Aussage zur genauen Rate geht jedoch über den belegten Diff hinaus.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes garantieren, dass ein Worker innerhalb von `perMs` Millisekunden höchstens `max` Jobs verarbeitet. Der Diff von #376 zeigt einen Token-Bucket und einen Aufruf von `take()`, aber weder dessen Implementierung noch eine Garantie für jedes solche Zeitfenster."
+   }
+  ],
+  "reason": "Die endgültigen Optionsnamen, die Deprecation und die Versionsnummer stimmen mit den Quellen überein. Die Aussage zur genauen Rate geht jedoch über den belegten Diff hinaus.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26313,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 170,
+  "reasoning_output_tokens": 41
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-d7fe-7072-bf32-ab3725c97d4f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren, dass ein Worker innerhalb von `perMs` Millisekunden höchstens `max` Jobs verarbeitet. Der Diff von #376 zeigt einen Token-Bucket und einen Aufruf von `take()`, aber weder dessen Implementierung noch eine Garantie für jedes solche Zeitfenster.\"}],\"reason\":\"Die endgültigen Optionsnamen, die Deprecation und die Versionsnummer stimmen mit den Quellen überein. Die Aussage zur genauen Rate geht jedoch über den belegten Diff hinaus.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26313,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 170,
+    "reasoning_output_tokens": 41
+   }
+  }
+ ]
+}

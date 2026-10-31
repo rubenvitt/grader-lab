@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "21ebf66da53caabfefe434ff",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-bump",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5043,
+ "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Der Kandidat nennt Version 3.2.0 statt 4.0.0. Die aufgeführten Breaking Changes erfordern einen Major-Sprung.\"}],\"reason\":\"Abgesehen von der Versionsnummer vermittelt der Kandidat dieselben nutzerrelevanten Fakten wie die Referenz. Wegen der falschen Version besteht er die Prüfung nicht.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R9",
+    "evidence": "Der Kandidat nennt Version 3.2.0 statt 4.0.0. Die aufgeführten Breaking Changes erfordern einen Major-Sprung."
+   }
+  ],
+  "reason": "Abgesehen von der Versionsnummer vermittelt der Kandidat dieselben nutzerrelevanten Fakten wie die Referenz. Wegen der falschen Version besteht er die Prüfung nicht.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25635,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 96,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-76ed-7a12-863c-144b3226f95d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Der Kandidat nennt Version 3.2.0 statt 4.0.0. Die aufgeführten Breaking Changes erfordern einen Major-Sprung.\"}],\"reason\":\"Abgesehen von der Versionsnummer vermittelt der Kandidat dieselben nutzerrelevanten Fakten wie die Referenz. Wegen der falschen Version besteht er die Prüfung nicht.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25635,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 96,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

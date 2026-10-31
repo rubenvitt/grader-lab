@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "3076f6a57ebeeb4233071794",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reverted-listed",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 11775,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Feature-Eintrag nennt `limiter: { max, durationMs }` und verweist auf #371. Der endgültige Diff in #376 verwendet `limiter: { max, perMs }`.\"},{\"criterion\":\"R4\",\"evidence\":\"Die Notes führen die mit #373 zurückgenommene Fassung aus #371 mit `durationMs` auf. Der Reland #376 verwendet stattdessen `perMs`.\"}],\"reason\":\"Die endgültige Rate-Limiter-Option ist in den Notes falsch angegeben. Die Deprecation und der Versionssprung auf 4.1.0 entsprechen den vorliegenden Änderungen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Feature-Eintrag nennt `limiter: { max, durationMs }` und verweist auf #371. Der endgültige Diff in #376 verwendet `limiter: { max, perMs }`."
+   },
+   {
+    "criterion": "R4",
+    "evidence": "Die Notes führen die mit #373 zurückgenommene Fassung aus #371 mit `durationMs` auf. Der Reland #376 verwendet stattdessen `perMs`."
+   }
+  ],
+  "reason": "Die endgültige Rate-Limiter-Option ist in den Notes falsch angegeben. Die Deprecation und der Versionssprung auf 4.1.0 entsprechen den vorliegenden Änderungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26303,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 158,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-83fb-7f32-8ea3-7cef7825448f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360ef3a9e54956-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360ef8bbdae567-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360f001d13051f-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Feature-Eintrag nennt `limiter: { max, durationMs }` und verweist auf #371. Der endgültige Diff in #376 verwendet `limiter: { max, perMs }`.\"},{\"criterion\":\"R4\",\"evidence\":\"Die Notes führen die mit #373 zurückgenommene Fassung aus #371 mit `durationMs` auf. Der Reland #376 verwendet stattdessen `perMs`.\"}],\"reason\":\"Die endgültige Rate-Limiter-Option ist in den Notes falsch angegeben. Die Deprecation und der Versionssprung auf 4.1.0 entsprechen den vorliegenden Änderungen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26303,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 158,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

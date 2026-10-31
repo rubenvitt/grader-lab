@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "ad0141fccedb6864590d2478",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "hype-tone",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4954,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Werbesprache und Superlative wie „the leanest quaykit ever“, „game-changing“, „supercharges“, „Unleash the power of automation“ und „Rock-solid locks“.\"}],\"reason\":\"Die Release Notes enthalten unsachliche Werbesprache. Die übrigen Kriterien lassen sich anhand des Textes nicht als verletzt feststellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Werbesprache und Superlative wie „the leanest quaykit ever“, „game-changing“, „supercharges“, „Unleash the power of automation“ und „Rock-solid locks“."
+   }
+  ],
+  "reason": "Die Release Notes enthalten unsachliche Werbesprache. Die übrigen Kriterien lassen sich anhand des Textes nicht als verletzt feststellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25277,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 97,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-d4ac-7b62-982f-b3b95e14eea5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Werbesprache und Superlative wie „the leanest quaykit ever“, „game-changing“, „supercharges“, „Unleash the power of automation“ und „Rock-solid locks“.\"}],\"reason\":\"Die Release Notes enthalten unsachliche Werbesprache. Die übrigen Kriterien lassen sich anhand des Textes nicht als verletzt feststellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25277,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 97,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

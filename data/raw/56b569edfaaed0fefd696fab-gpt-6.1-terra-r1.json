@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "56b569edfaaed0fefd696fab",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5071,
+ "text": "{\"reason\":\"Fassung A beschreibt die Änderungen und erforderlichen Migrationsschritte konkret; Fassung B bleibt bei fast allen Einträgen zu allgemein, um Nutzern die Auswirkungen erkennen zu lassen. Ob die konkreten Aussagen in A durch die Diffs belegt sind oder gegen andere Kriterien verstoßen, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A beschreibt die Änderungen und erforderlichen Migrationsschritte konkret; Fassung B bleibt bei fast allen Einträgen zu allgemein, um Nutzern die Auswirkungen erkennen zu lassen. Ob die konkreten Aussagen in A durch die Diffs belegt sind oder gegen andere Kriterien verstoßen, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25366,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 84,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-09e8-76c3-9d1d-c78a4e48bcb7"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A beschreibt die Änderungen und erforderlichen Migrationsschritte konkret; Fassung B bleibt bei fast allen Einträgen zu allgemein, um Nutzern die Auswirkungen erkennen zu lassen. Ob die konkreten Aussagen in A durch die Diffs belegt sind oder gegen andere Kriterien verstoßen, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25366,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 84,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

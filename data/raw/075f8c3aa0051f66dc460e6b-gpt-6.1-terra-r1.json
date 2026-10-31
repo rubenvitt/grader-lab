@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "075f8c3aa0051f66dc460e6b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 10147,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Feature-Eintrag garantiert höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff von PR #376 zeigt zwar einen Token-Bucket pro Worker, belegt aber keine solche Grenze für jedes Zeitfenster.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Feature-Eintrag verweist auf PR #377. In den Quellen stammt die endgültige Einführung des Limiters aus PR #376; für #377 liegt kein Beleg vor.\"}],\"reason\":\"Die Notes geben die endgültigen Optionsnamen und die Migration korrekt wieder. Die Mengenbegrenzung ist jedoch stärker formuliert, als der gezeigte Diff belegt, und der PR-Verweis stimmt nicht mit den Quellen überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Feature-Eintrag garantiert höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff von PR #376 zeigt zwar einen Token-Bucket pro Worker, belegt aber keine solche Grenze für jedes Zeitfenster."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Feature-Eintrag verweist auf PR #377. In den Quellen stammt die endgültige Einführung des Limiters aus PR #376; für #377 liegt kein Beleg vor."
+   }
+  ],
+  "reason": "Die Notes geben die endgültigen Optionsnamen und die Migration korrekt wieder. Die Mengenbegrenzung ist jedoch stärker formuliert, als der gezeigte Diff belegt, und der PR-Verweis stimmt nicht mit den Quellen überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26311,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 241,
+  "reasoning_output_tokens": 66
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-db04-7df2-b869-677ace3e9a9b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Feature-Eintrag garantiert höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff von PR #376 zeigt zwar einen Token-Bucket pro Worker, belegt aber keine solche Grenze für jedes Zeitfenster.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Feature-Eintrag verweist auf PR #377. In den Quellen stammt die endgültige Einführung des Limiters aus PR #376; für #377 liegt kein Beleg vor.\"}],\"reason\":\"Die Notes geben die endgültigen Optionsnamen und die Migration korrekt wieder. Die Mengenbegrenzung ist jedoch stärker formuliert, als der gezeigte Diff belegt, und der PR-Verweis stimmt nicht mit den Quellen überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26311,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 241,
+    "reasoning_output_tokens": 66
+   }
+  }
+ ]
+}

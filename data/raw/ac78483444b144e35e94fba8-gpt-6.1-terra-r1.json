@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "ac78483444b144e35e94fba8",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6811,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, Jitter sorge dafür, dass Wiederholungsversuche „nicht alle gleichzeitig eintreffen“. Der Diff von #395 berechnet zufällige ganzzahlige Verzögerungen; gleiche Verzögerungen und damit gleichzeitige Versuche bleiben möglich.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration zu `worker.pause({ drain: true })` ersetzt `worker.pause(true)`, ändert aber das Verhalten von `worker.pause(false)`. Laut Diff von #399 muss der bisherige boolesche Wert als `drain` übernommen werden: `worker.pause({ drain: false })` beziehungsweise `worker.pause({ drain: true })`.\"}],\"reason\":\"Die Notes decken die nutzerrelevanten Änderungen und den erforderlichen Major-Sprung auf 5.0.0 ab. Die Aussage zur Jitter-Strategie verspricht jedoch zu viel, und die Migration für `worker.pause()` ist nicht für beide bisherigen Argumentwerte korrekt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, Jitter sorge dafür, dass Wiederholungsversuche „nicht alle gleichzeitig eintreffen“. Der Diff von #395 berechnet zufällige ganzzahlige Verzögerungen; gleiche Verzögerungen und damit gleichzeitige Versuche bleiben möglich."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration zu `worker.pause({ drain: true })` ersetzt `worker.pause(true)`, ändert aber das Verhalten von `worker.pause(false)`. Laut Diff von #399 muss der bisherige boolesche Wert als `drain` übernommen werden: `worker.pause({ drain: false })` beziehungsweise `worker.pause({ drain: true })`."
+   }
+  ],
+  "reason": "Die Notes decken die nutzerrelevanten Änderungen und den erforderlichen Major-Sprung auf 5.0.0 ab. Die Aussage zur Jitter-Strategie verspricht jedoch zu viel, und die Migration für `worker.pause()` ist nicht für beide bisherigen Argumentwerte korrekt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26930,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 265,
+  "reasoning_output_tokens": 38
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-fa4a-7721-a050-6101c40f0435"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, Jitter sorge dafür, dass Wiederholungsversuche „nicht alle gleichzeitig eintreffen“. Der Diff von #395 berechnet zufällige ganzzahlige Verzögerungen; gleiche Verzögerungen und damit gleichzeitige Versuche bleiben möglich.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration zu `worker.pause({ drain: true })` ersetzt `worker.pause(true)`, ändert aber das Verhalten von `worker.pause(false)`. Laut Diff von #399 muss der bisherige boolesche Wert als `drain` übernommen werden: `worker.pause({ drain: false })` beziehungsweise `worker.pause({ drain: true })`.\"}],\"reason\":\"Die Notes decken die nutzerrelevanten Änderungen und den erforderlichen Major-Sprung auf 5.0.0 ab. Die Aussage zur Jitter-Strategie verspricht jedoch zu viel, und die Migration für `worker.pause()` ist nicht für beide bisherigen Argumentwerte korrekt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26930,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 265,
+    "reasoning_output_tokens": 38
+   }
+  }
+ ]
+}

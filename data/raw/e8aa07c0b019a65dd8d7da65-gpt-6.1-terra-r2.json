@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "e8aa07c0b019a65dd8d7da65",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "useless-true",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5435,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Der Feature-Eintrag nennt weder das Ereignis `drained` noch die Bedingung, unter der `Worker` es ausgibt.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Fix-Eintrag beschreibt nicht, dass die Lock-Erneuerung nach `ECONNRESET` einmal erneut versucht wird.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Deprecation nennt weder `queue.clean(graceMs, status)` noch den Migrationsaufruf `queue.purge({ status, olderThanMs })`.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim veralteten Aufruf fehlen die einmalige Warnung und der Hinweis, dass er vorerst weiter funktioniert.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag lässt die Upgrade-Empfehlung aus.\"}],\"reason\":\"Der Kandidat nennt zwar die vier Themen, beschreibt ihre nutzerrelevanten Auswirkungen aber nicht ausreichend und lässt die Migration sowie die Upgrade-Empfehlung aus.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "Der Feature-Eintrag nennt weder das Ereignis `drained` noch die Bedingung, unter der `Worker` es ausgibt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Fix-Eintrag beschreibt nicht, dass die Lock-Erneuerung nach `ECONNRESET` einmal erneut versucht wird."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Deprecation nennt weder `queue.clean(graceMs, status)` noch den Migrationsaufruf `queue.purge({ status, olderThanMs })`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Beim veralteten Aufruf fehlen die einmalige Warnung und der Hinweis, dass er vorerst weiter funktioniert."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Sicherheitseintrag lässt die Upgrade-Empfehlung aus."
+   }
+  ],
+  "reason": "Der Kandidat nennt zwar die vier Themen, beschreibt ihre nutzerrelevanten Auswirkungen aber nicht ausreichend und lässt die Migration sowie die Upgrade-Empfehlung aus.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24537,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 228,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-5947-7e01-b033-6460e02759cf"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Der Feature-Eintrag nennt weder das Ereignis `drained` noch die Bedingung, unter der `Worker` es ausgibt.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Fix-Eintrag beschreibt nicht, dass die Lock-Erneuerung nach `ECONNRESET` einmal erneut versucht wird.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Deprecation nennt weder `queue.clean(graceMs, status)` noch den Migrationsaufruf `queue.purge({ status, olderThanMs })`.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim veralteten Aufruf fehlen die einmalige Warnung und der Hinweis, dass er vorerst weiter funktioniert.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag lässt die Upgrade-Empfehlung aus.\"}],\"reason\":\"Der Kandidat nennt zwar die vier Themen, beschreibt ihre nutzerrelevanten Auswirkungen aber nicht ausreichend und lässt die Migration sowie die Upgrade-Empfehlung aus.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24537,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 228,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

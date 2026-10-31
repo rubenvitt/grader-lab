@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "5c519d1f8e5c42eb07035099",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 6098,
+ "text": "{\"reason\":\"Beide Fassungen nennen dieselben Änderungen, dieselbe Migration und dieselbe Major-Version. Die Unterschiede betreffen nur die Formulierung; anhand des vorliegenden Materials ist keine Fassung sachlich besser belegt.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen nennen dieselben Änderungen, dieselbe Migration und dieselbe Major-Version. Die Unterschiede betreffen nur die Formulierung; anhand des vorliegenden Materials ist keine Fassung sachlich besser belegt.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25394,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 60,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-a7fd-7a13-a4d1-1bfc79b7ff82"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen nennen dieselben Änderungen, dieselbe Migration und dieselbe Major-Version. Die Unterschiede betreffen nur die Formulierung; anhand des vorliegenden Materials ist keine Fassung sachlich besser belegt.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25394,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 60,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

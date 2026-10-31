@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "868dbee0a867f701ea367241",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5378,
+ "text": "{\"reason\":\"Fassung B vermittelt dieselben konkreten Änderungen und Migrationsschritte wie A, verwendet aber einen sachlichen Ton. Fassung A verstößt mit Formulierungen wie „game-changing“ und „Bulletproof“ gegen R7.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B vermittelt dieselben konkreten Änderungen und Migrationsschritte wie A, verwendet aber einen sachlichen Ton. Fassung A verstößt mit Formulierungen wie „game-changing“ und „Bulletproof“ gegen R7.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25427,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 65,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-342c-7ac2-8447-855f45417eae"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B vermittelt dieselben konkreten Änderungen und Migrationsschritte wie A, verwendet aber einen sachlichen Ton. Fassung A verstößt mit Formulierungen wie „game-changing“ und „Bulletproof“ gegen R7.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25427,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 65,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

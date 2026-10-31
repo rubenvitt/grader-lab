@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "0b11a42e9e1c4a12ff7f6cd5",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "internal-noise",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4798,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Die Einträge zum CI-Cache in GitHub Actions und zum Update von vitest betreffen interne Abläufe beziehungsweise eine Entwicklungsabhängigkeit und gehören nicht in nutzerorientierte Release Notes.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Referenz enthält keine Entsprechung für die Aussagen zum pnpm-Cache und zum Update von vitest auf 2.1.1.\"}],\"reason\":\"Der Kandidat gibt die nutzerrelevanten Änderungen der Referenz korrekt wieder, ergänzt aber zwei interne, durch die Referenz nicht belegte Einträge.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Die Einträge zum CI-Cache in GitHub Actions und zum Update von vitest betreffen interne Abläufe beziehungsweise eine Entwicklungsabhängigkeit und gehören nicht in nutzerorientierte Release Notes."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Referenz enthält keine Entsprechung für die Aussagen zum pnpm-Cache und zum Update von vitest auf 2.1.1."
+   }
+  ],
+  "reason": "Der Kandidat gibt die nutzerrelevanten Änderungen der Referenz korrekt wieder, ergänzt aber zwei interne, durch die Referenz nicht belegte Einträge.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24674,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 141,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-b80a-7130-abb7-2b935e151af0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Die Einträge zum CI-Cache in GitHub Actions und zum Update von vitest betreffen interne Abläufe beziehungsweise eine Entwicklungsabhängigkeit und gehören nicht in nutzerorientierte Release Notes.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Referenz enthält keine Entsprechung für die Aussagen zum pnpm-Cache und zum Update von vitest auf 2.1.1.\"}],\"reason\":\"Der Kandidat gibt die nutzerrelevanten Änderungen der Referenz korrekt wieder, ergänzt aber zwei interne, durch die Referenz nicht belegte Einträge.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24674,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 141,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

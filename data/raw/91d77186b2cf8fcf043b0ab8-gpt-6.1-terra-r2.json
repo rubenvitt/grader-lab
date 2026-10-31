@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "91d77186b2cf8fcf043b0ab8",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "reordered",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8732,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Zu #351 behaupten die Notes, die alte Option werde „silently ignored“. Der Diff zeigt die Umbenennung, aber nicht, wie unbekannte Optionen behandelt werden.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Zu #357 behaupten die Notes, Cron-Jobs würden nach einer Zeitumstellung nicht mehr doppelt ausgelöst, weil Fälligkeitszeiten nun in UTC verglichen würden. Der Diff übergibt `tz: 'UTC'` an `cron.next`; er belegt weder die allgemeine Garantie noch eine Änderung des Vergleichs `due <= now`.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Zu #355 behaupten die Notes, `PostgresStore` betreibe eine Queue auf Postgres. Der gezeigte Diff belegt den Export und die Methode `next` mit `SKIP LOCKED`, aber keinen vollständigen Queue-Betrieb.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes kündigen zu #358 an, Details würden in einem separaten Advisory folgen. Die Quellen belegen diese Ankündigung nicht.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten mehrere Aussagen, deren Umfang über die gezeigten Diffs und Quellen hinausgeht. Die Major-Version und die aufgeführten Migrationsnamen passen zu den erkennbaren Breaking Changes.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Zu #351 behaupten die Notes, die alte Option werde „silently ignored“. Der Diff zeigt die Umbenennung, aber nicht, wie unbekannte Optionen behandelt werden."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Zu #357 behaupten die Notes, Cron-Jobs würden nach einer Zeitumstellung nicht mehr doppelt ausgelöst, weil Fälligkeitszeiten nun in UTC verglichen würden. Der Diff übergibt `tz: 'UTC'` an `cron.next`; er belegt weder die allgemeine Garantie noch eine Änderung des Vergleichs `due <= now`."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Zu #355 behaupten die Notes, `PostgresStore` betreibe eine Queue auf Postgres. Der gezeigte Diff belegt den Export und die Methode `next` mit `SKIP LOCKED`, aber keinen vollständigen Queue-Betrieb."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes kündigen zu #358 an, Details würden in einem separaten Advisory folgen. Die Quellen belegen diese Ankündigung nicht."
+   }
+  ],
+  "reason": "Die Notes enthalten mehrere Aussagen, deren Umfang über die gezeigten Diffs und Quellen hinausgeht. Die Major-Version und die aufgeführten Migrationsnamen passen zu den erkennbaren Breaking Changes.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26926,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 409,
+  "reasoning_output_tokens": 77
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-aea9-70f0-8c61-0fe9dbe4ae87"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Zu #351 behaupten die Notes, die alte Option werde „silently ignored“. Der Diff zeigt die Umbenennung, aber nicht, wie unbekannte Optionen behandelt werden.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Zu #357 behaupten die Notes, Cron-Jobs würden nach einer Zeitumstellung nicht mehr doppelt ausgelöst, weil Fälligkeitszeiten nun in UTC verglichen würden. Der Diff übergibt `tz: 'UTC'` an `cron.next`; er belegt weder die allgemeine Garantie noch eine Änderung des Vergleichs `due <= now`.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Zu #355 behaupten die Notes, `PostgresStore` betreibe eine Queue auf Postgres. Der gezeigte Diff belegt den Export und die Methode `next` mit `SKIP LOCKED`, aber keinen vollständigen Queue-Betrieb.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes kündigen zu #358 an, Details würden in einem separaten Advisory folgen. Die Quellen belegen diese Ankündigung nicht.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten mehrere Aussagen, deren Umfang über die gezeigten Diffs und Quellen hinausgeht. Die Major-Version und die aufgeführten Migrationsnamen passen zu den erkennbaren Breaking Changes.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26926,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 409,
+    "reasoning_output_tokens": 77
+   }
+  }
+ ]
+}

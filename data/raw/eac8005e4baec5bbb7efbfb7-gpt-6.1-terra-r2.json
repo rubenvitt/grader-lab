@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "eac8005e4baec5bbb7efbfb7",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "reordered",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4347,
+ "text": "{\"violations\":[],\"reason\":\"Der Text enthält keine erkennbaren inneren Widersprüche oder Verstöße gegen Ton, Relevanz und Brauchbarkeit. Ob die Aussagen und Migrationsschritte durch die Quellen gedeckt sind und die Versionsnummer zur vorherigen Version passt, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Text enthält keine erkennbaren inneren Widersprüche oder Verstöße gegen Ton, Relevanz und Brauchbarkeit. Ob die Aussagen und Migrationsschritte durch die Quellen gedeckt sind und die Versionsnummer zur vorherigen Version passt, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25255,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 83,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-06f0-7922-8f84-8e2de7176089"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Text enthält keine erkennbaren inneren Widersprüche oder Verstöße gegen Ton, Relevanz und Brauchbarkeit. Ob die Aussagen und Migrationsschritte durch die Quellen gedeckt sind und die Versionsnummer zur vorherigen Version passt, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25255,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 83,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

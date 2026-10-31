@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "f870ccf9535fbc59c8df64ef",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "internal-noise",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7767,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Bei #351 belegt der Diff die Umbenennung von `stalledIntervalMs` zu `stallCheckMs`, aber nicht die Aussage, dass der alte Name zur Laufzeit stillschweigend ignoriert wird. Eine mögliche Optionsvalidierung ist nicht gezeigt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren, Cron-Jobs würden beim Wechsel der Uhrzeit nicht mehr doppelt ausgeführt. Der Diff von #357 zeigt lediglich den Aufruf von `cron.next` mit `tz: 'UTC'`; er belegt diese allgemeine Garantie nicht.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Security-Notiz verspricht, Details würden in einem separaten Advisory folgen. #358 nennt zwar ein Advisory, belegt aber nicht, dass später Details veröffentlicht werden.\"},{\"criterion\":\"R6\",\"evidence\":\"Der Eintrag zu #363 beschreibt ausschließlich, dass CI Integrationstests mit Postgres 16 ausführt. Das ist eine interne Teständerung und gehört nicht in nutzergerichtete Release Notes.\"}],\"reason\":\"Die wesentlichen Breaking Changes und ihre Migration sind erfasst, und der Major-Sprung auf 4.0.0 passt dazu. Einige Aussagen gehen jedoch über die gezeigten Quellen hinaus; außerdem enthält die Feature-Liste eine interne CI-Änderung.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Bei #351 belegt der Diff die Umbenennung von `stalledIntervalMs` zu `stallCheckMs`, aber nicht die Aussage, dass der alte Name zur Laufzeit stillschweigend ignoriert wird. Eine mögliche Optionsvalidierung ist nicht gezeigt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes garantieren, Cron-Jobs würden beim Wechsel der Uhrzeit nicht mehr doppelt ausgeführt. Der Diff von #357 zeigt lediglich den Aufruf von `cron.next` mit `tz: 'UTC'`; er belegt diese allgemeine Garantie nicht."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Security-Notiz verspricht, Details würden in einem separaten Advisory folgen. #358 nennt zwar ein Advisory, belegt aber nicht, dass später Details veröffentlicht werden."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "Der Eintrag zu #363 beschreibt ausschließlich, dass CI Integrationstests mit Postgres 16 ausführt. Das ist eine interne Teständerung und gehört nicht in nutzergerichtete Release Notes."
+   }
+  ],
+  "reason": "Die wesentlichen Breaking Changes und ihre Migration sind erfasst, und der Major-Sprung auf 4.0.0 passt dazu. Einige Aussagen gehen jedoch über die gezeigten Quellen hinaus; außerdem enthält die Feature-Liste eine interne CI-Änderung.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26091,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 425,
+  "reasoning_output_tokens": 131
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-9bbf-7f53-9fed-9355583f6899"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Bei #351 belegt der Diff die Umbenennung von `stalledIntervalMs` zu `stallCheckMs`, aber nicht die Aussage, dass der alte Name zur Laufzeit stillschweigend ignoriert wird. Eine mögliche Optionsvalidierung ist nicht gezeigt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren, Cron-Jobs würden beim Wechsel der Uhrzeit nicht mehr doppelt ausgeführt. Der Diff von #357 zeigt lediglich den Aufruf von `cron.next` mit `tz: 'UTC'`; er belegt diese allgemeine Garantie nicht.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Security-Notiz verspricht, Details würden in einem separaten Advisory folgen. #358 nennt zwar ein Advisory, belegt aber nicht, dass später Details veröffentlicht werden.\"},{\"criterion\":\"R6\",\"evidence\":\"Der Eintrag zu #363 beschreibt ausschließlich, dass CI Integrationstests mit Postgres 16 ausführt. Das ist eine interne Teständerung und gehört nicht in nutzergerichtete Release Notes.\"}],\"reason\":\"Die wesentlichen Breaking Changes und ihre Migration sind erfasst, und der Major-Sprung auf 4.0.0 passt dazu. Einige Aussagen gehen jedoch über die gezeigten Quellen hinaus; außerdem enthält die Feature-Liste eine interne CI-Änderung.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26091,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 425,
+    "reasoning_output_tokens": 131
+   }
+  }
+ ]
+}

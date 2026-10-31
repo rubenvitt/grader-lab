@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "f06c816ec60f4e82a3fdec83",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "internal-noise",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7433,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage zu #307, ein abgeschlossener Job könne ohne Opt-in „no longer be fetched from the queue“, geht über den Diff hinaus. Dieser ändert nur den Standardwert von `removeOnComplete` auf `true`; ein Abrufverhalten ist darin nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage zu #304, der Job verbleibe dadurch nicht mehr bis zum Ablauf des Locks im Status „active“, ist durch den Diff nicht belegt. Er zeigt, dass der Lock im `finally`-Block freigegeben wird, aber keine Änderung des Jobstatus.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Der Abschnitt „Internal“ nennt das pnpm-Caching in GitHub Actions (#320) und das Update der Dev-Dependency Vitest (#322). Beide Änderungen sind für Nutzer der Bibliothek nicht relevant.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten zwei Aussagen, die über die gezeigten Diffs hinausgehen, sowie zwei interne Änderungen ohne Nutzerrelevanz. Der Major-Sprung und die Migration für den geänderten Standardwert passen zu den Quellen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zu #307, ein abgeschlossener Job könne ohne Opt-in „no longer be fetched from the queue“, geht über den Diff hinaus. Dieser ändert nur den Standardwert von `removeOnComplete` auf `true`; ein Abrufverhalten ist darin nicht belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zu #304, der Job verbleibe dadurch nicht mehr bis zum Ablauf des Locks im Status „active“, ist durch den Diff nicht belegt. Er zeigt, dass der Lock im `finally`-Block freigegeben wird, aber keine Änderung des Jobstatus."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "Der Abschnitt „Internal“ nennt das pnpm-Caching in GitHub Actions (#320) und das Update der Dev-Dependency Vitest (#322). Beide Änderungen sind für Nutzer der Bibliothek nicht relevant."
+   }
+  ],
+  "reason": "Die Notes enthalten zwei Aussagen, die über die gezeigten Diffs hinausgehen, sowie zwei interne Änderungen ohne Nutzerrelevanz. Der Major-Sprung und die Migration für den geänderten Standardwert passen zu den Quellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26873,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 336,
+  "reasoning_output_tokens": 49
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-aa58-7943-84b3-92aaa4adeddf"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage zu #307, ein abgeschlossener Job könne ohne Opt-in „no longer be fetched from the queue“, geht über den Diff hinaus. Dieser ändert nur den Standardwert von `removeOnComplete` auf `true`; ein Abrufverhalten ist darin nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage zu #304, der Job verbleibe dadurch nicht mehr bis zum Ablauf des Locks im Status „active“, ist durch den Diff nicht belegt. Er zeigt, dass der Lock im `finally`-Block freigegeben wird, aber keine Änderung des Jobstatus.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Der Abschnitt „Internal“ nennt das pnpm-Caching in GitHub Actions (#320) und das Update der Dev-Dependency Vitest (#322). Beide Änderungen sind für Nutzer der Bibliothek nicht relevant.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten zwei Aussagen, die über die gezeigten Diffs hinausgehen, sowie zwei interne Änderungen ohne Nutzerrelevanz. Der Major-Sprung und die Migration für den geänderten Standardwert passen zu den Quellen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26873,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 336,
+    "reasoning_output_tokens": 49
+   }
+  }
+ ]
+}

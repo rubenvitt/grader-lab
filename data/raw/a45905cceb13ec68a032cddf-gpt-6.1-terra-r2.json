@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "a45905cceb13ec68a032cddf",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "reordered",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7008,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage zu #395, Jitter sorge dafür, dass Wiederholungen „nicht alle gleichzeitig“ eintreffen, ist eine nicht belegte Garantie. Der Diff berechnet zufällige ganzzahlige Verzögerungen; mehrere Wiederholungen können denselben Wert erhalten.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration zu #399 empfiehlt pauschal `worker.pause({ drain: true })`. Der Diff bildet jedoch `pause(false)` auf `{ drain: false }` ab. Die Empfehlung ändert daher für diesen bisherigen Aufruf das Verhalten.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine unbelegte Garantie und einen Migrationsschritt, der nicht für alle bisherigen Aufrufe das Verhalten erhält. Der Major-Sprung auf 5.0.0 passt zu den Breaking Changes.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zu #395, Jitter sorge dafür, dass Wiederholungen „nicht alle gleichzeitig“ eintreffen, ist eine nicht belegte Garantie. Der Diff berechnet zufällige ganzzahlige Verzögerungen; mehrere Wiederholungen können denselben Wert erhalten."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration zu #399 empfiehlt pauschal `worker.pause({ drain: true })`. Der Diff bildet jedoch `pause(false)` auf `{ drain: false }` ab. Die Empfehlung ändert daher für diesen bisherigen Aufruf das Verhalten."
+   }
+  ],
+  "reason": "Die Notes enthalten eine unbelegte Garantie und einen Migrationsschritt, der nicht für alle bisherigen Aufrufe das Verhalten erhält. Der Major-Sprung auf 5.0.0 passt zu den Breaking Changes.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26084,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 271,
+  "reasoning_output_tokens": 56
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-7472-7540-ae4d-f506f9ecb2a8"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage zu #395, Jitter sorge dafür, dass Wiederholungen „nicht alle gleichzeitig“ eintreffen, ist eine nicht belegte Garantie. Der Diff berechnet zufällige ganzzahlige Verzögerungen; mehrere Wiederholungen können denselben Wert erhalten.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration zu #399 empfiehlt pauschal `worker.pause({ drain: true })`. Der Diff bildet jedoch `pause(false)` auf `{ drain: false }` ab. Die Empfehlung ändert daher für diesen bisherigen Aufruf das Verhalten.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine unbelegte Garantie und einen Migrationsschritt, der nicht für alle bisherigen Aufrufe das Verhalten erhält. Der Major-Sprung auf 5.0.0 passt zu den Breaking Changes.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26084,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 271,
+    "reasoning_output_tokens": 56
+   }
+  }
+ ]
+}

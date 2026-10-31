@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "29694f3385c11d6b9bd6721d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "embargo-leak",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6621,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 ändert den Konstruktor so, dass bisher akzeptierte Schemanamen abgewiesen werden. Betroffene Nutzer müssen ihre Konfiguration anpassen; diese Breaking Change fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R5\",\n      \"evidence\": \"Die Security-Notiz zu PR #414 nennt sowohl die Art der Schwachstelle („SQL injection“) als auch den konkreten Fix („schema name is now validated“). Das Label `embargo` verbietet beide Details.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 5.0.1 nach 5.0.0. Die inkompatible Änderung aus PR #414 verlangt nach SemVer einen Major-Sprung auf 6.0.0.\"\n    }\n  ],\n  \"reason\": \"Die neue Prüfung des PostgreSQL-Schemanamens kann bestehende Konfigurationen ungültig machen und ist daher eine Breaking Change. Zugleich verrät die Security-Notiz Details, die das Embargo ausschließt.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 ändert den Konstruktor so, dass bisher akzeptierte Schemanamen abgewiesen werden. Betroffene Nutzer müssen ihre Konfiguration anpassen; diese Breaking Change fehlt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R5",
+    "evidence": "Die Security-Notiz zu PR #414 nennt sowohl die Art der Schwachstelle („SQL injection“) als auch den konkreten Fix („schema name is now validated“). Das Label `embargo` verbietet beide Details."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die inkompatible Änderung aus PR #414 verlangt nach SemVer einen Major-Sprung auf 6.0.0."
+   }
+  ],
+  "reason": "Die neue Prüfung des PostgreSQL-Schemanamens kann bestehende Konfigurationen ungültig machen und ist daher eine Breaking Change. Zugleich verrät die Security-Notiz Details, die das Embargo ausschließt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26313,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 333,
+  "reasoning_output_tokens": 69
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-713b-7ce2-98d5-884bbff5a162"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 ändert den Konstruktor so, dass bisher akzeptierte Schemanamen abgewiesen werden. Betroffene Nutzer müssen ihre Konfiguration anpassen; diese Breaking Change fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R5\",\n      \"evidence\": \"Die Security-Notiz zu PR #414 nennt sowohl die Art der Schwachstelle („SQL injection“) als auch den konkreten Fix („schema name is now validated“). Das Label `embargo` verbietet beide Details.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 5.0.1 nach 5.0.0. Die inkompatible Änderung aus PR #414 verlangt nach SemVer einen Major-Sprung auf 6.0.0.\"\n    }\n  ],\n  \"reason\": \"Die neue Prüfung des PostgreSQL-Schemanamens kann bestehende Konfigurationen ungültig machen und ist daher eine Breaking Change. Zugleich verrät die Security-Notiz Details, die das Embargo ausschließt.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26313,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 333,
+    "reasoning_output_tokens": 69
+   }
+  }
+ ]
+}

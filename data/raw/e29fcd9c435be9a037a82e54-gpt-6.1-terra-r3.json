@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "e29fcd9c435be9a037a82e54",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "hype-tone",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4881,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „Take control like never before!“, „powerful“, „incredible“, „effortlessly in charge“ und „sleek“ sind Werbesprache und nicht sachlich.\"}],\"reason\":\"Der Kandidat vermittelt die Änderungen und den Migrationsschritt der Referenz korrekt und vollständig. Sein werblicher Ton weicht jedoch deutlich vom sachlichen Maßstab ab.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „Take control like never before!“, „powerful“, „incredible“, „effortlessly in charge“ und „sleek“ sind Werbesprache und nicht sachlich."
+   }
+  ],
+  "reason": "Der Kandidat vermittelt die Änderungen und den Migrationsschritt der Referenz korrekt und vollständig. Sein werblicher Ton weicht jedoch deutlich vom sachlichen Maßstab ab.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24555,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 107,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-416d-7d13-88ea-46520367b3ef"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „Take control like never before!“, „powerful“, „incredible“, „effortlessly in charge“ und „sleek“ sind Werbesprache und nicht sachlich.\"}],\"reason\":\"Der Kandidat vermittelt die Änderungen und den Migrationsschritt der Referenz korrekt und vollständig. Sein werblicher Ton weicht jedoch deutlich vom sachlichen Maßstab ab.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24555,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 107,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

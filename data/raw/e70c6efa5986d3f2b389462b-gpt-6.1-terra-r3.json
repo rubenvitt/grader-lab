@@ -1,0 +1,62 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "e70c6efa5986d3f2b389462b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reverted-listed",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 7265,
+ "text": "{\"reason\":\"Ohne PR-Diffs oder weitere Quellen lässt sich nicht beurteilen, ob das Dashboard-Feature in B belegt und Teil des Releases ist. Falls es enthalten ist, wäre die Patch-Version 5.0.1 nach der Rubric falsch; falls nicht, wäre der Eintrag unzulässig. Daher lässt sich keine Fassung als besser belegen.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Ohne PR-Diffs oder weitere Quellen lässt sich nicht beurteilen, ob das Dashboard-Feature in B belegt und Teil des Releases ist. Falls es enthalten ist, wäre die Patch-Version 5.0.1 nach der Rubric falsch; falls nicht, wäre der Eintrag unzulässig. Daher lässt sich keine Fassung als besser belegen.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25250,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 89,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-2e25-72e2-b957-ae869d907ba9"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536165d7ba31899-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361662eec44256-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Ohne PR-Diffs oder weitere Quellen lässt sich nicht beurteilen, ob das Dashboard-Feature in B belegt und Teil des Releases ist. Falls es enthalten ist, wäre die Patch-Version 5.0.1 nach der Rubric falsch; falls nicht, wäre der Eintrag unzulässig. Daher lässt sich keine Fassung als besser belegen.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25250,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 89,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

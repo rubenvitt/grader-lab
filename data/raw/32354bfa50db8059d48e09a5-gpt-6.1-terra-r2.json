@@ -1,0 +1,83 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "32354bfa50db8059d48e09a5",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "internal-noise",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 15412,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage zu #395, die Zufallsverteilung sorge dafür, dass Wiederholungen nicht alle gleichzeitig eintreffen, ist nicht garantiert. Der Diff berechnet ganzzahlige Zufallswerte; mehrere Wiederholungen können denselben Wert erhalten.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für #399 empfiehlt allgemein `worker.pause({ drain: true })`. Das erhält das Verhalten von `worker.pause(false)` nicht: Dafür ist `worker.pause({ drain: false })` erforderlich.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Der Abschnitt „Internal“ enthält den internen Veröffentlichungsworkflow mit `--provenance` (#403) und das reine Refactoring des Key-Builders (#404). Beide gehören laut Rubric nicht in nutzergerichtete Release Notes.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die Breaking Changes und verwenden mit 5.0.0 die passende Major-Version. Sie enthalten jedoch eine nicht belegte Garantie, eine unvollständige Migrationsanweisung und zwei interne Änderungen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zu #395, die Zufallsverteilung sorge dafür, dass Wiederholungen nicht alle gleichzeitig eintreffen, ist nicht garantiert. Der Diff berechnet ganzzahlige Zufallswerte; mehrere Wiederholungen können denselben Wert erhalten."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für #399 empfiehlt allgemein `worker.pause({ drain: true })`. Das erhält das Verhalten von `worker.pause(false)` nicht: Dafür ist `worker.pause({ drain: false })` erforderlich."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "Der Abschnitt „Internal“ enthält den internen Veröffentlichungsworkflow mit `--provenance` (#403) und das reine Refactoring des Key-Builders (#404). Beide gehören laut Rubric nicht in nutzergerichtete Release Notes."
+   }
+  ],
+  "reason": "Die Notes erfassen die Breaking Changes und verwenden mit 5.0.0 die passende Major-Version. Sie enthalten jedoch eine nicht belegte Garantie, eine unvollständige Migrationsanweisung und zwei interne Änderungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26113,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 290,
+  "reasoning_output_tokens": 19
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-420a-7203-abbe-cbce4c12a99b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536134b3f795315-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53613506b77f694-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53613570ba43314-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361363acbfca63-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage zu #395, die Zufallsverteilung sorge dafür, dass Wiederholungen nicht alle gleichzeitig eintreffen, ist nicht garantiert. Der Diff berechnet ganzzahlige Zufallswerte; mehrere Wiederholungen können denselben Wert erhalten.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für #399 empfiehlt allgemein `worker.pause({ drain: true })`. Das erhält das Verhalten von `worker.pause(false)` nicht: Dafür ist `worker.pause({ drain: false })` erforderlich.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Der Abschnitt „Internal“ enthält den internen Veröffentlichungsworkflow mit `--provenance` (#403) und das reine Refactoring des Key-Builders (#404). Beide gehören laut Rubric nicht in nutzergerichtete Release Notes.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die Breaking Changes und verwenden mit 5.0.0 die passende Major-Version. Sie enthalten jedoch eine nicht belegte Garantie, eine unvollständige Migrationsanweisung und zwei interne Änderungen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26113,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 290,
+    "reasoning_output_tokens": 19
+   }
+  }
+ ]
+}

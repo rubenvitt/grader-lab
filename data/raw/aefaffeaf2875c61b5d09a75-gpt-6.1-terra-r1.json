@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "aefaffeaf2875c61b5d09a75",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "useless-true",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4478,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker fix (#413)“ erklärt weder den behobenen Double-Ack nach Lock-Verlust noch das stattdessen ausgelöste Ereignis `lockLost`.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security improvements (#414)“ nennt weder die betroffene Komponente `PostgresStore` noch die Upgrade-Empfehlung.\"}],\"reason\":\"Die Einträge sind zu allgemein, um die Änderungen und die empfohlene Handlung zu erkennen. Version und Einordnung als Patch stimmen mit der Referenz überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Worker fix (#413)“ erklärt weder den behobenen Double-Ack nach Lock-Verlust noch das stattdessen ausgelöste Ereignis `lockLost`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Security improvements (#414)“ nennt weder die betroffene Komponente `PostgresStore` noch die Upgrade-Empfehlung."
+   }
+  ],
+  "reason": "Die Einträge sind zu allgemein, um die Änderungen und die empfohlene Handlung zu erkennen. Version und Einordnung als Patch stimmen mit der Referenz überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25278,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 137,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-e74c-7402-81fd-c32362ed89a0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker fix (#413)“ erklärt weder den behobenen Double-Ack nach Lock-Verlust noch das stattdessen ausgelöste Ereignis `lockLost`.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security improvements (#414)“ nennt weder die betroffene Komponente `PostgresStore` noch die Upgrade-Empfehlung.\"}],\"reason\":\"Die Einträge sind zu allgemein, um die Änderungen und die empfohlene Handlung zu erkennen. Version und Einordnung als Patch stimmen mit der Referenz überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25278,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 137,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

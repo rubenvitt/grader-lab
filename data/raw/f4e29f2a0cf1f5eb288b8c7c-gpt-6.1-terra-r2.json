@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "f4e29f2a0cf1f5eb288b8c7c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4970,
+ "text": "{\"reason\":\"Beide Fassungen enthalten dieselben Änderungen, Einordnungen und Migrationsschritte; sie unterscheiden sich nur in der Formulierung. Ob die Aussagen durch die Diffs gedeckt sind oder weitere Änderungen fehlen, lässt sich anhand des vorliegenden Materials nicht beurteilen.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen enthalten dieselben Änderungen, Einordnungen und Migrationsschritte; sie unterscheiden sich nur in der Formulierung. Ob die Aussagen durch die Diffs gedeckt sind oder weitere Änderungen fehlen, lässt sich anhand des vorliegenden Materials nicht beurteilen.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24751,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 71,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-3b62-7153-bf69-930573e4e135"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen enthalten dieselben Änderungen, Einordnungen und Migrationsschritte; sie unterscheiden sich nur in der Formulierung. Ob die Aussagen durch die Diffs gedeckt sind oder weitere Änderungen fehlen, lässt sich anhand des vorliegenden Materials nicht beurteilen.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24751,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 71,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

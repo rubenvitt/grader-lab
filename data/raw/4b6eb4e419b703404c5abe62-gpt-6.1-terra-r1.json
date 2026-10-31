@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "4b6eb4e419b703404c5abe62",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 6161,
+ "text": "{\"reason\":\"Fassung A enthält zusätzlich die Aussage, dass der Job beim nächsten Poll erneut versucht wird. Ohne Diff oder andere Quellen lässt sich weder diese Aussage noch ihre Belegung beurteilen; anhand der gegebenen Informationen sind die Fassungen daher gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung A enthält zusätzlich die Aussage, dass der Job beim nächsten Poll erneut versucht wird. Ohne Diff oder andere Quellen lässt sich weder diese Aussage noch ihre Belegung beurteilen; anhand der gegebenen Informationen sind die Fassungen daher gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25387,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 205,
+  "reasoning_output_tokens": 137
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-de1c-7f21-af02-800bd2b0c0e5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A enthält zusätzlich die Aussage, dass der Job beim nächsten Poll erneut versucht wird. Ohne Diff oder andere Quellen lässt sich weder diese Aussage noch ihre Belegung beurteilen; anhand der gegebenen Informationen sind die Fassungen daher gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25387,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 205,
+    "reasoning_output_tokens": 137
+   }
+  }
+ ]
+}

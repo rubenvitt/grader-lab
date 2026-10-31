@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "b5c0a2dee02e2be9ffe5b597",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reordered",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6371,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der Worker verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff von #376 zeigt die Konfiguration und die Nutzung eines `TokenBucket`, aber nicht dessen Implementierung oder eine solche Obergrenze für jedes Zeitfenster.\"}],\"reason\":\"Die endgültige Option des Relands und die Migration von `timeout` zu `timeoutMs` sind korrekt wiedergegeben. Die genaue Begrenzung der Jobzahl ist durch die gezeigten Quellen nicht belegt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, der Worker verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff von #376 zeigt die Konfiguration und die Nutzung eines `TokenBucket`, aber nicht dessen Implementierung oder eine solche Obergrenze für jedes Zeitfenster."
+   }
+  ],
+  "reason": "Die endgültige Option des Relands und die Migration von `timeout` zu `timeoutMs` sind korrekt wiedergegeben. Die genaue Begrenzung der Jobzahl ist durch die gezeigten Quellen nicht belegt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26311,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 219,
+  "reasoning_output_tokens": 84
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-e218-79c3-b40f-6243e0fca9ff"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der Worker verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff von #376 zeigt die Konfiguration und die Nutzung eines `TokenBucket`, aber nicht dessen Implementierung oder eine solche Obergrenze für jedes Zeitfenster.\"}],\"reason\":\"Die endgültige Option des Relands und die Migration von `timeout` zu `timeoutMs` sind korrekt wiedergegeben. Die genaue Begrenzung der Jobzahl ist durch die gezeigten Quellen nicht belegt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26311,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 219,
+    "reasoning_output_tokens": 84
+   }
+  }
+ ]
+}

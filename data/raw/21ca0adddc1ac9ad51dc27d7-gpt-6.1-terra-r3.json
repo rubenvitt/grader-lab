@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "21ca0adddc1ac9ad51dc27d7",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5292,
+ "text": "{\"reason\":\"Fassung B beschreibt den erneuten Versuch bei `ECONNRESET` konkret und stimmt damit mit der Einleitung überein. Fassung A behauptet darüber hinaus, dass Sperren bei Redis-Failovern erhalten bleiben und die Verbindung automatisch wiederhergestellt wird; diese Garantien sind durch das vorliegende Material nicht belegt.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt den erneuten Versuch bei `ECONNRESET` konkret und stimmt damit mit der Einleitung überein. Fassung A behauptet darüber hinaus, dass Sperren bei Redis-Failovern erhalten bleiben und die Verbindung automatisch wiederhergestellt wird; diese Garantien sind durch das vorliegende Material nicht belegt.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25384,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 115,
+  "reasoning_output_tokens": 28
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-5f0b-7500-bcbf-e0545d4ea378"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt den erneuten Versuch bei `ECONNRESET` konkret und stimmt damit mit der Einleitung überein. Fassung A behauptet darüber hinaus, dass Sperren bei Redis-Failovern erhalten bleiben und die Verbindung automatisch wiederhergestellt wird; diese Garantien sind durch das vorliegende Material nicht belegt.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25384,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 115,
+    "reasoning_output_tokens": 28
+   }
+  }
+ ]
+}

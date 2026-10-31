@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "ab86ace32557833e31a76f17",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "reordered",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5811,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und konkret; die beschriebenen Breaking Changes stehen samt Migration im passenden Abschnitt. Das Sicherheitsproblem wird ohne verbotene Details genannt, und die Major-Version passt zu den beschriebenen Änderungen. Aussagen über die tatsächlichen Änderungen lassen sich ohne Quellen nicht prüfen und gelten daher als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes sind sachlich und konkret; die beschriebenen Breaking Changes stehen samt Migration im passenden Abschnitt. Das Sicherheitsproblem wird ohne verbotene Details genannt, und die Major-Version passt zu den beschriebenen Änderungen. Aussagen über die tatsächlichen Änderungen lassen sich ohne Quellen nicht prüfen und gelten daher als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24478,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 81,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-d0cd-72e1-ab03-fd12f2250178"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und konkret; die beschriebenen Breaking Changes stehen samt Migration im passenden Abschnitt. Das Sicherheitsproblem wird ohne verbotene Details genannt, und die Major-Version passt zu den beschriebenen Änderungen. Aussagen über die tatsächlichen Änderungen lassen sich ohne Quellen nicht prüfen und gelten daher als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24478,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 81,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

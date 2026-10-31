@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "69263d64c6ea49f5bd75a3b3",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "wrong-migration",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4412,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur beim Optionsnamen für die Migration: A nennt `status`, B nennt `state`. Ohne den zugehörigen Code oder Diff lässt sich nicht beurteilen, welcher Name korrekt ist; nach den vorliegenden Informationen sind sie gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur beim Optionsnamen für die Migration: A nennt `status`, B nennt `state`. Ohne den zugehörigen Code oder Diff lässt sich nicht beurteilen, welcher Name korrekt ist; nach den vorliegenden Informationen sind sie gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24536,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 70,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-6f1c-7f73-adcc-efd5ca045825"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur beim Optionsnamen für die Migration: A nennt `status`, B nennt `state`. Ohne den zugehörigen Code oder Diff lässt sich nicht beurteilen, welcher Name korrekt ist; nach den vorliegenden Informationen sind sie gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24536,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 70,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

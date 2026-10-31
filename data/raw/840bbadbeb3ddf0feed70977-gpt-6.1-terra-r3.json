@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "840bbadbeb3ddf0feed70977",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6409,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„New worker event (#331)“ nennt weder den Ereignisnamen `drained` noch die Bedingung: kein abgerufener Job und keine aktiven Jobs.\"},{\"criterion\":\"R8\",\"evidence\":\"„Stability work on the Redis store (#334)“ beschreibt nicht den einmaligen erneuten Versuch bei `ECONNRESET` während der Sperrenerneuerung.\"},{\"criterion\":\"R8\",\"evidence\":\"„An older queue method is being phased out (#338)“ nennt weder die veraltete Methode `queue.clean()` noch den Ersatz `queue.purge({ status, olderThanMs })`; außerdem bleibt unerwähnt, dass `clean()` weiter funktioniert und eine Warnung ausgibt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security update (#336)“ nennt die betroffene Komponente `signing` nicht und gibt keine Upgrade-Empfehlung.\"}],\"reason\":\"Die Diffs belegen ein neues Worker-Ereignis, einen begrenzten Redis-Retry, eine Deprecation mit Ersatzmethode und einen Sicherheitsfix. Die Notes bleiben bei allen vier Einträgen so allgemein, dass Nutzer die konkrete Änderung beziehungsweise die gebotene Handlung nicht erkennen können; Version 3.1.0 ist für den belegten Inhalt passend.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„New worker event (#331)“ nennt weder den Ereignisnamen `drained` noch die Bedingung: kein abgerufener Job und keine aktiven Jobs."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Stability work on the Redis store (#334)“ beschreibt nicht den einmaligen erneuten Versuch bei `ECONNRESET` während der Sperrenerneuerung."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„An older queue method is being phased out (#338)“ nennt weder die veraltete Methode `queue.clean()` noch den Ersatz `queue.purge({ status, olderThanMs })`; außerdem bleibt unerwähnt, dass `clean()` weiter funktioniert und eine Warnung ausgibt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Security update (#336)“ nennt die betroffene Komponente `signing` nicht und gibt keine Upgrade-Empfehlung."
+   }
+  ],
+  "reason": "Die Diffs belegen ein neues Worker-Ereignis, einen begrenzten Redis-Retry, eine Deprecation mit Ersatzmethode und einen Sicherheitsfix. Die Notes bleiben bei allen vier Einträgen so allgemein, dass Nutzer die konkrete Änderung beziehungsweise die gebotene Handlung nicht erkennen können; Version 3.1.0 ist für den belegten Inhalt passend.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26475,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 293,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-72cd-7291-beb6-cff3c67282ab"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„New worker event (#331)“ nennt weder den Ereignisnamen `drained` noch die Bedingung: kein abgerufener Job und keine aktiven Jobs.\"},{\"criterion\":\"R8\",\"evidence\":\"„Stability work on the Redis store (#334)“ beschreibt nicht den einmaligen erneuten Versuch bei `ECONNRESET` während der Sperrenerneuerung.\"},{\"criterion\":\"R8\",\"evidence\":\"„An older queue method is being phased out (#338)“ nennt weder die veraltete Methode `queue.clean()` noch den Ersatz `queue.purge({ status, olderThanMs })`; außerdem bleibt unerwähnt, dass `clean()` weiter funktioniert und eine Warnung ausgibt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security update (#336)“ nennt die betroffene Komponente `signing` nicht und gibt keine Upgrade-Empfehlung.\"}],\"reason\":\"Die Diffs belegen ein neues Worker-Ereignis, einen begrenzten Redis-Retry, eine Deprecation mit Ersatzmethode und einen Sicherheitsfix. Die Notes bleiben bei allen vier Einträgen so allgemein, dass Nutzer die konkrete Änderung beziehungsweise die gebotene Handlung nicht erkennen können; Version 3.1.0 ist für den belegten Inhalt passend.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26475,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 293,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

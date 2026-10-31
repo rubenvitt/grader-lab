@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "3e9918257e4ec2b8b0161d0e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "wrong-migration",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5167,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration nennt `defaultJobOptions: { keepCompleted: true }`. Laut Referenz lautet die korrekte Konfiguration `defaultJobOptions: { removeOnComplete: false }`.\"}],\"reason\":\"Der Migrationsschritt verwendet einen abweichenden Optionsnamen und vermittelt damit nicht zuverlässig, wie Nutzer das bisherige Verhalten beibehalten.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration nennt `defaultJobOptions: { keepCompleted: true }`. Laut Referenz lautet die korrekte Konfiguration `defaultJobOptions: { removeOnComplete: false }`."
+   }
+  ],
+  "reason": "Der Migrationsschritt verwendet einen abweichenden Optionsnamen und vermittelt damit nicht zuverlässig, wie Nutzer das bisherige Verhalten beibehalten.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25488,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 98,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-42fb-7d40-b63b-4a5c7dc712ba"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration nennt `defaultJobOptions: { keepCompleted: true }`. Laut Referenz lautet die korrekte Konfiguration `defaultJobOptions: { removeOnComplete: false }`.\"}],\"reason\":\"Der Migrationsschritt verwendet einen abweichenden Optionsnamen und vermittelt damit nicht zuverlässig, wie Nutzer das bisherige Verhalten beibehalten.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25488,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 98,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

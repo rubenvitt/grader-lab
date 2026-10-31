@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "53eeab5b32956dc3921449ef",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "internal-noise",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4892,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Die Einträge zum CodeQL-Workflow und zum Update von eslint betreffen CI beziehungsweise eine Entwicklungsabhängigkeit und gehören nicht in nutzerorientierte Release Notes.\"},{\"criterion\":\"R2\",\"evidence\":\"Der CodeQL-Workflow und das eslint-Update haben in der Referenz keine Entsprechung.\"}],\"reason\":\"Der Kandidat gibt alle nutzerrelevanten Fakten der Referenz korrekt wieder, ergänzt aber zwei nicht belegte interne Änderungen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Die Einträge zum CodeQL-Workflow und zum Update von eslint betreffen CI beziehungsweise eine Entwicklungsabhängigkeit und gehören nicht in nutzerorientierte Release Notes."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der CodeQL-Workflow und das eslint-Update haben in der Referenz keine Entsprechung."
+   }
+  ],
+  "reason": "Der Kandidat gibt alle nutzerrelevanten Fakten der Referenz korrekt wieder, ergänzt aber zwei nicht belegte interne Änderungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25403,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 119,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-12bf-73a2-a0e4-944da7044284"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Die Einträge zum CodeQL-Workflow und zum Update von eslint betreffen CI beziehungsweise eine Entwicklungsabhängigkeit und gehören nicht in nutzerorientierte Release Notes.\"},{\"criterion\":\"R2\",\"evidence\":\"Der CodeQL-Workflow und das eslint-Update haben in der Referenz keine Entsprechung.\"}],\"reason\":\"Der Kandidat gibt alle nutzerrelevanten Fakten der Referenz korrekt wieder, ergänzt aber zwei nicht belegte interne Änderungen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25403,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 119,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

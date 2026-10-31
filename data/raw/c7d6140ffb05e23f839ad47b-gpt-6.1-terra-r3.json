@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "c7d6140ffb05e23f839ad47b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4459,
+ "text": "{\"reason\":\"Fassung A ist besser: Fassung B enthält zusätzlich interne Änderungen am Release-Workflow und eine reine Umstrukturierung, die für Bibliotheksnutzer nicht relevant sind. Ansonsten sind die Fassungen inhaltlich gleich; Aussagen über ihre Übereinstimmung mit den Diffs lassen sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser: Fassung B enthält zusätzlich interne Änderungen am Release-Workflow und eine reine Umstrukturierung, die für Bibliotheksnutzer nicht relevant sind. Ansonsten sind die Fassungen inhaltlich gleich; Aussagen über ihre Übereinstimmung mit den Diffs lassen sich ohne Quellen nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25601,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 82,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-7d85-7ab1-8f9e-05e67f730cd0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser: Fassung B enthält zusätzlich interne Änderungen am Release-Workflow und eine reine Umstrukturierung, die für Bibliotheksnutzer nicht relevant sind. Ansonsten sind die Fassungen inhaltlich gleich; Aussagen über ihre Übereinstimmung mit den Diffs lassen sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25601,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 82,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

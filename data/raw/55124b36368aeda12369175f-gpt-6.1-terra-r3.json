@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "55124b36368aeda12369175f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "wrong-bump",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4977,
+ "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 2.4.0 und führen unter „Breaking Changes“ einen geänderten Standardwert für `removeOnComplete` auf. Dafür ist ein Major-Sprung erforderlich.\"}],\"reason\":\"Der ausgewiesene Breaking Change ist mit der Minor-Version 2.4.0 nicht vereinbar. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 2.4.0 und führen unter „Breaking Changes“ einen geänderten Standardwert für `removeOnComplete` auf. Dafür ist ein Major-Sprung erforderlich."
+   }
+  ],
+  "reason": "Der ausgewiesene Breaking Change ist mit der Minor-Version 2.4.0 nicht vereinbar. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25253,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 104,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-95f2-7400-a35f-0c7172ad1a0b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 2.4.0 und führen unter „Breaking Changes“ einen geänderten Standardwert für `removeOnComplete` auf. Dafür ist ein Major-Sprung erforderlich.\"}],\"reason\":\"Der ausgewiesene Breaking Change ist mit der Minor-Version 2.4.0 nicht vereinbar. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25253,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 104,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

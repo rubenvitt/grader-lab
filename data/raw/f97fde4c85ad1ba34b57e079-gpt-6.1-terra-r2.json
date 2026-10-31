@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "f97fde4c85ad1ba34b57e079",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "paraphrase",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4193,
+ "text": "{\"violations\":[],\"reason\":\"Die Einträge beschreiben die Änderungen und nennen einen Migrationsschritt. Ob die technischen Aussagen und Optionsnamen zutreffen, lässt sich ohne Quellen nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Einträge beschreiben die Änderungen und nennen einen Migrationsschritt. Ob die technischen Aussagen und Optionsnamen zutreffen, lässt sich ohne Quellen nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25197,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 53,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-c911-7780-8bc2-86ce95031bd2"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Einträge beschreiben die Änderungen und nennen einen Migrationsschritt. Ob die technischen Aussagen und Optionsnamen zutreffen, lässt sich ohne Quellen nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25197,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

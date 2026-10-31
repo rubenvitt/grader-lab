@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "a2ce3966cf406ed7923c4be4",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "ghost-pr",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4236,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes sind konkret und sachlich; die angegebenen Migrationsschritte sind im Text in sich nachvollziehbar. Ohne Quellen lassen sich ihre sachliche Richtigkeit und Vollständigkeit nicht weiter prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes sind konkret und sachlich; die angegebenen Migrationsschritte sind im Text in sich nachvollziehbar. Ohne Quellen lassen sich ihre sachliche Richtigkeit und Vollständigkeit nicht weiter prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24499,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 62,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-b260-7cd2-90d3-342e8c2bb0e5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes sind konkret und sachlich; die angegebenen Migrationsschritte sind im Text in sich nachvollziehbar. Ohne Quellen lassen sich ihre sachliche Richtigkeit und Vollständigkeit nicht weiter prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24499,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

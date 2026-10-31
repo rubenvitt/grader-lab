@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "e4af476775c0422ca8478ce0",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6149,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Jitter-Eintrag behauptet, Retries kämen dadurch nicht alle gleichzeitig an. Der Diff von #395 verwendet Zufallswerte und rundet sie ab; gleiche Verzögerungen bleiben möglich.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Fix für den Exit-Code von `quaykit inspect` wird in den Notes mit #400 belegt. Die Quellen ordnen ihn PR #401 zu.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff von #399 muss der bisherige boolesche Wert übernommen werden: Für `pause(false)` lautet der entsprechende Aufruf `pause({ drain: false })`.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine nicht garantierte Aussage, eine falsche PR-Referenz und einen Migrationsschritt, der nicht für beide bisherigen Argumentwerte gilt.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Jitter-Eintrag behauptet, Retries kämen dadurch nicht alle gleichzeitig an. Der Diff von #395 verwendet Zufallswerte und rundet sie ab; gleiche Verzögerungen bleiben möglich."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Fix für den Exit-Code von `quaykit inspect` wird in den Notes mit #400 belegt. Die Quellen ordnen ihn PR #401 zu."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff von #399 muss der bisherige boolesche Wert übernommen werden: Für `pause(false)` lautet der entsprechende Aufruf `pause({ drain: false })`."
+   }
+  ],
+  "reason": "Die Notes enthalten eine nicht garantierte Aussage, eine falsche PR-Referenz und einen Migrationsschritt, der nicht für beide bisherigen Argumentwerte gilt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26932,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 305,
+  "reasoning_output_tokens": 57
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-9d03-7a53-b6d3-4e125b17d0ce"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Jitter-Eintrag behauptet, Retries kämen dadurch nicht alle gleichzeitig an. Der Diff von #395 verwendet Zufallswerte und rundet sie ab; gleiche Verzögerungen bleiben möglich.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Fix für den Exit-Code von `quaykit inspect` wird in den Notes mit #400 belegt. Die Quellen ordnen ihn PR #401 zu.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff von #399 muss der bisherige boolesche Wert übernommen werden: Für `pause(false)` lautet der entsprechende Aufruf `pause({ drain: false })`.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine nicht garantierte Aussage, eine falsche PR-Referenz und einen Migrationsschritt, der nicht für beide bisherigen Argumentwerte gilt.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26932,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 305,
+    "reasoning_output_tokens": 57
+   }
+  }
+ ]
+}

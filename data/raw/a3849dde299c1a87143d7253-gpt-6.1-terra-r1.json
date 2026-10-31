@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "a3849dde299c1a87143d7253",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7406,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung nennt „Bug fixes“, aber die Quellen belegen keinen im Release verbleibenden Bugfix. PR #373 nimmt den Rate Limiter aus #371 zurück; #376 führt ihn erneut ein.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„Workers can now be configured with more options“ benennt die Änderung nicht konkret. PR #376 ergänzt `limiter: { max, perMs }` mit einem eigenen Token Bucket pro Worker-Instanz.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„A job option has been deprecated“ nennt weder die betroffene Option noch die nötige Umstellung. Laut PR #378 ist `timeout` veraltet; Nutzer sollen stattdessen `timeoutMs` verwenden.\"\n    }\n  ],\n  \"reason\": \"Die Notes benennen die nutzerrelevanten Änderungen nicht ausreichend und behaupten Bugfixes, die durch die Quellen nicht belegt sind. Die Version 4.1.0 passt zu Feature und Deprecation.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung nennt „Bug fixes“, aber die Quellen belegen keinen im Release verbleibenden Bugfix. PR #373 nimmt den Rate Limiter aus #371 zurück; #376 führt ihn erneut ein."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Workers can now be configured with more options“ benennt die Änderung nicht konkret. PR #376 ergänzt `limiter: { max, perMs }` mit einem eigenen Token Bucket pro Worker-Instanz."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„A job option has been deprecated“ nennt weder die betroffene Option noch die nötige Umstellung. Laut PR #378 ist `timeout` veraltet; Nutzer sollen stattdessen `timeoutMs` verwenden."
+   }
+  ],
+  "reason": "Die Notes benennen die nutzerrelevanten Änderungen nicht ausreichend und behaupten Bugfixes, die durch die Quellen nicht belegt sind. Die Version 4.1.0 passt zu Feature und Deprecation.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26250,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 311,
+  "reasoning_output_tokens": 51
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-56f4-7cd2-9924-af4d9a5b9d45"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung nennt „Bug fixes“, aber die Quellen belegen keinen im Release verbleibenden Bugfix. PR #373 nimmt den Rate Limiter aus #371 zurück; #376 führt ihn erneut ein.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„Workers can now be configured with more options“ benennt die Änderung nicht konkret. PR #376 ergänzt `limiter: { max, perMs }` mit einem eigenen Token Bucket pro Worker-Instanz.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"„A job option has been deprecated“ nennt weder die betroffene Option noch die nötige Umstellung. Laut PR #378 ist `timeout` veraltet; Nutzer sollen stattdessen `timeoutMs` verwenden.\"\n    }\n  ],\n  \"reason\": \"Die Notes benennen die nutzerrelevanten Änderungen nicht ausreichend und behaupten Bugfixes, die durch die Quellen nicht belegt sind. Die Version 4.1.0 passt zu Feature und Deprecation.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26250,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 311,
+    "reasoning_output_tokens": 51
+   }
+  }
+ ]
+}

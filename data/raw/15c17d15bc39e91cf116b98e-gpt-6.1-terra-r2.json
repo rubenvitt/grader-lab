@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "15c17d15bc39e91cf116b98e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "invented-claim",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6382,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, `jitter` sei „the default for new queues“. Der Diff zu #395 ergänzt lediglich einen Zweig für `backoff.type === 'jitter'`; eine Änderung des Defaults ist nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage, Jitter sorge dafür, dass Wiederholungen „do not all arrive at once“, ist als Garantie nicht belegt. Der Zufallswert in #395 kann für mehrere Wiederholungen denselben Delay ergeben.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für den veralteten booleschen Aufruf von `worker.pause()` nennt nur `worker.pause({ drain: true })`. Für den bisherigen Aufruf `worker.pause(false)` wäre `worker.pause({ drain: false })` nötig, um das Verhalten beizubehalten; #399 übernimmt den jeweiligen booleschen Wert in `drain`.\"\n    }\n  ],\n  \"reason\": \"Die Breaking Changes und die Major-Version sind korrekt ausgewiesen. Die Notes enthalten jedoch zwei nicht belegte Aussagen zur Jitter-Strategie und einen unvollständigen Migrationsschritt für `worker.pause()`.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, `jitter` sei „the default for new queues“. Der Diff zu #395 ergänzt lediglich einen Zweig für `backoff.type === 'jitter'`; eine Änderung des Defaults ist nicht belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage, Jitter sorge dafür, dass Wiederholungen „do not all arrive at once“, ist als Garantie nicht belegt. Der Zufallswert in #395 kann für mehrere Wiederholungen denselben Delay ergeben."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für den veralteten booleschen Aufruf von `worker.pause()` nennt nur `worker.pause({ drain: true })`. Für den bisherigen Aufruf `worker.pause(false)` wäre `worker.pause({ drain: false })` nötig, um das Verhalten beizubehalten; #399 übernimmt den jeweiligen booleschen Wert in `drain`."
+   }
+  ],
+  "reason": "Die Breaking Changes und die Major-Version sind korrekt ausgewiesen. Die Notes enthalten jedoch zwei nicht belegte Aussagen zur Jitter-Strategie und einen unvollständigen Migrationsschritt für `worker.pause()`.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26090,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 343,
+  "reasoning_output_tokens": 47
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-da89-7e01-a4a7-276646abcb07"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, `jitter` sei „the default for new queues“. Der Diff zu #395 ergänzt lediglich einen Zweig für `backoff.type === 'jitter'`; eine Änderung des Defaults ist nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage, Jitter sorge dafür, dass Wiederholungen „do not all arrive at once“, ist als Garantie nicht belegt. Der Zufallswert in #395 kann für mehrere Wiederholungen denselben Delay ergeben.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für den veralteten booleschen Aufruf von `worker.pause()` nennt nur `worker.pause({ drain: true })`. Für den bisherigen Aufruf `worker.pause(false)` wäre `worker.pause({ drain: false })` nötig, um das Verhalten beizubehalten; #399 übernimmt den jeweiligen booleschen Wert in `drain`.\"\n    }\n  ],\n  \"reason\": \"Die Breaking Changes und die Major-Version sind korrekt ausgewiesen. Die Notes enthalten jedoch zwei nicht belegte Aussagen zur Jitter-Strategie und einen unvollständigen Migrationsschritt für `worker.pause()`.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26090,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 343,
+    "reasoning_output_tokens": 47
+   }
+  }
+ ]
+}

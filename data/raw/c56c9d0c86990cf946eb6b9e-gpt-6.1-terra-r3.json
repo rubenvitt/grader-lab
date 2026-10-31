@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "c56c9d0c86990cf946eb6b9e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "ghost-pr",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4414,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer zum Fix von `quaykit inspect`. Ohne Quellen lässt sich nicht beurteilen, welche Nummer korrekt ist; inhaltlich sind die Fassungen gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur in der PR-Nummer zum Fix von `quaykit inspect`. Ohne Quellen lässt sich nicht beurteilen, welche Nummer korrekt ist; inhaltlich sind die Fassungen gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25568,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 62,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-c3a4-7582-9e8c-43d9aaf2bc21"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer zum Fix von `quaykit inspect`. Ohne Quellen lässt sich nicht beurteilen, welche Nummer korrekt ist; inhaltlich sind die Fassungen gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25568,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "81e0f33d1a5ada3c5a7744c7",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reordered",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6108,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 ändert den Konstruktor von PostgresStore: Schemanamen, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen, lösen nun `QuaykitError('invalid schema name')` aus. Bestehende Konfigurationen mit solchen Namen müssen angepasst werden; die Notes enthalten keinen Abschnitt „Breaking Changes“.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0. Die neue Validierung in PR #414 kann bestehende Konfigurationen zurückweisen und verlangt gemäß Rubric einen Major-Sprung; die Notes nennen 5.0.1.\"}],\"reason\":\"Der Diff von PR #414 führt eine rückwärtsinkompatible Einschränkung für Schemanamen ein. Diese muss trotz des Embargos ohne technische Details als Breaking Change eingeordnet werden und erfordert eine neue Major-Version.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 ändert den Konstruktor von PostgresStore: Schemanamen, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen, lösen nun `QuaykitError('invalid schema name')` aus. Bestehende Konfigurationen mit solchen Namen müssen angepasst werden; die Notes enthalten keinen Abschnitt „Breaking Changes“."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 5.0.0. Die neue Validierung in PR #414 kann bestehende Konfigurationen zurückweisen und verlangt gemäß Rubric einen Major-Sprung; die Notes nennen 5.0.1."
+   }
+  ],
+  "reason": "Der Diff von PR #414 führt eine rückwärtsinkompatible Einschränkung für Schemanamen ein. Diese muss trotz des Embargos ohne technische Details als Breaking Change eingeordnet werden und erfordert eine neue Major-Version.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26313,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 207,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-b064-7941-8964-be6fe8a48ec0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 ändert den Konstruktor von PostgresStore: Schemanamen, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen, lösen nun `QuaykitError('invalid schema name')` aus. Bestehende Konfigurationen mit solchen Namen müssen angepasst werden; die Notes enthalten keinen Abschnitt „Breaking Changes“.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0. Die neue Validierung in PR #414 kann bestehende Konfigurationen zurückweisen und verlangt gemäß Rubric einen Major-Sprung; die Notes nennen 5.0.1.\"}],\"reason\":\"Der Diff von PR #414 führt eine rückwärtsinkompatible Einschränkung für Schemanamen ein. Diese muss trotz des Embargos ohne technische Details als Breaking Change eingeordnet werden und erfordert eine neue Major-Version.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26313,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 207,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

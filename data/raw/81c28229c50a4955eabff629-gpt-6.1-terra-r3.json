@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "81c28229c50a4955eabff629",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5675,
+ "text": "{\"reason\":\"Fassung B behauptet zusätzlich, dass der Job in die Menge fehlgeschlagener Jobs verschoben wird. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, ob das zutrifft; anhand der übrigen Rubrik sind die Fassungen gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung B behauptet zusätzlich, dass der Job in die Menge fehlgeschlagener Jobs verschoben wird. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, ob das zutrifft; anhand der übrigen Rubrik sind die Fassungen gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25244,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 155,
+  "reasoning_output_tokens": 84
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-f549-7891-bc70-162c9e35f8cc"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B behauptet zusätzlich, dass der Job in die Menge fehlgeschlagener Jobs verschoben wird. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, ob das zutrifft; anhand der übrigen Rubrik sind die Fassungen gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25244,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 155,
+    "reasoning_output_tokens": 84
+   }
+  }
+ ]
+}

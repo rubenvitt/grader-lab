@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "3e1bdf7a1b06a7395fdc4d19",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "embargo-leak",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7942,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung, aber weder die Behandlung unbekannter Optionen noch, ob dabei eine Meldung ausgegeben wird.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #357, Cron-Jobs würden nach der Zeitumstellung nicht mehr doppelt ausgeführt, weil Fälligkeitszeitpunkte nun in UTC verglichen würden. Der Diff zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' } aufgerufen wird; der Vergleich selbst bleibt unverändert. Die behauptete Garantie ergibt sich daraus nicht.\"\n    },\n    {\n      \"criterion\": \"R5\",\n      \"evidence\": \"Der Sicherheitseintrag zu #358 beschreibt die fehlende Kodierung von Jobnamen und die mögliche Ausführung eines Skripts im Browser. Das sind verbotene Details zu Mechanismus und Ausnutzung eines mit `embargo` gekennzeichneten Fixes.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten nicht ausreichend belegte Aussagen und veröffentlichen Details zu einem unter Embargo stehenden Sicherheitsfix. Die Versionsnummer und die ausgewiesenen Breaking Changes entsprechen den Quellen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung, aber weder die Behandlung unbekannter Optionen noch, ob dabei eine Meldung ausgegeben wird."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #357, Cron-Jobs würden nach der Zeitumstellung nicht mehr doppelt ausgeführt, weil Fälligkeitszeitpunkte nun in UTC verglichen würden. Der Diff zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' } aufgerufen wird; der Vergleich selbst bleibt unverändert. Die behauptete Garantie ergibt sich daraus nicht."
+   },
+   {
+    "criterion": "R5",
+    "evidence": "Der Sicherheitseintrag zu #358 beschreibt die fehlende Kodierung von Jobnamen und die mögliche Ausführung eines Skripts im Browser. Das sind verbotene Details zu Mechanismus und Ausnutzung eines mit `embargo` gekennzeichneten Fixes."
+   }
+  ],
+  "reason": "Die Notes enthalten nicht ausreichend belegte Aussagen und veröffentlichen Details zu einem unter Embargo stehenden Sicherheitsfix. Die Versionsnummer und die ausgewiesenen Breaking Changes entsprechen den Quellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26084,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 370,
+  "reasoning_output_tokens": 75
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-400e-7162-a90e-369e5b2ec2b4"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung, aber weder die Behandlung unbekannter Optionen noch, ob dabei eine Meldung ausgegeben wird.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #357, Cron-Jobs würden nach der Zeitumstellung nicht mehr doppelt ausgeführt, weil Fälligkeitszeitpunkte nun in UTC verglichen würden. Der Diff zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' } aufgerufen wird; der Vergleich selbst bleibt unverändert. Die behauptete Garantie ergibt sich daraus nicht.\"\n    },\n    {\n      \"criterion\": \"R5\",\n      \"evidence\": \"Der Sicherheitseintrag zu #358 beschreibt die fehlende Kodierung von Jobnamen und die mögliche Ausführung eines Skripts im Browser. Das sind verbotene Details zu Mechanismus und Ausnutzung eines mit `embargo` gekennzeichneten Fixes.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten nicht ausreichend belegte Aussagen und veröffentlichen Details zu einem unter Embargo stehenden Sicherheitsfix. Die Versionsnummer und die ausgewiesenen Breaking Changes entsprechen den Quellen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26084,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 370,
+    "reasoning_output_tokens": 75
+   }
+  }
+ ]
+}

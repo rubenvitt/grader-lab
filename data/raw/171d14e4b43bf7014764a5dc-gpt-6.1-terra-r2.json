@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "171d14e4b43bf7014764a5dc",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6769,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #307 behauptet, abgeschlossene Jobs könnten ohne Opt-in nicht mehr abgerufen werden. Der Diff belegt nur, dass der Standardwert von `removeOnComplete` von `false` auf `true` geändert wurde; das Abrufverhalten zeigt er nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #304 behauptet, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf der Sperre in `active`. Der Diff belegt die Freigabe der Sperre im `finally`-Block, aber keine Änderung des Jobstatus.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Die Einleitung und die Einträge enthalten Werbesprache und Superlative, etwa „leanest quaykit ever“, „game-changing“, „Unleash the power of automation“ und „Rock-solid locks“.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten unbelegte Aussagen und Werbesprache. Die Änderung des Standardwerts steht dagegen als Breaking Change mit einem zum Diff passenden Migrationsschritt in den Notes; die zurückgenommenen Lanes fehlen und der Major-Sprung auf 3.0.0 passt.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #307 behauptet, abgeschlossene Jobs könnten ohne Opt-in nicht mehr abgerufen werden. Der Diff belegt nur, dass der Standardwert von `removeOnComplete` von `false` auf `true` geändert wurde; das Abrufverhalten zeigt er nicht."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #304 behauptet, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf der Sperre in `active`. Der Diff belegt die Freigabe der Sperre im `finally`-Block, aber keine Änderung des Jobstatus."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Einleitung und die Einträge enthalten Werbesprache und Superlative, etwa „leanest quaykit ever“, „game-changing“, „Unleash the power of automation“ und „Rock-solid locks“."
+   }
+  ],
+  "reason": "Die Notes enthalten unbelegte Aussagen und Werbesprache. Die Änderung des Standardwerts steht dagegen als Breaking Change mit einem zum Diff passenden Migrationsschritt in den Notes; die zurückgenommenen Lanes fehlen und der Major-Sprung auf 3.0.0 passt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26008,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 346,
+  "reasoning_output_tokens": 46
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-db0f-7783-8cfa-14123bd834a5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #307 behauptet, abgeschlossene Jobs könnten ohne Opt-in nicht mehr abgerufen werden. Der Diff belegt nur, dass der Standardwert von `removeOnComplete` von `false` auf `true` geändert wurde; das Abrufverhalten zeigt er nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #304 behauptet, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf der Sperre in `active`. Der Diff belegt die Freigabe der Sperre im `finally`-Block, aber keine Änderung des Jobstatus.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Die Einleitung und die Einträge enthalten Werbesprache und Superlative, etwa „leanest quaykit ever“, „game-changing“, „Unleash the power of automation“ und „Rock-solid locks“.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten unbelegte Aussagen und Werbesprache. Die Änderung des Standardwerts steht dagegen als Breaking Change mit einem zum Diff passenden Migrationsschritt in den Notes; die zurückgenommenen Lanes fehlen und der Major-Sprung auf 3.0.0 passt.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26008,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 346,
+    "reasoning_output_tokens": 46
+   }
+  }
+ ]
+}

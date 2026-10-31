@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "5d6060886171706cad639032",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "reordered",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 7282,
+ "text": "{\"violations\":[],\"reason\":\"Der Text enthält keine erkennbaren Verstöße gegen die Rubrik. Ob die Aussagen und Migrationsschritte durch den Code gedeckt sind, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Text enthält keine erkennbaren Verstöße gegen die Rubrik. Ob die Aussagen und Migrationsschritte durch den Code gedeckt sind, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25349,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 62,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-76c0-77d0-86ef-eaa59ce69046"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Text enthält keine erkennbaren Verstöße gegen die Rubrik. Ob die Aussagen und Migrationsschritte durch den Code gedeckt sind, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25349,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

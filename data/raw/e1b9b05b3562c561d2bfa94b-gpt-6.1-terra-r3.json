@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "e1b9b05b3562c561d2bfa94b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "paraphrase",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4833,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes benennen konkrete Änderungen und Migrationsschritte; die erkennbaren Breaking Changes stehen im passenden Abschnitt. Aus dem Text allein ergibt sich kein Verstoß gegen die übrigen Kriterien.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes benennen konkrete Änderungen und Migrationsschritte; die erkennbaren Breaking Changes stehen im passenden Abschnitt. Aus dem Text allein ergibt sich kein Verstoß gegen die übrigen Kriterien.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25376,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 59,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-4c50-74c2-9cd9-4a30a8e3b765"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes benennen konkrete Änderungen und Migrationsschritte; die erkennbaren Breaking Changes stehen im passenden Abschnitt. Aus dem Text allein ergibt sich kein Verstoß gegen die übrigen Kriterien.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25376,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "12d461fe9f03c2abab66934c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "missing-breaking",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6299,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Der Abschnitt „Breaking Changes“ fehlt. Die Änderung des Standardwerts von `removeOnComplete` von `false` auf `true` wird nicht genannt.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt fehlt: Um abgeschlossene Jobs weiterhin aufzubewahren, muss beim Erstellen der `Queue` `defaultJobOptions: { removeOnComplete: false }` übergeben werden.\"},{\"criterion\":\"R8\",\"evidence\":\"Nutzer erfahren nicht, dass abgeschlossene Jobs standardmäßig entfernt werden und danach nicht mehr aus der Queue abgerufen werden können.\"}],\"reason\":\"Der Kandidat lässt die nutzerrelevante Breaking Change und ihre Migration vollständig aus. Feature, Fix und Versionsnummer stimmen mit der Referenz überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "Der Abschnitt „Breaking Changes“ fehlt. Die Änderung des Standardwerts von `removeOnComplete` von `false` auf `true` wird nicht genannt."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Der Migrationsschritt fehlt: Um abgeschlossene Jobs weiterhin aufzubewahren, muss beim Erstellen der `Queue` `defaultJobOptions: { removeOnComplete: false }` übergeben werden."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Nutzer erfahren nicht, dass abgeschlossene Jobs standardmäßig entfernt werden und danach nicht mehr aus der Queue abgerufen werden können."
+   }
+  ],
+  "reason": "Der Kandidat lässt die nutzerrelevante Breaking Change und ihre Migration vollständig aus. Feature, Fix und Versionsnummer stimmen mit der Referenz überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24554,
+  "cached_input_tokens": 12800,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 181,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-5323-7100-896b-2569fdeea715"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Der Abschnitt „Breaking Changes“ fehlt. Die Änderung des Standardwerts von `removeOnComplete` von `false` auf `true` wird nicht genannt.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt fehlt: Um abgeschlossene Jobs weiterhin aufzubewahren, muss beim Erstellen der `Queue` `defaultJobOptions: { removeOnComplete: false }` übergeben werden.\"},{\"criterion\":\"R8\",\"evidence\":\"Nutzer erfahren nicht, dass abgeschlossene Jobs standardmäßig entfernt werden und danach nicht mehr aus der Queue abgerufen werden können.\"}],\"reason\":\"Der Kandidat lässt die nutzerrelevante Breaking Change und ihre Migration vollständig aus. Feature, Fix und Versionsnummer stimmen mit der Referenz überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24554,
+    "cached_input_tokens": 12800,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 181,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

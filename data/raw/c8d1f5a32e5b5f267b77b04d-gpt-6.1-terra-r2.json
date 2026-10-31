@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "c8d1f5a32e5b5f267b77b04d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4123,
+ "text": "{\"reason\":\"Fassung A enthält nur nutzerrelevante Änderungen. Fassung B ergänzt CI- und Repository-Interna, die gemäß R6 nicht in die Release Notes gehören.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A enthält nur nutzerrelevante Änderungen. Fassung B ergänzt CI- und Repository-Interna, die gemäß R6 nicht in die Release Notes gehören.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25261,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 52,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-a123-7e72-a80a-0e238ca6b612"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A enthält nur nutzerrelevante Änderungen. Fassung B ergänzt CI- und Repository-Interna, die gemäß R6 nicht in die Release Notes gehören.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25261,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 52,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

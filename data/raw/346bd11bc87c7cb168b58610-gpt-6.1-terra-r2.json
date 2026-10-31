@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "346bd11bc87c7cb168b58610",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "missing-breaking",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4180,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und benennen konkrete Änderungen sowie den Migrationsschritt für ESM. Aus dem Text allein ergeben sich keine belegbaren Verstöße; Aussagen, die Quellen erfordern, gelten gemäß Vorgabe als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes sind sachlich und benennen konkrete Änderungen sowie den Migrationsschritt für ESM. Aus dem Text allein ergeben sich keine belegbaren Verstöße; Aussagen, die Quellen erfordern, gelten gemäß Vorgabe als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25264,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 67,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-3a77-7ad0-b014-3628271a89ad"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und benennen konkrete Änderungen sowie den Migrationsschritt für ESM. Aus dem Text allein ergeben sich keine belegbaren Verstöße; Aussagen, die Quellen erfordern, gelten gemäß Vorgabe als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25264,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 67,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

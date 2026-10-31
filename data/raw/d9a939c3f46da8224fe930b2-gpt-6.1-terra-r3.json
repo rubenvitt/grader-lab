@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "d9a939c3f46da8224fe930b2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4925,
+ "text": "{\"reason\":\"Fassung A beschreibt die Änderungen konkret und nennt einen Migrationsschritt; Fassung B bleibt bei allen drei Einträgen zu allgemein, um Nutzern die Auswirkungen zu vermitteln. Ob die konkreten Aussagen und der Migrationsschritt in A durch die Diffs gedeckt sind, lässt sich anhand der vorliegenden Texte nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A beschreibt die Änderungen konkret und nennt einen Migrationsschritt; Fassung B bleibt bei allen drei Einträgen zu allgemein, um Nutzern die Auswirkungen zu vermitteln. Ob die konkreten Aussagen und der Migrationsschritt in A durch die Diffs gedeckt sind, lässt sich anhand der vorliegenden Texte nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25270,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 85,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-43c0-75b1-a743-a765c41bb6af"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A beschreibt die Änderungen konkret und nennt einen Migrationsschritt; Fassung B bleibt bei allen drei Einträgen zu allgemein, um Nutzern die Auswirkungen zu vermitteln. Ob die konkreten Aussagen und der Migrationsschritt in A durch die Diffs gedeckt sind, lässt sich anhand der vorliegenden Texte nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25270,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 85,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

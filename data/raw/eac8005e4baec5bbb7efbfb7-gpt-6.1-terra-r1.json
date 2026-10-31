@@ -1,0 +1,62 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "eac8005e4baec5bbb7efbfb7",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "reordered",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 7210,
+ "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst ist kein Verstoß erkennbar. Die Übereinstimmung mit den Quelldateien und die Einordnung der Versionsnummer gegenüber der vorherigen Version lassen sich ohne Quellen nicht prüfen und gelten daher als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Aus dem Text selbst ist kein Verstoß erkennbar. Die Übereinstimmung mit den Quelldateien und die Einordnung der Versionsnummer gegenüber der vorherigen Version lassen sich ohne Quellen nicht prüfen und gelten daher als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25255,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 68,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-e74c-7153-9d09-c2cbb7397e55"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53609204e0c5c50-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53609251c8ee52f-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst ist kein Verstoß erkennbar. Die Übereinstimmung mit den Quelldateien und die Einordnung der Versionsnummer gegenüber der vorherigen Version lassen sich ohne Quellen nicht prüfen und gelten daher als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25255,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 68,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

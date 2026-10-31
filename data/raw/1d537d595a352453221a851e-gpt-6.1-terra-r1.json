@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "1d537d595a352453221a851e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "wrong-migration",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6312,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, der Worker verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff von #376 zeigt einen Token-Bucket pro Worker-Instanz, belegt aber diese feste Obergrenze für jeden solchen Zeitraum nicht.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration empfiehlt `timeoutMillis`. Laut Diff von #378 heißt die neue Job-Option `timeoutMs`.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine nicht belegte Zusicherung zum Rate-Limiter und nennen bei der Migration einen falschen Optionsnamen. Die Version 4.1.0 passt zu den belegten Änderungen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, der Worker verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff von #376 zeigt einen Token-Bucket pro Worker-Instanz, belegt aber diese feste Obergrenze für jeden solchen Zeitraum nicht."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration empfiehlt `timeoutMillis`. Laut Diff von #378 heißt die neue Job-Option `timeoutMs`."
+   }
+  ],
+  "reason": "Die Notes enthalten eine nicht belegte Zusicherung zum Rate-Limiter und nennen bei der Migration einen falschen Optionsnamen. Die Version 4.1.0 passt zu den belegten Änderungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26311,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 258,
+  "reasoning_output_tokens": 72
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-430d-7402-96d6-4a1bcc9dce8b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, der Worker verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff von #376 zeigt einen Token-Bucket pro Worker-Instanz, belegt aber diese feste Obergrenze für jeden solchen Zeitraum nicht.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration empfiehlt `timeoutMillis`. Laut Diff von #378 heißt die neue Job-Option `timeoutMs`.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine nicht belegte Zusicherung zum Rate-Limiter und nennen bei der Migration einen falschen Optionsnamen. Die Version 4.1.0 passt zu den belegten Änderungen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26311,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 258,
+    "reasoning_output_tokens": 72
+   }
+  }
+ ]
+}

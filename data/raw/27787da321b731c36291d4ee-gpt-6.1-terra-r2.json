@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "27787da321b731c36291d4ee",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-migration",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4327,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Option wird als `stallCheckMs` angegeben, der Migrationsschritt nennt jedoch `stalledCheckMs`. Die beiden Namen widersprechen sich.\"}],\"reason\":\"Der Migrationsschritt nennt einen anderen Namen als die Beschreibung der neuen Option und führt daher nicht zum angegebenen Ziel. Weitere Verstöße lassen sich aus dem Text allein nicht erkennen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Option wird als `stallCheckMs` angegeben, der Migrationsschritt nennt jedoch `stalledCheckMs`. Die beiden Namen widersprechen sich."
+   }
+  ],
+  "reason": "Der Migrationsschritt nennt einen anderen Namen als die Beschreibung der neuen Option und führt daher nicht zum angegebenen Ziel. Weitere Verstöße lassen sich aus dem Text allein nicht erkennen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24481,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 98,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-2bc6-7562-b9b9-398c93a531cf"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Option wird als `stallCheckMs` angegeben, der Migrationsschritt nennt jedoch `stalledCheckMs`. Die beiden Namen widersprechen sich.\"}],\"reason\":\"Der Migrationsschritt nennt einen anderen Namen als die Beschreibung der neuen Option und führt daher nicht zum angegebenen Ziel. Weitere Verstöße lassen sich aus dem Text allein nicht erkennen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24481,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 98,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

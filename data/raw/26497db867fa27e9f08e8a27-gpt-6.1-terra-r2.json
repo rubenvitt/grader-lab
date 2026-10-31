@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "26497db867fa27e9f08e8a27",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "missing-breaking",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 7424,
+ "text": "{\"reason\":\"Fassung B enthält zusätzlich eine konkrete Breaking Change samt Migration, für die in den vorliegenden Texten kein Quellennachweis angegeben ist. Ob diese Änderung tatsächlich im Release enthalten ist und Fassung A sie auslässt, lässt sich ohne Diff nicht beurteilen; B macht damit eine zusätzliche unbelegte Aussage.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung B enthält zusätzlich eine konkrete Breaking Change samt Migration, für die in den vorliegenden Texten kein Quellennachweis angegeben ist. Ob diese Änderung tatsächlich im Release enthalten ist und Fassung A sie auslässt, lässt sich ohne Diff nicht beurteilen; B macht damit eine zusätzliche unbelegte Aussage.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25297,
+  "cached_input_tokens": 12800,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 263,
+  "reasoning_output_tokens": 181
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-51d4-77f3-a02a-febf846ec98b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B enthält zusätzlich eine konkrete Breaking Change samt Migration, für die in den vorliegenden Texten kein Quellennachweis angegeben ist. Ob diese Änderung tatsächlich im Release enthalten ist und Fassung A sie auslässt, lässt sich ohne Diff nicht beurteilen; B macht damit eine zusätzliche unbelegte Aussage.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25297,
+    "cached_input_tokens": 12800,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 263,
+    "reasoning_output_tokens": 181
+   }
+  }
+ ]
+}

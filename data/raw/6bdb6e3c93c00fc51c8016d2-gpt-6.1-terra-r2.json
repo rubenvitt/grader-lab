@@ -1,0 +1,62 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "6bdb6e3c93c00fc51c8016d2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-bump",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 6707,
+ "text": "{\"reason\":\"Beide Fassungen sind bis auf die Versionsnummer identisch. Die aufgeführten Breaking Changes erfordern nach SemVer einen Major-Sprung, den 5.0.0 erfüllt und 4.2.0 nicht.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Beide Fassungen sind bis auf die Versionsnummer identisch. Die aufgeführten Breaking Changes erfordern nach SemVer einen Major-Sprung, den 5.0.0 erfüllt und 4.2.0 nicht.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25572,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 62,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-6adc-75a2-bdd1-7a082e713a04"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611f0cb409965-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611f5fd60e526-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen sind bis auf die Versionsnummer identisch. Die aufgeführten Breaking Changes erfordern nach SemVer einen Major-Sprung, den 5.0.0 erfüllt und 4.2.0 nicht.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25572,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

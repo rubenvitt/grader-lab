@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "81e0f33d1a5ada3c5a7744c7",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reordered",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5851,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 prüft den übergebenen Schema-Namen nun gegen `/^[a-z_][a-z0-9_]*$/` und wirft bei Abweichung einen Fehler. Nutzer mit bisher akzeptierten Namen müssen ihre Konfiguration anpassen; die Änderung fehlt unter „Breaking Changes“.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0. Wegen der inkompatiblen Änderung in PR #414 ist ein Major-Sprung erforderlich; die Notes nennen 5.0.1.\"}],\"reason\":\"Die übrigen Einträge sind durch die Diffs gedeckt; der zurückgenommene Dashboard-Button und interne Änderungen erscheinen nicht in den Notes. Der Sicherheitseintrag wahrt das Embargo, aber die inkompatible Änderung erfordert zusätzlich eine Kennzeichnung als Breaking Change und eine passende Major-Version.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 prüft den übergebenen Schema-Namen nun gegen `/^[a-z_][a-z0-9_]*$/` und wirft bei Abweichung einen Fehler. Nutzer mit bisher akzeptierten Namen müssen ihre Konfiguration anpassen; die Änderung fehlt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 5.0.0. Wegen der inkompatiblen Änderung in PR #414 ist ein Major-Sprung erforderlich; die Notes nennen 5.0.1."
+   }
+  ],
+  "reason": "Die übrigen Einträge sind durch die Diffs gedeckt; der zurückgenommene Dashboard-Button und interne Änderungen erscheinen nicht in den Notes. Der Sicherheitseintrag wahrt das Embargo, aber die inkompatible Änderung erfordert zusätzlich eine Kennzeichnung als Breaking Change und eine passende Major-Version.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26313,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 201,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-9f1c-71c1-9d74-58b16ddf8e0e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 prüft den übergebenen Schema-Namen nun gegen `/^[a-z_][a-z0-9_]*$/` und wirft bei Abweichung einen Fehler. Nutzer mit bisher akzeptierten Namen müssen ihre Konfiguration anpassen; die Änderung fehlt unter „Breaking Changes“.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0. Wegen der inkompatiblen Änderung in PR #414 ist ein Major-Sprung erforderlich; die Notes nennen 5.0.1.\"}],\"reason\":\"Die übrigen Einträge sind durch die Diffs gedeckt; der zurückgenommene Dashboard-Button und interne Änderungen erscheinen nicht in den Notes. Der Sicherheitseintrag wahrt das Embargo, aber die inkompatible Änderung erfordert zusätzlich eine Kennzeichnung als Breaking Change und eine passende Major-Version.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26313,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 201,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

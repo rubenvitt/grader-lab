@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "3178aee2ce59ecc2507d7b2d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reordered",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4459,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Korrekturen konkret und sachlich. Der Sicherheitseintrag nennt keine technischen Details; aus dem Text ergibt sich kein Hinweis auf einen Breaking Change oder ein neues Feature, das der Patch-Version widersprechen würde.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben die Korrekturen konkret und sachlich. Der Sicherheitseintrag nennt keine technischen Details; aus dem Text ergibt sich kein Hinweis auf einen Breaking Change oder ein neues Feature, das der Patch-Version widersprechen würde.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25181,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 68,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-a0df-7880-9c9c-a4b721b84a9f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Korrekturen konkret und sachlich. Der Sicherheitseintrag nennt keine technischen Details; aus dem Text ergibt sich kein Hinweis auf einen Breaking Change oder ein neues Feature, das der Patch-Version widersprechen würde.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25181,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 68,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "574dd5238e36d6cb3b4d0fb2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "internal-noise",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5068,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Maintenance“ werden ein CodeQL-Workflow und das Upgrade von eslint aufgeführt. Das sind CI beziehungsweise Dev-Dependencies und damit keine nutzerrelevanten Änderungen.\"}],\"reason\":\"Die beiden Maintenance-Einträge betreffen interne Entwicklungsabläufe. Weitere Verstöße lassen sich allein aus dem Text nicht belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Unter „Maintenance“ werden ein CodeQL-Workflow und das Upgrade von eslint aufgeführt. Das sind CI beziehungsweise Dev-Dependencies und damit keine nutzerrelevanten Änderungen."
+   }
+  ],
+  "reason": "Die beiden Maintenance-Einträge betreffen interne Entwicklungsabläufe. Weitere Verstöße lassen sich allein aus dem Text nicht belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24377,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 92,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-c9c7-71c3-bb10-95feb77b9501"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Maintenance“ werden ein CodeQL-Workflow und das Upgrade von eslint aufgeführt. Das sind CI beziehungsweise Dev-Dependencies und damit keine nutzerrelevanten Änderungen.\"}],\"reason\":\"Die beiden Maintenance-Einträge betreffen interne Entwicklungsabläufe. Weitere Verstöße lassen sich allein aus dem Text nicht belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24377,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 92,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "75850f3ac00572dbce84ca42",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4779,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur darin, ob das Rate-Limit pro Worker-Instanz oder für alle Worker einer Queue gilt. Ohne den zugehörigen Diff lässt sich nicht beurteilen, welche Aussage belegt ist; nach den verfügbaren Informationen sind sie daher gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur darin, ob das Rate-Limit pro Worker-Instanz oder für alle Worker einer Queue gilt. Ohne den zugehörigen Diff lässt sich nicht beurteilen, welche Aussage belegt ist; nach den verfügbaren Informationen sind sie daher gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25265,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 73,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-1618-7221-89fb-b30f9d40a233"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur darin, ob das Rate-Limit pro Worker-Instanz oder für alle Worker einer Queue gilt. Ohne den zugehörigen Diff lässt sich nicht beurteilen, welche Aussage belegt ist; nach den verfügbaren Informationen sind sie daher gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25265,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 73,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "ecace92b466794188849e6d0",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 9089,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 weist Schemanamen zurück, die der zuvor akzeptierte Konstruktor nicht geprüft hat. Betroffene Nutzer müssen ihre Konfiguration ändern. Die Notes führen die Änderung ausschließlich unter „Security“ und nicht unter „Breaking Changes“ auf. Dabei müssen die Embargo-Vorgaben aus R5 gewahrt bleiben.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes nennen die betroffene Komponente „PostgresStore“. Der Diff zu PR #414 zeigt zwar src/store/postgres.ts und einen Konstruktor, belegt aber keinen öffentlichen Namen „PostgresStore“.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die letzte Version ist 5.0.0, die Notes nennen 5.0.1. Da PR #414 zuvor akzeptierte Schemanamen zurückweist und damit eine Breaking Change enthält, verlangt R9 einen Major-Sprung auf mindestens 6.0.0.\"\n    }\n  ],\n  \"reason\": \"Die Notes behandeln eine inkompatible Änderung als Patch und belegen einen konkreten Komponentennamen nicht. Der zurückgenommene Replay-Button und die internen Änderungen sind zutreffend ausgelassen; der Sicherheitseintrag wahrt das Embargo.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 weist Schemanamen zurück, die der zuvor akzeptierte Konstruktor nicht geprüft hat. Betroffene Nutzer müssen ihre Konfiguration ändern. Die Notes führen die Änderung ausschließlich unter „Security“ und nicht unter „Breaking Changes“ auf. Dabei müssen die Embargo-Vorgaben aus R5 gewahrt bleiben."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes nennen die betroffene Komponente „PostgresStore“. Der Diff zu PR #414 zeigt zwar src/store/postgres.ts und einen Konstruktor, belegt aber keinen öffentlichen Namen „PostgresStore“."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 5.0.0, die Notes nennen 5.0.1. Da PR #414 zuvor akzeptierte Schemanamen zurückweist und damit eine Breaking Change enthält, verlangt R9 einen Major-Sprung auf mindestens 6.0.0."
+   }
+  ],
+  "reason": "Die Notes behandeln eine inkompatible Änderung als Patch und belegen einen konkreten Komponentennamen nicht. Der zurückgenommene Replay-Button und die internen Änderungen sind zutreffend ausgelassen; der Sicherheitseintrag wahrt das Embargo.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25465,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 459,
+  "reasoning_output_tokens": 158
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-3c61-7971-9975-a7232f97ef78"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 weist Schemanamen zurück, die der zuvor akzeptierte Konstruktor nicht geprüft hat. Betroffene Nutzer müssen ihre Konfiguration ändern. Die Notes führen die Änderung ausschließlich unter „Security“ und nicht unter „Breaking Changes“ auf. Dabei müssen die Embargo-Vorgaben aus R5 gewahrt bleiben.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes nennen die betroffene Komponente „PostgresStore“. Der Diff zu PR #414 zeigt zwar src/store/postgres.ts und einen Konstruktor, belegt aber keinen öffentlichen Namen „PostgresStore“.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die letzte Version ist 5.0.0, die Notes nennen 5.0.1. Da PR #414 zuvor akzeptierte Schemanamen zurückweist und damit eine Breaking Change enthält, verlangt R9 einen Major-Sprung auf mindestens 6.0.0.\"\n    }\n  ],\n  \"reason\": \"Die Notes behandeln eine inkompatible Änderung als Patch und belegen einen konkreten Komponentennamen nicht. Der zurückgenommene Replay-Button und die internen Änderungen sind zutreffend ausgelassen; der Sicherheitseintrag wahrt das Embargo.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25465,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 459,
+    "reasoning_output_tokens": 158
+   }
+  }
+ ]
+}

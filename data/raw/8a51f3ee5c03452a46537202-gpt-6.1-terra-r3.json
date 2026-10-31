@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "8a51f3ee5c03452a46537202",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "missing-breaking",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4546,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die Breaking Change zur Umbenennung der Worker-Option `stalledIntervalMs` in `stallCheckMs` fehlt. Der alte Name wird ohne Alias stillschweigend ignoriert.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt fehlt: In den `Worker`-Optionen muss `stalledIntervalMs` in `stallCheckMs` umbenannt werden.\"}],\"reason\":\"Der Kandidat lässt eine Breaking Change samt notwendiger Migration aus. Die übrigen Einträge stimmen mit der Referenz überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "Die Breaking Change zur Umbenennung der Worker-Option `stalledIntervalMs` in `stallCheckMs` fehlt. Der alte Name wird ohne Alias stillschweigend ignoriert."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Der Migrationsschritt fehlt: In den `Worker`-Optionen muss `stalledIntervalMs` in `stallCheckMs` umbenannt werden."
+   }
+  ],
+  "reason": "Der Kandidat lässt eine Breaking Change samt notwendiger Migration aus. Die übrigen Einträge stimmen mit der Referenz überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25573,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 138,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-454d-7953-b4ca-9fa770921b16"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die Breaking Change zur Umbenennung der Worker-Option `stalledIntervalMs` in `stallCheckMs` fehlt. Der alte Name wird ohne Alias stillschweigend ignoriert.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt fehlt: In den `Worker`-Optionen muss `stalledIntervalMs` in `stallCheckMs` umbenannt werden.\"}],\"reason\":\"Der Kandidat lässt eine Breaking Change samt notwendiger Migration aus. Die übrigen Einträge stimmen mit der Referenz überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25573,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 138,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

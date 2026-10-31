@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "012632b1d8cff0d1a75cab1a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4473,
+ "text": "{\"reason\":\"Beide Fassungen enthalten dieselben sachlichen Aussagen, Breaking Changes und Migrationsschritte. Die Unterschiede betreffen nur Formulierung und Reihenfolge; anhand des vorliegenden Materials ist keine Fassung besser belegt oder brauchbarer.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen enthalten dieselben sachlichen Aussagen, Breaking Changes und Migrationsschritte. Die Unterschiede betreffen nur Formulierung und Reihenfolge; anhand des vorliegenden Materials ist keine Fassung besser belegt oder brauchbarer.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24690,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 64,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-8852-7130-b79a-f4c566329ad5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen enthalten dieselben sachlichen Aussagen, Breaking Changes und Migrationsschritte. Die Unterschiede betreffen nur Formulierung und Reihenfolge; anhand des vorliegenden Materials ist keine Fassung besser belegt oder brauchbarer.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24690,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 64,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "a2ab2ee2427f66aacd630d39",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "useless-true",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6310,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Some default behaviour has changed“ nennt weder `removeOnComplete` noch den neuen Standardwert `true` oder die Folge, dass abgeschlossene Jobs standardmäßig nicht mehr abrufbar sind.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt fehlt: Beim Erstellen der `Queue` muss `defaultJobOptions: { removeOnComplete: false }` gesetzt werden, um das bisherige Verhalten beizubehalten.\"},{\"criterion\":\"R8\",\"evidence\":\"„The CLI has been improved“ beschreibt nicht, dass `quaykit inspect --json` Warteschlangenstatistiken als JSON statt als Tabelle ausgibt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Various improvements to worker reliability“ beschreibt weder den Auslöser noch den behobenen Fehler: Bei einer synchronen Ausnahme des Handlers gibt der Worker den Job-Lock nun frei.\"}],\"reason\":\"Der Kandidat enthält zwar die richtige Version und ordnet die Änderung als Breaking Change ein, vermittelt aber keine der Änderungen konkret. Zudem fehlt die Anleitung zur Migration auf das bisherige Verhalten.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Some default behaviour has changed“ nennt weder `removeOnComplete` noch den neuen Standardwert `true` oder die Folge, dass abgeschlossene Jobs standardmäßig nicht mehr abrufbar sind."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Der Migrationsschritt fehlt: Beim Erstellen der `Queue` muss `defaultJobOptions: { removeOnComplete: false }` gesetzt werden, um das bisherige Verhalten beizubehalten."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„The CLI has been improved“ beschreibt nicht, dass `quaykit inspect --json` Warteschlangenstatistiken als JSON statt als Tabelle ausgibt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Various improvements to worker reliability“ beschreibt weder den Auslöser noch den behobenen Fehler: Bei einer synchronen Ausnahme des Handlers gibt der Worker den Job-Lock nun frei."
+   }
+  ],
+  "reason": "Der Kandidat enthält zwar die richtige Version und ordnet die Änderung als Breaking Change ein, vermittelt aber keine der Änderungen konkret. Zudem fehlt die Anleitung zur Migration auf das bisherige Verhalten.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25375,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 247,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-3f5c-7850-95f4-e9062c408a1b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Some default behaviour has changed“ nennt weder `removeOnComplete` noch den neuen Standardwert `true` oder die Folge, dass abgeschlossene Jobs standardmäßig nicht mehr abrufbar sind.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt fehlt: Beim Erstellen der `Queue` muss `defaultJobOptions: { removeOnComplete: false }` gesetzt werden, um das bisherige Verhalten beizubehalten.\"},{\"criterion\":\"R8\",\"evidence\":\"„The CLI has been improved“ beschreibt nicht, dass `quaykit inspect --json` Warteschlangenstatistiken als JSON statt als Tabelle ausgibt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Various improvements to worker reliability“ beschreibt weder den Auslöser noch den behobenen Fehler: Bei einer synchronen Ausnahme des Handlers gibt der Worker den Job-Lock nun frei.\"}],\"reason\":\"Der Kandidat enthält zwar die richtige Version und ordnet die Änderung als Breaking Change ein, vermittelt aber keine der Änderungen konkret. Zudem fehlt die Anleitung zur Migration auf das bisherige Verhalten.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25375,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 247,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

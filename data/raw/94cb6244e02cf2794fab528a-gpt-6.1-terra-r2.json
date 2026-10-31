@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "94cb6244e02cf2794fab528a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reverted-listed",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7034,
+ "text": "{\"violations\":[{\"criterion\":\"R4\",\"evidence\":\"Der Feature-Eintrag zu Priority Lanes verweist auf #301. PR #315 nimmt #301 und den zugehörigen Follow-up #312 im selben Release zurück.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zu #304, der Job bleibe dadurch nicht mehr bis zum Ablauf des Locks in „active“, ist durch den Diff nicht belegt. Der Diff zeigt, dass der Lock in einem `finally`-Block freigegeben wird; er zeigt keine Änderung des Jobstatus.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zu #307, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden, geht über den Diff hinaus. Dieser ändert den Standardwert von `removeOnComplete`, zeigt aber weder den Entfernungsvorgang noch das Abrufverhalten.\"}],\"reason\":\"Die Priority Lanes wurden vor dem Release zurückgenommen. Zwei weitere Aussagen versprechen Auswirkungen, die aus den gezeigten Diffs nicht hervorgehen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R4",
+    "evidence": "Der Feature-Eintrag zu Priority Lanes verweist auf #301. PR #315 nimmt #301 und den zugehörigen Follow-up #312 im selben Release zurück."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zu #304, der Job bleibe dadurch nicht mehr bis zum Ablauf des Locks in „active“, ist durch den Diff nicht belegt. Der Diff zeigt, dass der Lock in einem `finally`-Block freigegeben wird; er zeigt keine Änderung des Jobstatus."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zu #307, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden, geht über den Diff hinaus. Dieser ändert den Standardwert von `removeOnComplete`, zeigt aber weder den Entfernungsvorgang noch das Abrufverhalten."
+   }
+  ],
+  "reason": "Die Priority Lanes wurden vor dem Release zurückgenommen. Zwei weitere Aussagen versprechen Auswirkungen, die aus den gezeigten Diffs nicht hervorgehen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26867,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 287,
+  "reasoning_output_tokens": 56
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-770c-7121-8a87-68ac713a55fd"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R4\",\"evidence\":\"Der Feature-Eintrag zu Priority Lanes verweist auf #301. PR #315 nimmt #301 und den zugehörigen Follow-up #312 im selben Release zurück.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zu #304, der Job bleibe dadurch nicht mehr bis zum Ablauf des Locks in „active“, ist durch den Diff nicht belegt. Der Diff zeigt, dass der Lock in einem `finally`-Block freigegeben wird; er zeigt keine Änderung des Jobstatus.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zu #307, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden, geht über den Diff hinaus. Dieser ändert den Standardwert von `removeOnComplete`, zeigt aber weder den Entfernungsvorgang noch das Abrufverhalten.\"}],\"reason\":\"Die Priority Lanes wurden vor dem Release zurückgenommen. Zwei weitere Aussagen versprechen Auswirkungen, die aus den gezeigten Diffs nicht hervorgehen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26867,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 287,
+    "reasoning_output_tokens": 56
+   }
+  }
+ ]
+}

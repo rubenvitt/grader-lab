@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "15d453ba0da91d0d9480233c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "wrong-bump",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7247,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #304 behauptet, der Job bleibe nach einem synchronen Fehler nicht länger bis zum Ablauf der Sperre in „active“. Der Diff belegt nur, dass die Sperre in einem `finally`-Block freigegeben wird; eine Änderung oder Garantie für den Jobstatus zeigt er nicht.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 2.3.2. Die Notes nennen 2.4.0, obwohl #307 den Standardwert von `removeOnComplete` ändert und damit laut R1 eine Breaking Change ist. Dafür ist ein Major-Sprung erforderlich.\"}],\"reason\":\"Die Notes erfassen die relevanten Änderungen und die Migration für den geänderten Standardwert. Die Aussage über den Jobstatus geht jedoch über den Diff hinaus, und die Versionsnummer berücksichtigt die Breaking Change nicht.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #304 behauptet, der Job bleibe nach einem synchronen Fehler nicht länger bis zum Ablauf der Sperre in „active“. Der Diff belegt nur, dass die Sperre in einem `finally`-Block freigegeben wird; eine Änderung oder Garantie für den Jobstatus zeigt er nicht."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 2.3.2. Die Notes nennen 2.4.0, obwohl #307 den Standardwert von `removeOnComplete` ändert und damit laut R1 eine Breaking Change ist. Dafür ist ein Major-Sprung erforderlich."
+   }
+  ],
+  "reason": "Die Notes erfassen die relevanten Änderungen und die Migration für den geänderten Standardwert. Die Aussage über den Jobstatus geht jedoch über den Diff hinaus, und die Versionsnummer berücksichtigt die Breaking Change nicht.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25986,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 258,
+  "reasoning_output_tokens": 57
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-6bbd-7e33-8031-426873a59db5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #304 behauptet, der Job bleibe nach einem synchronen Fehler nicht länger bis zum Ablauf der Sperre in „active“. Der Diff belegt nur, dass die Sperre in einem `finally`-Block freigegeben wird; eine Änderung oder Garantie für den Jobstatus zeigt er nicht.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 2.3.2. Die Notes nennen 2.4.0, obwohl #307 den Standardwert von `removeOnComplete` ändert und damit laut R1 eine Breaking Change ist. Dafür ist ein Major-Sprung erforderlich.\"}],\"reason\":\"Die Notes erfassen die relevanten Änderungen und die Migration für den geänderten Standardwert. Die Aussage über den Jobstatus geht jedoch über den Diff hinaus, und die Versionsnummer berücksichtigt die Breaking Change nicht.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25986,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 258,
+    "reasoning_output_tokens": 57
+   }
+  }
+ ]
+}

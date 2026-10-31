@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "e8aa07c0b019a65dd8d7da65",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "useless-true",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5543,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Feature-Eintrag nennt weder das Ereignis `drained` noch die Bedingungen, unter denen `Worker` es auslöst.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Fix-Eintrag nennt weder die Lock-Erneuerung noch den einmaligen erneuten Versuch nach `ECONNRESET`.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Deprecation-Eintrag nennt `queue.clean(graceMs, status)` nicht und lässt die einmalige Warnung sowie den Hinweis aus, dass die Methode vorerst weiter funktioniert.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration zu `queue.purge({ status, olderThanMs })` fehlt.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Sicherheitseintrag lässt die Upgrade-Empfehlung und den Hinweis auf ein separates Advisory aus.\"\n    }\n  ],\n  \"reason\": \"Der Kandidat nennt die betroffenen Bereiche, lässt aber wesentliche Informationen zu Verhalten und Migration weg. Dadurch können Nutzer die Änderungen und den nötigen Handlungsbedarf nicht ausreichend erkennen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "Der Feature-Eintrag nennt weder das Ereignis `drained` noch die Bedingungen, unter denen `Worker` es auslöst."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Fix-Eintrag nennt weder die Lock-Erneuerung noch den einmaligen erneuten Versuch nach `ECONNRESET`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Deprecation-Eintrag nennt `queue.clean(graceMs, status)` nicht und lässt die einmalige Warnung sowie den Hinweis aus, dass die Methode vorerst weiter funktioniert."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration zu `queue.purge({ status, olderThanMs })` fehlt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Sicherheitseintrag lässt die Upgrade-Empfehlung und den Hinweis auf ein separates Advisory aus."
+   }
+  ],
+  "reason": "Der Kandidat nennt die betroffenen Bereiche, lässt aber wesentliche Informationen zu Verhalten und Migration weg. Dadurch können Nutzer die Änderungen und den nötigen Handlungsbedarf nicht ausreichend erkennen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25387,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 288,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-6e80-7853-8478-fc82f69cfb56"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Feature-Eintrag nennt weder das Ereignis `drained` noch die Bedingungen, unter denen `Worker` es auslöst.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Fix-Eintrag nennt weder die Lock-Erneuerung noch den einmaligen erneuten Versuch nach `ECONNRESET`.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Deprecation-Eintrag nennt `queue.clean(graceMs, status)` nicht und lässt die einmalige Warnung sowie den Hinweis aus, dass die Methode vorerst weiter funktioniert.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration zu `queue.purge({ status, olderThanMs })` fehlt.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Sicherheitseintrag lässt die Upgrade-Empfehlung und den Hinweis auf ein separates Advisory aus.\"\n    }\n  ],\n  \"reason\": \"Der Kandidat nennt die betroffenen Bereiche, lässt aber wesentliche Informationen zu Verhalten und Migration weg. Dadurch können Nutzer die Änderungen und den nötigen Handlungsbedarf nicht ausreichend erkennen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25387,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 288,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

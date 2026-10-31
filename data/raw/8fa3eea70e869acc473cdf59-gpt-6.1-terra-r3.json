@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "8fa3eea70e869acc473cdf59",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8224,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 weist Schemanamen zurück, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen. Nutzer mit solchen Namen müssen ihre Konfiguration ändern; unter „Breaking Changes“ steht dazu nichts. Die Embargovorgabe erlaubt dabei keine Details zum Mechanismus.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"„Unbreakable job state“ behauptet eine allgemeine Garantie. Der Diff von PR #413 zeigt lediglich eine bestimmte Prüfung auf den Verlust des Locks vor `ack`.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Formulierungen wie „massive peace of mind“, „crushes“ und „Unbreakable job state“ sind werblich und nicht sachlich.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 5.0.1 nach 5.0.0. Die durch PR #414 eingeführte Einschränkung zuvor zulässiger Schemanamen erfordert gemäß Rubric einen Major-Sprung.\"\n    }\n  ],\n  \"reason\": \"Die Notes verschweigen eine Breaking Change und wählen dafür eine unpassende Versionsnummer. Zudem enthalten sie eine nicht belegte Garantie und werbliche Formulierungen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 weist Schemanamen zurück, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen. Nutzer mit solchen Namen müssen ihre Konfiguration ändern; unter „Breaking Changes“ steht dazu nichts. Die Embargovorgabe erlaubt dabei keine Details zum Mechanismus."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "„Unbreakable job state“ behauptet eine allgemeine Garantie. Der Diff von PR #413 zeigt lediglich eine bestimmte Prüfung auf den Verlust des Locks vor `ack`."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „massive peace of mind“, „crushes“ und „Unbreakable job state“ sind werblich und nicht sachlich."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die durch PR #414 eingeführte Einschränkung zuvor zulässiger Schemanamen erfordert gemäß Rubric einen Major-Sprung."
+   }
+  ],
+  "reason": "Die Notes verschweigen eine Breaking Change und wählen dafür eine unpassende Versionsnummer. Zudem enthalten sie eine nicht belegte Garantie und werbliche Formulierungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25486,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 405,
+  "reasoning_output_tokens": 92
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-d7e6-7bc0-8d67-5221bebc6647"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 weist Schemanamen zurück, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen. Nutzer mit solchen Namen müssen ihre Konfiguration ändern; unter „Breaking Changes“ steht dazu nichts. Die Embargovorgabe erlaubt dabei keine Details zum Mechanismus.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"„Unbreakable job state“ behauptet eine allgemeine Garantie. Der Diff von PR #413 zeigt lediglich eine bestimmte Prüfung auf den Verlust des Locks vor `ack`.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Formulierungen wie „massive peace of mind“, „crushes“ und „Unbreakable job state“ sind werblich und nicht sachlich.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 5.0.1 nach 5.0.0. Die durch PR #414 eingeführte Einschränkung zuvor zulässiger Schemanamen erfordert gemäß Rubric einen Major-Sprung.\"\n    }\n  ],\n  \"reason\": \"Die Notes verschweigen eine Breaking Change und wählen dafür eine unpassende Versionsnummer. Zudem enthalten sie eine nicht belegte Garantie und werbliche Formulierungen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25486,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 405,
+    "reasoning_output_tokens": 92
+   }
+  }
+ ]
+}

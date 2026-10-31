@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "01d19e3ad07ee6d29ad674da",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4239,
+ "text": "{\"reason\":\"Fassung A beschreibt dieselben Änderungen und Migrationsschritte sachlich. Fassung B enthält dagegen Werbesprache und Superlative und verstößt damit gegen R7.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A beschreibt dieselben Änderungen und Migrationsschritte sachlich. Fassung B enthält dagegen Werbesprache und Superlative und verstößt damit gegen R7.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24450,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 53,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-3dc5-77c3-afe2-04d3495f96f4"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A beschreibt dieselben Änderungen und Migrationsschritte sachlich. Fassung B enthält dagegen Werbesprache und Superlative und verstößt damit gegen R7.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24450,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "d7bda24c5dc672624cb157d0",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 9495,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Store construction changed“ (#391) nennt weder die nun erforderliche Option `connection` für `RedisStore` noch den nötigen Anpassungsschritt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Old APIs were removed“ (#393) nennt weder die entfernte Methode `Queue.clean` und ihren Ersatz `Queue.purge({ status, olderThanMs })` noch die entfernte Job-Option `timeout` und ihren Ersatz `timeoutMs`.\"},{\"criterion\":\"R8\",\"evidence\":\"„More retry options“ (#395) beschreibt die neue opt-in Backoff-Strategie `jitter` nicht und lässt offen, wie Nutzer sie auswählen können.\"},{\"criterion\":\"R8\",\"evidence\":\"„Shutdown behaviour improved“ (#397) erklärt nicht, dass `worker.close()` nun höchstens bis zum Ablauf von `shutdownTimeoutMs` auf aktive Jobs wartet.\"},{\"criterion\":\"R8\",\"evidence\":\"„CLI improvements“ (#401) nennt die konkrete Änderung nicht: Bei einem Fehler setzt die CLI nun den Exit-Code auf 1.\"},{\"criterion\":\"R8\",\"evidence\":\"„A worker argument is deprecated“ (#399) nennt weder das veraltete boolesche Argument von `worker.pause()` noch die Alternative `worker.pause({ drain })`.\"}],\"reason\":\"Die Notes enthalten die relevanten Änderungen in passenden Kategorien, beschreiben sie aber zu ungenau für Nutzer und Migration. Der Major-Sprung von 4.1.0 auf 5.0.0 passt zu den Breaking Changes.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Store construction changed“ (#391) nennt weder die nun erforderliche Option `connection` für `RedisStore` noch den nötigen Anpassungsschritt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Old APIs were removed“ (#393) nennt weder die entfernte Methode `Queue.clean` und ihren Ersatz `Queue.purge({ status, olderThanMs })` noch die entfernte Job-Option `timeout` und ihren Ersatz `timeoutMs`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„More retry options“ (#395) beschreibt die neue opt-in Backoff-Strategie `jitter` nicht und lässt offen, wie Nutzer sie auswählen können."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Shutdown behaviour improved“ (#397) erklärt nicht, dass `worker.close()` nun höchstens bis zum Ablauf von `shutdownTimeoutMs` auf aktive Jobs wartet."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„CLI improvements“ (#401) nennt die konkrete Änderung nicht: Bei einem Fehler setzt die CLI nun den Exit-Code auf 1."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„A worker argument is deprecated“ (#399) nennt weder das veraltete boolesche Argument von `worker.pause()` noch die Alternative `worker.pause({ drain })`."
+   }
+  ],
+  "reason": "Die Notes enthalten die relevanten Änderungen in passenden Kategorien, beschreiben sie aber zu ungenau für Nutzer und Migration. Der Major-Sprung von 4.1.0 auf 5.0.0 passt zu den Breaking Changes.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26748,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 337,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-cec5-7393-b3b1-ab80a66024ae"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Store construction changed“ (#391) nennt weder die nun erforderliche Option `connection` für `RedisStore` noch den nötigen Anpassungsschritt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Old APIs were removed“ (#393) nennt weder die entfernte Methode `Queue.clean` und ihren Ersatz `Queue.purge({ status, olderThanMs })` noch die entfernte Job-Option `timeout` und ihren Ersatz `timeoutMs`.\"},{\"criterion\":\"R8\",\"evidence\":\"„More retry options“ (#395) beschreibt die neue opt-in Backoff-Strategie `jitter` nicht und lässt offen, wie Nutzer sie auswählen können.\"},{\"criterion\":\"R8\",\"evidence\":\"„Shutdown behaviour improved“ (#397) erklärt nicht, dass `worker.close()` nun höchstens bis zum Ablauf von `shutdownTimeoutMs` auf aktive Jobs wartet.\"},{\"criterion\":\"R8\",\"evidence\":\"„CLI improvements“ (#401) nennt die konkrete Änderung nicht: Bei einem Fehler setzt die CLI nun den Exit-Code auf 1.\"},{\"criterion\":\"R8\",\"evidence\":\"„A worker argument is deprecated“ (#399) nennt weder das veraltete boolesche Argument von `worker.pause()` noch die Alternative `worker.pause({ drain })`.\"}],\"reason\":\"Die Notes enthalten die relevanten Änderungen in passenden Kategorien, beschreiben sie aber zu ungenau für Nutzer und Migration. Der Major-Sprung von 4.1.0 auf 5.0.0 passt zu den Breaking Changes.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26748,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 337,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

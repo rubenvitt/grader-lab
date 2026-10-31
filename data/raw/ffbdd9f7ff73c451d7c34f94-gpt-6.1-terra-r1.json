@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "ffbdd9f7ff73c451d7c34f94",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "paraphrase",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4650,
+ "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst ergeben sich keine Verstöße. Ob die beschriebenen Änderungen und Migrationsschritte durch die Quellen gedeckt sind, lässt sich ohne diese nicht prüfen und gilt daher gemäß Vorgabe als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Aus dem Text selbst ergeben sich keine Verstöße. Ob die beschriebenen Änderungen und Migrationsschritte durch die Quellen gedeckt sind, lässt sich ohne diese nicht prüfen und gilt daher gemäß Vorgabe als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25340,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 63,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-6fef-7540-b695-1fc849075ca2"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst ergeben sich keine Verstöße. Ob die beschriebenen Änderungen und Migrationsschritte durch die Quellen gedeckt sind, lässt sich ohne diese nicht prüfen und gilt daher gemäß Vorgabe als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25340,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 63,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

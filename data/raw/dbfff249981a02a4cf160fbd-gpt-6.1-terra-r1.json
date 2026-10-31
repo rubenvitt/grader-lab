@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "dbfff249981a02a4cf160fbd",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6463,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes zu #307 behaupten, ein „finished job“ könne ohne Opt-in nicht mehr abgerufen werden. Der Diff ändert nur `removeOnComplete` auf `true`; `removeOnFail` bleibt `false`. Die Aussage ist für fehlgeschlagene Jobs nicht belegt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes zu #304 behaupten, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff belegt die Freigabe des Locks im `finally`-Block, zeigt aber keine Änderung des Jobstatus.\"}],\"reason\":\"Die wesentlichen Änderungen, der Migrationsschritt und die Major-Version passen zu den Quellen. Zwei Aussagen gehen jedoch über das hinaus, was die Diffs belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes zu #307 behaupten, ein „finished job“ könne ohne Opt-in nicht mehr abgerufen werden. Der Diff ändert nur `removeOnComplete` auf `true`; `removeOnFail` bleibt `false`. Die Aussage ist für fehlgeschlagene Jobs nicht belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes zu #304 behaupten, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff belegt die Freigabe des Locks im `finally`-Block, zeigt aber keine Änderung des Jobstatus."
+   }
+  ],
+  "reason": "Die wesentlichen Änderungen, der Migrationsschritt und die Major-Version passen zu den Quellen. Zwei Aussagen gehen jedoch über das hinaus, was die Diffs belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26836,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 249,
+  "reasoning_output_tokens": 60
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-56fa-7580-926d-e0fc3e8627d5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes zu #307 behaupten, ein „finished job“ könne ohne Opt-in nicht mehr abgerufen werden. Der Diff ändert nur `removeOnComplete` auf `true`; `removeOnFail` bleibt `false`. Die Aussage ist für fehlgeschlagene Jobs nicht belegt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes zu #304 behaupten, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff belegt die Freigabe des Locks im `finally`-Block, zeigt aber keine Änderung des Jobstatus.\"}],\"reason\":\"Die wesentlichen Änderungen, der Migrationsschritt und die Major-Version passen zu den Quellen. Zwei Aussagen gehen jedoch über das hinaus, was die Diffs belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26836,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 249,
+    "reasoning_output_tokens": 60
+   }
+  }
+ ]
+}

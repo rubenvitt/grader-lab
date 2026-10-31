@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "574dd5238e36d6cb3b4d0fb2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "internal-noise",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4344,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Maintenance“ werden ein CodeQL-Workflow für Pushes auf main (#379) und die Aktualisierung von eslint auf 9.10.0 (#381) aufgeführt. Beide Einträge betreffen interne Entwicklung beziehungsweise CI.\"}],\"reason\":\"Die beiden Maintenance-Einträge sind für Nutzer der Bibliothek nicht relevant. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Unter „Maintenance“ werden ein CodeQL-Workflow für Pushes auf main (#379) und die Aktualisierung von eslint auf 9.10.0 (#381) aufgeführt. Beide Einträge betreffen interne Entwicklung beziehungsweise CI."
+   }
+  ],
+  "reason": "Die beiden Maintenance-Einträge sind für Nutzer der Bibliothek nicht relevant. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25229,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 106,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-dd93-7e33-8ea1-dca42647b92d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Maintenance“ werden ein CodeQL-Workflow für Pushes auf main (#379) und die Aktualisierung von eslint auf 9.10.0 (#381) aufgeführt. Beide Einträge betreffen interne Entwicklung beziehungsweise CI.\"}],\"reason\":\"Die beiden Maintenance-Einträge sind für Nutzer der Bibliothek nicht relevant. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25229,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 106,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

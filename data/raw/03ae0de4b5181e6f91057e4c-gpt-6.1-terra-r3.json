@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "03ae0de4b5181e6f91057e4c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "embargo-leak",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5965,
+ "text": "{\"reason\":\"Fassung A ist besser, weil sie den Sicherheitsfix ohne technische Details nennt und damit das Embargo wahrt. Fassung B beschreibt dagegen den Mechanismus und die Ausnutzung der Schwachstelle.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil sie den Sicherheitsfix ohne technische Details nennt und damit das Embargo wahrt. Fassung B beschreibt dagegen den Mechanismus und die Ausnutzung der Schwachstelle.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25534,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 58,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-717e-7773-a7aa-dae2431f4bac"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil sie den Sicherheitsfix ohne technische Details nennt und damit das Embargo wahrt. Fassung B beschreibt dagegen den Mechanismus und die Ausnutzung der Schwachstelle.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25534,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 58,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

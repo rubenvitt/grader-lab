@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "c8d1f5a32e5b5f267b77b04d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5516,
+ "text": "{\"reason\":\"Fassung A ist besser, weil Fassung B zusätzlich CI- und Repository-interne Änderungen aufführt, die für Nutzer der Bibliothek nicht relevant sind. Die übrigen Inhalte sind identisch; ob ihre Aussagen und die Versionsnummer durch die Quellen gedeckt sind, lässt sich anhand der vorliegenden Texte nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil Fassung B zusätzlich CI- und Repository-interne Änderungen aufführt, die für Nutzer der Bibliothek nicht relevant sind. Die übrigen Inhalte sind identisch; ob ihre Aussagen und die Versionsnummer durch die Quellen gedeckt sind, lässt sich anhand der vorliegenden Texte nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25259,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 81,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-8d47-79c1-98cf-c18269b13344"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil Fassung B zusätzlich CI- und Repository-interne Änderungen aufführt, die für Nutzer der Bibliothek nicht relevant sind. Die übrigen Inhalte sind identisch; ob ihre Aussagen und die Versionsnummer durch die Quellen gedeckt sind, lässt sich anhand der vorliegenden Texte nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25259,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 81,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

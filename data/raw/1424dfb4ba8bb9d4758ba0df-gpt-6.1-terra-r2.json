@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "1424dfb4ba8bb9d4758ba0df",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reordered",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4629,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Änderungen und den Migrationsschritt konkret. Aus dem Text allein ergibt sich kein Verstoß gegen die Rubrik; die Übereinstimmung mit dem Code lässt sich ohne Quellen nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben die Änderungen und den Migrationsschritt konkret. Aus dem Text allein ergibt sich kein Verstoß gegen die Rubrik; die Übereinstimmung mit dem Code lässt sich ohne Quellen nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25195,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 64,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-fb02-7db0-bf60-0fd2f89cd46b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Änderungen und den Migrationsschritt konkret. Aus dem Text allein ergibt sich kein Verstoß gegen die Rubrik; die Übereinstimmung mit dem Code lässt sich ohne Quellen nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25195,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 64,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

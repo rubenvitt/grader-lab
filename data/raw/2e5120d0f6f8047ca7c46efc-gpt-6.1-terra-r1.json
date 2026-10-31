@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "2e5120d0f6f8047ca7c46efc",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "ghost-pr",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4767,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer des Fixes. Ohne Quellen lässt sich nicht beurteilen, welche Nummer zutrifft; nach den übrigen Kriterien sind sie gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur in der PR-Nummer des Fixes. Ohne Quellen lässt sich nicht beurteilen, welche Nummer zutrifft; nach den übrigen Kriterien sind sie gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24384,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 57,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-a24b-7522-9e86-64bc11bf8d04"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer des Fixes. Ohne Quellen lässt sich nicht beurteilen, welche Nummer zutrifft; nach den übrigen Kriterien sind sie gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24384,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 57,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

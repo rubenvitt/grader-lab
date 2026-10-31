@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "fc1204df0aac6567b7319a05",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reverted-listed",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5480,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 weist Schemanamen, die nicht dem Muster `/^[a-z_][a-z0-9_]*$/` entsprechen, im Konstruktor mit `invalid schema name` zurück. Betroffene Nutzer müssen ihre Konfiguration anpassen; diese inkompatible Änderung fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R4\",\n      \"evidence\": \"Die Notes nennen den Replay-Button aus PR #411. PR #416 entfernt sowohl den Button als auch den Replay-Endpunkt wieder.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Auf Version 5.0.0 folgt laut Notes 5.0.1. Die durch PR #414 eingeführte Einschränkung für Schemanamen ist eine inkompatible Änderung und verlangt nach R9 einen Major-Sprung.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine zurückgenommene Funktion und kennzeichnen eine inkompatible Konfigurationsänderung nicht als Breaking Change. Daher ist auch die angegebene Patch-Version nicht passend.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 weist Schemanamen, die nicht dem Muster `/^[a-z_][a-z0-9_]*$/` entsprechen, im Konstruktor mit `invalid schema name` zurück. Betroffene Nutzer müssen ihre Konfiguration anpassen; diese inkompatible Änderung fehlt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R4",
+    "evidence": "Die Notes nennen den Replay-Button aus PR #411. PR #416 entfernt sowohl den Button als auch den Replay-Endpunkt wieder."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Auf Version 5.0.0 folgt laut Notes 5.0.1. Die durch PR #414 eingeführte Einschränkung für Schemanamen ist eine inkompatible Änderung und verlangt nach R9 einen Major-Sprung."
+   }
+  ],
+  "reason": "Die Notes enthalten eine zurückgenommene Funktion und kennzeichnen eine inkompatible Konfigurationsänderung nicht als Breaking Change. Daher ist auch die angegebene Patch-Version nicht passend.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26329,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 261,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-173d-72f1-a0c0-d310b0e3b66a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 weist Schemanamen, die nicht dem Muster `/^[a-z_][a-z0-9_]*$/` entsprechen, im Konstruktor mit `invalid schema name` zurück. Betroffene Nutzer müssen ihre Konfiguration anpassen; diese inkompatible Änderung fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R4\",\n      \"evidence\": \"Die Notes nennen den Replay-Button aus PR #411. PR #416 entfernt sowohl den Button als auch den Replay-Endpunkt wieder.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Auf Version 5.0.0 folgt laut Notes 5.0.1. Die durch PR #414 eingeführte Einschränkung für Schemanamen ist eine inkompatible Änderung und verlangt nach R9 einen Major-Sprung.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine zurückgenommene Funktion und kennzeichnen eine inkompatible Konfigurationsänderung nicht als Breaking Change. Daher ist auch die angegebene Patch-Version nicht passend.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26329,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 261,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

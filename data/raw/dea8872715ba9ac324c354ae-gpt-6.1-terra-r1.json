@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "dea8872715ba9ac324c354ae",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "internal-noise",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7466,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung sagt, die Lock-Erneuerung werde nach einer unterbrochenen Verbindung erneut versucht. Der Diff zu #334 sieht einen erneuten Versuch nur bei Fehlercode `ECONNRESET` vor; andere Fehler werden weitergeworfen.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration zu #338 nennt `queue.purge({ status, olderThanMs })`, erklärt aber nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Der entsprechende Aufruf lautet `queue.purge({ status, olderThanMs: graceMs })`.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Die Einträge zum Stabilisieren des Tests (#343) und zum Festschreiben der GitHub Actions (#340) beschreiben Test- beziehungsweise CI-Interna und gehören nicht in nutzerorientierte Release Notes.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Sicherheitseintrag zu #336 nennt lediglich ein Sicherheitsproblem und eine Upgrade-Empfehlung. Die betroffene Komponente `signing` bleibt ungenannt, obwohl ihre Nennung unter R5 erlaubt ist.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten interne Änderungen, eine zu breite Aussage zur Lock-Erneuerung und einen unvollständigen Migrationsschritt. Der Sicherheitseintrag wahrt das Embargo, benennt aber die betroffene Komponente nicht.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung sagt, die Lock-Erneuerung werde nach einer unterbrochenen Verbindung erneut versucht. Der Diff zu #334 sieht einen erneuten Versuch nur bei Fehlercode `ECONNRESET` vor; andere Fehler werden weitergeworfen."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration zu #338 nennt `queue.purge({ status, olderThanMs })`, erklärt aber nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Der entsprechende Aufruf lautet `queue.purge({ status, olderThanMs: graceMs })`."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "Die Einträge zum Stabilisieren des Tests (#343) und zum Festschreiben der GitHub Actions (#340) beschreiben Test- beziehungsweise CI-Interna und gehören nicht in nutzerorientierte Release Notes."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Sicherheitseintrag zu #336 nennt lediglich ein Sicherheitsproblem und eine Upgrade-Empfehlung. Die betroffene Komponente `signing` bleibt ungenannt, obwohl ihre Nennung unter R5 erlaubt ist."
+   }
+  ],
+  "reason": "Die Notes enthalten interne Änderungen, eine zu breite Aussage zur Lock-Erneuerung und einen unvollständigen Migrationsschritt. Der Sicherheitseintrag wahrt das Embargo, benennt aber die betroffene Komponente nicht.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26606,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 444,
+  "reasoning_output_tokens": 90
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-ca9b-7ba3-bceb-431ae45b364a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung sagt, die Lock-Erneuerung werde nach einer unterbrochenen Verbindung erneut versucht. Der Diff zu #334 sieht einen erneuten Versuch nur bei Fehlercode `ECONNRESET` vor; andere Fehler werden weitergeworfen.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration zu #338 nennt `queue.purge({ status, olderThanMs })`, erklärt aber nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Der entsprechende Aufruf lautet `queue.purge({ status, olderThanMs: graceMs })`.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Die Einträge zum Stabilisieren des Tests (#343) und zum Festschreiben der GitHub Actions (#340) beschreiben Test- beziehungsweise CI-Interna und gehören nicht in nutzerorientierte Release Notes.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Sicherheitseintrag zu #336 nennt lediglich ein Sicherheitsproblem und eine Upgrade-Empfehlung. Die betroffene Komponente `signing` bleibt ungenannt, obwohl ihre Nennung unter R5 erlaubt ist.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten interne Änderungen, eine zu breite Aussage zur Lock-Erneuerung und einen unvollständigen Migrationsschritt. Der Sicherheitseintrag wahrt das Embargo, benennt aber die betroffene Komponente nicht.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26606,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 444,
+    "reasoning_output_tokens": 90
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "aa6c67d4391c3c7e3f422a37",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "ghost-pr",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4909,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer für die JSON-Ausgabe. Ohne Quellen zu den PRs lässt sich nicht beurteilen, welche Nummer zutrifft; ansonsten sind sie inhaltlich gleich.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur in der PR-Nummer für die JSON-Ausgabe. Ohne Quellen zu den PRs lässt sich nicht beurteilen, welche Nummer zutrifft; ansonsten sind sie inhaltlich gleich.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24532,
+  "cached_input_tokens": 12800,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 60,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-caf0-7553-accc-d7153ce99dae"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer für die JSON-Ausgabe. Ohne Quellen zu den PRs lässt sich nicht beurteilen, welche Nummer zutrifft; ansonsten sind sie inhaltlich gleich.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24532,
+    "cached_input_tokens": 12800,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 60,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

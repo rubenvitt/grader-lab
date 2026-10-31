@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "d27eb211d90cfa7dd8177c59",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4952,
+ "text": "{\"reason\":\"Fassung B benennt die Änderungen und den Migrationsaufruf konkret und ist damit für Nutzer deutlich brauchbarer als die allgemeinen Formulierungen in A. Ob ihre Details und der Migrationsschritt durch die Diffs belegt sind und ob Version 3.1.0 passt, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B benennt die Änderungen und den Migrationsaufruf konkret und ist damit für Nutzer deutlich brauchbarer als die allgemeinen Formulierungen in A. Ob ihre Details und der Migrationsschritt durch die Diffs belegt sind und ob Version 3.1.0 passt, lässt sich ohne die Quellen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 24434,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 85,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-7c54-7672-a00f-e549ad2d5e92"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B benennt die Änderungen und den Migrationsaufruf konkret und ist damit für Nutzer deutlich brauchbarer als die allgemeinen Formulierungen in A. Ob ihre Details und der Migrationsschritt durch die Diffs belegt sind und ob Version 3.1.0 passt, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24434,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 85,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

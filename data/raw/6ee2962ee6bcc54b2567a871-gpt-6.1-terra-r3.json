@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "6ee2962ee6bcc54b2567a871",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-bump",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 6438,
+ "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Version „4.2.0“ ist ein Minor-Release, obwohl unter „Breaking Changes“ Änderungen aufgeführt sind, die einen Major-Sprung verlangen.\"}],\"reason\":\"Die Notes enthalten ausdrücklich Breaking Changes, weisen aber keine neue Major-Version aus. Die übrigen Kriterien lassen sich aus dem Text nicht als verletzt erkennen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R9",
+    "evidence": "Die Version „4.2.0“ ist ein Minor-Release, obwohl unter „Breaking Changes“ Änderungen aufgeführt sind, die einen Major-Sprung verlangen."
+   }
+  ],
+  "reason": "Die Notes enthalten ausdrücklich Breaking Changes, weisen aber keine neue Major-Version aus. Die übrigen Kriterien lassen sich aus dem Text nicht als verletzt erkennen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25345,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 93,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-8d87-7e22-92f7-3d5281176221"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Version „4.2.0“ ist ein Minor-Release, obwohl unter „Breaking Changes“ Änderungen aufgeführt sind, die einen Major-Sprung verlangen.\"}],\"reason\":\"Die Notes enthalten ausdrücklich Breaking Changes, weisen aber keine neue Major-Version aus. Die übrigen Kriterien lassen sich aus dem Text nicht als verletzt erkennen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25345,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 93,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

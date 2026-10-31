@@ -1,0 +1,79 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "0874def7e3b4ba081523743d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "useless-true",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 8459,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Die Einträge zu #351 und #353 benennen weder die umbenannte Worker-Option noch die Umstellung auf ESM und das entfernte CommonJS- beziehungsweise `require`-Angebot. Nutzer erkennen nicht, welche Anpassungen nötig sind.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migrationsschritte fehlen: `stalledIntervalMs` muss in den `Worker`-Optionen in `stallCheckMs` umbenannt und quaykit mit `import` geladen werden.\"},{\"criterion\":\"R8\",\"evidence\":\"„New storage option“ nennt weder `PostgresStore` und den Export `quaykit/postgres` noch dessen Verwendung von `SKIP LOCKED` beim Abrufen von Jobs.\"},{\"criterion\":\"R8\",\"evidence\":\"„Scheduler fix“ beschreibt weder die doppelten Cron-Ausführungen bei Zeitumstellungen noch den Vergleich der Fälligkeitszeiten in UTC.\"},{\"criterion\":\"R8\",\"evidence\":\"„Queue performance work“ lässt offen, dass `addBulk` Jobs nun in Blöcken von 500 statt mit einem Befehl pro Job schreibt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Dashboard hardening“ vermittelt weder ausdrücklich, dass ein Sicherheitsproblem behoben wurde, noch die Upgrade-Empfehlung.\"}],\"reason\":\"Der Kandidat nennt zwar alle Themen und die passende Major-Version, beschreibt die Änderungen aber größtenteils zu allgemein. Insbesondere fehlen die konkreten Breaking Changes und ihre Migrationsschritte.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "Die Einträge zu #351 und #353 benennen weder die umbenannte Worker-Option noch die Umstellung auf ESM und das entfernte CommonJS- beziehungsweise `require`-Angebot. Nutzer erkennen nicht, welche Anpassungen nötig sind."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migrationsschritte fehlen: `stalledIntervalMs` muss in den `Worker`-Optionen in `stallCheckMs` umbenannt und quaykit mit `import` geladen werden."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„New storage option“ nennt weder `PostgresStore` und den Export `quaykit/postgres` noch dessen Verwendung von `SKIP LOCKED` beim Abrufen von Jobs."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Scheduler fix“ beschreibt weder die doppelten Cron-Ausführungen bei Zeitumstellungen noch den Vergleich der Fälligkeitszeiten in UTC."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Queue performance work“ lässt offen, dass `addBulk` Jobs nun in Blöcken von 500 statt mit einem Befehl pro Job schreibt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Dashboard hardening“ vermittelt weder ausdrücklich, dass ein Sicherheitsproblem behoben wurde, noch die Upgrade-Empfehlung."
+   }
+  ],
+  "reason": "Der Kandidat nennt zwar alle Themen und die passende Major-Version, beschreibt die Änderungen aber größtenteils zu allgemein. Insbesondere fehlen die konkreten Breaking Changes und ihre Migrationsschritte.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25473,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 332,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-056f-79a3-81af-0aff788bce0b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Die Einträge zu #351 und #353 benennen weder die umbenannte Worker-Option noch die Umstellung auf ESM und das entfernte CommonJS- beziehungsweise `require`-Angebot. Nutzer erkennen nicht, welche Anpassungen nötig sind.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migrationsschritte fehlen: `stalledIntervalMs` muss in den `Worker`-Optionen in `stallCheckMs` umbenannt und quaykit mit `import` geladen werden.\"},{\"criterion\":\"R8\",\"evidence\":\"„New storage option“ nennt weder `PostgresStore` und den Export `quaykit/postgres` noch dessen Verwendung von `SKIP LOCKED` beim Abrufen von Jobs.\"},{\"criterion\":\"R8\",\"evidence\":\"„Scheduler fix“ beschreibt weder die doppelten Cron-Ausführungen bei Zeitumstellungen noch den Vergleich der Fälligkeitszeiten in UTC.\"},{\"criterion\":\"R8\",\"evidence\":\"„Queue performance work“ lässt offen, dass `addBulk` Jobs nun in Blöcken von 500 statt mit einem Befehl pro Job schreibt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Dashboard hardening“ vermittelt weder ausdrücklich, dass ein Sicherheitsproblem behoben wurde, noch die Upgrade-Empfehlung.\"}],\"reason\":\"Der Kandidat nennt zwar alle Themen und die passende Major-Version, beschreibt die Änderungen aber größtenteils zu allgemein. Insbesondere fehlen die konkreten Breaking Changes und ihre Migrationsschritte.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25473,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 332,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

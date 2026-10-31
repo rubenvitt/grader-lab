@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "c556b5e33d01398e563a773b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-migration",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4230,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur beim Optionsnamen für die Migration von `worker.pause()`. Ohne den zugehörigen Code oder Diff lässt sich nicht beurteilen, ob `drain` oder `graceful` korrekt ist; daher sind sie anhand der vorliegenden Informationen gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur beim Optionsnamen für die Migration von `worker.pause()`. Ohne den zugehörigen Code oder Diff lässt sich nicht beurteilen, ob `drain` oder `graceful` korrekt ist; daher sind sie anhand der vorliegenden Informationen gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25568,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 75,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-2a67-7d32-8a6d-8d83f900205b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur beim Optionsnamen für die Migration von `worker.pause()`. Ohne den zugehörigen Code oder Diff lässt sich nicht beurteilen, ob `drain` oder `graceful` korrekt ist; daher sind sie anhand der vorliegenden Informationen gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25568,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 75,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "90db8e7483148747174bbd90",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reverted-listed",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5365,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat nennt `durationMs` und PR #371; laut Referenz heißen der Parameter `perMs` und die PR #376.\"},{\"criterion\":\"R8\",\"evidence\":\"Es fehlt der Hinweis, dass jede Worker-Instanz ihren eigenen Grenzwert hat. Zudem ist der angegebene Parametername `durationMs` falsch.\"}],\"reason\":\"Der Rate-Limiter-Eintrag weicht bei Parametername und PR-Nummer von der Referenz ab und lässt die Gültigkeit pro Worker-Instanz aus. Die Deprecation und die Version stimmen überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Kandidat nennt `durationMs` und PR #371; laut Referenz heißen der Parameter `perMs` und die PR #376."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Es fehlt der Hinweis, dass jede Worker-Instanz ihren eigenen Grenzwert hat. Zudem ist der angegebene Parametername `durationMs` falsch."
+   }
+  ],
+  "reason": "Der Rate-Limiter-Eintrag weicht bei Parametername und PR-Nummer von der Referenz ab und lässt die Gültigkeit pro Worker-Instanz aus. Die Deprecation und die Version stimmen überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25361,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 148,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-b256-7b02-9608-229e27c0b175"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat nennt `durationMs` und PR #371; laut Referenz heißen der Parameter `perMs` und die PR #376.\"},{\"criterion\":\"R8\",\"evidence\":\"Es fehlt der Hinweis, dass jede Worker-Instanz ihren eigenen Grenzwert hat. Zudem ist der angegebene Parametername `durationMs` falsch.\"}],\"reason\":\"Der Rate-Limiter-Eintrag weicht bei Parametername und PR-Nummer von der Referenz ab und lässt die Gültigkeit pro Worker-Instanz aus. Die Deprecation und die Version stimmen überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25361,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 148,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

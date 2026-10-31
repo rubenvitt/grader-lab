@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "a621fdf8e5f7dbd62d0fa7d1",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4815,
+ "text": "{\"reason\":\"Fassung B beschreibt dieselben Änderungen sachlich und vermeidet die Werbesprache und unbelegte Garantie in Fassung A. Ob die Aussagen und die Patch-Version durch die Diffs gedeckt sind, lässt sich anhand der vorliegenden Texte nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt dieselben Änderungen sachlich und vermeidet die Werbesprache und unbelegte Garantie in Fassung A. Ob die Aussagen und die Patch-Version durch die Diffs gedeckt sind, lässt sich anhand der vorliegenden Texte nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25255,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 68,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-c228-77a2-9c46-452656161be2"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt dieselben Änderungen sachlich und vermeidet die Werbesprache und unbelegte Garantie in Fassung A. Ob die Aussagen und die Patch-Version durch die Diffs gedeckt sind, lässt sich anhand der vorliegenden Texte nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25255,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 68,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "01efb8ec3704d114b12988a1",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5270,
+ "text": "{\"reason\":\"Beide Fassungen enthalten dieselben konkreten Änderungen und denselben Migrationsschritt. Sie unterscheiden sich nur in Formulierung und Reihenfolge der einleitenden Zusammenfassung; ohne Quellenmaterial lassen sich die übrigen Rubric-Kriterien nicht gegeneinander entscheiden.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen enthalten dieselben konkreten Änderungen und denselben Migrationsschritt. Sie unterscheiden sich nur in Formulierung und Reihenfolge der einleitenden Zusammenfassung; ohne Quellenmaterial lassen sich die übrigen Rubric-Kriterien nicht gegeneinander entscheiden.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24551,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 71,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-aedf-70f0-a254-f39ca076ce02"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen enthalten dieselben konkreten Änderungen und denselben Migrationsschritt. Sie unterscheiden sich nur in Formulierung und Reihenfolge der einleitenden Zusammenfassung; ohne Quellenmaterial lassen sich die übrigen Rubric-Kriterien nicht gegeneinander entscheiden.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24551,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 71,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

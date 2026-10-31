@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "aebf9c75f999124159d5655f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 13015,
+ "text": "{\"reason\":\"Beide Fassungen enthalten sachlich dieselben Änderungen, Migrationshinweise und Sicherheitshinweise und nennen dieselbe Version. Ohne die zugrunde liegenden Diffs lässt sich nicht beurteilen, ob diese Angaben vollständig und korrekt belegt sind.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen enthalten sachlich dieselben Änderungen, Migrationshinweise und Sicherheitshinweise und nennen dieselbe Version. Ohne die zugrunde liegenden Diffs lässt sich nicht beurteilen, ob diese Angaben vollständig und korrekt belegt sind.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25399,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 66,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-d8a5-77e2-a59f-3901d4ff5171"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360907ba347db4-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536090d6a1bfc14-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360914a8789d3b-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360921efe4e51b-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen enthalten sachlich dieselben Änderungen, Migrationshinweise und Sicherheitshinweise und nennen dieselbe Version. Ohne die zugrunde liegenden Diffs lässt sich nicht beurteilen, ob diese Angaben vollständig und korrekt belegt sind.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25399,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 66,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

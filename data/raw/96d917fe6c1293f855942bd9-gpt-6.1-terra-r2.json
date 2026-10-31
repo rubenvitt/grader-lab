@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "96d917fe6c1293f855942bd9",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "internal-noise",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5506,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Internal“ stehen das Caching des pnpm-Stores in GitHub Actions (#320) und die Aktualisierung der Dev-Dependency vitest (#322).\"}],\"reason\":\"Die beiden internen Änderungen sind für Nutzer der Bibliothek nicht relevant und gehören nicht in die Release Notes. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Unter „Internal“ stehen das Caching des pnpm-Stores in GitHub Actions (#320) und die Aktualisierung der Dev-Dependency vitest (#322)."
+   }
+  ],
+  "reason": "Die beiden internen Änderungen sind für Nutzer der Bibliothek nicht relevant und gehören nicht in die Release Notes. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25290,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 97,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-b28b-79a2-b45c-1cf0655adfec"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Internal“ stehen das Caching des pnpm-Stores in GitHub Actions (#320) und die Aktualisierung der Dev-Dependency vitest (#322).\"}],\"reason\":\"Die beiden internen Änderungen sind für Nutzer der Bibliothek nicht relevant und gehören nicht in die Release Notes. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25290,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 97,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

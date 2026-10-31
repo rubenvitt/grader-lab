@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "327ca2717ca3c97597b712d1",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "ghost-pr",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4146,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes enthalten konkret beschriebene Änderungen und einen Migrationsschritt für den geänderten Standardwert. Aus dem Text selbst ergeben sich keine Verstöße; die Übereinstimmung mit den Quellen lässt sich ohne diese nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes enthalten konkret beschriebene Änderungen und einen Migrationsschritt für den geänderten Standardwert. Aus dem Text selbst ergeben sich keine Verstöße; die Übereinstimmung mit den Quellen lässt sich ohne diese nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25253,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 69,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-c349-7bc3-8a21-d0f75eb32fe4"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes enthalten konkret beschriebene Änderungen und einen Migrationsschritt für den geänderten Standardwert. Aus dem Text selbst ergeben sich keine Verstöße; die Übereinstimmung mit den Quellen lässt sich ohne diese nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25253,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 69,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

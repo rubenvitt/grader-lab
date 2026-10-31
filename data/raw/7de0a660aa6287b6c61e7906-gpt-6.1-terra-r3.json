@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "7de0a660aa6287b6c61e7906",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 9287,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration von `queue.clean(graceMs, status)` nennt `queue.purge({ status, olderThanMs })`, erklärt aber nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Dem Diff entspricht `queue.purge({ status, olderThanMs: graceMs })`.\"}],\"reason\":\"Die übrigen Aussagen sind durch die Diffs gedeckt; die Versionsnummer 3.1.0 passt zu den neuen Funktionen und der Deprecation. Der Migrationsschritt übernimmt den bisherigen Wert nicht eindeutig.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration von `queue.clean(graceMs, status)` nennt `queue.purge({ status, olderThanMs })`, erklärt aber nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Dem Diff entspricht `queue.purge({ status, olderThanMs: graceMs })`."
+   }
+  ],
+  "reason": "Die übrigen Aussagen sind durch die Diffs gedeckt; die Versionsnummer 3.1.0 passt zu den neuen Funktionen und der Deprecation. Der Migrationsschritt übernimmt den bisherigen Wert nicht eindeutig.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26579,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 387,
+  "reasoning_output_tokens": 241
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-9ea4-7c63-a37b-4f1e34117c01"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration von `queue.clean(graceMs, status)` nennt `queue.purge({ status, olderThanMs })`, erklärt aber nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Dem Diff entspricht `queue.purge({ status, olderThanMs: graceMs })`.\"}],\"reason\":\"Die übrigen Aussagen sind durch die Diffs gedeckt; die Versionsnummer 3.1.0 passt zu den neuen Funktionen und der Deprecation. Der Migrationsschritt übernimmt den bisherigen Wert nicht eindeutig.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26579,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 387,
+    "reasoning_output_tokens": 241
+   }
+  }
+ ]
+}

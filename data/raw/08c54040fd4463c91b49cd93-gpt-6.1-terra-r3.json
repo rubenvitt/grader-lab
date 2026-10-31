@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "08c54040fd4463c91b49cd93",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "invented-claim",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4412,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Änderungen und die Upgrade-Empfehlung konkret und sachlich. Aus dem Text selbst ergeben sich weder ein Widerspruch noch unzulässige Sicherheitsdetails; die übrigen Kriterien lassen sich ohne Quellen nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben die Änderungen und die Upgrade-Empfehlung konkret und sachlich. Aus dem Text selbst ergeben sich weder ein Widerspruch noch unzulässige Sicherheitsdetails; die übrigen Kriterien lassen sich ohne Quellen nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25187,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 69,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-f2bc-7670-b19e-88c36aad4ca4"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Änderungen und die Upgrade-Empfehlung konkret und sachlich. Aus dem Text selbst ergeben sich weder ein Widerspruch noch unzulässige Sicherheitsdetails; die übrigen Kriterien lassen sich ohne Quellen nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25187,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 69,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

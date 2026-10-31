@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "21ca0adddc1ac9ad51dc27d7",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5249,
+ "text": "{\"reason\":\"Fassung B beschreibt den Fix konkret als einmaligen Wiederholungsversuch nach `ECONNRESET`. Fassung A behauptet darüber hinaus, dass Worker ihre Locks bei Redis-Failovers behalten und sich die Erneuerung automatisch neu verbindet; diese Garantien sind aus den vorliegenden Angaben nicht belegt.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt den Fix konkret als einmaligen Wiederholungsversuch nach `ECONNRESET`. Fassung A behauptet darüber hinaus, dass Worker ihre Locks bei Redis-Failovers behalten und sich die Erneuerung automatisch neu verbindet; diese Garantien sind aus den vorliegenden Angaben nicht belegt.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25384,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 81,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-3b29-77e1-96da-12adad63a7e0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt den Fix konkret als einmaligen Wiederholungsversuch nach `ECONNRESET`. Fassung A behauptet darüber hinaus, dass Worker ihre Locks bei Redis-Failovers behalten und sich die Erneuerung automatisch neu verbindet; diese Garantien sind aus den vorliegenden Angaben nicht belegt.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25384,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 81,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

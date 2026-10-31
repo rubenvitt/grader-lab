@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "87bb62bf01124c13b9aae8ca",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4363,
+ "text": "{\"reason\":\"Fassung A beschreibt dieselben Änderungen sachlich. Fassung B verwendet Werbesprache und unbelegte Wertungen wie „game-changing“, „effortless“ und „bulletproof“ und verstößt damit gegen den geforderten Ton.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A beschreibt dieselben Änderungen sachlich. Fassung B verwendet Werbesprache und unbelegte Wertungen wie „game-changing“, „effortless“ und „bulletproof“ und verstößt damit gegen den geforderten Ton.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25427,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 66,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-2fb6-7df1-9e53-c5d544253fdd"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A beschreibt dieselben Änderungen sachlich. Fassung B verwendet Werbesprache und unbelegte Wertungen wie „game-changing“, „effortless“ und „bulletproof“ und verstößt damit gegen den geforderten Ton.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25427,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 66,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

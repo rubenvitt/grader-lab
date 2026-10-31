@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "a3dfa3ff4c12a1c7b9d0206d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "internal-noise",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4727,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Der Eintrag „CI now runs the integration tests against Postgres 16 (#363)“ beschreibt CI und Tests und ist für Nutzer der Bibliothek nicht relevant.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zu Integrationstests gegen Postgres 16 (#363) hat keine Entsprechung in der Referenz und ist daher nicht belegt.\"}],\"reason\":\"Der Kandidat enthält alle wesentlichen Nutzerinformationen der Referenz, ergänzt aber einen unbelegten und für die Release Notes irrelevanten CI-Eintrag.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Der Eintrag „CI now runs the integration tests against Postgres 16 (#363)“ beschreibt CI und Tests und ist für Nutzer der Bibliothek nicht relevant."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zu Integrationstests gegen Postgres 16 (#363) hat keine Entsprechung in der Referenz und ist daher nicht belegt."
+   }
+  ],
+  "reason": "Der Kandidat enthält alle wesentlichen Nutzerinformationen der Referenz, ergänzt aber einen unbelegten und für die Release Notes irrelevanten CI-Eintrag.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25646,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 135,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-9b8f-77a3-8b12-7d6a0d0c1e08"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Der Eintrag „CI now runs the integration tests against Postgres 16 (#363)“ beschreibt CI und Tests und ist für Nutzer der Bibliothek nicht relevant.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zu Integrationstests gegen Postgres 16 (#363) hat keine Entsprechung in der Referenz und ist daher nicht belegt.\"}],\"reason\":\"Der Kandidat enthält alle wesentlichen Nutzerinformationen der Referenz, ergänzt aber einen unbelegten und für die Release Notes irrelevanten CI-Eintrag.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25646,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 135,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

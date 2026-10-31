@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "add3706ef1ff422bb7c087b5",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "reordered",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4835,
+ "text": "{\"reason\":\"Die Fassungen enthalten dieselben Aussagen und Migrationsschritte; lediglich die Reihenfolge der Abschnitte unterscheidet sich. Nach der Rubric sind sie daher gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen enthalten dieselben Aussagen und Migrationsschritte; lediglich die Reihenfolge der Abschnitte unterscheidet sich. Nach der Rubric sind sie daher gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25526,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 54,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-ad7c-7232-8626-5cb157662916"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen enthalten dieselben Aussagen und Migrationsschritte; lediglich die Reihenfolge der Abschnitte unterscheidet sich. Nach der Rubric sind sie daher gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25526,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 54,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

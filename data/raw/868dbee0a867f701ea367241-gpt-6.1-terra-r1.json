@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "868dbee0a867f701ea367241",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4683,
+ "text": "{\"reason\":\"Fassung B beschreibt dieselben Änderungen sachlich und verzichtet auf die Werbesprache und Superlative in Fassung A. Ob die inhaltlichen Aussagen, Migrationsschritte und die Versionsnummer korrekt sind, lässt sich ohne die zugrunde liegenden Diffs nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt dieselben Änderungen sachlich und verzichtet auf die Werbesprache und Superlative in Fassung A. Ob die inhaltlichen Aussagen, Migrationsschritte und die Versionsnummer korrekt sind, lässt sich ohne die zugrunde liegenden Diffs nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25425,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 75,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-21e1-7430-863a-eb706254c1f8"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt dieselben Änderungen sachlich und verzichtet auf die Werbesprache und Superlative in Fassung A. Ob die inhaltlichen Aussagen, Migrationsschritte und die Versionsnummer korrekt sind, lässt sich ohne die zugrunde liegenden Diffs nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25425,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 75,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

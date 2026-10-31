@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "0b11a42e9e1c4a12ff7f6cd5",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "internal-noise",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4917,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Der Abschnitt „Internal“ enthält CI-Caching und ein Vitest-Update. CI und Dev-Dependencies sind für Nutzer der Bibliothek nicht relevant.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussagen zum CI-Caching und zum Update von Vitest auf 2.1.1 haben keine Entsprechung in der Referenz.\"}],\"reason\":\"Die nutzerrelevanten Release Notes stimmen mit der Referenz überein. Der zusätzliche Abschnitt enthält jedoch unbelegte interne Änderungen, die nicht in die Notes gehören.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Der Abschnitt „Internal“ enthält CI-Caching und ein Vitest-Update. CI und Dev-Dependencies sind für Nutzer der Bibliothek nicht relevant."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussagen zum CI-Caching und zum Update von Vitest auf 2.1.1 haben keine Entsprechung in der Referenz."
+   }
+  ],
+  "reason": "Die nutzerrelevanten Release Notes stimmen mit der Referenz überein. Der zusätzliche Abschnitt enthält jedoch unbelegte interne Änderungen, die nicht in die Notes gehören.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25520,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 133,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-a8fe-7c90-bfda-8a4961d282fd"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Der Abschnitt „Internal“ enthält CI-Caching und ein Vitest-Update. CI und Dev-Dependencies sind für Nutzer der Bibliothek nicht relevant.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussagen zum CI-Caching und zum Update von Vitest auf 2.1.1 haben keine Entsprechung in der Referenz.\"}],\"reason\":\"Die nutzerrelevanten Release Notes stimmen mit der Referenz überein. Der zusätzliche Abschnitt enthält jedoch unbelegte interne Änderungen, die nicht in die Notes gehören.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25520,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 133,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

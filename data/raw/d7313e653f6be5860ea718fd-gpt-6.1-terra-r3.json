@@ -1,0 +1,66 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "d7313e653f6be5860ea718fd",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 8634,
+ "text": "{\"reason\":\"Fassung A beschreibt den Worker-Fix konkret und nennt beim Sicherheitsfix die betroffene Komponente sowie die Upgrade-Empfehlung. Fassung B bleibt mit „Worker fix“ und „Security improvements“ zu unbestimmt, um Nutzern die Änderung oder einen möglichen Handlungsbedarf zu vermitteln.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A beschreibt den Worker-Fix konkret und nennt beim Sicherheitsfix die betroffene Komponente sowie die Upgrade-Empfehlung. Fassung B bleibt mit „Worker fix“ und „Security improvements“ zu unbestimmt, um Nutzern die Änderung oder einen möglichen Handlungsbedarf zu vermitteln.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25173,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 77,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-1451-7b23-a7f2-e7213a17815a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617cdeaba607a-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617d20acfdd79-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617d92e68ca63-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A beschreibt den Worker-Fix konkret und nennt beim Sicherheitsfix die betroffene Komponente sowie die Upgrade-Empfehlung. Fassung B bleibt mit „Worker fix“ und „Security improvements“ zu unbestimmt, um Nutzern die Änderung oder einen möglichen Handlungsbedarf zu vermitteln.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25173,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 77,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

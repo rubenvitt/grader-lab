@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "7b0c034d2097059d288f1e0d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7517,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zum Ereignis `drained` verweist auf PR #333. Die Änderung ist in den Quellen durch PR #331 belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung behauptet allgemein einen Wiederholungsversuch nach einem Verbindungsabbruch. Der Diff von PR #334 wiederholt den Aufruf nur bei Fehlercode `ECONNRESET`; andere Fehler werden weitergegeben.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration nennt `queue.purge({ status, olderThanMs })`, ordnet aber den bisherigen Parameter `graceMs` nicht zu. Der Diff von PR #338 verwendet `queue.purge({ status, olderThanMs: graceMs })`.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten einen falschen PR-Verweis und beschreiben den Wiederholungsversuch in der Einleitung zu allgemein. Außerdem fehlt bei der Migration die Zuordnung des bisherigen Zeitwerts.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zum Ereignis `drained` verweist auf PR #333. Die Änderung ist in den Quellen durch PR #331 belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung behauptet allgemein einen Wiederholungsversuch nach einem Verbindungsabbruch. Der Diff von PR #334 wiederholt den Aufruf nur bei Fehlercode `ECONNRESET`; andere Fehler werden weitergegeben."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration nennt `queue.purge({ status, olderThanMs })`, ordnet aber den bisherigen Parameter `graceMs` nicht zu. Der Diff von PR #338 verwendet `queue.purge({ status, olderThanMs: graceMs })`."
+   }
+  ],
+  "reason": "Die Notes enthalten einen falschen PR-Verweis und beschreiben den Wiederholungsversuch in der Einleitung zu allgemein. Außerdem fehlt bei der Migration die Zuordnung des bisherigen Zeitwerts.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26577,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 350,
+  "reasoning_output_tokens": 95
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-f29e-7dc2-888f-5f16e16f79cf"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zum Ereignis `drained` verweist auf PR #333. Die Änderung ist in den Quellen durch PR #331 belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung behauptet allgemein einen Wiederholungsversuch nach einem Verbindungsabbruch. Der Diff von PR #334 wiederholt den Aufruf nur bei Fehlercode `ECONNRESET`; andere Fehler werden weitergegeben.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration nennt `queue.purge({ status, olderThanMs })`, ordnet aber den bisherigen Parameter `graceMs` nicht zu. Der Diff von PR #338 verwendet `queue.purge({ status, olderThanMs: graceMs })`.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten einen falschen PR-Verweis und beschreiben den Wiederholungsversuch in der Einleitung zu allgemein. Außerdem fehlt bei der Migration die Zuordnung des bisherigen Zeitwerts.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26577,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 350,
+    "reasoning_output_tokens": 95
+   }
+  }
+ ]
+}

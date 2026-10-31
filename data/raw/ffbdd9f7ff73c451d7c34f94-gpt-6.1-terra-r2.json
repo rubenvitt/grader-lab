@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "ffbdd9f7ff73c451d7c34f94",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "paraphrase",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4117,
+ "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst sind keine Verstöße erkennbar. Aussagen, deren Prüfung PRs oder Diffs erfordern würde, gelten gemäß Vorgabe als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Aus dem Text selbst sind keine Verstöße erkennbar. Aussagen, deren Prüfung PRs oder Diffs erfordern würde, gelten gemäß Vorgabe als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24492,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 53,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-8219-7113-9863-26e7536d3be6"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst sind keine Verstöße erkennbar. Aussagen, deren Prüfung PRs oder Diffs erfordern würde, gelten gemäß Vorgabe als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24492,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "0874def7e3b4ba081523743d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "useless-true",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5404,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Für die Umbenennung von `stalledIntervalMs` zu `stallCheckMs` und die Umstellung auf ESM fehlen die konkreten Migrationsschritte. Auch der Hinweis, dass der alte Optionsname stillschweigend ignoriert wird, fehlt.\"},{\"criterion\":\"R8\",\"evidence\":\"Alle Einträge bleiben zu allgemein: Weder die konkreten Breaking Changes noch `PostgresStore` samt Export und `SKIP LOCKED`, der Cron-Fix, die `addBulk`-Änderung oder der Sicherheitsfix werden erkennbar beschrieben. Die Upgrade-Empfehlung für den Dashboard-Fix fehlt ebenfalls.\"}],\"reason\":\"Die Versionsnummer und die Einordnung der Breaking Changes stimmen. Die Einträge lassen jedoch wesentliche Änderungen und erforderliche Schritte offen, sodass Nutzer die Auswirkungen nicht zuverlässig beurteilen können.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Für die Umbenennung von `stalledIntervalMs` zu `stallCheckMs` und die Umstellung auf ESM fehlen die konkreten Migrationsschritte. Auch der Hinweis, dass der alte Optionsname stillschweigend ignoriert wird, fehlt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Alle Einträge bleiben zu allgemein: Weder die konkreten Breaking Changes noch `PostgresStore` samt Export und `SKIP LOCKED`, der Cron-Fix, die `addBulk`-Änderung oder der Sicherheitsfix werden erkennbar beschrieben. Die Upgrade-Empfehlung für den Dashboard-Fix fehlt ebenfalls."
+   }
+  ],
+  "reason": "Die Versionsnummer und die Einordnung der Breaking Changes stimmen. Die Einträge lassen jedoch wesentliche Änderungen und erforderliche Schritte offen, sodass Nutzer die Auswirkungen nicht zuverlässig beurteilen können.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25473,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 196,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-27d8-7792-9c39-6170c82be384"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Für die Umbenennung von `stalledIntervalMs` zu `stallCheckMs` und die Umstellung auf ESM fehlen die konkreten Migrationsschritte. Auch der Hinweis, dass der alte Optionsname stillschweigend ignoriert wird, fehlt.\"},{\"criterion\":\"R8\",\"evidence\":\"Alle Einträge bleiben zu allgemein: Weder die konkreten Breaking Changes noch `PostgresStore` samt Export und `SKIP LOCKED`, der Cron-Fix, die `addBulk`-Änderung oder der Sicherheitsfix werden erkennbar beschrieben. Die Upgrade-Empfehlung für den Dashboard-Fix fehlt ebenfalls.\"}],\"reason\":\"Die Versionsnummer und die Einordnung der Breaking Changes stimmen. Die Einträge lassen jedoch wesentliche Änderungen und erforderliche Schritte offen, sodass Nutzer die Auswirkungen nicht zuverlässig beurteilen können.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25473,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 196,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

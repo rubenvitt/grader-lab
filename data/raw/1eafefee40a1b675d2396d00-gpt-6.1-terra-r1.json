@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "1eafefee40a1b675d2396d00",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4127,
+ "text": "{\"reason\":\"Fassung A ist sachlich formuliert. Fassung B verwendet Werbesprache und suggeriert mit „Unbreakable job state“ eine unbelegte Garantie.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist sachlich formuliert. Fassung B verwendet Werbesprache und suggeriert mit „Unbreakable job state“ eine unbelegte Garantie.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25251,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 49,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-bbf7-7932-ae82-f5f27f718003"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist sachlich formuliert. Fassung B verwendet Werbesprache und suggeriert mit „Unbreakable job state“ eine unbelegte Garantie.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25251,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "1de30bdcbd828aa5e5b6c0ec",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "false-success",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4393,
+ "text": "{\"violations\":[],\"reason\":\"Der Kandidat stimmt vollständig mit der Referenz überein.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Kandidat stimmt vollständig mit der Referenz überein.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25675,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 34,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-14e2-75b2-82b1-9b63adc2c31e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Kandidat stimmt vollständig mit der Referenz überein.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25675,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 34,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

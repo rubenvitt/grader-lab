@@ -1,0 +1,79 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "7b0c034d2097059d288f1e0d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 14759,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zum Ereignis `drained` verweist auf #333. Laut Quellen wurde die Änderung in PR #331 eingeführt.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration nennt `queue.purge({ status, olderThanMs })`, obwohl der bisherige Wert `graceMs` heißt. Um denselben Zeitraum zu übernehmen, muss der Aufruf `queue.purge({ status, olderThanMs: graceMs })` lauten.\"}],\"reason\":\"Die Notes geben die Nutzeränderungen im Wesentlichen korrekt wieder und die Version 3.1.0 passt zum Inhalt. Der PR-Verweis und der Migrationsaufruf sind jedoch fehlerhaft.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zum Ereignis `drained` verweist auf #333. Laut Quellen wurde die Änderung in PR #331 eingeführt."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration nennt `queue.purge({ status, olderThanMs })`, obwohl der bisherige Wert `graceMs` heißt. Um denselben Zeitraum zu übernehmen, muss der Aufruf `queue.purge({ status, olderThanMs: graceMs })` lauten."
+   }
+  ],
+  "reason": "Die Notes geben die Nutzeränderungen im Wesentlichen korrekt wieder und die Version 3.1.0 passt zum Inhalt. Der PR-Verweis und der Migrationsaufruf sind jedoch fehlerhaft.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25731,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 235,
+  "reasoning_output_tokens": 67
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-02b1-7313-8b3c-494afed816ad"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53606173e312dfd-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536061e6c79e533-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360625c942e509-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53606321ef4b173-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zum Ereignis `drained` verweist auf #333. Laut Quellen wurde die Änderung in PR #331 eingeführt.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration nennt `queue.purge({ status, olderThanMs })`, obwohl der bisherige Wert `graceMs` heißt. Um denselben Zeitraum zu übernehmen, muss der Aufruf `queue.purge({ status, olderThanMs: graceMs })` lauten.\"}],\"reason\":\"Die Notes geben die Nutzeränderungen im Wesentlichen korrekt wieder und die Version 3.1.0 passt zum Inhalt. Der PR-Verweis und der Migrationsaufruf sind jedoch fehlerhaft.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25731,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 235,
+    "reasoning_output_tokens": 67
+   }
+  }
+ ]
+}

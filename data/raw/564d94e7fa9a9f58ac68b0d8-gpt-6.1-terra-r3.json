@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "564d94e7fa9a9f58ac68b0d8",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "missing-breaking",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8475,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #351 benennt die öffentliche Option `stalledIntervalMs` in `stallCheckMs` um. Diese nutzerseitig erforderliche Anpassung fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgelöst werden und Fälligkeitszeiten nun in UTC verglichen werden. Der Diff in #357 zeigt jedoch nur, dass `cron.next` zusätzlich `{ tz: 'UTC' }` erhält; der anschließende Vergleich bleibt unverändert. Eine allgemeine Garantie gegen doppelte Auslösungen ist daraus nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #360 behauptet, zuvor sei ein Befehl pro Job ausgeführt worden. Der Diff zeigt einen Aufruf von `this.add` pro Job, aber nicht, wie viele Store-Befehle dieser Aufruf ausführt.\"\n    }\n  ],\n  \"reason\": \"Die Notes lassen eine öffentliche Umbenennung mit Migrationsbedarf aus und enthalten Aussagen, die über die gezeigten Diffs hinausgehen. Der Major-Sprung auf 4.0.0 passt zu den Breaking Changes.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #351 benennt die öffentliche Option `stalledIntervalMs` in `stallCheckMs` um. Diese nutzerseitig erforderliche Anpassung fehlt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgelöst werden und Fälligkeitszeiten nun in UTC verglichen werden. Der Diff in #357 zeigt jedoch nur, dass `cron.next` zusätzlich `{ tz: 'UTC' }` erhält; der anschließende Vergleich bleibt unverändert. Eine allgemeine Garantie gegen doppelte Auslösungen ist daraus nicht belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #360 behauptet, zuvor sei ein Befehl pro Job ausgeführt worden. Der Diff zeigt einen Aufruf von `this.add` pro Job, aber nicht, wie viele Store-Befehle dieser Aufruf ausführt."
+   }
+  ],
+  "reason": "Die Notes lassen eine öffentliche Umbenennung mit Migrationsbedarf aus und enthalten Aussagen, die über die gezeigten Diffs hinausgehen. Der Major-Sprung auf 4.0.0 passt zu den Breaking Changes.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26864,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 499,
+  "reasoning_output_tokens": 196
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-477c-7272-ae7b-e782158d94a1"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #351 benennt die öffentliche Option `stalledIntervalMs` in `stallCheckMs` um. Diese nutzerseitig erforderliche Anpassung fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgelöst werden und Fälligkeitszeiten nun in UTC verglichen werden. Der Diff in #357 zeigt jedoch nur, dass `cron.next` zusätzlich `{ tz: 'UTC' }` erhält; der anschließende Vergleich bleibt unverändert. Eine allgemeine Garantie gegen doppelte Auslösungen ist daraus nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #360 behauptet, zuvor sei ein Befehl pro Job ausgeführt worden. Der Diff zeigt einen Aufruf von `this.add` pro Job, aber nicht, wie viele Store-Befehle dieser Aufruf ausführt.\"\n    }\n  ],\n  \"reason\": \"Die Notes lassen eine öffentliche Umbenennung mit Migrationsbedarf aus und enthalten Aussagen, die über die gezeigten Diffs hinausgehen. Der Major-Sprung auf 4.0.0 passt zu den Breaking Changes.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26864,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 499,
+    "reasoning_output_tokens": 196
+   }
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "b60d16720edd99e5163b65ed",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "hype-tone",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 6101,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung verwendet Werbesprache und Superlative: „The wait is over“, „radically leaner API“, „stunning new jitter retry strategy“ und „flawless graceful shutdown“.\"},{\"criterion\":\"R7\",\"evidence\":\"Auch einzelne Einträge sind werbend formuliert, etwa „Leaner than ever“, „game-changing“, „Shut down with confidence“ und „far more elegant“.\"},{\"criterion\":\"R8\",\"evidence\":\"Bei der Deprecation von „Passing a boolean to `worker.pause()`“ nennt die Migration nur `worker.pause({ drain: true })`. Sie erklärt nicht, wie die bisherigen Werte `true` und `false` jeweils zu ersetzen sind.\"}],\"reason\":\"Die Notes enthalten mehrfach Werbesprache. Die Migration für den booleschen Parameter von `worker.pause()` lässt zudem offen, wie beide möglichen bisherigen Aufrufe ersetzt werden sollen. Aussagen, die nur anhand von Quellen oder Diffs überprüft werden könnten, gelten gemäß Vorgabe als erfüllt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Die Einleitung verwendet Werbesprache und Superlative: „The wait is over“, „radically leaner API“, „stunning new jitter retry strategy“ und „flawless graceful shutdown“."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Auch einzelne Einträge sind werbend formuliert, etwa „Leaner than ever“, „game-changing“, „Shut down with confidence“ und „far more elegant“."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Bei der Deprecation von „Passing a boolean to `worker.pause()`“ nennt die Migration nur `worker.pause({ drain: true })`. Sie erklärt nicht, wie die bisherigen Werte `true` und `false` jeweils zu ersetzen sind."
+   }
+  ],
+  "reason": "Die Notes enthalten mehrfach Werbesprache. Die Migration für den booleschen Parameter von `worker.pause()` lässt zudem offen, wie beide möglichen bisherigen Aufrufe ersetzt werden sollen. Aussagen, die nur anhand von Quellen oder Diffs überprüft werden könnten, gelten gemäß Vorgabe als erfüllt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24536,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 233,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-a113-7591-829c-833203f8c2dd"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung verwendet Werbesprache und Superlative: „The wait is over“, „radically leaner API“, „stunning new jitter retry strategy“ und „flawless graceful shutdown“.\"},{\"criterion\":\"R7\",\"evidence\":\"Auch einzelne Einträge sind werbend formuliert, etwa „Leaner than ever“, „game-changing“, „Shut down with confidence“ und „far more elegant“.\"},{\"criterion\":\"R8\",\"evidence\":\"Bei der Deprecation von „Passing a boolean to `worker.pause()`“ nennt die Migration nur `worker.pause({ drain: true })`. Sie erklärt nicht, wie die bisherigen Werte `true` und `false` jeweils zu ersetzen sind.\"}],\"reason\":\"Die Notes enthalten mehrfach Werbesprache. Die Migration für den booleschen Parameter von `worker.pause()` lässt zudem offen, wie beide möglichen bisherigen Aufrufe ersetzt werden sollen. Aussagen, die nur anhand von Quellen oder Diffs überprüft werden könnten, gelten gemäß Vorgabe als erfüllt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24536,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 233,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

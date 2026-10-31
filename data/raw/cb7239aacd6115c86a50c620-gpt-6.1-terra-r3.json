@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "cb7239aacd6115c86a50c620",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "internal-noise",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6077,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Der Abschnitt „Internal“ nennt den Release-Workflow mit `--provenance` und das Verschieben des Key-Builders in ein gemeinsames Modul. Das sind Build-Interna beziehungsweise ein reines Refactoring und gehören nicht in nutzerorientierte Release Notes.\"}],\"reason\":\"Der Kandidat entspricht in den nutzerrelevanten Punkten der Referenz, enthält aber zwei zusätzliche interne Änderungen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Der Abschnitt „Internal“ nennt den Release-Workflow mit `--provenance` und das Verschieben des Key-Builders in ein gemeinsames Modul. Das sind Build-Interna beziehungsweise ein reines Refactoring und gehören nicht in nutzerorientierte Release Notes."
+   }
+  ],
+  "reason": "Der Kandidat entspricht in den nutzerrelevanten Punkten der Referenz, enthält aber zwei zusätzliche interne Änderungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25706,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 109,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-6bb9-7cf1-9a0f-cb3c5799c916"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Der Abschnitt „Internal“ nennt den Release-Workflow mit `--provenance` und das Verschieben des Key-Builders in ein gemeinsames Modul. Das sind Build-Interna beziehungsweise ein reines Refactoring und gehören nicht in nutzerorientierte Release Notes.\"}],\"reason\":\"Der Kandidat entspricht in den nutzerrelevanten Punkten der Referenz, enthält aber zwei zusätzliche interne Änderungen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25706,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 109,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

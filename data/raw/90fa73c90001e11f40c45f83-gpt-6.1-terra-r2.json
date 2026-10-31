@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "90fa73c90001e11f40c45f83",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6871,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes garantieren, der Limiter verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff zeigt die Verwendung eines `TokenBucket`, aber weder dessen Implementierung noch eine solche Garantie.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Formulierungen wie „Take control like never before!“, „incredible rate limiter“, „effortlessly in charge“ und „sleek new“ sind Werbesprache und nicht sachlich.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine durch den Diff nicht belegte Garantie und werbliche Formulierungen. Die erneut eingeführte Limiter-Option und die Deprecation sind ansonsten in ihrer endgültigen Form wiedergegeben; der Minor-Sprung auf 4.1.0 passt zum Inhalt.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes garantieren, der Limiter verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff zeigt die Verwendung eines `TokenBucket`, aber weder dessen Implementierung noch eine solche Garantie."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „Take control like never before!“, „incredible rate limiter“, „effortlessly in charge“ und „sleek new“ sind Werbesprache und nicht sachlich."
+   }
+  ],
+  "reason": "Die Notes enthalten eine durch den Diff nicht belegte Garantie und werbliche Formulierungen. Die erneut eingeführte Limiter-Option und die Deprecation sind ansonsten in ihrer endgültigen Form wiedergegeben; der Minor-Sprung auf 4.1.0 passt zum Inhalt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26347,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 288,
+  "reasoning_output_tokens": 76
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-3935-7a12-9d37-b462df362838"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes garantieren, der Limiter verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff zeigt die Verwendung eines `TokenBucket`, aber weder dessen Implementierung noch eine solche Garantie.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Formulierungen wie „Take control like never before!“, „incredible rate limiter“, „effortlessly in charge“ und „sleek new“ sind Werbesprache und nicht sachlich.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine durch den Diff nicht belegte Garantie und werbliche Formulierungen. Die erneut eingeführte Limiter-Option und die Deprecation sind ansonsten in ihrer endgültigen Form wiedergegeben; der Minor-Sprung auf 4.1.0 passt zum Inhalt.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26347,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 288,
+    "reasoning_output_tokens": 76
+   }
+  }
+ ]
+}

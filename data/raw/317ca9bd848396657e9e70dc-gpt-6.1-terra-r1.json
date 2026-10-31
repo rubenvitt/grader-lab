@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "317ca9bd848396657e9e70dc",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "missing-breaking",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5628,
+ "text": "{\"reason\":\"Fassung B nennt zusätzlich die Umbenennung der Worker-Option als Breaking Change und gibt konkrete Migrationsschritte an. Ein Diff oder andere Quellen liegen jedoch nicht vor, sodass sich weder die Umbenennung noch die übrigen technischen Aussagen auf ihre Belegbarkeit prüfen lassen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B nennt zusätzlich die Umbenennung der Worker-Option als Breaking Change und gibt konkrete Migrationsschritte an. Ein Diff oder andere Quellen liegen jedoch nicht vor, sodass sich weder die Umbenennung noch die übrigen technischen Aussagen auf ihre Belegbarkeit prüfen lassen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25466,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 73,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-2f52-7002-9d6c-8d34d6b9d842"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt zusätzlich die Umbenennung der Worker-Option als Breaking Change und gibt konkrete Migrationsschritte an. Ein Diff oder andere Quellen liegen jedoch nicht vor, sodass sich weder die Umbenennung noch die übrigen technischen Aussagen auf ihre Belegbarkeit prüfen lassen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25466,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 73,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

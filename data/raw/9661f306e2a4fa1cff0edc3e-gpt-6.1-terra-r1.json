@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "9661f306e2a4fa1cff0edc3e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "ghost-pr",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4822,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben konkrete Änderungen und nennen bei der veralteten Methode einen Migrationsschritt. Ohne weitere Quellen sind weder dessen Korrektheit noch mögliche Breaking Changes oder zurückgenommene Änderungen überprüfbar; der Text selbst liefert dafür keinen Widerspruch.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben konkrete Änderungen und nennen bei der veralteten Methode einen Migrationsschritt. Ohne weitere Quellen sind weder dessen Korrektheit noch mögliche Breaking Changes oder zurückgenommene Änderungen überprüfbar; der Text selbst liefert dafür keinen Widerspruch.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25255,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 75,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-e4ed-7b20-bf58-29dff247a760"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben konkrete Änderungen und nennen bei der veralteten Methode einen Migrationsschritt. Ohne weitere Quellen sind weder dessen Korrektheit noch mögliche Breaking Changes oder zurückgenommene Änderungen überprüfbar; der Text selbst liefert dafür keinen Widerspruch.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25255,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 75,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

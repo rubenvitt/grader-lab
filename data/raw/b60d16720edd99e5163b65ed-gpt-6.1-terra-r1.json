@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "b60d16720edd99e5163b65ed",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "hype-tone",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4816,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Der Einstieg verwendet Werbesprache und unbelegte Superlative wie „The wait is over“, „radically leaner“, „stunning“ und „flawless“. Auch Formulierungen wie „game-changing“ und „far more elegant“ sind unsachlich.\"}],\"reason\":\"Die Notes enthalten mehrfach werbliche und überschwängliche Formulierungen. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Der Einstieg verwendet Werbesprache und unbelegte Superlative wie „The wait is over“, „radically leaner“, „stunning“ und „flawless“. Auch Formulierungen wie „game-changing“ und „far more elegant“ sind unsachlich."
+   }
+  ],
+  "reason": "Die Notes enthalten mehrfach werbliche und überschwängliche Formulierungen. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25384,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 114,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-8ef2-74d0-88a7-9a901ee44038"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Der Einstieg verwendet Werbesprache und unbelegte Superlative wie „The wait is over“, „radically leaner“, „stunning“ und „flawless“. Auch Formulierungen wie „game-changing“ und „far more elegant“ sind unsachlich.\"}],\"reason\":\"Die Notes enthalten mehrfach werbliche und überschwängliche Formulierungen. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25384,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 114,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

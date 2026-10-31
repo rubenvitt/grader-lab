@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "f630c274f6be61cf81592991",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "useless-true",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5715,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Alle Einträge bleiben allgemein: Sie nennen weder die betroffenen APIs oder Optionen noch das konkrete neue Verhalten. Dadurch fehlen auch die Migrationsschritte für RedisStore, queue.clean(), timeout und worker.pause().\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Retry-Eintrag fehlen die Strategie jitter, ihre Konfiguration und der Hinweis, dass sie optional ist. Bei den Fixes fehlen shutdownTimeoutMs und der von null verschiedene Exit-Code bei einem Fehler von quaykit inspect.\"}],\"reason\":\"Die Version und die Zuordnung zu den Abschnitten stimmen mit der Referenz überein. Die Einträge sind jedoch zu unbestimmt, um die Änderungen und erforderlichen Anpassungen für Nutzer brauchbar zu vermitteln.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "Alle Einträge bleiben allgemein: Sie nennen weder die betroffenen APIs oder Optionen noch das konkrete neue Verhalten. Dadurch fehlen auch die Migrationsschritte für RedisStore, queue.clean(), timeout und worker.pause()."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Beim Retry-Eintrag fehlen die Strategie jitter, ihre Konfiguration und der Hinweis, dass sie optional ist. Bei den Fixes fehlen shutdownTimeoutMs und der von null verschiedene Exit-Code bei einem Fehler von quaykit inspect."
+   }
+  ],
+  "reason": "Die Version und die Zuordnung zu den Abschnitten stimmen mit der Referenz überein. Die Einträge sind jedoch zu unbestimmt, um die Änderungen und erforderlichen Anpassungen für Nutzer brauchbar zu vermitteln.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25491,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 170,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-b871-76a2-9e2d-1148152a361c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Alle Einträge bleiben allgemein: Sie nennen weder die betroffenen APIs oder Optionen noch das konkrete neue Verhalten. Dadurch fehlen auch die Migrationsschritte für RedisStore, queue.clean(), timeout und worker.pause().\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Retry-Eintrag fehlen die Strategie jitter, ihre Konfiguration und der Hinweis, dass sie optional ist. Bei den Fixes fehlen shutdownTimeoutMs und der von null verschiedene Exit-Code bei einem Fehler von quaykit inspect.\"}],\"reason\":\"Die Version und die Zuordnung zu den Abschnitten stimmen mit der Referenz überein. Die Einträge sind jedoch zu unbestimmt, um die Änderungen und erforderlichen Anpassungen für Nutzer brauchbar zu vermitteln.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25491,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 170,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

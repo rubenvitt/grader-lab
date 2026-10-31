@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "81e0f33d1a5ada3c5a7744c7",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reordered",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8953,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 lässt `PostgresStore` bei Schemanamen, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen, einen Fehler auslösen. Dadurch müssen Nutzer betroffener Konfigurationen ihren Schemanamen anpassen; die Änderung fehlt unter „Breaking Changes“.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag zu #414 empfiehlt lediglich ein Upgrade. Er weist nicht darauf hin, dass bestimmte bisher akzeptierte Schemanamen nach dem Upgrade zu einem Fehler führen und eine Konfigurationsänderung nötig sein kann.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0; die Notes nennen 5.0.1. Die inkompatible Einschränkung der Schemanamen in PR #414 verlangt einen Major-Sprung auf 6.0.0.\"}],\"reason\":\"Die neue Validierung in PR #414 verändert die akzeptierte Konfiguration und muss trotz Embargo als Breaking Change erkennbar sein, ohne verbotene Sicherheitsdetails offenzulegen. Die übrigen Einträge sind durch die Diffs gedeckt; die zurückgenommene Replay-Funktion und interne Änderungen fehlen zu Recht.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 lässt `PostgresStore` bei Schemanamen, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen, einen Fehler auslösen. Dadurch müssen Nutzer betroffener Konfigurationen ihren Schemanamen anpassen; die Änderung fehlt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Eintrag zu #414 empfiehlt lediglich ein Upgrade. Er weist nicht darauf hin, dass bestimmte bisher akzeptierte Schemanamen nach dem Upgrade zu einem Fehler führen und eine Konfigurationsänderung nötig sein kann."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 5.0.0; die Notes nennen 5.0.1. Die inkompatible Einschränkung der Schemanamen in PR #414 verlangt einen Major-Sprung auf 6.0.0."
+   }
+  ],
+  "reason": "Die neue Validierung in PR #414 verändert die akzeptierte Konfiguration und muss trotz Embargo als Breaking Change erkennbar sein, ohne verbotene Sicherheitsdetails offenzulegen. Die übrigen Einträge sind durch die Diffs gedeckt; die zurückgenommene Replay-Funktion und interne Änderungen fehlen zu Recht.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26315,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 318,
+  "reasoning_output_tokens": 47
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-bb92-7480-90c7-076d94f787e3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 lässt `PostgresStore` bei Schemanamen, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen, einen Fehler auslösen. Dadurch müssen Nutzer betroffener Konfigurationen ihren Schemanamen anpassen; die Änderung fehlt unter „Breaking Changes“.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag zu #414 empfiehlt lediglich ein Upgrade. Er weist nicht darauf hin, dass bestimmte bisher akzeptierte Schemanamen nach dem Upgrade zu einem Fehler führen und eine Konfigurationsänderung nötig sein kann.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0; die Notes nennen 5.0.1. Die inkompatible Einschränkung der Schemanamen in PR #414 verlangt einen Major-Sprung auf 6.0.0.\"}],\"reason\":\"Die neue Validierung in PR #414 verändert die akzeptierte Konfiguration und muss trotz Embargo als Breaking Change erkennbar sein, ohne verbotene Sicherheitsdetails offenzulegen. Die übrigen Einträge sind durch die Diffs gedeckt; die zurückgenommene Replay-Funktion und interne Änderungen fehlen zu Recht.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26315,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 318,
+    "reasoning_output_tokens": 47
+   }
+  }
+ ]
+}

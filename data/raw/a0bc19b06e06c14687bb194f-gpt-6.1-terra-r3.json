@@ -1,0 +1,83 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "a0bc19b06e06c14687bb194f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "internal-noise",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 13456,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Die Einträge zum stabilisierten Test für hängengebliebene Jobs (#343) und zum Anheften von GitHub Actions an Commit-SHAs (#340) betreffen Tests beziehungsweise CI und sind für Nutzer der Bibliothek nicht relevant.\"}],\"reason\":\"Der Kandidat stimmt in den nutzerrelevanten Änderungen mit der Referenz überein, enthält aber zwei interne Änderungen, die nicht in die Release Notes gehören.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Die Einträge zum stabilisierten Test für hängengebliebene Jobs (#343) und zum Anheften von GitHub Actions an Commit-SHAs (#340) betreffen Tests beziehungsweise CI und sind für Nutzer der Bibliothek nicht relevant."
+   }
+  ],
+  "reason": "Der Kandidat stimmt in den nutzerrelevanten Änderungen mit der Referenz überein, enthält aber zwei interne Änderungen, die nicht in die Release Notes gehören.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24670,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 115,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": true,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-e4c2-7662-8825-694f5ca71d5e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53607800c4b051f-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360784fdb15902-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536078c3caef694-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360798a82706e3-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "error",
+    "message": "Falling back from WebSockets to HTTPS transport. unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53607ae293f1899-TXL"
+   }
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_1",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Die Einträge zum stabilisierten Test für hängengebliebene Jobs (#343) und zum Anheften von GitHub Actions an Commit-SHAs (#340) betreffen Tests beziehungsweise CI und sind für Nutzer der Bibliothek nicht relevant.\"}],\"reason\":\"Der Kandidat stimmt in den nutzerrelevanten Änderungen mit der Referenz überein, enthält aber zwei interne Änderungen, die nicht in die Release Notes gehören.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24670,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 115,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

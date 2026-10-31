@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "6ee2962ee6bcc54b2567a871",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-bump",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5109,
+ "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 4.2.0 und enthalten unter „Breaking Changes“ Änderungen, die Anpassungen erfordern, darunter das entfernte `queue.clean()`. Dafür ist ein Major-Sprung erforderlich.\"}],\"reason\":\"Die aufgeführten Breaking Changes sind mit einer Minor-Version nicht vereinbar. Ob die übrigen Aussagen und Migrationsschritte durch den Code gedeckt sind, lässt sich allein aus den Notes nicht prüfen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 4.2.0 und enthalten unter „Breaking Changes“ Änderungen, die Anpassungen erfordern, darunter das entfernte `queue.clean()`. Dafür ist ein Major-Sprung erforderlich."
+   }
+  ],
+  "reason": "Die aufgeführten Breaking Changes sind mit einer Minor-Version nicht vereinbar. Ob die übrigen Aussagen und Migrationsschritte durch den Code gedeckt sind, lässt sich allein aus den Notes nicht prüfen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25347,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 113,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-532f-7b02-a758-fa2f2b3bef63"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 4.2.0 und enthalten unter „Breaking Changes“ Änderungen, die Anpassungen erfordern, darunter das entfernte `queue.clean()`. Dafür ist ein Major-Sprung erforderlich.\"}],\"reason\":\"Die aufgeführten Breaking Changes sind mit einer Minor-Version nicht vereinbar. Ob die übrigen Aussagen und Migrationsschritte durch den Code gedeckt sind, lässt sich allein aus den Notes nicht prüfen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25347,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 113,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

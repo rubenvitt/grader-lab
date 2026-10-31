@@ -19,7 +19,8 @@ export function interpret({ code, stdout, stderr, timedOut }) {
   const failures = events.filter((e) => e.type === 'error' || e.type === 'turn.failed').map((e) => JSON.stringify(e));
   const messages = events.filter((e) => e.type === 'item.completed' && e.item?.type === 'agent_message');
   if (timedOut) throw new ModelError('timeout');
-  if (code !== 0 || failures.length || !messages.length) {
+  // `error` events can be mere reconnect notices (codex then falls back to HTTPS), only turn.failed is final.
+  if (code !== 0 || events.some((e) => e.type === 'turn.failed') || !messages.length) {
     const detail = [...failures, stderr].join('\n').slice(0, 2000);
     if (RATE_LIMIT.test(detail)) throw new RateLimitError(detail);
     throw new ModelError(`codex exit ${code}: ${detail}`);

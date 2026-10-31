@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "1eafefee40a1b675d2396d00",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4401,
+ "text": "{\"reason\":\"Fassung A ist sachlich formuliert. Fassung B enthält Werbesprache und mit „Unbreakable job state“ eine unbelegte Garantie; ob die übrigen Aussagen und die Versionsnummer korrekt sind, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist sachlich formuliert. Fassung B enthält Werbesprache und mit „Unbreakable job state“ eine unbelegte Garantie; ob die übrigen Aussagen und die Versionsnummer korrekt sind, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24405,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 67,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-deb6-7d03-88c4-f39149e36fd3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist sachlich formuliert. Fassung B enthält Werbesprache und mit „Unbreakable job state“ eine unbelegte Garantie; ob die übrigen Aussagen und die Versionsnummer korrekt sind, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24405,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 67,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

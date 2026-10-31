@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "a3849dde299c1a87143d7253",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5823,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung kündigt „Bug fixes“ an. Die Quellen enthalten keinen entsprechenden nutzerrelevanten Bugfix; der Revert von #371 wird durch das Reland #376 ersetzt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Workers can now be configured with more options“ nennt die Änderung nicht. #376 führt die Option `limiter: { max, perMs }` für eine Begrenzung pro Worker-Instanz ein.\"},{\"criterion\":\"R8\",\"evidence\":\"„A job option has been deprecated“ nennt weder die betroffene Option noch die nötige Umstellung. Laut #378 ist `timeout` veraltet und durch `timeoutMs` zu ersetzen; `timeout` funktioniert vorerst weiter und löst eine einmalige Warnung aus.\"}],\"reason\":\"Die Versionsnummer 4.1.0 passt zu den neuen Funktionen und der Deprecation. Die Notes enthalten jedoch eine nicht belegte Ankündigung und beschreiben die belegten Änderungen zu ungenau, um Nutzern konkrete Handlungsschritte zu ermöglichen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung kündigt „Bug fixes“ an. Die Quellen enthalten keinen entsprechenden nutzerrelevanten Bugfix; der Revert von #371 wird durch das Reland #376 ersetzt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Workers can now be configured with more options“ nennt die Änderung nicht. #376 führt die Option `limiter: { max, perMs }` für eine Begrenzung pro Worker-Instanz ein."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„A job option has been deprecated“ nennt weder die betroffene Option noch die nötige Umstellung. Laut #378 ist `timeout` veraltet und durch `timeoutMs` zu ersetzen; `timeout` funktioniert vorerst weiter und löst eine einmalige Warnung aus."
+   }
+  ],
+  "reason": "Die Versionsnummer 4.1.0 passt zu den neuen Funktionen und der Deprecation. Die Notes enthalten jedoch eine nicht belegte Ankündigung und beschreiben die belegten Änderungen zu ungenau, um Nutzern konkrete Handlungsschritte zu ermöglichen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25404,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 292,
+  "reasoning_output_tokens": 50
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-7c88-7d30-a144-971ab3f7d976"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung kündigt „Bug fixes“ an. Die Quellen enthalten keinen entsprechenden nutzerrelevanten Bugfix; der Revert von #371 wird durch das Reland #376 ersetzt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Workers can now be configured with more options“ nennt die Änderung nicht. #376 führt die Option `limiter: { max, perMs }` für eine Begrenzung pro Worker-Instanz ein.\"},{\"criterion\":\"R8\",\"evidence\":\"„A job option has been deprecated“ nennt weder die betroffene Option noch die nötige Umstellung. Laut #378 ist `timeout` veraltet und durch `timeoutMs` zu ersetzen; `timeout` funktioniert vorerst weiter und löst eine einmalige Warnung aus.\"}],\"reason\":\"Die Versionsnummer 4.1.0 passt zu den neuen Funktionen und der Deprecation. Die Notes enthalten jedoch eine nicht belegte Ankündigung und beschreiben die belegten Änderungen zu ungenau, um Nutzern konkrete Handlungsschritte zu ermöglichen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25404,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 292,
+    "reasoning_output_tokens": 50
+   }
+  }
+ ]
+}

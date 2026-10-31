@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "075f8c3aa0051f66dc460e6b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6407,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zum Rate Limiter verweist auf PR #377. Die Quellen belegen die endgültige Implementierung durch PR #376.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der Worker verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff zeigt einen Token-Bucket-Aufruf, aber keine Implementierung, die diese Grenze für jedes solche Zeitfenster belegt.\"}],\"reason\":\"Die Notes beschreiben die endgültige Option und die Migration der veralteten Job-Option. Beim Rate Limiter sind jedoch der PR-Verweis falsch und die angegebene Mengenbegrenzung durch den gezeigten Diff nicht ausreichend belegt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zum Rate Limiter verweist auf PR #377. Die Quellen belegen die endgültige Implementierung durch PR #376."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, der Worker verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff zeigt einen Token-Bucket-Aufruf, aber keine Implementierung, die diese Grenze für jedes solche Zeitfenster belegt."
+   }
+  ],
+  "reason": "Die Notes beschreiben die endgültige Option und die Migration der veralteten Job-Option. Beim Rate Limiter sind jedoch der PR-Verweis falsch und die angegebene Mengenbegrenzung durch den gezeigten Diff nicht ausreichend belegt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25461,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 234,
+  "reasoning_output_tokens": 62
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-015d-7a81-8026-807a5a4b28af"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zum Rate Limiter verweist auf PR #377. Die Quellen belegen die endgültige Implementierung durch PR #376.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der Worker verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff zeigt einen Token-Bucket-Aufruf, aber keine Implementierung, die diese Grenze für jedes solche Zeitfenster belegt.\"}],\"reason\":\"Die Notes beschreiben die endgültige Option und die Migration der veralteten Job-Option. Beim Rate Limiter sind jedoch der PR-Verweis falsch und die angegebene Mengenbegrenzung durch den gezeigten Diff nicht ausreichend belegt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25461,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 234,
+    "reasoning_output_tokens": 62
+   }
+  }
+ ]
+}

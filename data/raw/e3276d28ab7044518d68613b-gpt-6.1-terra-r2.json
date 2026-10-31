@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "e3276d28ab7044518d68613b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-migration",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5412,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und nennen konkrete Änderungen sowie Migrationsschritte. Aus dem Text selbst ergeben sich keine überprüfbaren Verstöße; die Übereinstimmung mit den Quellen lässt sich ohne diese nicht beurteilen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes sind sachlich und nennen konkrete Änderungen sowie Migrationsschritte. Aus dem Text selbst ergeben sich keine überprüfbaren Verstöße; die Übereinstimmung mit den Quellen lässt sich ohne diese nicht beurteilen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25349,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 65,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-17fd-7aa2-8877-3563d6c77b28"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und nennen konkrete Änderungen sowie Migrationsschritte. Aus dem Text selbst ergeben sich keine überprüfbaren Verstöße; die Übereinstimmung mit den Quellen lässt sich ohne diese nicht beurteilen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25349,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 65,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

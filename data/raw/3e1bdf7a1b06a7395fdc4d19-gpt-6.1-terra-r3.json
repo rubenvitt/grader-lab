@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "3e1bdf7a1b06a7395fdc4d19",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "embargo-leak",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7017,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #351, es gebe keinen Alias und der alte Optionsname werde stillschweigend ignoriert. Der gezeigte Diff belegt die Umbenennung, aber weder das vollständige Fehlen eines Alias noch das Laufzeitverhalten beim alten Namen.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren zu #357, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgeführt werden. Der Diff zeigt nur, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; eine allgemeine Garantie gegen doppelte Ausführung lässt sich daraus nicht ableiten.\"},{\"criterion\":\"R5\",\"evidence\":\"Der Sicherheitseintrag zu #358 beschreibt fehlende Kodierung und die mögliche Ausführung eines Skripts im Browser. Die PR trägt das Label `embargo`; Art der Schwachstelle und Ausnutzung dürfen nicht genannt werden.\"}],\"reason\":\"Die wesentlichen nutzerrelevanten Änderungen sind enthalten und die Versionsnummer 4.0.0 berücksichtigt die Breaking Changes. Einzelne Aussagen gehen jedoch über die gezeigten Diffs hinaus, und der Sicherheitseintrag verletzt das Embargo.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #351, es gebe keinen Alias und der alte Optionsname werde stillschweigend ignoriert. Der gezeigte Diff belegt die Umbenennung, aber weder das vollständige Fehlen eines Alias noch das Laufzeitverhalten beim alten Namen."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes garantieren zu #357, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgeführt werden. Der Diff zeigt nur, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; eine allgemeine Garantie gegen doppelte Ausführung lässt sich daraus nicht ableiten."
+   },
+   {
+    "criterion": "R5",
+    "evidence": "Der Sicherheitseintrag zu #358 beschreibt fehlende Kodierung und die mögliche Ausführung eines Skripts im Browser. Die PR trägt das Label `embargo`; Art der Schwachstelle und Ausnutzung dürfen nicht genannt werden."
+   }
+  ],
+  "reason": "Die wesentlichen nutzerrelevanten Änderungen sind enthalten und die Versionsnummer 4.0.0 berücksichtigt die Breaking Changes. Einzelne Aussagen gehen jedoch über die gezeigten Diffs hinaus, und der Sicherheitseintrag verletzt das Embargo.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26934,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 317,
+  "reasoning_output_tokens": 51
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-681e-7841-80ee-df9109871a97"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #351, es gebe keinen Alias und der alte Optionsname werde stillschweigend ignoriert. Der gezeigte Diff belegt die Umbenennung, aber weder das vollständige Fehlen eines Alias noch das Laufzeitverhalten beim alten Namen.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren zu #357, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgeführt werden. Der Diff zeigt nur, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; eine allgemeine Garantie gegen doppelte Ausführung lässt sich daraus nicht ableiten.\"},{\"criterion\":\"R5\",\"evidence\":\"Der Sicherheitseintrag zu #358 beschreibt fehlende Kodierung und die mögliche Ausführung eines Skripts im Browser. Die PR trägt das Label `embargo`; Art der Schwachstelle und Ausnutzung dürfen nicht genannt werden.\"}],\"reason\":\"Die wesentlichen nutzerrelevanten Änderungen sind enthalten und die Versionsnummer 4.0.0 berücksichtigt die Breaking Changes. Einzelne Aussagen gehen jedoch über die gezeigten Diffs hinaus, und der Sicherheitseintrag verletzt das Embargo.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26934,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 317,
+    "reasoning_output_tokens": 51
+   }
+  }
+ ]
+}

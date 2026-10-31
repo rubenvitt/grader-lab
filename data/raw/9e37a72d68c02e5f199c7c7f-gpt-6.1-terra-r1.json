@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "9e37a72d68c02e5f199c7c7f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "ghost-pr",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5234,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Fix nach Verlust des Job-Locks verweist im Kandidaten auf #412; die Referenz nennt #413.\"}],\"reason\":\"Der PR-Verweis für den Lock-Loss-Fix weicht von der Referenz ab. Die übrigen Angaben stimmen überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Fix nach Verlust des Job-Locks verweist im Kandidaten auf #412; die Referenz nennt #413."
+   }
+  ],
+  "reason": "Der PR-Verweis für den Lock-Loss-Fix weicht von der Referenz ab. Die übrigen Angaben stimmen überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24493,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 83,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-92ba-7d81-8844-c75c42e7b8cf"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Fix nach Verlust des Job-Locks verweist im Kandidaten auf #412; die Referenz nennt #413.\"}],\"reason\":\"Der PR-Verweis für den Lock-Loss-Fix weicht von der Referenz ab. Die übrigen Angaben stimmen überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24493,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 83,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

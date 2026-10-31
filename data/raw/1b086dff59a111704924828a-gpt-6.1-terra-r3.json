@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "1b086dff59a111704924828a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reverted-listed",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5752,
+ "text": "{\"reason\":\"Fassung B enthält zusätzlich den Eintrag zu Priority Lanes. Ohne die zugehörigen Quellen lässt sich nicht beurteilen, ob er belegt oder im selben Release zurückgenommen wurde; anhand des vorliegenden Materials ist daher keine Fassung als besser erkennbar.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung B enthält zusätzlich den Eintrag zu Priority Lanes. Ohne die zugehörigen Quellen lässt sich nicht beurteilen, ob er belegt oder im selben Release zurückgenommen wurde; anhand des vorliegenden Materials ist daher keine Fassung als besser erkennbar.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25415,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 176,
+  "reasoning_output_tokens": 104
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-9286-74b0-853b-f9a8366318d7"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B enthält zusätzlich den Eintrag zu Priority Lanes. Ohne die zugehörigen Quellen lässt sich nicht beurteilen, ob er belegt oder im selben Release zurückgenommen wurde; anhand des vorliegenden Materials ist daher keine Fassung als besser erkennbar.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25415,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 176,
+    "reasoning_output_tokens": 104
+   }
+  }
+ ]
+}

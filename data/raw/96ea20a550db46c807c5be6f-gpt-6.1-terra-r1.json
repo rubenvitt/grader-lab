@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "96ea20a550db46c807c5be6f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reverted-listed",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4652,
+ "text": "{\"reason\":\"Der einzige sachliche Unterschied ist der zusätzliche Eintrag zu Priority Lanes in Fassung A. Ohne Quellen lässt sich nicht beurteilen, ob er belegt und im endgültigen Release enthalten ist; daher sind die Fassungen nach der beurteilbaren Rubric gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Der einzige sachliche Unterschied ist der zusätzliche Eintrag zu Priority Lanes in Fassung A. Ohne Quellen lässt sich nicht beurteilen, ob er belegt und im endgültigen Release enthalten ist; daher sind die Fassungen nach der beurteilbaren Rubric gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25417,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 106,
+  "reasoning_output_tokens": 31
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-6cc3-7020-a622-7d256d885952"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Der einzige sachliche Unterschied ist der zusätzliche Eintrag zu Priority Lanes in Fassung A. Ohne Quellen lässt sich nicht beurteilen, ob er belegt und im endgültigen Release enthalten ist; daher sind die Fassungen nach der beurteilbaren Rubric gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25417,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 106,
+    "reasoning_output_tokens": 31
+   }
+  }
+ ]
+}

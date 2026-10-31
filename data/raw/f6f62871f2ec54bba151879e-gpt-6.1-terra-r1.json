@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "f6f62871f2ec54bba151879e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4290,
+ "text": "{\"reason\":\"Fassung B lässt die Änderungen an Tests und GitHub Actions weg, die für Bibliotheksnutzer nicht relevant sind. Fassung A verstößt mit diesen Einträgen gegen R6.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B lässt die Änderungen an Tests und GitHub Actions weg, die für Bibliotheksnutzer nicht relevant sind. Fassung A verstößt mit diesen Einträgen gegen R6.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25411,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 57,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-d1b2-7810-a488-75a97cbe3d0c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B lässt die Änderungen an Tests und GitHub Actions weg, die für Bibliotheksnutzer nicht relevant sind. Fassung A verstößt mit diesen Einträgen gegen R6.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25411,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 57,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

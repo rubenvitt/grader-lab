@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "ecace92b466794188849e6d0",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7581,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 lässt den Konstruktor bei Schemanamen, die nicht dem neuen Muster entsprechen, einen Fehler auslösen. Bestehende Konfigurationen können deshalb eine Anpassung benötigen; der Eintrag steht aber nur unter „Security“ und nicht unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Sicherheitseintrag zu #414 empfiehlt nur ein Upgrade. Nutzer erkennen daraus nicht, dass eine bestehende Konfiguration nach dem Upgrade möglicherweise angepasst werden muss. Das kann ohne Offenlegung der technischen Details kenntlich gemacht werden.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 5.0.1 nach 5.0.0. Die neue Einschränkung für Schemanamen in PR #414 ist eine Breaking Change und verlangt nach SemVer einen Major-Sprung auf 6.0.0.\"\n    }\n  ],\n  \"reason\": \"Die neue Validierung in PR #414 kann bisher verwendete Konfigurationen zurückweisen. Die Notes müssen diese Inkompatibilität kenntlich machen und eine passende Major-Version tragen, ohne Details des Fixes offenzulegen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 lässt den Konstruktor bei Schemanamen, die nicht dem neuen Muster entsprechen, einen Fehler auslösen. Bestehende Konfigurationen können deshalb eine Anpassung benötigen; der Eintrag steht aber nur unter „Security“ und nicht unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Sicherheitseintrag zu #414 empfiehlt nur ein Upgrade. Nutzer erkennen daraus nicht, dass eine bestehende Konfiguration nach dem Upgrade möglicherweise angepasst werden muss. Das kann ohne Offenlegung der technischen Details kenntlich gemacht werden."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die neue Einschränkung für Schemanamen in PR #414 ist eine Breaking Change und verlangt nach SemVer einen Major-Sprung auf 6.0.0."
+   }
+  ],
+  "reason": "Die neue Validierung in PR #414 kann bisher verwendete Konfigurationen zurückweisen. Die Notes müssen diese Inkompatibilität kenntlich machen und eine passende Major-Version tragen, ohne Details des Fixes offenzulegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25463,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 393,
+  "reasoning_output_tokens": 110
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-4931-7002-b8fb-95fb4e18c1b7"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 lässt den Konstruktor bei Schemanamen, die nicht dem neuen Muster entsprechen, einen Fehler auslösen. Bestehende Konfigurationen können deshalb eine Anpassung benötigen; der Eintrag steht aber nur unter „Security“ und nicht unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Sicherheitseintrag zu #414 empfiehlt nur ein Upgrade. Nutzer erkennen daraus nicht, dass eine bestehende Konfiguration nach dem Upgrade möglicherweise angepasst werden muss. Das kann ohne Offenlegung der technischen Details kenntlich gemacht werden.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 5.0.1 nach 5.0.0. Die neue Einschränkung für Schemanamen in PR #414 ist eine Breaking Change und verlangt nach SemVer einen Major-Sprung auf 6.0.0.\"\n    }\n  ],\n  \"reason\": \"Die neue Validierung in PR #414 kann bisher verwendete Konfigurationen zurückweisen. Die Notes müssen diese Inkompatibilität kenntlich machen und eine passende Major-Version tragen, ohne Details des Fixes offenzulegen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25463,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 393,
+    "reasoning_output_tokens": 110
+   }
+  }
+ ]
+}

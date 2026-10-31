@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "19effa80dc0583cdc7b1d2e7",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reverted-listed",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4902,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich bei den Namen der Limiter-Optionen, den PR-Nummern und der Aussage zum Limit pro Worker. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, welche Angaben korrekt sind; nach der Rubric sind die Fassungen daher nicht unterscheidbar.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich bei den Namen der Limiter-Optionen, den PR-Nummern und der Aussage zum Limit pro Worker. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, welche Angaben korrekt sind; nach der Rubric sind die Fassungen daher nicht unterscheidbar.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24406,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 105,
+  "reasoning_output_tokens": 28
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-b181-7e13-a394-7adb1279f189"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich bei den Namen der Limiter-Optionen, den PR-Nummern und der Aussage zum Limit pro Worker. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, welche Angaben korrekt sind; nach der Rubric sind die Fassungen daher nicht unterscheidbar.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24406,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 105,
+    "reasoning_output_tokens": 28
+   }
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "08790bcb8823842ad23c6d5f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "invented-claim",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4507,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat behauptet, große Importe seien mit `addBulk` etwa 40 % schneller. Die Referenz nennt keine Geschwindigkeitsmessung und belegt diese Zahl nicht.\"}],\"reason\":\"Der Kandidat ergänzt eine unbelegte Leistungsangabe. Die übrigen Angaben stimmen mit der Referenz überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Kandidat behauptet, große Importe seien mit `addBulk` etwa 40 % schneller. Die Referenz nennt keine Geschwindigkeitsmessung und belegt diese Zahl nicht."
+   }
+  ],
+  "reason": "Der Kandidat ergänzt eine unbelegte Leistungsangabe. Die übrigen Angaben stimmen mit der Referenz überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24797,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 93,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-eccf-7cb0-9e9d-d365aea3cd09"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat behauptet, große Importe seien mit `addBulk` etwa 40 % schneller. Die Referenz nennt keine Geschwindigkeitsmessung und belegt diese Zahl nicht.\"}],\"reason\":\"Der Kandidat ergänzt eine unbelegte Leistungsangabe. Die übrigen Angaben stimmen mit der Referenz überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24797,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 93,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

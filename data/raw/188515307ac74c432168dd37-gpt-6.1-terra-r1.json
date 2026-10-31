@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "188515307ac74c432168dd37",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "hype-tone",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4427,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Werbliche Formulierungen wie „powerful one“, „We are thrilled“, „game-changing“, „Bulletproof“ und „delightful“ sind nicht sachlich.\"}],\"reason\":\"Die Release Notes enthalten deutlich werbliche Sprache. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Werbliche Formulierungen wie „powerful one“, „We are thrilled“, „game-changing“, „Bulletproof“ und „delightful“ sind nicht sachlich."
+   }
+  ],
+  "reason": "Die Release Notes enthalten deutlich werbliche Sprache. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25298,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 88,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-1c0d-7fd1-9f56-cf52ba7cdfbf"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Werbliche Formulierungen wie „powerful one“, „We are thrilled“, „game-changing“, „Bulletproof“ und „delightful“ sind nicht sachlich.\"}],\"reason\":\"Die Release Notes enthalten deutlich werbliche Sprache. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25298,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 88,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

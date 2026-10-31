@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "6a00b26d84a788ca9492b1d2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "invented-claim",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5210,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, das Limit werde von allen Workern einer Queue geteilt. Der Diff von PR #376 erstellt dagegen einen Token-Bucket pro Worker-Instanz und bezeichnet ihn ausdrücklich als nicht geteilt.\"}],\"reason\":\"Die übrigen Angaben zum erneut eingeführten Rate-Limiter und zur Deprecation stimmen mit den Diffs überein. Version 4.1.0 passt zum neuen Feature und zur Deprecation.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, das Limit werde von allen Workern einer Queue geteilt. Der Diff von PR #376 erstellt dagegen einen Token-Bucket pro Worker-Instanz und bezeichnet ihn ausdrücklich als nicht geteilt."
+   }
+  ],
+  "reason": "Die übrigen Angaben zum erneut eingeführten Rate-Limiter und zur Deprecation stimmen mit den Diffs überein. Version 4.1.0 passt zum neuen Feature und zur Deprecation.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25464,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 117,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-344c-7d92-b977-d1894e7a426d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, das Limit werde von allen Workern einer Queue geteilt. Der Diff von PR #376 erstellt dagegen einen Token-Bucket pro Worker-Instanz und bezeichnet ihn ausdrücklich als nicht geteilt.\"}],\"reason\":\"Die übrigen Angaben zum erneut eingeführten Rate-Limiter und zur Deprecation stimmen mit den Diffs überein. Version 4.1.0 passt zum neuen Feature und zur Deprecation.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25464,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 117,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

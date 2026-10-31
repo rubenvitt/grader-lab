@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "eeeaf49cad3c14eead18ab87",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5460,
+ "text": "{\"reason\":\"Die Fassungen enthalten dieselben Änderungen, Migrationshinweise und Versionsnummern. Die Unterschiede betreffen nur die Formulierung; anhand der Rubric ist keine Fassung sachlich besser.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen enthalten dieselben Änderungen, Migrationshinweise und Versionsnummern. Die Unterschiede betreffen nur die Formulierung; anhand der Rubric ist keine Fassung sachlich besser.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25599,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 56,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-5f23-7ac1-b34c-085fc4f0ae78"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen enthalten dieselben Änderungen, Migrationshinweise und Versionsnummern. Die Unterschiede betreffen nur die Formulierung; anhand der Rubric ist keine Fassung sachlich besser.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25599,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 56,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

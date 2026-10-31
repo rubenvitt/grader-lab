@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "c0883259a22edd54ea3c43e9",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4781,
+ "text": "{\"reason\":\"Fassung A ist besser, weil sie sich auf nutzerrelevante Änderungen beschränkt. Fassung B enthält zusätzlich CI-Interna und eine Dev-Dependency, die nach R6 nicht in die Release Notes gehören.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil sie sich auf nutzerrelevante Änderungen beschränkt. Fassung B enthält zusätzlich CI-Interna und eine Dev-Dependency, die nach R6 nicht in die Release Notes gehören.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25415,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 62,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-c5ac-76b3-b503-a882453ec32b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil sie sich auf nutzerrelevante Änderungen beschränkt. Fassung B enthält zusätzlich CI-Interna und eine Dev-Dependency, die nach R6 nicht in die Release Notes gehören.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25415,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

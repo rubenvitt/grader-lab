@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "ad09bcbc0a5d9fae87cb38ee",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4390,
+ "text": "{\"reason\":\"Fassung A ist besser, weil sie die Jitter-Strategie als optional beschreibt. Fassung B behauptet dagegen eine Änderung des Standardverhaltens, führt diese aber nicht unter „Breaking Changes“ auf; welche Aussage tatsächlich durch den Diff gedeckt ist, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil sie die Jitter-Strategie als optional beschreibt. Fassung B behauptet dagegen eine Änderung des Standardverhaltens, führt diese aber nicht unter „Breaking Changes“ auf; welche Aussage tatsächlich durch den Diff gedeckt ist, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25574,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 78,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-f5ca-71d2-abd5-32299cb350d7"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil sie die Jitter-Strategie als optional beschreibt. Fassung B behauptet dagegen eine Änderung des Standardverhaltens, führt diese aber nicht unter „Breaking Changes“ auf; welche Aussage tatsächlich durch den Diff gedeckt ist, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25574,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 78,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

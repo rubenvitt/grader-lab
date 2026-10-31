@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "aebf9c75f999124159d5655f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4409,
+ "text": "{\"reason\":\"Die Fassungen enthalten dieselben sachlichen Aussagen und Migrationsschritte. Ihre Unterschiede in Formulierung und Reihenfolge begründen anhand der Rubrik keine bessere Bewertung.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen enthalten dieselben sachlichen Aussagen und Migrationsschritte. Ihre Unterschiede in Formulierung und Reihenfolge begründen anhand der Rubrik keine bessere Bewertung.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24551,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 51,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-b4e4-7750-9ccb-e825bb62058f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen enthalten dieselben sachlichen Aussagen und Migrationsschritte. Ihre Unterschiede in Formulierung und Reihenfolge begründen anhand der Rubrik keine bessere Bewertung.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24551,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 51,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

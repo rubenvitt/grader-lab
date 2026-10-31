@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "3f93bbd83ce98c7406bc2f4f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "invented-claim",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 8757,
+ "text": "{\"violations\":[],\"reason\":\"Die Einträge beschreiben konkrete Änderungen und nennen beim veralteten Parameter einen Migrationsschritt. Ohne Quellen lassen sich die technischen Aussagen und die Versionsnummer nicht weiter prüfen; aus dem Text selbst ergibt sich kein Verstoß.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Einträge beschreiben konkrete Änderungen und nennen beim veralteten Parameter einen Migrationsschritt. Ohne Quellen lassen sich die technischen Aussagen und die Versionsnummer nicht weiter prüfen; aus dem Text selbst ergibt sich kein Verstoß.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24350,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 66,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-1610-7420-80a7-7ba5ef8822cb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Einträge beschreiben konkrete Änderungen und nennen beim veralteten Parameter einen Migrationsschritt. Ohne Quellen lassen sich die technischen Aussagen und die Versionsnummer nicht weiter prüfen; aus dem Text selbst ergibt sich kein Verstoß.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24350,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 66,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

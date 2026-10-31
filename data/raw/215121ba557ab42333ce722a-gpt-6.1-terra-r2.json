@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "215121ba557ab42333ce722a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "false-success",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4102,
+ "text": "{\"violations\":[],\"reason\":\"Der Kandidat stimmt vollständig mit der Referenz überein und erfüllt die Rubric.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Kandidat stimmt vollständig mit der Referenz überein und erfüllt die Rubric.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25489,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 39,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-59ec-7232-ab8d-6eb67f193a73"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Kandidat stimmt vollständig mit der Referenz überein und erfüllt die Rubric.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25489,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 39,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

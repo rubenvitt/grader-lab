@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "ce3a95584486a1f04ce80a44",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "invented-claim",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 4934,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #304 behauptet, der Job werde beim nächsten Poll erneut versucht. Der Diff belegt nur, dass der Lock im `finally`-Block freigegeben wird; ein Retry oder dessen Zeitpunkt ist nicht belegt.\"}],\"reason\":\"Die Notes geben die verbleibenden nutzerrelevanten Änderungen und die Migration zum geänderten Standardwert wieder. Die Aussage zum Retry in #304 geht über den belegten Diff hinaus.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #304 behauptet, der Job werde beim nächsten Poll erneut versucht. Der Diff belegt nur, dass der Lock im `finally`-Block freigegeben wird; ein Retry oder dessen Zeitpunkt ist nicht belegt."
+   }
+  ],
+  "reason": "Die Notes geben die verbleibenden nutzerrelevanten Änderungen und die Migration zum geänderten Standardwert wieder. Die Aussage zum Retry in #304 geht über den belegten Diff hinaus.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26843,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 145,
+  "reasoning_output_tokens": 25
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-cf1e-70d0-9571-251016c71c25"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #304 behauptet, der Job werde beim nächsten Poll erneut versucht. Der Diff belegt nur, dass der Lock im `finally`-Block freigegeben wird; ein Retry oder dessen Zeitpunkt ist nicht belegt.\"}],\"reason\":\"Die Notes geben die verbleibenden nutzerrelevanten Änderungen und die Migration zum geänderten Standardwert wieder. Die Aussage zum Retry in #304 geht über den belegten Diff hinaus.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26843,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 145,
+    "reasoning_output_tokens": 25
+   }
+  }
+ ]
+}

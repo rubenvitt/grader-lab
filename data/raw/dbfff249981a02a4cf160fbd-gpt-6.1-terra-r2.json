@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "dbfff249981a02a4cf160fbd",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6949,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff belegt, dass das Lock im `finally`-Block freigegeben wird, zeigt aber keine Änderung des Jobstatus.\"\n    }\n  ],\n  \"reason\": \"Die Breaking Change, der Migrationsschritt, das CLI-Feature und die Major-Version sind durch die Quellen gedeckt. Die zurückgenommenen Priority Lanes und interne Änderungen wurden ausgelassen; die Aussage zum Status des Jobs nach einem Fehler geht jedoch über den Diff hinaus.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff belegt, dass das Lock im `finally`-Block freigegeben wird, zeigt aber keine Änderung des Jobstatus."
+   }
+  ],
+  "reason": "Die Breaking Change, der Migrationsschritt, das CLI-Feature und die Major-Version sind durch die Quellen gedeckt. Die zurückgenommenen Priority Lanes und interne Änderungen wurden ausgelassen; die Aussage zum Status des Jobs nach einem Fehler geht jedoch über den Diff hinaus.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26836,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 278,
+  "reasoning_output_tokens": 116
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-5c86-72e0-8330-12bfc48a2615"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff belegt, dass das Lock im `finally`-Block freigegeben wird, zeigt aber keine Änderung des Jobstatus.\"\n    }\n  ],\n  \"reason\": \"Die Breaking Change, der Migrationsschritt, das CLI-Feature und die Major-Version sind durch die Quellen gedeckt. Die zurückgenommenen Priority Lanes und interne Änderungen wurden ausgelassen; die Aussage zum Status des Jobs nach einem Fehler geht jedoch über den Diff hinaus.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26836,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 278,
+    "reasoning_output_tokens": 116
+   }
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "a73eddfcb8644ce13f938018",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "missing-breaking",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5135,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #307 ändert den Standardwert von `removeOnComplete` von `false` auf `true`. Diese Änderung fehlt unter „Breaking Changes“: Nutzer, die abgeschlossene Jobs weiterhin behalten möchten, müssen `removeOnComplete: false` setzen.\"}],\"reason\":\"Die übrigen Einträge sind durch die Diffs gedeckt; die zurückgenommenen Lanes und interne Änderungen erscheinen nicht in den Notes. Die Version 3.0.0 passt zum Breaking Change, aber die Änderung des Standardwerts fehlt in den Notes.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #307 ändert den Standardwert von `removeOnComplete` von `false` auf `true`. Diese Änderung fehlt unter „Breaking Changes“: Nutzer, die abgeschlossene Jobs weiterhin behalten möchten, müssen `removeOnComplete: false` setzen."
+   }
+  ],
+  "reason": "Die übrigen Einträge sind durch die Diffs gedeckt; die zurückgenommenen Lanes und interne Änderungen erscheinen nicht in den Notes. Die Version 3.0.0 passt zum Breaking Change, aber die Änderung des Standardwerts fehlt in den Notes.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25903,
+  "cached_input_tokens": 12800,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 135,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-4fa6-77c2-aca4-f29d1ac6cfa8"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #307 ändert den Standardwert von `removeOnComplete` von `false` auf `true`. Diese Änderung fehlt unter „Breaking Changes“: Nutzer, die abgeschlossene Jobs weiterhin behalten möchten, müssen `removeOnComplete: false` setzen.\"}],\"reason\":\"Die übrigen Einträge sind durch die Diffs gedeckt; die zurückgenommenen Lanes und interne Änderungen erscheinen nicht in den Notes. Die Version 3.0.0 passt zum Breaking Change, aber die Änderung des Standardwerts fehlt in den Notes.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25903,
+    "cached_input_tokens": 12800,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 135,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

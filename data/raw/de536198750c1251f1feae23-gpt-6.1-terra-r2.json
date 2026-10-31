@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "de536198750c1251f1feae23",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "internal-noise",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4740,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"„CI now runs the integration tests against Postgres 16 (#363).“ beschreibt einen internen Test und gehört nicht in nutzerorientierte Release Notes.\"}],\"reason\":\"Der CI-Eintrag ist für Nutzer der Bibliothek nicht relevant. Weitere Verstöße lassen sich aus dem Text allein nicht erkennen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "„CI now runs the integration tests against Postgres 16 (#363).“ beschreibt einen internen Test und gehört nicht in nutzerorientierte Release Notes."
+   }
+  ],
+  "reason": "Der CI-Eintrag ist für Nutzer der Bibliothek nicht relevant. Weitere Verstöße lassen sich aus dem Text allein nicht erkennen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24493,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 89,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-9535-7f93-812e-a8261a2715d0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"„CI now runs the integration tests against Postgres 16 (#363).“ beschreibt einen internen Test und gehört nicht in nutzerorientierte Release Notes.\"}],\"reason\":\"Der CI-Eintrag ist für Nutzer der Bibliothek nicht relevant. Weitere Verstöße lassen sich aus dem Text allein nicht erkennen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24493,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 89,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

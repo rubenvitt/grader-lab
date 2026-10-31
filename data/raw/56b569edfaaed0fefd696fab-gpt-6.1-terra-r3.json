@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "56b569edfaaed0fefd696fab",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5370,
+ "text": "{\"reason\":\"Fassung A nennt konkrete Änderungen und bietet Migrationsschritte, während Fassung B überwiegend zu allgemein bleibt, um Nutzern eine Handlung abzuleiten. Ob alle Details in A durch die Diffs belegt sind und ob zurückgenommene Änderungen fehlen, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A nennt konkrete Änderungen und bietet Migrationsschritte, während Fassung B überwiegend zu allgemein bleibt, um Nutzern eine Handlung abzuleiten. Ob alle Details in A durch die Diffs belegt sind und ob zurückgenommene Änderungen fehlen, lässt sich ohne die Quellen nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25364,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 79,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-3800-7f23-a9f8-6717d2e28620"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A nennt konkrete Änderungen und bietet Migrationsschritte, während Fassung B überwiegend zu allgemein bleibt, um Nutzern eine Handlung abzuleiten. Ob alle Details in A durch die Diffs belegt sind und ob zurückgenommene Änderungen fehlen, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25364,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 79,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

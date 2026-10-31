@@ -1,0 +1,62 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "50991c3beb927a486f119909",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "reordered",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 6896,
+ "text": "{\"reason\":\"Die Fassungen enthalten dieselben Aussagen und unterscheiden sich nur in der Reihenfolge der Abschnitte. Nach der Rubrik sind sie daher gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen enthalten dieselben Aussagen und unterscheiden sich nur in der Reihenfolge der Abschnitte. Nach der Rubrik sind sie daher gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25528,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 48,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-a9cb-77e0-af69-e2e72cb6b96a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360d89cb7f9965-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360d8e2fcae516-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen enthalten dieselben Aussagen und unterscheiden sich nur in der Reihenfolge der Abschnitte. Nach der Rubrik sind sie daher gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25528,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

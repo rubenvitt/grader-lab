@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "d6de0593c658006a6ad57828",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "hype-tone",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5891,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Der Kandidat verwendet durchgehend Werbesprache und Superlative, etwa „most exciting release yet“, „revolutionary“, „blazing“ und „Naming, perfected“.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Überschrift „Turbocharged imports“ behauptet eine Verbesserung von Imports. Die Referenz belegt für `addBulk` lediglich das Schreiben von Jobs in Blöcken zu je 500.\"}],\"reason\":\"Die wesentlichen Änderungen, Migrationsschritte und die Major-Version stimmen mit der Referenz überein. Der Kandidat enthält jedoch eine unbelegte Aussage und weicht deutlich vom geforderten sachlichen Ton ab.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Der Kandidat verwendet durchgehend Werbesprache und Superlative, etwa „most exciting release yet“, „revolutionary“, „blazing“ und „Naming, perfected“."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Überschrift „Turbocharged imports“ behauptet eine Verbesserung von Imports. Die Referenz belegt für `addBulk` lediglich das Schreiben von Jobs in Blöcken zu je 500."
+   }
+  ],
+  "reason": "Die wesentlichen Änderungen, Migrationsschritte und die Major-Version stimmen mit der Referenz überein. Der Kandidat enthält jedoch eine unbelegte Aussage und weicht deutlich vom geforderten sachlichen Ton ab.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24834,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 160,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-ee69-7133-a9f5-50e4b11b8c3a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Der Kandidat verwendet durchgehend Werbesprache und Superlative, etwa „most exciting release yet“, „revolutionary“, „blazing“ und „Naming, perfected“.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Überschrift „Turbocharged imports“ behauptet eine Verbesserung von Imports. Die Referenz belegt für `addBulk` lediglich das Schreiben von Jobs in Blöcken zu je 500.\"}],\"reason\":\"Die wesentlichen Änderungen, Migrationsschritte und die Major-Version stimmen mit der Referenz überein. Der Kandidat enthält jedoch eine unbelegte Aussage und weicht deutlich vom geforderten sachlichen Ton ab.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24834,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 160,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

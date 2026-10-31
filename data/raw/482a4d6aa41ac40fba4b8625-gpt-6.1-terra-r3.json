@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "482a4d6aa41ac40fba4b8625",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "invented-claim",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4775,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Fix-Eintrag behauptet zusätzlich, dass der Job beim nächsten Poll erneut versucht wird. Diese Aussage ist durch die Referenz nicht belegt.\"}],\"reason\":\"Der Kandidat entspricht der Referenz bis auf die zusätzliche, unbelegte Aussage zum erneuten Versuch des Jobs.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Fix-Eintrag behauptet zusätzlich, dass der Job beim nächsten Poll erneut versucht wird. Diese Aussage ist durch die Referenz nicht belegt."
+   }
+  ],
+  "reason": "Der Kandidat entspricht der Referenz bis auf die zusätzliche, unbelegte Aussage zum erneuten Versuch des Jobs.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24648,
+  "cached_input_tokens": 12800,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 83,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-f26c-7140-8742-4275867fb5f7"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Fix-Eintrag behauptet zusätzlich, dass der Job beim nächsten Poll erneut versucht wird. Diese Aussage ist durch die Referenz nicht belegt.\"}],\"reason\":\"Der Kandidat entspricht der Referenz bis auf die zusätzliche, unbelegte Aussage zum erneuten Versuch des Jobs.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24648,
+    "cached_input_tokens": 12800,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 83,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "3076f6a57ebeeb4233071794",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reverted-listed",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 15681,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Feature-Eintrag nennt `limiter: { max, durationMs }`. Der endgültige Diff in PR #376 definiert stattdessen `limiter: { max, perMs }`.\"},{\"criterion\":\"R4\",\"evidence\":\"Der Feature-Eintrag verweist auf PR #371 und verwendet deren Option `durationMs`. PR #373 nimmt diese Fassung zurück; PR #376 führt den Limiter mit `perMs` erneut ein.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag zum Limiter nennt mit `durationMs` einen im endgültigen Code nicht vorhandenen Optionsnamen. Nutzer können die Funktion damit nicht wie beschrieben konfigurieren.\"}],\"reason\":\"Die endgültige Limiter-Fassung weicht von der beschriebenen, zurückgenommenen Fassung ab. Die Deprecation und die Versionsnummer sind durch die Quellen gedeckt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Feature-Eintrag nennt `limiter: { max, durationMs }`. Der endgültige Diff in PR #376 definiert stattdessen `limiter: { max, perMs }`."
+   },
+   {
+    "criterion": "R4",
+    "evidence": "Der Feature-Eintrag verweist auf PR #371 und verwendet deren Option `durationMs`. PR #373 nimmt diese Fassung zurück; PR #376 führt den Limiter mit `perMs` erneut ein."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Eintrag zum Limiter nennt mit `durationMs` einen im endgültigen Code nicht vorhandenen Optionsnamen. Nutzer können die Funktion damit nicht wie beschrieben konfigurieren."
+   }
+  ],
+  "reason": "Die endgültige Limiter-Fassung weicht von der beschriebenen, zurückgenommenen Fassung ab. Die Deprecation und die Versionsnummer sind durch die Quellen gedeckt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26303,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 204,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-7ced-7622-abc0-1f1d7dbc64cc"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360edc2954b6ae-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360ee1af11207f-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360ee95d92ac0a-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360ef73c6e6dc5-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Feature-Eintrag nennt `limiter: { max, durationMs }`. Der endgültige Diff in PR #376 definiert stattdessen `limiter: { max, perMs }`.\"},{\"criterion\":\"R4\",\"evidence\":\"Der Feature-Eintrag verweist auf PR #371 und verwendet deren Option `durationMs`. PR #373 nimmt diese Fassung zurück; PR #376 führt den Limiter mit `perMs` erneut ein.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag zum Limiter nennt mit `durationMs` einen im endgültigen Code nicht vorhandenen Optionsnamen. Nutzer können die Funktion damit nicht wie beschrieben konfigurieren.\"}],\"reason\":\"Die endgültige Limiter-Fassung weicht von der beschriebenen, zurückgenommenen Fassung ab. Die Deprecation und die Versionsnummer sind durch die Quellen gedeckt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26303,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 204,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

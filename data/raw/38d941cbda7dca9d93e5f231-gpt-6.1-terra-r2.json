@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "38d941cbda7dca9d93e5f231",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "wrong-migration",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4451,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und benennen die Änderungen sowie den Migrationsschritt konkret. Ob die Aussagen und API-Namen durch die Quellen gedeckt sind, lässt sich allein anhand des Textes nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes sind sachlich und benennen die Änderungen sowie den Migrationsschritt konkret. Ob die Aussagen und API-Namen durch die Quellen gedeckt sind, lässt sich allein anhand des Textes nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24409,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 63,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-76c5-7263-86af-3320f372827f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und benennen die Änderungen sowie den Migrationsschritt konkret. Ob die Aussagen und API-Namen durch die Quellen gedeckt sind, lässt sich allein anhand des Textes nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24409,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 63,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

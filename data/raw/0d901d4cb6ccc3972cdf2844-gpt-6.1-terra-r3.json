@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "0d901d4cb6ccc3972cdf2844",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7209,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker configuration has changed“ (#351) nennt weder die Umbenennung von `stalledIntervalMs` in `stallCheckMs` noch die nötige Anpassung bestehender Konfigurationen.\"},{\"criterion\":\"R8\",\"evidence\":\"„The build output has changed“ (#353) verschweigt, dass der öffentliche CommonJS-`require`-Export entfällt und betroffene Nutzer ihre Einbindung auf ESM umstellen müssen.\"},{\"criterion\":\"R8\",\"evidence\":\"„New storage option“ (#355) nennt weder `PostgresStore` noch den Importpfad `quaykit/postgres`. Die Anleitung #362 verlangt außerdem, zuerst die Migration in `migrations/` auszuführen.\"},{\"criterion\":\"R8\",\"evidence\":\"„Scheduler fix“ (#357) erklärt nicht, dass die Berechnung der nächsten Cron-Ausführung nun UTC verwendet, um doppelte Ausführungen beim Wechsel der Sommerzeit zu beheben.\"},{\"criterion\":\"R8\",\"evidence\":\"„Queue performance work“ (#360) nennt weder `addBulk` noch die geänderte Verarbeitung in Blöcken von 500 Jobs.\"}],\"reason\":\"Die Quellen enthalten zwei Breaking Changes, ein Feature und mehrere nutzerrelevante Korrekturen. Die Version 4.0.0 ist dafür passend; mehrere Einträge sind jedoch zu allgemein, um Änderung und Handlungsbedarf erkennen zu lassen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Worker configuration has changed“ (#351) nennt weder die Umbenennung von `stalledIntervalMs` in `stallCheckMs` noch die nötige Anpassung bestehender Konfigurationen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„The build output has changed“ (#353) verschweigt, dass der öffentliche CommonJS-`require`-Export entfällt und betroffene Nutzer ihre Einbindung auf ESM umstellen müssen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„New storage option“ (#355) nennt weder `PostgresStore` noch den Importpfad `quaykit/postgres`. Die Anleitung #362 verlangt außerdem, zuerst die Migration in `migrations/` auszuführen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Scheduler fix“ (#357) erklärt nicht, dass die Berechnung der nächsten Cron-Ausführung nun UTC verwendet, um doppelte Ausführungen beim Wechsel der Sommerzeit zu beheben."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Queue performance work“ (#360) nennt weder `addBulk` noch die geänderte Verarbeitung in Blöcken von 500 Jobs."
+   }
+  ],
+  "reason": "Die Quellen enthalten zwei Breaking Changes, ein Feature und mehrere nutzerrelevante Korrekturen. Die Version 4.0.0 ist dafür passend; mehrere Einträge sind jedoch zu allgemein, um Änderung und Handlungsbedarf erkennen zu lassen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26764,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 312,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-2e77-75d3-a108-cfdc86447fc7"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker configuration has changed“ (#351) nennt weder die Umbenennung von `stalledIntervalMs` in `stallCheckMs` noch die nötige Anpassung bestehender Konfigurationen.\"},{\"criterion\":\"R8\",\"evidence\":\"„The build output has changed“ (#353) verschweigt, dass der öffentliche CommonJS-`require`-Export entfällt und betroffene Nutzer ihre Einbindung auf ESM umstellen müssen.\"},{\"criterion\":\"R8\",\"evidence\":\"„New storage option“ (#355) nennt weder `PostgresStore` noch den Importpfad `quaykit/postgres`. Die Anleitung #362 verlangt außerdem, zuerst die Migration in `migrations/` auszuführen.\"},{\"criterion\":\"R8\",\"evidence\":\"„Scheduler fix“ (#357) erklärt nicht, dass die Berechnung der nächsten Cron-Ausführung nun UTC verwendet, um doppelte Ausführungen beim Wechsel der Sommerzeit zu beheben.\"},{\"criterion\":\"R8\",\"evidence\":\"„Queue performance work“ (#360) nennt weder `addBulk` noch die geänderte Verarbeitung in Blöcken von 500 Jobs.\"}],\"reason\":\"Die Quellen enthalten zwei Breaking Changes, ein Feature und mehrere nutzerrelevante Korrekturen. Die Version 4.0.0 ist dafür passend; mehrere Einträge sind jedoch zu allgemein, um Änderung und Handlungsbedarf erkennen zu lassen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26764,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 312,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

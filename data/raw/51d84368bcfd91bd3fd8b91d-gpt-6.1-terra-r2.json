@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "51d84368bcfd91bd3fd8b91d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "paraphrase",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4504,
+ "text": "{\"violations\":[],\"reason\":\"Die Release Notes sind konkret und sachlich; der beschriebene Breaking Change steht im passenden Abschnitt und enthält einen Migrationsschritt. Aus dem Text selbst ist kein Verstoß erkennbar; die Übereinstimmung mit den Quellen lässt sich hier nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Release Notes sind konkret und sachlich; der beschriebene Breaking Change steht im passenden Abschnitt und enthält einen Migrationsschritt. Aus dem Text selbst ist kein Verstoß erkennbar; die Übereinstimmung mit den Quellen lässt sich hier nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25265,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 75,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-910e-74d2-ab4e-36368d942bfb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Release Notes sind konkret und sachlich; der beschriebene Breaking Change steht im passenden Abschnitt und enthält einen Migrationsschritt. Aus dem Text selbst ist kein Verstoß erkennbar; die Übereinstimmung mit den Quellen lässt sich hier nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25265,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 75,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

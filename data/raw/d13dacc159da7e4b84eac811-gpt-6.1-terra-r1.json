@@ -1,0 +1,78 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d13dacc159da7e4b84eac811",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 12493,
+ "text": "{\"reason\":\"Fassung B lässt die internen Änderungen am Release-Workflow und am Key-Builder weg, die für Nutzer der Bibliothek nicht relevant sind. Im Übrigen sind die Fassungen inhaltlich gleich.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B lässt die internen Änderungen am Release-Workflow und am Key-Builder weg, die für Nutzer der Bibliothek nicht relevant sind. Im Übrigen sind die Fassungen inhaltlich gleich.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25601,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 59,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": true,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-3aef-7c70-865d-29b3f2e32935"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536133dbf81e52d-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361342fc1ee506-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536134afc3ff6e9-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361356398ad933-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "error",
+    "message": "Falling back from WebSockets to HTTPS transport. unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536136c78c81a34-TXL"
+   }
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_1",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B lässt die internen Änderungen am Release-Workflow und am Key-Builder weg, die für Nutzer der Bibliothek nicht relevant sind. Im Übrigen sind die Fassungen inhaltlich gleich.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25601,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

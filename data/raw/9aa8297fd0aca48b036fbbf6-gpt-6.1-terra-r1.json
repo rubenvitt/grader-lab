@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "9aa8297fd0aca48b036fbbf6",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reverted-listed",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4610,
+ "text": "{\"reason\":\"Fassung A enthält zusätzlich einen konkreten Feature-Eintrag; Fassung B lässt ihn aus. Ob dieser Eintrag belegt und für das Release relevant ist oder ob er zurückgenommen wurde, lässt sich ohne die zugehörigen Quellen und Diffs nicht beurteilen. Die Fassungen sind daher anhand der vorliegenden Angaben gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung A enthält zusätzlich einen konkreten Feature-Eintrag; Fassung B lässt ihn aus. Ob dieser Eintrag belegt und für das Release relevant ist oder ob er zurückgenommen wurde, lässt sich ohne die zugehörigen Quellen und Diffs nicht beurteilen. Die Fassungen sind daher anhand der vorliegenden Angaben gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25252,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 85,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-1274-70c2-a462-daee792696e2"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A enthält zusätzlich einen konkreten Feature-Eintrag; Fassung B lässt ihn aus. Ob dieser Eintrag belegt und für das Release relevant ist oder ob er zurückgenommen wurde, lässt sich ohne die zugehörigen Quellen und Diffs nicht beurteilen. Die Fassungen sind daher anhand der vorliegenden Angaben gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25252,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 85,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

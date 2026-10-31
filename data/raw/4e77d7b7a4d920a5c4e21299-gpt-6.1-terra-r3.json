@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "4e77d7b7a4d920a5c4e21299",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7863,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung verspricht „flawless graceful shutdown“. PR #397 belegt nur, dass `worker.close()` auf den Abschluss aktiver Jobs oder auf `shutdownTimeoutMs` wartet; eine fehlerfreie Beendigung ist nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Jitter-Eintrag behauptet, die Wiederholungen kämen dadurch nicht alle gleichzeitig an. Der Diff in PR #395 berechnet zufällige ganzzahlige Verzögerungen; gleiche Verzögerungen bleiben möglich.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause(boolean)` empfiehlt ausschließlich `worker.pause({ drain: true })`. Laut Diff in PR #399 muss `pause(false)` jedoch durch `pause({ drain: false })` ersetzt werden, um das bisherige Verhalten beizubehalten.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Die Notes enthalten Werbesprache und Begeisterung, etwa „The wait is over“, „stunning“, „game-changing“, „Lean­er than ever“ und „Shut down with confidence“.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten unbelegte Zusicherungen, einen unvollständigen Migrationshinweis und werbliche Formulierungen. Die Major-Version 5.0.0 passt zu den belegten Breaking Changes.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung verspricht „flawless graceful shutdown“. PR #397 belegt nur, dass `worker.close()` auf den Abschluss aktiver Jobs oder auf `shutdownTimeoutMs` wartet; eine fehlerfreie Beendigung ist nicht belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Jitter-Eintrag behauptet, die Wiederholungen kämen dadurch nicht alle gleichzeitig an. Der Diff in PR #395 berechnet zufällige ganzzahlige Verzögerungen; gleiche Verzögerungen bleiben möglich."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause(boolean)` empfiehlt ausschließlich `worker.pause({ drain: true })`. Laut Diff in PR #399 muss `pause(false)` jedoch durch `pause({ drain: false })` ersetzt werden, um das bisherige Verhalten beizubehalten."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Notes enthalten Werbesprache und Begeisterung, etwa „The wait is over“, „stunning“, „game-changing“, „Lean­er than ever“ und „Shut down with confidence“."
+   }
+  ],
+  "reason": "Die Notes enthalten unbelegte Zusicherungen, einen unvollständigen Migrationshinweis und werbliche Formulierungen. Die Major-Version 5.0.0 passt zu den belegten Breaking Changes.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26969,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 379,
+  "reasoning_output_tokens": 41
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-a9cf-7620-96b0-f028855a3c6a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung verspricht „flawless graceful shutdown“. PR #397 belegt nur, dass `worker.close()` auf den Abschluss aktiver Jobs oder auf `shutdownTimeoutMs` wartet; eine fehlerfreie Beendigung ist nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Jitter-Eintrag behauptet, die Wiederholungen kämen dadurch nicht alle gleichzeitig an. Der Diff in PR #395 berechnet zufällige ganzzahlige Verzögerungen; gleiche Verzögerungen bleiben möglich.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause(boolean)` empfiehlt ausschließlich `worker.pause({ drain: true })`. Laut Diff in PR #399 muss `pause(false)` jedoch durch `pause({ drain: false })` ersetzt werden, um das bisherige Verhalten beizubehalten.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Die Notes enthalten Werbesprache und Begeisterung, etwa „The wait is over“, „stunning“, „game-changing“, „Lean­er than ever“ und „Shut down with confidence“.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten unbelegte Zusicherungen, einen unvollständigen Migrationshinweis und werbliche Formulierungen. Die Major-Version 5.0.0 passt zu den belegten Breaking Changes.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26969,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 379,
+    "reasoning_output_tokens": 41
+   }
+  }
+ ]
+}

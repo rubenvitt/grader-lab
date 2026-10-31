@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "6f0fdbc8e0bffe492ed1305a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "paraphrase",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7249,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Zu #351 behaupten die Notes, es gebe keinen Alias und der alte Name werde ohne Warnung ignoriert. Der Diff zeigt die Umbenennung, belegt aber weder Aliasverhalten noch Warnungen.\"},{\"criterion\":\"R2\",\"evidence\":\"Zu #357 behaupten die Notes, Zeitumstellungen führten nicht mehr zu doppelten Cron-Ausführungen. Der Diff zeigt den Aufruf von `cron.next` mit `tz: 'UTC'`, belegt aber diese umfassende Garantie nicht.\"},{\"criterion\":\"R2\",\"evidence\":\"Zu #360 behaupten die Notes, zuvor sei ein Befehl pro Job gesendet worden. Der Diff zeigt zuvor einen Aufruf von `this.add` pro Job, aber nicht, wie viele Befehle dieser ausführt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Ankündigung, ein separates Advisory mit Details folge später, ist durch die Quellen nicht belegt.\"}],\"reason\":\"Die Notes erfassen die wesentlichen nutzerrelevanten Änderungen und wählen mit 4.0.0 einen passenden Major-Sprung. Einzelne Aussagen gehen jedoch über das hinaus, was die Diffs und übrigen Quellen belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Zu #351 behaupten die Notes, es gebe keinen Alias und der alte Name werde ohne Warnung ignoriert. Der Diff zeigt die Umbenennung, belegt aber weder Aliasverhalten noch Warnungen."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Zu #357 behaupten die Notes, Zeitumstellungen führten nicht mehr zu doppelten Cron-Ausführungen. Der Diff zeigt den Aufruf von `cron.next` mit `tz: 'UTC'`, belegt aber diese umfassende Garantie nicht."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Zu #360 behaupten die Notes, zuvor sei ein Befehl pro Job gesendet worden. Der Diff zeigt zuvor einen Aufruf von `this.add` pro Job, aber nicht, wie viele Befehle dieser ausführt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Ankündigung, ein separates Advisory mit Details folge später, ist durch die Quellen nicht belegt."
+   }
+  ],
+  "reason": "Die Notes erfassen die wesentlichen nutzerrelevanten Änderungen und wählen mit 4.0.0 einen passenden Major-Sprung. Einzelne Aussagen gehen jedoch über das hinaus, was die Diffs und übrigen Quellen belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26940,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 369,
+  "reasoning_output_tokens": 98
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-6d06-7d82-a793-49dc2daafff7"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Zu #351 behaupten die Notes, es gebe keinen Alias und der alte Name werde ohne Warnung ignoriert. Der Diff zeigt die Umbenennung, belegt aber weder Aliasverhalten noch Warnungen.\"},{\"criterion\":\"R2\",\"evidence\":\"Zu #357 behaupten die Notes, Zeitumstellungen führten nicht mehr zu doppelten Cron-Ausführungen. Der Diff zeigt den Aufruf von `cron.next` mit `tz: 'UTC'`, belegt aber diese umfassende Garantie nicht.\"},{\"criterion\":\"R2\",\"evidence\":\"Zu #360 behaupten die Notes, zuvor sei ein Befehl pro Job gesendet worden. Der Diff zeigt zuvor einen Aufruf von `this.add` pro Job, aber nicht, wie viele Befehle dieser ausführt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Ankündigung, ein separates Advisory mit Details folge später, ist durch die Quellen nicht belegt.\"}],\"reason\":\"Die Notes erfassen die wesentlichen nutzerrelevanten Änderungen und wählen mit 4.0.0 einen passenden Major-Sprung. Einzelne Aussagen gehen jedoch über das hinaus, was die Diffs und übrigen Quellen belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26940,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 369,
+    "reasoning_output_tokens": 98
+   }
+  }
+ ]
+}

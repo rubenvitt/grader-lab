@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "ac78483444b144e35e94fba8",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7170,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #395 behauptet, Jitter sorge dafür, dass Retries „not all arrive at once“. Der Diff berechnet zufällige ganzzahlige Verzögerungen; mehrere Retries können denselben Wert erhalten.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für #399 empfiehlt pauschal `worker.pause({ drain: true })`. Für bisheriges `worker.pause(false)` ändert das das Verhalten; der Diff bildet den bisherigen Boolean auf `{ drain: opts }` ab.\"}],\"reason\":\"Die Notes erfassen die Breaking Changes und die weiteren nutzerrelevanten Änderungen; der Major-Sprung auf 5.0.0 passt dazu. Die Aussage über Jitter garantiert jedoch mehr, als der Diff belegt, und die Migration für `worker.pause()` deckt den Wert `false` nicht ab.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #395 behauptet, Jitter sorge dafür, dass Retries „not all arrive at once“. Der Diff berechnet zufällige ganzzahlige Verzögerungen; mehrere Retries können denselben Wert erhalten."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für #399 empfiehlt pauschal `worker.pause({ drain: true })`. Für bisheriges `worker.pause(false)` ändert das das Verhalten; der Diff bildet den bisherigen Boolean auf `{ drain: opts }` ab."
+   }
+  ],
+  "reason": "Die Notes erfassen die Breaking Changes und die weiteren nutzerrelevanten Änderungen; der Major-Sprung auf 5.0.0 passt dazu. Die Aussage über Jitter garantiert jedoch mehr, als der Diff belegt, und die Migration für `worker.pause()` deckt den Wert `false` nicht ab.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26932,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 279,
+  "reasoning_output_tokens": 78
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-0602-7183-b872-a348d13c2392"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #395 behauptet, Jitter sorge dafür, dass Retries „not all arrive at once“. Der Diff berechnet zufällige ganzzahlige Verzögerungen; mehrere Retries können denselben Wert erhalten.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für #399 empfiehlt pauschal `worker.pause({ drain: true })`. Für bisheriges `worker.pause(false)` ändert das das Verhalten; der Diff bildet den bisherigen Boolean auf `{ drain: opts }` ab.\"}],\"reason\":\"Die Notes erfassen die Breaking Changes und die weiteren nutzerrelevanten Änderungen; der Major-Sprung auf 5.0.0 passt dazu. Die Aussage über Jitter garantiert jedoch mehr, als der Diff belegt, und die Migration für `worker.pause()` deckt den Wert `false` nicht ab.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26932,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 279,
+    "reasoning_output_tokens": 78
+   }
+  }
+ ]
+}

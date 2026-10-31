@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "c4d62909bce2ddb60439ca05",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-bump",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5245,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes benennen die Breaking Changes und konkrete Migrationsschritte. Aus dem Text allein ergeben sich keine Verstöße; insbesondere lässt sich ohne Kenntnis der vorherigen Version nicht beurteilen, ob 3.2.0 einen Major-Sprung darstellt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes benennen die Breaking Changes und konkrete Migrationsschritte. Aus dem Text allein ergeben sich keine Verstöße; insbesondere lässt sich ohne Kenntnis der vorherigen Version nicht beurteilen, ob 3.2.0 einen Major-Sprung darstellt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24478,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 135,
+  "reasoning_output_tokens": 60
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-6025-7eb0-a616-aeb4d60608fc"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes benennen die Breaking Changes und konkrete Migrationsschritte. Aus dem Text allein ergeben sich keine Verstöße; insbesondere lässt sich ohne Kenntnis der vorherigen Version nicht beurteilen, ob 3.2.0 einen Major-Sprung darstellt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24478,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 135,
+    "reasoning_output_tokens": 60
+   }
+  }
+ ]
+}

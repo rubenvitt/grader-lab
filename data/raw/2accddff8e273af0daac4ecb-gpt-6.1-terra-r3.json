@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "2accddff8e273af0daac4ecb",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reordered",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 6080,
+ "text": "{\"reason\":\"Beide Fassungen enthalten dieselben Aussagen und Migrationshinweise; nur die Reihenfolge der Abschnitte unterscheidet sich. Das macht nach dem angegebenen Maßstab keine Fassung besser.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen enthalten dieselben Aussagen und Migrationshinweise; nur die Reihenfolge der Abschnitte unterscheidet sich. Das macht nach dem angegebenen Maßstab keine Fassung besser.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25262,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 57,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-0e6a-70b2-9b7d-ff5fe68f39d5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen enthalten dieselben Aussagen und Migrationshinweise; nur die Reihenfolge der Abschnitte unterscheidet sich. Das macht nach dem angegebenen Maßstab keine Fassung besser.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25262,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 57,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

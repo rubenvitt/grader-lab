@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "961eef3a1051d5ab53aa9a36",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "missing-breaking",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4422,
+ "text": "{\"reason\":\"Fassung A ist besser, weil sie die Änderung des Defaults als Breaking Change nennt und einen konkreten Migrationsschritt angibt. Fassung B lässt diese nutzerrelevante Änderung vollständig weg; die übrigen Einträge sind gleich.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil sie die Änderung des Defaults als Breaking Change nennt und einen konkreten Migrationsschritt angibt. Fassung B lässt diese nutzerrelevante Änderung vollständig weg; die übrigen Einträge sind gleich.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24449,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 66,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-637c-7523-9cf3-93401aee93cc"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil sie die Änderung des Defaults als Breaking Change nennt und einen konkreten Migrationsschritt angibt. Fassung B lässt diese nutzerrelevante Änderung vollständig weg; die übrigen Einträge sind gleich.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24449,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 66,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "78054f413a4769dcee13a23c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "wrong-migration",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4920,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt nennt `queue.purge({ state, olderThanMs })`. Laut Referenz muss die Option `status` heißen: `queue.purge({ status, olderThanMs })`.\"}],\"reason\":\"Der Kandidat gibt den Optionsnamen für die Migration falsch an. Die übrigen Angaben entsprechen der Referenz.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Der Migrationsschritt nennt `queue.purge({ state, olderThanMs })`. Laut Referenz muss die Option `status` heißen: `queue.purge({ status, olderThanMs })`."
+   }
+  ],
+  "reason": "Der Kandidat gibt den Optionsnamen für die Migration falsch an. Die übrigen Angaben entsprechen der Referenz.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25495,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 95,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-6389-79b1-8ee4-7267e707bd06"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt nennt `queue.purge({ state, olderThanMs })`. Laut Referenz muss die Option `status` heißen: `queue.purge({ status, olderThanMs })`.\"}],\"reason\":\"Der Kandidat gibt den Optionsnamen für die Migration falsch an. Die übrigen Angaben entsprechen der Referenz.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25495,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 95,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "55124b36368aeda12369175f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "wrong-bump",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5642,
+ "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst lässt sich kein Verstoß feststellen. Ob die Versionsnummer einen Major-Sprung gegenüber der vorherigen Version darstellt, lässt sich ohne deren Nummer nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Aus dem Text selbst lässt sich kein Verstoß feststellen. Ob die Versionsnummer einen Major-Sprung gegenüber der vorherigen Version darstellt, lässt sich ohne deren Nummer nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24405,
+  "cached_input_tokens": 12800,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 173,
+  "reasoning_output_tokens": 115
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-6ed3-7431-8949-a217408cfff3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst lässt sich kein Verstoß feststellen. Ob die Versionsnummer einen Major-Sprung gegenüber der vorherigen Version darstellt, lässt sich ohne deren Nummer nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24405,
+    "cached_input_tokens": 12800,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 173,
+    "reasoning_output_tokens": 115
+   }
+  }
+ ]
+}

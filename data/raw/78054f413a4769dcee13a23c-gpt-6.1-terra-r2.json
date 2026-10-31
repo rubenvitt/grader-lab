@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "78054f413a4769dcee13a23c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "wrong-migration",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5144,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration nennt `queue.purge({ state, olderThanMs })`. Laut Referenz muss die Option `status` heißen: `queue.purge({ status, olderThanMs })`.\"}],\"reason\":\"Der Migrationsschritt verwendet einen falschen Optionsnamen. Die übrigen Angaben stimmen mit der Referenz überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration nennt `queue.purge({ state, olderThanMs })`. Laut Referenz muss die Option `status` heißen: `queue.purge({ status, olderThanMs })`."
+   }
+  ],
+  "reason": "Der Migrationsschritt verwendet einen falschen Optionsnamen. Die übrigen Angaben stimmen mit der Referenz überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25491,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 95,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-73b3-7ce1-a3c0-87ce9220c7c2"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration nennt `queue.purge({ state, olderThanMs })`. Laut Referenz muss die Option `status` heißen: `queue.purge({ status, olderThanMs })`.\"}],\"reason\":\"Der Migrationsschritt verwendet einen falschen Optionsnamen. Die übrigen Angaben stimmen mit der Referenz überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25491,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 95,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

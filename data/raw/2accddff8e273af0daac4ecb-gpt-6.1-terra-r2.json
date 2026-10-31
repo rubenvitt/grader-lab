@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "2accddff8e273af0daac4ecb",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reordered",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4590,
+ "text": "{\"reason\":\"Die Fassungen enthalten dieselben Aussagen und unterscheiden sich nur in der Reihenfolge der Abschnitte. Daher sind sie nach dem vorgegebenen Maßstab gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen enthalten dieselben Aussagen und unterscheiden sich nur in der Reihenfolge der Abschnitte. Daher sind sie nach dem vorgegebenen Maßstab gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25260,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 51,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-fd39-72e2-bd72-a42c8fe64f2a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen enthalten dieselben Aussagen und unterscheiden sich nur in der Reihenfolge der Abschnitte. Daher sind sie nach dem vorgegebenen Maßstab gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25260,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 51,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

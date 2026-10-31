@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "57930f4bebc29169fc8114be",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "paraphrase",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4856,
+ "text": "{\"violations\":[],\"reason\":\"Der Kandidat vermittelt alle nutzerrelevanten Fakten und Migrationsschritte der Referenz zutreffend. Version, Ton und Umfang der Sicherheitsangabe entsprechen der Rubric.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Kandidat vermittelt alle nutzerrelevanten Fakten und Migrationsschritte der Referenz zutreffend. Version, Ton und Umfang der Sicherheitsangabe entsprechen der Rubric.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25647,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 58,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-6c3f-73d1-8a0c-121a7b09de79"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Kandidat vermittelt alle nutzerrelevanten Fakten und Migrationsschritte der Referenz zutreffend. Version, Ton und Umfang der Sicherheitsangabe entsprechen der Rubric.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25647,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 58,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

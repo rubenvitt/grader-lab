@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "d6de0593c658006a6ad57828",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "hype-tone",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6468,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Überschrift „Turbocharged imports“ suggeriert eine Verbesserung von Importen. Die Referenz belegt für #360 nur eine Änderung beim Schreiben von Jobs durch `addBulk`.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Formulierungen wie „Welcome to the future of job queues“, „our most exciting release yet“, „revolutionary“ und „blazing“ sind Werbesprache und Superlative.\"\n    }\n  ],\n  \"reason\": \"Der Kandidat vermittelt die wesentlichen Änderungen und Migrationsschritte, enthält aber eine unbelegte Aussage zu Importen und verwendet durchgehend werblichen Ton.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Überschrift „Turbocharged imports“ suggeriert eine Verbesserung von Importen. Die Referenz belegt für #360 nur eine Änderung beim Schreiben von Jobs durch `addBulk`."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „Welcome to the future of job queues“, „our most exciting release yet“, „revolutionary“ und „blazing“ sind Werbesprache und Superlative."
+   }
+  ],
+  "reason": "Der Kandidat vermittelt die wesentlichen Änderungen und Migrationsschritte, enthält aber eine unbelegte Aussage zu Importen und verwendet durchgehend werblichen Ton.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24836,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 209,
+  "reasoning_output_tokens": 32
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-da56-7b91-8c74-40cbb73c43a2"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Überschrift „Turbocharged imports“ suggeriert eine Verbesserung von Importen. Die Referenz belegt für #360 nur eine Änderung beim Schreiben von Jobs durch `addBulk`.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Formulierungen wie „Welcome to the future of job queues“, „our most exciting release yet“, „revolutionary“ und „blazing“ sind Werbesprache und Superlative.\"\n    }\n  ],\n  \"reason\": \"Der Kandidat vermittelt die wesentlichen Änderungen und Migrationsschritte, enthält aber eine unbelegte Aussage zu Importen und verwendet durchgehend werblichen Ton.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24836,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 209,
+    "reasoning_output_tokens": 32
+   }
+  }
+ ]
+}

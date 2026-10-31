@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "19e22a078a662ec49f811fb6",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "wrong-migration",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7020,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration empfiehlt `queue.purge({ state, olderThanMs })`. Laut Diff von PR #338 heißt die Option `status`; entsprechend lautet der Aufruf `queue.purge({ status, olderThanMs: graceMs })`.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag nennt nur „a security issue“. PR #336 betrifft die Signaturprüfung in `src/signing.ts`. Die Komponente dürfte trotz Embargo genannt werden und würde Nutzern helfen, den Eintrag einzuordnen.\"}],\"reason\":\"Die Migration verwendet einen falschen Optionsnamen. Außerdem ist der Sicherheitseintrag zu allgemein, obwohl die betroffene Komponente ohne verbotene Details genannt werden dürfte.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration empfiehlt `queue.purge({ state, olderThanMs })`. Laut Diff von PR #338 heißt die Option `status`; entsprechend lautet der Aufruf `queue.purge({ status, olderThanMs: graceMs })`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Sicherheitseintrag nennt nur „a security issue“. PR #336 betrifft die Signaturprüfung in `src/signing.ts`. Die Komponente dürfte trotz Embargo genannt werden und würde Nutzern helfen, den Eintrag einzuordnen."
+   }
+  ],
+  "reason": "Die Migration verwendet einen falschen Optionsnamen. Außerdem ist der Sicherheitseintrag zu allgemein, obwohl die betroffene Komponente ohne verbotene Details genannt werden dürfte.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26577,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 253,
+  "reasoning_output_tokens": 81
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-76a3-7fe1-99ea-b936e2007753"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration empfiehlt `queue.purge({ state, olderThanMs })`. Laut Diff von PR #338 heißt die Option `status`; entsprechend lautet der Aufruf `queue.purge({ status, olderThanMs: graceMs })`.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag nennt nur „a security issue“. PR #336 betrifft die Signaturprüfung in `src/signing.ts`. Die Komponente dürfte trotz Embargo genannt werden und würde Nutzern helfen, den Eintrag einzuordnen.\"}],\"reason\":\"Die Migration verwendet einen falschen Optionsnamen. Außerdem ist der Sicherheitseintrag zu allgemein, obwohl die betroffene Komponente ohne verbotene Details genannt werden dürfte.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26577,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 253,
+    "reasoning_output_tokens": 81
+   }
+  }
+ ]
+}

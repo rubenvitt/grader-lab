@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "38d941cbda7dca9d93e5f231",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "wrong-migration",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4157,
+ "text": "{\"violations\":[],\"reason\":\"Die Einträge sind sachlich und beschreiben konkrete Änderungen beziehungsweise die Migration. Aus dem Text allein ergeben sich keine überprüfbaren Widersprüche oder anderen Verstöße.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Einträge sind sachlich und beschreiben konkrete Änderungen beziehungsweise die Migration. Aus dem Text allein ergeben sich keine überprüfbaren Widersprüche oder anderen Verstöße.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24407,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 54,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-8826-74d0-85f0-664801cd5d0b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Einträge sind sachlich und beschreiben konkrete Änderungen beziehungsweise die Migration. Aus dem Text allein ergeben sich keine überprüfbaren Widersprüche oder anderen Verstöße.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24407,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 54,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

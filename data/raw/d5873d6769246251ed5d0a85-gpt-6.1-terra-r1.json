@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d5873d6769246251ed5d0a85",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "missing-breaking",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5764,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben konkrete, nutzerrelevante Änderungen sachlich und ohne erkennbaren inneren Widerspruch. Ob die Aussagen durch die Quellen gedeckt sind und die Versionsnummer zum vollständigen Inhalt passt, lässt sich allein anhand der Notes nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben konkrete, nutzerrelevante Änderungen sachlich und ohne erkennbaren inneren Widerspruch. Ob die Aussagen durch die Quellen gedeckt sind und die Versionsnummer zum vollständigen Inhalt passt, lässt sich allein anhand der Notes nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25168,
+  "cached_input_tokens": 0,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 74,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-3abc-7200-9407-924271257128"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben konkrete, nutzerrelevante Änderungen sachlich und ohne erkennbaren inneren Widerspruch. Ob die Aussagen durch die Quellen gedeckt sind und die Versionsnummer zum vollständigen Inhalt passt, lässt sich allein anhand der Notes nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25168,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 74,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

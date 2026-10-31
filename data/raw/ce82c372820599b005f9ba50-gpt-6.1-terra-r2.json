@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "ce82c372820599b005f9ba50",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "reordered",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5401,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration empfiehlt `queue.purge({ status, olderThanMs })`, obwohl der bisherige Parameter `graceMs` heißt. Der Diff von PR #338 übergibt ihn als `olderThanMs: graceMs`; ohne diese Zuordnung übernimmt der empfohlene Aufruf den bisherigen Wert nicht zuverlässig.\"}],\"reason\":\"Die Migrationsanweisung muss den bisherigen Wert `graceMs` ausdrücklich auf `olderThanMs` abbilden. Die übrigen Aussagen und die Versionsnummer sind durch die Quellen gedeckt und erfüllen die Rubric.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration empfiehlt `queue.purge({ status, olderThanMs })`, obwohl der bisherige Parameter `graceMs` heißt. Der Diff von PR #338 übergibt ihn als `olderThanMs: graceMs`; ohne diese Zuordnung übernimmt der empfohlene Aufruf den bisherigen Wert nicht zuverlässig."
+   }
+  ],
+  "reason": "Die Migrationsanweisung muss den bisherigen Wert `graceMs` ausdrücklich auf `olderThanMs` abbilden. Die übrigen Aussagen und die Versionsnummer sind durch die Quellen gedeckt und erfüllen die Rubric.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25731,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 222,
+  "reasoning_output_tokens": 80
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-0379-7a31-8b4f-1fc40f7f8e18"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration empfiehlt `queue.purge({ status, olderThanMs })`, obwohl der bisherige Parameter `graceMs` heißt. Der Diff von PR #338 übergibt ihn als `olderThanMs: graceMs`; ohne diese Zuordnung übernimmt der empfohlene Aufruf den bisherigen Wert nicht zuverlässig.\"}],\"reason\":\"Die Migrationsanweisung muss den bisherigen Wert `graceMs` ausdrücklich auf `olderThanMs` abbilden. Die übrigen Aussagen und die Versionsnummer sind durch die Quellen gedeckt und erfüllen die Rubric.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25731,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 222,
+    "reasoning_output_tokens": 80
+   }
+  }
+ ]
+}

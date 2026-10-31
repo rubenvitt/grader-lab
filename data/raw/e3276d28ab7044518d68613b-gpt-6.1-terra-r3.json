@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "e3276d28ab7044518d68613b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-migration",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 3840,
+ "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst sind keine Verstöße gegen die Rubrik erkennbar. Die Übereinstimmung mit den Quellen und die genannten Migrationsschritte lassen sich ohne Quellen nicht prüfen und gelten daher als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Aus dem Text selbst sind keine Verstöße gegen die Rubrik erkennbar. Die Übereinstimmung mit den Quellen und die genannten Migrationsschritte lassen sich ohne Quellen nicht prüfen und gelten daher als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25347,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 64,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-22db-7d20-b5c4-56bafc3308e3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst sind keine Verstöße gegen die Rubrik erkennbar. Die Übereinstimmung mit den Quellen und die genannten Migrationsschritte lassen sich ohne Quellen nicht prüfen und gelten daher als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25347,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 64,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

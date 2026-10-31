@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d2e547cdad144a62f7cd40cb",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "missing-breaking",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 6663,
+ "text": "{\"reason\":\"Fassung B nennt zusätzlich die Entfernung zweier APIs samt Migrationsschritten. Ohne PR-Diff oder andere Quellen lässt sich nicht beurteilen, ob diese Angaben zutreffen oder ob Fassung A eine relevante Änderung auslässt; anhand des vorliegenden Materials sind die Fassungen daher gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung B nennt zusätzlich die Entfernung zweier APIs samt Migrationsschritten. Ohne PR-Diff oder andere Quellen lässt sich nicht beurteilen, ob diese Angaben zutreffen oder ob Fassung A eine relevante Änderung auslässt; anhand des vorliegenden Materials sind die Fassungen daher gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24671,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 160,
+  "reasoning_output_tokens": 81
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-21e0-7d82-b57b-5d926286142d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt zusätzlich die Entfernung zweier APIs samt Migrationsschritten. Ohne PR-Diff oder andere Quellen lässt sich nicht beurteilen, ob diese Angaben zutreffen oder ob Fassung A eine relevante Änderung auslässt; anhand des vorliegenden Materials sind die Fassungen daher gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24671,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 160,
+    "reasoning_output_tokens": 81
+   }
+  }
+ ]
+}

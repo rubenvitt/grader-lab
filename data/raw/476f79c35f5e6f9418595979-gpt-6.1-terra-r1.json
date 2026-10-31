@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "476f79c35f5e6f9418595979",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "ghost-pr",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 6070,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer für den Postgres-Eintrag. Ohne Quellen zu #355 und #356 lässt sich nicht beurteilen, welche Referenz korrekt ist; inhaltlich sind die Fassungen gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur in der PR-Nummer für den Postgres-Eintrag. Ohne Quellen zu #355 und #356 lässt sich nicht beurteilen, welche Referenz korrekt ist; inhaltlich sind die Fassungen gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25526,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 68,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-982e-7931-be69-1a7e8e95e79f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer für den Postgres-Eintrag. Ohne Quellen zu #355 und #356 lässt sich nicht beurteilen, welche Referenz korrekt ist; inhaltlich sind die Fassungen gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25526,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 68,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

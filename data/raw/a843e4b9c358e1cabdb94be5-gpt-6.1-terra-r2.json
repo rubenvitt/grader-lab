@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "a843e4b9c358e1cabdb94be5",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "internal-noise",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 13562,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Internal“ stehen der Release-Workflow mit `--provenance` und die Verlagerung des Key-Builders in ein gemeinsames Modul. Das sind Build-Interna beziehungsweise ein reines Refactoring.\"}],\"reason\":\"Die beiden internen Änderungen sind für Nutzer der Bibliothek nicht relevant. Die übrigen Kriterien sind anhand des Textes nicht als verletzt erkennbar.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Unter „Internal“ stehen der Release-Workflow mit `--provenance` und die Verlagerung des Key-Builders in ein gemeinsames Modul. Das sind Build-Interna beziehungsweise ein reines Refactoring."
+   }
+  ],
+  "reason": "Die beiden internen Änderungen sind für Nutzer der Bibliothek nicht relevant. Die übrigen Kriterien sind anhand des Textes nicht als verletzt erkennbar.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25382,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 106,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-43c0-7ca1-88a5-15b752401277"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536134e394f3314-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536135308e6f56c-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536135a3db2dcd9-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536136838a603e4-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Internal“ stehen der Release-Workflow mit `--provenance` und die Verlagerung des Key-Builders in ein gemeinsames Modul. Das sind Build-Interna beziehungsweise ein reines Refactoring.\"}],\"reason\":\"Die beiden internen Änderungen sind für Nutzer der Bibliothek nicht relevant. Die übrigen Kriterien sind anhand des Textes nicht als verletzt erkennbar.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25382,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 106,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

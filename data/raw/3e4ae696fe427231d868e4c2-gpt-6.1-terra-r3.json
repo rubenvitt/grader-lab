@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "3e4ae696fe427231d868e4c2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5561,
+ "text": "{\"reason\":\"Fassung A benennt die Änderungen und den Migrationsschritt konkret; Fassung B bleibt so allgemein, dass Nutzer weder die neuen Optionen noch die erforderliche Anpassung erkennen können. Ob die konkreten Aussagen von A durch den Diff gedeckt sind, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A benennt die Änderungen und den Migrationsschritt konkret; Fassung B bleibt so allgemein, dass Nutzer weder die neuen Optionen noch die erforderliche Anpassung erkennen können. Ob die konkreten Aussagen von A durch den Diff gedeckt sind, lässt sich ohne die Quellen nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25203,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 77,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-84da-7c01-a1a6-40142f4d097d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A benennt die Änderungen und den Migrationsschritt konkret; Fassung B bleibt so allgemein, dass Nutzer weder die neuen Optionen noch die erforderliche Anpassung erkennen können. Ob die konkreten Aussagen von A durch den Diff gedeckt sind, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25203,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 77,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

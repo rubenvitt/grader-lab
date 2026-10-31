@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "50f957f9aa3a62b86b4e9d74",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reordered",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 4705,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes decken die verbleibenden nutzerrelevanten Änderungen und den geänderten Default samt Migration ab. Zurückgenommene Änderungen und interne Arbeiten sind ausgelassen; der Major-Sprung von 2.3.2 auf 3.0.0 passt zum Breaking Change.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes decken die verbleibenden nutzerrelevanten Änderungen und den geänderten Default samt Migration ab. Zurückgenommene Änderungen und interne Arbeiten sind ausgelassen; der Major-Sprung von 2.3.2 auf 3.0.0 passt zum Breaking Change.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 26834,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 81,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-d28e-7d03-be41-c42784b298da"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes decken die verbleibenden nutzerrelevanten Änderungen und den geänderten Default samt Migration ab. Zurückgenommene Änderungen und interne Arbeiten sind ausgelassen; der Major-Sprung von 2.3.2 auf 3.0.0 passt zum Breaking Change.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26834,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 81,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

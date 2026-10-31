@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "21ebf66da53caabfefe434ff",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-bump",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5269,
+ "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Der Kandidat nennt Version 3.2.0. Die Breaking Changes erfordern den Major-Sprung auf 4.0.0, wie in der Referenz angegeben.\"}],\"reason\":\"Abgesehen von der Versionsnummer entspricht der Kandidat der Referenz. Wegen der Breaking Changes ist 3.2.0 keine passende SemVer-Version.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R9",
+    "evidence": "Der Kandidat nennt Version 3.2.0. Die Breaking Changes erfordern den Major-Sprung auf 4.0.0, wie in der Referenz angegeben."
+   }
+  ],
+  "reason": "Abgesehen von der Versionsnummer entspricht der Kandidat der Referenz. Wegen der Breaking Changes ist 3.2.0 keine passende SemVer-Version.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24785,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 98,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-570d-7371-9268-4dde948cb4e7"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Der Kandidat nennt Version 3.2.0. Die Breaking Changes erfordern den Major-Sprung auf 4.0.0, wie in der Referenz angegeben.\"}],\"reason\":\"Abgesehen von der Versionsnummer entspricht der Kandidat der Referenz. Wegen der Breaking Changes ist 3.2.0 keine passende SemVer-Version.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24785,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 98,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

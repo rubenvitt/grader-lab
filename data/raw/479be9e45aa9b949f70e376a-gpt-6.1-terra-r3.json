@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "479be9e45aa9b949f70e376a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "invented-claim",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5432,
+ "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst ergeben sich keine Verstöße. Aussagen über den tatsächlichen Diff, die Migration und die Quellenlage lassen sich ohne weitere Quellen nicht prüfen und gelten daher als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Aus dem Text selbst ergeben sich keine Verstöße. Aussagen über den tatsächlichen Diff, die Migration und die Quellenlage lassen sich ohne weitere Quellen nicht prüfen und gelten daher als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25253,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 131,
+  "reasoning_output_tokens": 72
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-5495-7c73-a605-508e408f6326"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst ergeben sich keine Verstöße. Aussagen über den tatsächlichen Diff, die Migration und die Quellenlage lassen sich ohne weitere Quellen nicht prüfen und gelten daher als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25253,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 131,
+    "reasoning_output_tokens": 72
+   }
+  }
+ ]
+}

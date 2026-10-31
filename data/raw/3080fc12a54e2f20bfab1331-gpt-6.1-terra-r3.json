@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "3080fc12a54e2f20bfab1331",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 6628,
+ "text": "{\"reason\":\"Fassung B ergänzt, dass der Job beim nächsten Poll erneut versucht wird. Ohne Quellen lässt sich nicht beurteilen, ob diese zusätzliche Aussage belegt ist; ansonsten sind die Fassungen inhaltlich gleich.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung B ergänzt, dass der Job beim nächsten Poll erneut versucht wird. Ohne Quellen lässt sich nicht beurteilen, ob diese zusätzliche Aussage belegt ist; ansonsten sind die Fassungen inhaltlich gleich.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25391,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 146,
+  "reasoning_output_tokens": 86
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-f6d7-7bd3-8eb7-5cb95774e321"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ergänzt, dass der Job beim nächsten Poll erneut versucht wird. Ohne Quellen lässt sich nicht beurteilen, ob diese zusätzliche Aussage belegt ist; ansonsten sind die Fassungen inhaltlich gleich.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25391,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 146,
+    "reasoning_output_tokens": 86
+   }
+  }
+ ]
+}

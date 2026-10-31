@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d65ce655fa25ad38c5ff0040",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4939,
+ "text": "{\"reason\":\"Fassung B ist sachlich formuliert, während Fassung A mehrfach Werbesprache und Superlative verwendet und damit gegen R7 verstößt. Inhaltlich unterscheiden sich die Fassungen nicht wesentlich; die übrigen Anforderungen lassen sich ohne die zugrunde liegenden Diffs nur eingeschränkt beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist sachlich formuliert, während Fassung A mehrfach Werbesprache und Superlative verwendet und damit gegen R7 verstößt. Inhaltlich unterscheiden sich die Fassungen nicht wesentlich; die übrigen Anforderungen lassen sich ohne die zugrunde liegenden Diffs nur eingeschränkt beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 24727,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 78,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-d9fc-7603-ad1d-43b4c30a4bfe"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist sachlich formuliert, während Fassung A mehrfach Werbesprache und Superlative verwendet und damit gegen R7 verstößt. Inhaltlich unterscheiden sich die Fassungen nicht wesentlich; die übrigen Anforderungen lassen sich ohne die zugrunde liegenden Diffs nur eingeschränkt beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24727,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 78,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

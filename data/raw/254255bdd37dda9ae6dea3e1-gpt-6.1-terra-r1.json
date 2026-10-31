@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "254255bdd37dda9ae6dea3e1",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "paraphrase",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 9437,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung behauptet, abgeschlossene Jobs würden automatisch bereinigt. Der Diff in #307 setzt nur `removeOnComplete` auf `true`; `removeOnFail` bleibt `false`. Für fehlgeschlagene Jobs ist die pauschale Aussage daher nicht gedeckt.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #307 behauptet, Jobs verschwänden unmittelbar nach Abschluss und könnten danach nicht mehr aus der Queue abgerufen werden. Der Diff ändert lediglich den Standardwert von `removeOnComplete` und belegt weder den genauen Zeitpunkt noch die fehlende Abrufbarkeit.\"}],\"reason\":\"Die Notes erfassen die relevanten Änderungen und den erforderlichen Major-Sprung, enthalten aber zwei Aussagen zur Bereinigung von Jobs, die über den belegten Diff hinausgehen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung behauptet, abgeschlossene Jobs würden automatisch bereinigt. Der Diff in #307 setzt nur `removeOnComplete` auf `true`; `removeOnFail` bleibt `false`. Für fehlgeschlagene Jobs ist die pauschale Aussage daher nicht gedeckt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #307 behauptet, Jobs verschwänden unmittelbar nach Abschluss und könnten danach nicht mehr aus der Queue abgerufen werden. Der Diff ändert lediglich den Standardwert von `removeOnComplete` und belegt weder den genauen Zeitpunkt noch die fehlende Abrufbarkeit."
+   }
+  ],
+  "reason": "Die Notes erfassen die relevanten Änderungen und den erforderlichen Major-Sprung, enthalten aber zwei Aussagen zur Bereinigung von Jobs, die über den belegten Diff hinausgehen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26848,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 315,
+  "reasoning_output_tokens": 124
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-7aeb-7130-8693-f9f89513b31e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung behauptet, abgeschlossene Jobs würden automatisch bereinigt. Der Diff in #307 setzt nur `removeOnComplete` auf `true`; `removeOnFail` bleibt `false`. Für fehlgeschlagene Jobs ist die pauschale Aussage daher nicht gedeckt.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #307 behauptet, Jobs verschwänden unmittelbar nach Abschluss und könnten danach nicht mehr aus der Queue abgerufen werden. Der Diff ändert lediglich den Standardwert von `removeOnComplete` und belegt weder den genauen Zeitpunkt noch die fehlende Abrufbarkeit.\"}],\"reason\":\"Die Notes erfassen die relevanten Änderungen und den erforderlichen Major-Sprung, enthalten aber zwei Aussagen zur Bereinigung von Jobs, die über den belegten Diff hinausgehen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26848,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 315,
+    "reasoning_output_tokens": 124
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "2a96dfa61f3392fc5e78d4f5",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "ghost-pr",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4292,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer des Rate Limiters. Da keine Quellen zur Zuordnung der Nummer vorliegen, lässt sich keine Fassung anhand der Rubric als besser beurteilen.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur in der PR-Nummer des Rate Limiters. Da keine Quellen zur Zuordnung der Nummer vorliegen, lässt sich keine Fassung anhand der Rubric als besser beurteilen.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24412,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 59,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-f657-7832-b553-1eddc3ed80af"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer des Rate Limiters. Da keine Quellen zur Zuordnung der Nummer vorliegen, lässt sich keine Fassung anhand der Rubric als besser beurteilen.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24412,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

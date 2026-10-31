@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "98903a90dedf32ee1c93bba9",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "hype-tone",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5501,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „powerful“, „thrilled“, „game-changing“ und „delightful“ sind Werbesprache statt sachlicher Release Notes.\"},{\"criterion\":\"R2\",\"evidence\":\"„Bulletproof renewals“ suggeriert eine umfassende Ausfallsicherheit, die durch den belegten einmaligen Wiederholungsversuch nach `ECONNRESET` nicht gedeckt ist.\"}],\"reason\":\"Der Kandidat vermittelt die wesentlichen Änderungen und die Migration korrekt, verwendet aber deutlich werbenden Ton und behauptet eine nicht belegte Ausfallsicherheit.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „powerful“, „thrilled“, „game-changing“ und „delightful“ sind Werbesprache statt sachlicher Release Notes."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "„Bulletproof renewals“ suggeriert eine umfassende Ausfallsicherheit, die durch den belegten einmaligen Wiederholungsversuch nach `ECONNRESET` nicht gedeckt ist."
+   }
+  ],
+  "reason": "Der Kandidat vermittelt die wesentlichen Änderungen und die Migration korrekt, verwendet aber deutlich werbenden Ton und behauptet eine nicht belegte Ausfallsicherheit.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25532,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 142,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-168e-7531-a105-99ae45226d6d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „powerful“, „thrilled“, „game-changing“ und „delightful“ sind Werbesprache statt sachlicher Release Notes.\"},{\"criterion\":\"R2\",\"evidence\":\"„Bulletproof renewals“ suggeriert eine umfassende Ausfallsicherheit, die durch den belegten einmaligen Wiederholungsversuch nach `ECONNRESET` nicht gedeckt ist.\"}],\"reason\":\"Der Kandidat vermittelt die wesentlichen Änderungen und die Migration korrekt, verwendet aber deutlich werbenden Ton und behauptet eine nicht belegte Ausfallsicherheit.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25532,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 142,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

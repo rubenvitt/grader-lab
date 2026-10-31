@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "aebf9c75f999124159d5655f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4743,
+ "text": "{\"reason\":\"Beide Fassungen enthalten dieselben sachlichen Aussagen, Migrationsschritte und Versionsnummern. Unterschiede in Wortwahl und Reihenfolge begründen nach der Rubric keinen Vorzug.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen enthalten dieselben sachlichen Aussagen, Migrationsschritte und Versionsnummern. Unterschiede in Wortwahl und Reihenfolge begründen nach der Rubric keinen Vorzug.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25401,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 54,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-c61d-7100-9c9e-8a35f520db0a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen enthalten dieselben sachlichen Aussagen, Migrationsschritte und Versionsnummern. Unterschiede in Wortwahl und Reihenfolge begründen nach der Rubric keinen Vorzug.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25401,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 54,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

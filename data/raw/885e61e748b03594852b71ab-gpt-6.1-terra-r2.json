@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "885e61e748b03594852b71ab",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-bump",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8966,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes zu #351 behaupten, der alte Optionsname werde stillschweigend ignoriert und es gebe keinen Alias. Der gezeigte Diff benennt die Option in `WorkerOptions` und bei der Verwendung um, belegt aber weder die Behandlung des alten Namens zur Laufzeit noch das Fehlen eines Alias an anderer Stelle.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes zu #357 garantieren, dass Cronjobs bei der Zeitumstellung nicht mehr doppelt ausgeführt werden. Der Diff zeigt, dass `cron.next` mit `{ tz: 'UTC' } aufgerufen wird; er belegt nicht die garantierte Wirkung für alle Zeitumstellungen.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Security-Note zu #358 kündigt an, dass Details in einem separaten Advisory folgen. Die Quellen erwähnen ein Advisory, belegen aber keine spätere Veröffentlichung von Details.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 3.1.0, die Notes nennen 3.2.0. Die Umbenennung der öffentlichen Worker-Option in #351 und der Wegfall des CommonJS-Exports in #353 sind Breaking Changes und verlangen einen Major-Sprung, etwa auf 4.0.0.\"}],\"reason\":\"Die Notes enthalten nicht hinreichend belegte Aussagen und eine Versionsnummer, die nicht zu den Breaking Changes passt. Die betroffenen Änderungen selbst sind unter „Breaking Changes“ aufgeführt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes zu #351 behaupten, der alte Optionsname werde stillschweigend ignoriert und es gebe keinen Alias. Der gezeigte Diff benennt die Option in `WorkerOptions` und bei der Verwendung um, belegt aber weder die Behandlung des alten Namens zur Laufzeit noch das Fehlen eines Alias an anderer Stelle."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes zu #357 garantieren, dass Cronjobs bei der Zeitumstellung nicht mehr doppelt ausgeführt werden. Der Diff zeigt, dass `cron.next` mit `{ tz: 'UTC' } aufgerufen wird; er belegt nicht die garantierte Wirkung für alle Zeitumstellungen."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Security-Note zu #358 kündigt an, dass Details in einem separaten Advisory folgen. Die Quellen erwähnen ein Advisory, belegen aber keine spätere Veröffentlichung von Details."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 3.1.0, die Notes nennen 3.2.0. Die Umbenennung der öffentlichen Worker-Option in #351 und der Wegfall des CommonJS-Exports in #353 sind Breaking Changes und verlangen einen Major-Sprung, etwa auf 4.0.0."
+   }
+  ],
+  "reason": "Die Notes enthalten nicht hinreichend belegte Aussagen und eine Versionsnummer, die nicht zu den Breaking Changes passt. Die betroffenen Änderungen selbst sind unter „Breaking Changes“ aufgeführt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26078,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 456,
+  "reasoning_output_tokens": 131
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-6ba4-70d1-a559-62f3fb506013"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes zu #351 behaupten, der alte Optionsname werde stillschweigend ignoriert und es gebe keinen Alias. Der gezeigte Diff benennt die Option in `WorkerOptions` und bei der Verwendung um, belegt aber weder die Behandlung des alten Namens zur Laufzeit noch das Fehlen eines Alias an anderer Stelle.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes zu #357 garantieren, dass Cronjobs bei der Zeitumstellung nicht mehr doppelt ausgeführt werden. Der Diff zeigt, dass `cron.next` mit `{ tz: 'UTC' } aufgerufen wird; er belegt nicht die garantierte Wirkung für alle Zeitumstellungen.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Security-Note zu #358 kündigt an, dass Details in einem separaten Advisory folgen. Die Quellen erwähnen ein Advisory, belegen aber keine spätere Veröffentlichung von Details.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 3.1.0, die Notes nennen 3.2.0. Die Umbenennung der öffentlichen Worker-Option in #351 und der Wegfall des CommonJS-Exports in #353 sind Breaking Changes und verlangen einen Major-Sprung, etwa auf 4.0.0.\"}],\"reason\":\"Die Notes enthalten nicht hinreichend belegte Aussagen und eine Versionsnummer, die nicht zu den Breaking Changes passt. Die betroffenen Änderungen selbst sind unter „Breaking Changes“ aufgeführt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26078,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 456,
+    "reasoning_output_tokens": 131
+   }
+  }
+ ]
+}

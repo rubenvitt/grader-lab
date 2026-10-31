@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "1d537d595a352453221a851e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "wrong-migration",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6056,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration empfiehlt `timeoutMillis`. PR #378 führt jedoch `timeoutMs` ein und nennt diesen Namen auch im Deprecation-Hinweis.\"}],\"reason\":\"Der Rate Limiter ist in der endgültigen Fassung von PR #376 beschrieben; die zurückgenommene Fassung wird nicht genannt. Die Migrationsanweisung für die veraltete Joboption verwendet dagegen einen Namen, den der Diff nicht einführt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration empfiehlt `timeoutMillis`. PR #378 führt jedoch `timeoutMs` ein und nennt diesen Namen auch im Deprecation-Hinweis."
+   }
+  ],
+  "reason": "Der Rate Limiter ist in der endgültigen Fassung von PR #376 beschrieben; die zurückgenommene Fassung wird nicht genannt. Die Migrationsanweisung für die veraltete Joboption verwendet dagegen einen Namen, den der Diff nicht einführt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26311,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 113,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-5346-71d3-bece-81b8ceaaf946"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration empfiehlt `timeoutMillis`. PR #378 führt jedoch `timeoutMs` ein und nennt diesen Namen auch im Deprecation-Hinweis.\"}],\"reason\":\"Der Rate Limiter ist in der endgültigen Fassung von PR #376 beschrieben; die zurückgenommene Fassung wird nicht genannt. Die Migrationsanweisung für die veraltete Joboption verwendet dagegen einen Namen, den der Diff nicht einführt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26311,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 113,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

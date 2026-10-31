@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "96ea20a550db46c807c5be6f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reverted-listed",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5549,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur durch den Eintrag zu Priority Lanes in A. Da keine Quellen oder Diffs vorliegen, lässt sich weder seine Richtigkeit noch ein möglicher Revert beurteilen; ein sachlicher Vorteil ist daher nicht feststellbar.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur durch den Eintrag zu Priority Lanes in A. Da keine Quellen oder Diffs vorliegen, lässt sich weder seine Richtigkeit noch ein möglicher Revert beurteilen; ein sachlicher Vorteil ist daher nicht feststellbar.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25415,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 145,
+  "reasoning_output_tokens": 74
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-811b-7462-9f7a-9341baa889ba"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur durch den Eintrag zu Priority Lanes in A. Da keine Quellen oder Diffs vorliegen, lässt sich weder seine Richtigkeit noch ein möglicher Revert beurteilen; ein sachlicher Vorteil ist daher nicht feststellbar.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25415,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 145,
+    "reasoning_output_tokens": 74
+   }
+  }
+ ]
+}

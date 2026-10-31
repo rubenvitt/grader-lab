@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "4b81873354b2c9435e16755b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "hype-tone",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4911,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Werbliche Formulierungen sind unter anderem „Welcome to the future of job queues!“, „our most exciting release yet“, „revolutionary“ und „Turbocharged imports“.\"}],\"reason\":\"Die Notes enthalten mehrfach Werbesprache und verstoßen damit gegen den geforderten sachlichen Ton. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Werbliche Formulierungen sind unter anderem „Welcome to the future of job queues!“, „our most exciting release yet“, „revolutionary“ und „Turbocharged imports“."
+   }
+  ],
+  "reason": "Die Notes enthalten mehrfach Werbesprache und verstoßen damit gegen den geforderten sachlichen Ton. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24529,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 102,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-f6bb-7d50-a088-08fcc37c3c30"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Werbliche Formulierungen sind unter anderem „Welcome to the future of job queues!“, „our most exciting release yet“, „revolutionary“ und „Turbocharged imports“.\"}],\"reason\":\"Die Notes enthalten mehrfach Werbesprache und verstoßen damit gegen den geforderten sachlichen Ton. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24529,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 102,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "fc1204df0aac6567b7319a05",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reverted-listed",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 9876,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 ändert den Konstruktor: Bisher akzeptierte Schema-Namen werden nun anhand eines regulären Ausdrucks zurückgewiesen. Diese potenziell notwendige Konfigurationsanpassung steht nicht unter „Breaking Changes“.\"},{\"criterion\":\"R4\",\"evidence\":\"Die Notes nennen den Replay-Button aus PR #411; PR #416 entfernt sowohl den Button als auch den zugehörigen Endpunkt wieder.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die neue Einschränkung für Schema-Namen aus PR #414 ist eine inkompatible Änderung und verlangt einen Major-Sprung.\"}],\"reason\":\"Der Replay-Button wurde im selben Release zurückgenommen. Die neue Validierung von Schema-Namen kann bestehende Konfigurationen zurückweisen und muss als inkompatible Änderung eingeordnet werden.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 ändert den Konstruktor: Bisher akzeptierte Schema-Namen werden nun anhand eines regulären Ausdrucks zurückgewiesen. Diese potenziell notwendige Konfigurationsanpassung steht nicht unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R4",
+    "evidence": "Die Notes nennen den Replay-Button aus PR #411; PR #416 entfernt sowohl den Button als auch den zugehörigen Endpunkt wieder."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die neue Einschränkung für Schema-Namen aus PR #414 ist eine inkompatible Änderung und verlangt einen Major-Sprung."
+   }
+  ],
+  "reason": "Der Replay-Button wurde im selben Release zurückgenommen. Die neue Validierung von Schema-Namen kann bestehende Konfigurationen zurückweisen und muss als inkompatible Änderung eingeordnet werden.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26327,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 208,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-2bab-7ee2-ab07-2bbc28c06f21"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536165e59365e96-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53616632d6a38d9-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 ändert den Konstruktor: Bisher akzeptierte Schema-Namen werden nun anhand eines regulären Ausdrucks zurückgewiesen. Diese potenziell notwendige Konfigurationsanpassung steht nicht unter „Breaking Changes“.\"},{\"criterion\":\"R4\",\"evidence\":\"Die Notes nennen den Replay-Button aus PR #411; PR #416 entfernt sowohl den Button als auch den zugehörigen Endpunkt wieder.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die neue Einschränkung für Schema-Namen aus PR #414 ist eine inkompatible Änderung und verlangt einen Major-Sprung.\"}],\"reason\":\"Der Replay-Button wurde im selben Release zurückgenommen. Die neue Validierung von Schema-Namen kann bestehende Konfigurationen zurückweisen und muss als inkompatible Änderung eingeordnet werden.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26327,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 208,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

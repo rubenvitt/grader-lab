@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "4ae6100eb71982ae3656ee7f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "false-success",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5154,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und konkret, ordnen die geänderte Standardeinstellung als Breaking Change ein und nennen einen Migrationsschritt. Ohne Quellen lassen sich die tatsächlichen Änderungen und die Korrektheit der angegebenen Namen nicht weiter prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes sind sachlich und konkret, ordnen die geänderte Standardeinstellung als Breaking Change ein und nennen einen Migrationsschritt. Ohne Quellen lassen sich die tatsächlichen Änderungen und die Korrektheit der angegebenen Namen nicht weiter prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25253,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 72,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-5802-7a33-a7b0-10f75354731e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und konkret, ordnen die geänderte Standardeinstellung als Breaking Change ein und nennen einen Migrationsschritt. Ohne Quellen lassen sich die tatsächlichen Änderungen und die Korrektheit der angegebenen Namen nicht weiter prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25253,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 72,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "227aabfd00ca57fede2b7fab",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 8268,
+ "text": "{\"reason\":\"Fassung B behauptet zusätzlich, dass große Importe etwa 40 % schneller sind. Für diese Zahl liegt in den vorgelegten Texten kein Beleg vor; Fassung A vermeidet diese unbelegte Aussage.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung B behauptet zusätzlich, dass große Importe etwa 40 % schneller sind. Für diese Zahl liegt in den vorgelegten Texten kein Beleg vor; Fassung A vermeidet diese unbelegte Aussage.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25538,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 61,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-ceca-7a23-b9eb-0c4e908ab2ec"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360a8f182cb6ae-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360a938bfcf8e1-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360a9aa8a8359e-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B behauptet zusätzlich, dass große Importe etwa 40 % schneller sind. Für diese Zahl liegt in den vorgelegten Texten kein Beleg vor; Fassung A vermeidet diese unbelegte Aussage.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25538,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 61,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

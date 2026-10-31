@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "5e46cb3163749034bd3de4a0",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 3829,
+ "text": "{\"reason\":\"Beide Fassungen beschreiben dieselben Änderungen, nennen dieselbe Upgrade-Empfehlung und enthalten keine Sicherheitsdetails. Ohne zusätzliche Quellen lässt sich keine der beiden Fassungen anhand der Rubric als besser beurteilen.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen beschreiben dieselben Änderungen, nennen dieselbe Upgrade-Empfehlung und enthalten keine Sicherheitsdetails. Ohne zusätzliche Quellen lässt sich keine der beiden Fassungen anhand der Rubric als besser beurteilen.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25239,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 60,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-91f4-7fc2-8517-f68d2ac69cff"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen beschreiben dieselben Änderungen, nennen dieselbe Upgrade-Empfehlung und enthalten keine Sicherheitsdetails. Ohne zusätzliche Quellen lässt sich keine der beiden Fassungen anhand der Rubric als besser beurteilen.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25239,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 60,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

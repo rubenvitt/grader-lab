@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "a3dfa3ff4c12a1c7b9d0206d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "internal-noise",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4803,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Der Eintrag „CI now runs the integration tests against Postgres 16“ betrifft CI und Tests und gehört nicht in nutzergerichtete Release Notes.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zu Integrationstests mit Postgres 16 hat keine Entsprechung in der Referenz.\"}],\"reason\":\"Der Kandidat enthält einen zusätzlichen CI-Eintrag, der für Bibliotheksnutzer nicht relevant und durch die Referenz nicht belegt ist. Die übrigen Angaben entsprechen der Referenz.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Der Eintrag „CI now runs the integration tests against Postgres 16“ betrifft CI und Tests und gehört nicht in nutzergerichtete Release Notes."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zu Integrationstests mit Postgres 16 hat keine Entsprechung in der Referenz."
+   }
+  ],
+  "reason": "Der Kandidat enthält einen zusätzlichen CI-Eintrag, der für Bibliotheksnutzer nicht relevant und durch die Referenz nicht belegt ist. Die übrigen Angaben entsprechen der Referenz.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24802,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 131,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-88c9-7b72-91d0-3a9e9ead2ace"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Der Eintrag „CI now runs the integration tests against Postgres 16“ betrifft CI und Tests und gehört nicht in nutzergerichtete Release Notes.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zu Integrationstests mit Postgres 16 hat keine Entsprechung in der Referenz.\"}],\"reason\":\"Der Kandidat enthält einen zusätzlichen CI-Eintrag, der für Bibliotheksnutzer nicht relevant und durch die Referenz nicht belegt ist. Die übrigen Angaben entsprechen der Referenz.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24802,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 131,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

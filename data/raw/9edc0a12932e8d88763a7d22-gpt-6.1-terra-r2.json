@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "9edc0a12932e8d88763a7d22",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "invented-claim",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6652,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 lässt `PostgresStore` nun Schemanamen zurückweisen, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen. Nutzer mit bisher akzeptierten Schemanamen müssen ihre Konfiguration anpassen; die Änderung fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes zu #413 behaupten, der Job werde in die Failed-Menge verschoben. Der Diff belegt nur, dass `lockLost` ausgelöst und die Methode vor `ack` verlassen wird.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 5.0.1 nach 5.0.0. Die durch #414 eingeführte Einschränkung akzeptierter Schemanamen ist eine Breaking Change und verlangt einen Major-Sprung.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine unbelegte Aussage und berücksichtigen die inkompatible Änderung an der PostgreSQL-Konfiguration weder als Breaking Change noch bei der Versionswahl.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 lässt `PostgresStore` nun Schemanamen zurückweisen, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen. Nutzer mit bisher akzeptierten Schemanamen müssen ihre Konfiguration anpassen; die Änderung fehlt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes zu #413 behaupten, der Job werde in die Failed-Menge verschoben. Der Diff belegt nur, dass `lockLost` ausgelöst und die Methode vor `ack` verlassen wird."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die durch #414 eingeführte Einschränkung akzeptierter Schemanamen ist eine Breaking Change und verlangt einen Major-Sprung."
+   }
+  ],
+  "reason": "Die Notes enthalten eine unbelegte Aussage und berücksichtigen die inkompatible Änderung an der PostgreSQL-Konfiguration weder als Breaking Change noch bei der Versionswahl.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25473,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 320,
+  "reasoning_output_tokens": 57
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-db4c-77b2-82f6-c4d2648ca6c0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 lässt `PostgresStore` nun Schemanamen zurückweisen, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen. Nutzer mit bisher akzeptierten Schemanamen müssen ihre Konfiguration anpassen; die Änderung fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes zu #413 behaupten, der Job werde in die Failed-Menge verschoben. Der Diff belegt nur, dass `lockLost` ausgelöst und die Methode vor `ack` verlassen wird.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 5.0.1 nach 5.0.0. Die durch #414 eingeführte Einschränkung akzeptierter Schemanamen ist eine Breaking Change und verlangt einen Major-Sprung.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine unbelegte Aussage und berücksichtigen die inkompatible Änderung an der PostgreSQL-Konfiguration weder als Breaking Change noch bei der Versionswahl.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25473,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 320,
+    "reasoning_output_tokens": 57
+   }
+  }
+ ]
+}

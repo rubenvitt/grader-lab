@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "c0883259a22edd54ea3c43e9",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4203,
+ "text": "{\"reason\":\"Fassung A ist besser, weil sie nur nutzerrelevante Änderungen enthält. Fassung B führt zusätzlich CI-Caching und eine Entwicklerabhängigkeit auf und verstößt damit gegen R6.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil sie nur nutzerrelevante Änderungen enthält. Fassung B führt zusätzlich CI-Caching und eine Entwicklerabhängigkeit auf und verstößt damit gegen R6.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25417,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 58,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-b2bb-7e43-9141-62d781d906ad"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil sie nur nutzerrelevante Änderungen enthält. Fassung B führt zusätzlich CI-Caching und eine Entwicklerabhängigkeit auf und verstößt damit gegen R6.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25417,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 58,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

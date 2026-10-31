@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "19e22a078a662ec49f811fb6",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "wrong-migration",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 4752,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration empfiehlt `queue.purge({ state, olderThanMs })`. Der Diff von PR #338 erwartet jedoch `queue.purge({ status, olderThanMs })`; `state` ist nicht der im Code verwendete Optionsname.\"}],\"reason\":\"Die Migrationsanweisung verwendet einen falschen Optionsnamen. Die übrigen Angaben sind durch die Quellen gedeckt und entsprechen der Rubric.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration empfiehlt `queue.purge({ state, olderThanMs })`. Der Diff von PR #338 erwartet jedoch `queue.purge({ status, olderThanMs })`; `state` ist nicht der im Code verwendete Optionsname."
+   }
+  ],
+  "reason": "Die Migrationsanweisung verwendet einen falschen Optionsnamen. Die übrigen Angaben sind durch die Quellen gedeckt und entsprechen der Rubric.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25731,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 133,
+  "reasoning_output_tokens": 24
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-6412-7183-8eb4-f58891ac31a0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration empfiehlt `queue.purge({ state, olderThanMs })`. Der Diff von PR #338 erwartet jedoch `queue.purge({ status, olderThanMs })`; `state` ist nicht der im Code verwendete Optionsname.\"}],\"reason\":\"Die Migrationsanweisung verwendet einen falschen Optionsnamen. Die übrigen Angaben sind durch die Quellen gedeckt und entsprechen der Rubric.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25731,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 133,
+    "reasoning_output_tokens": 24
+   }
+  }
+ ]
+}

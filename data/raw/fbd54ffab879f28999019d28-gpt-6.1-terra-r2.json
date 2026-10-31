@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "fbd54ffab879f28999019d28",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-bump",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4101,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der Versionsnummer. A verwendet für die genannten Breaking Changes einen Major-Sprung; B verwendet lediglich einen Minor-Sprung und verstößt damit gegen R9.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur in der Versionsnummer. A verwendet für die genannten Breaking Changes einen Major-Sprung; B verwendet lediglich einen Minor-Sprung und verstößt damit gegen R9.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24678,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 56,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-749f-74c2-960d-8da540d80be2"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der Versionsnummer. A verwendet für die genannten Breaking Changes einen Major-Sprung; B verwendet lediglich einen Minor-Sprung und verstößt damit gegen R9.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24678,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 56,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

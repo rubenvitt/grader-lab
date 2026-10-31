@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "e4b9ed4b7d80b5daf61d0bd9",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5494,
+ "text": "{\"reason\":\"Fassung B ist besser, weil sie die für Bibliotheksnutzer irrelevanten CI- und Dev-Dependency-Änderungen auslässt (R6). Die übrigen Inhalte sind identisch.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist besser, weil sie die für Bibliotheksnutzer irrelevanten CI- und Dev-Dependency-Änderungen auslässt (R6). Die übrigen Inhalte sind identisch.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25292,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 60,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-12be-7553-a291-1908ab7e1857"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist besser, weil sie die für Bibliotheksnutzer irrelevanten CI- und Dev-Dependency-Änderungen auslässt (R6). Die übrigen Inhalte sind identisch.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25292,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 60,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "6e07eb993bffcf211ddf4c37",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "invented-claim",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5185,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die neue Retry-Strategie ist „now the default for new queues“, steht aber unter „Features“ statt unter „Breaking Changes“.\"}],\"reason\":\"Die Notes nennen eine Änderung des Standardverhaltens, ordnen sie aber nicht als Breaking Change ein. Die übrigen Kriterien lassen sich aus dem Text allein nicht als verletzt erkennen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "Die neue Retry-Strategie ist „now the default for new queues“, steht aber unter „Features“ statt unter „Breaking Changes“."
+   }
+  ],
+  "reason": "Die Notes nennen eine Änderung des Standardverhaltens, ordnen sie aber nicht als Breaking Change ein. Die übrigen Kriterien lassen sich aus dem Text allein nicht als verletzt erkennen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25353,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 145,
+  "reasoning_output_tokens": 48
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-f375-7cd3-b296-56a66864fb9c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die neue Retry-Strategie ist „now the default for new queues“, steht aber unter „Features“ statt unter „Breaking Changes“.\"}],\"reason\":\"Die Notes nennen eine Änderung des Standardverhaltens, ordnen sie aber nicht als Breaking Change ein. Die übrigen Kriterien lassen sich aus dem Text allein nicht als verletzt erkennen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25353,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 145,
+    "reasoning_output_tokens": 48
+   }
+  }
+ ]
+}

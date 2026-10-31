@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "c7e2a99a37df9196b2715513",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "paraphrase",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 10249,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 schränkt die zulässige Konfiguration von `PostgresStore` ein; bisher akzeptierte Konfigurationen können beim Erstellen einen Fehler auslösen. Die Notes führen diese inkompatible Änderung nicht unter „Breaking Changes“ auf.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zu #413, ein Worker könne den Zustand nach einer Übernahme „no longer overwrite“, ist stärker als der Diff: Zwischen der Prüfung mit `holdsLock` und `ack` ist keine atomare Ausführung belegt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes kündigen für #414 ein separates Advisory mit später folgenden Details an. Die Quellen nennen zwar ein Advisory, belegen aber keine solche spätere Veröffentlichung.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die inkompatible Konfigurationsänderung aus #414 verlangt gemäß SemVer einen Major-Sprung auf 6.0.0.\"}],\"reason\":\"Die Änderung an `PostgresStore` ist inkompatibel und muss ohne vertrauliche Details als Breaking Change berücksichtigt werden. Zudem enthalten die Notes zwei Aussagen, die durch die Diffs und übrigen Quellen nicht ausreichend belegt sind.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 schränkt die zulässige Konfiguration von `PostgresStore` ein; bisher akzeptierte Konfigurationen können beim Erstellen einen Fehler auslösen. Die Notes führen diese inkompatible Änderung nicht unter „Breaking Changes“ auf."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zu #413, ein Worker könne den Zustand nach einer Übernahme „no longer overwrite“, ist stärker als der Diff: Zwischen der Prüfung mit `holdsLock` und `ack` ist keine atomare Ausführung belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes kündigen für #414 ein separates Advisory mit später folgenden Details an. Die Quellen nennen zwar ein Advisory, belegen aber keine solche spätere Veröffentlichung."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die inkompatible Konfigurationsänderung aus #414 verlangt gemäß SemVer einen Major-Sprung auf 6.0.0."
+   }
+  ],
+  "reason": "Die Änderung an `PostgresStore` ist inkompatibel und muss ohne vertrauliche Details als Breaking Change berücksichtigt werden. Zudem enthalten die Notes zwei Aussagen, die durch die Diffs und übrigen Quellen nicht ausreichend belegt sind.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26320,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 442,
+  "reasoning_output_tokens": 160
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-7717-7850-9c56-6f7c0f3cd0cd"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 schränkt die zulässige Konfiguration von `PostgresStore` ein; bisher akzeptierte Konfigurationen können beim Erstellen einen Fehler auslösen. Die Notes führen diese inkompatible Änderung nicht unter „Breaking Changes“ auf.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zu #413, ein Worker könne den Zustand nach einer Übernahme „no longer overwrite“, ist stärker als der Diff: Zwischen der Prüfung mit `holdsLock` und `ack` ist keine atomare Ausführung belegt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes kündigen für #414 ein separates Advisory mit später folgenden Details an. Die Quellen nennen zwar ein Advisory, belegen aber keine solche spätere Veröffentlichung.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die inkompatible Konfigurationsänderung aus #414 verlangt gemäß SemVer einen Major-Sprung auf 6.0.0.\"}],\"reason\":\"Die Änderung an `PostgresStore` ist inkompatibel und muss ohne vertrauliche Details als Breaking Change berücksichtigt werden. Zudem enthalten die Notes zwei Aussagen, die durch die Diffs und übrigen Quellen nicht ausreichend belegt sind.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26320,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 442,
+    "reasoning_output_tokens": 160
+   }
+  }
+ ]
+}

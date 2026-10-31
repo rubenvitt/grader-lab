@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "c0ee5bc6d12d034212c4da87",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "ghost-pr",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 13029,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Feature-Eintrag verweist auf PR #333; die Referenz nennt PR #331.\"}],\"reason\":\"Der PR-Verweis zum Ereignis `drained` weicht von der Referenz ab. Die übrigen Angaben stimmen überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Feature-Eintrag verweist auf PR #333; die Referenz nennt PR #331."
+   }
+  ],
+  "reason": "Der PR-Verweis zum Ereignis `drained` weicht von der Referenz ab. Die übrigen Angaben stimmen überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25493,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 79,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-01d1-75d2-8044-e968e937de68"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360618fd30236c-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536061d88b2359e-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53606252f08e9d2-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360631786d03e4-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Feature-Eintrag verweist auf PR #333; die Referenz nennt PR #331.\"}],\"reason\":\"Der PR-Verweis zum Ereignis `drained` weicht von der Referenz ab. Die übrigen Angaben stimmen überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25493,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 79,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

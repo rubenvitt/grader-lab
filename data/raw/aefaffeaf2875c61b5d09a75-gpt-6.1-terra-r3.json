@@ -1,0 +1,79 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "aefaffeaf2875c61b5d09a75",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "useless-true",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 13151,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker fix (#413)“ beschreibt weder das behobene Verhalten nach Verlust der Job-Sperre noch das stattdessen ausgelöste Ereignis `lockLost`.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security improvements (#414)“ nennt weder die betroffene Komponente `PostgresStore` noch die Upgrade-Empfehlung.\"}],\"reason\":\"Der Kandidat nennt beide Einträge, vermittelt aber ihre konkreten Auswirkungen und die empfohlene Handlung nicht ausreichend. Die Versionsnummer entspricht der Referenz.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Worker fix (#413)“ beschreibt weder das behobene Verhalten nach Verlust der Job-Sperre noch das stattdessen ausgelöste Ereignis `lockLost`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Security improvements (#414)“ nennt weder die betroffene Komponente `PostgresStore` noch die Upgrade-Empfehlung."
+   }
+  ],
+  "reason": "Der Kandidat nennt beide Einträge, vermittelt aber ihre konkreten Auswirkungen und die empfohlene Handlung nicht ausreichend. Die Versionsnummer entspricht der Referenz.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24430,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 135,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-0c62-7de1-8702-4f5c56d1fa94"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617c1495b339b-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617c64bb3e567-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617cddeb3dcd9-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617da1959469d-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker fix (#413)“ beschreibt weder das behobene Verhalten nach Verlust der Job-Sperre noch das stattdessen ausgelöste Ereignis `lockLost`.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security improvements (#414)“ nennt weder die betroffene Komponente `PostgresStore` noch die Upgrade-Empfehlung.\"}],\"reason\":\"Der Kandidat nennt beide Einträge, vermittelt aber ihre konkreten Auswirkungen und die empfohlene Handlung nicht ausreichend. Die Versionsnummer entspricht der Referenz.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24430,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 135,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

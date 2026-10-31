@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "91d0e77835c38bab8862a7a5",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6870,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu `PostgresStore` verweist auf PR #356; die Quellen führen die Änderung unter PR #355. Der Diff zeigt die Klasse und den Package-Export, belegt aber nicht, dass sich damit eine vollständige Queue auf Postgres betreiben lässt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, `stalledIntervalMs` werde ohne Alias stillschweigend ignoriert. Der Diff zeigt die Umbenennung und die Verwendung von `stallCheckMs`, aber weder eine vollständige Aliasprüfung noch das Verhalten bei der alten Option.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgelöst werden. PR #357 zeigt die Berechnung des nächsten Termins mit `tz: 'UTC'`, belegt aber nicht diese allgemeine Garantie.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes kündigen Details in einer separaten Sicherheitsmitteilung an. PR #358 nennt zwar ein Advisory, belegt aber keine spätere Veröffentlichung von Details.\"}],\"reason\":\"Die Breaking Changes und ihre Migration sind erfasst; auch die Major-Version und der zurückhaltende Sicherheitshinweis passen grundsätzlich. Mehrere Aussagen gehen jedoch über die gezeigten Diffs und Quellen hinaus oder verweisen auf eine falsche PR.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu `PostgresStore` verweist auf PR #356; die Quellen führen die Änderung unter PR #355. Der Diff zeigt die Klasse und den Package-Export, belegt aber nicht, dass sich damit eine vollständige Queue auf Postgres betreiben lässt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, `stalledIntervalMs` werde ohne Alias stillschweigend ignoriert. Der Diff zeigt die Umbenennung und die Verwendung von `stallCheckMs`, aber weder eine vollständige Aliasprüfung noch das Verhalten bei der alten Option."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes garantieren, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgelöst werden. PR #357 zeigt die Berechnung des nächsten Termins mit `tz: 'UTC'`, belegt aber nicht diese allgemeine Garantie."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes kündigen Details in einer separaten Sicherheitsmitteilung an. PR #358 nennt zwar ein Advisory, belegt aber keine spätere Veröffentlichung von Details."
+   }
+  ],
+  "reason": "Die Breaking Changes und ihre Migration sind erfasst; auch die Major-Version und der zurückhaltende Sicherheitshinweis passen grundsätzlich. Mehrere Aussagen gehen jedoch über die gezeigten Diffs und Quellen hinaus oder verweisen auf eine falsche PR.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26924,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 296,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-8eab-77b3-aacd-637ef2300456"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu `PostgresStore` verweist auf PR #356; die Quellen führen die Änderung unter PR #355. Der Diff zeigt die Klasse und den Package-Export, belegt aber nicht, dass sich damit eine vollständige Queue auf Postgres betreiben lässt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, `stalledIntervalMs` werde ohne Alias stillschweigend ignoriert. Der Diff zeigt die Umbenennung und die Verwendung von `stallCheckMs`, aber weder eine vollständige Aliasprüfung noch das Verhalten bei der alten Option.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgelöst werden. PR #357 zeigt die Berechnung des nächsten Termins mit `tz: 'UTC'`, belegt aber nicht diese allgemeine Garantie.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes kündigen Details in einer separaten Sicherheitsmitteilung an. PR #358 nennt zwar ein Advisory, belegt aber keine spätere Veröffentlichung von Details.\"}],\"reason\":\"Die Breaking Changes und ihre Migration sind erfasst; auch die Major-Version und der zurückhaltende Sicherheitshinweis passen grundsätzlich. Mehrere Aussagen gehen jedoch über die gezeigten Diffs und Quellen hinaus oder verweisen auf eine falsche PR.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26924,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 296,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "75a56fac086df7b466ec3acf",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4105,
+ "text": "{\"reason\":\"Beide Fassungen beschreiben dieselben Änderungen, empfehlen das Upgrade und nennen keine sicherheitsrelevanten Details. Unterschiede in Wortwahl und Satzbau begründen nach der Rubric keine bessere Bewertung.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen beschreiben dieselben Änderungen, empfehlen das Upgrade und nennen keine sicherheitsrelevanten Details. Unterschiede in Wortwahl und Satzbau begründen nach der Rubric keine bessere Bewertung.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25241,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 57,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-848e-7443-96d6-423b6347c443"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen beschreiben dieselben Änderungen, empfehlen das Upgrade und nennen keine sicherheitsrelevanten Details. Unterschiede in Wortwahl und Satzbau begründen nach der Rubric keine bessere Bewertung.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25241,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 57,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

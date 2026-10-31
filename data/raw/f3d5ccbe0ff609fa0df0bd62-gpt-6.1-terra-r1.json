@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "f3d5ccbe0ff609fa0df0bd62",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4273,
+ "text": "{\"reason\":\"Fassung B ist besser, weil sie die für Bibliotheksnutzer irrelevanten CI- und Dev-Dependency-Änderungen weglässt (R6). Die übrigen Inhalte sind identisch; ihre Übereinstimmung mit den nicht vorliegenden Quellen lässt sich nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist besser, weil sie die für Bibliotheksnutzer irrelevanten CI- und Dev-Dependency-Änderungen weglässt (R6). Die übrigen Inhalte sind identisch; ihre Übereinstimmung mit den nicht vorliegenden Quellen lässt sich nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25413,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 77,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-a758-70c3-bee0-ad70d789520d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist besser, weil sie die für Bibliotheksnutzer irrelevanten CI- und Dev-Dependency-Änderungen weglässt (R6). Die übrigen Inhalte sind identisch; ihre Übereinstimmung mit den nicht vorliegenden Quellen lässt sich nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25413,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 77,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

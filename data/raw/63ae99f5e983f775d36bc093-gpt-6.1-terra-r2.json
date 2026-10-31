@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "63ae99f5e983f775d36bc093",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "invented-claim",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7775,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #334 behauptet, Worker behielten ihre Locks bei Redis-Failovers und die Erneuerung verbinde sich automatisch neu. Der Diff versucht `pexpire` bei `ECONNRESET` genau einmal erneut; eine Wiederverbindung oder der Erhalt des Locks wird nicht garantiert.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung spricht allgemein von einem erneuten Versuch nach einer unterbrochenen Verbindung. Der Diff zu #334 behandelt nur Fehler mit dem Code `ECONNRESET`; andere Fehler werden weitergeworfen.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` erklärt nicht, dass der bisherige Wert `graceMs` als `olderThanMs: graceMs` übergeben werden muss. Im bisherigen Aufruf ist keine Variable `olderThanMs` genannt.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Security-Eintrag nennt nur ein allgemeines Sicherheitsproblem. Die betroffene Komponente `signing` aus #336 darf trotz Embargo genannt werden und würde Nutzern helfen, die Änderung einzuordnen.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten unbelegte Aussagen zur Lock-Erneuerung, einen unvollständigen Migrationsschritt und einen zu allgemeinen Sicherheitseintrag. Die Versionsnummer 3.1.0 passt zu den belegten Features und der Deprecation.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #334 behauptet, Worker behielten ihre Locks bei Redis-Failovers und die Erneuerung verbinde sich automatisch neu. Der Diff versucht `pexpire` bei `ECONNRESET` genau einmal erneut; eine Wiederverbindung oder der Erhalt des Locks wird nicht garantiert."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung spricht allgemein von einem erneuten Versuch nach einer unterbrochenen Verbindung. Der Diff zu #334 behandelt nur Fehler mit dem Code `ECONNRESET`; andere Fehler werden weitergeworfen."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` erklärt nicht, dass der bisherige Wert `graceMs` als `olderThanMs: graceMs` übergeben werden muss. Im bisherigen Aufruf ist keine Variable `olderThanMs` genannt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Security-Eintrag nennt nur ein allgemeines Sicherheitsproblem. Die betroffene Komponente `signing` aus #336 darf trotz Embargo genannt werden und würde Nutzern helfen, die Änderung einzuordnen."
+   }
+  ],
+  "reason": "Die Notes enthalten unbelegte Aussagen zur Lock-Erneuerung, einen unvollständigen Migrationsschritt und einen zu allgemeinen Sicherheitseintrag. Die Versionsnummer 3.1.0 passt zu den belegten Features und der Deprecation.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26577,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 443,
+  "reasoning_output_tokens": 71
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-4076-7861-9c3e-8bf0717d8638"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #334 behauptet, Worker behielten ihre Locks bei Redis-Failovers und die Erneuerung verbinde sich automatisch neu. Der Diff versucht `pexpire` bei `ECONNRESET` genau einmal erneut; eine Wiederverbindung oder der Erhalt des Locks wird nicht garantiert.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung spricht allgemein von einem erneuten Versuch nach einer unterbrochenen Verbindung. Der Diff zu #334 behandelt nur Fehler mit dem Code `ECONNRESET`; andere Fehler werden weitergeworfen.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` erklärt nicht, dass der bisherige Wert `graceMs` als `olderThanMs: graceMs` übergeben werden muss. Im bisherigen Aufruf ist keine Variable `olderThanMs` genannt.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Security-Eintrag nennt nur ein allgemeines Sicherheitsproblem. Die betroffene Komponente `signing` aus #336 darf trotz Embargo genannt werden und würde Nutzern helfen, die Änderung einzuordnen.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten unbelegte Aussagen zur Lock-Erneuerung, einen unvollständigen Migrationsschritt und einen zu allgemeinen Sicherheitseintrag. Die Versionsnummer 3.1.0 passt zu den belegten Features und der Deprecation.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26577,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 443,
+    "reasoning_output_tokens": 71
+   }
+  }
+ ]
+}

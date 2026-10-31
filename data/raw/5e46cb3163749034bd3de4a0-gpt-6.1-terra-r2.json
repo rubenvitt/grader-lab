@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "5e46cb3163749034bd3de4a0",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4356,
+ "text": "{\"reason\":\"Beide Fassungen nennen dieselben Änderungen, dieselbe Upgrade-Empfehlung und dieselbe Versionsnummer. Ihre Unterschiede betreffen nur die Formulierung und sind nach der Rubric nicht entscheidend.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen nennen dieselben Änderungen, dieselbe Upgrade-Empfehlung und dieselbe Versionsnummer. Ihre Unterschiede betreffen nur die Formulierung und sind nach der Rubric nicht entscheidend.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25239,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 58,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-80e7-7a21-b8a0-c83ccb777379"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen nennen dieselben Änderungen, dieselbe Upgrade-Empfehlung und dieselbe Versionsnummer. Ihre Unterschiede betreffen nur die Formulierung und sind nach der Rubric nicht entscheidend.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25239,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 58,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

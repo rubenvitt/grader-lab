@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "dfd100d1ecece18a67e06e75",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reverted-listed",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5401,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Replay-Button im Dashboard für fehlgeschlagene Jobs (#411) hat keine Entsprechung in der Referenz.\"},{\"criterion\":\"R9\",\"evidence\":\"Der Kandidat führt ein neues Feature auf, verwendet dafür aber mit 5.0.1 nur eine Patch-Version; ein Feature verlangt mindestens einen Minor-Sprung.\"}],\"reason\":\"Der Kandidat enthält ein zusätzliches, durch die Referenz nicht belegtes Feature. Die angegebene Patch-Version passt zudem nicht zu einem Feature-Release.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Replay-Button im Dashboard für fehlgeschlagene Jobs (#411) hat keine Entsprechung in der Referenz."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Der Kandidat führt ein neues Feature auf, verwendet dafür aber mit 5.0.1 nur eine Patch-Version; ein Feature verlangt mindestens einen Minor-Sprung."
+   }
+  ],
+  "reason": "Der Kandidat enthält ein zusätzliches, durch die Referenz nicht belegtes Feature. Die angegebene Patch-Version passt zudem nicht zu einem Feature-Release.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25359,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 130,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-169b-7bd2-a417-787ac0597eae"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Replay-Button im Dashboard für fehlgeschlagene Jobs (#411) hat keine Entsprechung in der Referenz.\"},{\"criterion\":\"R9\",\"evidence\":\"Der Kandidat führt ein neues Feature auf, verwendet dafür aber mit 5.0.1 nur eine Patch-Version; ein Feature verlangt mindestens einen Minor-Sprung.\"}],\"reason\":\"Der Kandidat enthält ein zusätzliches, durch die Referenz nicht belegtes Feature. Die angegebene Patch-Version passt zudem nicht zu einem Feature-Release.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25359,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 130,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

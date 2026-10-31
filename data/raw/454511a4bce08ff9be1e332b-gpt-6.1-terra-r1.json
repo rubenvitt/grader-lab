@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "454511a4bce08ff9be1e332b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "false-success",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4394,
+ "text": "{\"reason\":\"Die beiden Fassungen sind inhaltlich und wörtlich identisch. Daher sind sie anhand der Rubrik gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die beiden Fassungen sind inhaltlich und wörtlich identisch. Daher sind sie anhand der Rubrik gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25566,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 43,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-0441-7fa2-89f6-1537f9480675"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die beiden Fassungen sind inhaltlich und wörtlich identisch. Daher sind sie anhand der Rubrik gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25566,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 43,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "e3a9b71b433895cae515b0c4",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4968,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur darin, ob die neue Retry-Strategie Standard oder opt-in ist. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, welche Aussage zutrifft und ob eine Breaking Change vorliegt.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur darin, ob die neue Retry-Strategie Standard oder opt-in ist. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, welche Aussage zutrifft und ob eine Breaking Change vorliegt.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25572,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 61,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-fa1c-7062-a046-608aa857703f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur darin, ob die neue Retry-Strategie Standard oder opt-in ist. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, welche Aussage zutrifft und ob eine Breaking Change vorliegt.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25572,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 61,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

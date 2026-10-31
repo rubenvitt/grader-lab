@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "6e07eb993bffcf211ddf4c37",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "invented-claim",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5556,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die neue Retry-Strategie `backoff: { type: 'jitter', baseMs }` ist laut Notes jetzt der Standard für neue Queues, steht aber unter „Features“ statt unter „Breaking Changes“.\"}],\"reason\":\"Die Notes beschreiben eine Änderung des Standardverhaltens, die nach R1 als Breaking Change einzuordnen ist. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "Die neue Retry-Strategie `backoff: { type: 'jitter', baseMs }` ist laut Notes jetzt der Standard für neue Queues, steht aber unter „Features“ statt unter „Breaking Changes“."
+   }
+  ],
+  "reason": "Die Notes beschreiben eine Änderung des Standardverhaltens, die nach R1 als Breaking Change einzuordnen ist. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25353,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 149,
+  "reasoning_output_tokens": 33
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-e018-71a1-ac8f-c8abba39f5be"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die neue Retry-Strategie `backoff: { type: 'jitter', baseMs }` ist laut Notes jetzt der Standard für neue Queues, steht aber unter „Features“ statt unter „Breaking Changes“.\"}],\"reason\":\"Die Notes beschreiben eine Änderung des Standardverhaltens, die nach R1 als Breaking Change einzuordnen ist. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25353,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 149,
+    "reasoning_output_tokens": 33
+   }
+  }
+ ]
+}

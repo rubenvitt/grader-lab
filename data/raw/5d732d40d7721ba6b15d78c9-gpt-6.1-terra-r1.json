@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "5d732d40d7721ba6b15d78c9",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-migration",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5181,
+ "text": "{\"reason\":\"Fassung B nennt im Migrationsschritt den neuen Optionsnamen `stallCheckMs` korrekt. Fassung A verwendet dort abweichend `stalledCheckMs`, sodass die Migration nicht zum beschriebenen Ziel führt.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B nennt im Migrationsschritt den neuen Optionsnamen `stallCheckMs` korrekt. Fassung A verwendet dort abweichend `stalledCheckMs`, sodass die Migration nicht zum beschriebenen Ziel führt.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25529,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 61,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-1a81-70a0-b721-ff8a8b77be71"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt im Migrationsschritt den neuen Optionsnamen `stallCheckMs` korrekt. Fassung A verwendet dort abweichend `stalledCheckMs`, sodass die Migration nicht zum beschriebenen Ziel führt.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25529,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 61,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

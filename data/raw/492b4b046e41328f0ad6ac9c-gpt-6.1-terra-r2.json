@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "492b4b046e41328f0ad6ac9c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4693,
+ "text": "{\"reason\":\"Fassung A beschreibt dieselben Änderungen und Migrationsschritte sachlich. Fassung B verstößt mit Werbesprache und unbelegten Aussagen wie „supercharges your Redis“ gegen R7 und R2.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A beschreibt dieselben Änderungen und Migrationsschritte sachlich. Fassung B verstößt mit Werbesprache und unbelegten Aussagen wie „supercharges your Redis“ gegen R7 und R2.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25408,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 61,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-e806-7c31-9996-cf2314b84eae"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A beschreibt dieselben Änderungen und Migrationsschritte sachlich. Fassung B verstößt mit Werbesprache und unbelegten Aussagen wie „supercharges your Redis“ gegen R7 und R2.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25408,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 61,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

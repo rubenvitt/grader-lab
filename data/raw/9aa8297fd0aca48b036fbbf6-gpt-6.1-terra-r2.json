@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "9aa8297fd0aca48b036fbbf6",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reverted-listed",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 13926,
+ "text": "{\"reason\":\"Fassung A enthält gegenüber B einen konkreten Feature-Eintrag, der Nutzern eine zusätzliche Änderung verständlich macht. Ob dieser Eintrag durch den Diff belegt ist oder im selben Release zurückgenommen wurde, lässt sich aus den vorliegenden Texten nicht beurteilen; beide Fassungen verwenden für ein Release mit dem genannten Feature allerdings eine nach SemVer unpassende Patch-Version.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A enthält gegenüber B einen konkreten Feature-Eintrag, der Nutzern eine zusätzliche Änderung verständlich macht. Ob dieser Eintrag durch den Diff belegt ist oder im selben Release zurückgenommen wurde, lässt sich aus den vorliegenden Texten nicht beurteilen; beide Fassungen verwenden für ein Release mit dem genannten Feature allerdings eine nach SemVer unpassende Patch-Version.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25250,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 93,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-2387-7960-a0d1-cfe7f40fe554"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536164d187816eb-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536165239df14d1-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361659ad4f5537-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53616655d2a89cd-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A enthält gegenüber B einen konkreten Feature-Eintrag, der Nutzern eine zusätzliche Änderung verständlich macht. Ob dieser Eintrag durch den Diff belegt ist oder im selben Release zurückgenommen wurde, lässt sich aus den vorliegenden Texten nicht beurteilen; beide Fassungen verwenden für ein Release mit dem genannten Feature allerdings eine nach SemVer unpassende Patch-Version.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25250,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 93,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "80739376c1aab896d802c584",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "paraphrase",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5063,
+ "text": "{\"violations\":[],\"reason\":\"Der Text enthält keine erkennbaren Verstöße gegen die aus den Notes selbst prüfbaren Kriterien. Aussagen, Migration und Versionssprung lassen sich ohne Quellen nicht weiter überprüfen und gelten daher gemäß Vorgabe als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Text enthält keine erkennbaren Verstöße gegen die aus den Notes selbst prüfbaren Kriterien. Aussagen, Migration und Versionssprung lassen sich ohne Quellen nicht weiter überprüfen und gelten daher gemäß Vorgabe als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25266,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 64,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-c2ec-7471-8b3d-c6c990a28e78"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Text enthält keine erkennbaren Verstöße gegen die aus den Notes selbst prüfbaren Kriterien. Aussagen, Migration und Versionssprung lassen sich ohne Quellen nicht weiter überprüfen und gelten daher gemäß Vorgabe als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25266,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 64,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

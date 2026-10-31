@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "4e77d7b7a4d920a5c4e21299",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7576,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung verspricht „flawless graceful shutdown“. Der Diff zu #397 belegt lediglich, dass `worker.close()` höchstens bis zum Ablauf von `shutdownTimeoutMs` auf aktive Jobs wartet.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #395 behauptet, Retries kämen durch Jitter nicht alle gleichzeitig an. Der Diff berechnet zufällige ganzzahlige Verzögerungen; gleiche Verzögerungen bleiben möglich.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Wer bisher `worker.pause(false)` verwendet, muss für dasselbe Verhalten `{ drain: false }` übergeben; der Diff zu #399 übernimmt den jeweiligen Boolean-Wert.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Die Notes enthalten Werbesprache, etwa „The wait is over“, „game-changing“, „stunning“ und „Shut down with confidence“.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten unbelegte Zusicherungen, eine für `pause(false)` falsche Migrationsanweisung und Werbesprache. Die Versionsnummer 5.0.0 passt zu den belegten Breaking Changes.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung verspricht „flawless graceful shutdown“. Der Diff zu #397 belegt lediglich, dass `worker.close()` höchstens bis zum Ablauf von `shutdownTimeoutMs` auf aktive Jobs wartet."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #395 behauptet, Retries kämen durch Jitter nicht alle gleichzeitig an. Der Diff berechnet zufällige ganzzahlige Verzögerungen; gleiche Verzögerungen bleiben möglich."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Wer bisher `worker.pause(false)` verwendet, muss für dasselbe Verhalten `{ drain: false }` übergeben; der Diff zu #399 übernimmt den jeweiligen Boolean-Wert."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Notes enthalten Werbesprache, etwa „The wait is over“, „game-changing“, „stunning“ und „Shut down with confidence“."
+   }
+  ],
+  "reason": "Die Notes enthalten unbelegte Zusicherungen, eine für `pause(false)` falsche Migrationsanweisung und Werbesprache. Die Versionsnummer 5.0.0 passt zu den belegten Breaking Changes.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26119,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 392,
+  "reasoning_output_tokens": 74
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-8371-79e1-b33c-603c88cb9987"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung verspricht „flawless graceful shutdown“. Der Diff zu #397 belegt lediglich, dass `worker.close()` höchstens bis zum Ablauf von `shutdownTimeoutMs` auf aktive Jobs wartet.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #395 behauptet, Retries kämen durch Jitter nicht alle gleichzeitig an. Der Diff berechnet zufällige ganzzahlige Verzögerungen; gleiche Verzögerungen bleiben möglich.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Wer bisher `worker.pause(false)` verwendet, muss für dasselbe Verhalten `{ drain: false }` übergeben; der Diff zu #399 übernimmt den jeweiligen Boolean-Wert.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Die Notes enthalten Werbesprache, etwa „The wait is over“, „game-changing“, „stunning“ und „Shut down with confidence“.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten unbelegte Zusicherungen, eine für `pause(false)` falsche Migrationsanweisung und Werbesprache. Die Versionsnummer 5.0.0 passt zu den belegten Breaking Changes.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26119,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 392,
+    "reasoning_output_tokens": 74
+   }
+  }
+ ]
+}

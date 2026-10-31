@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "dbfff249981a02a4cf160fbd",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5896,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #307, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff belegt nur, dass der Standardwert von `removeOnComplete` von `false` auf `true` wechselt; ein Abrufverhalten ist nicht gezeigt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #304, der Job bleibe nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff zeigt die Freigabe des Locks im `finally`-Block, aber keine Änderung des Jobstatus.\"}],\"reason\":\"Die Notes erfassen die verbleibenden Änderungen und den Major-Sprung, enthalten aber zwei Aussagen, deren konkrete Folgen die Diffs nicht belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #307, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff belegt nur, dass der Standardwert von `removeOnComplete` von `false` auf `true` wechselt; ein Abrufverhalten ist nicht gezeigt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #304, der Job bleibe nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff zeigt die Freigabe des Locks im `finally`-Block, aber keine Änderung des Jobstatus."
+   }
+  ],
+  "reason": "Die Notes erfassen die verbleibenden Änderungen und den Major-Sprung, enthalten aber zwei Aussagen, deren konkrete Folgen die Diffs nicht belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25988,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 230,
+  "reasoning_output_tokens": 49
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-6c69-7f01-aab1-7dbe825eba76"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #307, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff belegt nur, dass der Standardwert von `removeOnComplete` von `false` auf `true` wechselt; ein Abrufverhalten ist nicht gezeigt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #304, der Job bleibe nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff zeigt die Freigabe des Locks im `finally`-Block, aber keine Änderung des Jobstatus.\"}],\"reason\":\"Die Notes erfassen die verbleibenden Änderungen und den Major-Sprung, enthalten aber zwei Aussagen, deren konkrete Folgen die Diffs nicht belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25988,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 230,
+    "reasoning_output_tokens": 49
+   }
+  }
+ ]
+}

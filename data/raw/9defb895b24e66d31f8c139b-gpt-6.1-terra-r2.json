@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "9defb895b24e66d31f8c139b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "internal-noise",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4264,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Maintenance“ stehen interne Änderungen an den Lint- und Test-Jobs (#417) sowie an CODEOWNERS (#419).\"}],\"reason\":\"Die beiden Maintenance-Einträge betreffen interne Abläufe und sind für Nutzer der Bibliothek nicht relevant. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Unter „Maintenance“ stehen interne Änderungen an den Lint- und Test-Jobs (#417) sowie an CODEOWNERS (#419)."
+   }
+  ],
+  "reason": "Die beiden Maintenance-Einträge betreffen interne Abläufe und sind für Nutzer der Bibliothek nicht relevant. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24362,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 91,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-98b9-7c12-86e1-9cbf7bc52b42"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Maintenance“ stehen interne Änderungen an den Lint- und Test-Jobs (#417) sowie an CODEOWNERS (#419).\"}],\"reason\":\"Die beiden Maintenance-Einträge betreffen interne Abläufe und sind für Nutzer der Bibliothek nicht relevant. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24362,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 91,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

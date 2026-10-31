@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "c4e70822e41bc4317ef24392",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5888,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"#307 ändert den Standardwert von `removeOnComplete` von `false` auf `true`. „Some default behaviour has changed“ nennt weder diese Änderung noch die nötige Anpassung: Wer abgeschlossene Jobs weiterhin behalten möchte, muss `removeOnComplete: false` setzen.\"},{\"criterion\":\"R8\",\"evidence\":\"#318 ergänzt JSON-Ausgabe für `quaykit inspect --json`. „The CLI has been improved“ beschreibt die neue Funktion nicht.\"},{\"criterion\":\"R8\",\"evidence\":\"#304 gibt den Job-Lock auch dann frei, wenn der Handler eine Ausnahme auslöst. „Various improvements to worker reliability“ macht den konkreten Fehler und seine Behebung nicht erkennbar.\"}],\"reason\":\"Die Notes ordnen die relevante Standardänderung korrekt als Breaking Change ein und wählen dafür einen Major-Sprung. Alle drei Einträge sind jedoch zu allgemein, um ihre Auswirkungen oder die erforderliche Anpassung zu erkennen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "#307 ändert den Standardwert von `removeOnComplete` von `false` auf `true`. „Some default behaviour has changed“ nennt weder diese Änderung noch die nötige Anpassung: Wer abgeschlossene Jobs weiterhin behalten möchte, muss `removeOnComplete: false` setzen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "#318 ergänzt JSON-Ausgabe für `quaykit inspect --json`. „The CLI has been improved“ beschreibt die neue Funktion nicht."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "#304 gibt den Job-Lock auch dann frei, wenn der Handler eine Ausnahme auslöst. „Various improvements to worker reliability“ macht den konkreten Fehler und seine Behebung nicht erkennbar."
+   }
+  ],
+  "reason": "Die Notes ordnen die relevante Standardänderung korrekt als Breaking Change ein und wählen dafür einen Major-Sprung. Alle drei Einträge sind jedoch zu allgemein, um ihre Auswirkungen oder die erforderliche Anpassung zu erkennen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25876,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 218,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-42ed-7332-8f65-a5a08279ee09"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"#307 ändert den Standardwert von `removeOnComplete` von `false` auf `true`. „Some default behaviour has changed“ nennt weder diese Änderung noch die nötige Anpassung: Wer abgeschlossene Jobs weiterhin behalten möchte, muss `removeOnComplete: false` setzen.\"},{\"criterion\":\"R8\",\"evidence\":\"#318 ergänzt JSON-Ausgabe für `quaykit inspect --json`. „The CLI has been improved“ beschreibt die neue Funktion nicht.\"},{\"criterion\":\"R8\",\"evidence\":\"#304 gibt den Job-Lock auch dann frei, wenn der Handler eine Ausnahme auslöst. „Various improvements to worker reliability“ macht den konkreten Fehler und seine Behebung nicht erkennbar.\"}],\"reason\":\"Die Notes ordnen die relevante Standardänderung korrekt als Breaking Change ein und wählen dafür einen Major-Sprung. Alle drei Einträge sind jedoch zu allgemein, um ihre Auswirkungen oder die erforderliche Anpassung zu erkennen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25876,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 218,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

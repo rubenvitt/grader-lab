@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "3d5d003595b66caa34d92d57",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7405,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der Worker verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. PR #376 zeigt zwar einen Token-Bucket und die Optionen `max` und `perMs`, aber keine Implementierung, die diese strikte Obergrenze für jeden Zeitraum belegt.\"}],\"reason\":\"Die übrigen Aussagen entsprechen den gezeigten Änderungen; die zurückgenommene erste Fassung des Limiters erscheint nicht in den Notes. Die Version 4.1.0 passt zu den neuen Funktionen und der Deprecation.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, der Worker verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. PR #376 zeigt zwar einen Token-Bucket und die Optionen `max` und `perMs`, aber keine Implementierung, die diese strikte Obergrenze für jeden Zeitraum belegt."
+   }
+  ],
+  "reason": "Die übrigen Aussagen entsprechen den gezeigten Änderungen; die zurückgenommene erste Fassung des Limiters erscheint nicht in den Notes. Die Version 4.1.0 passt zu den neuen Funktionen und der Deprecation.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26309,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 205,
+  "reasoning_output_tokens": 62
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-92b3-7bc0-8a3c-2301f81e1055"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der Worker verarbeite höchstens `max` Jobs pro `perMs` Millisekunden. PR #376 zeigt zwar einen Token-Bucket und die Optionen `max` und `perMs`, aber keine Implementierung, die diese strikte Obergrenze für jeden Zeitraum belegt.\"}],\"reason\":\"Die übrigen Aussagen entsprechen den gezeigten Änderungen; die zurückgenommene erste Fassung des Limiters erscheint nicht in den Notes. Die Version 4.1.0 passt zu den neuen Funktionen und der Deprecation.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26309,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 205,
+    "reasoning_output_tokens": 62
+   }
+  }
+ ]
+}

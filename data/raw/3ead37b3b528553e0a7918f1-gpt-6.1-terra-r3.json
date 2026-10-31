@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "3ead37b3b528553e0a7918f1",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7051,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der alte Optionsname `stalledIntervalMs` werde „silently ignored“. Der Diff von PR #351 zeigt die Umbenennung zu `stallCheckMs`, aber nicht, wie unbekannte Optionen zur Laufzeit behandelt werden.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgelöst. PR #357 zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; eine allgemeine Garantie für Zeitumstellungen geht daraus nicht hervor.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes kündigen an, Details zum Sicherheitsproblem würden in einem separaten Advisory folgen. PR #358 nennt ein Advisory und ein Embargo, belegt aber keine solche spätere Veröffentlichung.\"}],\"reason\":\"Die wesentlichen nutzerrelevanten Änderungen sind erfasst, und der Major-Sprung auf 4.0.0 passt zu den Breaking Changes. Einzelne Aussagen gehen jedoch über das hinaus, was die Quellen belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, der alte Optionsname `stalledIntervalMs` werde „silently ignored“. Der Diff von PR #351 zeigt die Umbenennung zu `stallCheckMs`, aber nicht, wie unbekannte Optionen zur Laufzeit behandelt werden."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes garantieren, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgelöst. PR #357 zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; eine allgemeine Garantie für Zeitumstellungen geht daraus nicht hervor."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes kündigen an, Details zum Sicherheitsproblem würden in einem separaten Advisory folgen. PR #358 nennt ein Advisory und ein Embargo, belegt aber keine solche spätere Veröffentlichung."
+   }
+  ],
+  "reason": "Die wesentlichen nutzerrelevanten Änderungen sind erfasst, und der Major-Sprung auf 4.0.0 passt zu den Breaking Changes. Einzelne Aussagen gehen jedoch über das hinaus, was die Quellen belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26926,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 315,
+  "reasoning_output_tokens": 72
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-5da3-72e1-a96b-50203748553e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der alte Optionsname `stalledIntervalMs` werde „silently ignored“. Der Diff von PR #351 zeigt die Umbenennung zu `stallCheckMs`, aber nicht, wie unbekannte Optionen zur Laufzeit behandelt werden.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgelöst. PR #357 zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; eine allgemeine Garantie für Zeitumstellungen geht daraus nicht hervor.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes kündigen an, Details zum Sicherheitsproblem würden in einem separaten Advisory folgen. PR #358 nennt ein Advisory und ein Embargo, belegt aber keine solche spätere Veröffentlichung.\"}],\"reason\":\"Die wesentlichen nutzerrelevanten Änderungen sind erfasst, und der Major-Sprung auf 4.0.0 passt zu den Breaking Changes. Einzelne Aussagen gehen jedoch über das hinaus, was die Quellen belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26926,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 315,
+    "reasoning_output_tokens": 72
+   }
+  }
+ ]
+}

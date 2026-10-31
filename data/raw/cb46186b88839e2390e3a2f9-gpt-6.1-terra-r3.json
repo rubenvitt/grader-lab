@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "cb46186b88839e2390e3a2f9",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5162,
+ "text": "{\"reason\":\"Die Fassungen enthalten dieselben Änderungen, Migrationshinweise und Sicherheitsangaben. Sie unterscheiden sich nur in der Formulierung; anhand des vorliegenden Materials ist keine sachlich besser.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen enthalten dieselben Änderungen, Migrationshinweise und Sicherheitsangaben. Sie unterscheiden sich nur in der Formulierung; anhand des vorliegenden Materials ist keine sachlich besser.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25538,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 55,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-99ca-7e80-8dac-d15b34e19dd3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen enthalten dieselben Änderungen, Migrationshinweise und Sicherheitsangaben. Sie unterscheiden sich nur in der Formulierung; anhand des vorliegenden Materials ist keine sachlich besser.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25538,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 55,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

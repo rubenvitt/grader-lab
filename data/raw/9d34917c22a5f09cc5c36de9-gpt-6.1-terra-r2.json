@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "9d34917c22a5f09cc5c36de9",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "ghost-pr",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4762,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer für den Postgres-Store. Ohne Quellen lässt sich nicht beurteilen, welche Nummer zutrifft; anhand der übrigen Rubrik sind sie gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur in der PR-Nummer für den Postgres-Store. Ohne Quellen lässt sich nicht beurteilen, welche Nummer zutrifft; anhand der übrigen Rubrik sind sie gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24678,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 79,
+  "reasoning_output_tokens": 16
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-af7f-77a3-84f5-2c9ea5321bb2"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer für den Postgres-Store. Ohne Quellen lässt sich nicht beurteilen, welche Nummer zutrifft; anhand der übrigen Rubrik sind sie gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24678,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 79,
+    "reasoning_output_tokens": 16
+   }
+  }
+ ]
+}

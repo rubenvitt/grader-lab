@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "27b3d16451063bc165324b6f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "paraphrase",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4181,
+ "text": "{\"violations\":[],\"reason\":\"Der Kandidat vermittelt alle nutzerrelevanten Fakten der Referenz einschließlich Migration und Versionsnummer korrekt und verständlich.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Kandidat vermittelt alle nutzerrelevanten Fakten der Referenz einschließlich Migration und Versionsnummer korrekt und verständlich.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24653,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 45,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-895a-7723-99c8-c3ac8c72fd50"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Kandidat vermittelt alle nutzerrelevanten Fakten der Referenz einschließlich Migration und Versionsnummer korrekt und verständlich.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24653,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 45,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

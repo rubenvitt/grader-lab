@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "91d77186b2cf8fcf043b0ab8",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "reordered",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 11075,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung zu `stallCheckMs`, belegt aber nicht, wie unbekannte Optionen behandelt werden.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren zu #357, Cronjobs würden bei einer Zeitumstellung nicht mehr doppelt ausgelöst. Der Diff zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; eine Garantie für alle Zeitumstellungen ist daraus nicht belegt.\"}],\"reason\":\"Die wesentlichen Änderungen und Migrationsschritte sind enthalten, und der Major-Sprung auf 4.0.0 passt zu den Breaking Changes. Zwei Aussagen gehen jedoch über das hinaus, was die gezeigten Diffs belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung zu `stallCheckMs`, belegt aber nicht, wie unbekannte Optionen behandelt werden."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes garantieren zu #357, Cronjobs würden bei einer Zeitumstellung nicht mehr doppelt ausgelöst. Der Diff zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; eine Garantie für alle Zeitumstellungen ist daraus nicht belegt."
+   }
+  ],
+  "reason": "Die wesentlichen Änderungen und Migrationsschritte sind enthalten, und der Major-Sprung auf 4.0.0 passt zu den Breaking Changes. Zwei Aussagen gehen jedoch über das hinaus, was die gezeigten Diffs belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26926,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 263,
+  "reasoning_output_tokens": 71
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-9fe3-7112-bef6-40e6e4d87943"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360d7a3ee3c040-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360d7edea07cc3-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360d868d993216-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung zu `stallCheckMs`, belegt aber nicht, wie unbekannte Optionen behandelt werden.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren zu #357, Cronjobs würden bei einer Zeitumstellung nicht mehr doppelt ausgelöst. Der Diff zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; eine Garantie für alle Zeitumstellungen ist daraus nicht belegt.\"}],\"reason\":\"Die wesentlichen Änderungen und Migrationsschritte sind enthalten, und der Major-Sprung auf 4.0.0 passt zu den Breaking Changes. Zwei Aussagen gehen jedoch über das hinaus, was die gezeigten Diffs belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26926,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 263,
+    "reasoning_output_tokens": 71
+   }
+  }
+ ]
+}

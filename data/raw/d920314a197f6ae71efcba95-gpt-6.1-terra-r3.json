@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "d920314a197f6ae71efcba95",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "paraphrase",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8982,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #395 behauptet, die Randomisierung sorge dafür, dass Jobs nicht alle gleichzeitig zurückkehren. Der Diff verwendet Math.random(), garantiert aber keine unterschiedlichen Verzögerungen.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für das boolesche Argument von worker.pause() empfiehlt pauschal worker.pause({ drain: true }). Laut Diff entspricht worker.pause(false) jedoch worker.pause({ drain: false }); der vorgeschlagene Schritt ändert in diesem Fall das Verhalten.\"\n    }\n  ],\n  \"reason\": \"Die meisten nutzerrelevanten Änderungen sind passend eingeordnet. Die Notes enthalten jedoch eine nicht belegte Garantie und einen Migrationsschritt, der nicht für beide bisherigen Argumentwerte gilt.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #395 behauptet, die Randomisierung sorge dafür, dass Jobs nicht alle gleichzeitig zurückkehren. Der Diff verwendet Math.random(), garantiert aber keine unterschiedlichen Verzögerungen."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für das boolesche Argument von worker.pause() empfiehlt pauschal worker.pause({ drain: true }). Laut Diff entspricht worker.pause(false) jedoch worker.pause({ drain: false }); der vorgeschlagene Schritt ändert in diesem Fall das Verhalten."
+   }
+  ],
+  "reason": "Die meisten nutzerrelevanten Änderungen sind passend eingeordnet. Die Notes enthalten jedoch eine nicht belegte Garantie und einen Migrationsschritt, der nicht für beide bisherigen Argumentwerte gilt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26963,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 236,
+  "reasoning_output_tokens": 39
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-4278-7b51-84cd-c4fed0f6497e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53614e5aeb9236c-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53614ea38ba3314-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #395 behauptet, die Randomisierung sorge dafür, dass Jobs nicht alle gleichzeitig zurückkehren. Der Diff verwendet Math.random(), garantiert aber keine unterschiedlichen Verzögerungen.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für das boolesche Argument von worker.pause() empfiehlt pauschal worker.pause({ drain: true }). Laut Diff entspricht worker.pause(false) jedoch worker.pause({ drain: false }); der vorgeschlagene Schritt ändert in diesem Fall das Verhalten.\"\n    }\n  ],\n  \"reason\": \"Die meisten nutzerrelevanten Änderungen sind passend eingeordnet. Die Notes enthalten jedoch eine nicht belegte Garantie und einen Migrationsschritt, der nicht für beide bisherigen Argumentwerte gilt.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26963,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 236,
+    "reasoning_output_tokens": 39
+   }
+  }
+ ]
+}

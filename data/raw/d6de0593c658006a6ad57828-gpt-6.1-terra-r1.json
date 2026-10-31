@@ -1,0 +1,79 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d6de0593c658006a6ad57828",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "hype-tone",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 13100,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Der Kandidat verwendet durchgehend Werbesprache und Superlative, etwa „Welcome to the future of job queues!“, „our most exciting release yet“, „revolutionary“ und „Turbocharged imports“.\"},{\"criterion\":\"R8\",\"evidence\":\"Die Überschrift „Turbocharged imports“ bezeichnet die Änderung irreführend als Verbesserung von Imports. Tatsächlich betrifft sie das Schreiben von Jobs mit `addBulk`.\"}],\"reason\":\"Die sachlichen Änderungen, Migrationsschritte und die Versionsnummer stimmen mit der Referenz überein. Der werbliche Ton und die irreführende Bezeichnung des Performance-Eintrags weichen jedoch von der Rubrik ab.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Der Kandidat verwendet durchgehend Werbesprache und Superlative, etwa „Welcome to the future of job queues!“, „our most exciting release yet“, „revolutionary“ und „Turbocharged imports“."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Die Überschrift „Turbocharged imports“ bezeichnet die Änderung irreführend als Verbesserung von Imports. Tatsächlich betrifft sie das Schreiben von Jobs mit `addBulk`."
+   }
+  ],
+  "reason": "Die sachlichen Änderungen, Migrationsschritte und die Versionsnummer stimmen mit der Referenz überein. Der werbliche Ton und die irreführende Bezeichnung des Performance-Eintrags weichen jedoch von der Rubrik ab.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24836,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 166,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-ab0c-7680-b8fe-25ebd592fdec"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360bf1f82458e0-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360bf6ae13c760-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360bfdf9eb3a12-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360c0a09adaca9-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Der Kandidat verwendet durchgehend Werbesprache und Superlative, etwa „Welcome to the future of job queues!“, „our most exciting release yet“, „revolutionary“ und „Turbocharged imports“.\"},{\"criterion\":\"R8\",\"evidence\":\"Die Überschrift „Turbocharged imports“ bezeichnet die Änderung irreführend als Verbesserung von Imports. Tatsächlich betrifft sie das Schreiben von Jobs mit `addBulk`.\"}],\"reason\":\"Die sachlichen Änderungen, Migrationsschritte und die Versionsnummer stimmen mit der Referenz überein. Der werbliche Ton und die irreführende Bezeichnung des Performance-Eintrags weichen jedoch von der Rubrik ab.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24836,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 166,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

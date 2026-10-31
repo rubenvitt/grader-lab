@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "f870ccf9535fbc59c8df64ef",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "internal-noise",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8376,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung im Typ und beim Timer, aber nicht, wie unbekannte Optionen zur Laufzeit behandelt werden.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage zu #357, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgeführt, ist eine umfassende Garantie. Der Diff zeigt die Verwendung von `tz: 'UTC'` bei der Berechnung von `due`, belegt diese Garantie aber nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Zu #360 behaupten die Notes, zuvor sei ein Kommando pro Job ausgeführt worden. Der Diff zeigt einen Aufruf von `this.add` pro Job, aber nicht, wie viele Kommandos dieser ausführt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Ankündigung, Details zu #358 würden in einem separaten Advisory folgen, ist durch die Quellen nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Der Eintrag zu #363 beschreibt einen CI-Servicecontainer für Integrationstests mit Postgres 16 und gehört nicht in nutzerorientierte Release Notes.\"\n    }\n  ],\n  \"reason\": \"Die Notes ordnen die beiden belegten Breaking Changes korrekt ein und wählen mit 4.0.0 eine passende Major-Version. Mehrere Aussagen gehen jedoch über die Diffs hinaus; außerdem enthält die Feature-Liste eine interne CI-Änderung.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung im Typ und beim Timer, aber nicht, wie unbekannte Optionen zur Laufzeit behandelt werden."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zu #357, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgeführt, ist eine umfassende Garantie. Der Diff zeigt die Verwendung von `tz: 'UTC'` bei der Berechnung von `due`, belegt diese Garantie aber nicht."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Zu #360 behaupten die Notes, zuvor sei ein Kommando pro Job ausgeführt worden. Der Diff zeigt einen Aufruf von `this.add` pro Job, aber nicht, wie viele Kommandos dieser ausführt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Ankündigung, Details zu #358 würden in einem separaten Advisory folgen, ist durch die Quellen nicht belegt."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "Der Eintrag zu #363 beschreibt einen CI-Servicecontainer für Integrationstests mit Postgres 16 und gehört nicht in nutzerorientierte Release Notes."
+   }
+  ],
+  "reason": "Die Notes ordnen die beiden belegten Breaking Changes korrekt ein und wählen mit 4.0.0 eine passende Major-Version. Mehrere Aussagen gehen jedoch über die Diffs hinaus; außerdem enthält die Feature-Liste eine interne CI-Änderung.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26941,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 444,
+  "reasoning_output_tokens": 70
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-8a54-7e60-98bf-6fdfc3fe0182"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung im Typ und beim Timer, aber nicht, wie unbekannte Optionen zur Laufzeit behandelt werden.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage zu #357, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgeführt, ist eine umfassende Garantie. Der Diff zeigt die Verwendung von `tz: 'UTC'` bei der Berechnung von `due`, belegt diese Garantie aber nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Zu #360 behaupten die Notes, zuvor sei ein Kommando pro Job ausgeführt worden. Der Diff zeigt einen Aufruf von `this.add` pro Job, aber nicht, wie viele Kommandos dieser ausführt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Ankündigung, Details zu #358 würden in einem separaten Advisory folgen, ist durch die Quellen nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Der Eintrag zu #363 beschreibt einen CI-Servicecontainer für Integrationstests mit Postgres 16 und gehört nicht in nutzerorientierte Release Notes.\"\n    }\n  ],\n  \"reason\": \"Die Notes ordnen die beiden belegten Breaking Changes korrekt ein und wählen mit 4.0.0 eine passende Major-Version. Mehrere Aussagen gehen jedoch über die Diffs hinaus; außerdem enthält die Feature-Liste eine interne CI-Änderung.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26941,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 444,
+    "reasoning_output_tokens": 70
+   }
+  }
+ ]
+}

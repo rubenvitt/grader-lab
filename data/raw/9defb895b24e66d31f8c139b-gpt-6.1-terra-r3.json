@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "9defb895b24e66d31f8c139b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "internal-noise",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4334,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Maintenance“ stehen interne Änderungen: „Split lint and test jobs for faster feedback“ und „Updated CODEOWNERS for the dashboard folder“.\"}],\"reason\":\"Die beiden Maintenance-Einträge betreffen interne Abläufe und sind für Nutzer der Bibliothek nicht relevant. Weitere Verstöße sind aus dem Text allein nicht erkennbar.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Unter „Maintenance“ stehen interne Änderungen: „Split lint and test jobs for faster feedback“ und „Updated CODEOWNERS for the dashboard folder“."
+   }
+  ],
+  "reason": "Die beiden Maintenance-Einträge betreffen interne Abläufe und sind für Nutzer der Bibliothek nicht relevant. Weitere Verstöße sind aus dem Text allein nicht erkennbar.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25206,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 95,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-a959-7f82-9d20-437c682524c6"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Unter „Maintenance“ stehen interne Änderungen: „Split lint and test jobs for faster feedback“ und „Updated CODEOWNERS for the dashboard folder“.\"}],\"reason\":\"Die beiden Maintenance-Einträge betreffen interne Abläufe und sind für Nutzer der Bibliothek nicht relevant. Weitere Verstöße sind aus dem Text allein nicht erkennbar.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25206,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 95,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

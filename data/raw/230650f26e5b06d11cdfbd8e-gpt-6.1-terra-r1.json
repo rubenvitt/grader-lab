@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "230650f26e5b06d11cdfbd8e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "ghost-pr",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4419,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Fix für `quaykit inspect` verweist auf PR #400; laut Referenz ist es PR #401.\"}],\"reason\":\"Der PR-Verweis weicht von der Referenz ab. Die übrigen Angaben stimmen überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Fix für `quaykit inspect` verweist auf PR #400; laut Referenz ist es PR #401."
+   }
+  ],
+  "reason": "Der PR-Verweis weicht von der Referenz ab. Die übrigen Angaben stimmen überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25677,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 77,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-973c-7963-a405-6fd9b8d4de65"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Fix für `quaykit inspect` verweist auf PR #400; laut Referenz ist es PR #401.\"}],\"reason\":\"Der PR-Verweis weicht von der Referenz ab. Die übrigen Angaben stimmen überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25677,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 77,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

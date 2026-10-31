@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "c8d1f5a32e5b5f267b77b04d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 3707,
+ "text": "{\"reason\":\"Fassung B enthält zusätzlich CI- und Verwaltungsänderungen, die für Nutzer der Bibliothek nicht relevant sind und damit gegen R6 verstoßen. Die übrigen Inhalte sind identisch.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung B enthält zusätzlich CI- und Verwaltungsänderungen, die für Nutzer der Bibliothek nicht relevant sind und damit gegen R6 verstoßen. Die übrigen Inhalte sind identisch.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24415,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 55,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-ad86-7473-9216-18753091b77b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B enthält zusätzlich CI- und Verwaltungsänderungen, die für Nutzer der Bibliothek nicht relevant sind und damit gegen R6 verstoßen. Die übrigen Inhalte sind identisch.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24415,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 55,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

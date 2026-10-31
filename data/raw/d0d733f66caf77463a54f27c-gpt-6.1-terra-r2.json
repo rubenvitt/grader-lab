@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "d0d733f66caf77463a54f27c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "ghost-pr",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4326,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer des Rate-Limiter-Eintrags. Ohne Quellen lässt sich nicht beurteilen, welche Nummer richtig ist; inhaltlich sind sie gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur in der PR-Nummer des Rate-Limiter-Eintrags. Ohne Quellen lässt sich nicht beurteilen, welche Nummer richtig ist; inhaltlich sind sie gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24412,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 59,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-f7eb-7200-b66a-a54d030daf23"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer des Rate-Limiter-Eintrags. Ohne Quellen lässt sich nicht beurteilen, welche Nummer richtig ist; inhaltlich sind sie gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24412,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

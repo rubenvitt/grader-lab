@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "98903a90dedf32ee1c93bba9",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "hype-tone",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5115,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Der Kandidat verwendet Werbesprache und Begeisterung, etwa „powerful“, „thrilled“, „game-changing“, „effortless“, „Bulletproof“ und „delightful“.\"},{\"criterion\":\"R2\",\"evidence\":\"„Bulletproof renewals“ behauptet eine Ausfallsicherheit, die durch den belegten einmaligen Wiederholungsversuch nach ECONNRESET nicht gedeckt ist.\"}],\"reason\":\"Die nutzerrelevanten Änderungen und der Migrationsschritt entsprechen der Referenz. Der Kandidat verstößt jedoch durch Werbesprache und eine unbelegte Aussage zur Ausfallsicherheit gegen die Rubric.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Der Kandidat verwendet Werbesprache und Begeisterung, etwa „powerful“, „thrilled“, „game-changing“, „effortless“, „Bulletproof“ und „delightful“."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "„Bulletproof renewals“ behauptet eine Ausfallsicherheit, die durch den belegten einmaligen Wiederholungsversuch nach ECONNRESET nicht gedeckt ist."
+   }
+  ],
+  "reason": "Die nutzerrelevanten Änderungen und der Migrationsschritt entsprechen der Referenz. Der Kandidat verstößt jedoch durch Werbesprache und eine unbelegte Aussage zur Ausfallsicherheit gegen die Rubric.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25534,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 158,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-23f0-7cd3-91e1-4ccea0970fe6"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Der Kandidat verwendet Werbesprache und Begeisterung, etwa „powerful“, „thrilled“, „game-changing“, „effortless“, „Bulletproof“ und „delightful“.\"},{\"criterion\":\"R2\",\"evidence\":\"„Bulletproof renewals“ behauptet eine Ausfallsicherheit, die durch den belegten einmaligen Wiederholungsversuch nach ECONNRESET nicht gedeckt ist.\"}],\"reason\":\"Die nutzerrelevanten Änderungen und der Migrationsschritt entsprechen der Referenz. Der Kandidat verstößt jedoch durch Werbesprache und eine unbelegte Aussage zur Ausfallsicherheit gegen die Rubric.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25534,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 158,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

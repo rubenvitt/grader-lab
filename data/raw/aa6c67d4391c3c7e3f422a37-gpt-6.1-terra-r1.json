@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "aa6c67d4391c3c7e3f422a37",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "ghost-pr",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4367,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer für die JSON-Ausgabe: A nennt #318, B nennt #319. Ohne Quellen lässt sich nicht beurteilen, welche Zuordnung korrekt ist; nach den beurteilbaren Kriterien sind sie gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur in der PR-Nummer für die JSON-Ausgabe: A nennt #318, B nennt #319. Ohne Quellen lässt sich nicht beurteilen, welche Zuordnung korrekt ist; nach den beurteilbaren Kriterien sind sie gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24532,
+  "cached_input_tokens": 0,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 72,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-a964-70e2-ab78-ec0d91b91df9"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer für die JSON-Ausgabe: A nennt #318, B nennt #319. Ohne Quellen lässt sich nicht beurteilen, welche Zuordnung korrekt ist; nach den beurteilbaren Kriterien sind sie gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24532,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 72,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

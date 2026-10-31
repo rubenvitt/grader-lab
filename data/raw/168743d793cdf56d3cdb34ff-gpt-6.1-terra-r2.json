@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "168743d793cdf56d3cdb34ff",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4175,
+ "text": "{\"reason\":\"Fassung A ist sachlich formuliert. Fassung B enthält Werbesprache und unbelegte Wertungen wie „game-changing“ und „flawless“ und verstößt damit gegen R7 und teilweise gegen R2. Die übrigen Aussagen sind in beiden Fassungen sachlich gleich; ohne Quellen lassen sie sich nicht unabhängig prüfen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist sachlich formuliert. Fassung B enthält Werbesprache und unbelegte Wertungen wie „game-changing“ und „flawless“ und verstößt damit gegen R7 und teilweise gegen R2. Die übrigen Aussagen sind in beiden Fassungen sachlich gleich; ohne Quellen lassen sie sich nicht unabhängig prüfen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25605,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 85,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-a19d-7381-ad8f-6653c8fa6518"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist sachlich formuliert. Fassung B enthält Werbesprache und unbelegte Wertungen wie „game-changing“ und „flawless“ und verstößt damit gegen R7 und teilweise gegen R2. Die übrigen Aussagen sind in beiden Fassungen sachlich gleich; ohne Quellen lassen sie sich nicht unabhängig prüfen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25605,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 85,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

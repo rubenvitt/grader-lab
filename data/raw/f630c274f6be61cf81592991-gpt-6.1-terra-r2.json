@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "f630c274f6be61cf81592991",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "useless-true",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6027,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Alle sechs Einträge sind zu allgemein: Sie nennen weder die betroffenen APIs und ihr konkretes Verhalten noch die Eigenschaften der neuen Retry-Strategie. Nutzer können daraus nicht erkennen, was sich geändert hat oder was sie tun müssen.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migrationsschritte fehlen: `connection` explizit übergeben, `queue.purge({ status, olderThanMs })` und `timeoutMs` verwenden sowie auf `worker.pause({ drain: true })` umstellen.\"}],\"reason\":\"Der Kandidat nennt die betroffenen Änderungen nur als allgemeine Kategorien und lässt die für Nutzer wesentlichen Fakten und Migrationsschritte aus. Die Versionsnummer und die Einordnung unter Breaking Changes stimmen mit der Referenz überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "Alle sechs Einträge sind zu allgemein: Sie nennen weder die betroffenen APIs und ihr konkretes Verhalten noch die Eigenschaften der neuen Retry-Strategie. Nutzer können daraus nicht erkennen, was sich geändert hat oder was sie tun müssen."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migrationsschritte fehlen: `connection` explizit übergeben, `queue.purge({ status, olderThanMs })` und `timeoutMs` verwenden sowie auf `worker.pause({ drain: true })` umstellen."
+   }
+  ],
+  "reason": "Der Kandidat nennt die betroffenen Änderungen nur als allgemeine Kategorien und lässt die für Nutzer wesentlichen Fakten und Migrationsschritte aus. Die Versionsnummer und die Einordnung unter Breaking Changes stimmen mit der Referenz überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25491,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 181,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-c88d-7c03-b25d-a6981a4645f5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Alle sechs Einträge sind zu allgemein: Sie nennen weder die betroffenen APIs und ihr konkretes Verhalten noch die Eigenschaften der neuen Retry-Strategie. Nutzer können daraus nicht erkennen, was sich geändert hat oder was sie tun müssen.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migrationsschritte fehlen: `connection` explizit übergeben, `queue.purge({ status, olderThanMs })` und `timeoutMs` verwenden sowie auf `worker.pause({ drain: true })` umstellen.\"}],\"reason\":\"Der Kandidat nennt die betroffenen Änderungen nur als allgemeine Kategorien und lässt die für Nutzer wesentlichen Fakten und Migrationsschritte aus. Die Versionsnummer und die Einordnung unter Breaking Changes stimmen mit der Referenz überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25491,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 181,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

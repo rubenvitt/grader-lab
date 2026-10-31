@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "cd156e55685cd3507f271260",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-migration",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7447,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung, aber nicht, wie unbekannte Optionen zur Laufzeit behandelt werden.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Der Migrationsschritt zu #351 nennt `stalledCheckMs`. Die neue Option im Code heißt `stallCheckMs`.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes garantieren zu #357, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgeführt werden. Der Diff zeigt die Verwendung von `tz: 'UTC'`, belegt aber diese allgemeine Garantie nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Sicherheitseintrag kündigt an, dass Details in einer separaten Advisory folgen. Die Quellen belegen keine solche Veröffentlichung.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten einen falschen Optionsnamen im Migrationsschritt und mehrere Aussagen, die durch die Quellen nicht belegt sind. Die Versionsnummer 4.0.0 berücksichtigt den erforderlichen Major-Sprung.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung, aber nicht, wie unbekannte Optionen zur Laufzeit behandelt werden."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Der Migrationsschritt zu #351 nennt `stalledCheckMs`. Die neue Option im Code heißt `stallCheckMs`."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes garantieren zu #357, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgeführt werden. Der Diff zeigt die Verwendung von `tz: 'UTC'`, belegt aber diese allgemeine Garantie nicht."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Sicherheitseintrag kündigt an, dass Details in einer separaten Advisory folgen. Die Quellen belegen keine solche Veröffentlichung."
+   }
+  ],
+  "reason": "Die Notes enthalten einen falschen Optionsnamen im Migrationsschritt und mehrere Aussagen, die durch die Quellen nicht belegt sind. Die Versionsnummer 4.0.0 berücksichtigt den erforderlichen Major-Sprung.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26077,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 349,
+  "reasoning_output_tokens": 64
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-38ab-73d3-a03a-32fd6c9ba1c0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff zeigt die Umbenennung, aber nicht, wie unbekannte Optionen zur Laufzeit behandelt werden.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Der Migrationsschritt zu #351 nennt `stalledCheckMs`. Die neue Option im Code heißt `stallCheckMs`.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes garantieren zu #357, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt ausgeführt werden. Der Diff zeigt die Verwendung von `tz: 'UTC'`, belegt aber diese allgemeine Garantie nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Sicherheitseintrag kündigt an, dass Details in einer separaten Advisory folgen. Die Quellen belegen keine solche Veröffentlichung.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten einen falschen Optionsnamen im Migrationsschritt und mehrere Aussagen, die durch die Quellen nicht belegt sind. Die Versionsnummer 4.0.0 berücksichtigt den erforderlichen Major-Sprung.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26077,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 349,
+    "reasoning_output_tokens": 64
+   }
+  }
+ ]
+}

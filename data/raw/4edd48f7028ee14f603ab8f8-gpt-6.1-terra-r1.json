@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "4edd48f7028ee14f603ab8f8",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "useless-true",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 6360,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker configuration has changed“ und „The build output has changed“ benennen weder die konkreten Änderungen noch die nötigen Anpassungen. Auch „New storage option“, „Scheduler fix“, „Queue performance work“ und „Dashboard hardening“ lassen offen, was sich für Nutzer konkret geändert hat und ob sie etwas tun müssen.\"}],\"reason\":\"Die Einträge sind zu allgemein, um die Auswirkungen oder erforderliche Schritte zu erkennen. Ob die Aussagen durch den Code gedeckt und vollständig eingeordnet sind, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Worker configuration has changed“ und „The build output has changed“ benennen weder die konkreten Änderungen noch die nötigen Anpassungen. Auch „New storage option“, „Scheduler fix“, „Queue performance work“ und „Dashboard hardening“ lassen offen, was sich für Nutzer konkret geändert hat und ob sie etwas tun müssen."
+   }
+  ],
+  "reason": "Die Einträge sind zu allgemein, um die Auswirkungen oder erforderliche Schritte zu erkennen. Ob die Aussagen durch den Code gedeckt und vollständig eingeordnet sind, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25168,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 222,
+  "reasoning_output_tokens": 80
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-097f-7722-9378-8e7d1cd7da87"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker configuration has changed“ und „The build output has changed“ benennen weder die konkreten Änderungen noch die nötigen Anpassungen. Auch „New storage option“, „Scheduler fix“, „Queue performance work“ und „Dashboard hardening“ lassen offen, was sich für Nutzer konkret geändert hat und ob sie etwas tun müssen.\"}],\"reason\":\"Die Einträge sind zu allgemein, um die Auswirkungen oder erforderliche Schritte zu erkennen. Ob die Aussagen durch den Code gedeckt und vollständig eingeordnet sind, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25168,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 222,
+    "reasoning_output_tokens": 80
+   }
+  }
+ ]
+}

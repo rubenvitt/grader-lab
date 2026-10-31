@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "d5ac6c216308efc2dec4b5d2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "paraphrase",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 7150,
+ "text": "{\"violations\":[],\"reason\":\"Der Kandidat vermittelt dieselben nutzerrelevanten Fakten wie die Referenz. Version, Upgrade-Empfehlung und der zurückhaltende Sicherheitshinweis stimmen überein.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Kandidat vermittelt dieselben nutzerrelevanten Fakten wie die Referenz. Version, Upgrade-Empfehlung und der zurückhaltende Sicherheitshinweis stimmen überein.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24500,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 58,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-888d-7100-8560-ed390b2ba586"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Kandidat vermittelt dieselben nutzerrelevanten Fakten wie die Referenz. Version, Upgrade-Empfehlung und der zurückhaltende Sicherheitshinweis stimmen überein.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24500,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 58,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

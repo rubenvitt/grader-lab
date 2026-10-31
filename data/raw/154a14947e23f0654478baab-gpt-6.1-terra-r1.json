@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "154a14947e23f0654478baab",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reverted-listed",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4414,
+ "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen unter „Features“ einen neuen Replay-Button für fehlgeschlagene Jobs, tragen aber die Patch-Version „5.0.1“.\"}],\"reason\":\"Das genannte Feature erfordert nach der Rubrik mindestens einen Minor-Sprung. Weitere Verstöße sind aus dem Text allein nicht erkennbar.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen unter „Features“ einen neuen Replay-Button für fehlgeschlagene Jobs, tragen aber die Patch-Version „5.0.1“."
+   }
+  ],
+  "reason": "Das genannte Feature erfordert nach der Rubrik mindestens einen Minor-Sprung. Weitere Verstöße sind aus dem Text allein nicht erkennbar.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25195,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 92,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-05ff-77e1-91e7-d1cd2c441b53"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen unter „Features“ einen neuen Replay-Button für fehlgeschlagene Jobs, tragen aber die Patch-Version „5.0.1“.\"}],\"reason\":\"Das genannte Feature erfordert nach der Rubrik mindestens einen Minor-Sprung. Weitere Verstöße sind aus dem Text allein nicht erkennbar.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25195,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 92,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

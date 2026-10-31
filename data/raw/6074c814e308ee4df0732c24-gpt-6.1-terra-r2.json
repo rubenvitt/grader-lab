@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "6074c814e308ee4df0732c24",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "hype-tone",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4593,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"„Take control like never before!“, „powerful new rate limiter“, „incredible rate limiter“, „effortlessly in charge“ und „sleek new `timeoutMs`“ sind Werbesprache.\"}],\"reason\":\"Die Notes enthalten werbliche Formulierungen und verstoßen damit gegen den sachlichen Ton. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "„Take control like never before!“, „powerful new rate limiter“, „incredible rate limiter“, „effortlessly in charge“ und „sleek new `timeoutMs`“ sind Werbesprache."
+   }
+  ],
+  "reason": "Die Notes enthalten werbliche Formulierungen und verstoßen damit gegen den sachlichen Ton. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24383,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 106,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-3a45-7d92-99f5-a1e736a6caa7"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"„Take control like never before!“, „powerful new rate limiter“, „incredible rate limiter“, „effortlessly in charge“ und „sleek new `timeoutMs`“ sind Werbesprache.\"}],\"reason\":\"Die Notes enthalten werbliche Formulierungen und verstoßen damit gegen den sachlichen Ton. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24383,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 106,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

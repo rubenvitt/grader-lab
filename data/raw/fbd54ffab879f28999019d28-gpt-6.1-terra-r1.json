@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "fbd54ffab879f28999019d28",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-bump",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4229,
+ "text": "{\"reason\":\"Fassung A verwendet für die genannten Breaking Changes einen Major-Sprung auf 4.0.0. Die Versionsnummer 3.2.0 in Fassung B ist dafür nach SemVer nicht ausreichend; ansonsten sind die Fassungen inhaltlich gleich.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A verwendet für die genannten Breaking Changes einen Major-Sprung auf 4.0.0. Die Versionsnummer 3.2.0 in Fassung B ist dafür nach SemVer nicht ausreichend; ansonsten sind die Fassungen inhaltlich gleich.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24680,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 69,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-6277-78e0-9df1-9484e15ceeaa"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A verwendet für die genannten Breaking Changes einen Major-Sprung auf 4.0.0. Die Versionsnummer 3.2.0 in Fassung B ist dafür nach SemVer nicht ausreichend; ansonsten sind die Fassungen inhaltlich gleich.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24680,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 69,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "150d3ccc7951b7262f3b2996",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "internal-noise",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4600,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"„Deflaked the stalled job test with fake timers“ beschreibt eine Teständerung ohne erkennbaren Nutzen für Anwender.\"},{\"criterion\":\"R6\",\"evidence\":\"„Pinned GitHub Actions to commit SHAs“ betrifft CI-Interna.\"}],\"reason\":\"Die Notes enthalten zwei Einträge zu Test- beziehungsweise CI-Interna, die für Nutzer der Bibliothek nicht relevant sind. Die übrigen Kriterien sind anhand des Textes erfüllt oder ohne Quellen nicht überprüfbar.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "„Deflaked the stalled job test with fake timers“ beschreibt eine Teständerung ohne erkennbaren Nutzen für Anwender."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "„Pinned GitHub Actions to commit SHAs“ betrifft CI-Interna."
+   }
+  ],
+  "reason": "Die Notes enthalten zwei Einträge zu Test- beziehungsweise CI-Interna, die für Nutzer der Bibliothek nicht relevant sind. Die übrigen Kriterien sind anhand des Textes erfüllt oder ohne Quellen nicht überprüfbar.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25282,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 125,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-cccb-7a63-b4ec-1d332d59cb11"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"„Deflaked the stalled job test with fake timers“ beschreibt eine Teständerung ohne erkennbaren Nutzen für Anwender.\"},{\"criterion\":\"R6\",\"evidence\":\"„Pinned GitHub Actions to commit SHAs“ betrifft CI-Interna.\"}],\"reason\":\"Die Notes enthalten zwei Einträge zu Test- beziehungsweise CI-Interna, die für Nutzer der Bibliothek nicht relevant sind. Die übrigen Kriterien sind anhand des Textes erfüllt oder ohne Quellen nicht überprüfbar.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25282,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 125,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

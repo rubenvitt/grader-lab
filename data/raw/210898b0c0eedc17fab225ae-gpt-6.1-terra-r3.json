@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "210898b0c0eedc17fab225ae",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "paraphrase",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4231,
+ "text": "{\"violations\":[],\"reason\":\"Die Einträge beschreiben konkrete Änderungen und nennen für das Sicherheitsproblem keine technischen Details. Ohne weitere Quellen lassen sich insbesondere die tatsächliche Wirkung der Änderungen und das Embargo-Label nicht prüfen; aus dem Text ergibt sich kein Verstoß.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Einträge beschreiben konkrete Änderungen und nennen für das Sicherheitsproblem keine technischen Details. Ohne weitere Quellen lassen sich insbesondere die tatsächliche Wirkung der Änderungen und das Embargo-Label nicht prüfen; aus dem Text ergibt sich kein Verstoß.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25188,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 68,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-8e25-7a80-8837-8914bf940c0d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Einträge beschreiben konkrete Änderungen und nennen für das Sicherheitsproblem keine technischen Details. Ohne weitere Quellen lassen sich insbesondere die tatsächliche Wirkung der Änderungen und das Embargo-Label nicht prüfen; aus dem Text ergibt sich kein Verstoß.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25188,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 68,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "f3d5ccbe0ff609fa0df0bd62",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4074,
+ "text": "{\"reason\":\"Fassung B lässt die CI- und Dev-Dependency-Änderungen weg, die laut R6 nicht in nutzerorientierte Release Notes gehören. Die übrigen Einträge sind identisch.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B lässt die CI- und Dev-Dependency-Änderungen weg, die laut R6 nicht in nutzerorientierte Release Notes gehören. Die übrigen Einträge sind identisch.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25415,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 57,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-b5c1-7b90-9475-a612aa02c36a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B lässt die CI- und Dev-Dependency-Änderungen weg, die laut R6 nicht in nutzerorientierte Release Notes gehören. Die übrigen Einträge sind identisch.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25415,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 57,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

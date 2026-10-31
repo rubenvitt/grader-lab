@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "e01714436b2c4f1f4ad067b1",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-migration",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5207,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #395 garantiert, dass Retries nicht alle gleichzeitig eintreffen. Der Diff berechnet zufällige Verzögerungen mit Math.floor(...); gleiche Verzögerungen bleiben möglich.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration zu #399 empfiehlt worker.pause({ graceful: true }). Der Diff definiert jedoch die Option drain und empfiehlt worker.pause({ drain }); graceful führt nicht zur gewünschten Wirkung.\"}],\"reason\":\"Die Notes erfassen die nutzerrelevanten Änderungen und verwenden mit 5.0.0 den erforderlichen Major-Sprung. Die Aussage zur Verteilung der Retries ist jedoch zu weitgehend, und die Migration für worker.pause() verwendet einen falschen Optionsnamen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #395 garantiert, dass Retries nicht alle gleichzeitig eintreffen. Der Diff berechnet zufällige Verzögerungen mit Math.floor(...); gleiche Verzögerungen bleiben möglich."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration zu #399 empfiehlt worker.pause({ graceful: true }). Der Diff definiert jedoch die Option drain und empfiehlt worker.pause({ drain }); graceful führt nicht zur gewünschten Wirkung."
+   }
+  ],
+  "reason": "Die Notes erfassen die nutzerrelevanten Änderungen und verwenden mit 5.0.0 den erforderlichen Major-Sprung. Die Aussage zur Verteilung der Retries ist jedoch zu weitgehend, und die Migration für worker.pause() verwendet einen falschen Optionsnamen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26082,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 169,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-0e7e-7b40-8ee6-2b5bea181ba0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #395 garantiert, dass Retries nicht alle gleichzeitig eintreffen. Der Diff berechnet zufällige Verzögerungen mit Math.floor(...); gleiche Verzögerungen bleiben möglich.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration zu #399 empfiehlt worker.pause({ graceful: true }). Der Diff definiert jedoch die Option drain und empfiehlt worker.pause({ drain }); graceful führt nicht zur gewünschten Wirkung.\"}],\"reason\":\"Die Notes erfassen die nutzerrelevanten Änderungen und verwenden mit 5.0.0 den erforderlichen Major-Sprung. Die Aussage zur Verteilung der Retries ist jedoch zu weitgehend, und die Migration für worker.pause() verwendet einen falschen Optionsnamen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26082,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 169,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

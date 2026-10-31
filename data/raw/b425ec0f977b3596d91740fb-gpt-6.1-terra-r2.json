@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "b425ec0f977b3596d91740fb",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-bump",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4647,
+ "text": "{\"reason\":\"Fassung B verwendet mit 5.0.0 einen Major-Sprung, wie ihn die aufgeführten Breaking Changes nach SemVer verlangen. Inhaltlich sind die Fassungen ansonsten gleich.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B verwendet mit 5.0.0 einen Major-Sprung, wie ihn die aufgeführten Breaking Changes nach SemVer verlangen. Inhaltlich sind die Fassungen ansonsten gleich.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 24722,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 54,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-8513-7861-ab60-4e4d3b01707a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B verwendet mit 5.0.0 einen Major-Sprung, wie ihn die aufgeführten Breaking Changes nach SemVer verlangen. Inhaltlich sind die Fassungen ansonsten gleich.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24722,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 54,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

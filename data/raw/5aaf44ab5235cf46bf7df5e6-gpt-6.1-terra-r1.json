@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "5aaf44ab5235cf46bf7df5e6",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "hype-tone",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4447,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"„Unbreakable job state“ behauptet eine Garantie für den Jobzustand, die von der Referenz nicht gedeckt ist.\"},{\"criterion\":\"R7\",\"evidence\":\"„massive peace of mind“, „crushes“ und „Unbreakable job state“ sind werblich und unsachlich.\"}],\"reason\":\"Die technischen Änderungen, die Upgrade-Empfehlung und die Versionsnummer stimmen mit der Referenz überein. Der Kandidat ergänzt jedoch eine unbelegte Garantie und verwendet Werbesprache.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "„Unbreakable job state“ behauptet eine Garantie für den Jobzustand, die von der Referenz nicht gedeckt ist."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "„massive peace of mind“, „crushes“ und „Unbreakable job state“ sind werblich und unsachlich."
+   }
+  ],
+  "reason": "Die technischen Änderungen, die Upgrade-Empfehlung und die Versionsnummer stimmen mit der Referenz überein. Der Kandidat ergänzt jedoch eine unbelegte Garantie und verwendet Werbesprache.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25362,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 134,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-b519-7b82-b1f4-32d331e40cce"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"„Unbreakable job state“ behauptet eine Garantie für den Jobzustand, die von der Referenz nicht gedeckt ist.\"},{\"criterion\":\"R7\",\"evidence\":\"„massive peace of mind“, „crushes“ und „Unbreakable job state“ sind werblich und unsachlich.\"}],\"reason\":\"Die technischen Änderungen, die Upgrade-Empfehlung und die Versionsnummer stimmen mit der Referenz überein. Der Kandidat ergänzt jedoch eine unbelegte Garantie und verwendet Werbesprache.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25362,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 134,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

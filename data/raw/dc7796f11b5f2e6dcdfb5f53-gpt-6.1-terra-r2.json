@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "dc7796f11b5f2e6dcdfb5f53",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "invented-claim",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4852,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Fix behauptet, Worker behielten ihre Locks bei Redis-Failovern und die Erneuerung verbinde sich automatisch neu. Die Referenz belegt lediglich einen erneuten Versuch der Lock-Erneuerung nach `ECONNRESET`.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Fix fehlt die konkrete Information, dass die Lock-Erneuerung nach `ECONNRESET` genau einmal erneut versucht wird.\"}],\"reason\":\"Der Kandidat ersetzt das belegte Verhalten bei der Lock-Erneuerung durch weitergehende, nicht belegte Aussagen und lässt die konkrete Änderung weg.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Fix behauptet, Worker behielten ihre Locks bei Redis-Failovern und die Erneuerung verbinde sich automatisch neu. Die Referenz belegt lediglich einen erneuten Versuch der Lock-Erneuerung nach `ECONNRESET`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Beim Fix fehlt die konkrete Information, dass die Lock-Erneuerung nach `ECONNRESET` genau einmal erneut versucht wird."
+   }
+  ],
+  "reason": "Der Kandidat ersetzt das belegte Verhalten bei der Lock-Erneuerung durch weitergehende, nicht belegte Aussagen und lässt die konkrete Änderung weg.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24641,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 149,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-3c59-7022-8f61-91508e738c55"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Fix behauptet, Worker behielten ihre Locks bei Redis-Failovern und die Erneuerung verbinde sich automatisch neu. Die Referenz belegt lediglich einen erneuten Versuch der Lock-Erneuerung nach `ECONNRESET`.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Fix fehlt die konkrete Information, dass die Lock-Erneuerung nach `ECONNRESET` genau einmal erneut versucht wird.\"}],\"reason\":\"Der Kandidat ersetzt das belegte Verhalten bei der Lock-Erneuerung durch weitergehende, nicht belegte Aussagen und lässt die konkrete Änderung weg.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24641,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 149,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

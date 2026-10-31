@@ -1,0 +1,87 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "a2ab2ee2427f66aacd630d39",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "useless-true",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 13741,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag zu #307 nennt weder den neuen Standardwert von `removeOnComplete` noch die Folge, dass abgeschlossene Jobs standardmäßig nicht mehr aus der Queue abgerufen werden können.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration fehlt: Für das bisherige Verhalten muss beim Erstellen der `Queue` `defaultJobOptions: { removeOnComplete: false }` übergeben werden.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag zu #318 erklärt nicht, dass `quaykit inspect --json` Queue-Statistiken als JSON statt als Tabelle ausgibt.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag zu #304 benennt den behobenen Fehler nicht: Ein Worker gibt die Job-Sperre nun auch frei, wenn der Handler synchron eine Exception auslöst.\"}],\"reason\":\"Der Kandidat nennt zwar die richtigen Kategorien und die Version, beschreibt die Änderungen aber zu allgemein. Dadurch fehlen die konkreten Auswirkungen und der erforderliche Migrationsschritt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "Der Eintrag zu #307 nennt weder den neuen Standardwert von `removeOnComplete` noch die Folge, dass abgeschlossene Jobs standardmäßig nicht mehr aus der Queue abgerufen werden können."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration fehlt: Für das bisherige Verhalten muss beim Erstellen der `Queue` `defaultJobOptions: { removeOnComplete: false }` übergeben werden."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Eintrag zu #318 erklärt nicht, dass `quaykit inspect --json` Queue-Statistiken als JSON statt als Tabelle ausgibt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Eintrag zu #304 benennt den behobenen Fehler nicht: Ein Worker gibt die Job-Sperre nun auch frei, wenn der Handler synchron eine Exception auslöst."
+   }
+  ],
+  "reason": "Der Kandidat nennt zwar die richtigen Kategorien und die Version, beschreibt die Änderungen aber zu allgemein. Dadurch fehlen die konkreten Auswirkungen und der erforderliche Migrationsschritt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24527,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 233,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-0df2-79e2-8f59-af7d51c14fad"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536048f2895e52a-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604942bcae516-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536049b5e38b0e4-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604a748247cfe-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag zu #307 nennt weder den neuen Standardwert von `removeOnComplete` noch die Folge, dass abgeschlossene Jobs standardmäßig nicht mehr aus der Queue abgerufen werden können.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration fehlt: Für das bisherige Verhalten muss beim Erstellen der `Queue` `defaultJobOptions: { removeOnComplete: false }` übergeben werden.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag zu #318 erklärt nicht, dass `quaykit inspect --json` Queue-Statistiken als JSON statt als Tabelle ausgibt.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag zu #304 benennt den behobenen Fehler nicht: Ein Worker gibt die Job-Sperre nun auch frei, wenn der Handler synchron eine Exception auslöst.\"}],\"reason\":\"Der Kandidat nennt zwar die richtigen Kategorien und die Version, beschreibt die Änderungen aber zu allgemein. Dadurch fehlen die konkreten Auswirkungen und der erforderliche Migrationsschritt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24527,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 233,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

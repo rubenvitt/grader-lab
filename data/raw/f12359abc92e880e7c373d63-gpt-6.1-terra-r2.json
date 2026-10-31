@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "f12359abc92e880e7c373d63",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reverted-listed",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5749,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Änderungen und den Migrationsschritt konkret. Aus dem Text allein ist kein Verstoß gegen die Rubrik erkennbar.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben die Änderungen und den Migrationsschritt konkret. Aus dem Text allein ist kein Verstoß gegen die Rubrik erkennbar.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25185,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 51,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-ab32-78f3-ac96-fd7e833e61a9"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Änderungen und den Migrationsschritt konkret. Aus dem Text allein ist kein Verstoß gegen die Rubrik erkennbar.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25185,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 51,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

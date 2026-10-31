@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "c262caea4b89206440a2ca27",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "paraphrase",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4041,
+ "text": "{\"violations\":[],\"reason\":\"Der Kandidat vermittelt alle nutzerrelevanten Fakten der Referenz mit korrekten Namen und derselben Versionsnummer. Ton und Migrationshinweis sind brauchbar.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Kandidat vermittelt alle nutzerrelevanten Fakten der Referenz mit korrekten Namen und derselben Versionsnummer. Ton und Migrationshinweis sind brauchbar.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25371,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 56,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-af94-7d93-adf4-49aeaebaa08d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Kandidat vermittelt alle nutzerrelevanten Fakten der Referenz mit korrekten Namen und derselben Versionsnummer. Ton und Migrationshinweis sind brauchbar.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25371,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 56,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

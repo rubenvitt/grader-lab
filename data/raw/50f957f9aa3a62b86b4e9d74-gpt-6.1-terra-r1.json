@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "50f957f9aa3a62b86b4e9d74",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reordered",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8122,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht länger bis zum Ablauf des Locks in „active“. Der Diff belegt nur, dass der Lock nun in einem `finally`-Block freigegeben wird; eine Änderung des Jobstatus oder eine Garantie für dessen Zeitpunkt zeigt er nicht.\"}],\"reason\":\"Die übrigen Einträge und die Major-Version sind durch die Quellen gedeckt. Die Aussage zum Status des Jobs nach #304 geht über den gezeigten Diff hinaus.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht länger bis zum Ablauf des Locks in „active“. Der Diff belegt nur, dass der Lock nun in einem `finally`-Block freigegeben wird; eine Änderung des Jobstatus oder eine Garantie für dessen Zeitpunkt zeigt er nicht."
+   }
+  ],
+  "reason": "Die übrigen Einträge und die Major-Version sind durch die Quellen gedeckt. Die Aussage zum Status des Jobs nach #304 geht über den gezeigten Diff hinaus.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26834,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 275,
+  "reasoning_output_tokens": 143
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-ac9e-7423-a0e8-4827244c9bf0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #304, der Job bleibe nach einem synchronen Fehler nicht länger bis zum Ablauf des Locks in „active“. Der Diff belegt nur, dass der Lock nun in einem `finally`-Block freigegeben wird; eine Änderung des Jobstatus oder eine Garantie für dessen Zeitpunkt zeigt er nicht.\"}],\"reason\":\"Die übrigen Einträge und die Major-Version sind durch die Quellen gedeckt. Die Aussage zum Status des Jobs nach #304 geht über den gezeigten Diff hinaus.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26834,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 275,
+    "reasoning_output_tokens": 143
+   }
+  }
+ ]
+}

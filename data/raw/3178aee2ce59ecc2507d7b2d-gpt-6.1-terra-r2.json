@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "3178aee2ce59ecc2507d7b2d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reordered",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 8022,
+ "text": "{\"violations\":[],\"reason\":\"Die Einträge beschreiben konkrete Änderungen und nennen beim Sicherheitsfix keine verbotenen Details. Ob die Aussagen, die Einordnung und die Versionsnummer durch die Quellen gedeckt sind, lässt sich aus dem Text allein nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Einträge beschreiben konkrete Änderungen und nennen beim Sicherheitsfix keine verbotenen Details. Ob die Aussagen, die Einordnung und die Versionsnummer durch die Quellen gedeckt sind, lässt sich aus dem Text allein nicht prüfen und gilt daher als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25181,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 71,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-b24f-7980-9e65-1757b9a88bb3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Einträge beschreiben konkrete Änderungen und nennen beim Sicherheitsfix keine verbotenen Details. Ob die Aussagen, die Einordnung und die Versionsnummer durch die Quellen gedeckt sind, lässt sich aus dem Text allein nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25181,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 71,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

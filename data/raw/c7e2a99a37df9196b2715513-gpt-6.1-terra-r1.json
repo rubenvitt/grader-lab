@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "c7e2a99a37df9196b2715513",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "paraphrase",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7607,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 weist im Konstruktor von `PostgresStore` Schemanamen zurück, die nicht dem Muster `/^[a-z_][a-z0-9_]*$/` entsprechen. Bisher zulässige Konfigurationen müssen daher gegebenenfalls angepasst werden; die Notes führen die Änderung nicht unter „Breaking Changes“ auf. Der Eintrag muss dabei die Embargovorgaben einhalten.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes kündigen an, dass später ein separates Advisory mit Details folgt. Weder die Quellen noch der Diff belegen diese Ankündigung.\"},{\"criterion\":\"R8\",\"evidence\":\"Die Notes weisen Nutzer nicht darauf hin, dass die neue Validierung in PR #414 eine Anpassung ihrer Postgres-Konfiguration erforderlich machen kann.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0. Wegen der inkompatiblen Änderung in PR #414 ist 5.0.1 nach der Rubric nicht ausreichend; erforderlich ist ein Major-Sprung.\"}],\"reason\":\"Die Änderung an der Postgres-Konfiguration ist inkompatibel und wird in den Notes nicht entsprechend kenntlich gemacht. Außerdem ist die angekündigte spätere Veröffentlichung eines Advisorys nicht durch die Quellen belegt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 weist im Konstruktor von `PostgresStore` Schemanamen zurück, die nicht dem Muster `/^[a-z_][a-z0-9_]*$/` entsprechen. Bisher zulässige Konfigurationen müssen daher gegebenenfalls angepasst werden; die Notes führen die Änderung nicht unter „Breaking Changes“ auf. Der Eintrag muss dabei die Embargovorgaben einhalten."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes kündigen an, dass später ein separates Advisory mit Details folgt. Weder die Quellen noch der Diff belegen diese Ankündigung."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Die Notes weisen Nutzer nicht darauf hin, dass die neue Validierung in PR #414 eine Anpassung ihrer Postgres-Konfiguration erforderlich machen kann."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 5.0.0. Wegen der inkompatiblen Änderung in PR #414 ist 5.0.1 nach der Rubric nicht ausreichend; erforderlich ist ein Major-Sprung."
+   }
+  ],
+  "reason": "Die Änderung an der Postgres-Konfiguration ist inkompatibel und wird in den Notes nicht entsprechend kenntlich gemacht. Außerdem ist die angekündigte spätere Veröffentlichung eines Advisorys nicht durch die Quellen belegt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26318,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 375,
+  "reasoning_output_tokens": 91
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-66db-71d1-971d-b0887847f53e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 weist im Konstruktor von `PostgresStore` Schemanamen zurück, die nicht dem Muster `/^[a-z_][a-z0-9_]*$/` entsprechen. Bisher zulässige Konfigurationen müssen daher gegebenenfalls angepasst werden; die Notes führen die Änderung nicht unter „Breaking Changes“ auf. Der Eintrag muss dabei die Embargovorgaben einhalten.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes kündigen an, dass später ein separates Advisory mit Details folgt. Weder die Quellen noch der Diff belegen diese Ankündigung.\"},{\"criterion\":\"R8\",\"evidence\":\"Die Notes weisen Nutzer nicht darauf hin, dass die neue Validierung in PR #414 eine Anpassung ihrer Postgres-Konfiguration erforderlich machen kann.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0. Wegen der inkompatiblen Änderung in PR #414 ist 5.0.1 nach der Rubric nicht ausreichend; erforderlich ist ein Major-Sprung.\"}],\"reason\":\"Die Änderung an der Postgres-Konfiguration ist inkompatibel und wird in den Notes nicht entsprechend kenntlich gemacht. Außerdem ist die angekündigte spätere Veröffentlichung eines Advisorys nicht durch die Quellen belegt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26318,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 375,
+    "reasoning_output_tokens": 91
+   }
+  }
+ ]
+}

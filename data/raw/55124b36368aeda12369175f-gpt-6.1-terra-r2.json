@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "55124b36368aeda12369175f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "wrong-bump",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5442,
+ "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen mit dem geänderten Standardwert von `removeOnComplete` eine Breaking Change, tragen aber die Versionsnummer `2.4.0`; ein Major-Sprung ist aus dem Text nicht erkennbar.\"}],\"reason\":\"Der Text bezeichnet die Änderung ausdrücklich als Breaking Change. Ob `2.4.0` gegenüber der vorherigen Version ein Major-Sprung ist, lässt sich ohne deren Nummer allerdings nicht feststellen; nach dem vorgegebenen Vorgehen ist R9 deshalb als erfüllt zu behandeln.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen mit dem geänderten Standardwert von `removeOnComplete` eine Breaking Change, tragen aber die Versionsnummer `2.4.0`; ein Major-Sprung ist aus dem Text nicht erkennbar."
+   }
+  ],
+  "reason": "Der Text bezeichnet die Änderung ausdrücklich als Breaking Change. Ob `2.4.0` gegenüber der vorherigen Version ein Major-Sprung ist, lässt sich ohne deren Nummer allerdings nicht feststellen; nach dem vorgegebenen Vorgehen ist R9 deshalb als erfüllt zu behandeln.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25255,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 130,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-848c-70f1-aeb6-3395d7fc9504"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen mit dem geänderten Standardwert von `removeOnComplete` eine Breaking Change, tragen aber die Versionsnummer `2.4.0`; ein Major-Sprung ist aus dem Text nicht erkennbar.\"}],\"reason\":\"Der Text bezeichnet die Änderung ausdrücklich als Breaking Change. Ob `2.4.0` gegenüber der vorherigen Version ein Major-Sprung ist, lässt sich ohne deren Nummer allerdings nicht feststellen; nach dem vorgegebenen Vorgehen ist R9 deshalb als erfüllt zu behandeln.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25255,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 130,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "d9a939c3f46da8224fe930b2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 9534,
+ "text": "{\"reason\":\"Fassung A beschreibt die Änderungen konkret und nennt einen nachvollziehbaren Migrationsschritt; Fassung B bleibt bei allen drei Einträgen zu allgemein, um Nutzern eine Handlung abzuleiten. Da die Quellen und Diffs nicht vorliegen, lässt sich die sachliche Richtigkeit von Fassung A allerdings nicht überprüfen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A beschreibt die Änderungen konkret und nennt einen nachvollziehbaren Migrationsschritt; Fassung B bleibt bei allen drei Einträgen zu allgemein, um Nutzern eine Handlung abzuleiten. Da die Quellen und Diffs nicht vorliegen, lässt sich die sachliche Richtigkeit von Fassung A allerdings nicht überprüfen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25270,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 82,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-1e7f-77e1-847c-6e70a10d26fc"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604aab82a6e5c-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604afdaaefc14-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604b7091fe515-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A beschreibt die Änderungen konkret und nennt einen nachvollziehbaren Migrationsschritt; Fassung B bleibt bei allen drei Einträgen zu allgemein, um Nutzern eine Handlung abzuleiten. Da die Quellen und Diffs nicht vorliegen, lässt sich die sachliche Richtigkeit von Fassung A allerdings nicht überprüfen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25270,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 82,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

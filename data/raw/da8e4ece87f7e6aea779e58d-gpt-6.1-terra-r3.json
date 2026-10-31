@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "da8e4ece87f7e6aea779e58d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "missing-breaking",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5463,
+ "text": "{\"reason\":\"Fassung A nennt zusätzlich die umbenannte Worker-Option als Breaking Change und enthält einen konkreten Migrationsschritt. Allerdings liegen keine Diffs oder sonstigen Quellen vor, um zu prüfen, ob diese zusätzliche Aussage zutrifft oder zurückgenommen wurde; daher lässt sich kein sachlicher Vorteil belegen.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung A nennt zusätzlich die umbenannte Worker-Option als Breaking Change und enthält einen konkreten Migrationsschritt. Allerdings liegen keine Diffs oder sonstigen Quellen vor, um zu prüfen, ob diese zusätzliche Aussage zutrifft oder zurückgenommen wurde; daher lässt sich kein sachlicher Vorteil belegen.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25462,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 78,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-4acd-7f21-90af-9fd5c2ca1333"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A nennt zusätzlich die umbenannte Worker-Option als Breaking Change und enthält einen konkreten Migrationsschritt. Allerdings liegen keine Diffs oder sonstigen Quellen vor, um zu prüfen, ob diese zusätzliche Aussage zutrifft oder zurückgenommen wurde; daher lässt sich kein sachlicher Vorteil belegen.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25462,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 78,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

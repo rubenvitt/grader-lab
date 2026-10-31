@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "1706ac3c37a7064a2284f8db",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5714,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der JSON-Ausgabemodus wird in den Notes PR #319 zugeordnet. Die Quelle weist ihn PR #318 zu.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, ein Job verbleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf der Sperre in „active“. Der Diff von #304 belegt die Freigabe der Sperre, aber keine Änderung des Jobstatus.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes sprechen davon, dass ein „finished job“ standardmäßig nicht mehr abrufbar sei. PR #307 ändert nur `removeOnComplete`; `removeOnFail` bleibt `false`.\"}],\"reason\":\"Die wesentlichen Änderungen und der Major-Sprung sind korrekt eingeordnet. Zwei Aussagen gehen über die Diffs hinaus, und eine PR-Referenz ist falsch.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der JSON-Ausgabemodus wird in den Notes PR #319 zugeordnet. Die Quelle weist ihn PR #318 zu."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, ein Job verbleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf der Sperre in „active“. Der Diff von #304 belegt die Freigabe der Sperre, aber keine Änderung des Jobstatus."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes sprechen davon, dass ein „finished job“ standardmäßig nicht mehr abrufbar sei. PR #307 ändert nur `removeOnComplete`; `removeOnFail` bleibt `false`."
+   }
+  ],
+  "reason": "Die wesentlichen Änderungen und der Major-Sprung sind korrekt eingeordnet. Zwei Aussagen gehen über die Diffs hinaus, und eine PR-Referenz ist falsch.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26834,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 258,
+  "reasoning_output_tokens": 61
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-acf6-7c53-b6a2-b29dc212708d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der JSON-Ausgabemodus wird in den Notes PR #319 zugeordnet. Die Quelle weist ihn PR #318 zu.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, ein Job verbleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf der Sperre in „active“. Der Diff von #304 belegt die Freigabe der Sperre, aber keine Änderung des Jobstatus.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes sprechen davon, dass ein „finished job“ standardmäßig nicht mehr abrufbar sei. PR #307 ändert nur `removeOnComplete`; `removeOnFail` bleibt `false`.\"}],\"reason\":\"Die wesentlichen Änderungen und der Major-Sprung sind korrekt eingeordnet. Zwei Aussagen gehen über die Diffs hinaus, und eine PR-Referenz ist falsch.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26834,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 258,
+    "reasoning_output_tokens": 61
+   }
+  }
+ ]
+}

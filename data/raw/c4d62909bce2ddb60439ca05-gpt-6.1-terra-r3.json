@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "c4d62909bce2ddb60439ca05",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-bump",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5001,
+ "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Version lautet „3.2.0“, obwohl unter „Breaking Changes“ Änderungen an einer Worker-Option und der Umstieg auf ESM-only stehen. Breaking Changes verlangen einen Major-Sprung.\"}],\"reason\":\"Die Versionsnummer weist nur auf einen Minor-Sprung hin, obwohl die Notes Breaking Changes ausweisen. Weitere Verstöße lassen sich ohne Quellen aus dem Text nicht belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R9",
+    "evidence": "Die Version lautet „3.2.0“, obwohl unter „Breaking Changes“ Änderungen an einer Worker-Option und der Umstieg auf ESM-only stehen. Breaking Changes verlangen einen Major-Sprung."
+   }
+  ],
+  "reason": "Die Versionsnummer weist nur auf einen Minor-Sprung hin, obwohl die Notes Breaking Changes ausweisen. Weitere Verstöße lassen sich ohne Quellen aus dem Text nicht belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25328,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 105,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-84a5-7233-a62a-93fe9110d30c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Version lautet „3.2.0“, obwohl unter „Breaking Changes“ Änderungen an einer Worker-Option und der Umstieg auf ESM-only stehen. Breaking Changes verlangen einen Major-Sprung.\"}],\"reason\":\"Die Versionsnummer weist nur auf einen Minor-Sprung hin, obwohl die Notes Breaking Changes ausweisen. Weitere Verstöße lassen sich ohne Quellen aus dem Text nicht belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25328,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 105,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

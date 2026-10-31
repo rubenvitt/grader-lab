@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "91d0e77835c38bab8862a7a5",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7699,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #351 behauptet, der alte Optionsname werde stillschweigend ignoriert. Der Diff zeigt die Umbenennung in Typ und Verwendung, belegt aber nicht, wie zur Laufzeit mit der alten Option umgegangen wird.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu PostgresStore verweist auf #356; die angegebene Quelle für PostgresStore ist PR #355.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #357 garantiert, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt auslösen, und sagt, Fälligkeitszeitpunkte würden nun in UTC verglichen. Der Diff zeigt lediglich, dass `cron.next` mit `tz: 'UTC'` aufgerufen wird; der Vergleich `due <= now` bleibt unverändert.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine nicht belegte Aussage zum Verhalten der alten Worker-Option, einen falschen PR-Verweis und eine über den Diff hinausgehende Beschreibung des Scheduler-Fixes. Die Versionsnummer 4.0.0 berücksichtigt die Breaking Changes.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #351 behauptet, der alte Optionsname werde stillschweigend ignoriert. Der Diff zeigt die Umbenennung in Typ und Verwendung, belegt aber nicht, wie zur Laufzeit mit der alten Option umgegangen wird."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu PostgresStore verweist auf #356; die angegebene Quelle für PostgresStore ist PR #355."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #357 garantiert, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt auslösen, und sagt, Fälligkeitszeitpunkte würden nun in UTC verglichen. Der Diff zeigt lediglich, dass `cron.next` mit `tz: 'UTC'` aufgerufen wird; der Vergleich `due <= now` bleibt unverändert."
+   }
+  ],
+  "reason": "Die Notes enthalten eine nicht belegte Aussage zum Verhalten der alten Worker-Option, einen falschen PR-Verweis und eine über den Diff hinausgehende Beschreibung des Scheduler-Fixes. Die Versionsnummer 4.0.0 berücksichtigt die Breaking Changes.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26080,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 332,
+  "reasoning_output_tokens": 46
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-b0b6-79b2-8575-c5267e2fcfb1"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #351 behauptet, der alte Optionsname werde stillschweigend ignoriert. Der Diff zeigt die Umbenennung in Typ und Verwendung, belegt aber nicht, wie zur Laufzeit mit der alten Option umgegangen wird.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu PostgresStore verweist auf #356; die angegebene Quelle für PostgresStore ist PR #355.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #357 garantiert, dass Cron-Jobs bei Zeitumstellungen nicht mehr doppelt auslösen, und sagt, Fälligkeitszeitpunkte würden nun in UTC verglichen. Der Diff zeigt lediglich, dass `cron.next` mit `tz: 'UTC'` aufgerufen wird; der Vergleich `due <= now` bleibt unverändert.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine nicht belegte Aussage zum Verhalten der alten Worker-Option, einen falschen PR-Verweis und eine über den Diff hinausgehende Beschreibung des Scheduler-Fixes. Die Versionsnummer 4.0.0 berücksichtigt die Breaking Changes.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26080,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 332,
+    "reasoning_output_tokens": 46
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "14d72e8c49104f788ce19576",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "paraphrase",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4399,
+ "text": "{\"violations\":[],\"reason\":\"Der Kandidat vermittelt alle nutzerrelevanten Fakten der Referenz einschließlich Migration, Sicherheitshinweis und Versionsnummer gleichwertig.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Kandidat vermittelt alle nutzerrelevanten Fakten der Referenz einschließlich Migration, Sicherheitshinweis und Versionsnummer gleichwertig.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25506,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 48,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-bb96-72b0-9f06-b3a8d49a5a6c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Kandidat vermittelt alle nutzerrelevanten Fakten der Referenz einschließlich Migration, Sicherheitshinweis und Versionsnummer gleichwertig.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25506,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "df6df32b05016215b1b42f5a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 6956,
+ "text": "{\"reason\":\"Fassung A ist brauchbarer: Sie nennt die konkreten Änderungen und gibt Migrationsschritte an, während Fassung B größtenteils unbestimmt bleibt. Ob die Details in A durch die Diffs belegt und die Migrationen korrekt sind, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist brauchbarer: Sie nennt die konkreten Änderungen und gibt Migrationsschritte an, während Fassung B größtenteils unbestimmt bleibt. Ob die Details in A durch die Diffs belegt und die Migrationen korrekt sind, lässt sich ohne die Quellen nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24536,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 78,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-d67f-7e30-9ff1-f0b3a005d608"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist brauchbarer: Sie nennt die konkreten Änderungen und gibt Migrationsschritte an, während Fassung B größtenteils unbestimmt bleibt. Ob die Details in A durch die Diffs belegt und die Migrationen korrekt sind, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24536,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 78,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

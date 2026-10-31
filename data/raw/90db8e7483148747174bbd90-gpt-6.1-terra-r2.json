@@ -1,0 +1,83 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "90db8e7483148747174bbd90",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reverted-listed",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 13053,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat nennt die Option `durationMs` und PR #371; die Referenz nennt `perMs` und PR #376.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Konfiguration `limiter: { max, durationMs }` verwendet nicht den in der Referenz angegebenen Namen `perMs`.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Hinweis fehlt, dass jede Worker-Instanz ein eigenes Limit hat.\"}],\"reason\":\"Der Eintrag zum Rate Limiter enthält einen falschen Optionsnamen und eine falsche PR-Nummer. Außerdem fehlt eine wesentliche Information zum Geltungsbereich des Limits.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Kandidat nennt die Option `durationMs` und PR #371; die Referenz nennt `perMs` und PR #376."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Konfiguration `limiter: { max, durationMs }` verwendet nicht den in der Referenz angegebenen Namen `perMs`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Hinweis fehlt, dass jede Worker-Instanz ein eigenes Limit hat."
+   }
+  ],
+  "reason": "Der Eintrag zum Rate Limiter enthält einen falschen Optionsnamen und eine falsche PR-Nummer. Außerdem fehlt eine wesentliche Information zum Geltungsbereich des Limits.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25361,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 157,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-80e4-7ee1-b218-bd08ba4200ec"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360ee1daece51f-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360ee67ea4e507-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360eed5c923216-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360efa4bfee51d-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat nennt die Option `durationMs` und PR #371; die Referenz nennt `perMs` und PR #376.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Konfiguration `limiter: { max, durationMs }` verwendet nicht den in der Referenz angegebenen Namen `perMs`.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Hinweis fehlt, dass jede Worker-Instanz ein eigenes Limit hat.\"}],\"reason\":\"Der Eintrag zum Rate Limiter enthält einen falschen Optionsnamen und eine falsche PR-Nummer. Außerdem fehlt eine wesentliche Information zum Geltungsbereich des Limits.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25361,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 157,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

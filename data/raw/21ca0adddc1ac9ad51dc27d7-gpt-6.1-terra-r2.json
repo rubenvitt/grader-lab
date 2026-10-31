@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "21ca0adddc1ac9ad51dc27d7",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4415,
+ "text": "{\"reason\":\"Fassung B beschreibt die einmalige Wiederholung bei `ECONNRESET` konkret und ohne die weitreichende Garantie aus Fassung A, dass Sperren bei Redis-Failovers erhalten bleiben. Ob die Angaben durch den Diff belegt sind, lässt sich ohne die Quellen nicht abschließend beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt die einmalige Wiederholung bei `ECONNRESET` konkret und ohne die weitreichende Garantie aus Fassung A, dass Sperren bei Redis-Failovers erhalten bleiben. Ob die Angaben durch den Diff belegt sind, lässt sich ohne die Quellen nicht abschließend beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25384,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 78,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-4dc8-7141-aace-79dfda5ca2cb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt die einmalige Wiederholung bei `ECONNRESET` konkret und ohne die weitreichende Garantie aus Fassung A, dass Sperren bei Redis-Failovers erhalten bleiben. Ob die Angaben durch den Diff belegt sind, lässt sich ohne die Quellen nicht abschließend beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25384,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 78,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

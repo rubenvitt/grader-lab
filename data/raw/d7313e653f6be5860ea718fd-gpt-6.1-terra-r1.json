@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d7313e653f6be5860ea718fd",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4160,
+ "text": "{\"reason\":\"Fassung A beschreibt den Worker-Fix und die erforderliche Reaktion wesentlich konkreter. Auch beim Sicherheitsfix nennt sie die betroffene Komponente und empfiehlt ein Upgrade, während Fassung B nur allgemeine Aussagen enthält.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A beschreibt den Worker-Fix und die erforderliche Reaktion wesentlich konkreter. Auch beim Sicherheitsfix nennt sie die betroffene Komponente und empfiehlt ein Upgrade, während Fassung B nur allgemeine Aussagen enthält.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25171,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 61,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-f0b4-7b71-958e-7d25adc444a1"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A beschreibt den Worker-Fix und die erforderliche Reaktion wesentlich konkreter. Auch beim Sicherheitsfix nennt sie die betroffene Komponente und empfiehlt ein Upgrade, während Fassung B nur allgemeine Aussagen enthält.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25171,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 61,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

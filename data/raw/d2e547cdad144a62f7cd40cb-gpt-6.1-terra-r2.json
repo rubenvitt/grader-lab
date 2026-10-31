@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "d2e547cdad144a62f7cd40cb",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "missing-breaking",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4289,
+ "text": "{\"reason\":\"Fassung B nennt zusätzlich die Entfernung von `queue.clean()` und der Joboption `timeout` als Breaking Change und beschreibt die Migration. Fassung A lässt diese nutzerrelevante Änderung aus.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B nennt zusätzlich die Entfernung von `queue.clean()` und der Joboption `timeout` als Breaking Change und beschreibt die Migration. Fassung A lässt diese nutzerrelevante Änderung aus.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 24673,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 57,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-37e0-7e13-ad8d-66560235ac2b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt zusätzlich die Entfernung von `queue.clean()` und der Joboption `timeout` als Breaking Change und beschreibt die Migration. Fassung A lässt diese nutzerrelevante Änderung aus.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24673,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 57,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

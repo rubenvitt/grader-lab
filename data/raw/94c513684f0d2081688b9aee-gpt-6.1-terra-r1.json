@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "94c513684f0d2081688b9aee",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "false-success",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4813,
+ "text": "{\"reason\":\"Die beiden Fassungen sind wortgleich und daher anhand der Rubric gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die beiden Fassungen sind wortgleich und daher anhand der Rubric gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25384,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 34,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-8bd8-70d1-9455-84a2ddfa95ff"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die beiden Fassungen sind wortgleich und daher anhand der Rubric gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25384,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 34,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

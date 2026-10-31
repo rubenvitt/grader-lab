@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "154a14947e23f0654478baab",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reverted-listed",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4776,
+ "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version „5.0.1“ als Patch-Release und führen unter „Features“ einen neuen Replay-Button im Dashboard auf. Ein neues Feature verlangt mindestens einen Minor-Sprung.\"}],\"reason\":\"Der Replay-Button ist als neues Feature ausgewiesen und passt daher nicht zu einer Patch-Version. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version „5.0.1“ als Patch-Release und führen unter „Features“ einen neuen Replay-Button im Dashboard auf. Ein neues Feature verlangt mindestens einen Minor-Sprung."
+   }
+  ],
+  "reason": "Der Replay-Button ist als neues Feature ausgewiesen und passt daher nicht zu einer Patch-Version. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25197,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 157,
+  "reasoning_output_tokens": 53
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-1b7c-7e71-908f-79e1fe1939e4"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version „5.0.1“ als Patch-Release und führen unter „Features“ einen neuen Replay-Button im Dashboard auf. Ein neues Feature verlangt mindestens einen Minor-Sprung.\"}],\"reason\":\"Der Replay-Button ist als neues Feature ausgewiesen und passt daher nicht zu einer Patch-Version. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25197,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 157,
+    "reasoning_output_tokens": 53
+   }
+  }
+ ]
+}

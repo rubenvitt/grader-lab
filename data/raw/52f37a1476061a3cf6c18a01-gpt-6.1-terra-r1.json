@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "52f37a1476061a3cf6c18a01",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 9194,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"„Bulletproof renewals“ behauptet eine umfassende Zuverlässigkeit, die der Diff von PR #334 nicht belegt: Nur bei ECONNRESET wird genau ein weiterer Versuch unternommen; dieser kann ebenfalls fehlschlagen.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration ersetzt queue.clean(graceMs, status) durch queue.purge({ status, olderThanMs }), erklärt aber nicht, dass der bisherige Wert graceMs als olderThanMs übergeben werden muss. Ein direkt übernommenes olderThanMs ist im ursprünglichen Aufruf nicht definiert. Der entsprechende Aufruf lautet queue.purge({ status, olderThanMs: graceMs }).\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „powerful“, „We are thrilled“, „game-changing“, „effortless“, „Bulletproof“, „sleek“ und „delightful“ sind Werbesprache statt sachlicher Release Notes.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag nennt nur „a security issue“. Die Quelle zu PR #336 benennt die betroffene Komponente signing; ohne diese Angabe lässt sich die Änderung für Nutzer kaum einordnen. Die Komponente darf laut R5 genannt werden.\"}],\"reason\":\"Die Notes enthalten unbelegte und werbliche Aussagen; außerdem ist die Migration nicht vollständig und der Sicherheitseintrag zu allgemein. Die Versionsnummer 3.1.0 passt zu den belegten Features und der Deprecation.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "„Bulletproof renewals“ behauptet eine umfassende Zuverlässigkeit, die der Diff von PR #334 nicht belegt: Nur bei ECONNRESET wird genau ein weiterer Versuch unternommen; dieser kann ebenfalls fehlschlagen."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration ersetzt queue.clean(graceMs, status) durch queue.purge({ status, olderThanMs }), erklärt aber nicht, dass der bisherige Wert graceMs als olderThanMs übergeben werden muss. Ein direkt übernommenes olderThanMs ist im ursprünglichen Aufruf nicht definiert. Der entsprechende Aufruf lautet queue.purge({ status, olderThanMs: graceMs })."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „powerful“, „We are thrilled“, „game-changing“, „effortless“, „Bulletproof“, „sleek“ und „delightful“ sind Werbesprache statt sachlicher Release Notes."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Sicherheitseintrag nennt nur „a security issue“. Die Quelle zu PR #336 benennt die betroffene Komponente signing; ohne diese Angabe lässt sich die Änderung für Nutzer kaum einordnen. Die Komponente darf laut R5 genannt werden."
+   }
+  ],
+  "reason": "Die Notes enthalten unbelegte und werbliche Aussagen; außerdem ist die Migration nicht vollständig und der Sicherheitseintrag zu allgemein. Die Versionsnummer 3.1.0 passt zu den belegten Features und der Deprecation.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25772,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 456,
+  "reasoning_output_tokens": 128
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-1952-79b0-9356-c7ce26202e9d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"„Bulletproof renewals“ behauptet eine umfassende Zuverlässigkeit, die der Diff von PR #334 nicht belegt: Nur bei ECONNRESET wird genau ein weiterer Versuch unternommen; dieser kann ebenfalls fehlschlagen.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration ersetzt queue.clean(graceMs, status) durch queue.purge({ status, olderThanMs }), erklärt aber nicht, dass der bisherige Wert graceMs als olderThanMs übergeben werden muss. Ein direkt übernommenes olderThanMs ist im ursprünglichen Aufruf nicht definiert. Der entsprechende Aufruf lautet queue.purge({ status, olderThanMs: graceMs }).\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „powerful“, „We are thrilled“, „game-changing“, „effortless“, „Bulletproof“, „sleek“ und „delightful“ sind Werbesprache statt sachlicher Release Notes.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag nennt nur „a security issue“. Die Quelle zu PR #336 benennt die betroffene Komponente signing; ohne diese Angabe lässt sich die Änderung für Nutzer kaum einordnen. Die Komponente darf laut R5 genannt werden.\"}],\"reason\":\"Die Notes enthalten unbelegte und werbliche Aussagen; außerdem ist die Migration nicht vollständig und der Sicherheitseintrag zu allgemein. Die Versionsnummer 3.1.0 passt zu den belegten Features und der Deprecation.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25772,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 456,
+    "reasoning_output_tokens": 128
+   }
+  }
+ ]
+}

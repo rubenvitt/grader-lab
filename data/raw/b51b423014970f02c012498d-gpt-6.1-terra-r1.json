@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "b51b423014970f02c012498d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4596,
+ "text": "{\"reason\":\"Fassung B beschreibt die Änderungen und ihre Auswirkungen konkreter und nennt bei der Sicherheitskorrektur die betroffene Komponente sowie eine Upgrade-Empfehlung, ohne technische Details preiszugeben. Ob ihre konkreten Aussagen durch die Diffs belegt sind und die Patch-Version passt, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt die Änderungen und ihre Auswirkungen konkreter und nennt bei der Sicherheitskorrektur die betroffene Komponente sowie eine Upgrade-Empfehlung, ohne technische Details preiszugeben. Ob ihre konkreten Aussagen durch die Diffs belegt sind und die Patch-Version passt, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25171,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 81,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-f635-76e0-a8f3-48fdb0a2c891"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt die Änderungen und ihre Auswirkungen konkreter und nennt bei der Sicherheitskorrektur die betroffene Komponente sowie eine Upgrade-Empfehlung, ohne technische Details preiszugeben. Ob ihre konkreten Aussagen durch die Diffs belegt sind und die Patch-Version passt, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25171,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 81,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

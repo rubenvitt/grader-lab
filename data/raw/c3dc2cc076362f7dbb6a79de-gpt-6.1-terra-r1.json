@@ -1,0 +1,78 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "c3dc2cc076362f7dbb6a79de",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 13120,
+ "text": "{\"reason\":\"Fassung B ist brauchbarer, weil sie die Änderungen und den erforderlichen Migrationsschritt konkret beschreibt; Fassung A bleibt bei allen drei Einträgen zu allgemein. Ob die Details in B durch die Quellen gedeckt sind oder ein Embargo verletzen, lässt sich ohne PR-Diffs und Labels nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist brauchbarer, weil sie die Änderungen und den erforderlichen Migrationsschritt konkret beschreibt; Fassung A bleibt bei allen drei Einträgen zu allgemein. Ob die Details in B durch die Quellen gedeckt sind oder ein Embargo verletzen, lässt sich ohne PR-Diffs und Labels nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 24422,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 82,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": true,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-0c23-7632-b27c-b6e68139bd8e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536048d8ea5e517-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604927eb74534-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604996f9424b5-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604a6ab06855b-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "error",
+    "message": "Falling back from WebSockets to HTTPS transport. unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604bbe84315ec-TXL"
+   }
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_1",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist brauchbarer, weil sie die Änderungen und den erforderlichen Migrationsschritt konkret beschreibt; Fassung A bleibt bei allen drei Einträgen zu allgemein. Ob die Details in B durch die Quellen gedeckt sind oder ein Embargo verletzen, lässt sich ohne PR-Diffs und Labels nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24422,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 82,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

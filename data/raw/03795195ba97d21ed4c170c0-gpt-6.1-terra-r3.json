@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "03795195ba97d21ed4c170c0",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5188,
+ "text": "{\"reason\":\"Fassung B ist sachlich formuliert; Fassung A verwendet mehrfach Werbesprache und Superlative und verstößt damit gegen R7. Die übrigen Aussagen sind inhaltlich gleich; ihre Belegbarkeit lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist sachlich formuliert; Fassung A verwendet mehrfach Werbesprache und Superlative und verstößt damit gegen R7. Die übrigen Aussagen sind inhaltlich gleich; ihre Belegbarkeit lässt sich ohne Quellen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25298,
+  "cached_input_tokens": 0,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 69,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-5406-72d0-90a4-47e8bf0e3c88"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist sachlich formuliert; Fassung A verwendet mehrfach Werbesprache und Superlative und verstößt damit gegen R7. Die übrigen Aussagen sind inhaltlich gleich; ihre Belegbarkeit lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25298,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 69,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

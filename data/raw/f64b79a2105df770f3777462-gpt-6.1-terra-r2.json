@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "f64b79a2105df770f3777462",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "wrong-migration",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6171,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration zu #307 empfiehlt `defaultJobOptions: { keepCompleted: true }`. Im Diff heißt die geänderte Option `removeOnComplete`; um das bisherige Verhalten beizubehalten, muss `defaultJobOptions: { removeOnComplete: false }` gesetzt werden.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #304 behauptet, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks in `active`. Der Diff belegt, dass der Lock im `finally`-Block freigegeben wird; eine Änderung des Jobstatus zeigt er nicht.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten einen falschen Migrationsschritt und eine durch den Diff nicht belegte Aussage über den Jobstatus. Die zurückgenommenen Lanes fehlen zu Recht; der Major-Sprung ist durch die Änderung des Defaults gedeckt.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration zu #307 empfiehlt `defaultJobOptions: { keepCompleted: true }`. Im Diff heißt die geänderte Option `removeOnComplete`; um das bisherige Verhalten beizubehalten, muss `defaultJobOptions: { removeOnComplete: false }` gesetzt werden."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #304 behauptet, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks in `active`. Der Diff belegt, dass der Lock im `finally`-Block freigegeben wird; eine Änderung des Jobstatus zeigt er nicht."
+   }
+  ],
+  "reason": "Die Notes enthalten einen falschen Migrationsschritt und eine durch den Diff nicht belegte Aussage über den Jobstatus. Die zurückgenommenen Lanes fehlen zu Recht; der Major-Sprung ist durch die Änderung des Defaults gedeckt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26835,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 279,
+  "reasoning_output_tokens": 48
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19406-3434-7a11-bc9b-ef353815b0b3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration zu #307 empfiehlt `defaultJobOptions: { keepCompleted: true }`. Im Diff heißt die geänderte Option `removeOnComplete`; um das bisherige Verhalten beizubehalten, muss `defaultJobOptions: { removeOnComplete: false }` gesetzt werden.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #304 behauptet, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks in `active`. Der Diff belegt, dass der Lock im `finally`-Block freigegeben wird; eine Änderung des Jobstatus zeigt er nicht.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten einen falschen Migrationsschritt und eine durch den Diff nicht belegte Aussage über den Jobstatus. Die zurückgenommenen Lanes fehlen zu Recht; der Major-Sprung ist durch die Änderung des Defaults gedeckt.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26835,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 279,
+    "reasoning_output_tokens": 48
+   }
+  }
+ ]
+}

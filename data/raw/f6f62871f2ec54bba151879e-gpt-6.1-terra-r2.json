@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "f6f62871f2ec54bba151879e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 12815,
+ "text": "{\"reason\":\"Fassung B lässt die Änderungen an Tests und GitHub Actions weg, die für Nutzer der Bibliothek nicht relevant sind. Ansonsten sind die Fassungen inhaltlich gleich; die Aussagen lassen sich ohne Quellen nicht weiter überprüfen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B lässt die Änderungen an Tests und GitHub Actions weg, die für Nutzer der Bibliothek nicht relevant sind. Ansonsten sind die Fassungen inhaltlich gleich; die Aussagen lassen sich ohne Quellen nicht weiter überprüfen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25413,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 62,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-e480-7d60-9670-a64b1f454c5a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53607805f6d15ec-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53607857c6f6dc5-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536078d1c43a43a-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360798abd916eb-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B lässt die Änderungen an Tests und GitHub Actions weg, die für Nutzer der Bibliothek nicht relevant sind. Ansonsten sind die Fassungen inhaltlich gleich; die Aussagen lassen sich ohne Quellen nicht weiter überprüfen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25413,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

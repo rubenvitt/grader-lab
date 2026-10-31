@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "de536198750c1251f1feae23",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "internal-noise",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 15295,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"„CI now runs the integration tests against Postgres 16 (#363).“ beschreibt eine interne Teständerung ohne direkten Nutzen für Bibliotheksnutzer.\"}],\"reason\":\"Der CI-Eintrag gehört nicht in nutzerorientierte Release Notes. Weitere Verstöße lassen sich allein anhand des Textes nicht feststellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "„CI now runs the integration tests against Postgres 16 (#363).“ beschreibt eine interne Teständerung ohne direkten Nutzen für Bibliotheksnutzer."
+   }
+  ],
+  "reason": "Der CI-Eintrag gehört nicht in nutzerorientierte Release Notes. Weitere Verstöße lassen sich allein anhand des Textes nicht feststellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25343,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 91,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-a743-7662-b7cf-c7be9cdecec8"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"„CI now runs the integration tests against Postgres 16 (#363).“ beschreibt eine interne Teständerung ohne direkten Nutzen für Bibliotheksnutzer.\"}],\"reason\":\"Der CI-Eintrag gehört nicht in nutzerorientierte Release Notes. Weitere Verstöße lassen sich allein anhand des Textes nicht feststellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25343,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 91,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

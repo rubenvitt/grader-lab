@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "885e61e748b03594852b71ab",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-bump",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6986,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #351, `stalledIntervalMs` werde „silently ignored“. Der Diff zeigt die Umbenennung der Option, aber nicht, wie eine übergebene alte Option behandelt wird.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #357, Cron-Jobs würden beim Umstellen der Uhr nicht mehr doppelt ausgeführt. Der Diff zeigt nur den zusätzlichen Parameter `{ tz: 'UTC' }` beim Aufruf von `cron.next`; er belegt die allgemeine Garantie nicht.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes kündigen zu #358 an, Details würden in einem separaten Advisory folgen. Die Quellen nennen zwar ein Advisory, belegen aber keine solche spätere Veröffentlichung.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 3.1.0, die Notes nennen 3.2.0. Die Umbenennung der öffentlichen Option in #351 und der Wegfall des CommonJS-Exports in #353 sind Breaking Changes und verlangen einen Major-Sprung.\"}],\"reason\":\"Die Notes ordnen die erkennbaren Breaking Changes richtig ein und nennen konkrete Änderungen. Einige Aussagen gehen jedoch über die Diffs oder Quellen hinaus; außerdem passt der Minor-Sprung nicht zu den Breaking Changes.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #351, `stalledIntervalMs` werde „silently ignored“. Der Diff zeigt die Umbenennung der Option, aber nicht, wie eine übergebene alte Option behandelt wird."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #357, Cron-Jobs würden beim Umstellen der Uhr nicht mehr doppelt ausgeführt. Der Diff zeigt nur den zusätzlichen Parameter `{ tz: 'UTC' }` beim Aufruf von `cron.next`; er belegt die allgemeine Garantie nicht."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes kündigen zu #358 an, Details würden in einem separaten Advisory folgen. Die Quellen nennen zwar ein Advisory, belegen aber keine solche spätere Veröffentlichung."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 3.1.0, die Notes nennen 3.2.0. Die Umbenennung der öffentlichen Option in #351 und der Wegfall des CommonJS-Exports in #353 sind Breaking Changes und verlangen einen Major-Sprung."
+   }
+  ],
+  "reason": "Die Notes ordnen die erkennbaren Breaking Changes richtig ein und nennen konkrete Änderungen. Einige Aussagen gehen jedoch über die Diffs oder Quellen hinaus; außerdem passt der Minor-Sprung nicht zu den Breaking Changes.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26928,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 352,
+  "reasoning_output_tokens": 65
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-5ba2-7441-910c-f358fd9bf0a3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #351, `stalledIntervalMs` werde „silently ignored“. Der Diff zeigt die Umbenennung der Option, aber nicht, wie eine übergebene alte Option behandelt wird.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #357, Cron-Jobs würden beim Umstellen der Uhr nicht mehr doppelt ausgeführt. Der Diff zeigt nur den zusätzlichen Parameter `{ tz: 'UTC' }` beim Aufruf von `cron.next`; er belegt die allgemeine Garantie nicht.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes kündigen zu #358 an, Details würden in einem separaten Advisory folgen. Die Quellen nennen zwar ein Advisory, belegen aber keine solche spätere Veröffentlichung.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 3.1.0, die Notes nennen 3.2.0. Die Umbenennung der öffentlichen Option in #351 und der Wegfall des CommonJS-Exports in #353 sind Breaking Changes und verlangen einen Major-Sprung.\"}],\"reason\":\"Die Notes ordnen die erkennbaren Breaking Changes richtig ein und nennen konkrete Änderungen. Einige Aussagen gehen jedoch über die Diffs oder Quellen hinaus; außerdem passt der Minor-Sprung nicht zu den Breaking Changes.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26928,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 352,
+    "reasoning_output_tokens": 65
+   }
+  }
+ ]
+}

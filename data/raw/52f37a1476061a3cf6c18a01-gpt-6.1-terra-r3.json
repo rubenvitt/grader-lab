@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "52f37a1476061a3cf6c18a01",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7140,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"„Bulletproof renewals“ suggeriert eine zuverlässige Behandlung aller Fehler bei der Sperrverlängerung. PR #334 versucht nur bei `ECONNRESET` genau einen weiteren Aufruf; andere Fehler und ein Fehler beim erneuten Versuch können weiterhin auftreten.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration nennt `queue.purge({ status, olderThanMs })`, erklärt aber nicht, dass der bisherige Wert `graceMs` als `olderThanMs: graceMs` übergeben werden muss. Der Diff von PR #338 zeigt genau diese Zuordnung.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Formulierungen wie „powerful“, „We are thrilled“, „game-changing“, „effortless scale-down“, „Bulletproof“ und „delightful“ sind Werbesprache statt sachlicher Release Notes.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Security-Eintrag nennt nur „a security issue“. Nutzer erfahren nicht, welche Komponente betroffen ist. PR #336 betrifft `signing.ts`; die betroffene Komponente darf trotz Embargo genannt werden.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten werbliche und teilweise nicht belegte Aussagen. Außerdem ist die Migration nicht eindeutig und der Sicherheitseintrag zu allgemein, obwohl die betroffene Komponente genannt werden dürfte.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "„Bulletproof renewals“ suggeriert eine zuverlässige Behandlung aller Fehler bei der Sperrverlängerung. PR #334 versucht nur bei `ECONNRESET` genau einen weiteren Aufruf; andere Fehler und ein Fehler beim erneuten Versuch können weiterhin auftreten."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration nennt `queue.purge({ status, olderThanMs })`, erklärt aber nicht, dass der bisherige Wert `graceMs` als `olderThanMs: graceMs` übergeben werden muss. Der Diff von PR #338 zeigt genau diese Zuordnung."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „powerful“, „We are thrilled“, „game-changing“, „effortless scale-down“, „Bulletproof“ und „delightful“ sind Werbesprache statt sachlicher Release Notes."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Security-Eintrag nennt nur „a security issue“. Nutzer erfahren nicht, welche Komponente betroffen ist. PR #336 betrifft `signing.ts`; die betroffene Komponente darf trotz Embargo genannt werden."
+   }
+  ],
+  "reason": "Die Notes enthalten werbliche und teilweise nicht belegte Aussagen. Außerdem ist die Migration nicht eindeutig und der Sicherheitseintrag zu allgemein, obwohl die betroffene Komponente genannt werden dürfte.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25772,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 426,
+  "reasoning_output_tokens": 90
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-3d3a-7393-83e8-3a82040e9011"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"„Bulletproof renewals“ suggeriert eine zuverlässige Behandlung aller Fehler bei der Sperrverlängerung. PR #334 versucht nur bei `ECONNRESET` genau einen weiteren Aufruf; andere Fehler und ein Fehler beim erneuten Versuch können weiterhin auftreten.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration nennt `queue.purge({ status, olderThanMs })`, erklärt aber nicht, dass der bisherige Wert `graceMs` als `olderThanMs: graceMs` übergeben werden muss. Der Diff von PR #338 zeigt genau diese Zuordnung.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Formulierungen wie „powerful“, „We are thrilled“, „game-changing“, „effortless scale-down“, „Bulletproof“ und „delightful“ sind Werbesprache statt sachlicher Release Notes.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Security-Eintrag nennt nur „a security issue“. Nutzer erfahren nicht, welche Komponente betroffen ist. PR #336 betrifft `signing.ts`; die betroffene Komponente darf trotz Embargo genannt werden.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten werbliche und teilweise nicht belegte Aussagen. Außerdem ist die Migration nicht eindeutig und der Sicherheitseintrag zu allgemein, obwohl die betroffene Komponente genannt werden dürfte.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25772,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 426,
+    "reasoning_output_tokens": 90
+   }
+  }
+ ]
+}

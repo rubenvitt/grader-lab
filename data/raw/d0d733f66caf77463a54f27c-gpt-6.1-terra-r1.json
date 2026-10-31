@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d0d733f66caf77463a54f27c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "ghost-pr",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4437,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer zum Rate Limiter. Da keine Quellen oder Diffs vorliegen, lässt sich nicht beurteilen, welche Nummer korrekt ist; nach der Rubric sind die Fassungen daher gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur in der PR-Nummer zum Rate Limiter. Da keine Quellen oder Diffs vorliegen, lässt sich nicht beurteilen, welche Nummer korrekt ist; nach der Rubric sind die Fassungen daher gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25262,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 67,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-e697-7be2-bf54-a80d06c3c4eb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer zum Rate Limiter. Da keine Quellen oder Diffs vorliegen, lässt sich nicht beurteilen, welche Nummer korrekt ist; nach der Rubric sind die Fassungen daher gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25262,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 67,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "c3dc2cc076362f7dbb6a79de",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 6163,
+ "text": "{\"reason\":\"Fassung B beschreibt konkrete Änderungen und einen Migrationsschritt, während Fassung A nur allgemeine Aussagen enthält und Nutzern kaum Orientierung gibt. Mangels Quellen lässt sich allerdings nicht prüfen, ob Bs Details belegt und der Migrationsschritt korrekt sind.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt konkrete Änderungen und einen Migrationsschritt, während Fassung A nur allgemeine Aussagen enthält und Nutzern kaum Orientierung gibt. Mangels Quellen lässt sich allerdings nicht prüfen, ob Bs Details belegt und der Migrationsschritt korrekt sind.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 24422,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 69,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-4470-78c3-8a31-1e03232b3c41"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt konkrete Änderungen und einen Migrationsschritt, während Fassung A nur allgemeine Aussagen enthält und Nutzern kaum Orientierung gibt. Mangels Quellen lässt sich allerdings nicht prüfen, ob Bs Details belegt und der Migrationsschritt korrekt sind.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24422,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 69,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

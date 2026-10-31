@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "7de0a660aa6287b6c61e7906",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6992,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration empfiehlt `queue.purge({ status, olderThanMs })`, erklärt aber nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Der Diff verwendet `this.purge({ status, olderThanMs: graceMs })`.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag nennt nur „a security issue“, aber nicht die betroffene Komponente. PR #336 betrifft die Signaturprüfung in `src/signing.ts`; diese Komponente darf gemäß R5 genannt werden.\"}],\"reason\":\"Die Migration lässt die Zuordnung des bisherigen Arguments offen, und der Sicherheitseintrag benennt die betroffene Komponente nicht. Die übrigen Angaben sind durch die Diffs gedeckt und die Version 3.1.0 passt zu den enthaltenen Features und der Deprecation.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration empfiehlt `queue.purge({ status, olderThanMs })`, erklärt aber nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Der Diff verwendet `this.purge({ status, olderThanMs: graceMs })`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Sicherheitseintrag nennt nur „a security issue“, aber nicht die betroffene Komponente. PR #336 betrifft die Signaturprüfung in `src/signing.ts`; diese Komponente darf gemäß R5 genannt werden."
+   }
+  ],
+  "reason": "Die Migration lässt die Zuordnung des bisherigen Arguments offen, und der Sicherheitseintrag benennt die betroffene Komponente nicht. Die übrigen Angaben sind durch die Diffs gedeckt und die Version 3.1.0 passt zu den enthaltenen Features und der Deprecation.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25731,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 316,
+  "reasoning_output_tokens": 114
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-8429-7ad2-a895-c4827ddcbd0c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration empfiehlt `queue.purge({ status, olderThanMs })`, erklärt aber nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Der Diff verwendet `this.purge({ status, olderThanMs: graceMs })`.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag nennt nur „a security issue“, aber nicht die betroffene Komponente. PR #336 betrifft die Signaturprüfung in `src/signing.ts`; diese Komponente darf gemäß R5 genannt werden.\"}],\"reason\":\"Die Migration lässt die Zuordnung des bisherigen Arguments offen, und der Sicherheitseintrag benennt die betroffene Komponente nicht. Die übrigen Angaben sind durch die Diffs gedeckt und die Version 3.1.0 passt zu den enthaltenen Features und der Deprecation.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25731,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 316,
+    "reasoning_output_tokens": 114
+   }
+  }
+ ]
+}

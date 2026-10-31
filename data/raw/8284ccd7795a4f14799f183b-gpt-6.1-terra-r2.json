@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "8284ccd7795a4f14799f183b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "useless-true",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4957,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker fix (#413)“ nennt weder die konkrete Änderung noch, ob Nutzer etwas tun müssen.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security improvements (#414)“ nennt weder die betroffene Komponente noch eine Upgrade-Empfehlung oder eine andere nutzbare Information.\"}],\"reason\":\"Die Einträge sind zu allgemein, um ihre Auswirkungen für Nutzer zu erkennen. Weitere Verstöße lassen sich ohne Quellen nicht feststellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Worker fix (#413)“ nennt weder die konkrete Änderung noch, ob Nutzer etwas tun müssen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Security improvements (#414)“ nennt weder die betroffene Komponente noch eine Upgrade-Empfehlung oder eine andere nutzbare Information."
+   }
+  ],
+  "reason": "Die Einträge sind zu allgemein, um ihre Auswirkungen für Nutzer zu erkennen. Weitere Verstöße lassen sich ohne Quellen nicht feststellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25120,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 152,
+  "reasoning_output_tokens": 36
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-00ff-72f3-a86e-de1c4142606c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker fix (#413)“ nennt weder die konkrete Änderung noch, ob Nutzer etwas tun müssen.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security improvements (#414)“ nennt weder die betroffene Komponente noch eine Upgrade-Empfehlung oder eine andere nutzbare Information.\"}],\"reason\":\"Die Einträge sind zu allgemein, um ihre Auswirkungen für Nutzer zu erkennen. Weitere Verstöße lassen sich ohne Quellen nicht feststellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25120,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 152,
+    "reasoning_output_tokens": 36
+   }
+  }
+ ]
+}

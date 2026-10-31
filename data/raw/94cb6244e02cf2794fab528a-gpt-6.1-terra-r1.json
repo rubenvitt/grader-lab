@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "94cb6244e02cf2794fab528a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reverted-listed",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6305,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R4\",\n      \"evidence\": \"Der Eintrag zu Priority Lanes verweist auf #301. PR #315 nimmt #301 und das zugehörige Follow-up #312 im selben Release zurück; eine erneut eingeführte Fassung ist nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Breaking-Changes-Eintrag behauptet, dass ein abgeschlossenes Job-Objekt ohne Opt-in nicht mehr aus der Queue abgerufen werden kann. Der Diff von #307 zeigt nur die Änderung des Defaults für `removeOnComplete` von `false` auf `true`; er belegt keine konkrete Abrufgarantie.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine zurückgenommene Funktion und eine Aussage, deren konkrete Wirkung der vorgelegte Diff nicht belegt. Die Änderung des Defaults und der Migrationsschritt verwenden die Namen aus den Quellen; der Major-Sprung auf 3.0.0 passt zum Breaking Change.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R4",
+    "evidence": "Der Eintrag zu Priority Lanes verweist auf #301. PR #315 nimmt #301 und das zugehörige Follow-up #312 im selben Release zurück; eine erneut eingeführte Fassung ist nicht belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Breaking-Changes-Eintrag behauptet, dass ein abgeschlossenes Job-Objekt ohne Opt-in nicht mehr aus der Queue abgerufen werden kann. Der Diff von #307 zeigt nur die Änderung des Defaults für `removeOnComplete` von `false` auf `true`; er belegt keine konkrete Abrufgarantie."
+   }
+  ],
+  "reason": "Die Notes enthalten eine zurückgenommene Funktion und eine Aussage, deren konkrete Wirkung der vorgelegte Diff nicht belegt. Die Änderung des Defaults und der Migrationsschritt verwenden die Namen aus den Quellen; der Major-Sprung auf 3.0.0 passt zum Breaking Change.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26869,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 236,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-6a50-7011-af02-0f73919cdefe"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R4\",\n      \"evidence\": \"Der Eintrag zu Priority Lanes verweist auf #301. PR #315 nimmt #301 und das zugehörige Follow-up #312 im selben Release zurück; eine erneut eingeführte Fassung ist nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Breaking-Changes-Eintrag behauptet, dass ein abgeschlossenes Job-Objekt ohne Opt-in nicht mehr aus der Queue abgerufen werden kann. Der Diff von #307 zeigt nur die Änderung des Defaults für `removeOnComplete` von `false` auf `true`; er belegt keine konkrete Abrufgarantie.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine zurückgenommene Funktion und eine Aussage, deren konkrete Wirkung der vorgelegte Diff nicht belegt. Die Änderung des Defaults und der Migrationsschritt verwenden die Namen aus den Quellen; der Major-Sprung auf 3.0.0 passt zum Breaking Change.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26869,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 236,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

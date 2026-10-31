@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "c4d62909bce2ddb60439ca05",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-bump",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4580,
+ "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst ergeben sich keine Verstöße. Ob die Versionsnummer einen ausreichenden Sprung gegenüber der vorherigen Version darstellt, lässt sich ohne deren Angabe nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Aus dem Text selbst ergeben sich keine Verstöße. Ob die Versionsnummer einen ausreichenden Sprung gegenüber der vorherigen Version darstellt, lässt sich ohne deren Angabe nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24480,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 100,
+  "reasoning_output_tokens": 41
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-72fa-7a22-b428-53030cb4499a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Aus dem Text selbst ergeben sich keine Verstöße. Ob die Versionsnummer einen ausreichenden Sprung gegenüber der vorherigen Version darstellt, lässt sich ohne deren Angabe nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24480,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 100,
+    "reasoning_output_tokens": 41
+   }
+  }
+ ]
+}

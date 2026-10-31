@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "ce82c372820599b005f9ba50",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "reordered",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7834,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration nennt `queue.purge({ status, olderThanMs })`, ordnet aber den bisherigen Parameter `graceMs` nicht zu. Der Diff verwendet `queue.purge({ status, olderThanMs: graceMs })`; ohne diese Zuordnung übernimmt der gezeigte Schritt die bisherige Wartezeit nicht zuverlässig.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag nennt nur ein „security issue“, aber nicht die betroffene Komponente. Laut PR #336 betrifft der Fix die Signaturprüfung; diese Komponente darf trotz Embargo genannt werden.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung behauptet allgemein einen erneuten Versuch nach einer unterbrochenen Verbindung. Der Diff von PR #334 wiederholt `pexpire` ausschließlich bei `ECONNRESET`; andere Fehler werden weitergeworfen.\"}],\"reason\":\"Die Notes geben die wesentlichen Änderungen überwiegend wieder und die Minor-Version passt zum Inhalt. Die Migration, der Sicherheitseintrag und die Beschreibung der Fehlerbehandlung müssen präzisiert werden.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration nennt `queue.purge({ status, olderThanMs })`, ordnet aber den bisherigen Parameter `graceMs` nicht zu. Der Diff verwendet `queue.purge({ status, olderThanMs: graceMs })`; ohne diese Zuordnung übernimmt der gezeigte Schritt die bisherige Wartezeit nicht zuverlässig."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Sicherheitseintrag nennt nur ein „security issue“, aber nicht die betroffene Komponente. Laut PR #336 betrifft der Fix die Signaturprüfung; diese Komponente darf trotz Embargo genannt werden."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung behauptet allgemein einen erneuten Versuch nach einer unterbrochenen Verbindung. Der Diff von PR #334 wiederholt `pexpire` ausschließlich bei `ECONNRESET`; andere Fehler werden weitergeworfen."
+   }
+  ],
+  "reason": "Die Notes geben die wesentlichen Änderungen überwiegend wieder und die Minor-Version passt zum Inhalt. Die Migration, der Sicherheitseintrag und die Beschreibung der Fehlerbehandlung müssen präzisiert werden.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26577,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 374,
+  "reasoning_output_tokens": 132
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-15a4-7ef2-9d0d-a95d0d688431"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration nennt `queue.purge({ status, olderThanMs })`, ordnet aber den bisherigen Parameter `graceMs` nicht zu. Der Diff verwendet `queue.purge({ status, olderThanMs: graceMs })`; ohne diese Zuordnung übernimmt der gezeigte Schritt die bisherige Wartezeit nicht zuverlässig.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag nennt nur ein „security issue“, aber nicht die betroffene Komponente. Laut PR #336 betrifft der Fix die Signaturprüfung; diese Komponente darf trotz Embargo genannt werden.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung behauptet allgemein einen erneuten Versuch nach einer unterbrochenen Verbindung. Der Diff von PR #334 wiederholt `pexpire` ausschließlich bei `ECONNRESET`; andere Fehler werden weitergeworfen.\"}],\"reason\":\"Die Notes geben die wesentlichen Änderungen überwiegend wieder und die Minor-Version passt zum Inhalt. Die Migration, der Sicherheitseintrag und die Beschreibung der Fehlerbehandlung müssen präzisiert werden.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26577,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 374,
+    "reasoning_output_tokens": 132
+   }
+  }
+ ]
+}

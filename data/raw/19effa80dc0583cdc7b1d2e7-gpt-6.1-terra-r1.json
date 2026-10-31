@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "19effa80dc0583cdc7b1d2e7",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reverted-listed",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 13530,
+ "text": "{\"reason\":\"Ohne PR-Diffs oder andere Quellen lässt sich nicht feststellen, welcher Optionsname und welche PR-Nummer korrekt sind und ob das Limit pro Worker-Instanz gilt. Beide Fassungen enthalten dieselbe Deprecation und verwenden dieselbe Versionsnummer; anhand des vorliegenden Materials lässt sich daher kein sachlicher Vorteil belegen.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Ohne PR-Diffs oder andere Quellen lässt sich nicht feststellen, welcher Optionsname und welche PR-Nummer korrekt sind und ob das Limit pro Worker-Instanz gilt. Beide Fassungen enthalten dieselbe Deprecation und verwenden dieselbe Versionsnummer; anhand des vorliegenden Materials lässt sich daher kein sachlicher Vorteil belegen.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25254,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 83,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-7d78-7823-90bf-cb4681db0ec9"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360edd3c833769-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360ee1ed49b9de-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360ee95f8ed9e9-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360ef5e984889c-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Ohne PR-Diffs oder andere Quellen lässt sich nicht feststellen, welcher Optionsname und welche PR-Nummer korrekt sind und ob das Limit pro Worker-Instanz gilt. Beide Fassungen enthalten dieselbe Deprecation und verwenden dieselbe Versionsnummer; anhand des vorliegenden Materials lässt sich daher kein sachlicher Vorteil belegen.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25254,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 83,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

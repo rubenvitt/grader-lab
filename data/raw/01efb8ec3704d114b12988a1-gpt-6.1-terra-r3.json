@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "01efb8ec3704d114b12988a1",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 13838,
+ "text": "{\"reason\":\"Beide Fassungen enthalten dieselben sachlichen Aussagen und Migrationsschritte; die Unterschiede betreffen nur die Formulierung. Ohne weitere Quellen lassen sich Belegbarkeit und mögliche ausgelassene Änderungen nicht unterscheiden.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen enthalten dieselben sachlichen Aussagen und Migrationsschritte; die Unterschiede betreffen nur die Formulierung. Ohne weitere Quellen lassen sich Belegbarkeit und mögliche ausgelassene Änderungen nicht unterscheiden.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24553,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 60,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-d6b6-7ef1-8984-ce4ef07ba0c3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53609057d1458e0-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536090a2c1c921f-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53609123971e50f-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536091fec94f56c-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen enthalten dieselben sachlichen Aussagen und Migrationsschritte; die Unterschiede betreffen nur die Formulierung. Ohne weitere Quellen lassen sich Belegbarkeit und mögliche ausgelassene Änderungen nicht unterscheiden.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24553,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 60,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "346bd11bc87c7cb168b58610",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "missing-breaking",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 6450,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und konkret; der Breaking Change enthält einen Migrationshinweis und wird durch den Major-Sprung berücksichtigt. Ob die technischen Aussagen durch die Quellen gedeckt sind, lässt sich ohne Diffs nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes sind sachlich und konkret; der Breaking Change enthält einen Migrationshinweis und wird durch den Major-Sprung berücksichtigt. Ob die technischen Aussagen durch die Quellen gedeckt sind, lässt sich ohne Diffs nicht prüfen und gilt daher als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25266,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 71,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-4947-7170-b5c2-56d1469d67cb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und konkret; der Breaking Change enthält einen Migrationshinweis und wird durch den Major-Sprung berücksichtigt. Ob die technischen Aussagen durch die Quellen gedeckt sind, lässt sich ohne Diffs nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25266,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 71,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

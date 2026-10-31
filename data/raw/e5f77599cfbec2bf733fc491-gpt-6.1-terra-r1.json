@@ -1,0 +1,83 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "e5f77599cfbec2bf733fc491",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 14276,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff entfernt den Namen aus dem Typ und liest stattdessen `stallCheckMs`; das konkrete Verhalten bei Verwendung des alten Namens ist damit nicht belegt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zu #357, Cron-Jobs würden bei einer Zeitumstellung nicht mehr doppelt ausgelöst, ist durch den Diff nicht belegt: Er übergibt `tz: 'UTC'` an `cron.next`, zeigt aber keine Garantie für alle Zeitumstellungen.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung enthält Werbesprache und Superlative wie „Welcome to the future“, „most exciting release yet“ und „blazing“. Auch Formulierungen wie „Naming, perfected“, „revolutionary“ und „Turbocharged imports“ sind nicht sachlich.\"}],\"reason\":\"Die Major-Version und die beiden als Breaking Changes eingeordneten Änderungen passen zu den Diffs. Einzelne Aussagen gehen jedoch über die Belege hinaus, und der Ton ist an mehreren Stellen werblich.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff entfernt den Namen aus dem Typ und liest stattdessen `stallCheckMs`; das konkrete Verhalten bei Verwendung des alten Namens ist damit nicht belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zu #357, Cron-Jobs würden bei einer Zeitumstellung nicht mehr doppelt ausgelöst, ist durch den Diff nicht belegt: Er übergibt `tz: 'UTC'` an `cron.next`, zeigt aber keine Garantie für alle Zeitumstellungen."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Einleitung enthält Werbesprache und Superlative wie „Welcome to the future“, „most exciting release yet“ und „blazing“. Auch Formulierungen wie „Naming, perfected“, „revolutionary“ und „Turbocharged imports“ sind nicht sachlich."
+   }
+  ],
+  "reason": "Die Major-Version und die beiden als Breaking Changes eingeordneten Änderungen passen zu den Diffs. Einzelne Aussagen gehen jedoch über die Belege hinaus, und der Ton ist an mehreren Stellen werblich.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26125,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 252,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-ae06-7fe1-917c-8fdde9402a95"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360bf4ff0ee52f-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360bf998d4469d-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360c00c9174528-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360c0d4ec1c040-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #351, der alte Optionsname werde „silently ignored“. Der Diff entfernt den Namen aus dem Typ und liest stattdessen `stallCheckMs`; das konkrete Verhalten bei Verwendung des alten Namens ist damit nicht belegt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zu #357, Cron-Jobs würden bei einer Zeitumstellung nicht mehr doppelt ausgelöst, ist durch den Diff nicht belegt: Er übergibt `tz: 'UTC'` an `cron.next`, zeigt aber keine Garantie für alle Zeitumstellungen.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung enthält Werbesprache und Superlative wie „Welcome to the future“, „most exciting release yet“ und „blazing“. Auch Formulierungen wie „Naming, perfected“, „revolutionary“ und „Turbocharged imports“ sind nicht sachlich.\"}],\"reason\":\"Die Major-Version und die beiden als Breaking Changes eingeordneten Änderungen passen zu den Diffs. Einzelne Aussagen gehen jedoch über die Belege hinaus, und der Ton ist an mehreren Stellen werblich.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26125,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 252,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

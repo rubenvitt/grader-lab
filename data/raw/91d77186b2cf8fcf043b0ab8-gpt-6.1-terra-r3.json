@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "91d77186b2cf8fcf043b0ab8",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "reordered",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7026,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #351, es gebe keinen Alias und `stalledIntervalMs` werde stillschweigend ignoriert. Der Diff zeigt die Umbenennung der Option und ihrer Verwendung, aber weder eine vollständige Aliasprüfung noch das Verhalten bei der alten Option.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage zu #357, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgelöst, ist als allgemeine Garantie durch den Diff nicht belegt. Sichtbar ist, dass `cron.next` nun mit `{ tz: 'UTC' }` aufgerufen wird.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten zwei Aussagen, deren Reichweite über die gezeigten Diffs hinausgeht. Die Breaking Changes und ihre Migrationsschritte sind ansonsten erfasst; der Major-Sprung auf 4.0.0 passt zum Inhalt.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #351, es gebe keinen Alias und `stalledIntervalMs` werde stillschweigend ignoriert. Der Diff zeigt die Umbenennung der Option und ihrer Verwendung, aber weder eine vollständige Aliasprüfung noch das Verhalten bei der alten Option."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zu #357, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgelöst, ist als allgemeine Garantie durch den Diff nicht belegt. Sichtbar ist, dass `cron.next` nun mit `{ tz: 'UTC' }` aufgerufen wird."
+   }
+  ],
+  "reason": "Die Notes enthalten zwei Aussagen, deren Reichweite über die gezeigten Diffs hinausgeht. Die Breaking Changes und ihre Migrationsschritte sind ansonsten erfasst; der Major-Sprung auf 4.0.0 passt zum Inhalt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26078,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 311,
+  "reasoning_output_tokens": 83
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-cb22-7600-a274-c0fc9999ea69"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #351, es gebe keinen Alias und `stalledIntervalMs` werde stillschweigend ignoriert. Der Diff zeigt die Umbenennung der Option und ihrer Verwendung, aber weder eine vollständige Aliasprüfung noch das Verhalten bei der alten Option.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage zu #357, Cron-Jobs würden bei Zeitumstellungen nicht mehr doppelt ausgelöst, ist als allgemeine Garantie durch den Diff nicht belegt. Sichtbar ist, dass `cron.next` nun mit `{ tz: 'UTC' }` aufgerufen wird.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten zwei Aussagen, deren Reichweite über die gezeigten Diffs hinausgeht. Die Breaking Changes und ihre Migrationsschritte sind ansonsten erfasst; der Major-Sprung auf 4.0.0 passt zum Inhalt.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26078,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 311,
+    "reasoning_output_tokens": 83
+   }
+  }
+ ]
+}

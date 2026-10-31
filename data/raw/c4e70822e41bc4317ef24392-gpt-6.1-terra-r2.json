@@ -1,0 +1,83 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "c4e70822e41bc4317ef24392",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 14055,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag „Some default behaviour has changed“ (#307) nennt weder die konkrete Änderung noch einen Handlungsschritt. Laut Diff wechselt `removeOnComplete` von `false` zu `true`; Nutzer können `removeOnComplete: false` setzen, um den bisherigen Standard beizubehalten.\"},{\"criterion\":\"R8\",\"evidence\":\"„The CLI has been improved“ (#318) beschreibt das Feature nicht. Der Diff ergänzt `quaykit inspect --json` für die Ausgabe der Statistiken als JSON.\"},{\"criterion\":\"R8\",\"evidence\":\"„Various improvements to worker reliability“ (#304) beschreibt den Fix nicht. Der Diff gibt den Job-Lock in einem `finally`-Block frei, auch wenn der Handler eine Ausnahme wirft.\"}],\"reason\":\"Der Diff von #307 enthält eine Breaking Change; der Major-Sprung von 2.3.2 auf 3.0.0 passt dazu. Die drei Einträge sind jedoch zu allgemein, um die Änderungen und gegebenenfalls nötige Schritte zu erkennen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "Der Eintrag „Some default behaviour has changed“ (#307) nennt weder die konkrete Änderung noch einen Handlungsschritt. Laut Diff wechselt `removeOnComplete` von `false` zu `true`; Nutzer können `removeOnComplete: false` setzen, um den bisherigen Standard beizubehalten."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„The CLI has been improved“ (#318) beschreibt das Feature nicht. Der Diff ergänzt `quaykit inspect --json` für die Ausgabe der Statistiken als JSON."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Various improvements to worker reliability“ (#304) beschreibt den Fix nicht. Der Diff gibt den Job-Lock in einem `finally`-Block frei, auch wenn der Handler eine Ausnahme wirft."
+   }
+  ],
+  "reason": "Der Diff von #307 enthält eine Breaking Change; der Major-Sprung von 2.3.2 auf 3.0.0 passt dazu. Die drei Einträge sind jedoch zu allgemein, um die Änderungen und gegebenenfalls nötige Schritte zu erkennen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26722,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 239,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-192c-7921-8a92-8781459f74b3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604a1acfc1b5f-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604a6be5a4516-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604ae4e4f9655-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53604ba6b5edd58-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag „Some default behaviour has changed“ (#307) nennt weder die konkrete Änderung noch einen Handlungsschritt. Laut Diff wechselt `removeOnComplete` von `false` zu `true`; Nutzer können `removeOnComplete: false` setzen, um den bisherigen Standard beizubehalten.\"},{\"criterion\":\"R8\",\"evidence\":\"„The CLI has been improved“ (#318) beschreibt das Feature nicht. Der Diff ergänzt `quaykit inspect --json` für die Ausgabe der Statistiken als JSON.\"},{\"criterion\":\"R8\",\"evidence\":\"„Various improvements to worker reliability“ (#304) beschreibt den Fix nicht. Der Diff gibt den Job-Lock in einem `finally`-Block frei, auch wenn der Handler eine Ausnahme wirft.\"}],\"reason\":\"Der Diff von #307 enthält eine Breaking Change; der Major-Sprung von 2.3.2 auf 3.0.0 passt dazu. Die drei Einträge sind jedoch zu allgemein, um die Änderungen und gegebenenfalls nötige Schritte zu erkennen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26722,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 239,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "f86aca3e796a9196faa2834f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4753,
+ "text": "{\"reason\":\"Beide Fassungen nennen dieselben Änderungen, dieselbe Migration und dieselbe Version. Die Unterschiede betreffen nur die Formulierung und ergeben anhand der Rubrik keinen sachlichen Vorteil.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen nennen dieselben Änderungen, dieselbe Migration und dieselbe Version. Die Unterschiede betreffen nur die Formulierung und ergeben anhand der Rubrik keinen sachlichen Vorteil.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25264,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 54,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-ce94-7cf2-82b6-274877ea636e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen nennen dieselben Änderungen, dieselbe Migration und dieselbe Version. Die Unterschiede betreffen nur die Formulierung und ergeben anhand der Rubrik keinen sachlichen Vorteil.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25264,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 54,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

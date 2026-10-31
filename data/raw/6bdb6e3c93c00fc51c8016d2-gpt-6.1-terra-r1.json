@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "6bdb6e3c93c00fc51c8016d2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-bump",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 13366,
+ "text": "{\"reason\":\"Fassung A ist besser, weil ihre Versionsnummer 5.0.0 den beschriebenen Breaking Changes durch einen Major-Sprung Rechnung trägt. Fassung B verwendet dafür mit 4.2.0 lediglich eine Minor-Version; ansonsten sind die Texte gleich.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil ihre Versionsnummer 5.0.0 den beschriebenen Breaking Changes durch einen Major-Sprung Rechnung trägt. Fassung B verwendet dafür mit 4.2.0 lediglich eine Minor-Version; ansonsten sind die Texte gleich.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25570,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 69,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-55e3-7372-8f05-9179cbc81750"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611d25815e509-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611d6f9d1e504-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611de7da3e52d-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611eab9603314-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil ihre Versionsnummer 5.0.0 den beschriebenen Breaking Changes durch einen Major-Sprung Rechnung trägt. Fassung B verwendet dafür mit 4.2.0 lediglich eine Minor-Version; ansonsten sind die Texte gleich.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25570,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 69,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

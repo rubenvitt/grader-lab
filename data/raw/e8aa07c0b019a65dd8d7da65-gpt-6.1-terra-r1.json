@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "e8aa07c0b019a65dd8d7da65",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "useless-true",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5877,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„New worker event“ nennt weder den Namen `drained` noch die Bedingungen, unter denen `Worker` das Ereignis auslöst.\"},{\"criterion\":\"R8\",\"evidence\":\"„Stability work on the Redis store“ erklärt nicht, dass die Lock-Erneuerung nach `ECONNRESET` einmal erneut versucht wird.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Deprecation-Eintrag nennt weder `queue.clean(graceMs, status)` noch die Migration zu `queue.purge({ status, olderThanMs })`.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Deprecation-Eintrag verschweigt, dass die Methode vorerst weiter funktioniert und einmalig eine Warnung ausgibt.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag lässt die Upgrade-Empfehlung aus.\"}],\"reason\":\"Die Version stimmt mit der Referenz überein, aber die Einträge sind zu allgemein und lassen wesentliche Informationen sowie die Migration und die Upgrade-Empfehlung aus.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„New worker event“ nennt weder den Namen `drained` noch die Bedingungen, unter denen `Worker` das Ereignis auslöst."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Stability work on the Redis store“ erklärt nicht, dass die Lock-Erneuerung nach `ECONNRESET` einmal erneut versucht wird."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Der Deprecation-Eintrag nennt weder `queue.clean(graceMs, status)` noch die Migration zu `queue.purge({ status, olderThanMs })`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Deprecation-Eintrag verschweigt, dass die Methode vorerst weiter funktioniert und einmalig eine Warnung ausgibt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Sicherheitseintrag lässt die Upgrade-Empfehlung aus."
+   }
+  ],
+  "reason": "Die Version stimmt mit der Referenz überein, aber die Einträge sind zu allgemein und lassen wesentliche Informationen sowie die Migration und die Upgrade-Empfehlung aus.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25387,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 238,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-4d1f-74c0-988b-1cc3ee258e99"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„New worker event“ nennt weder den Namen `drained` noch die Bedingungen, unter denen `Worker` das Ereignis auslöst.\"},{\"criterion\":\"R8\",\"evidence\":\"„Stability work on the Redis store“ erklärt nicht, dass die Lock-Erneuerung nach `ECONNRESET` einmal erneut versucht wird.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Deprecation-Eintrag nennt weder `queue.clean(graceMs, status)` noch die Migration zu `queue.purge({ status, olderThanMs })`.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Deprecation-Eintrag verschweigt, dass die Methode vorerst weiter funktioniert und einmalig eine Warnung ausgibt.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag lässt die Upgrade-Empfehlung aus.\"}],\"reason\":\"Die Version stimmt mit der Referenz überein, aber die Einträge sind zu allgemein und lassen wesentliche Informationen sowie die Migration und die Upgrade-Empfehlung aus.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25387,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 238,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

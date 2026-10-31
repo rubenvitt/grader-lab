@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "32354bfa50db8059d48e09a5",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "internal-noise",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6833,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #395 behauptet, die Jitter-Strategie sorge dafür, dass Retries „not all arrive at once“. Der Diff berechnet zufällige ganzzahlige Verzögerungen, schließt aber gleiche Werte und damit gleichzeitige Retries nicht aus.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für #399 empfiehlt pauschal `worker.pause({ drain: true })`. Für einen bisherigen Aufruf mit `worker.pause(false)` ändert das das Verhalten; entsprechend dem Diff muss der bisherige Boolean-Wert als `drain` übernommen werden.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Der Abschnitt „Internal“ enthält die Änderung des Release-Workflows (#403) und das reine Verschieben des Key-Builders (#404). CI-Interna und reine Refactorings gehören nicht in die nutzerorientierten Release Notes.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine nicht belegte Garantie, einen Migrationsschritt, der nicht für alle bisherigen Aufrufe passt, und zwei interne Änderungen ohne Nutzerrelevanz. Die Major-Version 5.0.0 passt zu den Breaking Changes.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #395 behauptet, die Jitter-Strategie sorge dafür, dass Retries „not all arrive at once“. Der Diff berechnet zufällige ganzzahlige Verzögerungen, schließt aber gleiche Werte und damit gleichzeitige Retries nicht aus."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für #399 empfiehlt pauschal `worker.pause({ drain: true })`. Für einen bisherigen Aufruf mit `worker.pause(false)` ändert das das Verhalten; entsprechend dem Diff muss der bisherige Boolean-Wert als `drain` übernommen werden."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "Der Abschnitt „Internal“ enthält die Änderung des Release-Workflows (#403) und das reine Verschieben des Key-Builders (#404). CI-Interna und reine Refactorings gehören nicht in die nutzerorientierten Release Notes."
+   }
+  ],
+  "reason": "Die Notes enthalten eine nicht belegte Garantie, einen Migrationsschritt, der nicht für alle bisherigen Aufrufe passt, und zwei interne Änderungen ohne Nutzerrelevanz. Die Major-Version 5.0.0 passt zu den Breaking Changes.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26965,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 320,
+  "reasoning_output_tokens": 23
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-7658-7f73-afa6-479fa1d48a0a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #395 behauptet, die Jitter-Strategie sorge dafür, dass Retries „not all arrive at once“. Der Diff berechnet zufällige ganzzahlige Verzögerungen, schließt aber gleiche Werte und damit gleichzeitige Retries nicht aus.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für #399 empfiehlt pauschal `worker.pause({ drain: true })`. Für einen bisherigen Aufruf mit `worker.pause(false)` ändert das das Verhalten; entsprechend dem Diff muss der bisherige Boolean-Wert als `drain` übernommen werden.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Der Abschnitt „Internal“ enthält die Änderung des Release-Workflows (#403) und das reine Verschieben des Key-Builders (#404). CI-Interna und reine Refactorings gehören nicht in die nutzerorientierten Release Notes.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine nicht belegte Garantie, einen Migrationsschritt, der nicht für alle bisherigen Aufrufe passt, und zwei interne Änderungen ohne Nutzerrelevanz. Die Major-Version 5.0.0 passt zu den Breaking Changes.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26965,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 320,
+    "reasoning_output_tokens": 23
+   }
+  }
+ ]
+}

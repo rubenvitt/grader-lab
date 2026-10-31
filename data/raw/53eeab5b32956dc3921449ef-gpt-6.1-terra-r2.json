@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "53eeab5b32956dc3921449ef",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "internal-noise",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6375,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Die Maintenance-Einträge zum CodeQL-Workflow und zum ESLint-Update betreffen CI beziehungsweise eine Entwicklungsabhängigkeit und sind für Bibliotheksnutzer nicht relevant.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Referenz enthält keine Entsprechung für den CodeQL-Workflow oder das Update auf ESLint 9.10.0; diese zusätzlichen Aussagen sind daher nicht belegt.\"}],\"reason\":\"Der Kandidat übernimmt die nutzerrelevanten Inhalte der Referenz korrekt, ergänzt aber zwei unbelegte und für Release Notes irrelevante Maintenance-Einträge.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "Die Maintenance-Einträge zum CodeQL-Workflow und zum ESLint-Update betreffen CI beziehungsweise eine Entwicklungsabhängigkeit und sind für Bibliotheksnutzer nicht relevant."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Referenz enthält keine Entsprechung für den CodeQL-Workflow oder das Update auf ESLint 9.10.0; diese zusätzlichen Aussagen sind daher nicht belegt."
+   }
+  ],
+  "reason": "Der Kandidat übernimmt die nutzerrelevanten Inhalte der Referenz korrekt, ergänzt aber zwei unbelegte und für Release Notes irrelevante Maintenance-Einträge.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24551,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 145,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-d9f1-7183-a7cd-67d38948aec5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"Die Maintenance-Einträge zum CodeQL-Workflow und zum ESLint-Update betreffen CI beziehungsweise eine Entwicklungsabhängigkeit und sind für Bibliotheksnutzer nicht relevant.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Referenz enthält keine Entsprechung für den CodeQL-Workflow oder das Update auf ESLint 9.10.0; diese zusätzlichen Aussagen sind daher nicht belegt.\"}],\"reason\":\"Der Kandidat übernimmt die nutzerrelevanten Inhalte der Referenz korrekt, ergänzt aber zwei unbelegte und für Release Notes irrelevante Maintenance-Einträge.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24551,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 145,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

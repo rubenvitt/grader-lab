@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "6877f662fceeeef296b1f29e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5366,
+ "text": "{\"reason\":\"Fassung B beschreibt die Änderungen konkret und nennt für beide Breaking Changes Migrationsschritte; Fassung A bleibt weitgehend unbestimmt. Ob die konkreten Aussagen und Migrationsschritte in B durch den Diff gedeckt sind, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt die Änderungen konkret und nennt für beide Breaking Changes Migrationsschritte; Fassung A bleibt weitgehend unbestimmt. Ob die konkreten Aussagen und Migrationsschritte in B durch den Diff gedeckt sind, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 24518,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 121,
+  "reasoning_output_tokens": 47
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-2679-7c32-9d91-d00e9523c0c2"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt die Änderungen konkret und nennt für beide Breaking Changes Migrationsschritte; Fassung A bleibt weitgehend unbestimmt. Ob die konkreten Aussagen und Migrationsschritte in B durch den Diff gedeckt sind, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24518,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 121,
+    "reasoning_output_tokens": 47
+   }
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "dfd100d1ecece18a67e06e75",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reverted-listed",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 12417,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Replay-Button im Dashboard für fehlgeschlagene Jobs (#411) steht nicht in der Referenz und ist daher nicht belegt.\"},{\"criterion\":\"R9\",\"evidence\":\"Der Kandidat nennt ein neues Feature, verwendet aber die Patch-Version 5.0.1. Für ein neues Feature wäre mindestens ein Minor-Sprung erforderlich.\"}],\"reason\":\"Der Kandidat enthält ein zusätzliches, durch die Referenz nicht belegtes Feature. Zudem passt die Patch-Version nicht zu dem im Kandidaten behaupteten Feature.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Replay-Button im Dashboard für fehlgeschlagene Jobs (#411) steht nicht in der Referenz und ist daher nicht belegt."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Der Kandidat nennt ein neues Feature, verwendet aber die Patch-Version 5.0.1. Für ein neues Feature wäre mindestens ein Minor-Sprung erforderlich."
+   }
+  ],
+  "reason": "Der Kandidat enthält ein zusätzliches, durch die Referenz nicht belegtes Feature. Zudem passt die Patch-Version nicht zu dem im Kandidaten behaupteten Feature.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24511,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 132,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-246d-7c21-af54-f3051687cbde"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536164e9babd933-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53616543e994c3b-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536165b4bff921f-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Replay-Button im Dashboard für fehlgeschlagene Jobs (#411) steht nicht in der Referenz und ist daher nicht belegt.\"},{\"criterion\":\"R9\",\"evidence\":\"Der Kandidat nennt ein neues Feature, verwendet aber die Patch-Version 5.0.1. Für ein neues Feature wäre mindestens ein Minor-Sprung erforderlich.\"}],\"reason\":\"Der Kandidat enthält ein zusätzliches, durch die Referenz nicht belegtes Feature. Zudem passt die Patch-Version nicht zu dem im Kandidaten behaupteten Feature.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24511,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 132,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

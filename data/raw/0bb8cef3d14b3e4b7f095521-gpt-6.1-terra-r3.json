@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "0bb8cef3d14b3e4b7f095521",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "false-success",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4398,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes benennen die Änderungen und den Migrationsschritt konkret. Aus dem Text selbst ergeben sich keine Verstöße; Aussagen, die Quellen erfordern, gelten gemäß Vorgabe als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes benennen die Änderungen und den Migrationsschritt konkret. Aus dem Text selbst ergeben sich keine Verstöße; Aussagen, die Quellen erfordern, gelten gemäß Vorgabe als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24345,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 59,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-ad5b-7a00-b2e7-a26fe4ca91ea"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes benennen die Änderungen und den Migrationsschritt konkret. Aus dem Text selbst ergeben sich keine Verstöße; Aussagen, die Quellen erfordern, gelten gemäß Vorgabe als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24345,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "4e77d7b7a4d920a5c4e21299",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6322,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung verspricht „flawless graceful shutdown“. Der Diff zu #397 belegt lediglich, dass `worker.close()` zwischen dem Ende aktiver Jobs und `shutdownTimeoutMs` abwartet; eine fehlerfreie Ausführung ist nicht belegt.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #395 behauptet, die zufällige Verteilung sorge dafür, dass Retries nicht alle gleichzeitig eintreffen. Der Diff verwendet `Math.random()` und rundet auf ganze Millisekunden ab; gleiche Verzögerungen bleiben möglich.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration zu #399 empfiehlt pauschal `worker.pause({ drain: true })`. Für den bisherigen Aufruf `worker.pause(false)` erhält stattdessen `worker.pause({ drain: false })` das Verhalten.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Notes enthalten Werbesprache und Superlative, etwa „The wait is over“, „radically leaner“, „stunning“, „game-changing“, „flawless“ und „far more elegant“.\"}],\"reason\":\"Die wesentlichen nutzerrelevanten Änderungen und die Major-Version sind korrekt erfasst. Einzelne Aussagen sind jedoch nicht durch die Diffs gedeckt, die Migration für `pause(false)` ist falsch und der Ton ist stellenweise werblich.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung verspricht „flawless graceful shutdown“. Der Diff zu #397 belegt lediglich, dass `worker.close()` zwischen dem Ende aktiver Jobs und `shutdownTimeoutMs` abwartet; eine fehlerfreie Ausführung ist nicht belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #395 behauptet, die zufällige Verteilung sorge dafür, dass Retries nicht alle gleichzeitig eintreffen. Der Diff verwendet `Math.random()` und rundet auf ganze Millisekunden ab; gleiche Verzögerungen bleiben möglich."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration zu #399 empfiehlt pauschal `worker.pause({ drain: true })`. Für den bisherigen Aufruf `worker.pause(false)` erhält stattdessen `worker.pause({ drain: false })` das Verhalten."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Notes enthalten Werbesprache und Superlative, etwa „The wait is over“, „radically leaner“, „stunning“, „game-changing“, „flawless“ und „far more elegant“."
+   }
+  ],
+  "reason": "Die wesentlichen nutzerrelevanten Änderungen und die Major-Version sind korrekt erfasst. Einzelne Aussagen sind jedoch nicht durch die Diffs gedeckt, die Migration für `pause(false)` ist falsch und der Ton ist stellenweise werblich.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26967,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 345,
+  "reasoning_output_tokens": 42
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-98be-7702-bb33-f0c95665604e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung verspricht „flawless graceful shutdown“. Der Diff zu #397 belegt lediglich, dass `worker.close()` zwischen dem Ende aktiver Jobs und `shutdownTimeoutMs` abwartet; eine fehlerfreie Ausführung ist nicht belegt.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #395 behauptet, die zufällige Verteilung sorge dafür, dass Retries nicht alle gleichzeitig eintreffen. Der Diff verwendet `Math.random()` und rundet auf ganze Millisekunden ab; gleiche Verzögerungen bleiben möglich.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration zu #399 empfiehlt pauschal `worker.pause({ drain: true })`. Für den bisherigen Aufruf `worker.pause(false)` erhält stattdessen `worker.pause({ drain: false })` das Verhalten.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Notes enthalten Werbesprache und Superlative, etwa „The wait is over“, „radically leaner“, „stunning“, „game-changing“, „flawless“ und „far more elegant“.\"}],\"reason\":\"Die wesentlichen nutzerrelevanten Änderungen und die Major-Version sind korrekt erfasst. Einzelne Aussagen sind jedoch nicht durch die Diffs gedeckt, die Migration für `pause(false)` ist falsch und der Ton ist stellenweise werblich.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26967,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 345,
+    "reasoning_output_tokens": 42
+   }
+  }
+ ]
+}

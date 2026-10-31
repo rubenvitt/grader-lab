@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "03795195ba97d21ed4c170c0",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4231,
+ "text": "{\"reason\":\"Fassung B ist sachlich formuliert und vermeidet die Werbesprache und Superlative aus Fassung A. Inhaltlich unterscheiden sich die Fassungen nicht; ohne Quellenmaterial lassen sich die übrigen Kriterien nur eingeschränkt beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist sachlich formuliert und vermeidet die Werbesprache und Superlative aus Fassung A. Inhaltlich unterscheiden sich die Fassungen nicht; ohne Quellenmaterial lassen sich die übrigen Kriterien nur eingeschränkt beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25296,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 65,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-28ac-7002-aafe-ce12aa4276c5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist sachlich formuliert und vermeidet die Werbesprache und Superlative aus Fassung A. Inhaltlich unterscheiden sich die Fassungen nicht; ohne Quellenmaterial lassen sich die übrigen Kriterien nur eingeschränkt beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25296,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 65,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

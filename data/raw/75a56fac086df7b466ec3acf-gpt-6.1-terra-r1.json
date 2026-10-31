@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "75a56fac086df7b466ec3acf",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4771,
+ "text": "{\"reason\":\"Beide Fassungen beschreiben dieselben Änderungen, geben zur Sicherheitslücke keine Details preis und empfehlen das Upgrade. Unterschiede in Wortwahl und Reihenfolge ändern die Bewertung anhand der Rubric nicht; die zugrunde liegenden Diffs sind nicht vorhanden und lassen sich daher nicht prüfen.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen beschreiben dieselben Änderungen, geben zur Sicherheitslücke keine Details preis und empfehlen das Upgrade. Unterschiede in Wortwahl und Reihenfolge ändern die Bewertung anhand der Rubric nicht; die zugrunde liegenden Diffs sind nicht vorhanden und lassen sich daher nicht prüfen.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25241,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 73,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-75e7-70a0-b4a9-4f94e8b19d14"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen beschreiben dieselben Änderungen, geben zur Sicherheitslücke keine Details preis und empfehlen das Upgrade. Unterschiede in Wortwahl und Reihenfolge ändern die Bewertung anhand der Rubric nicht; die zugrunde liegenden Diffs sind nicht vorhanden und lassen sich daher nicht prüfen.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25241,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 73,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

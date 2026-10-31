@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "ce3a95584486a1f04ce80a44",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "invented-claim",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5431,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #304 verspricht, dass der Job beim nächsten Poll erneut versucht wird. Der Diff zeigt nur, dass die Sperre im `finally`-Block freigegeben wird; ein erneuter Versuch beim nächsten Poll ist nicht belegt.\"}],\"reason\":\"Der Diff zu #304 belegt die Freigabe der Sperre, aber weder den Zeitpunkt noch die Durchführung eines erneuten Versuchs. Die übrigen Aussagen und die Versionsnummer stehen im Einklang mit den Quellen und der Rubric.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #304 verspricht, dass der Job beim nächsten Poll erneut versucht wird. Der Diff zeigt nur, dass die Sperre im `finally`-Block freigegeben wird; ein erneuter Versuch beim nächsten Poll ist nicht belegt."
+   }
+  ],
+  "reason": "Der Diff zu #304 belegt die Freigabe der Sperre, aber weder den Zeitpunkt noch die Durchführung eines erneuten Versuchs. Die übrigen Aussagen und die Versionsnummer stehen im Einklang mit den Quellen und der Rubric.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26841,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 130,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19405-f62e-7e53-ae60-a429a4fc3fbb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #304 verspricht, dass der Job beim nächsten Poll erneut versucht wird. Der Diff zeigt nur, dass die Sperre im `finally`-Block freigegeben wird; ein erneuter Versuch beim nächsten Poll ist nicht belegt.\"}],\"reason\":\"Der Diff zu #304 belegt die Freigabe der Sperre, aber weder den Zeitpunkt noch die Durchführung eines erneuten Versuchs. Die übrigen Aussagen und die Versionsnummer stehen im Einklang mit den Quellen und der Rubric.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26841,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 130,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

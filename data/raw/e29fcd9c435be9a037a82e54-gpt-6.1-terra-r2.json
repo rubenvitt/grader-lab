@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "e29fcd9c435be9a037a82e54",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "hype-tone",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4394,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „Take control like never before!“, „incredible rate limiter“ und „sleek new“ sind werblich statt sachlich.\"}],\"reason\":\"Der Kandidat vermittelt die nutzerrelevanten Fakten, die Migration und die Version korrekt. Sein werblicher Ton verstößt jedoch gegen R7.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „Take control like never before!“, „incredible rate limiter“ und „sleek new“ sind werblich statt sachlich."
+   }
+  ],
+  "reason": "Der Kandidat vermittelt die nutzerrelevanten Fakten, die Migration und die Version korrekt. Sein werblicher Ton verstößt jedoch gegen R7.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24557,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 95,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-304e-7d60-a330-b51e900f739c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „Take control like never before!“, „incredible rate limiter“ und „sleek new“ sind werblich statt sachlich.\"}],\"reason\":\"Der Kandidat vermittelt die nutzerrelevanten Fakten, die Migration und die Version korrekt. Sein werblicher Ton verstößt jedoch gegen R7.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24557,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 95,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

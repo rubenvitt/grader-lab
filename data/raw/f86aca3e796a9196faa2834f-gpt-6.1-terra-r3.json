@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "f86aca3e796a9196faa2834f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4266,
+ "text": "{\"reason\":\"Beide Fassungen nennen dieselben Änderungen und denselben Migrationsschritt. Unterschiede bestehen nur in der Formulierung; ohne die zugrunde liegenden Quellen lässt sich ihre sachliche Richtigkeit nicht weiter prüfen.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen nennen dieselben Änderungen und denselben Migrationsschritt. Unterschiede bestehen nur in der Formulierung; ohne die zugrunde liegenden Quellen lässt sich ihre sachliche Richtigkeit nicht weiter prüfen.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25264,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 60,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-e053-7a32-b40f-fb233cafc80d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen nennen dieselben Änderungen und denselben Migrationsschritt. Unterschiede bestehen nur in der Formulierung; ohne die zugrunde liegenden Quellen lässt sich ihre sachliche Richtigkeit nicht weiter prüfen.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25264,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 60,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

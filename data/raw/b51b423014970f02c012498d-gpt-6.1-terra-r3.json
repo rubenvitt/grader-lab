@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "b51b423014970f02c012498d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5759,
+ "text": "{\"reason\":\"Fassung B beschreibt die Worker-Änderung und die betroffene Sicherheitskomponente konkreter und enthält eine Upgrade-Empfehlung, ohne Sicherheitsdetails offenzulegen. Da keine Diffs oder weiteren Quellen vorliegen, lassen sich die Belegbarkeit der Aussagen und die übrigen Rubric-Punkte nicht abschließend prüfen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt die Worker-Änderung und die betroffene Sicherheitskomponente konkreter und enthält eine Upgrade-Empfehlung, ohne Sicherheitsdetails offenzulegen. Da keine Diffs oder weiteren Quellen vorliegen, lassen sich die Belegbarkeit der Aussagen und die übrigen Rubric-Punkte nicht abschließend prüfen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25171,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 83,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-3617-7922-8ff2-e27be1977ecb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt die Worker-Änderung und die betroffene Sicherheitskomponente konkreter und enthält eine Upgrade-Empfehlung, ohne Sicherheitsdetails offenzulegen. Da keine Diffs oder weiteren Quellen vorliegen, lassen sich die Belegbarkeit der Aussagen und die übrigen Rubric-Punkte nicht abschließend prüfen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25171,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 83,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "c7d6140ffb05e23f839ad47b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 12573,
+ "text": "{\"reason\":\"Fassung A ist besser, weil Fassung B zusätzlich interne Veröffentlichungs- und Refactoring-Änderungen aufführt, die für Bibliotheksnutzer nicht relevant sind und gegen R6 verstoßen. Die übrigen Inhalte sind identisch.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil Fassung B zusätzlich interne Veröffentlichungs- und Refactoring-Änderungen aufführt, die für Bibliotheksnutzer nicht relevant sind und gegen R6 verstoßen. Die übrigen Inhalte sind identisch.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25599,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 68,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": true,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-38ed-71b1-b24c-70bfb53ea044"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536133b6d4f6ab9-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536133f989a2dfd-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53613478ca6e509-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53613547c40e519-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "error",
+    "message": "Falling back from WebSockets to HTTPS transport. unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361369ccbd52d4-TXL"
+   }
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_1",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil Fassung B zusätzlich interne Veröffentlichungs- und Refactoring-Änderungen aufführt, die für Bibliotheksnutzer nicht relevant sind und gegen R6 verstoßen. Die übrigen Inhalte sind identisch.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25599,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 68,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

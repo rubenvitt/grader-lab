@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "e70c6efa5986d3f2b389462b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reverted-listed",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5757,
+ "text": "{\"reason\":\"Fassung B nennt ein neues Feature, verwendet aber wie Fassung A die Patch-Version 5.0.1; nach R9 wäre dafür mindestens ein Minor-Sprung nötig. Ob das Feature tatsächlich zum Release gehört, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung B nennt ein neues Feature, verwendet aber wie Fassung A die Patch-Version 5.0.1; nach R9 wäre dafür mindestens ein Minor-Sprung nötig. Ob das Feature tatsächlich zum Release gehört, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25248,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 94,
+  "reasoning_output_tokens": 23
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-0b7e-7d80-8d55-ae8b8d491b9f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt ein neues Feature, verwendet aber wie Fassung A die Patch-Version 5.0.1; nach R9 wäre dafür mindestens ein Minor-Sprung nötig. Ob das Feature tatsächlich zum Release gehört, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25248,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 94,
+    "reasoning_output_tokens": 23
+   }
+  }
+ ]
+}

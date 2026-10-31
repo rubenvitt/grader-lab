@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "ecace92b466794188849e6d0",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6473,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 prüft den zuvor frei akzeptierten Parameter `schema` im Konstruktor und wirft bei nicht passenden Namen einen Fehler. Betroffene Nutzer müssen ihre Konfiguration anpassen; die Notes nennen keine Breaking Change. Wegen des Embargos dürfen Einzelheiten des Fixes dabei nicht offengelegt werden.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0, die Notes nennen 5.0.1. Die Einschränkung der zuvor akzeptierten Schema-Namen in PR #414 ist eine Breaking Change und erfordert nach der Rubric einen Major-Sprung.\"}],\"reason\":\"Die Notes beschreiben den Worker-Fix und den Sicherheitshinweis sachlich und halten das Embargo ein. Die durch PR #414 eingeführte Breaking Change und der erforderliche Major-Sprung fehlen jedoch.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 prüft den zuvor frei akzeptierten Parameter `schema` im Konstruktor und wirft bei nicht passenden Namen einen Fehler. Betroffene Nutzer müssen ihre Konfiguration anpassen; die Notes nennen keine Breaking Change. Wegen des Embargos dürfen Einzelheiten des Fixes dabei nicht offengelegt werden."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 5.0.0, die Notes nennen 5.0.1. Die Einschränkung der zuvor akzeptierten Schema-Namen in PR #414 ist eine Breaking Change und erfordert nach der Rubric einen Major-Sprung."
+   }
+  ],
+  "reason": "Die Notes beschreiben den Worker-Fix und den Sicherheitshinweis sachlich und halten das Embargo ein. Die durch PR #414 eingeführte Breaking Change und der erforderliche Major-Sprung fehlen jedoch.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26313,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 268,
+  "reasoning_output_tokens": 71
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-5ddc-72a0-8d6a-a0055837693e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 prüft den zuvor frei akzeptierten Parameter `schema` im Konstruktor und wirft bei nicht passenden Namen einen Fehler. Betroffene Nutzer müssen ihre Konfiguration anpassen; die Notes nennen keine Breaking Change. Wegen des Embargos dürfen Einzelheiten des Fixes dabei nicht offengelegt werden.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0, die Notes nennen 5.0.1. Die Einschränkung der zuvor akzeptierten Schema-Namen in PR #414 ist eine Breaking Change und erfordert nach der Rubric einen Major-Sprung.\"}],\"reason\":\"Die Notes beschreiben den Worker-Fix und den Sicherheitshinweis sachlich und halten das Embargo ein. Die durch PR #414 eingeführte Breaking Change und der erforderliche Major-Sprung fehlen jedoch.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26313,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 268,
+    "reasoning_output_tokens": 71
+   }
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "dc36c45f8133fc79b2d94735",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "internal-noise",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6535,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 ändert den Konstruktor so, dass bisher akzeptierte Schema-Namen außerhalb von `/^[a-z_][a-z0-9_]*$/` einen Fehler auslösen. Betroffene Nutzer müssen ihre Konfiguration anpassen; ein Hinweis unter „Breaking Changes“ fehlt. Wegen des Embargos darf der Hinweis keine Details zur Schwachstelle oder zum Fix offenlegen.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Die Einträge zu getrennten Lint- und Test-Jobs (#417) und zu CODEOWNERS (#419) betreffen interne Abläufe und gehören nicht in nutzerorientierte Release Notes.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 5.0.1 nach 5.0.0. Die inkompatible Änderung an akzeptierten Schema-Namen in PR #414 verlangt einen Major-Sprung auf mindestens 6.0.0.\"\n    }\n  ],\n  \"reason\": \"Die Schema-Validierung ist eine inkompatible Änderung und erfordert trotz Embargo einen entsprechend zurückhaltenden Hinweis sowie einen Major-Sprung. Außerdem enthalten die Notes zwei interne Wartungseinträge.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 ändert den Konstruktor so, dass bisher akzeptierte Schema-Namen außerhalb von `/^[a-z_][a-z0-9_]*$/` einen Fehler auslösen. Betroffene Nutzer müssen ihre Konfiguration anpassen; ein Hinweis unter „Breaking Changes“ fehlt. Wegen des Embargos darf der Hinweis keine Details zur Schwachstelle oder zum Fix offenlegen."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "Die Einträge zu getrennten Lint- und Test-Jobs (#417) und zu CODEOWNERS (#419) betreffen interne Abläufe und gehören nicht in nutzerorientierte Release Notes."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die inkompatible Änderung an akzeptierten Schema-Namen in PR #414 verlangt einen Major-Sprung auf mindestens 6.0.0."
+   }
+  ],
+  "reason": "Die Schema-Validierung ist eine inkompatible Änderung und erfordert trotz Embargo einen entsprechend zurückhaltenden Hinweis sowie einen Major-Sprung. Außerdem enthalten die Notes zwei interne Wartungseinträge.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25490,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 357,
+  "reasoning_output_tokens": 66
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-93fa-75e0-9377-3a25f10c47c0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 ändert den Konstruktor so, dass bisher akzeptierte Schema-Namen außerhalb von `/^[a-z_][a-z0-9_]*$/` einen Fehler auslösen. Betroffene Nutzer müssen ihre Konfiguration anpassen; ein Hinweis unter „Breaking Changes“ fehlt. Wegen des Embargos darf der Hinweis keine Details zur Schwachstelle oder zum Fix offenlegen.\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Die Einträge zu getrennten Lint- und Test-Jobs (#417) und zu CODEOWNERS (#419) betreffen interne Abläufe und gehören nicht in nutzerorientierte Release Notes.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 5.0.1 nach 5.0.0. Die inkompatible Änderung an akzeptierten Schema-Namen in PR #414 verlangt einen Major-Sprung auf mindestens 6.0.0.\"\n    }\n  ],\n  \"reason\": \"Die Schema-Validierung ist eine inkompatible Änderung und erfordert trotz Embargo einen entsprechend zurückhaltenden Hinweis sowie einen Major-Sprung. Außerdem enthalten die Notes zwei interne Wartungseinträge.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25490,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 357,
+    "reasoning_output_tokens": 66
+   }
+  }
+ ]
+}

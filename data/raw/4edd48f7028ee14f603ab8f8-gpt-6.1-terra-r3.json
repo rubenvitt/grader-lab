@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "4edd48f7028ee14f603ab8f8",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "useless-true",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4713,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker configuration has changed“ und „The build output has changed“ benennen weder die konkreten Änderungen noch die nötigen Migrationsschritte.\"},{\"criterion\":\"R8\",\"evidence\":\"„New storage option“, „Scheduler fix“, „Queue performance work“ und „Dashboard hardening“ lassen nicht erkennen, was sich konkret geändert hat oder ob Nutzer handeln müssen.\"}],\"reason\":\"Mehrere Einträge sind zu allgemein, um die Änderungen und einen möglichen Handlungsbedarf zu verstehen. Ob weitere Kriterien verletzt sind, lässt sich ohne Quellen nicht feststellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Worker configuration has changed“ und „The build output has changed“ benennen weder die konkreten Änderungen noch die nötigen Migrationsschritte."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„New storage option“, „Scheduler fix“, „Queue performance work“ und „Dashboard hardening“ lassen nicht erkennen, was sich konkret geändert hat oder ob Nutzer handeln müssen."
+   }
+  ],
+  "reason": "Mehrere Einträge sind zu allgemein, um die Änderungen und einen möglichen Handlungsbedarf zu verstehen. Ob weitere Kriterien verletzt sind, lässt sich ohne Quellen nicht feststellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25164,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 138,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-364b-7a40-a136-d4da5b38bfa4"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker configuration has changed“ und „The build output has changed“ benennen weder die konkreten Änderungen noch die nötigen Migrationsschritte.\"},{\"criterion\":\"R8\",\"evidence\":\"„New storage option“, „Scheduler fix“, „Queue performance work“ und „Dashboard hardening“ lassen nicht erkennen, was sich konkret geändert hat oder ob Nutzer handeln müssen.\"}],\"reason\":\"Mehrere Einträge sind zu allgemein, um die Änderungen und einen möglichen Handlungsbedarf zu verstehen. Ob weitere Kriterien verletzt sind, lässt sich ohne Quellen nicht feststellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25164,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 138,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

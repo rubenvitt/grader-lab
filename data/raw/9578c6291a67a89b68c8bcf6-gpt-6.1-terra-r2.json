@@ -1,0 +1,83 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "9578c6291a67a89b68c8bcf6",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-bump",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 14654,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #395 behauptet, die Wiederholungen träfen durch Jitter nicht alle gleichzeitig ein. Der Diff berechnet jedoch zufällige ganzzahlige Verzögerungen; gleiche Werte und damit gleichzeitige Wiederholungen bleiben möglich.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration zu #399 empfiehlt pauschal `worker.pause({ drain: true })`. Für bisherige Aufrufe mit `worker.pause(false)` erhält `worker.pause({ drain: false })` das bisherige Verhalten.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 4.2.0 nach 4.1.0. Die verpflichtende Redis-Verbindung aus #391 und die entfernten öffentlichen APIs aus #393 erfordern nach SemVer einen Major-Sprung, etwa auf 5.0.0.\"}],\"reason\":\"Die wesentlichen nutzerrelevanten Änderungen sind aufgeführt. Die Jitter-Aussage verspricht jedoch mehr als der Diff garantiert, die Pause-Migration deckt nicht beide bisherigen Argumentwerte ab, und die Versionsnummer berücksichtigt die Breaking Changes nicht.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #395 behauptet, die Wiederholungen träfen durch Jitter nicht alle gleichzeitig ein. Der Diff berechnet jedoch zufällige ganzzahlige Verzögerungen; gleiche Werte und damit gleichzeitige Wiederholungen bleiben möglich."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration zu #399 empfiehlt pauschal `worker.pause({ drain: true })`. Für bisherige Aufrufe mit `worker.pause(false)` erhält `worker.pause({ drain: false })` das bisherige Verhalten."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 4.2.0 nach 4.1.0. Die verpflichtende Redis-Verbindung aus #391 und die entfernten öffentlichen APIs aus #393 erfordern nach SemVer einen Major-Sprung, etwa auf 5.0.0."
+   }
+  ],
+  "reason": "Die wesentlichen nutzerrelevanten Änderungen sind aufgeführt. Die Jitter-Aussage verspricht jedoch mehr als der Diff garantiert, die Pause-Migration deckt nicht beide bisherigen Argumentwerte ab, und die Versionsnummer berücksichtigt die Breaking Changes nicht.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26932,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 286,
+  "reasoning_output_tokens": 33
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-5bad-73c2-8ee4-14531392f908"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611d8ae430ea3-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611de6f64607a-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611e5e9a31a34-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611f34c13ff26-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #395 behauptet, die Wiederholungen träfen durch Jitter nicht alle gleichzeitig ein. Der Diff berechnet jedoch zufällige ganzzahlige Verzögerungen; gleiche Werte und damit gleichzeitige Wiederholungen bleiben möglich.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration zu #399 empfiehlt pauschal `worker.pause({ drain: true })`. Für bisherige Aufrufe mit `worker.pause(false)` erhält `worker.pause({ drain: false })` das bisherige Verhalten.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 4.2.0 nach 4.1.0. Die verpflichtende Redis-Verbindung aus #391 und die entfernten öffentlichen APIs aus #393 erfordern nach SemVer einen Major-Sprung, etwa auf 5.0.0.\"}],\"reason\":\"Die wesentlichen nutzerrelevanten Änderungen sind aufgeführt. Die Jitter-Aussage verspricht jedoch mehr als der Diff garantiert, die Pause-Migration deckt nicht beide bisherigen Argumentwerte ab, und die Versionsnummer berücksichtigt die Breaking Changes nicht.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26932,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 286,
+    "reasoning_output_tokens": 33
+   }
+  }
+ ]
+}

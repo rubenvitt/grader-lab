@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "525423203ee7b1490cca80b1",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reordered",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4198,
+ "text": "{\"violations\":[],\"reason\":\"Der Kandidat enthält dieselben nutzerrelevanten Fakten und Migrationsschritte wie die Referenz. Die andere Reihenfolge der Abschnitte ist kein Verstoß.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Kandidat enthält dieselben nutzerrelevanten Fakten und Migrationsschritte wie die Referenz. Die andere Reihenfolge der Abschnitte ist kein Verstoß.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25487,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 56,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-ac45-78b2-93db-cb195a00cf27"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Kandidat enthält dieselben nutzerrelevanten Fakten und Migrationsschritte wie die Referenz. Die andere Reihenfolge der Abschnitte ist kein Verstoß.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25487,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 56,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "dea8872715ba9ac324c354ae",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "internal-noise",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 13383,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` übernimmt den bisherigen Wert `graceMs` nicht ausdrücklich. Der Diff verwendet `queue.purge({ status, olderThanMs: graceMs })`; ohne diese Zuordnung kann die Altersgrenze verloren gehen.\"},{\"criterion\":\"R6\",\"evidence\":\"Unter „Fixes“ stehen der stabilisierte Test mit Fake-Timern (#343) und das Anheften von GitHub Actions an Commit-SHAs (#340). Beide Änderungen betreffen interne Tests beziehungsweise CI.\"}],\"reason\":\"Die nutzerrelevanten Änderungen sind ansonsten durch die Diffs gedeckt und passend eingeordnet. Die Version 3.1.0 passt zu den neuen Funktionen und der Deprecation; der Sicherheitshinweis wahrt das Embargo.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` übernimmt den bisherigen Wert `graceMs` nicht ausdrücklich. Der Diff verwendet `queue.purge({ status, olderThanMs: graceMs })`; ohne diese Zuordnung kann die Altersgrenze verloren gehen."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "Unter „Fixes“ stehen der stabilisierte Test mit Fake-Timern (#343) und das Anheften von GitHub Actions an Commit-SHAs (#340). Beide Änderungen betreffen interne Tests beziehungsweise CI."
+   }
+  ],
+  "reason": "Die nutzerrelevanten Änderungen sind ansonsten durch die Diffs gedeckt und passend eingeordnet. Die Version 3.1.0 passt zu den neuen Funktionen und der Deprecation; der Sicherheitshinweis wahrt das Embargo.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26604,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 200,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-e7c5-7680-8cb6-bd04c2f318a0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53607864915f8e1-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536078b5f76b6ae-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5360791fa56aab1-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536079dd895e52d-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` übernimmt den bisherigen Wert `graceMs` nicht ausdrücklich. Der Diff verwendet `queue.purge({ status, olderThanMs: graceMs })`; ohne diese Zuordnung kann die Altersgrenze verloren gehen.\"},{\"criterion\":\"R6\",\"evidence\":\"Unter „Fixes“ stehen der stabilisierte Test mit Fake-Timern (#343) und das Anheften von GitHub Actions an Commit-SHAs (#340). Beide Änderungen betreffen interne Tests beziehungsweise CI.\"}],\"reason\":\"Die nutzerrelevanten Änderungen sind ansonsten durch die Diffs gedeckt und passend eingeordnet. Die Version 3.1.0 passt zu den neuen Funktionen und der Deprecation; der Sicherheitshinweis wahrt das Embargo.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26604,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 200,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

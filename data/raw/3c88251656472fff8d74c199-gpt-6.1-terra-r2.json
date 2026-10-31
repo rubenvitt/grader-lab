@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "3c88251656472fff8d74c199",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "ghost-pr",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4442,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer für den Fix von `quaykit inspect`. Da keine Quellen zur Zuordnung vorliegen, lässt sich nicht beurteilen, welche Nummer korrekt ist.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur in der PR-Nummer für den Fix von `quaykit inspect`. Da keine Quellen zur Zuordnung vorliegen, lässt sich nicht beurteilen, welche Nummer korrekt ist.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24722,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 59,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-b500-70f0-8cc4-925b25a5e909"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur in der PR-Nummer für den Fix von `quaykit inspect`. Da keine Quellen zur Zuordnung vorliegen, lässt sich nicht beurteilen, welche Nummer korrekt ist.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24722,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

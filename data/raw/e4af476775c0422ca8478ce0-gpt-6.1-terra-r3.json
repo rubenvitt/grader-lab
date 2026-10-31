@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "e4af476775c0422ca8478ce0",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6813,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Jitter-Eintrag behauptet, Wiederholungen kämen dadurch nicht alle gleichzeitig an. Der Diff zu #395 berechnet zufällige ganzzahlige Verzögerungen, garantiert aber keine unterschiedlichen Zeitpunkte.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Fix für `quaykit inspect` verweist in den Notes auf #400; die belegende Quelle ist PR #401.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause(boolean)` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff zu #399 entspricht `pause(false)` jedoch `pause({ drain: false })`; der vorgeschlagene Schritt erhält dieses Verhalten nicht.\"\n    }\n  ],\n  \"reason\": \"Die Notes ordnen die Breaking Changes und die Version korrekt ein. Sie enthalten jedoch eine unbelegte Garantie, einen falschen PR-Verweis und einen unvollständigen Migrationsschritt.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Jitter-Eintrag behauptet, Wiederholungen kämen dadurch nicht alle gleichzeitig an. Der Diff zu #395 berechnet zufällige ganzzahlige Verzögerungen, garantiert aber keine unterschiedlichen Zeitpunkte."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Fix für `quaykit inspect` verweist in den Notes auf #400; die belegende Quelle ist PR #401."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause(boolean)` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff zu #399 entspricht `pause(false)` jedoch `pause({ drain: false })`; der vorgeschlagene Schritt erhält dieses Verhalten nicht."
+   }
+  ],
+  "reason": "Die Notes ordnen die Breaking Changes und die Version korrekt ein. Sie enthalten jedoch eine unbelegte Garantie, einen falschen PR-Verweis und einen unvollständigen Migrationsschritt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26932,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 293,
+  "reasoning_output_tokens": 47
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-b9f6-73c2-bcf7-50b8bef9bc33"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Jitter-Eintrag behauptet, Wiederholungen kämen dadurch nicht alle gleichzeitig an. Der Diff zu #395 berechnet zufällige ganzzahlige Verzögerungen, garantiert aber keine unterschiedlichen Zeitpunkte.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Fix für `quaykit inspect` verweist in den Notes auf #400; die belegende Quelle ist PR #401.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause(boolean)` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff zu #399 entspricht `pause(false)` jedoch `pause({ drain: false })`; der vorgeschlagene Schritt erhält dieses Verhalten nicht.\"\n    }\n  ],\n  \"reason\": \"Die Notes ordnen die Breaking Changes und die Version korrekt ein. Sie enthalten jedoch eine unbelegte Garantie, einen falschen PR-Verweis und einen unvollständigen Migrationsschritt.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26932,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 293,
+    "reasoning_output_tokens": 47
+   }
+  }
+ ]
+}

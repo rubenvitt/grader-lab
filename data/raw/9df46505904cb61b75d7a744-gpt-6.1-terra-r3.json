@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "9df46505904cb61b75d7a744",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reordered",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4283,
+ "text": "{\"violations\":[],\"reason\":\"Der Kandidat enthält alle Fakten der Referenz unverändert. Lediglich die Reihenfolge der Abschnitte ist anders.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Kandidat enthält alle Fakten der Referenz unverändert. Lediglich die Reihenfolge der Abschnitte ist anders.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24519,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 45,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-03f7-76c3-868d-f7f3be5e60a3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Kandidat enthält alle Fakten der Referenz unverändert. Lediglich die Reihenfolge der Abschnitte ist anders.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24519,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 45,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

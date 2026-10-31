@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "3fbb27c3eab60bf45679674b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "invented-claim",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4674,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat behauptet, dass das Limit von allen Workern einer Queue geteilt wird. Laut Referenz hat jede Worker-Instanz ein eigenes Limit.\"}],\"reason\":\"Der Kandidat beschreibt den Geltungsbereich des Rate-Limits falsch. Die übrigen Angaben stimmen mit der Referenz überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Kandidat behauptet, dass das Limit von allen Workern einer Queue geteilt wird. Laut Referenz hat jede Worker-Instanz ein eigenes Limit."
+   }
+  ],
+  "reason": "Der Kandidat beschreibt den Geltungsbereich des Rate-Limits falsch. Die übrigen Angaben stimmen mit der Referenz überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25374,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 91,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-1c29-78d3-9587-f049736b0a94"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat behauptet, dass das Limit von allen Workern einer Queue geteilt wird. Laut Referenz hat jede Worker-Instanz ein eigenes Limit.\"}],\"reason\":\"Der Kandidat beschreibt den Geltungsbereich des Rate-Limits falsch. Die übrigen Angaben stimmen mit der Referenz überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25374,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 91,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

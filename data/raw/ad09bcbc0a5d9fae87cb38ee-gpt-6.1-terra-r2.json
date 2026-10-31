@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "ad09bcbc0a5d9fae87cb38ee",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4676,
+ "text": "{\"reason\":\"Fassung B bezeichnet die neue Retry-Strategie als Standard, ordnet diese Änderung aber nicht unter „Breaking Changes“ ein. Fassung A beschreibt sie dagegen als optional; welche Aussage dem Diff entspricht, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung B bezeichnet die neue Retry-Strategie als Standard, ordnet diese Änderung aber nicht unter „Breaking Changes“ ein. Fassung A beschreibt sie dagegen als optional; welche Aussage dem Diff entspricht, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25574,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 66,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-e7df-7a83-81a4-4fe678b8e200"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B bezeichnet die neue Retry-Strategie als Standard, ordnet diese Änderung aber nicht unter „Breaking Changes“ ein. Fassung A beschreibt sie dagegen als optional; welche Aussage dem Diff entspricht, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25574,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 66,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

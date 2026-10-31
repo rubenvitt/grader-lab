@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "89ed8666ab71219fa44a159e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4573,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur darin, ob das Limit für alle Worker einer Queue gemeinsam oder pro Worker-Instanz gilt. Da keine Diffs oder anderen Quellen vorliegen, lässt sich nicht beurteilen, welche Aussage zutrifft.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur darin, ob das Limit für alle Worker einer Queue gemeinsam oder pro Worker-Instanz gilt. Da keine Diffs oder anderen Quellen vorliegen, lässt sich nicht beurteilen, welche Aussage zutrifft.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24415,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 63,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-3a02-7241-8760-09a24e804898"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur darin, ob das Limit für alle Worker einer Queue gemeinsam oder pro Worker-Instanz gilt. Da keine Diffs oder anderen Quellen vorliegen, lässt sich nicht beurteilen, welche Aussage zutrifft.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24415,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 63,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

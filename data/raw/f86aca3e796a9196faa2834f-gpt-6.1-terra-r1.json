@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "f86aca3e796a9196faa2834f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "paraphrase",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4153,
+ "text": "{\"reason\":\"Beide Fassungen enthalten dieselben sachlichen Aussagen und denselben Migrationsschritt. Aus den vorliegenden Texten ergibt sich kein Unterschied hinsichtlich der Rubrik.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen enthalten dieselben sachlichen Aussagen und denselben Migrationsschritt. Aus den vorliegenden Texten ergibt sich kein Unterschied hinsichtlich der Rubrik.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25264,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 50,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-be57-78c0-a1de-a224cb0f29fd"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen enthalten dieselben sachlichen Aussagen und denselben Migrationsschritt. Aus den vorliegenden Texten ergibt sich kein Unterschied hinsichtlich der Rubrik.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25264,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 50,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

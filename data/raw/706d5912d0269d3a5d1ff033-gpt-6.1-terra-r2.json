@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "706d5912d0269d3a5d1ff033",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4965,
+ "text": "{\"reason\":\"Fassung B enthält dieselben nutzerrelevanten Einträge wie Fassung A, lässt aber die für Bibliotheksnutzer irrelevanten Wartungsdetails weg. Damit erfüllt sie R6 besser.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B enthält dieselben nutzerrelevanten Einträge wie Fassung A, lässt aber die für Bibliotheksnutzer irrelevanten Wartungsdetails weg. Damit erfüllt sie R6 besser.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25261,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 59,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-a1a6-78c1-91ff-4659d9fef291"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B enthält dieselben nutzerrelevanten Einträge wie Fassung A, lässt aber die für Bibliotheksnutzer irrelevanten Wartungsdetails weg. Damit erfüllt sie R6 besser.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25261,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

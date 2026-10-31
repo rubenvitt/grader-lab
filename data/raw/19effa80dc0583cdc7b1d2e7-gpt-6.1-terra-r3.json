@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "19effa80dc0583cdc7b1d2e7",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reverted-listed",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4526,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich bei Optionsnamen, PR-Nummer und Geltungsbereich des Limits. Ohne die zugehörigen Diffs lässt sich nicht beurteilen, welche Angaben korrekt sind; die Rubric gibt daher keinen Grund, eine Fassung vorzuziehen.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich bei Optionsnamen, PR-Nummer und Geltungsbereich des Limits. Ohne die zugehörigen Diffs lässt sich nicht beurteilen, welche Angaben korrekt sind; die Rubric gibt daher keinen Grund, eine Fassung vorzuziehen.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24408,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 71,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940e-c1a7-71e3-a442-ab933486f779"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich bei Optionsnamen, PR-Nummer und Geltungsbereich des Limits. Ohne die zugehörigen Diffs lässt sich nicht beurteilen, welche Angaben korrekt sind; die Rubric gibt daher keinen Grund, eine Fassung vorzuziehen.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24408,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 71,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "6f0fdbc8e0bffe492ed1305a",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "paraphrase",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7872,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #351, dass kein Alias existiert und der alte Name ohne Warnung ignoriert wird. Der gezeigte Diff ersetzt den Optionsnamen, belegt aber weder das Fehlen eines Alias an anderer Stelle noch das Verhalten oder eine fehlende Warnung bei Verwendung des alten Namens.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #357 allgemein, dass Zeitumstellungen Cron-Jobs nicht mehr doppelt ausführen lassen. Der Diff zeigt die Berechnung des nächsten Termins mit `tz: 'UTC'`, belegt aber keine so umfassende Garantie. Außerdem wird der nächste Termin in UTC berechnet; der Diff zeigt keinen neu eingeführten Vergleich in UTC.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes zu #358 kündigen ein separates Advisory mit später folgenden Details an. Die Quellen nennen zwar ein Advisory, belegen aber keine solche spätere Veröffentlichung.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Eintrag zum neuen `PostgresStore` nennt keinen Einrichtungsschritt. Die Dokumentation aus #362 weist jedoch an, zuerst die Migration aus `migrations/` auszuführen.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten nicht vollständig belegte Aussagen und lassen beim PostgresStore einen notwendigen Einrichtungsschritt aus. Die Einordnung der Breaking Changes und der Major-Sprung auf 4.0.0 passen zu den gezeigten Änderungen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #351, dass kein Alias existiert und der alte Name ohne Warnung ignoriert wird. Der gezeigte Diff ersetzt den Optionsnamen, belegt aber weder das Fehlen eines Alias an anderer Stelle noch das Verhalten oder eine fehlende Warnung bei Verwendung des alten Namens."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #357 allgemein, dass Zeitumstellungen Cron-Jobs nicht mehr doppelt ausführen lassen. Der Diff zeigt die Berechnung des nächsten Termins mit `tz: 'UTC'`, belegt aber keine so umfassende Garantie. Außerdem wird der nächste Termin in UTC berechnet; der Diff zeigt keinen neu eingeführten Vergleich in UTC."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes zu #358 kündigen ein separates Advisory mit später folgenden Details an. Die Quellen nennen zwar ein Advisory, belegen aber keine solche spätere Veröffentlichung."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Eintrag zum neuen `PostgresStore` nennt keinen Einrichtungsschritt. Die Dokumentation aus #362 weist jedoch an, zuerst die Migration aus `migrations/` auszuführen."
+   }
+  ],
+  "reason": "Die Notes enthalten nicht vollständig belegte Aussagen und lassen beim PostgresStore einen notwendigen Einrichtungsschritt aus. Die Einordnung der Breaking Changes und der Major-Sprung auf 4.0.0 passen zu den gezeigten Änderungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26938,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 448,
+  "reasoning_output_tokens": 91
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-8b0b-7502-99f3-3061594ec296"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #351, dass kein Alias existiert und der alte Name ohne Warnung ignoriert wird. Der gezeigte Diff ersetzt den Optionsnamen, belegt aber weder das Fehlen eines Alias an anderer Stelle noch das Verhalten oder eine fehlende Warnung bei Verwendung des alten Namens.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten zu #357 allgemein, dass Zeitumstellungen Cron-Jobs nicht mehr doppelt ausführen lassen. Der Diff zeigt die Berechnung des nächsten Termins mit `tz: 'UTC'`, belegt aber keine so umfassende Garantie. Außerdem wird der nächste Termin in UTC berechnet; der Diff zeigt keinen neu eingeführten Vergleich in UTC.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes zu #358 kündigen ein separates Advisory mit später folgenden Details an. Die Quellen nennen zwar ein Advisory, belegen aber keine solche spätere Veröffentlichung.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Eintrag zum neuen `PostgresStore` nennt keinen Einrichtungsschritt. Die Dokumentation aus #362 weist jedoch an, zuerst die Migration aus `migrations/` auszuführen.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten nicht vollständig belegte Aussagen und lassen beim PostgresStore einen notwendigen Einrichtungsschritt aus. Die Einordnung der Breaking Changes und der Major-Sprung auf 4.0.0 passen zu den gezeigten Änderungen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26938,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 448,
+    "reasoning_output_tokens": 91
+   }
+  }
+ ]
+}

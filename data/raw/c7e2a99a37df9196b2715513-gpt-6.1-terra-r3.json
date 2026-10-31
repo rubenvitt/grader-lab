@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "c7e2a99a37df9196b2715513",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "paraphrase",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8541,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 ändert den Konstruktor so, dass bisher akzeptierte Schemanamen abgelehnt werden können. Betroffene Nutzer müssen ihre Konfiguration anpassen; diese Änderung fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes kündigen an: „A separate advisory with details follows later“. Die Quellen belegen weder diese Veröffentlichung noch ihren Zeitpunkt.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die letzte Version ist 5.0.0. Wegen der inkompatiblen Änderung in PR #414 verlangt SemVer einen Major-Sprung; 5.0.1 ist daher nicht passend.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen den Worker-Fix und nennen den Sicherheitsfix ohne verbotene Details. Sie übergehen jedoch dessen mögliche Auswirkung auf bestehende Konfigurationen und verwenden deshalb auch eine unpassende Versionsnummer.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 ändert den Konstruktor so, dass bisher akzeptierte Schemanamen abgelehnt werden können. Betroffene Nutzer müssen ihre Konfiguration anpassen; diese Änderung fehlt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes kündigen an: „A separate advisory with details follows later“. Die Quellen belegen weder diese Veröffentlichung noch ihren Zeitpunkt."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 5.0.0. Wegen der inkompatiblen Änderung in PR #414 verlangt SemVer einen Major-Sprung; 5.0.1 ist daher nicht passend."
+   }
+  ],
+  "reason": "Die Notes erfassen den Worker-Fix und nennen den Sicherheitsfix ohne verbotene Details. Sie übergehen jedoch dessen mögliche Auswirkung auf bestehende Konfigurationen und verwenden deshalb auch eine unpassende Versionsnummer.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25472,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 295,
+  "reasoning_output_tokens": 55
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-88e0-7860-9897-c92bc748b74e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 ändert den Konstruktor so, dass bisher akzeptierte Schemanamen abgelehnt werden können. Betroffene Nutzer müssen ihre Konfiguration anpassen; diese Änderung fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes kündigen an: „A separate advisory with details follows later“. Die Quellen belegen weder diese Veröffentlichung noch ihren Zeitpunkt.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die letzte Version ist 5.0.0. Wegen der inkompatiblen Änderung in PR #414 verlangt SemVer einen Major-Sprung; 5.0.1 ist daher nicht passend.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen den Worker-Fix und nennen den Sicherheitsfix ohne verbotene Details. Sie übergehen jedoch dessen mögliche Auswirkung auf bestehende Konfigurationen und verwenden deshalb auch eine unpassende Versionsnummer.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25472,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 295,
+    "reasoning_output_tokens": 55
+   }
+  }
+ ]
+}

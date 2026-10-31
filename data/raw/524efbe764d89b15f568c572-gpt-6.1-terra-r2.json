@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "524efbe764d89b15f568c572",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "hype-tone",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5016,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung behauptet, das Release „supercharges your Redis“. Dafür gibt es in der Referenz keine Grundlage.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „the leanest quaykit ever“, „game-changing“, „beautiful JSON“ und „Rock-solid locks“ sind Werbesprache und enthalten Superlative.\"}],\"reason\":\"Die Änderungen, Migrationsschritte und Versionsnummer stimmen mit der Referenz überein. Der Kandidat enthält jedoch eine unbelegte Leistungsbehauptung und deutlich werblichen Ton.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung behauptet, das Release „supercharges your Redis“. Dafür gibt es in der Referenz keine Grundlage."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „the leanest quaykit ever“, „game-changing“, „beautiful JSON“ und „Rock-solid locks“ sind Werbesprache und enthalten Superlative."
+   }
+  ],
+  "reason": "Die Änderungen, Migrationsschritte und Versionsnummer stimmen mit der Referenz überein. Der Kandidat enthält jedoch eine unbelegte Leistungsbehauptung und deutlich werblichen Ton.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25513,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 138,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-d890-77a0-8b1a-ab8df889c39f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung behauptet, das Release „supercharges your Redis“. Dafür gibt es in der Referenz keine Grundlage.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „the leanest quaykit ever“, „game-changing“, „beautiful JSON“ und „Rock-solid locks“ sind Werbesprache und enthalten Superlative.\"}],\"reason\":\"Die Änderungen, Migrationsschritte und Versionsnummer stimmen mit der Referenz überein. Der Kandidat enthält jedoch eine unbelegte Leistungsbehauptung und deutlich werblichen Ton.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25513,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 138,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

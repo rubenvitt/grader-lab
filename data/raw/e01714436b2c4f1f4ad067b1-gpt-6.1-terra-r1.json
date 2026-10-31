@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "e01714436b2c4f1f4ad067b1",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-migration",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6295,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, Jitter sorge dafür, dass Retries nicht alle gleichzeitig eintreffen. Der Diff in PR #395 berechnet zufällige ganzzahlige Verzögerungen; mehrere Retries können dabei denselben Wert erhalten.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause()` empfiehlt `{ graceful: true }`. PR #399 definiert stattdessen die Option `drain`; für das bisherige `worker.pause(true)` lautet der entsprechende Aufruf `worker.pause({ drain: true })`.\"\n    }\n  ],\n  \"reason\": \"Die Retry-Beschreibung verspricht mehr, als der Diff belegt. Außerdem verwendet die Migrationsanweisung für `worker.pause()` einen nicht definierten Optionsnamen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, Jitter sorge dafür, dass Retries nicht alle gleichzeitig eintreffen. Der Diff in PR #395 berechnet zufällige ganzzahlige Verzögerungen; mehrere Retries können dabei denselben Wert erhalten."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause()` empfiehlt `{ graceful: true }`. PR #399 definiert stattdessen die Option `drain`; für das bisherige `worker.pause(true)` lautet der entsprechende Aufruf `worker.pause({ drain: true })`."
+   }
+  ],
+  "reason": "Die Retry-Beschreibung verspricht mehr, als der Diff belegt. Außerdem verwendet die Migrationsanweisung für `worker.pause()` einen nicht definierten Optionsnamen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26932,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 270,
+  "reasoning_output_tokens": 67
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-007b-7b42-9ac4-fd70374c717a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, Jitter sorge dafür, dass Retries nicht alle gleichzeitig eintreffen. Der Diff in PR #395 berechnet zufällige ganzzahlige Verzögerungen; mehrere Retries können dabei denselben Wert erhalten.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause()` empfiehlt `{ graceful: true }`. PR #399 definiert stattdessen die Option `drain`; für das bisherige `worker.pause(true)` lautet der entsprechende Aufruf `worker.pause({ drain: true })`.\"\n    }\n  ],\n  \"reason\": \"Die Retry-Beschreibung verspricht mehr, als der Diff belegt. Außerdem verwendet die Migrationsanweisung für `worker.pause()` einen nicht definierten Optionsnamen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26932,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 270,
+    "reasoning_output_tokens": 67
+   }
+  }
+ ]
+}

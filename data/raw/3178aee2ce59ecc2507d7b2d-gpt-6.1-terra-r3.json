@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "3178aee2ce59ecc2507d7b2d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "reordered",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4127,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben konkrete nutzerrelevante Fixes und geben beim Sicherheitseintrag keine verbotenen Details preis. Aus dem Text selbst ist weder ein Breaking Change noch ein anderer Verstoß erkennbar.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben konkrete nutzerrelevante Fixes und geben beim Sicherheitseintrag keine verbotenen Details preis. Aus dem Text selbst ist weder ein Breaking Change noch ein anderer Verstoß erkennbar.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25181,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 64,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-c7f4-7001-b387-86ef7f27662b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben konkrete nutzerrelevante Fixes und geben beim Sicherheitseintrag keine verbotenen Details preis. Aus dem Text selbst ist weder ein Breaking Change noch ein anderer Verstoß erkennbar.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25181,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 64,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

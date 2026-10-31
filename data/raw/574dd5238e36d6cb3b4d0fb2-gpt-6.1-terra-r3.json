@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "574dd5238e36d6cb3b4d0fb2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "internal-noise",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5428,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"„A CodeQL workflow now runs on every push to main“ beschreibt einen internen CI-Ablauf.\"},{\"criterion\":\"R6\",\"evidence\":\"„Bumped eslint to 9.10.0“ beschreibt eine Änderung an einer Entwicklungsabhängigkeit.\"}],\"reason\":\"Die beiden Maintenance-Einträge sind für Nutzer der Bibliothek nicht relevant. Die übrigen Aussagen lassen sich ohne Quellen nicht auf ihre Richtigkeit prüfen; aus dem Text selbst ergibt sich kein weiterer Verstoß.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "„A CodeQL workflow now runs on every push to main“ beschreibt einen internen CI-Ablauf."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "„Bumped eslint to 9.10.0“ beschreibt eine Änderung an einer Entwicklungsabhängigkeit."
+   }
+  ],
+  "reason": "Die beiden Maintenance-Einträge sind für Nutzer der Bibliothek nicht relevant. Die übrigen Aussagen lassen sich ohne Quellen nicht auf ihre Richtigkeit prüfen; aus dem Text selbst ergibt sich kein weiterer Verstoß.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25229,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 125,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-12c0-7ea1-a3d5-d9ae04f5ac6e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"„A CodeQL workflow now runs on every push to main“ beschreibt einen internen CI-Ablauf.\"},{\"criterion\":\"R6\",\"evidence\":\"„Bumped eslint to 9.10.0“ beschreibt eine Änderung an einer Entwicklungsabhängigkeit.\"}],\"reason\":\"Die beiden Maintenance-Einträge sind für Nutzer der Bibliothek nicht relevant. Die übrigen Aussagen lassen sich ohne Quellen nicht auf ihre Richtigkeit prüfen; aus dem Text selbst ergibt sich kein weiterer Verstoß.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25229,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 125,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

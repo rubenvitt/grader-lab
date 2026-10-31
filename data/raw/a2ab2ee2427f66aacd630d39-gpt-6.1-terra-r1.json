@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "a2ab2ee2427f66aacd630d39",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "useless-true",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6347,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Some default behaviour has changed“ nennt weder den neuen Standardwert von `removeOnComplete` noch dessen Auswirkung auf abgeschlossene Jobs.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt fehlt: Für das bisherige Verhalten muss beim Erstellen der `Queue` `defaultJobOptions: { removeOnComplete: false }` übergeben werden.\"},{\"criterion\":\"R8\",\"evidence\":\"„The CLI has been improved“ erklärt nicht, dass `quaykit inspect --json` Warteschlangenstatistiken als JSON statt als Tabelle ausgibt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Various improvements to worker reliability“ beschreibt nicht, dass der Worker bei einem synchronen Fehler des Handlers die Job-Sperre freigibt und der Job dadurch nicht bis zum Ablauf der Sperre aktiv bleibt.\"}],\"reason\":\"Der Kandidat nennt die betroffenen Bereiche und die korrekte Major-Version, lässt aber die konkreten Änderungen und den notwendigen Migrationsschritt weg. Dadurch können Nutzer weder die Auswirkungen noch den erforderlichen Handlungsbedarf erkennen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Some default behaviour has changed“ nennt weder den neuen Standardwert von `removeOnComplete` noch dessen Auswirkung auf abgeschlossene Jobs."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Der Migrationsschritt fehlt: Für das bisherige Verhalten muss beim Erstellen der `Queue` `defaultJobOptions: { removeOnComplete: false }` übergeben werden."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„The CLI has been improved“ erklärt nicht, dass `quaykit inspect --json` Warteschlangenstatistiken als JSON statt als Tabelle ausgibt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Various improvements to worker reliability“ beschreibt nicht, dass der Worker bei einem synchronen Fehler des Handlers die Job-Sperre freigibt und der Job dadurch nicht bis zum Ablauf der Sperre aktiv bleibt."
+   }
+  ],
+  "reason": "Der Kandidat nennt die betroffenen Bereiche und die korrekte Major-Version, lässt aber die konkreten Änderungen und den notwendigen Migrationsschritt weg. Dadurch können Nutzer weder die Auswirkungen noch den erforderlichen Handlungsbedarf erkennen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25377,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 246,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-0061-7682-a3c4-accc1d2a325b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Some default behaviour has changed“ nennt weder den neuen Standardwert von `removeOnComplete` noch dessen Auswirkung auf abgeschlossene Jobs.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt fehlt: Für das bisherige Verhalten muss beim Erstellen der `Queue` `defaultJobOptions: { removeOnComplete: false }` übergeben werden.\"},{\"criterion\":\"R8\",\"evidence\":\"„The CLI has been improved“ erklärt nicht, dass `quaykit inspect --json` Warteschlangenstatistiken als JSON statt als Tabelle ausgibt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Various improvements to worker reliability“ beschreibt nicht, dass der Worker bei einem synchronen Fehler des Handlers die Job-Sperre freigibt und der Job dadurch nicht bis zum Ablauf der Sperre aktiv bleibt.\"}],\"reason\":\"Der Kandidat nennt die betroffenen Bereiche und die korrekte Major-Version, lässt aber die konkreten Änderungen und den notwendigen Migrationsschritt weg. Dadurch können Nutzer weder die Auswirkungen noch den erforderlichen Handlungsbedarf erkennen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25377,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 246,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "706d5912d0269d3a5d1ff033",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4966,
+ "text": "{\"reason\":\"Fassung B enthält dieselben nutzerrelevanten Hinweise wie A, lässt aber die Änderungen an CI und CODEOWNERS weg, die nach R6 nicht in die Release Notes gehören.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B enthält dieselben nutzerrelevanten Hinweise wie A, lässt aber die Änderungen an CI und CODEOWNERS weg, die nach R6 nicht in die Release Notes gehören.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25261,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 55,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-8db3-7303-aaae-d32fbd9de1dc"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B enthält dieselben nutzerrelevanten Hinweise wie A, lässt aber die Änderungen an CI und CODEOWNERS weg, die nach R6 nicht in die Release Notes gehören.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25261,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 55,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

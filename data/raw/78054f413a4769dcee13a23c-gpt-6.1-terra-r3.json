@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "78054f413a4769dcee13a23c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "wrong-migration",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4309,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Der Migrationshinweis verwendet `queue.purge({ state, olderThanMs })`. Laut Referenz heißt die Option `status`: `queue.purge({ status, olderThanMs })`.\"}],\"reason\":\"Der Migrationshinweis nennt einen falschen Optionsnamen und führt damit nicht verlässlich zum vorgesehenen Ziel. Die übrigen Angaben entsprechen der Referenz.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Der Migrationshinweis verwendet `queue.purge({ state, olderThanMs })`. Laut Referenz heißt die Option `status`: `queue.purge({ status, olderThanMs })`."
+   }
+  ],
+  "reason": "Der Migrationshinweis nennt einen falschen Optionsnamen und führt damit nicht verlässlich zum vorgesehenen Ziel. Die übrigen Angaben entsprechen der Referenz.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25491,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 102,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-8123-75a0-ac04-ea36dc727f57"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Der Migrationshinweis verwendet `queue.purge({ state, olderThanMs })`. Laut Referenz heißt die Option `status`: `queue.purge({ status, olderThanMs })`.\"}],\"reason\":\"Der Migrationshinweis nennt einen falschen Optionsnamen und führt damit nicht verlässlich zum vorgesehenen Ziel. Die übrigen Angaben entsprechen der Referenz.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25491,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 102,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

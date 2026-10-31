@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "69263d64c6ea49f5bd75a3b3",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "wrong-migration",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4403,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur beim Optionsnamen der Migration: `status` gegenüber `state`. Ohne den zugehörigen Code oder Diff lässt sich nicht beurteilen, welcher Name korrekt ist.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur beim Optionsnamen der Migration: `status` gegenüber `state`. Ohne den zugehörigen Code oder Diff lässt sich nicht beurteilen, welcher Name korrekt ist.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25388,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 75,
+  "reasoning_output_tokens": 18
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-8bb1-7bc2-a7a2-a1a2e8d54a03"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur beim Optionsnamen der Migration: `status` gegenüber `state`. Ohne den zugehörigen Code oder Diff lässt sich nicht beurteilen, welcher Name korrekt ist.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25388,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 75,
+    "reasoning_output_tokens": 18
+   }
+  }
+ ]
+}

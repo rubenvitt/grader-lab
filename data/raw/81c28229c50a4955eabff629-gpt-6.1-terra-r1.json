@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "81c28229c50a4955eabff629",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5202,
+ "text": "{\"reason\":\"Fassung B enthält zusätzlich die Aussage, dass der Job in die Failed-Menge verschoben wird. Ohne die zugrunde liegenden Quellen lässt sich nicht beurteilen, ob diese Aussage belegt ist; anhand der vorliegenden Texte sind die Fassungen daher gleichwertig.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung B enthält zusätzlich die Aussage, dass der Job in die Failed-Menge verschoben wird. Ohne die zugrunde liegenden Quellen lässt sich nicht beurteilen, ob diese Aussage belegt ist; anhand der vorliegenden Texte sind die Fassungen daher gleichwertig.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25238,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 130,
+  "reasoning_output_tokens": 57
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-d827-7300-a632-aa1ac8e2e185"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B enthält zusätzlich die Aussage, dass der Job in die Failed-Menge verschoben wird. Ohne die zugrunde liegenden Quellen lässt sich nicht beurteilen, ob diese Aussage belegt ist; anhand der vorliegenden Texte sind die Fassungen daher gleichwertig.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25238,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 130,
+    "reasoning_output_tokens": 57
+   }
+  }
+ ]
+}

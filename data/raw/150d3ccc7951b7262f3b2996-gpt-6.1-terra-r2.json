@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "150d3ccc7951b7262f3b2996",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "internal-noise",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4041,
+ "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"„Deflaked the stalled job test with fake timers“ beschreibt eine interne Teständerung.\"},{\"criterion\":\"R6\",\"evidence\":\"„Pinned GitHub Actions to commit SHAs“ beschreibt eine interne CI-Änderung.\"}],\"reason\":\"Die Notes enthalten zwei interne Änderungen, die für Nutzer der Bibliothek nicht relevant sind. Die übrigen Kriterien lassen sich anhand des Textes nicht als verletzt erkennen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R6",
+    "evidence": "„Deflaked the stalled job test with fake timers“ beschreibt eine interne Teständerung."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "„Pinned GitHub Actions to commit SHAs“ beschreibt eine interne CI-Änderung."
+   }
+  ],
+  "reason": "Die Notes enthalten zwei interne Änderungen, die für Nutzer der Bibliothek nicht relevant sind. Die übrigen Kriterien lassen sich anhand des Textes nicht als verletzt erkennen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24436,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 110,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-dec2-7541-b5c0-7347a4986708"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R6\",\"evidence\":\"„Deflaked the stalled job test with fake timers“ beschreibt eine interne Teständerung.\"},{\"criterion\":\"R6\",\"evidence\":\"„Pinned GitHub Actions to commit SHAs“ beschreibt eine interne CI-Änderung.\"}],\"reason\":\"Die Notes enthalten zwei interne Änderungen, die für Nutzer der Bibliothek nicht relevant sind. Die übrigen Kriterien lassen sich anhand des Textes nicht als verletzt erkennen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24436,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 110,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

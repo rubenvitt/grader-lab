@@ -1,0 +1,79 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "f630c274f6be61cf81592991",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "useless-true",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6752,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Store construction changed“ nennt weder die erforderliche Option `connection` noch den Wegfall des Defaults oder den Migrationsschritt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Old APIs were removed“ nennt weder `queue.clean()` und `timeout` noch die jeweiligen Alternativen.\"},{\"criterion\":\"R8\",\"evidence\":\"„More retry options“ beschreibt weder die neue Opt-in-Strategie `jitter` noch ihre Konfiguration oder Wirkung.\"},{\"criterion\":\"R8\",\"evidence\":\"„Shutdown behaviour improved“ erklärt nicht, dass `worker.close()` nun `shutdownTimeoutMs` berücksichtigt.\"},{\"criterion\":\"R8\",\"evidence\":\"„CLI improvements“ nennt weder `quaykit inspect` noch dessen Fehler-Exitcode.\"},{\"criterion\":\"R8\",\"evidence\":\"„A worker argument is deprecated“ bezeichnet weder das boolesche Argument von `worker.pause()` noch die einmalige Warnung oder die Migration zu `worker.pause({ drain: true })`.\"}],\"reason\":\"Die Version und die Einordnung der Änderungen stimmen, aber die Einträge sind zu allgemein, um die Änderungen oder erforderliche Maßnahmen erkennen zu lassen. Wesentliche Fakten und Migrationsschritte aus der Referenz fehlen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Store construction changed“ nennt weder die erforderliche Option `connection` noch den Wegfall des Defaults oder den Migrationsschritt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Old APIs were removed“ nennt weder `queue.clean()` und `timeout` noch die jeweiligen Alternativen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„More retry options“ beschreibt weder die neue Opt-in-Strategie `jitter` noch ihre Konfiguration oder Wirkung."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Shutdown behaviour improved“ erklärt nicht, dass `worker.close()` nun `shutdownTimeoutMs` berücksichtigt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„CLI improvements“ nennt weder `quaykit inspect` noch dessen Fehler-Exitcode."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„A worker argument is deprecated“ bezeichnet weder das boolesche Argument von `worker.pause()` noch die einmalige Warnung oder die Migration zu `worker.pause({ drain: true })`."
+   }
+  ],
+  "reason": "Die Version und die Einordnung der Änderungen stimmen, aber die Einträge sind zu allgemein, um die Änderungen oder erforderliche Maßnahmen erkennen zu lassen. Wesentliche Fakten und Migrationsschritte aus der Referenz fehlen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25493,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 272,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-dfdd-7e41-b9bb-9c72aea1365c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Store construction changed“ nennt weder die erforderliche Option `connection` noch den Wegfall des Defaults oder den Migrationsschritt.\"},{\"criterion\":\"R8\",\"evidence\":\"„Old APIs were removed“ nennt weder `queue.clean()` und `timeout` noch die jeweiligen Alternativen.\"},{\"criterion\":\"R8\",\"evidence\":\"„More retry options“ beschreibt weder die neue Opt-in-Strategie `jitter` noch ihre Konfiguration oder Wirkung.\"},{\"criterion\":\"R8\",\"evidence\":\"„Shutdown behaviour improved“ erklärt nicht, dass `worker.close()` nun `shutdownTimeoutMs` berücksichtigt.\"},{\"criterion\":\"R8\",\"evidence\":\"„CLI improvements“ nennt weder `quaykit inspect` noch dessen Fehler-Exitcode.\"},{\"criterion\":\"R8\",\"evidence\":\"„A worker argument is deprecated“ bezeichnet weder das boolesche Argument von `worker.pause()` noch die einmalige Warnung oder die Migration zu `worker.pause({ drain: true })`.\"}],\"reason\":\"Die Version und die Einordnung der Änderungen stimmen, aber die Einträge sind zu allgemein, um die Änderungen oder erforderliche Maßnahmen erkennen zu lassen. Wesentliche Fakten und Migrationsschritte aus der Referenz fehlen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25493,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 272,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

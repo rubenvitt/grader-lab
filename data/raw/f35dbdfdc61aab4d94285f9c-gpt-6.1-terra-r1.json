@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "f35dbdfdc61aab4d94285f9c",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "useless-true",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5072,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„New worker event“ nennt weder den Namen des Ereignisses noch, wann es ausgelöst wird.\"},{\"criterion\":\"R8\",\"evidence\":\"„Stability work on the Redis store“ beschreibt nicht, was sich konkret geändert hat.\"},{\"criterion\":\"R8\",\"evidence\":\"„An older queue method is being phased out“ nennt weder die betroffene Methode noch eine mögliche Alternative oder erforderliche Schritte.\"}],\"reason\":\"Drei Einträge sind zu allgemein, um die jeweilige Änderung oder einen möglichen Handlungsbedarf zu erkennen. Weitere Verstöße lassen sich ohne Quellen aus dem Text nicht belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„New worker event“ nennt weder den Namen des Ereignisses noch, wann es ausgelöst wird."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Stability work on the Redis store“ beschreibt nicht, was sich konkret geändert hat."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„An older queue method is being phased out“ nennt weder die betroffene Methode noch eine mögliche Alternative oder erforderliche Schritte."
+   }
+  ],
+  "reason": "Drei Einträge sind zu allgemein, um die jeweilige Änderung oder einen möglichen Handlungsbedarf zu erkennen. Weitere Verstöße lassen sich ohne Quellen aus dem Text nicht belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24301,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 148,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-533b-7f93-89a6-329424c7e80f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„New worker event“ nennt weder den Namen des Ereignisses noch, wann es ausgelöst wird.\"},{\"criterion\":\"R8\",\"evidence\":\"„Stability work on the Redis store“ beschreibt nicht, was sich konkret geändert hat.\"},{\"criterion\":\"R8\",\"evidence\":\"„An older queue method is being phased out“ nennt weder die betroffene Methode noch eine mögliche Alternative oder erforderliche Schritte.\"}],\"reason\":\"Drei Einträge sind zu allgemein, um die jeweilige Änderung oder einen möglichen Handlungsbedarf zu erkennen. Weitere Verstöße lassen sich ohne Quellen aus dem Text nicht belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24301,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 148,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "885e61e748b03594852b71ab",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "wrong-bump",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8585,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Bei #351 zeigen die Diffs die Umbenennung von `stalledIntervalMs` zu `stallCheckMs`, belegen aber nicht, dass es keinen Alias gibt oder der alte Name stillschweigend ignoriert wird.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zu #357, Cron-Jobs würden bei der Zeitumstellung nicht mehr doppelt ausgeführt, ist durch den Diff nicht belegt. Er zeigt den Aufruf von `cron.next` mit der Zeitzone UTC, aber keinen Nachweis für das behauptete Verhalten bei jeder Zeitumstellung.\"},{\"criterion\":\"R2\",\"evidence\":\"Bei #360 zeigt der Diff zuvor einen Aufruf von `this.add` pro Job. Dass dabei jeweils genau ein Kommando gesendet wurde, steht nur im PR-Text und ist durch den Diff nicht belegt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Ankündigung, Details zum Sicherheitsfix #358 würden in einem separaten Advisory folgen, ist durch die Quellen nicht belegt.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 3.1.0. Die Umbenennung der öffentlichen Worker-Option (#351) und der Wegfall des CommonJS-Exports (#353) sind Breaking Changes; 3.2.0 müsste daher mindestens 4.0.0 sein.\"}],\"reason\":\"Die Notes erfassen die wesentlichen nutzerseitigen Änderungen und behandeln den Sicherheitsfix ohne verbotene Details. Mehrere Aussagen gehen jedoch über die Diffs hinaus, und die Versionsnummer berücksichtigt die Breaking Changes nicht.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Bei #351 zeigen die Diffs die Umbenennung von `stalledIntervalMs` zu `stallCheckMs`, belegen aber nicht, dass es keinen Alias gibt oder der alte Name stillschweigend ignoriert wird."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zu #357, Cron-Jobs würden bei der Zeitumstellung nicht mehr doppelt ausgeführt, ist durch den Diff nicht belegt. Er zeigt den Aufruf von `cron.next` mit der Zeitzone UTC, aber keinen Nachweis für das behauptete Verhalten bei jeder Zeitumstellung."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Bei #360 zeigt der Diff zuvor einen Aufruf von `this.add` pro Job. Dass dabei jeweils genau ein Kommando gesendet wurde, steht nur im PR-Text und ist durch den Diff nicht belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Ankündigung, Details zum Sicherheitsfix #358 würden in einem separaten Advisory folgen, ist durch die Quellen nicht belegt."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 3.1.0. Die Umbenennung der öffentlichen Worker-Option (#351) und der Wegfall des CommonJS-Exports (#353) sind Breaking Changes; 3.2.0 müsste daher mindestens 4.0.0 sein."
+   }
+  ],
+  "reason": "Die Notes erfassen die wesentlichen nutzerseitigen Änderungen und behandeln den Sicherheitsfix ohne verbotene Details. Mehrere Aussagen gehen jedoch über die Diffs hinaus, und die Versionsnummer berücksichtigt die Breaking Changes nicht.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26930,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 427,
+  "reasoning_output_tokens": 79
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-7cf6-7ce3-84ec-b258d6a75bd8"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Bei #351 zeigen die Diffs die Umbenennung von `stalledIntervalMs` zu `stallCheckMs`, belegen aber nicht, dass es keinen Alias gibt oder der alte Name stillschweigend ignoriert wird.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage zu #357, Cron-Jobs würden bei der Zeitumstellung nicht mehr doppelt ausgeführt, ist durch den Diff nicht belegt. Er zeigt den Aufruf von `cron.next` mit der Zeitzone UTC, aber keinen Nachweis für das behauptete Verhalten bei jeder Zeitumstellung.\"},{\"criterion\":\"R2\",\"evidence\":\"Bei #360 zeigt der Diff zuvor einen Aufruf von `this.add` pro Job. Dass dabei jeweils genau ein Kommando gesendet wurde, steht nur im PR-Text und ist durch den Diff nicht belegt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Ankündigung, Details zum Sicherheitsfix #358 würden in einem separaten Advisory folgen, ist durch die Quellen nicht belegt.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 3.1.0. Die Umbenennung der öffentlichen Worker-Option (#351) und der Wegfall des CommonJS-Exports (#353) sind Breaking Changes; 3.2.0 müsste daher mindestens 4.0.0 sein.\"}],\"reason\":\"Die Notes erfassen die wesentlichen nutzerseitigen Änderungen und behandeln den Sicherheitsfix ohne verbotene Details. Mehrere Aussagen gehen jedoch über die Diffs hinaus, und die Versionsnummer berücksichtigt die Breaking Changes nicht.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26930,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 427,
+    "reasoning_output_tokens": 79
+   }
+  }
+ ]
+}

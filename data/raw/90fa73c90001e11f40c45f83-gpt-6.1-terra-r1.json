@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "90fa73c90001e11f40c45f83",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6552,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der Rate Limiter verarbeite „at most `max` jobs per `perMs` milliseconds“. Der Diff von PR #376 zeigt zwar einen Token-Bucket pro Worker und dessen Aufruf, aber nicht dessen Implementierung oder eine solche Garantie für jedes Zeitintervall.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „Take control like never before!“, „powerful“, „incredible“, „effortlessly in charge“ und „sleek new“ sind Werbesprache.\"}],\"reason\":\"Die Notes geben die endgültigen Optionsnamen und die Deprecation korrekt wieder; Version 4.1.0 passt zu Feature und Deprecation. Die behauptete Rate-Limit-Garantie ist jedoch nicht durch den gezeigten Diff belegt, und der Ton ist stellenweise werblich.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, der Rate Limiter verarbeite „at most `max` jobs per `perMs` milliseconds“. Der Diff von PR #376 zeigt zwar einen Token-Bucket pro Worker und dessen Aufruf, aber nicht dessen Implementierung oder eine solche Garantie für jedes Zeitintervall."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „Take control like never before!“, „powerful“, „incredible“, „effortlessly in charge“ und „sleek new“ sind Werbesprache."
+   }
+  ],
+  "reason": "Die Notes geben die endgültigen Optionsnamen und die Deprecation korrekt wieder; Version 4.1.0 passt zu Feature und Deprecation. Die behauptete Rate-Limit-Garantie ist jedoch nicht durch den gezeigten Diff belegt, und der Ton ist stellenweise werblich.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26347,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 245,
+  "reasoning_output_tokens": 43
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-25c1-7b61-b6c1-37b8b2b95f59"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, der Rate Limiter verarbeite „at most `max` jobs per `perMs` milliseconds“. Der Diff von PR #376 zeigt zwar einen Token-Bucket pro Worker und dessen Aufruf, aber nicht dessen Implementierung oder eine solche Garantie für jedes Zeitintervall.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „Take control like never before!“, „powerful“, „incredible“, „effortlessly in charge“ und „sleek new“ sind Werbesprache.\"}],\"reason\":\"Die Notes geben die endgültigen Optionsnamen und die Deprecation korrekt wieder; Version 4.1.0 passt zu Feature und Deprecation. Die behauptete Rate-Limit-Garantie ist jedoch nicht durch den gezeigten Diff belegt, und der Ton ist stellenweise werblich.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26347,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 245,
+    "reasoning_output_tokens": 43
+   }
+  }
+ ]
+}

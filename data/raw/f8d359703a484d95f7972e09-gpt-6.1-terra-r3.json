@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "f8d359703a484d95f7972e09",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "invented-claim",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4846,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat behauptet, die Jitter-Retry-Strategie sei für neue Queues der Standard. Laut Referenz ist sie optional und muss ausdrücklich aktiviert werden.\"}],\"reason\":\"Der Kandidat gibt den Aktivierungszustand der neuen Retry-Strategie falsch wieder. Die übrigen Angaben stimmen mit der Referenz überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Kandidat behauptet, die Jitter-Retry-Strategie sei für neue Queues der Standard. Laut Referenz ist sie optional und muss ausdrücklich aktiviert werden."
+   }
+  ],
+  "reason": "Der Kandidat gibt den Aktivierungszustand der neuen Retry-Strategie falsch wieder. Die übrigen Angaben stimmen mit der Referenz überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24831,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 96,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-eb0a-73a0-8dc8-9aba94d3f4a6"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat behauptet, die Jitter-Retry-Strategie sei für neue Queues der Standard. Laut Referenz ist sie optional und muss ausdrücklich aktiviert werden.\"}],\"reason\":\"Der Kandidat gibt den Aktivierungszustand der neuen Retry-Strategie falsch wieder. Die übrigen Angaben stimmen mit der Referenz überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24831,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 96,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

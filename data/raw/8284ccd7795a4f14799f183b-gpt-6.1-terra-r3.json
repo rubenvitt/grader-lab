@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "8284ccd7795a4f14799f183b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "useless-true",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 12475,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker fix (#413)“ nennt weder die konkrete Änderung noch, ob Nutzer etwas tun müssen.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security improvements (#414)“ lässt nicht erkennen, welche Komponente betroffen ist oder ob Nutzer etwas tun müssen.\"}],\"reason\":\"Die beiden Einträge sind zu allgemein, um Nutzern die Änderung oder einen möglichen Handlungsbedarf zu vermitteln. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Worker fix (#413)“ nennt weder die konkrete Änderung noch, ob Nutzer etwas tun müssen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Security improvements (#414)“ lässt nicht erkennen, welche Komponente betroffen ist oder ob Nutzer etwas tun müssen."
+   }
+  ],
+  "reason": "Die beiden Einträge sind zu allgemein, um Nutzern die Änderung oder einen möglichen Handlungsbedarf zu vermitteln. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25120,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 118,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19414-1299-7ff2-bd65-7d41f529c2b0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617cde8ae577c-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617d31e31167b-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53617da1d46f207-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker fix (#413)“ nennt weder die konkrete Änderung noch, ob Nutzer etwas tun müssen.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security improvements (#414)“ lässt nicht erkennen, welche Komponente betroffen ist oder ob Nutzer etwas tun müssen.\"}],\"reason\":\"Die beiden Einträge sind zu allgemein, um Nutzern die Änderung oder einen möglichen Handlungsbedarf zu vermitteln. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25120,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 118,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

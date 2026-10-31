@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "1424dfb4ba8bb9d4758ba0df",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "reordered",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4592,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Deprecation mit einem konkreten Migrationsschritt und das neue Feature verständlich. Aus dem Text selbst ergibt sich kein Verstoß; die Übereinstimmung mit den Quellen lässt sich ohne diese nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben die Deprecation mit einem konkreten Migrationsschritt und das neue Feature verständlich. Aus dem Text selbst ergibt sich kein Verstoß; die Übereinstimmung mit den Quellen lässt sich ohne diese nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24347,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 69,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-ebd1-7b71-9b0d-5b348a2bcd4a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Deprecation mit einem konkreten Migrationsschritt und das neue Feature verständlich. Aus dem Text selbst ergibt sich kein Verstoß; die Übereinstimmung mit den Quellen lässt sich ohne diese nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24347,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 69,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

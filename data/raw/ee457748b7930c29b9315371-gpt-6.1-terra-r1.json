@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "ee457748b7930c29b9315371",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-migration",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4194,
+ "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur beim Optionsnamen für die Migration von `worker.pause()`. Da der Code oder ein Diff nicht vorliegt, lässt sich nicht beurteilen, welcher Name korrekt ist.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Die Fassungen unterscheiden sich nur beim Optionsnamen für die Migration von `worker.pause()`. Da der Code oder ein Diff nicht vorliegt, lässt sich nicht beurteilen, welcher Name korrekt ist.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24720,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 56,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-07ae-7ed2-a91c-ee977db11c7b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Die Fassungen unterscheiden sich nur beim Optionsnamen für die Migration von `worker.pause()`. Da der Code oder ein Diff nicht vorliegt, lässt sich nicht beurteilen, welcher Name korrekt ist.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24720,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 56,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

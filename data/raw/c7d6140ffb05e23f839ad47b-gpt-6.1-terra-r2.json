@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "c7d6140ffb05e23f839ad47b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 12588,
+ "text": "{\"reason\":\"Fassung A ist besser, weil sie die für Bibliotheksnutzer irrelevanten Build-Interna und das reine Refactoring aus Fassung B weglässt. Die übrigen Inhalte sind identisch; ihre Übereinstimmung mit den Quellen lässt sich ohne Diffs nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil sie die für Bibliotheksnutzer irrelevanten Build-Interna und das reine Refactoring aus Fassung B weglässt. Die übrigen Inhalte sind identisch; ihre Übereinstimmung mit den Quellen lässt sich ohne Diffs nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24751,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 77,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-4c51-7402-88e8-e936ec4e82b1"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536135a4f693314-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a536135fac4ab4c5-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361366afb1c8ec-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53613726ddfa43a-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil sie die für Bibliotheksnutzer irrelevanten Build-Interna und das reine Refactoring aus Fassung B weglässt. Die übrigen Inhalte sind identisch; ihre Übereinstimmung mit den Quellen lässt sich ohne Diffs nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24751,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 77,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

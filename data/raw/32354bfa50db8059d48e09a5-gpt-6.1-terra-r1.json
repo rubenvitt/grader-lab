@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "32354bfa50db8059d48e09a5",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "internal-noise",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7092,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage zu Jitter, Retries träfen dadurch nicht alle gleichzeitig ein, ist nicht garantiert: Der Diff in #395 berechnet zufällige ganzzahlige Verzögerungen; mehrere Retries können denselben Wert erhalten.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause()` nennt nur `worker.pause({ drain: true })`. Für bisheriges `worker.pause(false)` muss `worker.pause({ drain: false })` verwendet werden, damit das Verhalten erhalten bleibt (#399).\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Der Abschnitt „Internal“ nennt den Release-Workflow mit `--provenance` (#403) und die Verschiebung des Key Builders (#404). Das sind Build-Interna beziehungsweise ein reines Refactoring.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine nicht belegte Garantie, eine unvollständige Migrationsanweisung und zwei für Bibliotheksnutzer irrelevante interne Änderungen. Die Versionsnummer 5.0.0 passt zu den belegten Breaking Changes.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage zu Jitter, Retries träfen dadurch nicht alle gleichzeitig ein, ist nicht garantiert: Der Diff in #395 berechnet zufällige ganzzahlige Verzögerungen; mehrere Retries können denselben Wert erhalten."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause()` nennt nur `worker.pause({ drain: true })`. Für bisheriges `worker.pause(false)` muss `worker.pause({ drain: false })` verwendet werden, damit das Verhalten erhalten bleibt (#399)."
+   },
+   {
+    "criterion": "R6",
+    "evidence": "Der Abschnitt „Internal“ nennt den Release-Workflow mit `--provenance` (#403) und die Verschiebung des Key Builders (#404). Das sind Build-Interna beziehungsweise ein reines Refactoring."
+   }
+  ],
+  "reason": "Die Notes enthalten eine nicht belegte Garantie, eine unvollständige Migrationsanweisung und zwei für Bibliotheksnutzer irrelevante interne Änderungen. Die Versionsnummer 5.0.0 passt zu den belegten Breaking Changes.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26961,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 329,
+  "reasoning_output_tokens": 55
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-309c-7622-8ff2-8f486e8bd49c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage zu Jitter, Retries träfen dadurch nicht alle gleichzeitig ein, ist nicht garantiert: Der Diff in #395 berechnet zufällige ganzzahlige Verzögerungen; mehrere Retries können denselben Wert erhalten.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause()` nennt nur `worker.pause({ drain: true })`. Für bisheriges `worker.pause(false)` muss `worker.pause({ drain: false })` verwendet werden, damit das Verhalten erhalten bleibt (#399).\"\n    },\n    {\n      \"criterion\": \"R6\",\n      \"evidence\": \"Der Abschnitt „Internal“ nennt den Release-Workflow mit `--provenance` (#403) und die Verschiebung des Key Builders (#404). Das sind Build-Interna beziehungsweise ein reines Refactoring.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten eine nicht belegte Garantie, eine unvollständige Migrationsanweisung und zwei für Bibliotheksnutzer irrelevante interne Änderungen. Die Versionsnummer 5.0.0 passt zu den belegten Breaking Changes.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26961,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 329,
+    "reasoning_output_tokens": 55
+   }
+  }
+ ]
+}

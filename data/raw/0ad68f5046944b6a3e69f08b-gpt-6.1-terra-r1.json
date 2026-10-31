@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "0ad68f5046944b6a3e69f08b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7289,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 ändert den PostgreSQL-Konstruktor so, dass Schemanamen außerhalb des Musters `/^[a-z_][a-z0-9_]*$/` abgelehnt werden. Betroffene Nutzer müssen ihre Konfiguration anpassen; die Änderung fehlt unter „Breaking Changes“.\"},{\"criterion\":\"R8\",\"evidence\":\"„Worker fix (#413)“ erklärt weder die Änderung noch, ob Nutzer etwas tun müssen. Der Diff verhindert nach Verlust des Locks das `ack` und löst stattdessen `lockLost` aus.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security improvements (#414)“ nennt nicht die betroffene Komponente. Die Quellen weisen PostgreSQL aus; diese Angabe ist nach R5 auch bei einem Embargo erlaubt.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die Einschränkung zulässiger Schemanamen in PR #414 ist eine Breaking Change und erfordert nach SemVer einen Major-Sprung.\"}],\"reason\":\"Die Notes benennen eine rückwärtsinkompatible Konfigurationsänderung nicht als Breaking Change und wählen deshalb eine unpassende Version. Zudem sind beide Einträge für Nutzer zu unkonkret.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 ändert den PostgreSQL-Konstruktor so, dass Schemanamen außerhalb des Musters `/^[a-z_][a-z0-9_]*$/` abgelehnt werden. Betroffene Nutzer müssen ihre Konfiguration anpassen; die Änderung fehlt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Worker fix (#413)“ erklärt weder die Änderung noch, ob Nutzer etwas tun müssen. Der Diff verhindert nach Verlust des Locks das `ack` und löst stattdessen `lockLost` aus."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Security improvements (#414)“ nennt nicht die betroffene Komponente. Die Quellen weisen PostgreSQL aus; diese Angabe ist nach R5 auch bei einem Embargo erlaubt."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die Einschränkung zulässiger Schemanamen in PR #414 ist eine Breaking Change und erfordert nach SemVer einen Major-Sprung."
+   }
+  ],
+  "reason": "Die Notes benennen eine rückwärtsinkompatible Konfigurationsänderung nicht als Breaking Change und wählen deshalb eine unpassende Version. Zudem sind beide Einträge für Nutzer zu unkonkret.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25402,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 340,
+  "reasoning_output_tokens": 53
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-eff2-76c2-9f68-7e1c042cf417"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 ändert den PostgreSQL-Konstruktor so, dass Schemanamen außerhalb des Musters `/^[a-z_][a-z0-9_]*$/` abgelehnt werden. Betroffene Nutzer müssen ihre Konfiguration anpassen; die Änderung fehlt unter „Breaking Changes“.\"},{\"criterion\":\"R8\",\"evidence\":\"„Worker fix (#413)“ erklärt weder die Änderung noch, ob Nutzer etwas tun müssen. Der Diff verhindert nach Verlust des Locks das `ack` und löst stattdessen `lockLost` aus.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security improvements (#414)“ nennt nicht die betroffene Komponente. Die Quellen weisen PostgreSQL aus; diese Angabe ist nach R5 auch bei einem Embargo erlaubt.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die Einschränkung zulässiger Schemanamen in PR #414 ist eine Breaking Change und erfordert nach SemVer einen Major-Sprung.\"}],\"reason\":\"Die Notes benennen eine rückwärtsinkompatible Konfigurationsänderung nicht als Breaking Change und wählen deshalb eine unpassende Version. Zudem sind beide Einträge für Nutzer zu unkonkret.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25402,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 340,
+    "reasoning_output_tokens": 53
+   }
+  }
+ ]
+}

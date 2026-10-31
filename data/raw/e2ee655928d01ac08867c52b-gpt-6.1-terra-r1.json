@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "e2ee655928d01ac08867c52b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-migration",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4234,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` nennt `{ graceful: true }`; laut Referenz lautet die korrekte Option `{ drain: true }`.\"}],\"reason\":\"Der Kandidat stimmt bis auf den falschen Optionsnamen im Migrationsschritt mit der Referenz überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause()` nennt `{ graceful: true }`; laut Referenz lautet die korrekte Option `{ drain: true }`."
+   }
+  ],
+  "reason": "Der Kandidat stimmt bis auf den falschen Optionsnamen im Migrationsschritt mit der Referenz überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24829,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 85,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-fdf9-7c41-82ff-073cb8fc899e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` nennt `{ graceful: true }`; laut Referenz lautet die korrekte Option `{ drain: true }`.\"}],\"reason\":\"Der Kandidat stimmt bis auf den falschen Optionsnamen im Migrationsschritt mit der Referenz überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24829,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 85,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

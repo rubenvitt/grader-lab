@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "840bbadbeb3ddf0feed70977",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "useless-true",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8701,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„New worker event“ (#331) nennt weder das Ereignis `drained` noch die Bedingung, unter der es ausgelöst wird: kein nächster Job und keine aktiven Jobs.\"},{\"criterion\":\"R8\",\"evidence\":\"„Stability work on the Redis store“ (#334) beschreibt den Fix nicht konkret: Bei `ECONNRESET` wird die Erneuerung des Locks einmal erneut versucht.\"},{\"criterion\":\"R8\",\"evidence\":\"„An older queue method is being phased out“ (#338) nennt weder die veraltete Methode `queue.clean()` noch ihren Ersatz `queue.purge({ status, olderThanMs })`.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security update“ (#336) nennt weder die betroffene Signing-Komponente noch eine Upgrade-Empfehlung; beides wäre trotz Embargo erlaubt.\"}],\"reason\":\"Die Änderungen und ihre Einordnung sind grundsätzlich durch die Quellen gedeckt; Version 3.1.0 passt zu den neuen Funktionen und der Deprecation. Die Einträge sind jedoch zu allgemein, um Nutzern die Änderungen und nötige Schritte verständlich zu machen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„New worker event“ (#331) nennt weder das Ereignis `drained` noch die Bedingung, unter der es ausgelöst wird: kein nächster Job und keine aktiven Jobs."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Stability work on the Redis store“ (#334) beschreibt den Fix nicht konkret: Bei `ECONNRESET` wird die Erneuerung des Locks einmal erneut versucht."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„An older queue method is being phased out“ (#338) nennt weder die veraltete Methode `queue.clean()` noch ihren Ersatz `queue.purge({ status, olderThanMs })`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Security update“ (#336) nennt weder die betroffene Signing-Komponente noch eine Upgrade-Empfehlung; beides wäre trotz Embargo erlaubt."
+   }
+  ],
+  "reason": "Die Änderungen und ihre Einordnung sind grundsätzlich durch die Quellen gedeckt; Version 3.1.0 passt zu den neuen Funktionen und der Deprecation. Die Einträge sind jedoch zu allgemein, um Nutzern die Änderungen und nötige Schritte verständlich zu machen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26473,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 260,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940a-50d0-7580-a6f5-fcf5a7431462"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„New worker event“ (#331) nennt weder das Ereignis `drained` noch die Bedingung, unter der es ausgelöst wird: kein nächster Job und keine aktiven Jobs.\"},{\"criterion\":\"R8\",\"evidence\":\"„Stability work on the Redis store“ (#334) beschreibt den Fix nicht konkret: Bei `ECONNRESET` wird die Erneuerung des Locks einmal erneut versucht.\"},{\"criterion\":\"R8\",\"evidence\":\"„An older queue method is being phased out“ (#338) nennt weder die veraltete Methode `queue.clean()` noch ihren Ersatz `queue.purge({ status, olderThanMs })`.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security update“ (#336) nennt weder die betroffene Signing-Komponente noch eine Upgrade-Empfehlung; beides wäre trotz Embargo erlaubt.\"}],\"reason\":\"Die Änderungen und ihre Einordnung sind grundsätzlich durch die Quellen gedeckt; Version 3.1.0 passt zu den neuen Funktionen und der Deprecation. Die Einträge sind jedoch zu allgemein, um Nutzern die Änderungen und nötige Schritte verständlich zu machen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26473,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 260,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

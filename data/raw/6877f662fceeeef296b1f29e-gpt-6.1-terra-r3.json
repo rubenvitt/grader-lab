@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "6877f662fceeeef296b1f29e",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5511,
+ "text": "{\"reason\":\"Fassung B ist brauchbarer, weil sie die Änderungen konkret beschreibt und für beide Breaking Changes Migrationsschritte nennt. Der Sicherheitseintrag bleibt ohne technische Details; ob die konkreten Aussagen und Migrationsschritte durch die Diffs gedeckt sind, lässt sich ohne Quellen nicht prüfen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist brauchbarer, weil sie die Änderungen konkret beschreibt und für beide Breaking Changes Migrationsschritte nennt. Der Sicherheitseintrag bleibt ohne technische Details; ob die konkreten Aussagen und Migrationsschritte durch die Diffs gedeckt sind, lässt sich ohne Quellen nicht prüfen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25364,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 117,
+  "reasoning_output_tokens": 40
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940d-3b6d-7e22-b878-f0b0d51bf5e8"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist brauchbarer, weil sie die Änderungen konkret beschreibt und für beide Breaking Changes Migrationsschritte nennt. Der Sicherheitseintrag bleibt ohne technische Details; ob die konkreten Aussagen und Migrationsschritte durch die Diffs gedeckt sind, lässt sich ohne Quellen nicht prüfen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25364,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 117,
+    "reasoning_output_tokens": 40
+   }
+  }
+ ]
+}

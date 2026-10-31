@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "b5f918e77861c7e7394e97e6",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "missing-breaking",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6650,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #393 entfernt die öffentliche Methode `Queue.clean(graceMs, status)` und die Job-Option `timeout`. Beide Änderungen fehlen unter „Breaking Changes“. Nutzer müssen auf `Queue.purge({ status, olderThanMs })` beziehungsweise `timeoutMs` umstellen.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, Jitter verteile Wiederholungen so, dass sie nicht alle gleichzeitig eintreffen. Der Diff zu PR #395 berechnet jedoch zufällige ganzzahlige Verzögerungen; mehrere Wiederholungen können dieselbe Verzögerung erhalten.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff zu PR #399 muss der bisherige Boolean-Wert übernommen werden: Für `worker.pause(false)` lautet der entsprechende Aufruf `worker.pause({ drain: false })`.\"\n    }\n  ],\n  \"reason\": \"Die Notes lassen zwei entfernte öffentliche Schnittstellen als Breaking Changes aus. Außerdem enthalten sie eine unbelegte Garantie und einen Migrationsschritt, der nicht für beide bisherigen Boolean-Werte korrekt ist.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #393 entfernt die öffentliche Methode `Queue.clean(graceMs, status)` und die Job-Option `timeout`. Beide Änderungen fehlen unter „Breaking Changes“. Nutzer müssen auf `Queue.purge({ status, olderThanMs })` beziehungsweise `timeoutMs` umstellen."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, Jitter verteile Wiederholungen so, dass sie nicht alle gleichzeitig eintreffen. Der Diff zu PR #395 berechnet jedoch zufällige ganzzahlige Verzögerungen; mehrere Wiederholungen können dieselbe Verzögerung erhalten."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff zu PR #399 muss der bisherige Boolean-Wert übernommen werden: Für `worker.pause(false)` lautet der entsprechende Aufruf `worker.pause({ drain: false })`."
+   }
+  ],
+  "reason": "Die Notes lassen zwei entfernte öffentliche Schnittstellen als Breaking Changes aus. Außerdem enthalten sie eine unbelegte Garantie und einen Migrationsschritt, der nicht für beide bisherigen Boolean-Werte korrekt ist.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26879,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 344,
+  "reasoning_output_tokens": 53
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-14b4-7200-a07e-1633f9ecd838"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #393 entfernt die öffentliche Methode `Queue.clean(graceMs, status)` und die Job-Option `timeout`. Beide Änderungen fehlen unter „Breaking Changes“. Nutzer müssen auf `Queue.purge({ status, olderThanMs })` beziehungsweise `timeoutMs` umstellen.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, Jitter verteile Wiederholungen so, dass sie nicht alle gleichzeitig eintreffen. Der Diff zu PR #395 berechnet jedoch zufällige ganzzahlige Verzögerungen; mehrere Wiederholungen können dieselbe Verzögerung erhalten.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff zu PR #399 muss der bisherige Boolean-Wert übernommen werden: Für `worker.pause(false)` lautet der entsprechende Aufruf `worker.pause({ drain: false })`.\"\n    }\n  ],\n  \"reason\": \"Die Notes lassen zwei entfernte öffentliche Schnittstellen als Breaking Changes aus. Außerdem enthalten sie eine unbelegte Garantie und einen Migrationsschritt, der nicht für beide bisherigen Boolean-Werte korrekt ist.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26879,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 344,
+    "reasoning_output_tokens": 53
+   }
+  }
+ ]
+}

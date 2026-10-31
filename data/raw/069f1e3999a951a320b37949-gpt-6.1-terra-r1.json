@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "069f1e3999a951a320b37949",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "useless-true",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5338,
+ "text": "{\"reason\":\"Fassung B beschreibt die Änderungen und den vorgeschlagenen Migrationsschritt konkret; Fassung A bleibt bei beiden Einträgen zu allgemein. Ob die Details und der Optionsname durch den Code belegt sind, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt die Änderungen und den vorgeschlagenen Migrationsschritt konkret; Fassung A bleibt bei beiden Einträgen zu allgemein. Ob die Details und der Optionsname durch den Code belegt sind, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25201,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 118,
+  "reasoning_output_tokens": 48
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-672d-7940-aaf9-9c0a896be781"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt die Änderungen und den vorgeschlagenen Migrationsschritt konkret; Fassung A bleibt bei beiden Einträgen zu allgemein. Ob die Details und der Optionsname durch den Code belegt sind, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25201,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 118,
+    "reasoning_output_tokens": 48
+   }
+  }
+ ]
+}

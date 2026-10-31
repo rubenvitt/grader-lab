@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "b5f918e77861c7e7394e97e6",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "missing-breaking",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6857,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #393 entfernt die öffentliche Methode `Queue.clean` und die Joboption `timeout`. Beide Änderungen fehlen unter „Breaking Changes“ und in den gesamten Notes.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #395 behauptet, die zufällige Verteilung sorge dafür, dass Retries nicht alle gleichzeitig eintreffen. Der Diff berechnet zufällige Verzögerungen, garantiert aber keine unterschiedlichen Zeitpunkte.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Für bisheriges `worker.pause(false)` ändert das das Verhalten; die entsprechende Migration ist `worker.pause({ drain: false })`.\"},{\"criterion\":\"R8\",\"evidence\":\"Die Entfernung von `Queue.clean` und `JobOptions.timeout` aus PR #393 wird nicht erwähnt. Betroffene Nutzer erfahren daher weder von der Änderung noch, dass sie auf `Queue.purge({ status, olderThanMs })` beziehungsweise `timeoutMs` umstellen müssen.\"}],\"reason\":\"Die Diffs zeigen zwei entfernte öffentliche Schnittstellen, die in den Notes fehlen. Außerdem enthält der Jitter-Eintrag eine nicht garantierte Wirkung und die Pause-Migration berücksichtigt den bisherigen Wert `false` nicht.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #393 entfernt die öffentliche Methode `Queue.clean` und die Joboption `timeout`. Beide Änderungen fehlen unter „Breaking Changes“ und in den gesamten Notes."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #395 behauptet, die zufällige Verteilung sorge dafür, dass Retries nicht alle gleichzeitig eintreffen. Der Diff berechnet zufällige Verzögerungen, garantiert aber keine unterschiedlichen Zeitpunkte."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Für bisheriges `worker.pause(false)` ändert das das Verhalten; die entsprechende Migration ist `worker.pause({ drain: false })`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Die Entfernung von `Queue.clean` und `JobOptions.timeout` aus PR #393 wird nicht erwähnt. Betroffene Nutzer erfahren daher weder von der Änderung noch, dass sie auf `Queue.purge({ status, olderThanMs })` beziehungsweise `timeoutMs` umstellen müssen."
+   }
+  ],
+  "reason": "Die Diffs zeigen zwei entfernte öffentliche Schnittstellen, die in den Notes fehlen. Außerdem enthält der Jitter-Eintrag eine nicht garantierte Wirkung und die Pause-Migration berücksichtigt den bisherigen Wert `false` nicht.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26881,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 318,
+  "reasoning_output_tokens": 32
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-3c03-7e12-846d-6afba946b90f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #393 entfernt die öffentliche Methode `Queue.clean` und die Joboption `timeout`. Beide Änderungen fehlen unter „Breaking Changes“ und in den gesamten Notes.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #395 behauptet, die zufällige Verteilung sorge dafür, dass Retries nicht alle gleichzeitig eintreffen. Der Diff berechnet zufällige Verzögerungen, garantiert aber keine unterschiedlichen Zeitpunkte.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Für bisheriges `worker.pause(false)` ändert das das Verhalten; die entsprechende Migration ist `worker.pause({ drain: false })`.\"},{\"criterion\":\"R8\",\"evidence\":\"Die Entfernung von `Queue.clean` und `JobOptions.timeout` aus PR #393 wird nicht erwähnt. Betroffene Nutzer erfahren daher weder von der Änderung noch, dass sie auf `Queue.purge({ status, olderThanMs })` beziehungsweise `timeoutMs` umstellen müssen.\"}],\"reason\":\"Die Diffs zeigen zwei entfernte öffentliche Schnittstellen, die in den Notes fehlen. Außerdem enthält der Jitter-Eintrag eine nicht garantierte Wirkung und die Pause-Migration berücksichtigt den bisherigen Wert `false` nicht.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26881,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 318,
+    "reasoning_output_tokens": 32
+   }
+  }
+ ]
+}

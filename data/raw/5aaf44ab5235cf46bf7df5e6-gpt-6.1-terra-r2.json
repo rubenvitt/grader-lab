@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "5aaf44ab5235cf46bf7df5e6",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "hype-tone",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4609,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"„massive peace of mind“, „crushes“ und „Unbreakable job state“ sind werblich und unsachlich.\"},{\"criterion\":\"R2\",\"evidence\":\"„Unbreakable job state“ behauptet eine allgemeine Unzerstörbarkeit des Jobzustands, die durch die Referenz nicht gedeckt ist.\"}],\"reason\":\"Die funktionalen Änderungen, die Upgrade-Empfehlung und die Version stimmen mit der Referenz überein. Der Kandidat enthält jedoch Werbesprache und eine unbelegte Garantie.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "„massive peace of mind“, „crushes“ und „Unbreakable job state“ sind werblich und unsachlich."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "„Unbreakable job state“ behauptet eine allgemeine Unzerstörbarkeit des Jobzustands, die durch die Referenz nicht gedeckt ist."
+   }
+  ],
+  "reason": "Die funktionalen Änderungen, die Upgrade-Empfehlung und die Version stimmen mit der Referenz überein. Der Kandidat enthält jedoch Werbesprache und eine unbelegte Garantie.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25362,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 138,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-c5eb-7db1-bb58-7bedfd7c8c1b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"„massive peace of mind“, „crushes“ und „Unbreakable job state“ sind werblich und unsachlich.\"},{\"criterion\":\"R2\",\"evidence\":\"„Unbreakable job state“ behauptet eine allgemeine Unzerstörbarkeit des Jobzustands, die durch die Referenz nicht gedeckt ist.\"}],\"reason\":\"Die funktionalen Änderungen, die Upgrade-Empfehlung und die Version stimmen mit der Referenz überein. Der Kandidat enthält jedoch Werbesprache und eine unbelegte Garantie.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25362,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 138,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

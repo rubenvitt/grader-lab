@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "6074c814e308ee4df0732c24",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "hype-tone",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4716,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"„Take control like never before!“, „powerful“, „incredible“, „effortlessly in charge“ und „sleek“ sind werbliche Formulierungen.\"}],\"reason\":\"Die Notes enthalten mehrere werbliche Formulierungen statt eines sachlichen Tons. Weitere Verstöße lassen sich allein aus dem Text nicht feststellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "„Take control like never before!“, „powerful“, „incredible“, „effortlessly in charge“ und „sleek“ sind werbliche Formulierungen."
+   }
+  ],
+  "reason": "Die Notes enthalten mehrere werbliche Formulierungen statt eines sachlichen Tons. Weitere Verstöße lassen sich allein aus dem Text nicht feststellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25229,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 93,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-27db-7d23-9a96-45c283e8362b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"„Take control like never before!“, „powerful“, „incredible“, „effortlessly in charge“ und „sleek“ sind werbliche Formulierungen.\"}],\"reason\":\"Die Notes enthalten mehrere werbliche Formulierungen statt eines sachlichen Tons. Weitere Verstöße lassen sich allein aus dem Text nicht feststellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25229,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 93,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

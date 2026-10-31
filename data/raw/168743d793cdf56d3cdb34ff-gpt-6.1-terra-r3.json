@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "168743d793cdf56d3cdb34ff",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4314,
+ "text": "{\"reason\":\"Fassung A ist sachlich und erfüllt damit R7 besser. Fassung B enthält Werbesprache und unbelegte Wertungen wie „game-changing“ und „flawless“; inhaltlich sind die konkreten Einträge ansonsten gleich.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist sachlich und erfüllt damit R7 besser. Fassung B enthält Werbesprache und unbelegte Wertungen wie „game-changing“ und „flawless“; inhaltlich sind die konkreten Einträge ansonsten gleich.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25607,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 66,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19411-b1ec-7821-a6ea-631aecfc2987"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist sachlich und erfüllt damit R7 besser. Fassung B enthält Werbesprache und unbelegte Wertungen wie „game-changing“ und „flawless“; inhaltlich sind die konkreten Einträge ansonsten gleich.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25607,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 66,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

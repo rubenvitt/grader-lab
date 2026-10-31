@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "d8fee708c1bfbe7826186674",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "hype-tone",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4549,
+ "text": "{\"reason\":\"Fassung A ist sachlich formuliert. Fassung B enthält dagegen Werbesprache und unbelegte Superlative wie „revolutionary“ und „most exciting release yet“; in den konkreten Änderungen sind beide Fassungen gleichwertig.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist sachlich formuliert. Fassung B enthält dagegen Werbesprache und unbelegte Superlative wie „revolutionary“ und „most exciting release yet“; in den konkreten Änderungen sind beide Fassungen gleichwertig.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24729,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 67,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-f767-7a70-aedb-f39fe92458ce"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist sachlich formuliert. Fassung B enthält dagegen Werbesprache und unbelegte Superlative wie „revolutionary“ und „most exciting release yet“; in den konkreten Änderungen sind beide Fassungen gleichwertig.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24729,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 67,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

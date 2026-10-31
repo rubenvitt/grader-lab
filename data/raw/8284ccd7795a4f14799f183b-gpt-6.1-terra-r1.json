@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "8284ccd7795a4f14799f183b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "useless-true",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5331,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker fix (#413)“ nennt weder die konkrete Änderung noch, ob Nutzer etwas tun müssen.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security improvements (#414)“ benennt weder die betroffene Komponente noch eine gegebenenfalls erforderliche Handlung.\"}],\"reason\":\"Die beiden Einträge sind zu allgemein, um ihren Nutzen oder einen möglichen Handlungsbedarf zu erkennen. Ohne Quellen lassen sich weitere Kriterien nicht überprüfen und gelten daher als erfüllt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "„Worker fix (#413)“ nennt weder die konkrete Änderung noch, ob Nutzer etwas tun müssen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "„Security improvements (#414)“ benennt weder die betroffene Komponente noch eine gegebenenfalls erforderliche Handlung."
+   }
+  ],
+  "reason": "Die beiden Einträge sind zu allgemein, um ihren Nutzen oder einen möglichen Handlungsbedarf zu erkennen. Ohne Quellen lassen sich weitere Kriterien nicht überprüfen und gelten daher als erfüllt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25120,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 118,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19413-f064-70f0-bedf-63c4b53effd6"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"„Worker fix (#413)“ nennt weder die konkrete Änderung noch, ob Nutzer etwas tun müssen.\"},{\"criterion\":\"R8\",\"evidence\":\"„Security improvements (#414)“ benennt weder die betroffene Komponente noch eine gegebenenfalls erforderliche Handlung.\"}],\"reason\":\"Die beiden Einträge sind zu allgemein, um ihren Nutzen oder einen möglichen Handlungsbedarf zu erkennen. Ohne Quellen lassen sich weitere Kriterien nicht überprüfen und gelten daher als erfüllt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25120,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 118,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

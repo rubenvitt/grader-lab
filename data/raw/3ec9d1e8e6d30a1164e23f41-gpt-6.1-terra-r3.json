@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "3ec9d1e8e6d30a1164e23f41",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "embargo-leak",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4934,
+ "text": "{\"reason\":\"Fassung A wahrt das Embargo, indem sie den Sicherheitsfix ohne technische Details nennt und ein Upgrade empfiehlt. Fassung B legt dagegen die Art der Schwachstelle, den Angriffsmechanismus und den konkreten Fix offen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A wahrt das Embargo, indem sie den Sicherheitsfix ohne technische Details nennt und ein Upgrade empfiehlt. Fassung B legt dagegen die Art der Schwachstelle, den Angriffsmechanismus und den konkreten Fix offen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25396,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 65,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-be53-7be0-9fad-64dc0730382a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A wahrt das Embargo, indem sie den Sicherheitsfix ohne technische Details nennt und ein Upgrade empfiehlt. Fassung B legt dagegen die Art der Schwachstelle, den Angriffsmechanismus und den konkreten Fix offen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25396,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 65,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

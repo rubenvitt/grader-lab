@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "3d5d003595b66caa34d92d57",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "false-success",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7263,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, ein Worker verarbeite „at most `max` jobs per `perMs` milliseconds“. PR #376 zeigt zwar einen Token-Bucket und die Optionen `max` und `perMs`, aber nicht dessen Implementierung. Die strikte Obergrenze für jedes Zeitintervall ist damit nicht belegt.\"}],\"reason\":\"Die Notes geben die erneut eingeführte Option und die Deprecation korrekt wieder. Die behauptete strikte Verarbeitungsgrenze lässt sich aus dem gezeigten Diff jedoch nicht ableiten.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, ein Worker verarbeite „at most `max` jobs per `perMs` milliseconds“. PR #376 zeigt zwar einen Token-Bucket und die Optionen `max` und `perMs`, aber nicht dessen Implementierung. Die strikte Obergrenze für jedes Zeitintervall ist damit nicht belegt."
+   }
+  ],
+  "reason": "Die Notes geben die erneut eingeführte Option und die Deprecation korrekt wieder. Die behauptete strikte Verarbeitungsgrenze lässt sich aus dem gezeigten Diff jedoch nicht ableiten.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25465,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 241,
+  "reasoning_output_tokens": 101
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-a8dc-74e1-8cc1-1fcd47a5f1b5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, ein Worker verarbeite „at most `max` jobs per `perMs` milliseconds“. PR #376 zeigt zwar einen Token-Bucket und die Optionen `max` und `perMs`, aber nicht dessen Implementierung. Die strikte Obergrenze für jedes Zeitintervall ist damit nicht belegt.\"}],\"reason\":\"Die Notes geben die erneut eingeführte Option und die Deprecation korrekt wieder. Die behauptete strikte Verarbeitungsgrenze lässt sich aus dem gezeigten Diff jedoch nicht ableiten.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25465,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 241,
+    "reasoning_output_tokens": 101
+   }
+  }
+ ]
+}

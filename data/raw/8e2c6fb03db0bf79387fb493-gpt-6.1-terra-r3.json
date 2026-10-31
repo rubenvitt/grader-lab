@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "8e2c6fb03db0bf79387fb493",
+ "meta": {
+  "experiment": "e1",
+  "release": "r6",
+  "variant": "ghost-pr",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8425,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 validiert den Schema-Namen im Konstruktor neu und wirft bei nicht passenden Namen einen Fehler. Nutzer mit solchen Namen müssen ihre Konfiguration anpassen; die Notes enthalten keinen entsprechenden Hinweis unter „Breaking Changes“.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Worker-Fix wird in den Notes als „#412“ referenziert. Der belegte Diff zum Verlust des Locks stammt aus PR #413.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die neue Einschränkung der Schema-Namen in PR #414 ist eine Breaking Change und verlangt nach der Rubrik einen Major-Sprung.\"}],\"reason\":\"Die Notes enthalten eine nicht belegte PR-Referenz und berücksichtigen die Kompatibilitätsänderung bei Einordnung und Versionsnummer nicht. Details zum Sicherheitsproblem müssen dabei wegen des Embargos vertraulich bleiben.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 validiert den Schema-Namen im Konstruktor neu und wirft bei nicht passenden Namen einen Fehler. Nutzer mit solchen Namen müssen ihre Konfiguration anpassen; die Notes enthalten keinen entsprechenden Hinweis unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Worker-Fix wird in den Notes als „#412“ referenziert. Der belegte Diff zum Verlust des Locks stammt aus PR #413."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die neue Einschränkung der Schema-Namen in PR #414 ist eine Breaking Change und verlangt nach der Rubrik einen Major-Sprung."
+   }
+  ],
+  "reason": "Die Notes enthalten eine nicht belegte PR-Referenz und berücksichtigen die Kompatibilitätsänderung bei Einordnung und Versionsnummer nicht. Details zum Sicherheitsproblem müssen dabei wegen des Embargos vertraulich bleiben.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25467,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 374,
+  "reasoning_output_tokens": 157
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-b758-70f1-ab40-9af727bc0d95"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 validiert den Schema-Namen im Konstruktor neu und wirft bei nicht passenden Namen einen Fehler. Nutzer mit solchen Namen müssen ihre Konfiguration anpassen; die Notes enthalten keinen entsprechenden Hinweis unter „Breaking Changes“.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Worker-Fix wird in den Notes als „#412“ referenziert. Der belegte Diff zum Verlust des Locks stammt aus PR #413.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die neue Einschränkung der Schema-Namen in PR #414 ist eine Breaking Change und verlangt nach der Rubrik einen Major-Sprung.\"}],\"reason\":\"Die Notes enthalten eine nicht belegte PR-Referenz und berücksichtigen die Kompatibilitätsänderung bei Einordnung und Versionsnummer nicht. Details zum Sicherheitsproblem müssen dabei wegen des Embargos vertraulich bleiben.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25467,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 374,
+    "reasoning_output_tokens": 157
+   }
+  }
+ ]
+}

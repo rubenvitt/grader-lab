@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "3607666b211dc847fd1fd6f9",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "wrong-bump",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 12811,
+ "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Der Kandidat nennt Version 4.2.0; die Referenz nennt 5.0.0. Die enthaltenen Breaking Changes verlangen einen Major-Sprung.\"}],\"reason\":\"Abgesehen von der Versionsnummer vermittelt der Kandidat dieselben Fakten wie die Referenz.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R9",
+    "evidence": "Der Kandidat nennt Version 4.2.0; die Referenz nennt 5.0.0. Die enthaltenen Breaking Changes verlangen einen Major-Sprung."
+   }
+  ],
+  "reason": "Abgesehen von der Versionsnummer vermittelt der Kandidat dieselben Fakten wie die Referenz.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25677,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 83,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-5b79-74f0-8ac2-3433887fba2d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611d8a97af694-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611de396d6ac9-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611e58ca989cd-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a53611f29d68aca4-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R9\",\"evidence\":\"Der Kandidat nennt Version 4.2.0; die Referenz nennt 5.0.0. Die enthaltenen Breaking Changes verlangen einen Major-Sprung.\"}],\"reason\":\"Abgesehen von der Versionsnummer vermittelt der Kandidat dieselben Fakten wie die Referenz.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25677,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 83,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

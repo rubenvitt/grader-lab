@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "cdd3e5edfe75643c5537f5f2",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "missing-breaking",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4527,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes enthalten keine aus dem Text selbst erkennbaren Verstöße. Die Versionsnummer ist mit der aufgeführten Breaking Change vereinbar; Aussagen und Migrationsschritte lassen sich ohne Quellen nicht weiter prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes enthalten keine aus dem Text selbst erkennbaren Verstöße. Die Versionsnummer ist mit der aufgeführten Breaking Change vereinbar; Aussagen und Migrationsschritte lassen sich ohne Quellen nicht weiter prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25296,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 62,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-4185-7a00-b599-a2a99bf3494c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes enthalten keine aus dem Text selbst erkennbaren Verstöße. Die Versionsnummer ist mit der aufgeführten Breaking Change vereinbar; Aussagen und Migrationsschritte lassen sich ohne Quellen nicht weiter prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25296,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

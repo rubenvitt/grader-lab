@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "f64b79a2105df770f3777462",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "wrong-migration",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5887,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. PR #307 belegt nur, dass `removeOnComplete` standardmäßig von `false` auf `true` geändert wird; der Diff belegt weder diese Abrufgarantie noch den Zeitpunkt der Entfernung.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration empfiehlt `defaultJobOptions: { keepCompleted: true }`. Die Quelle nennt jedoch die Option `removeOnComplete`; um den bisherigen Standard beizubehalten, muss `defaultJobOptions: { removeOnComplete: false }` gesetzt werden.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, der Job sitze nach einem synchronen Fehler nicht mehr bis zum Ablauf der Sperre in `active`. PR #304 zeigt, dass die Sperre im `finally`-Block freigegeben wird, belegt aber keine Änderung des Jobstatus.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die verbleibenden nutzerrelevanten Änderungen und ordnen den geänderten Standardwert als Breaking Change ein. Zwei Aussagen gehen über die Diffs hinaus; außerdem verwendet die Migration einen nicht belegten Optionsnamen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. PR #307 belegt nur, dass `removeOnComplete` standardmäßig von `false` auf `true` geändert wird; der Diff belegt weder diese Abrufgarantie noch den Zeitpunkt der Entfernung."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration empfiehlt `defaultJobOptions: { keepCompleted: true }`. Die Quelle nennt jedoch die Option `removeOnComplete`; um den bisherigen Standard beizubehalten, muss `defaultJobOptions: { removeOnComplete: false }` gesetzt werden."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, der Job sitze nach einem synchronen Fehler nicht mehr bis zum Ablauf der Sperre in `active`. PR #304 zeigt, dass die Sperre im `finally`-Block freigegeben wird, belegt aber keine Änderung des Jobstatus."
+   }
+  ],
+  "reason": "Die Notes erfassen die verbleibenden nutzerrelevanten Änderungen und ordnen den geänderten Standardwert als Breaking Change ein. Zwei Aussagen gehen über die Diffs hinaus; außerdem verwendet die Migration einen nicht belegten Optionsnamen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25985,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 305,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-56cd-7581-89ff-f0f2464129bc"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. PR #307 belegt nur, dass `removeOnComplete` standardmäßig von `false` auf `true` geändert wird; der Diff belegt weder diese Abrufgarantie noch den Zeitpunkt der Entfernung.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration empfiehlt `defaultJobOptions: { keepCompleted: true }`. Die Quelle nennt jedoch die Option `removeOnComplete`; um den bisherigen Standard beizubehalten, muss `defaultJobOptions: { removeOnComplete: false }` gesetzt werden.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, der Job sitze nach einem synchronen Fehler nicht mehr bis zum Ablauf der Sperre in `active`. PR #304 zeigt, dass die Sperre im `finally`-Block freigegeben wird, belegt aber keine Änderung des Jobstatus.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die verbleibenden nutzerrelevanten Änderungen und ordnen den geänderten Standardwert als Breaking Change ein. Zwei Aussagen gehen über die Diffs hinaus; außerdem verwendet die Migration einen nicht belegten Optionsnamen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25985,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 305,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

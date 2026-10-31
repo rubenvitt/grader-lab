@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "d920314a197f6ae71efcba95",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "paraphrase",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6162,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #395 behauptet, dass Jobs durch Jitter nicht alle gleichzeitig zurückkehren. Der Diff berechnet zufällige, abgerundete Verzögerungen; gleiche Verzögerungen bleiben möglich.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für das veraltete boolesche Argument von `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff entspricht `worker.pause(false)` jedoch `worker.pause({ drain: false })`.\"}],\"reason\":\"Die Notes enthalten eine nicht garantierte Aussage zur Jitter-Strategie und einen Migrationsschritt, der für `worker.pause(false)` das Verhalten verändert. Die übrigen geprüften Angaben und die Major-Version sind durch die Quellen gedeckt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #395 behauptet, dass Jobs durch Jitter nicht alle gleichzeitig zurückkehren. Der Diff berechnet zufällige, abgerundete Verzögerungen; gleiche Verzögerungen bleiben möglich."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für das veraltete boolesche Argument von `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff entspricht `worker.pause(false)` jedoch `worker.pause({ drain: false })`."
+   }
+  ],
+  "reason": "Die Notes enthalten eine nicht garantierte Aussage zur Jitter-Strategie und einen Migrationsschritt, der für `worker.pause(false)` das Verhalten verändert. Die übrigen geprüften Angaben und die Major-Version sind durch die Quellen gedeckt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26963,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 234,
+  "reasoning_output_tokens": 51
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19412-344b-7da0-899e-8e02d7dbec1b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #395 behauptet, dass Jobs durch Jitter nicht alle gleichzeitig zurückkehren. Der Diff berechnet zufällige, abgerundete Verzögerungen; gleiche Verzögerungen bleiben möglich.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für das veraltete boolesche Argument von `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut Diff entspricht `worker.pause(false)` jedoch `worker.pause({ drain: false })`.\"}],\"reason\":\"Die Notes enthalten eine nicht garantierte Aussage zur Jitter-Strategie und einen Migrationsschritt, der für `worker.pause(false)` das Verhalten verändert. Die übrigen geprüften Angaben und die Major-Version sind durch die Quellen gedeckt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26963,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 234,
+    "reasoning_output_tokens": 51
+   }
+  }
+ ]
+}

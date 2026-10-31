@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "a80eb328568efbc65efab28d",
+ "meta": {
+  "experiment": "e1",
+  "release": "r2",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4566,
+ "text": "{\"reason\":\"Fassung A beschreibt den Fix konkreter und zurückhaltender. Fassung B verspricht dagegen, dass Worker ihre Locks bei Redis-Failovers behalten und sich die Erneuerung automatisch neu verbindet; dafür liefern die vorliegenden Texte keinen Beleg.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A beschreibt den Fix konkreter und zurückhaltender. Fassung B verspricht dagegen, dass Worker ihre Locks bei Redis-Failovers behalten und sich die Erneuerung automatisch neu verbindet; dafür liefern die vorliegenden Texte keinen Beleg.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24538,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 68,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19409-5ed6-7390-8e0d-7564fe8fcde1"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A beschreibt den Fix konkreter und zurückhaltender. Fassung B verspricht dagegen, dass Worker ihre Locks bei Redis-Failovers behalten und sich die Erneuerung automatisch neu verbindet; dafür liefern die vorliegenden Texte keinen Beleg.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24538,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 68,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

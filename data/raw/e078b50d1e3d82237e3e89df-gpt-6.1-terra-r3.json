@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "e078b50d1e3d82237e3e89df",
+ "meta": {
+  "experiment": "e1",
+  "release": "r4",
+  "variant": "useless-true",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5795,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Der Feature-Eintrag nennt weder den Rate Limiter noch die Option `limiter: { max, perMs }`, deren Wirkung und das separate Limit pro Worker-Instanz.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Deprecation-Eintrag nennt die Option `timeout` nicht und lässt weg, dass sie vorerst weiter funktioniert und einmalig eine Warnung ausgibt.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationshinweis fehlt: Nutzer sollen `timeout` durch `timeoutMs` ersetzen.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung behauptet Fehlerbehebungen, für die es in der Referenz keine Entsprechung gibt.\"}],\"reason\":\"Der Kandidat verschweigt wesentliche Angaben zu beiden Änderungen und den konkreten Migrationsschritt. Außerdem behauptet er nicht belegte Fehlerbehebungen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "Der Feature-Eintrag nennt weder den Rate Limiter noch die Option `limiter: { max, perMs }`, deren Wirkung und das separate Limit pro Worker-Instanz."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Deprecation-Eintrag nennt die Option `timeout` nicht und lässt weg, dass sie vorerst weiter funktioniert und einmalig eine Warnung ausgibt."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Der Migrationshinweis fehlt: Nutzer sollen `timeout` durch `timeoutMs` ersetzen."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung behauptet Fehlerbehebungen, für die es in der Referenz keine Entsprechung gibt."
+   }
+  ],
+  "reason": "Der Kandidat verschweigt wesentliche Angaben zu beiden Änderungen und den konkreten Migrationsschritt. Außerdem behauptet er nicht belegte Fehlerbehebungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25312,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 204,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940f-7c0f-7d22-a5b7-939b159713d1"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Der Feature-Eintrag nennt weder den Rate Limiter noch die Option `limiter: { max, perMs }`, deren Wirkung und das separate Limit pro Worker-Instanz.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Deprecation-Eintrag nennt die Option `timeout` nicht und lässt weg, dass sie vorerst weiter funktioniert und einmalig eine Warnung ausgibt.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationshinweis fehlt: Nutzer sollen `timeout` durch `timeoutMs` ersetzen.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung behauptet Fehlerbehebungen, für die es in der Referenz keine Entsprechung gibt.\"}],\"reason\":\"Der Kandidat verschweigt wesentliche Angaben zu beiden Änderungen und den konkreten Migrationsschritt. Außerdem behauptet er nicht belegte Fehlerbehebungen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25312,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 204,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "0822163faf4f377b96542b4f",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reverted-listed",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4268,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben konkrete Änderungen und nennen für die als Breaking Change gekennzeichnete Änderung einen Migrationsschritt. Aus dem Text allein ergeben sich keine überprüfbaren Verstöße gegen die Rubrik.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben konkrete Änderungen und nennen für die als Breaking Change gekennzeichnete Änderung einen Migrationsschritt. Aus dem Text allein ergeben sich keine überprüfbaren Verstöße gegen die Rubrik.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24442,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 62,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-6b8d-7322-a7be-a55858f44a5d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben konkrete Änderungen und nennen für die als Breaking Change gekennzeichnete Änderung einen Migrationsschritt. Aus dem Text allein ergeben sich keine überprüfbaren Verstöße gegen die Rubrik.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24442,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

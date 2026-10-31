@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "e896a977a44ddca4a17ca2af",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "invented-claim",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5480,
+ "text": "{\"reason\":\"Fassung B verzichtet auf die konkrete Angabe, dass große Importe etwa 40 % schneller seien. Für diese Zahl liefert das Prüfmaterial keinen Beleg; ansonsten sind die Fassungen inhaltlich gleich.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B verzichtet auf die konkrete Angabe, dass große Importe etwa 40 % schneller seien. Für diese Zahl liefert das Prüfmaterial keinen Beleg; ansonsten sind die Fassungen inhaltlich gleich.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25536,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 95,
+  "reasoning_output_tokens": 33
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940b-f335-7342-84d2-712bb219d3ac"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B verzichtet auf die konkrete Angabe, dass große Importe etwa 40 % schneller seien. Für diese Zahl liefert das Prüfmaterial keinen Beleg; ansonsten sind die Fassungen inhaltlich gleich.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25536,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 95,
+    "reasoning_output_tokens": 33
+   }
+  }
+ ]
+}

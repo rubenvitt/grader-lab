@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "171d14e4b43bf7014764a5dc",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "hype-tone",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 9044,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Bei #307 behaupten die Notes, abgeschlossene Jobs könnten ohne ausdrückliche Einstellung nicht mehr abgerufen werden. Der Diff zeigt nur die Änderung des Defaults für `removeOnComplete` und belegt keine Aussage zum Abruf.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Bei #304 behaupten die Notes, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff belegt die Freigabe des Locks im `finally`-Block, aber keine Änderung des Jobstatus.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes nennen den CLI-Aufruf `quaykit inspect --json`. Der Diff zu #318 zeigt die Verarbeitung von `argv.json`, aber nicht, dass die Befehlszeilenoption `--json` auf dieses Feld abgebildet wird.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Die Einleitung und die Einträge enthalten Werbesprache und Superlative, etwa „leanest quaykit ever“, „game-changing“, „Unleash the power of automation“ und „Rock-solid locks“.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten unbelegte Aussagen über den Abruf abgeschlossener Jobs, den Jobstatus und die konkrete CLI-Option. Außerdem verstoßen mehrere Formulierungen gegen den geforderten sachlichen Ton.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Bei #307 behaupten die Notes, abgeschlossene Jobs könnten ohne ausdrückliche Einstellung nicht mehr abgerufen werden. Der Diff zeigt nur die Änderung des Defaults für `removeOnComplete` und belegt keine Aussage zum Abruf."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Bei #304 behaupten die Notes, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff belegt die Freigabe des Locks im `finally`-Block, aber keine Änderung des Jobstatus."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes nennen den CLI-Aufruf `quaykit inspect --json`. Der Diff zu #318 zeigt die Verarbeitung von `argv.json`, aber nicht, dass die Befehlszeilenoption `--json` auf dieses Feld abgebildet wird."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Einleitung und die Einträge enthalten Werbesprache und Superlative, etwa „leanest quaykit ever“, „game-changing“, „Unleash the power of automation“ und „Rock-solid locks“."
+   }
+  ],
+  "reason": "Die Notes enthalten unbelegte Aussagen über den Abruf abgeschlossener Jobs, den Jobstatus und die konkrete CLI-Option. Außerdem verstoßen mehrere Formulierungen gegen den geforderten sachlichen Ton.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26860,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 455,
+  "reasoning_output_tokens": 114
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-cac6-7711-a2bd-22c2747de11a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Bei #307 behaupten die Notes, abgeschlossene Jobs könnten ohne ausdrückliche Einstellung nicht mehr abgerufen werden. Der Diff zeigt nur die Änderung des Defaults für `removeOnComplete` und belegt keine Aussage zum Abruf.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Bei #304 behaupten die Notes, der Job bleibe nach einem synchronen Fehler nicht mehr bis zum Ablauf des Locks im Status „active“. Der Diff belegt die Freigabe des Locks im `finally`-Block, aber keine Änderung des Jobstatus.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes nennen den CLI-Aufruf `quaykit inspect --json`. Der Diff zu #318 zeigt die Verarbeitung von `argv.json`, aber nicht, dass die Befehlszeilenoption `--json` auf dieses Feld abgebildet wird.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Die Einleitung und die Einträge enthalten Werbesprache und Superlative, etwa „leanest quaykit ever“, „game-changing“, „Unleash the power of automation“ und „Rock-solid locks“.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten unbelegte Aussagen über den Abruf abgeschlossener Jobs, den Jobstatus und die konkrete CLI-Option. Außerdem verstoßen mehrere Formulierungen gegen den geforderten sachlichen Ton.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26860,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 455,
+    "reasoning_output_tokens": 114
+   }
+  }
+ ]
+}

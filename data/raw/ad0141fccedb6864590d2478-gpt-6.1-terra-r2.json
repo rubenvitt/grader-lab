@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "ad0141fccedb6864590d2478",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "hype-tone",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5135,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung bezeichnet das Release als „the leanest quaykit ever“ und „game-changing“ und behauptet, es mache Worker „more bulletproof than ever“. Auch Formulierungen wie „Unleash the power of automation“ und „Rock-solid locks“ sind Werbesprache.\"}],\"reason\":\"Die Notes enthalten werbliche Formulierungen und Superlative. Die übrigen Kriterien lassen sich anhand des Textes nicht als verletzt feststellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Die Einleitung bezeichnet das Release als „the leanest quaykit ever“ und „game-changing“ und behauptet, es mache Worker „more bulletproof than ever“. Auch Formulierungen wie „Unleash the power of automation“ und „Rock-solid locks“ sind Werbesprache."
+   }
+  ],
+  "reason": "Die Notes enthalten werbliche Formulierungen und Superlative. Die übrigen Kriterien lassen sich anhand des Textes nicht als verletzt feststellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24431,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 118,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19407-e4b3-7951-b488-bc4071d7a089"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung bezeichnet das Release als „the leanest quaykit ever“ und „game-changing“ und behauptet, es mache Worker „more bulletproof than ever“. Auch Formulierungen wie „Unleash the power of automation“ und „Rock-solid locks“ sind Werbesprache.\"}],\"reason\":\"Die Notes enthalten werbliche Formulierungen und Superlative. Die übrigen Kriterien lassen sich anhand des Textes nicht als verletzt feststellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24431,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 118,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

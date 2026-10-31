@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "884ef3aebb2dcaf19862ba5b",
+ "meta": {
+  "experiment": "e1",
+  "release": "r1",
+  "variant": "reordered",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4761,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes benennen die Änderung des Defaults als Breaking Change und enthalten einen konkreten Migrationsschritt. Aus dem Text allein sind keine weiteren Verstöße erkennbar; Aussagen, die Quellen erfordern, gelten gemäß Vorgabe als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes benennen die Änderung des Defaults als Breaking Change und enthalten einen konkreten Migrationsschritt. Aus dem Text allein sind keine weiteren Verstöße erkennbar; Aussagen, die Quellen erfordern, gelten gemäß Vorgabe als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25257,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 69,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19408-d76c-7550-a6c9-2b47b226c04f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes benennen die Änderung des Defaults als Breaking Change und enthalten einen konkreten Migrationsschritt. Aus dem Text allein sind keine weiteren Verstöße erkennbar; Aussagen, die Quellen erfordern, gelten gemäß Vorgabe als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25257,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 69,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

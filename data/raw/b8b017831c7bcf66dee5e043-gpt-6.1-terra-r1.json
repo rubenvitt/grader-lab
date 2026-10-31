@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "b8b017831c7bcf66dee5e043",
+ "meta": {
+  "experiment": "e1",
+  "release": "r3",
+  "variant": "internal-noise",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4139,
+ "text": "{\"reason\":\"Fassung B ist besser, weil sie den CI-Eintrag auslässt. Dieser betrifft interne Tests und ist nach R6 für Nutzer der Bibliothek nicht relevant; ansonsten sind die Fassungen identisch.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist besser, weil sie den CI-Eintrag auslässt. Dieser betrifft interne Tests und ist nach R6 für Nutzer der Bibliothek nicht relevant; ansonsten sind die Fassungen identisch.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25541,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 59,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1940c-8654-7981-a5eb-fd1843e79d4c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist besser, weil sie den CI-Eintrag auslässt. Dieser betrifft interne Tests und ist nach R6 für Nutzer der Bibliothek nicht relevant; ansonsten sind die Fassungen identisch.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25541,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

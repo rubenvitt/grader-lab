@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "a2ce3966cf406ed7923c4be4",
+ "meta": {
+  "experiment": "e1",
+  "release": "r5",
+  "variant": "ghost-pr",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 6041,
+ "text": "{\"violations\":[],\"reason\":\"Der Text ist in sich konsistent und nennt konkrete Änderungen sowie Migrationsschritte. Ob die Aussagen und Schritte den Quellen entsprechen, lässt sich ohne PRs und Diffs nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Text ist in sich konsistent und nennt konkrete Änderungen sowie Migrationsschritte. Ob die Aussagen und Schritte den Quellen entsprechen, lässt sich ohne PRs und Diffs nicht prüfen und gilt daher als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24499,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 63,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19410-c2e4-7db0-990d-4a63bf125da5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Text ist in sich konsistent und nennt konkrete Änderungen sowie Migrationsschritte. Ob die Aussagen und Schritte den Quellen entsprechen, lässt sich ohne PRs und Diffs nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24499,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 63,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}
