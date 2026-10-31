@@ -1,6 +1,6 @@
 // Recomputes every figure from data/results (itself replayed from data/raw by `npm run report`)
-// and writes summary.json, demo.json and docs/findings.md.
-import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
+// and writes summary.json, demo.json and docs/findings.md, and copies both JSONs into site/data for the demo.
+import { copyFileSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { flakiness, matrix, ratesByGrader, roganGladen, verdicts } from './aggregate.mjs';
 import { loadReleases } from './fixtures.mjs';
@@ -243,5 +243,6 @@ if (import.meta.main) {
   writeFileSync(join(RESULTS, 'summary.json'), `${JSON.stringify(summary, null, 1)}\n`);
   writeFileSync(join(RESULTS, 'demo.json'), `${JSON.stringify(demoData(inputs, prompts))}\n`);
   writeFileSync(join(root, 'docs/findings.md'), renderFindings(summary, inputs));
+  for (const file of ['summary.json', 'demo.json']) copyFileSync(join(RESULTS, file), join(root, 'site/data', file));
   console.log(JSON.stringify({ used: summary.raw.used, summary_kb: readFileSync(join(RESULTS, 'summary.json')).length >> 10, demo_kb: readFileSync(join(RESULTS, 'demo.json')).length >> 10 }));
 }

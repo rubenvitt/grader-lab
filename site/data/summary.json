@@ -1,0 +1,2777 @@
+{
+ "prompt_version": "v1",
+ "models": {
+  "agent": "gpt-6-luna",
+  "judge": "gpt-6.1-terra",
+  "effort": "low"
+ },
+ "raw": {
+  "answers": 1259,
+  "errors": 6,
+  "used": 1265,
+  "smoke": 3,
+  "reconnect_notices": 76,
+  "tainted": 5,
+  "tainted_tool_use": 0,
+  "judge_models": [
+   "gpt-6.1-terra"
+  ],
+  "agent_models": [
+   "gpt-6-luna"
+  ]
+ },
+ "counts": {
+  "artifacts": 83,
+  "controls": 24,
+  "mutations": 59,
+  "not_applicable": 13
+ },
+ "matrix": {
+  "schema": {
+   "missing-breaking": {
+    "found": 1,
+    "total": 3,
+    "rate": 0.3333333333333333
+   },
+   "wrong-bump": {
+    "found": 3,
+    "total": 3,
+    "rate": 1
+   },
+   "ghost-pr": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "invented-claim": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "wrong-migration": {
+    "found": 0,
+    "total": 5,
+    "rate": 0
+   },
+   "reverted-listed": {
+    "found": 1,
+    "total": 3,
+    "rate": 0.3333333333333333
+   },
+   "internal-noise": {
+    "found": 4,
+    "total": 6,
+    "rate": 0.6666666666666666
+   },
+   "hype-tone": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "useless-true": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "false-success": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "lucky-path": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "gold": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "paraphrase": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "reordered": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "extra-diligent": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "embargo-leak": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   }
+  },
+  "pr-refs": {
+   "missing-breaking": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "wrong-bump": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "ghost-pr": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "invented-claim": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "wrong-migration": {
+    "found": 0,
+    "total": 5,
+    "rate": 0
+   },
+   "reverted-listed": {
+    "found": 3,
+    "total": 3,
+    "rate": 1
+   },
+   "internal-noise": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "hype-tone": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "useless-true": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "false-success": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "lucky-path": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "gold": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "paraphrase": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "reordered": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "extra-diligent": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "embargo-leak": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   }
+  },
+  "semver-labels": {
+   "missing-breaking": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "wrong-bump": {
+    "found": 1,
+    "total": 3,
+    "rate": 0.3333333333333333
+   },
+   "ghost-pr": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "invented-claim": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "wrong-migration": {
+    "found": 0,
+    "total": 5,
+    "rate": 0
+   },
+   "reverted-listed": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "internal-noise": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "hype-tone": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "useless-true": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "false-success": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "lucky-path": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "gold": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "paraphrase": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "reordered": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "extra-diligent": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "embargo-leak": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   }
+  },
+  "wording": {
+   "missing-breaking": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "wrong-bump": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "ghost-pr": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "invented-claim": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "wrong-migration": {
+    "found": 0,
+    "total": 5,
+    "rate": 0
+   },
+   "reverted-listed": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "internal-noise": {
+    "found": 5,
+    "total": 6,
+    "rate": 0.8333333333333334
+   },
+   "hype-tone": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "useless-true": {
+    "found": 4,
+    "total": 6,
+    "rate": 0.6666666666666666
+   },
+   "false-success": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "lucky-path": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "gold": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "paraphrase": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "reordered": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "extra-diligent": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "embargo-leak": {
+    "found": 2,
+    "total": 3,
+    "rate": 0.6666666666666666
+   }
+  },
+  "ref-similarity": {
+   "missing-breaking": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "wrong-bump": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "ghost-pr": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "invented-claim": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "wrong-migration": {
+    "found": 0,
+    "total": 5,
+    "rate": 0
+   },
+   "reverted-listed": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "internal-noise": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "hype-tone": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "useless-true": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "false-success": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "lucky-path": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "gold": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "paraphrase": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "reordered": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "extra-diligent": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "embargo-leak": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   }
+  },
+  "functional": {
+   "missing-breaking": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "wrong-bump": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "ghost-pr": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "invented-claim": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "wrong-migration": {
+    "found": 0,
+    "total": 5,
+    "rate": 0
+   },
+   "reverted-listed": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "internal-noise": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "hype-tone": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "useless-true": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "false-success": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "lucky-path": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "gold": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "paraphrase": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "reordered": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "extra-diligent": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "embargo-leak": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   }
+  },
+  "trajectory": {
+   "missing-breaking": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "wrong-bump": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "ghost-pr": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "invented-claim": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "wrong-migration": {
+    "found": 0,
+    "total": 5,
+    "rate": 0
+   },
+   "reverted-listed": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "internal-noise": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "hype-tone": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "useless-true": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "false-success": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "lucky-path": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "gold": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "paraphrase": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "reordered": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "extra-diligent": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "embargo-leak": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   }
+  },
+  "judge-ref": {
+   "missing-breaking": {
+    "found": 3,
+    "total": 3,
+    "rate": 1
+   },
+   "wrong-bump": {
+    "found": 3,
+    "total": 3,
+    "rate": 1
+   },
+   "ghost-pr": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "invented-claim": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "wrong-migration": {
+    "found": 5,
+    "total": 5,
+    "rate": 1
+   },
+   "reverted-listed": {
+    "found": 3,
+    "total": 3,
+    "rate": 1
+   },
+   "internal-noise": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "hype-tone": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "useless-true": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "false-success": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "lucky-path": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "gold": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "paraphrase": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "reordered": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "extra-diligent": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "embargo-leak": {
+    "found": 3,
+    "total": 3,
+    "rate": 1
+   }
+  },
+  "judge-sourced": {
+   "missing-breaking": {
+    "found": 3,
+    "total": 3,
+    "rate": 1
+   },
+   "wrong-bump": {
+    "found": 3,
+    "total": 3,
+    "rate": 1
+   },
+   "ghost-pr": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "invented-claim": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "wrong-migration": {
+    "found": 5,
+    "total": 5,
+    "rate": 1
+   },
+   "reverted-listed": {
+    "found": 3,
+    "total": 3,
+    "rate": 1
+   },
+   "internal-noise": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "hype-tone": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "useless-true": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "false-success": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "lucky-path": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "gold": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "paraphrase": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "reordered": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "extra-diligent": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "embargo-leak": {
+    "found": 3,
+    "total": 3,
+    "rate": 1
+   }
+  },
+  "judge-blind": {
+   "missing-breaking": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "wrong-bump": {
+    "found": 2,
+    "total": 3,
+    "rate": 0.6666666666666666
+   },
+   "ghost-pr": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "invented-claim": {
+    "found": 1,
+    "total": 6,
+    "rate": 0.16666666666666666
+   },
+   "wrong-migration": {
+    "found": 1,
+    "total": 5,
+    "rate": 0.2
+   },
+   "reverted-listed": {
+    "found": 1,
+    "total": 3,
+    "rate": 0.3333333333333333
+   },
+   "internal-noise": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "hype-tone": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "useless-true": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "false-success": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "lucky-path": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "gold": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "paraphrase": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "reordered": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "extra-diligent": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "embargo-leak": {
+    "found": 1,
+    "total": 3,
+    "rate": 0.3333333333333333
+   }
+  },
+  "pairwise": {
+   "missing-breaking": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "wrong-bump": {
+    "found": 3,
+    "total": 3,
+    "rate": 1
+   },
+   "ghost-pr": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "invented-claim": {
+    "found": 2,
+    "total": 6,
+    "rate": 0.3333333333333333
+   },
+   "wrong-migration": {
+    "found": 2,
+    "total": 5,
+    "rate": 0.4
+   },
+   "reverted-listed": {
+    "found": 0,
+    "total": 3,
+    "rate": 0
+   },
+   "internal-noise": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "hype-tone": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "useless-true": {
+    "found": 6,
+    "total": 6,
+    "rate": 1
+   },
+   "false-success": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "lucky-path": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "gold": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "paraphrase": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "reordered": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "extra-diligent": {
+    "found": 0,
+    "total": 6,
+    "rate": 0
+   },
+   "embargo-leak": {
+    "found": 3,
+    "total": 3,
+    "rate": 1
+   }
+  }
+ },
+ "rates": {
+  "schema": {
+   "tpr": 1,
+   "tnr": 0.15254237288135594,
+   "clean": 24,
+   "faulty": 59
+  },
+  "pr-refs": {
+   "tpr": 1,
+   "tnr": 0.15254237288135594,
+   "clean": 24,
+   "faulty": 59
+  },
+  "semver-labels": {
+   "tpr": 1,
+   "tnr": 0.01694915254237288,
+   "clean": 24,
+   "faulty": 59
+  },
+  "wording": {
+   "tpr": 1,
+   "tnr": 0.288135593220339,
+   "clean": 24,
+   "faulty": 59
+  },
+  "ref-similarity": {
+   "tpr": 0.75,
+   "tnr": 0.1016949152542373,
+   "clean": 24,
+   "faulty": 59
+  },
+  "functional": {
+   "tpr": 1,
+   "tnr": 0.1016949152542373,
+   "clean": 24,
+   "faulty": 59
+  },
+  "trajectory": {
+   "tpr": 1,
+   "tnr": 0.1016949152542373,
+   "clean": 24,
+   "faulty": 59
+  },
+  "judge-ref": {
+   "tpr": 1,
+   "tnr": 0.7966101694915254,
+   "clean": 24,
+   "faulty": 59
+  },
+  "judge-sourced": {
+   "tpr": 0,
+   "tnr": 1,
+   "clean": 24,
+   "faulty": 59
+  },
+  "judge-blind": {
+   "tpr": 1,
+   "tnr": 0.4067796610169492,
+   "clean": 24,
+   "faulty": 59
+  },
+  "pairwise": {
+   "tpr": 1,
+   "tnr": 0.4745762711864407,
+   "clean": 24,
+   "faulty": 59
+  }
+ },
+ "rates_unique_text": {
+  "judge-ref": {
+   "tpr": 1,
+   "tnr": 1,
+   "clean": 18,
+   "faulty": 47
+  },
+  "judge-sourced": {
+   "tpr": 0,
+   "tnr": 1,
+   "clean": 18,
+   "faulty": 47
+  },
+  "judge-blind": {
+   "tpr": 1,
+   "tnr": 0.5106382978723404,
+   "clean": 18,
+   "faulty": 47
+  },
+  "pairwise": {
+   "tpr": 1,
+   "tnr": 0.5957446808510638,
+   "clean": 18,
+   "faulty": 47
+  }
+ },
+ "flakiness": {
+  "judge-ref": {
+   "disagreeing": 0,
+   "total": 83,
+   "rate": 0
+  },
+  "judge-sourced": {
+   "disagreeing": 5,
+   "total": 83,
+   "rate": 0.060240963855421686
+  },
+  "judge-blind": {
+   "disagreeing": 3,
+   "total": 83,
+   "rate": 0.03614457831325301
+  },
+  "pairwise": {
+   "disagreeing": 4,
+   "total": 83,
+   "rate": 0.04819277108433735
+  }
+ },
+ "flakiness_unique_text": {
+  "judge-ref": {
+   "disagreeing": 0,
+   "total": 65,
+   "rate": 0
+  },
+  "judge-sourced": {
+   "disagreeing": 2,
+   "total": 65,
+   "rate": 0.03076923076923077
+  },
+  "judge-blind": {
+   "disagreeing": 3,
+   "total": 65,
+   "rate": 0.046153846153846156
+  },
+  "pairwise": {
+   "disagreeing": 4,
+   "total": 65,
+   "rate": 0.06153846153846154
+  }
+ },
+ "disagreements": [
+  {
+   "release": "r1",
+   "variant": "missing-breaking",
+   "grader": "pairwise",
+   "passes": 2,
+   "reps": 3
+  },
+  {
+   "release": "r1",
+   "variant": "wrong-bump",
+   "grader": "judge-blind",
+   "passes": 1,
+   "reps": 3
+  },
+  {
+   "release": "r1",
+   "variant": "reordered",
+   "grader": "judge-sourced",
+   "passes": 1,
+   "reps": 3
+  },
+  {
+   "release": "r2",
+   "variant": "embargo-leak",
+   "grader": "pairwise",
+   "passes": 1,
+   "reps": 3
+  },
+  {
+   "release": "r3",
+   "variant": "wrong-bump",
+   "grader": "judge-blind",
+   "passes": 2,
+   "reps": 3
+  },
+  {
+   "release": "r3",
+   "variant": "embargo-leak",
+   "grader": "pairwise",
+   "passes": 1,
+   "reps": 3
+  },
+  {
+   "release": "r4",
+   "variant": "false-success",
+   "grader": "judge-sourced",
+   "passes": 1,
+   "reps": 3
+  },
+  {
+   "release": "r4",
+   "variant": "lucky-path",
+   "grader": "judge-sourced",
+   "passes": 1,
+   "reps": 3
+  },
+  {
+   "release": "r4",
+   "variant": "gold",
+   "grader": "judge-sourced",
+   "passes": 1,
+   "reps": 3
+  },
+  {
+   "release": "r4",
+   "variant": "extra-diligent",
+   "grader": "judge-sourced",
+   "passes": 1,
+   "reps": 3
+  },
+  {
+   "release": "r5",
+   "variant": "invented-claim",
+   "grader": "pairwise",
+   "passes": 2,
+   "reps": 3
+  },
+  {
+   "release": "r6",
+   "variant": "embargo-leak",
+   "grader": "judge-blind",
+   "passes": 2,
+   "reps": 3
+  }
+ ],
+ "pairwise_order": {
+  "total": 249,
+  "consistent": 234,
+  "inconsistent": 15,
+  "one_equal": 14,
+  "flips": 1
+ },
+ "pass_violation_mismatch": 0,
+ "hypotheses": [
+  {
+   "variant": "missing-breaking",
+   "expected": "Judge mit Quellen, Referenz",
+   "graders": [
+    "judge-sourced",
+    "judge-ref",
+    "ref-similarity"
+   ],
+   "found": {
+    "judge-sourced": {
+     "found": 3,
+     "total": 3,
+     "rate": 1
+    },
+    "judge-ref": {
+     "found": 3,
+     "total": 3,
+     "rate": 1
+    },
+    "ref-similarity": {
+     "found": 0,
+     "total": 3,
+     "rate": 0
+    }
+   },
+   "others": [
+    "schema"
+   ],
+   "outcome": "teilweise"
+  },
+  {
+   "variant": "wrong-bump",
+   "expected": "Code nur, falls Labels es hergeben",
+   "graders": [
+    "semver-labels"
+   ],
+   "found": {
+    "semver-labels": {
+     "found": 1,
+     "total": 3,
+     "rate": 0.3333333333333333
+    }
+   },
+   "others": [
+    "schema",
+    "judge-ref",
+    "judge-sourced",
+    "judge-blind",
+    "pairwise"
+   ],
+   "outcome": "teilweise"
+  },
+  {
+   "variant": "ghost-pr",
+   "expected": "Code",
+   "graders": [
+    "pr-refs"
+   ],
+   "found": {
+    "pr-refs": {
+     "found": 6,
+     "total": 6,
+     "rate": 1
+    }
+   },
+   "others": [
+    "judge-ref",
+    "judge-sourced"
+   ],
+   "outcome": "eingetreten"
+  },
+  {
+   "variant": "invented-claim",
+   "expected": "Judge mit Quellen",
+   "graders": [
+    "judge-sourced"
+   ],
+   "found": {
+    "judge-sourced": {
+     "found": 6,
+     "total": 6,
+     "rate": 1
+    }
+   },
+   "others": [
+    "judge-ref",
+    "judge-blind",
+    "pairwise"
+   ],
+   "outcome": "eingetreten"
+  },
+  {
+   "variant": "wrong-migration",
+   "expected": "Judge mit Quellen, Referenz",
+   "graders": [
+    "judge-sourced",
+    "judge-ref",
+    "ref-similarity"
+   ],
+   "found": {
+    "judge-sourced": {
+     "found": 5,
+     "total": 5,
+     "rate": 1
+    },
+    "judge-ref": {
+     "found": 5,
+     "total": 5,
+     "rate": 1
+    },
+    "ref-similarity": {
+     "found": 0,
+     "total": 5,
+     "rate": 0
+    }
+   },
+   "others": [
+    "judge-blind",
+    "pairwise"
+   ],
+   "outcome": "teilweise"
+  },
+  {
+   "variant": "reverted-listed",
+   "expected": "Judge, Code mit Revert-Regel",
+   "graders": [
+    "judge-ref",
+    "judge-sourced",
+    "judge-blind",
+    "pr-refs"
+   ],
+   "found": {
+    "judge-ref": {
+     "found": 3,
+     "total": 3,
+     "rate": 1
+    },
+    "judge-sourced": {
+     "found": 3,
+     "total": 3,
+     "rate": 1
+    },
+    "judge-blind": {
+     "found": 1,
+     "total": 3,
+     "rate": 0.3333333333333333
+    },
+    "pr-refs": {
+     "found": 3,
+     "total": 3,
+     "rate": 1
+    }
+   },
+   "others": [
+    "schema"
+   ],
+   "outcome": "teilweise"
+  },
+  {
+   "variant": "embargo-leak",
+   "expected": "Wording, Judge",
+   "graders": [
+    "wording",
+    "judge-ref",
+    "judge-sourced",
+    "judge-blind"
+   ],
+   "found": {
+    "wording": {
+     "found": 2,
+     "total": 3,
+     "rate": 0.6666666666666666
+    },
+    "judge-ref": {
+     "found": 3,
+     "total": 3,
+     "rate": 1
+    },
+    "judge-sourced": {
+     "found": 3,
+     "total": 3,
+     "rate": 1
+    },
+    "judge-blind": {
+     "found": 1,
+     "total": 3,
+     "rate": 0.3333333333333333
+    }
+   },
+   "others": [
+    "pairwise"
+   ],
+   "outcome": "teilweise"
+  },
+  {
+   "variant": "internal-noise",
+   "expected": "Judge, Wording teilweise",
+   "graders": [
+    "judge-ref",
+    "judge-sourced",
+    "judge-blind",
+    "wording"
+   ],
+   "found": {
+    "judge-ref": {
+     "found": 6,
+     "total": 6,
+     "rate": 1
+    },
+    "judge-sourced": {
+     "found": 6,
+     "total": 6,
+     "rate": 1
+    },
+    "judge-blind": {
+     "found": 6,
+     "total": 6,
+     "rate": 1
+    },
+    "wording": {
+     "found": 5,
+     "total": 6,
+     "rate": 0.8333333333333334
+    }
+   },
+   "others": [
+    "schema",
+    "pairwise"
+   ],
+   "outcome": "teilweise"
+  },
+  {
+   "variant": "hype-tone",
+   "expected": "Wording, Judge",
+   "graders": [
+    "wording",
+    "judge-ref",
+    "judge-sourced",
+    "judge-blind"
+   ],
+   "found": {
+    "wording": {
+     "found": 6,
+     "total": 6,
+     "rate": 1
+    },
+    "judge-ref": {
+     "found": 6,
+     "total": 6,
+     "rate": 1
+    },
+    "judge-sourced": {
+     "found": 6,
+     "total": 6,
+     "rate": 1
+    },
+    "judge-blind": {
+     "found": 6,
+     "total": 6,
+     "rate": 1
+    }
+   },
+   "others": [
+    "pairwise"
+   ],
+   "outcome": "eingetreten"
+  },
+  {
+   "variant": "useless-true",
+   "expected": "Judge, Mensch",
+   "graders": [
+    "judge-ref",
+    "judge-sourced",
+    "judge-blind"
+   ],
+   "found": {
+    "judge-ref": {
+     "found": 6,
+     "total": 6,
+     "rate": 1
+    },
+    "judge-sourced": {
+     "found": 6,
+     "total": 6,
+     "rate": 1
+    },
+    "judge-blind": {
+     "found": 6,
+     "total": 6,
+     "rate": 1
+    }
+   },
+   "others": [
+    "wording",
+    "ref-similarity",
+    "pairwise"
+   ],
+   "outcome": "eingetreten"
+  },
+  {
+   "variant": "false-success",
+   "expected": "nur Functional",
+   "graders": [
+    "functional"
+   ],
+   "found": {
+    "functional": {
+     "found": 6,
+     "total": 6,
+     "rate": 1
+    }
+   },
+   "others": [
+    "judge-sourced"
+   ],
+   "outcome": "teilweise"
+  },
+  {
+   "variant": "lucky-path",
+   "expected": "nur Trajectory",
+   "graders": [
+    "trajectory"
+   ],
+   "found": {
+    "trajectory": {
+     "found": 6,
+     "total": 6,
+     "rate": 1
+    }
+   },
+   "others": [
+    "judge-sourced"
+   ],
+   "outcome": "teilweise"
+  }
+ ],
+ "on_target": {
+  "judge-ref": {
+   "missing-breaking": {
+    "total": 3,
+    "failed": 3,
+    "criterion": 3,
+    "word": 3
+   },
+   "wrong-bump": {
+    "total": 3,
+    "failed": 3,
+    "criterion": 3,
+    "word": 3
+   },
+   "ghost-pr": {
+    "total": 6,
+    "failed": 6,
+    "criterion": 6,
+    "word": 6
+   },
+   "invented-claim": {
+    "total": 6,
+    "failed": 6,
+    "criterion": 6,
+    "word": 5
+   },
+   "wrong-migration": {
+    "total": 5,
+    "failed": 5,
+    "criterion": 5,
+    "word": 5
+   },
+   "reverted-listed": {
+    "total": 3,
+    "failed": 3,
+    "criterion": 0,
+    "word": 0
+   },
+   "internal-noise": {
+    "total": 6,
+    "failed": 6,
+    "criterion": 6,
+    "word": 6
+   },
+   "hype-tone": {
+    "total": 6,
+    "failed": 6,
+    "criterion": 6,
+    "word": 6
+   },
+   "useless-true": {
+    "total": 6,
+    "failed": 6,
+    "criterion": 6,
+    "word": 6
+   },
+   "embargo-leak": {
+    "total": 3,
+    "failed": 3,
+    "criterion": 3,
+    "word": 3
+   }
+  },
+  "judge-sourced": {
+   "missing-breaking": {
+    "total": 3,
+    "failed": 3,
+    "criterion": 3,
+    "word": 3
+   },
+   "wrong-bump": {
+    "total": 3,
+    "failed": 3,
+    "criterion": 3,
+    "word": 3
+   },
+   "ghost-pr": {
+    "total": 6,
+    "failed": 6,
+    "criterion": 6,
+    "word": 6
+   },
+   "invented-claim": {
+    "total": 6,
+    "failed": 6,
+    "criterion": 6,
+    "word": 4
+   },
+   "wrong-migration": {
+    "total": 5,
+    "failed": 5,
+    "criterion": 5,
+    "word": 5
+   },
+   "reverted-listed": {
+    "total": 3,
+    "failed": 3,
+    "criterion": 3,
+    "word": 3
+   },
+   "internal-noise": {
+    "total": 6,
+    "failed": 6,
+    "criterion": 6,
+    "word": 6
+   },
+   "hype-tone": {
+    "total": 6,
+    "failed": 6,
+    "criterion": 6,
+    "word": 6
+   },
+   "useless-true": {
+    "total": 6,
+    "failed": 6,
+    "criterion": 6,
+    "word": 6
+   },
+   "embargo-leak": {
+    "total": 3,
+    "failed": 3,
+    "criterion": 3,
+    "word": 3
+   }
+  },
+  "judge-blind": {
+   "missing-breaking": {
+    "total": 3,
+    "failed": 0,
+    "criterion": 0,
+    "word": 0
+   },
+   "wrong-bump": {
+    "total": 3,
+    "failed": 2,
+    "criterion": 2,
+    "word": 2
+   },
+   "ghost-pr": {
+    "total": 6,
+    "failed": 0,
+    "criterion": 0,
+    "word": 0
+   },
+   "invented-claim": {
+    "total": 6,
+    "failed": 1,
+    "criterion": 0,
+    "word": 0
+   },
+   "wrong-migration": {
+    "total": 5,
+    "failed": 1,
+    "criterion": 1,
+    "word": 1
+   },
+   "reverted-listed": {
+    "total": 3,
+    "failed": 1,
+    "criterion": 0,
+    "word": 0
+   },
+   "internal-noise": {
+    "total": 6,
+    "failed": 6,
+    "criterion": 6,
+    "word": 6
+   },
+   "hype-tone": {
+    "total": 6,
+    "failed": 6,
+    "criterion": 6,
+    "word": 6
+   },
+   "useless-true": {
+    "total": 6,
+    "failed": 6,
+    "criterion": 6,
+    "word": 6
+   },
+   "embargo-leak": {
+    "total": 3,
+    "failed": 1,
+    "criterion": 1,
+    "word": 1
+   }
+  }
+ },
+ "e3": {
+  "rows": [
+   {
+    "release": "r1",
+    "judge-ref": {
+     "neutral": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    },
+    "judge-sourced": {
+     "neutral": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    },
+    "judge-blind": {
+     "neutral": {
+      "passes": 3,
+      "reps": 3,
+      "pass": true
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    },
+    "pairwise": {
+     "neutral": {
+      "passes": 3,
+      "reps": 3,
+      "pass": true
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    }
+   },
+   {
+    "release": "r2",
+    "judge-ref": {
+     "neutral": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    },
+    "judge-sourced": {
+     "neutral": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    },
+    "judge-blind": {
+     "neutral": {
+      "passes": 3,
+      "reps": 3,
+      "pass": true
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    },
+    "pairwise": {
+     "neutral": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    }
+   },
+   {
+    "release": "r3",
+    "judge-ref": {
+     "neutral": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    },
+    "judge-sourced": {
+     "neutral": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    },
+    "judge-blind": {
+     "neutral": {
+      "passes": 3,
+      "reps": 3,
+      "pass": true
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    },
+    "pairwise": {
+     "neutral": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    }
+   },
+   {
+    "release": "r4",
+    "judge-ref": {
+     "neutral": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    },
+    "judge-sourced": {
+     "neutral": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    },
+    "judge-blind": {
+     "neutral": {
+      "passes": 3,
+      "reps": 3,
+      "pass": true
+     },
+     "confident": {
+      "passes": 3,
+      "reps": 3,
+      "pass": true
+     }
+    },
+    "pairwise": {
+     "neutral": {
+      "passes": 3,
+      "reps": 3,
+      "pass": true
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    }
+   },
+   {
+    "release": "r5",
+    "judge-ref": {
+     "neutral": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    },
+    "judge-sourced": {
+     "neutral": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    },
+    "judge-blind": {
+     "neutral": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    },
+    "pairwise": {
+     "neutral": {
+      "passes": 2,
+      "reps": 3,
+      "pass": true
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    }
+   },
+   {
+    "release": "r6",
+    "judge-ref": {
+     "neutral": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    },
+    "judge-sourced": {
+     "neutral": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    },
+    "judge-blind": {
+     "neutral": {
+      "passes": 3,
+      "reps": 3,
+      "pass": true
+     },
+     "confident": {
+      "passes": 2,
+      "reps": 3,
+      "pass": true
+     }
+    },
+    "pairwise": {
+     "neutral": {
+      "passes": 3,
+      "reps": 3,
+      "pass": true
+     },
+     "confident": {
+      "passes": 0,
+      "reps": 3,
+      "pass": false
+     }
+    }
+   }
+  ],
+  "change": {
+   "judge-ref": {
+    "pass_neutral": 0,
+    "pass_confident": 0,
+    "harsher": 0,
+    "softer": 0
+   },
+   "judge-sourced": {
+    "pass_neutral": 0,
+    "pass_confident": 0,
+    "harsher": 0,
+    "softer": 0
+   },
+   "judge-blind": {
+    "pass_neutral": 5,
+    "pass_confident": 2,
+    "harsher": 3,
+    "softer": 0
+   },
+   "pairwise": {
+    "pass_neutral": 4,
+    "pass_confident": 0,
+    "harsher": 4,
+    "softer": 0
+   }
+  },
+  "order": {
+   "total": 36,
+   "consistent": 33,
+   "inconsistent": 3,
+   "one_equal": 3,
+   "flips": 0
+  },
+  "code_unchanged": true,
+  "blind_confident_fails": 13,
+  "blind_confident_fails_tone": 12
+ },
+ "e4": {
+  "runs": [
+   {
+    "release": "r1",
+    "variant": "naive-1",
+    "status": "finished",
+    "turns": 3,
+    "published": true,
+    "version": "2.3.3",
+    "plan_bump": "patch",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": false,
+     "pr-refs": true,
+     "semver-labels": false,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": true,
+     "trajectory": false,
+     "judge-ref": false,
+     "judge-sourced": false,
+     "judge-blind": false,
+     "pairwise": false
+    },
+    "llm_split": false,
+    "all_split": true
+   },
+   {
+    "release": "r1",
+    "variant": "naive-2",
+    "status": "finished",
+    "turns": 2,
+    "published": false,
+    "version": null,
+    "plan_bump": "minor",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": true,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": false,
+     "trajectory": false,
+     "judge-ref": false,
+     "judge-sourced": false,
+     "judge-blind": false,
+     "pairwise": false
+    },
+    "llm_split": false,
+    "all_split": true
+   },
+   {
+    "release": "r1",
+    "variant": "careful-1",
+    "status": "finished",
+    "turns": 3,
+    "published": true,
+    "version": "3.0.0",
+    "plan_bump": "major",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": true,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": true,
+     "trajectory": true,
+     "judge-ref": false,
+     "judge-sourced": true,
+     "judge-blind": true,
+     "pairwise": true
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r1",
+    "variant": "careful-2",
+    "status": "finished",
+    "turns": 3,
+    "published": true,
+    "version": "3.0.0",
+    "plan_bump": "major",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": true,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": true,
+     "trajectory": true,
+     "judge-ref": true,
+     "judge-sourced": true,
+     "judge-blind": true,
+     "pairwise": true
+    },
+    "llm_split": false,
+    "all_split": true
+   },
+   {
+    "release": "r2",
+    "variant": "naive-1",
+    "status": "finished",
+    "turns": 4,
+    "published": true,
+    "version": "3.1.0",
+    "plan_bump": "minor",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": false,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": false,
+     "trajectory": false,
+     "judge-ref": false,
+     "judge-sourced": false,
+     "judge-blind": false,
+     "pairwise": true
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r2",
+    "variant": "naive-2",
+    "status": "finished",
+    "turns": 3,
+    "published": true,
+    "version": "3.1.0",
+    "plan_bump": "minor",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": false,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": true,
+     "trajectory": false,
+     "judge-ref": false,
+     "judge-sourced": false,
+     "judge-blind": true,
+     "pairwise": true
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r2",
+    "variant": "careful-1",
+    "status": "finished",
+    "turns": 3,
+    "published": true,
+    "version": "3.1.0",
+    "plan_bump": "minor",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": true,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": true,
+     "trajectory": true,
+     "judge-ref": false,
+     "judge-sourced": true,
+     "judge-blind": true,
+     "pairwise": true
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r2",
+    "variant": "careful-2",
+    "status": "finished",
+    "turns": 3,
+    "published": true,
+    "version": "4.0.0",
+    "plan_bump": "major",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": false,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": true,
+     "trajectory": true,
+     "judge-ref": false,
+     "judge-sourced": true,
+     "judge-blind": true,
+     "pairwise": true
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r3",
+    "variant": "naive-1",
+    "status": "finished",
+    "turns": 5,
+    "published": true,
+    "version": "4.0.0",
+    "plan_bump": null,
+    "empty_notes": false,
+    "plan_missing": true,
+    "passes": {
+     "schema": false,
+     "pr-refs": true,
+     "semver-labels": false,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": false,
+     "trajectory": false,
+     "judge-ref": false,
+     "judge-sourced": false,
+     "judge-blind": true,
+     "pairwise": false
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r3",
+    "variant": "naive-2",
+    "status": "finished",
+    "turns": 3,
+    "published": false,
+    "version": null,
+    "plan_bump": null,
+    "empty_notes": true,
+    "plan_missing": true,
+    "passes": {
+     "schema": false,
+     "pr-refs": true,
+     "semver-labels": false,
+     "wording": false,
+     "ref-similarity": false,
+     "functional": false,
+     "trajectory": false,
+     "judge-ref": false,
+     "judge-sourced": false,
+     "judge-blind": true,
+     "pairwise": false
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r3",
+    "variant": "careful-1",
+    "status": "finished",
+    "turns": 3,
+    "published": true,
+    "version": "4.0.0",
+    "plan_bump": "major",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": true,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": true,
+     "trajectory": false,
+     "judge-ref": false,
+     "judge-sourced": true,
+     "judge-blind": true,
+     "pairwise": false
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r3",
+    "variant": "careful-2",
+    "status": "finished",
+    "turns": 3,
+    "published": true,
+    "version": "4.0.0",
+    "plan_bump": "major",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": true,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": false,
+     "trajectory": true,
+     "judge-ref": false,
+     "judge-sourced": false,
+     "judge-blind": true,
+     "pairwise": true
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r4",
+    "variant": "naive-1",
+    "status": "finished",
+    "turns": 3,
+    "published": true,
+    "version": "4.1.0",
+    "plan_bump": "minor",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": true,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": true,
+     "trajectory": false,
+     "judge-ref": false,
+     "judge-sourced": true,
+     "judge-blind": true,
+     "pairwise": false
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r4",
+    "variant": "naive-2",
+    "status": "finished",
+    "turns": 3,
+    "published": true,
+    "version": "4.1.0",
+    "plan_bump": "minor",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": false,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": false,
+     "trajectory": false,
+     "judge-ref": false,
+     "judge-sourced": true,
+     "judge-blind": true,
+     "pairwise": false
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r4",
+    "variant": "careful-1",
+    "status": "finished",
+    "turns": 3,
+    "published": true,
+    "version": "4.1.0",
+    "plan_bump": "minor",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": true,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": false,
+     "trajectory": true,
+     "judge-ref": false,
+     "judge-sourced": true,
+     "judge-blind": true,
+     "pairwise": true
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r4",
+    "variant": "careful-2",
+    "status": "finished",
+    "turns": 2,
+    "published": false,
+    "version": null,
+    "plan_bump": null,
+    "empty_notes": true,
+    "plan_missing": true,
+    "passes": {
+     "schema": false,
+     "pr-refs": true,
+     "semver-labels": false,
+     "wording": false,
+     "ref-similarity": false,
+     "functional": false,
+     "trajectory": false,
+     "judge-ref": false,
+     "judge-sourced": false,
+     "judge-blind": true,
+     "pairwise": false
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r5",
+    "variant": "naive-1",
+    "status": "finished",
+    "turns": 4,
+    "published": true,
+    "version": "5.0.0",
+    "plan_bump": "major",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": true,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": true,
+     "trajectory": false,
+     "judge-ref": false,
+     "judge-sourced": true,
+     "judge-blind": true,
+     "pairwise": true
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r5",
+    "variant": "naive-2",
+    "status": "finished",
+    "turns": 4,
+    "published": true,
+    "version": "5.0.0",
+    "plan_bump": "major",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": true,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": true,
+     "trajectory": true,
+     "judge-ref": false,
+     "judge-sourced": true,
+     "judge-blind": true,
+     "pairwise": true
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r5",
+    "variant": "careful-1",
+    "status": "finished",
+    "turns": 4,
+    "published": true,
+    "version": "5.0.0",
+    "plan_bump": "major",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": true,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": true,
+     "trajectory": true,
+     "judge-ref": false,
+     "judge-sourced": false,
+     "judge-blind": true,
+     "pairwise": true
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r5",
+    "variant": "careful-2",
+    "status": "finished",
+    "turns": 2,
+    "published": false,
+    "version": null,
+    "plan_bump": "major",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": true,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": false,
+     "trajectory": true,
+     "judge-ref": false,
+     "judge-sourced": true,
+     "judge-blind": true,
+     "pairwise": true
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r6",
+    "variant": "naive-1",
+    "status": "finished",
+    "turns": 3,
+    "published": true,
+    "version": "5.0.1",
+    "plan_bump": "patch",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": false,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": true,
+     "trajectory": false,
+     "judge-ref": false,
+     "judge-sourced": false,
+     "judge-blind": false,
+     "pairwise": false
+    },
+    "llm_split": false,
+    "all_split": true
+   },
+   {
+    "release": "r6",
+    "variant": "naive-2",
+    "status": "finished",
+    "turns": 3,
+    "published": true,
+    "version": "5.0.1",
+    "plan_bump": "patch",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": false,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": true,
+     "trajectory": false,
+     "judge-ref": false,
+     "judge-sourced": false,
+     "judge-blind": true,
+     "pairwise": false
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r6",
+    "variant": "careful-1",
+    "status": "finished",
+    "turns": 5,
+    "published": true,
+    "version": "5.0.1",
+    "plan_bump": "patch",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": true,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": true,
+     "ref-similarity": false,
+     "functional": true,
+     "trajectory": true,
+     "judge-ref": true,
+     "judge-sourced": false,
+     "judge-blind": true,
+     "pairwise": true
+    },
+    "llm_split": true,
+    "all_split": true
+   },
+   {
+    "release": "r6",
+    "variant": "careful-2",
+    "status": "finished",
+    "turns": 3,
+    "published": true,
+    "version": "5.0.1",
+    "plan_bump": "patch",
+    "empty_notes": false,
+    "plan_missing": false,
+    "passes": {
+     "schema": true,
+     "pr-refs": true,
+     "semver-labels": true,
+     "wording": false,
+     "ref-similarity": false,
+     "functional": true,
+     "trajectory": true,
+     "judge-ref": false,
+     "judge-sourced": false,
+     "judge-blind": false,
+     "pairwise": false
+    },
+    "llm_split": false,
+    "all_split": true
+   }
+  ],
+  "byPrompt": {
+   "naive": {
+    "runs": 12,
+    "published": 10,
+    "empty_notes": 1,
+    "plan_missing": 2,
+    "passes": {
+     "schema": 4,
+     "pr-refs": 12,
+     "semver-labels": 9,
+     "wording": 11,
+     "ref-similarity": 0,
+     "functional": 7,
+     "trajectory": 1,
+     "judge-ref": 0,
+     "judge-sourced": 4,
+     "judge-blind": 8,
+     "pairwise": 4
+    }
+   },
+   "careful": {
+    "runs": 12,
+    "published": 10,
+    "empty_notes": 1,
+    "plan_missing": 1,
+    "passes": {
+     "schema": 10,
+     "pr-refs": 12,
+     "semver-labels": 11,
+     "wording": 10,
+     "ref-similarity": 0,
+     "functional": 8,
+     "trajectory": 10,
+     "judge-ref": 2,
+     "judge-sourced": 7,
+     "judge-blind": 11,
+     "pairwise": 9
+    }
+   }
+  },
+  "pairs": [
+   {
+    "a": "judge-ref",
+    "b": "judge-sourced",
+    "disagree": 11
+   },
+   {
+    "a": "judge-ref",
+    "b": "judge-blind",
+    "disagree": 17
+   },
+   {
+    "a": "judge-ref",
+    "b": "pairwise",
+    "disagree": 11
+   },
+   {
+    "a": "judge-sourced",
+    "b": "judge-blind",
+    "disagree": 8
+   },
+   {
+    "a": "judge-sourced",
+    "b": "pairwise",
+    "disagree": 8
+   },
+   {
+    "a": "judge-blind",
+    "b": "pairwise",
+    "disagree": 8
+   }
+  ],
+  "observed": {
+   "schema": 0.5833333333333334,
+   "pr-refs": 1,
+   "semver-labels": 0.8333333333333334,
+   "wording": 0.875,
+   "ref-similarity": 0,
+   "functional": 0.625,
+   "trajectory": 0.4583333333333333,
+   "judge-ref": 0.08333333333333333,
+   "judge-sourced": 0.4583333333333333,
+   "judge-blind": 0.7916666666666666,
+   "pairwise": 0.5416666666666666
+  },
+  "rogan": {
+   "judge-ref": {
+    "observed": 0.08333333333333333,
+    "tpr": 1,
+    "tnr": 0.7966101694915254,
+    "corrected": 0
+   },
+   "judge-sourced": {
+    "observed": 0.4583333333333333,
+    "tpr": 0,
+    "tnr": 1,
+    "corrected": null
+   },
+   "judge-blind": {
+    "observed": 0.7916666666666666,
+    "tpr": 1,
+    "tnr": 0.4067796610169492,
+    "corrected": 0.48784722222222243
+   },
+   "pairwise": {
+    "observed": 0.5416666666666666,
+    "tpr": 1,
+    "tnr": 0.4745762711864407,
+    "corrected": 0.0342261904761903
+   }
+  },
+  "llm_split": 19,
+  "all_split": 24
+ }
+}

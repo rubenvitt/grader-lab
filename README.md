@@ -2,7 +2,21 @@
 
 Begleitprojekt zum Blogpost auf rubeen.dev. These: Jede Eval-Methode hat einen blinden Fleck, und ein Grader ist selbst ein System, das getestet werden muss. Dafür bauen wir Fehler mit Absicht in korrekte Release Notes ein und messen, welcher Grader welchen Fehler findet. Die Spezifikation steht in [docs/spec.md](docs/spec.md).
 
-Stand: Experimente E1 bis E4 sind gelaufen, Ergebnisse in [docs/findings.md](docs/findings.md), Ablauf und Pannen in [docs/run-log.md](docs/run-log.md). Die Demo folgt.
+## Ergebnis
+
+Kein Grader findet alle zwölf Fehlerarten, ohne auch Fehlerfreies abzulehnen: `judge-sourced` lässt alle 24 Kontrollen durchfallen, `judge-ref` findet alles im Text, aber keine Fehler in Sandbox und Weg. Werte aus Mutationen übertragen sich schlecht auf den echten Agenten: `judge-ref` findet 47 von 47 Fehlern im Text, lässt aber nur 2 von 24 Agent-Texten bestehen, und ohne Labels bleibt offen, wie viele dieser Ablehnungen berechtigt sind. Die erwartete Ablenkung durch selbstbewussten Ton trat nicht ein, er machte 0 Urteile milder und 7 strenger, allerdings mit Wörtern, die die Rubric ohnehin verbietet.
+
+Details in [docs/findings.md](docs/findings.md), Ablauf und Pannen in [docs/run-log.md](docs/run-log.md).
+
+## Demo
+
+`site/` ist die statische Demo, reines HTML, CSS und JS ohne Build und ohne Modellaufrufe. Sie braucht wegen `fetch` einen lokalen Server, alle Pfade sind relativ:
+
+```sh
+python3 -m http.server -d site 8000
+```
+
+`npm run report` kopiert `summary.json` und `demo.json` nach `site/data/`, die Demo rechnet keine eigenen Kennzahlen. Einzige Ausnahme ist der Regler zur Pass-Rate, ein Test hält seine Formel gleich mit `src/aggregate.mjs`.
 
 ## Aufbau
 
@@ -12,8 +26,9 @@ Stand: Experimente E1 bis E4 sind gelaufen, Ergebnisse in [docs/findings.md](doc
 - `graders/prompts/v1/`: eingefrorene Prompts und Parameter, siehe [README dort](graders/prompts/v1/README.md)
 - `data/raw/`: Rohantworten, `data/raw/smoke/` enthält nur Technik-Tests auf einer Toy-Fixture außerhalb der Auswertung
 - `data/results/`: Ergebnisse der Läufe, dazu `summary.json` (alle Kennzahlen) und `demo.json` (Daten für die Demo)
+- `site/`: statische Demo
 
-## Benutzung
+## Reproduzieren
 
 Node 26, keine Laufzeit-Abhängigkeiten. Modellaufrufe laufen über die Codex-CLI und stecken hinter `callModel` in `src/engine/call-model.mjs`.
 
