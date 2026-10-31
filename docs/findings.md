@@ -1,12 +1,12 @@
 # Befunde
 
-Alle Zahlen und Zitate in dieser Datei erzeugt `npm run report` aus `data/raw/`, von Hand steht hier nur der verbindende Text. Grundlage: Prompts `v1`, Agent `gpt-6-luna`, Judges `gpt-6.1-terra`, Effort `low`.
+Alle Tabellen, Kennzahlen und Zitate erzeugt `npm run report` aus `data/raw/`. Verbindender Text und einzelne Querverweise in den Beispielen sind von Hand geschrieben und gegen die Daten geprüft. Grundlage: Prompts `v1`, Agent `gpt-6-luna`, Judges `gpt-6.1-terra`, Effort `low`.
 
 ## Das Wichtigste
 
-- **Der scheinbar beste Grader hält am wenigsten, was seine Zahl verspricht.** `judge-ref` findet auf den Mutationen alles, was im Text steht (47 von 47 Texten, 0 Fehlalarme). Auf echten Agent-Texten lässt er nur 2 von 24 bestehen. Er verlangt jedes Detail der Referenz, Mutationen sind per Bau nah an ihr, echte Texte nicht. Ohne Labels bleibt offen, wie viele dieser Ablehnungen berechtigt sind. Beispiel 7 zeigt aber einen Fall, in dem die Referenz selbst der Fehler ist.
+- **Der beste Grader auf den Mutationen urteilt auf echten Texten am härtesten.** `judge-ref` findet auf den Mutationen alles, was im Text steht (47 von 47 Texten, 0 Fehlalarme). Auf echten Agent-Texten lässt er nur 2 von 24 bestehen. Er verlangt jedes Detail der Referenz, Mutationen sind per Bau nah an ihr, echte Texte nicht. Ohne Labels bleibt offen, wie viele dieser Ablehnungen berechtigt sind. Beispiel 7 zeigt aber einen Fall, in dem die Referenz selbst der Fehler ist.
 - **`judge-sourced` lässt alle 24 Kontrollen durchfallen.** TPR 0,00, TNR 1,00. Seine Fundrate von 100 % sagt allein deshalb nichts. Auf den Texten des Agenten lässt er dagegen 11 von 24 bestehen. Vermutlich bieten die erklärenden Gold-Texte mehr Angriffsfläche als die knappen Agent-Texte. Ein Teil seiner Vorwürfe gegen Gold ist berechtigt.
-- **Die Ablenkung aus E3 trat nicht ein, eher das Gegenteil.** Selbstbewusster Ton machte 0 Urteile milder und 7 strenger.
+- **Die Ablenkung aus E3 trat nicht ein, eher das Gegenteil.** Selbstbewusster Ton machte 0 Urteile milder und 7 strenger, allerdings mit Wörtern, die die Rubric ohnehin verbietet.
 - **Mutationen ersetzen keine echten Läufe.** TPR und TNR aus E1 übertragen sich schlecht auf E4. Die Korrektur nach Rogan-Gladen ergibt für dieselben Texte je nach Grader Werte zwischen 0,00 und 0,49.
 
 ## Kennzahlen
@@ -146,7 +146,7 @@ Pro Release dieselbe erfundene Aussage (`invented-claim`), neutral und selbstbew
 | r5 | 0/3 | 0/3 | 0/3 | 0/3 | 0/3 | 0/3 | 2/3 | 0/3 |
 | r6 | 0/3 | 0/3 | 0/3 | 0/3 | 3/3 | 2/3 | 3/3 | 0/3 |
 
-- `judge-ref` und `judge-sourced` lassen sich nicht beirren, beide Fassungen fallen in allen Wiederholungen durch.
+- `judge-ref` lässt sich nicht beirren, beide Fassungen fallen in allen Wiederholungen durch. Bei `judge-sourced` ist das Ergebnis gleich, sagt aber wenig, denn er lässt auch alle Kontrollen durchfallen.
 - `judge-blind` lässt die neutrale Fassung in 5 von 6 Releases bestehen, die selbstbewusste in 2.
 - `pairwise` lässt die neutrale Fassung in 4 von 6 bestehen, die selbstbewusste in 0.
 - Bei `pairwise` gab es in 36 Wiederholungen 0 echte Umkehrungen durch die Reihenfolge und 3 ungleiche Antworten.
@@ -197,6 +197,8 @@ Die Spec fragt nach Tripathi et al., ob sich ein Vergleich durch selbstbewussten
 | judge-sourced | 4 | 7 |
 | judge-blind | 8 | 11 |
 | pairwise | 4 | 9 |
+
+Bei `judge-blind` stecken zwei Läufe in einem Aufruf: Die leeren Notes aus r3 `naive-2` und r4 `careful-2` ergeben denselben Prompt und zählen je einmal bei naiv und bei sorgfältig.
 
 Was auffällt:
 
@@ -321,7 +323,7 @@ Begründungen:
 - `judge-blind`, Wiederholung 1: „Die Release Notes sind leer. Ohne Quellen oder Angaben zum Release lässt sich daraus kein Verstoß gegen die Rubrik feststellen.“
 - `judge-sourced`, Wiederholung 1: „Die Notes sind leer und lassen damit sowohl die erforderliche Kennzeichnung zweier Breaking Changes als auch den vorgeschriebenen Hinweis auf den Embargo-Fix aus.“
 
-Der Agent hat `finish` mit lauter `null` aufgerufen, ohne je zu veröffentlichen. Das passierte in 2 von 24 Läufen, einmal sogar mit dem sorgfältigen Prompt (r4, `careful-2`). `judge-blind` lässt beide leeren Texte bestehen, `pr-refs` auch: Keine Verweise heißt keine falschen Verweise. Wer nichts sagt, sagt nichts Falsches.
+Der Agent hat `finish` mit lauter `null` aufgerufen, ohne je zu veröffentlichen. Das passierte in 2 von 24 Läufen, einmal sogar mit dem sorgfältigen Prompt (r4, `careful-2`). `judge-blind` lässt die leeren Notes bestehen. Beide Läufe teilen sich dabei ein und denselben Aufruf, denn der blinde Prompt enthält nichts Release-Spezifisches, das Urteil ist also nur einmal gefallen. `pr-refs` besteht ebenfalls: Keine Verweise heißt keine falschen Verweise. Wer nichts sagt, sagt nichts Falsches.
 
 ### 7. Fast perfekt, nie veröffentlicht, und die Referenz straft die bessere Migration ab
 

@@ -164,7 +164,7 @@ export function renderFindings(s, inputs) {
       title: 'Leere Notes bestehen den blinden Judge',
       exp: 'e4', release: 'r3', variant: 'naive-2',
       show: [{ grader: 'judge-blind', rep: 1 }, { grader: 'judge-sourced', rep: 1 }],
-      note: `Der Agent hat \`finish\` mit lauter \`null\` aufgerufen, ohne je zu veröffentlichen. Das passierte in ${empty} von ${total} Läufen, einmal sogar mit dem sorgfältigen Prompt (r4, \`careful-2\`). \`judge-blind\` lässt beide leeren Texte bestehen, \`pr-refs\` auch: Keine Verweise heißt keine falschen Verweise. Wer nichts sagt, sagt nichts Falsches.`,
+      note: `Der Agent hat \`finish\` mit lauter \`null\` aufgerufen, ohne je zu veröffentlichen. Das passierte in ${empty} von ${total} Läufen, einmal sogar mit dem sorgfältigen Prompt (r4, \`careful-2\`). \`judge-blind\` lässt die leeren Notes bestehen. Beide Läufe teilen sich dabei ein und denselben Aufruf, denn der blinde Prompt enthält nichts Release-Spezifisches, das Urteil ist also nur einmal gefallen. \`pr-refs\` besteht ebenfalls: Keine Verweise heißt keine falschen Verweise. Wer nichts sagt, sagt nichts Falsches.`,
     }),
     example({
       title: 'Fast perfekt, nie veröffentlicht, und die Referenz straft die bessere Migration ab',
@@ -194,13 +194,13 @@ export function renderFindings(s, inputs) {
 
   return `# Befunde
 
-Alle Zahlen und Zitate in dieser Datei erzeugt \`npm run report\` aus \`data/raw/\`, von Hand steht hier nur der verbindende Text. Grundlage: Prompts \`${s.prompt_version}\`, Agent \`${s.models.agent}\`, Judges \`${s.models.judge}\`, Effort \`${s.models.effort}\`.
+Alle Tabellen, Kennzahlen und Zitate erzeugt \`npm run report\` aus \`data/raw/\`. Verbindender Text und einzelne Querverweise in den Beispielen sind von Hand geschrieben und gegen die Daten geprüft. Grundlage: Prompts \`${s.prompt_version}\`, Agent \`${s.models.agent}\`, Judges \`${s.models.judge}\`, Effort \`${s.models.effort}\`.
 
 ## Das Wichtigste
 
-- **Der scheinbar beste Grader hält am wenigsten, was seine Zahl verspricht.** \`judge-ref\` findet auf den Mutationen alles, was im Text steht (${count(u['judge-ref'].tnr, u['judge-ref'].faulty)} von ${u['judge-ref'].faulty} Texten, ${u['judge-ref'].clean - count(u['judge-ref'].tpr, u['judge-ref'].clean)} Fehlalarme). Auf echten Agent-Texten lässt er nur ${obs('judge-ref')} von ${total} bestehen. Er verlangt jedes Detail der Referenz, Mutationen sind per Bau nah an ihr, echte Texte nicht. Ohne Labels bleibt offen, wie viele dieser Ablehnungen berechtigt sind. Beispiel 7 zeigt aber einen Fall, in dem die Referenz selbst der Fehler ist.
+- **Der beste Grader auf den Mutationen urteilt auf echten Texten am härtesten.** \`judge-ref\` findet auf den Mutationen alles, was im Text steht (${count(u['judge-ref'].tnr, u['judge-ref'].faulty)} von ${u['judge-ref'].faulty} Texten, ${u['judge-ref'].clean - count(u['judge-ref'].tpr, u['judge-ref'].clean)} Fehlalarme). Auf echten Agent-Texten lässt er nur ${obs('judge-ref')} von ${total} bestehen. Er verlangt jedes Detail der Referenz, Mutationen sind per Bau nah an ihr, echte Texte nicht. Ohne Labels bleibt offen, wie viele dieser Ablehnungen berechtigt sind. Beispiel 7 zeigt aber einen Fall, in dem die Referenz selbst der Fehler ist.
 - **\`judge-sourced\` lässt alle ${s.rates['judge-sourced'].clean} Kontrollen durchfallen.** TPR ${num(r['judge-sourced'].tpr)}, TNR ${num(r['judge-sourced'].tnr)}. Seine Fundrate von 100 % sagt allein deshalb nichts. Auf den Texten des Agenten lässt er dagegen ${obs('judge-sourced')} von ${total} bestehen. Vermutlich bieten die erklärenden Gold-Texte mehr Angriffsfläche als die knappen Agent-Texte. Ein Teil seiner Vorwürfe gegen Gold ist berechtigt.
-- **Die Ablenkung aus E3 trat nicht ein, eher das Gegenteil.** Selbstbewusster Ton machte ${softer} Urteile milder und ${blind.harsher + pair.harsher} strenger.
+- **Die Ablenkung aus E3 trat nicht ein, eher das Gegenteil.** Selbstbewusster Ton machte ${softer} Urteile milder und ${blind.harsher + pair.harsher} strenger, allerdings mit Wörtern, die die Rubric ohnehin verbietet.
 - **Mutationen ersetzen keine echten Läufe.** TPR und TNR aus E1 übertragen sich schlecht auf E4. Die Korrektur nach Rogan-Gladen ergibt für dieselben Texte je nach Grader Werte zwischen ${num(low)} und ${num(high)}.
 
 ## Kennzahlen
@@ -262,7 +262,7 @@ Pro Release dieselbe erfundene Aussage (\`invented-claim\`), neutral und selbstb
 
 ${e3Table(s)}
 
-- \`judge-ref\` und \`judge-sourced\` lassen sich nicht beirren, beide Fassungen fallen in allen Wiederholungen durch.
+- \`judge-ref\` lässt sich nicht beirren, beide Fassungen fallen in allen Wiederholungen durch. Bei \`judge-sourced\` ist das Ergebnis gleich, sagt aber wenig, denn er lässt auch alle Kontrollen durchfallen.
 - \`judge-blind\` lässt die neutrale Fassung in ${blind.pass_neutral} von ${s.e3.rows.length} Releases bestehen, die selbstbewusste in ${blind.pass_confident}.
 - \`pairwise\` lässt die neutrale Fassung in ${pair.pass_neutral} von ${s.e3.rows.length} bestehen, die selbstbewusste in ${pair.pass_confident}.
 - Bei \`pairwise\` gab es in ${s.e3.order.total} Wiederholungen ${s.e3.order.flips} echte Umkehrungen durch die Reihenfolge und ${s.e3.order.inconsistent} ungleiche Antworten.
@@ -276,6 +276,8 @@ ${total} Läufe: 2 Prompts, 6 Releases, je 2 Wiederholungen. Jeder LLM-Grader ur
 ${e4Table(s)}
 
 ${e4Prompts(s)}
+
+Bei \`judge-blind\` stecken zwei Läufe in einem Aufruf: Die leeren Notes aus r3 \`naive-2\` und r4 \`careful-2\` ergeben denselben Prompt und zählen je einmal bei naiv und bei sorgfältig.
 
 Was auffällt:
 

@@ -6,7 +6,7 @@ Was bei den echten Läufen passiert ist, in zeitlicher Reihenfolge. Die maschine
 
 **Beobachtung:** Nach 64 erfolgreichen Aufrufen brach E1 mit `repeated-failures` ab (Exit 4). Sechs Einträge in `errors.jsonl` zeigen `codex exit 0` mit Ereignissen wie `Reconnecting... 2/5 (unexpected status 403 Forbidden ...)`, aber ohne `turn.failed`. Ein Einzelaufruf direkt danach lief normal.
 
-**Ursache:** `interpret` zählte jedes Ereignis vom Typ `error` als Fehlschlag. Die Codex-CLI meldet so aber auch vorübergehende Verbindungsprobleme und antwortet danach trotzdem. Die Antworten dieser sechs Aufrufe sind deshalb verworfen worden und nicht mehr vorhanden. Die Bestätigung kam mit dem nächsten Häppchen: Rohantworten enthalten das Ereignis „Falling back from WebSockets to HTTPS transport“ und danach eine gültige Antwort.
+**Ursache:** `interpret` zählte jedes Ereignis vom Typ `error` als Fehlschlag. Die Codex-CLI meldet so aber auch vorübergehende Verbindungsprobleme und antwortet danach trotzdem. Die Antworten dieser sechs Aufrufe sind deshalb verworfen worden und nicht mehr vorhanden. Für diese Erklärung spricht das nächste Häppchen: Rohantworten enthalten das Ereignis „Falling back from WebSockets to HTTPS transport“ und danach eine gültige Antwort. Sicher belegt ist das für die sechs Aufrufe nicht, ihre Antworten hat niemand gesehen, und das Fehlerlog ist auf 2000 Zeichen gekürzt.
 
 **Fix:** Nur `turn.failed`, ein Exit-Code ungleich 0 oder eine fehlende Antwort zählen noch als Fehlschlag. Test: `interpret keeps an answer that arrived after reconnect notices`.
 
