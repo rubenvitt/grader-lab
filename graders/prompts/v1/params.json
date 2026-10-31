@@ -1,0 +1,31 @@
+{
+  "version": "v1",
+  "models": { "agent": "gpt-6-luna", "judge": "gpt-6.1-terra", "effort": "low" },
+  "repetitions": { "e1": 3, "e3": 3, "e4": 1 },
+  "verdict": "majority of repetitions per artifact and grader",
+  "pairwise_rule": "one repetition is two calls with swapped order; it fails only if the gold version is preferred in both orders",
+  "agent": { "max_turns": 8, "runs_per_prompt": 2 },
+  "schema": {
+    "allowed_sections": ["Breaking Changes", "Features", "Fixes", "Performance", "Deprecations", "Security"]
+  },
+  "ref_similarity": { "threshold": 0.7 },
+  "wording": {
+    "min_words": 20,
+    "max_words": 500,
+    "banned_words": [
+      "revolutionary", "game-changing", "game changer", "blazing", "blazing-fast", "lightning-fast", "seamless", "seamlessly",
+      "effortless", "effortlessly", "powerful", "supercharge", "supercharges", "supercharged", "turbocharged", "unleash", "unleashes",
+      "incredible", "amazing", "stunning", "thrilled", "excited", "exciting", "best-in-class", "world-class", "next-generation",
+      "cutting-edge", "bulletproof", "rock-solid", "magical", "delightful", "beautiful", "flawless", "sleek"
+    ],
+    "vague_phrases": [
+      "various improvements", "various fixes", "bug fixes and improvements", "minor improvements", "general improvements",
+      "assorted fixes", "stability improvements", "performance improvements", "miscellaneous"
+    ],
+    "internal_terms": [
+      "GitHub Actions", "CodeQL", "dependabot", "devDependencies", "vitest", "eslint", "prettier", "CODEOWNERS", "pnpm",
+      "lint", "deflake", "deflaked", "refactor", "refactored", "test suite"
+    ],
+    "internal_terms_case_sensitive": ["CI"]
+  }
+}
