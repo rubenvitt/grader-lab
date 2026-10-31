@@ -1,0 +1,64 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "696f687c0f0c3c905c52ba13",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "prompt": "naive",
+  "run": 2,
+  "turn": 4
+ },
+ "duration_ms": 6638,
+ "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"5.0.1\",\"notes\":\"# quaykit 5.0.1\\n\\nFixes a worker state race that could occur when a job lock expired during processing.\\n\\n## Fixes\\n\\n- Prevents `complete()` from acknowledging a job or overwriting state after the lock is lost. (#413)\",\"bump\":\"patch\",\"sections\":[\"Fixes\"]}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "finish",
+    "id": null,
+    "version": "5.0.1",
+    "notes": "# quaykit 5.0.1\n\nFixes a worker state race that could occur when a job lock expired during processing.\n\n## Fixes\n\n- Prevents `complete()` from acknowledging a job or overwriting state after the lock is lost. (#413)",
+    "bump": "patch",
+    "sections": [
+     "Fixes"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 42935,
+  "cached_input_tokens": 40448,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 239,
+  "reasoning_output_tokens": 96
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-ed54-7f91-96b3-f8efcf3a229b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"5.0.1\",\"notes\":\"# quaykit 5.0.1\\n\\nFixes a worker state race that could occur when a job lock expired during processing.\\n\\n## Fixes\\n\\n- Prevents `complete()` from acknowledging a job or overwriting state after the lock is lost. (#413)\",\"bump\":\"patch\",\"sections\":[\"Fixes\"]}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 42935,
+    "cached_input_tokens": 40448,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 239,
+    "reasoning_output_tokens": 96
+   }
+  }
+ ]
+}

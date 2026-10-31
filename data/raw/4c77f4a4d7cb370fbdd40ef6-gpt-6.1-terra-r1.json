@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "4c77f4a4d7cb370fbdd40ef6",
+ "meta": {
+  "experiment": "e4-r1",
+  "release": "r1",
+  "variant": "careful-2",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4512,
+ "text": "{\"violations\":[],\"reason\":\"Der Kandidat vermittelt alle wesentlichen Änderungen und den Migrationsschritt der Referenz. Einordnung und Versionsnummer stimmen überein.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Der Kandidat vermittelt alle wesentlichen Änderungen und den Migrationsschritt der Referenz. Einordnung und Versionsnummer stimmen überein.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25441,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 49,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-49ae-7db1-a564-ae2ed95e432e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Der Kandidat vermittelt alle wesentlichen Änderungen und den Migrationsschritt der Referenz. Einordnung und Versionsnummer stimmen überein.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25441,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

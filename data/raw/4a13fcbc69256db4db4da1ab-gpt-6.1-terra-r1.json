@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "4a13fcbc69256db4db4da1ab",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "variant": "careful-2",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 6100,
+ "text": "{\"reason\":\"Fassung B verrät mit der verbesserten Behandlung von PostgreSQL-Schemanamen ein Detail zum embargo-belegten Fix. Fassung A nennt hingegen nur die betroffene Komponente und die Upgrade-Empfehlung; die übrigen Aussagen lassen sich ohne Quellen nicht abschließend prüfen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung B verrät mit der verbesserten Behandlung von PostgreSQL-Schemanamen ein Detail zum embargo-belegten Fix. Fassung A nennt hingegen nur die betroffene Komponente und die Upgrade-Empfehlung; die übrigen Aussagen lassen sich ohne Quellen nicht abschließend prüfen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25206,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 162,
+  "reasoning_output_tokens": 85
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-9279-78e1-a4b1-ffacf55b6703"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B verrät mit der verbesserten Behandlung von PostgreSQL-Schemanamen ein Detail zum embargo-belegten Fix. Fassung A nennt hingegen nur die betroffene Komponente und die Upgrade-Empfehlung; die übrigen Aussagen lassen sich ohne Quellen nicht abschließend prüfen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25206,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 162,
+    "reasoning_output_tokens": 85
+   }
+  }
+ ]
+}

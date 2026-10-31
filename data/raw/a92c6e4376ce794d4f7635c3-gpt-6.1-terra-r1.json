@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "a92c6e4376ce794d4f7635c3",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "variant": "naive-1",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4585,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und nennen konkrete Änderungen sowie nötige Anpassungen. Aus dem Text allein ergeben sich keine überprüfbaren Widersprüche oder anderen Verstöße.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes sind sachlich und nennen konkrete Änderungen sowie nötige Anpassungen. Aus dem Text allein ergeben sich keine überprüfbaren Widersprüche oder anderen Verstöße.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24459,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 54,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-0a76-7800-b57e-59e602a77aed"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und nennen konkrete Änderungen sowie nötige Anpassungen. Aus dem Text allein ergeben sich keine überprüfbaren Widersprüche oder anderen Verstöße.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24459,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 54,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

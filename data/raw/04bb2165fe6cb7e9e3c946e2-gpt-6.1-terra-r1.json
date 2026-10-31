@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "04bb2165fe6cb7e9e3c946e2",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "variant": "careful-1",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4889,
+ "text": "{\"reason\":\"Beide Fassungen nennen denselben Fix und empfehlen das Upgrade wegen des Sicherheitsproblems, ohne unzulässige Details preiszugeben. Ob die Aussagen und die Patch-Version durch die Änderungen gedeckt sind, lässt sich ohne Diffs nicht beurteilen.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen nennen denselben Fix und empfehlen das Upgrade wegen des Sicherheitsproblems, ohne unzulässige Details preiszugeben. Ob die Aussagen und die Patch-Version durch die Änderungen gedeckt sind, lässt sich ohne Diffs nicht beurteilen.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25214,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 67,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-7ebc-7212-beae-456ef22c3025"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen nennen denselben Fix und empfehlen das Upgrade wegen des Sicherheitsproblems, ohne unzulässige Details preiszugeben. Ob die Aussagen und die Patch-Version durch die Änderungen gedeckt sind, lässt sich ohne Diffs nicht beurteilen.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25214,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 67,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

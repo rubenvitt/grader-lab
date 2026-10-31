@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "5b0e1bfde870d6f0a39344b0",
+ "meta": {
+  "experiment": "e3",
+  "release": "r3",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5699,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Aussage, `stalledIntervalMs` werde „silently ignored“, ist durch den Diff von PR #351 nicht belegt; er zeigt die Umbenennung, aber nicht das Verhalten bei Übergabe der alten Option.\"},{\"criterion\":\"R2\",\"evidence\":\"„proven Postgres store“ ist nicht belegt. PR #355 zeigt die Implementierung und den Export, aber keinen Nachweis für diese Bewertung.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage, große Importe seien durch `addBulk` „about 40% faster“, ist nicht belegt. PR #360 nennt ausdrücklich keine Messung; der Diff zeigt nur die Bündelung in Blöcken von 500.\"},{\"criterion\":\"R7\",\"evidence\":\"„decisively“, „fully commits“, „proven“ und „unquestionably“ sind wertende beziehungsweise werbliche Formulierungen.\"}],\"reason\":\"Die Breaking Changes und ihre Migration sind anhand der Diffs korrekt benannt; auch der Major-Sprung auf 4.0.0 passt. Die Notes enthalten jedoch unbelegte Aussagen und wertende Sprache.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage, `stalledIntervalMs` werde „silently ignored“, ist durch den Diff von PR #351 nicht belegt; er zeigt die Umbenennung, aber nicht das Verhalten bei Übergabe der alten Option."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "„proven Postgres store“ ist nicht belegt. PR #355 zeigt die Implementierung und den Export, aber keinen Nachweis für diese Bewertung."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage, große Importe seien durch `addBulk` „about 40% faster“, ist nicht belegt. PR #360 nennt ausdrücklich keine Messung; der Diff zeigt nur die Bündelung in Blöcken von 500."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "„decisively“, „fully commits“, „proven“ und „unquestionably“ sind wertende beziehungsweise werbliche Formulierungen."
+   }
+  ],
+  "reason": "Die Breaking Changes und ihre Migration sind anhand der Diffs korrekt benannt; auch der Major-Sprung auf 4.0.0 passt. Die Notes enthalten jedoch unbelegte Aussagen und wertende Sprache.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26093,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 253,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-8f2c-7133-84b2-8699b49abc62"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Aussage, `stalledIntervalMs` werde „silently ignored“, ist durch den Diff von PR #351 nicht belegt; er zeigt die Umbenennung, aber nicht das Verhalten bei Übergabe der alten Option.\"},{\"criterion\":\"R2\",\"evidence\":\"„proven Postgres store“ ist nicht belegt. PR #355 zeigt die Implementierung und den Export, aber keinen Nachweis für diese Bewertung.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage, große Importe seien durch `addBulk` „about 40% faster“, ist nicht belegt. PR #360 nennt ausdrücklich keine Messung; der Diff zeigt nur die Bündelung in Blöcken von 500.\"},{\"criterion\":\"R7\",\"evidence\":\"„decisively“, „fully commits“, „proven“ und „unquestionably“ sind wertende beziehungsweise werbliche Formulierungen.\"}],\"reason\":\"Die Breaking Changes und ihre Migration sind anhand der Diffs korrekt benannt; auch der Major-Sprung auf 4.0.0 passt. Die Notes enthalten jedoch unbelegte Aussagen und wertende Sprache.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26093,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 253,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

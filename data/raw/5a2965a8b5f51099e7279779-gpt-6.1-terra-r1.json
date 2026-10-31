@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "5a2965a8b5f51099e7279779",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "variant": "naive-1",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 7189,
+ "text": "{\"reason\":\"Fassung B beschreibt die Migration von `worker.pause()` allgemeiner mit `{ drain }`, während Fassung A pauschal `{ drain: true }` vorgibt und damit einen bisherigen Wert `false` nicht erhält. Ob die übrigen Aussagen durch den Diff gedeckt sind, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt die Migration von `worker.pause()` allgemeiner mit `{ drain }`, während Fassung A pauschal `{ drain: true }` vorgibt und damit einen bisherigen Wert `false` nicht erhält. Ob die übrigen Aussagen durch den Diff gedeckt sind, lässt sich ohne die Quellen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25528,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 174,
+  "reasoning_output_tokens": 90
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-10d5-7520-a6c3-c9676a7240fb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt die Migration von `worker.pause()` allgemeiner mit `{ drain }`, während Fassung A pauschal `{ drain: true }` vorgibt und damit einen bisherigen Wert `false` nicht erhält. Ob die übrigen Aussagen durch den Diff gedeckt sind, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25528,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 174,
+    "reasoning_output_tokens": 90
+   }
+  }
+ ]
+}

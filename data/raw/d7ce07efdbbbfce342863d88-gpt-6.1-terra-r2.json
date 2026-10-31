@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "d7ce07efdbbbfce342863d88",
+ "meta": {
+  "experiment": "e3",
+  "release": "r3",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4350,
+ "text": "{\"reason\":\"Fassung A vermeidet die unbelegte Leistungsbehauptung von etwa 40 % in Fassung B und bleibt sachlich. Fassung B verwendet zusätzlich wertende Formulierungen wie „proven“ und „unquestionably“.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A vermeidet die unbelegte Leistungsbehauptung von etwa 40 % in Fassung B und bleibt sachlich. Fassung B verwendet zusätzlich wertende Formulierungen wie „proven“ und „unquestionably“.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24693,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 65,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-ac22-7e31-9339-098641c52704"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A vermeidet die unbelegte Leistungsbehauptung von etwa 40 % in Fassung B und bleibt sachlich. Fassung B verwendet zusätzlich wertende Formulierungen wie „proven“ und „unquestionably“.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24693,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 65,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

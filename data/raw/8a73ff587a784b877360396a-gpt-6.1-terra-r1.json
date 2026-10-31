@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "8a73ff587a784b877360396a",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "variant": "careful-2",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 7320,
+ "text": "{\"reason\":\"Fassung B macht keine zusätzliche Ankündigung, dass ein separates Advisory folgen wird; für diese Aussage in A liegt kein Beleg vor. Ob die weiteren konkreteren Angaben in A durch den Diff gedeckt sind, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B macht keine zusätzliche Ankündigung, dass ein separates Advisory folgen wird; für diese Aussage in A liegt kein Beleg vor. Ob die weiteren konkreteren Angaben in A durch den Diff gedeckt sind, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25472,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 255,
+  "reasoning_output_tokens": 185
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-b5e1-7c32-802d-bdd348dbac65"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B macht keine zusätzliche Ankündigung, dass ein separates Advisory folgen wird; für diese Aussage in A liegt kein Beleg vor. Ob die weiteren konkreteren Angaben in A durch den Diff gedeckt sind, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25472,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 255,
+    "reasoning_output_tokens": 185
+   }
+  }
+ ]
+}

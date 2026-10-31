@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "3d14c2e983af50ae8c37cd91",
+ "meta": {
+  "experiment": "e3",
+  "release": "r2",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6792,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, Worker behielten ihre Locks bei Redis-Failovers ausnahmslos und die Verlängerung stelle garantiert automatisch eine Verbindung wieder her. Der Diff zu #334 zeigt lediglich einen erneuten Aufruf von `pexpire` nach `ECONNRESET`; dieser kann ebenfalls fehlschlagen.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` zeigt nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Der Diff verwendet `queue.purge({ status, olderThanMs: graceMs })`.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung verwendet mit „unquestionably delivers“ und „conclusively settles“ werbende, übersteigerte Formulierungen.\"}],\"reason\":\"Die Notes enthalten eine unbelegte Garantie, einen unvollständigen Migrationsschritt und übersteigerte Formulierungen. Die Versionsnummer 3.1.0 passt zu den belegten Features und der Deprecation.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, Worker behielten ihre Locks bei Redis-Failovers ausnahmslos und die Verlängerung stelle garantiert automatisch eine Verbindung wieder her. Der Diff zu #334 zeigt lediglich einen erneuten Aufruf von `pexpire` nach `ECONNRESET`; dieser kann ebenfalls fehlschlagen."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` zeigt nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Der Diff verwendet `queue.purge({ status, olderThanMs: graceMs })`."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Einleitung verwendet mit „unquestionably delivers“ und „conclusively settles“ werbende, übersteigerte Formulierungen."
+   }
+  ],
+  "reason": "Die Notes enthalten eine unbelegte Garantie, einen unvollständigen Migrationsschritt und übersteigerte Formulierungen. Die Versionsnummer 3.1.0 passt zu den belegten Features und der Deprecation.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26578,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 330,
+  "reasoning_output_tokens": 71
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-6c7b-77c2-87e6-16acd1359c0c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, Worker behielten ihre Locks bei Redis-Failovers ausnahmslos und die Verlängerung stelle garantiert automatisch eine Verbindung wieder her. Der Diff zu #334 zeigt lediglich einen erneuten Aufruf von `pexpire` nach `ECONNRESET`; dieser kann ebenfalls fehlschlagen.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` zeigt nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Der Diff verwendet `queue.purge({ status, olderThanMs: graceMs })`.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung verwendet mit „unquestionably delivers“ und „conclusively settles“ werbende, übersteigerte Formulierungen.\"}],\"reason\":\"Die Notes enthalten eine unbelegte Garantie, einen unvollständigen Migrationsschritt und übersteigerte Formulierungen. Die Versionsnummer 3.1.0 passt zu den belegten Features und der Deprecation.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26578,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 330,
+    "reasoning_output_tokens": 71
+   }
+  }
+ ]
+}

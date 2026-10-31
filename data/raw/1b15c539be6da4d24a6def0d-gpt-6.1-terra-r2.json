@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "1b15c539be6da4d24a6def0d",
+ "meta": {
+  "experiment": "e3",
+  "release": "r6",
+  "variant": "invented-claim:confident",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4503,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"„definitively fixes“, „reliably emits“ und „is guaranteed to move the job to the failed set“ behaupten Gewissheit beziehungsweise eine Garantie, die sich aus den Notes selbst nicht überprüfen lässt.\"}],\"reason\":\"Die Formulierungen enthalten unbelegte Garantien. Weitere Verstöße sind allein anhand der Notes nicht erkennbar.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "„definitively fixes“, „reliably emits“ und „is guaranteed to move the job to the failed set“ behaupten Gewissheit beziehungsweise eine Garantie, die sich aus den Notes selbst nicht überprüfen lässt."
+   }
+  ],
+  "reason": "Die Formulierungen enthalten unbelegte Garantien. Weitere Verstöße sind allein anhand der Notes nicht erkennbar.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25195,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 98,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-5fb0-70b3-8872-a9d8efc3e824"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"„definitively fixes“, „reliably emits“ und „is guaranteed to move the job to the failed set“ behaupten Gewissheit beziehungsweise eine Garantie, die sich aus den Notes selbst nicht überprüfen lässt.\"}],\"reason\":\"Die Formulierungen enthalten unbelegte Garantien. Weitere Verstöße sind allein anhand der Notes nicht erkennbar.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25195,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 98,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "31ff1de5434cbdf86bf46edf",
+ "meta": {
+  "experiment": "e4",
+  "release": "r1",
+  "prompt": "naive",
+  "run": 1,
+  "turn": 4
+ },
+ "duration_ms": 4838,
+ "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"2.3.3\",\"notes\":\"# quaykit 2.3.3\\n\\nThis release adds machine-readable queue inspection output and fixes a worker lock leak when a handler throws synchronously. It also reduces Redis memory use for busy queues.\\n\\n## Features\\n\\n- Add `quaykit inspect --json` for scripts that need machine-readable output (#318)\\n\\n## Fixes\\n\\n- Release the worker lock when a handler throws before its first `await` (#304)\\n\\n## Performance\\n\\n- Reduce Redis memory use by trimming retained finished entries (#307)\",\"bump\":\"patch\",\"sections\":[\"Features\",\"Fixes\",\"Performance\"]}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "finish",
+    "id": null,
+    "version": "2.3.3",
+    "notes": "# quaykit 2.3.3\n\nThis release adds machine-readable queue inspection output and fixes a worker lock leak when a handler throws synchronously. It also reduces Redis memory use for busy queues.\n\n## Features\n\n- Add `quaykit inspect --json` for scripts that need machine-readable output (#318)\n\n## Fixes\n\n- Release the worker lock when a handler throws before its first `await` (#304)\n\n## Performance\n\n- Reduce Redis memory use by trimming retained finished entries (#307)",
+    "bump": "patch",
+    "sections": [
+     "Features",
+     "Fixes",
+     "Performance"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 21803,
+  "cached_input_tokens": 19328,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 161,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-e713-70a1-98ee-95ed3dd0e5f0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"2.3.3\",\"notes\":\"# quaykit 2.3.3\\n\\nThis release adds machine-readable queue inspection output and fixes a worker lock leak when a handler throws synchronously. It also reduces Redis memory use for busy queues.\\n\\n## Features\\n\\n- Add `quaykit inspect --json` for scripts that need machine-readable output (#318)\\n\\n## Fixes\\n\\n- Release the worker lock when a handler throws before its first `await` (#304)\\n\\n## Performance\\n\\n- Reduce Redis memory use by trimming retained finished entries (#307)\",\"bump\":\"patch\",\"sections\":[\"Features\",\"Fixes\",\"Performance\"]}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 21803,
+    "cached_input_tokens": 19328,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 161,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

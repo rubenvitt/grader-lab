@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "8db4517ad9d42a1bb781a49e",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "careful-2",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5976,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Der Kandidat enthält keine Release Notes. Es fehlen der Rate Limiter für Worker einschließlich seiner Optionen und seines Geltungsbereichs sowie die Deprecation von `timeout` einschließlich Warnverhalten und weiterer Unterstützung.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationshinweis von `timeout` zu `timeoutMs` fehlt.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Versionsnummer `4.1.0` fehlt.\"}],\"reason\":\"Der leere Kandidat vermittelt keine der wesentlichen Informationen aus der Referenz und enthält keine Versionsnummer.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "Der Kandidat enthält keine Release Notes. Es fehlen der Rate Limiter für Worker einschließlich seiner Optionen und seines Geltungsbereichs sowie die Deprecation von `timeout` einschließlich Warnverhalten und weiterer Unterstützung."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Der Migrationshinweis von `timeout` zu `timeoutMs` fehlt."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Versionsnummer `4.1.0` fehlt."
+   }
+  ],
+  "reason": "Der leere Kandidat vermittelt keine der wesentlichen Informationen aus der Referenz und enthält keine Versionsnummer.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25259,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 141,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-f31f-7652-8308-3592ff9c8141"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Der Kandidat enthält keine Release Notes. Es fehlen der Rate Limiter für Worker einschließlich seiner Optionen und seines Geltungsbereichs sowie die Deprecation von `timeout` einschließlich Warnverhalten und weiterer Unterstützung.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationshinweis von `timeout` zu `timeoutMs` fehlt.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Versionsnummer `4.1.0` fehlt.\"}],\"reason\":\"Der leere Kandidat vermittelt keine der wesentlichen Informationen aus der Referenz und enthält keine Versionsnummer.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25259,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 141,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

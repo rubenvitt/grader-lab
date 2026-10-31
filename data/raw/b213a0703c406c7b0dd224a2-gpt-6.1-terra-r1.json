@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "b213a0703c406c7b0dd224a2",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "variant": "naive-1",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4656,
+ "text": "{\"reason\":\"Fassung B nennt zusätzlich den Sicherheitsfix und gibt damit eine relevante Änderung an, die in A fehlt. Da die zugrunde liegenden Diffs nicht vorliegen, lassen sich die konkreten technischen Aussagen beider Fassungen nicht unabhängig auf Belegbarkeit oder Vollständigkeit prüfen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B nennt zusätzlich den Sicherheitsfix und gibt damit eine relevante Änderung an, die in A fehlt. Da die zugrunde liegenden Diffs nicht vorliegen, lassen sich die konkreten technischen Aussagen beider Fassungen nicht unabhängig auf Belegbarkeit oder Vollständigkeit prüfen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25468,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 73,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-82f1-7ad2-a550-8bff4eb5d2e4"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt zusätzlich den Sicherheitsfix und gibt damit eine relevante Änderung an, die in A fehlt. Da die zugrunde liegenden Diffs nicht vorliegen, lassen sich die konkreten technischen Aussagen beider Fassungen nicht unabhängig auf Belegbarkeit oder Vollständigkeit prüfen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25468,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 73,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

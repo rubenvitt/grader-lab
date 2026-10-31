@@ -1,0 +1,65 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "b1a3934ff12d7db67c2455f6",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "prompt": "naive",
+  "run": 1,
+  "turn": 4
+ },
+ "duration_ms": 4556,
+ "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"4.1.0\",\"notes\":\"# quaykit 4.1.0\\n\\nThis release adds per-worker rate limiting and introduces `timeoutMs` as the preferred job timeout option. The existing `timeout` option still works and logs a one-time deprecation warning.\\n\\n## Features\\n\\n- Add a per-worker token-bucket rate limiter configured with `limiter: { max, perMs }`. (#376)\\n\\n## Deprecations\\n\\n- Deprecate the job option `timeout` in favor of `timeoutMs`; both options work during the transition. (#378)\",\"bump\":\"minor\",\"sections\":[\"Features\",\"Deprecations\"]}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "finish",
+    "id": null,
+    "version": "4.1.0",
+    "notes": "# quaykit 4.1.0\n\nThis release adds per-worker rate limiting and introduces `timeoutMs` as the preferred job timeout option. The existing `timeout` option still works and logs a one-time deprecation warning.\n\n## Features\n\n- Add a per-worker token-bucket rate limiter configured with `limiter: { max, perMs }`. (#376)\n\n## Deprecations\n\n- Deprecate the job option `timeout` in favor of `timeoutMs`; both options work during the transition. (#378)",
+    "bump": "minor",
+    "sections": [
+     "Features",
+     "Deprecations"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 21806,
+  "cached_input_tokens": 19328,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 208,
+  "reasoning_output_tokens": 43
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-d468-7dd2-8707-0af495b16796"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"4.1.0\",\"notes\":\"# quaykit 4.1.0\\n\\nThis release adds per-worker rate limiting and introduces `timeoutMs` as the preferred job timeout option. The existing `timeout` option still works and logs a one-time deprecation warning.\\n\\n## Features\\n\\n- Add a per-worker token-bucket rate limiter configured with `limiter: { max, perMs }`. (#376)\\n\\n## Deprecations\\n\\n- Deprecate the job option `timeout` in favor of `timeoutMs`; both options work during the transition. (#378)\",\"bump\":\"minor\",\"sections\":[\"Features\",\"Deprecations\"]}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 21806,
+    "cached_input_tokens": 19328,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 208,
+    "reasoning_output_tokens": 43
+   }
+  }
+ ]
+}

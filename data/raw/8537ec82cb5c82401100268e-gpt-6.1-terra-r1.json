@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "8537ec82cb5c82401100268e",
+ "meta": {
+  "experiment": "e3",
+  "release": "r6",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7942,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 lehnt Schemanamen ab, die nicht dem Muster `/^[a-z_][a-z0-9_]*$/` entsprechen. Nutzer bisher akzeptierter Namen müssen ihre Konfiguration anpassen; die Notes führen die Änderung nicht unter „Breaking Changes“. Wegen des Embargos dürfen die technischen Einzelheiten öffentlich nicht genannt werden.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #413, der Job werde garantiert in die Menge fehlgeschlagener Jobs verschoben. Der Diff sendet bei verlorenem Lock lediglich `lockLost` und beendet `complete()`; eine solche Verschiebung ist nicht belegt.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die inkompatible Konfigurationsänderung aus #414 erfordert nach SemVer einen Major-Sprung auf mindestens 6.0.0.\"}],\"reason\":\"Die Notes enthalten eine unbelegte Garantie und kennzeichnen eine inkompatible Änderung nicht als Breaking Change. Auch die Versionsnummer berücksichtigt diese Änderung nicht.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 lehnt Schemanamen ab, die nicht dem Muster `/^[a-z_][a-z0-9_]*$/` entsprechen. Nutzer bisher akzeptierter Namen müssen ihre Konfiguration anpassen; die Notes führen die Änderung nicht unter „Breaking Changes“. Wegen des Embargos dürfen die technischen Einzelheiten öffentlich nicht genannt werden."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #413, der Job werde garantiert in die Menge fehlgeschlagener Jobs verschoben. Der Diff sendet bei verlorenem Lock lediglich `lockLost` und beendet `complete()`; eine solche Verschiebung ist nicht belegt."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die inkompatible Konfigurationsänderung aus #414 erfordert nach SemVer einen Major-Sprung auf mindestens 6.0.0."
+   }
+  ],
+  "reason": "Die Notes enthalten eine unbelegte Garantie und kennzeichnen eine inkompatible Änderung nicht als Breaking Change. Auch die Versionsnummer berücksichtigt diese Änderung nicht.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26327,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 369,
+  "reasoning_output_tokens": 121
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-48c8-7c61-b8b5-aec802ae8f26"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 lehnt Schemanamen ab, die nicht dem Muster `/^[a-z_][a-z0-9_]*$/` entsprechen. Nutzer bisher akzeptierter Namen müssen ihre Konfiguration anpassen; die Notes führen die Änderung nicht unter „Breaking Changes“. Wegen des Embargos dürfen die technischen Einzelheiten öffentlich nicht genannt werden.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #413, der Job werde garantiert in die Menge fehlgeschlagener Jobs verschoben. Der Diff sendet bei verlorenem Lock lediglich `lockLost` und beendet `complete()`; eine solche Verschiebung ist nicht belegt.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die inkompatible Konfigurationsänderung aus #414 erfordert nach SemVer einen Major-Sprung auf mindestens 6.0.0.\"}],\"reason\":\"Die Notes enthalten eine unbelegte Garantie und kennzeichnen eine inkompatible Änderung nicht als Breaking Change. Auch die Versionsnummer berücksichtigt diese Änderung nicht.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26327,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 369,
+    "reasoning_output_tokens": 121
+   }
+  }
+ ]
+}

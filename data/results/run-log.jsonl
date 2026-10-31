@@ -1,3 +1,6 @@
 {"at":"2026-10-31T22:13:24.388Z","name":"e1","made":70,"cached":0,"failed":6,"used":73,"budget":1500,"stopped":"repeated-failures","complete":false}
 {"at":"2026-10-31T22:22:51.690Z","name":"e1","made":506,"cached":64,"failed":0,"used":579,"budget":1500,"stopped":"max-seconds","complete":false}
 {"at":"2026-10-31T22:29:18.062Z","name":"e1","made":387,"cached":714,"failed":0,"used":966,"budget":1500,"stopped":null,"complete":true}
+{"at":"2026-10-31T22:31:08.451Z","name":"e3","made":90,"cached":90,"failed":0,"used":1056,"budget":1500,"stopped":null,"complete":true}
+{"at":"2026-10-31T22:32:07.332Z","name":"e4-r1","made":34,"cached":0,"failed":0,"used":1090,"budget":1500,"stopped":null,"complete":true}
+{"at":"2026-10-31T22:35:39.079Z","name":"e4","made":175,"cached":34,"failed":0,"used":1265,"budget":1500,"stopped":null,"complete":true}

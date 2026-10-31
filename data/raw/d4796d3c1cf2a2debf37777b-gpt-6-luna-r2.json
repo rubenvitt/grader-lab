@@ -1,0 +1,206 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "d4796d3c1cf2a2debf37777b",
+ "meta": {
+  "experiment": "e4",
+  "release": "r1",
+  "prompt": "careful",
+  "run": 2,
+  "turn": 2
+ },
+ "duration_ms": 9727,
+ "text": "{\"calls\":[{\"tool\":\"get_pr\",\"id\":301,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":301,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":304,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":304,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":307,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":307,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":309,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":309,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":312,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":312,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":315,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":315,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":318,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":318,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":320,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":320,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":322,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":322,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "get_pr",
+    "id": 301,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 301,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 304,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 304,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 307,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 307,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 309,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 309,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 312,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 312,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 315,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 315,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 318,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 318,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 320,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 320,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 322,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 322,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 65891,
+  "cached_input_tokens": 61952,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 691,
+  "reasoning_output_tokens": 84
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-a455-7af0-8763-a5048ed667dc"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "Ich prüfe jetzt für alle gemergten PRs den Beschreibungstext und Diff gebündelt, damit Revert, API-Änderungen und nutzerrelevante Inhalte korrekt eingeordnet werden."
+   }
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_1",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"get_pr\",\"id\":301,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":301,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":304,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":304,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":307,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":307,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":309,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":309,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":312,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":312,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":315,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":315,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":318,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":318,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":320,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":320,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":322,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":322,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 65891,
+    "cached_input_tokens": 61952,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 691,
+    "reasoning_output_tokens": 84
+   }
+  }
+ ]
+}

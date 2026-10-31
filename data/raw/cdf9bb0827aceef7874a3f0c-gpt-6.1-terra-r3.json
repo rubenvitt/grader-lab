@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "cdf9bb0827aceef7874a3f0c",
+ "meta": {
+  "experiment": "e3",
+  "release": "r4",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5426,
+ "text": "{\"reason\":\"Fassung B beschreibt den Limiter sachlich, während Fassung A unbelegte Garantien zur gemeinsamen und ausnahmslosen Durchsetzung sowie werbliche Formulierungen enthält. Die übrigen Aussagen sind in beiden Fassungen gleich; ob sie durch den Diff gedeckt sind, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt den Limiter sachlich, während Fassung A unbelegte Garantien zur gemeinsamen und ausnahmslosen Durchsetzung sowie werbliche Formulierungen enthält. Die übrigen Aussagen sind in beiden Fassungen gleich; ob sie durch den Diff gedeckt sind, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25268,
+  "cached_input_tokens": 0,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 80,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-f7a3-7c62-bb22-723a394ab49b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt den Limiter sachlich, während Fassung A unbelegte Garantien zur gemeinsamen und ausnahmslosen Durchsetzung sowie werbliche Formulierungen enthält. Die übrigen Aussagen sind in beiden Fassungen gleich; ob sie durch den Diff gedeckt sind, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25268,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 80,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "6bebe0f7fde2ac3ca83f1a9b",
+ "meta": {
+  "experiment": "e4-r1",
+  "release": "r1",
+  "variant": "naive-1",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5431,
+ "text": "{\"reason\":\"Fassung A kennzeichnet die Änderung des Defaults für `removeOnComplete` als Breaking Change, nennt einen konkreten Migrationsschritt und verwendet dafür eine passende Major-Version. Fassung B verbirgt dieselbe Änderung unter „Performance“ und verwendet eine Patch-Version; ohne die zugrunde liegenden Diffs lässt sich die Quellenbelegung der Details nicht unabhängig prüfen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A kennzeichnet die Änderung des Defaults für `removeOnComplete` als Breaking Change, nennt einen konkreten Migrationsschritt und verwendet dafür eine passende Major-Version. Fassung B verbirgt dieselbe Änderung unter „Performance“ und verwendet eine Patch-Version; ohne die zugrunde liegenden Diffs lässt sich die Quellenbelegung der Details nicht unabhängig prüfen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25312,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 91,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-196a-7f70-87ea-de4b34d55127"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A kennzeichnet die Änderung des Defaults für `removeOnComplete` als Breaking Change, nennt einen konkreten Migrationsschritt und verwendet dafür eine passende Major-Version. Fassung B verbirgt dieselbe Änderung unter „Performance“ und verwendet eine Patch-Version; ohne die zugrunde liegenden Diffs lässt sich die Quellenbelegung der Details nicht unabhängig prüfen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25312,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 91,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

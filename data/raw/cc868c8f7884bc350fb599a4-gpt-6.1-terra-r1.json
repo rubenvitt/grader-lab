@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "cc868c8f7884bc350fb599a4",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "naive-1",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5542,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes geben den endgültigen Rate Limiter und die Deprecation entsprechend den Diffs wieder; der zurückgenommene Stand und interne Änderungen erscheinen nicht. Die Version 4.1.0 passt zu den neuen Funktionen und der Deprecation ohne belegten Breaking Change.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes geben den endgültigen Rate Limiter und die Deprecation entsprechend den Diffs wieder; der zurückgenommene Stand und interne Änderungen erscheinen nicht. Die Version 4.1.0 passt zu den neuen Funktionen und der Deprecation ohne belegten Breaking Change.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 26307,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 77,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-c390-78b3-909e-b6fbe6e18bbc"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes geben den endgültigen Rate Limiter und die Deprecation entsprechend den Diffs wieder; der zurückgenommene Stand und interne Änderungen erscheinen nicht. Die Version 4.1.0 passt zu den neuen Funktionen und der Deprecation ohne belegten Breaking Change.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26307,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 77,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

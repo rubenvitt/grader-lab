@@ -1,0 +1,62 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "280425e24e82ea62cdac0c5e",
+ "meta": {
+  "experiment": "e4",
+  "release": "r2",
+  "prompt": "naive",
+  "run": 1,
+  "turn": 1
+ },
+ "duration_ms": 7258,
+ "text": "{\"calls\":[{\"tool\":\"list_prs\",\"id\":null,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "list_prs",
+    "id": null,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 41886,
+  "cached_input_tokens": 20736,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 147,
+  "reasoning_output_tokens": 61
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-9d8c-7d21-88f3-adc184733b4a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"list_prs\",\"id\":null,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 41886,
+    "cached_input_tokens": 20736,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 147,
+    "reasoning_output_tokens": 61
+   }
+  }
+ ]
+}

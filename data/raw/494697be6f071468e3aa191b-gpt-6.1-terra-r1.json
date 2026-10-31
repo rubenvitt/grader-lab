@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "494697be6f071468e3aa191b",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "variant": "careful-1",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 8112,
+ "text": "{\"reason\":\"Fassung B beschreibt die Änderungen an Cron-Jobs und `addBulk` konkreter und ist dadurch für Nutzer brauchbarer. Ob ihre zusätzlichen Details durch die Diffs belegt sind, lässt sich anhand der vorliegenden Texte nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt die Änderungen an Cron-Jobs und `addBulk` konkreter und ist dadurch für Nutzer brauchbarer. Ob ihre zusätzlichen Details durch die Diffs belegt sind, lässt sich anhand der vorliegenden Texte nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25470,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 313,
+  "reasoning_output_tokens": 246
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-a3dc-7552-b307-088906f55950"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt die Änderungen an Cron-Jobs und `addBulk` konkreter und ist dadurch für Nutzer brauchbarer. Ob ihre zusätzlichen Details durch die Diffs belegt sind, lässt sich anhand der vorliegenden Texte nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25470,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 313,
+    "reasoning_output_tokens": 246
+   }
+  }
+ ]
+}

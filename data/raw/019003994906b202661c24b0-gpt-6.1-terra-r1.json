@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "019003994906b202661c24b0",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "naive-2",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4702,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Beim Rate Limiter fehlt die konkrete Bedeutung von `max` und `perMs`: Höchstens `max` Jobs werden pro `perMs` Millisekunden verarbeitet. Damit ist die Konfiguration weniger brauchbar beschrieben als in der Referenz.\"}],\"reason\":\"Der Kandidat gibt Version, Geltungsbereich und Migration korrekt wieder, erklärt aber die Funktionsweise der beiden Limiter-Parameter nicht ausreichend.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "Beim Rate Limiter fehlt die konkrete Bedeutung von `max` und `perMs`: Höchstens `max` Jobs werden pro `perMs` Millisekunden verarbeitet. Damit ist die Konfiguration weniger brauchbar beschrieben als in der Referenz."
+   }
+  ],
+  "reason": "Der Kandidat gibt Version, Geltungsbereich und Migration korrekt wieder, erklärt aber die Funktionsweise der beiden Limiter-Parameter nicht ausreichend.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25374,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 111,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-d468-7853-939f-5d14650b5872"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Beim Rate Limiter fehlt die konkrete Bedeutung von `max` und `perMs`: Höchstens `max` Jobs werden pro `perMs` Millisekunden verarbeitet. Damit ist die Konfiguration weniger brauchbar beschrieben als in der Referenz.\"}],\"reason\":\"Der Kandidat gibt Version, Geltungsbereich und Migration korrekt wieder, erklärt aber die Funktionsweise der beiden Limiter-Parameter nicht ausreichend.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25374,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 111,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

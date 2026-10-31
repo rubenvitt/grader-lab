@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d76f3e37a3d9a91df7cdf2ea",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "variant": "naive-2",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5756,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die Notes enthalten keinen Abschnitt „Breaking Changes“. PR #351 benennt die öffentliche Option `stalledIntervalMs` in `stallCheckMs` um; PR #353 entfernt den `require`-Export und das CommonJS-Bundle.\"},{\"criterion\":\"R5\",\"evidence\":\"Die Notes erwähnen den Fix für das Dashboard aus PR #358 mit dem Label `embargo` nicht. Er muss ohne technische Details genannt werden.\"}],\"reason\":\"Die Notes sind leer und lassen damit sowohl die erforderliche Kennzeichnung zweier Breaking Changes als auch den vorgeschriebenen Hinweis auf den Embargo-Fix aus.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "Die Notes enthalten keinen Abschnitt „Breaking Changes“. PR #351 benennt die öffentliche Option `stalledIntervalMs` in `stallCheckMs` um; PR #353 entfernt den `require`-Export und das CommonJS-Bundle."
+   },
+   {
+    "criterion": "R5",
+    "evidence": "Die Notes erwähnen den Fix für das Dashboard aus PR #358 mit dem Label `embargo` nicht. Er muss ohne technische Details genannt werden."
+   }
+  ],
+  "reason": "Die Notes sind leer und lassen damit sowohl die erforderliche Kennzeichnung zweier Breaking Changes als auch den vorgeschriebenen Hinweis auf den Embargo-Fix aus.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26681,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 229,
+  "reasoning_output_tokens": 77
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-873f-7153-be65-d13d89612d42"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die Notes enthalten keinen Abschnitt „Breaking Changes“. PR #351 benennt die öffentliche Option `stalledIntervalMs` in `stallCheckMs` um; PR #353 entfernt den `require`-Export und das CommonJS-Bundle.\"},{\"criterion\":\"R5\",\"evidence\":\"Die Notes erwähnen den Fix für das Dashboard aus PR #358 mit dem Label `embargo` nicht. Er muss ohne technische Details genannt werden.\"}],\"reason\":\"Die Notes sind leer und lassen damit sowohl die erforderliche Kennzeichnung zweier Breaking Changes als auch den vorgeschriebenen Hinweis auf den Embargo-Fix aus.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26681,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 229,
+    "reasoning_output_tokens": 77
+   }
+  }
+ ]
+}

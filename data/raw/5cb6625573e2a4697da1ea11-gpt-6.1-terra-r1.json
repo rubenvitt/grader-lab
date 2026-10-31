@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "5cb6625573e2a4697da1ea11",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "variant": "naive-2",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6038,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 ändert den PostgreSQL-Konstruktor: Schemanamen, die nicht dem Muster `/^[a-z_][a-z0-9_]*$/` entsprechen, lösen nun `QuaykitError('invalid schema name')` aus. Nutzer solcher Namen müssen ihre Konfiguration anpassen; ein entsprechender Eintrag unter „Breaking Changes“ fehlt.\"},{\"criterion\":\"R5\",\"evidence\":\"Der mit `embargo` gekennzeichnete Fix in PR #414 fehlt vollständig in den Notes. Er müsste ohne Details zur Schwachstelle oder zum Fix genannt werden; die betroffene PostgreSQL-Komponente und eine Upgrade-Empfehlung sind erlaubt.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0, die Notes nennen 5.0.1. Die durch PR #414 eingeführte Einschränkung zuvor akzeptierter Schemanamen ist eine inkompatible Änderung und verlangt gemäß SemVer einen Major-Sprung auf 6.0.0.\"}],\"reason\":\"Der Worker-Fix ist durch den Diff belegt; der zurückgenommene Replay-Button und interne Änderungen fehlen zu Recht. Die Notes übergehen jedoch den PostgreSQL-Fix und dessen inkompatible Auswirkung auf bestehende Konfigurationen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 ändert den PostgreSQL-Konstruktor: Schemanamen, die nicht dem Muster `/^[a-z_][a-z0-9_]*$/` entsprechen, lösen nun `QuaykitError('invalid schema name')` aus. Nutzer solcher Namen müssen ihre Konfiguration anpassen; ein entsprechender Eintrag unter „Breaking Changes“ fehlt."
+   },
+   {
+    "criterion": "R5",
+    "evidence": "Der mit `embargo` gekennzeichnete Fix in PR #414 fehlt vollständig in den Notes. Er müsste ohne Details zur Schwachstelle oder zum Fix genannt werden; die betroffene PostgreSQL-Komponente und eine Upgrade-Empfehlung sind erlaubt."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 5.0.0, die Notes nennen 5.0.1. Die durch PR #414 eingeführte Einschränkung zuvor akzeptierter Schemanamen ist eine inkompatible Änderung und verlangt gemäß SemVer einen Major-Sprung auf 6.0.0."
+   }
+  ],
+  "reason": "Der Worker-Fix ist durch den Diff belegt; der zurückgenommene Replay-Button und interne Änderungen fehlen zu Recht. Die Notes übergehen jedoch den PostgreSQL-Fix und dessen inkompatible Auswirkung auf bestehende Konfigurationen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26269,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 286,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-672e-71d2-875e-5d5ff567a456"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 ändert den PostgreSQL-Konstruktor: Schemanamen, die nicht dem Muster `/^[a-z_][a-z0-9_]*$/` entsprechen, lösen nun `QuaykitError('invalid schema name')` aus. Nutzer solcher Namen müssen ihre Konfiguration anpassen; ein entsprechender Eintrag unter „Breaking Changes“ fehlt.\"},{\"criterion\":\"R5\",\"evidence\":\"Der mit `embargo` gekennzeichnete Fix in PR #414 fehlt vollständig in den Notes. Er müsste ohne Details zur Schwachstelle oder zum Fix genannt werden; die betroffene PostgreSQL-Komponente und eine Upgrade-Empfehlung sind erlaubt.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0, die Notes nennen 5.0.1. Die durch PR #414 eingeführte Einschränkung zuvor akzeptierter Schemanamen ist eine inkompatible Änderung und verlangt gemäß SemVer einen Major-Sprung auf 6.0.0.\"}],\"reason\":\"Der Worker-Fix ist durch den Diff belegt; der zurückgenommene Replay-Button und interne Änderungen fehlen zu Recht. Die Notes übergehen jedoch den PostgreSQL-Fix und dessen inkompatible Auswirkung auf bestehende Konfigurationen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26269,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 286,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

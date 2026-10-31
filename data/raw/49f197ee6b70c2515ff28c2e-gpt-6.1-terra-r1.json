@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "49f197ee6b70c2515ff28c2e",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "variant": "naive-1",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4884,
+ "text": "{\"reason\":\"Fassung A nennt zusätzlich den Sicherheitsfix und die Upgrade-Empfehlung, ohne technische Details preiszugeben. Fassung B lässt diesen nutzerrelevanten Fix aus und erwähnt stattdessen eine zurückgenommene Änderung.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A nennt zusätzlich den Sicherheitsfix und die Upgrade-Empfehlung, ohne technische Details preiszugeben. Fassung B lässt diesen nutzerrelevanten Fix aus und erwähnt stattdessen eine zurückgenommene Änderung.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25194,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 63,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-57a0-7a23-a4b1-8856fd98761b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A nennt zusätzlich den Sicherheitsfix und die Upgrade-Empfehlung, ohne technische Details preiszugeben. Fassung B lässt diesen nutzerrelevanten Fix aus und erwähnt stattdessen eine zurückgenommene Änderung.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25194,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 63,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

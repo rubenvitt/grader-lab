@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "3fcf52f6aa74905ca69a170a",
+ "meta": {
+  "experiment": "e4-r1",
+  "release": "r1",
+  "variant": "naive-2",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5538,
+ "text": "{\"reason\":\"Fassung A ordnet den geänderten Standardwert für `removeOnComplete` als Breaking Change ein, nennt einen konkreten Migrationsschritt und verwendet dafür eine neue Major-Version. Fassung B führt dieselbe Änderung lediglich unter „Performance“ und versieht sie nur mit einem Minor-Sprung.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ordnet den geänderten Standardwert für `removeOnComplete` als Breaking Change ein, nennt einen konkreten Migrationsschritt und verwendet dafür eine neue Major-Version. Fassung B führt dieselbe Änderung lediglich unter „Performance“ und versieht sie nur mit einem Minor-Sprung.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25306,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 78,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-2e82-7871-a0df-875caeec0184"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ordnet den geänderten Standardwert für `removeOnComplete` als Breaking Change ein, nennt einen konkreten Migrationsschritt und verwendet dafür eine neue Major-Version. Fassung B führt dieselbe Änderung lediglich unter „Performance“ und versieht sie nur mit einem Minor-Sprung.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25306,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 78,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

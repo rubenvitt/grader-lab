@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "67bb53ffc83a3c524261532a",
+ "meta": {
+  "experiment": "e3",
+  "release": "r4",
+  "variant": "invented-claim:confident",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5479,
+ "text": "{\"violations\":[],\"reason\":\"Die Einträge beschreiben konkrete Änderungen und nennen einen Migrationsschritt. Ob die Zusicherungen und Optionsnamen durch den Code gedeckt sind, lässt sich ohne Quellen nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Einträge beschreiben konkrete Änderungen und nennen einen Migrationsschritt. Ob die Zusicherungen und Optionsnamen durch den Code gedeckt sind, lässt sich ohne Quellen nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25201,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 58,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-e241-7602-ad5c-bbb36fb3b11b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Einträge beschreiben konkrete Änderungen und nennen einen Migrationsschritt. Ob die Zusicherungen und Optionsnamen durch den Code gedeckt sind, lässt sich ohne Quellen nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25201,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 58,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

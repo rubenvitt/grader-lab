@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "252803ada49d7eada1beaccc",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "variant": "naive-2",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4259,
+ "text": "{\"reason\":\"Fassung A enthält keine Release Notes. Fassung B nennt konkrete Änderungen, Migrationsschritte und einen zurückhaltend formulierten Sicherheitshinweis; mangels Quellen lässt sich ihre sachliche Richtigkeit allerdings nicht prüfen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung A enthält keine Release Notes. Fassung B nennt konkrete Änderungen, Migrationsschritte und einen zurückhaltend formulierten Sicherheitshinweis; mangels Quellen lässt sich ihre sachliche Richtigkeit allerdings nicht prüfen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25285,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 61,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-9334-7700-bf38-7d2be3d0f6b0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A enthält keine Release Notes. Fassung B nennt konkrete Änderungen, Migrationsschritte und einen zurückhaltend formulierten Sicherheitshinweis; mangels Quellen lässt sich ihre sachliche Richtigkeit allerdings nicht prüfen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25285,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 61,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

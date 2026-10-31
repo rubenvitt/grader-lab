@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "76751712dedf169e9266010e",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "variant": "naive-1",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4443,
+ "text": "{\"reason\":\"Fassung A nennt den Sicherheitsfix für das Dashboard und empfiehlt ein Upgrade, ohne verbotene Details preiszugeben. Fassung B lässt diesen nutzerrelevanten Hinweis aus.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A nennt den Sicherheitsfix für das Dashboard und empfiehlt ein Upgrade, ohne verbotene Details preiszugeben. Fassung B lässt diesen nutzerrelevanten Hinweis aus.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25468,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 53,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-80b4-7f53-9c24-fb31454c8e23"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A nennt den Sicherheitsfix für das Dashboard und empfiehlt ein Upgrade, ohne verbotene Details preiszugeben. Fassung B lässt diesen nutzerrelevanten Hinweis aus.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25468,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "a38ccc10c57a1dec278022b7",
+ "meta": {
+  "experiment": "e3",
+  "release": "r4",
+  "variant": "invented-claim:confident",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6018,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat behauptet, das Limit werde ausnahmslos von allen Workern einer Queue gemeinsam genutzt. Laut Referenz hat jede Worker-Instanz ihr eigenes Limit. Auch „proven“ ist durch die Referenz nicht belegt.\"},{\"criterion\":\"R7\",\"evidence\":\"„proven“ und „reliably … without exception“ verwenden werbliche beziehungsweise übersteigerte Formulierungen.\"},{\"criterion\":\"R8\",\"evidence\":\"Die falsche Aussage zur gemeinsamen Nutzung des Limits vermittelt ein unbrauchbares Bild davon, wie die Begrenzung für mehrere Worker wirkt.\"}],\"reason\":\"Der Kandidat widerspricht der Referenz bei der Wirkung des Rate-Limits und ergänzt unbelegte, übersteigerte Aussagen. Die Deprecation, die Migration und die Versionsnummer stimmen überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Kandidat behauptet, das Limit werde ausnahmslos von allen Workern einer Queue gemeinsam genutzt. Laut Referenz hat jede Worker-Instanz ihr eigenes Limit. Auch „proven“ ist durch die Referenz nicht belegt."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "„proven“ und „reliably … without exception“ verwenden werbliche beziehungsweise übersteigerte Formulierungen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Die falsche Aussage zur gemeinsamen Nutzung des Limits vermittelt ein unbrauchbares Bild davon, wie die Begrenzung für mehrere Worker wirkt."
+   }
+  ],
+  "reason": "Der Kandidat widerspricht der Referenz bei der Wirkung des Rate-Limits und ergänzt unbelegte, übersteigerte Aussagen. Die Deprecation, die Migration und die Versionsnummer stimmen überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25377,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 190,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-e46e-71f1-9fd3-e28285141668"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat behauptet, das Limit werde ausnahmslos von allen Workern einer Queue gemeinsam genutzt. Laut Referenz hat jede Worker-Instanz ihr eigenes Limit. Auch „proven“ ist durch die Referenz nicht belegt.\"},{\"criterion\":\"R7\",\"evidence\":\"„proven“ und „reliably … without exception“ verwenden werbliche beziehungsweise übersteigerte Formulierungen.\"},{\"criterion\":\"R8\",\"evidence\":\"Die falsche Aussage zur gemeinsamen Nutzung des Limits vermittelt ein unbrauchbares Bild davon, wie die Begrenzung für mehrere Worker wirkt.\"}],\"reason\":\"Der Kandidat widerspricht der Referenz bei der Wirkung des Rate-Limits und ergänzt unbelegte, übersteigerte Aussagen. Die Deprecation, die Migration und die Versionsnummer stimmen überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25377,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 190,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

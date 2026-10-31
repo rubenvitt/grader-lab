@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "b5223cbe8d70bb11a0516f7b",
+ "meta": {
+  "experiment": "e4",
+  "release": "r2",
+  "prompt": "careful",
+  "run": 2,
+  "turn": 3
+ },
+ "duration_ms": 6488,
+ "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"4.0.0\",\"notes\":\"# quaykit 4.0.0\\n\\nThis release adds a worker event for empty queues and improves Redis lock-renewal resilience. It also adds `queue.purge()` and deprecates `queue.clean()`.\\n\\n## Features\\n\\n- Emit `drained` when a worker finds the queue empty and has no active jobs. (#331)\\n- Add `queue.purge({ status, olderThanMs })` to remove older jobs. (#338)\\n\\n## Fixes\\n\\n- Retry Redis lock renewal after an `ECONNRESET`. (#334)\\n\\n## Security\\n\\n- Signing component: upgrade quaykit to this release. (#336)\\n\\n## Deprecations\\n\\n- Deprecate `queue.clean()` in favor of `queue.purge()`. Migrate calls from `queue.clean(graceMs, status)` to `queue.purge({ status, olderThanMs: graceMs })`. (#338)\",\"bump\":null,\"sections\":null},{\"tool\":\"finish\",\"id\":null,\"version\":\"4.0.0\",\"notes\":\"# quaykit 4.0.0\\n\\nThis release adds a worker event for empty queues and improves Redis lock-renewal resilience. It also adds `queue.purge()` and deprecates `queue.clean()`.\\n\\n## Features\\n\\n- Emit `drained` when a worker finds the queue empty and has no active jobs. (#331)\\n- Add `queue.purge({ status, olderThanMs })` to remove older jobs. (#338)\\n\\n## Fixes\\n\\n- Retry Redis lock renewal after an `ECONNRESET`. (#334)\\n\\n## Security\\n\\n- Signing component: upgrade quaykit to this release. (#336)\\n\\n## Deprecations\\n\\n- Deprecate `queue.clean()` in favor of `queue.purge()`. Migrate calls from `queue.clean(graceMs, status)` to `queue.purge({ status, olderThanMs: graceMs })`. (#338)\",\"bump\":\"major\",\"sections\":[\"Features\",\"Fixes\",\"Security\",\"Deprecations\"]}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "publish_release",
+    "id": null,
+    "version": "4.0.0",
+    "notes": "# quaykit 4.0.0\n\nThis release adds a worker event for empty queues and improves Redis lock-renewal resilience. It also adds `queue.purge()` and deprecates `queue.clean()`.\n\n## Features\n\n- Emit `drained` when a worker finds the queue empty and has no active jobs. (#331)\n- Add `queue.purge({ status, olderThanMs })` to remove older jobs. (#338)\n\n## Fixes\n\n- Retry Redis lock renewal after an `ECONNRESET`. (#334)\n\n## Security\n\n- Signing component: upgrade quaykit to this release. (#336)\n\n## Deprecations\n\n- Deprecate `queue.clean()` in favor of `queue.purge()`. Migrate calls from `queue.clean(graceMs, status)` to `queue.purge({ status, olderThanMs: graceMs })`. (#338)",
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "finish",
+    "id": null,
+    "version": "4.0.0",
+    "notes": "# quaykit 4.0.0\n\nThis release adds a worker event for empty queues and improves Redis lock-renewal resilience. It also adds `queue.purge()` and deprecates `queue.clean()`.\n\n## Features\n\n- Emit `drained` when a worker finds the queue empty and has no active jobs. (#331)\n- Add `queue.purge({ status, olderThanMs })` to remove older jobs. (#338)\n\n## Fixes\n\n- Retry Redis lock renewal after an `ECONNRESET`. (#334)\n\n## Security\n\n- Signing component: upgrade quaykit to this release. (#336)\n\n## Deprecations\n\n- Deprecate `queue.clean()` in favor of `queue.purge()`. Migrate calls from `queue.clean(graceMs, status)` to `queue.purge({ status, olderThanMs: graceMs })`. (#338)",
+    "bump": "major",
+    "sections": [
+     "Features",
+     "Fixes",
+     "Security",
+     "Deprecations"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 22930,
+  "cached_input_tokens": 19328,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 476,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-65b7-7861-8b5e-77cf5aea3350"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"4.0.0\",\"notes\":\"# quaykit 4.0.0\\n\\nThis release adds a worker event for empty queues and improves Redis lock-renewal resilience. It also adds `queue.purge()` and deprecates `queue.clean()`.\\n\\n## Features\\n\\n- Emit `drained` when a worker finds the queue empty and has no active jobs. (#331)\\n- Add `queue.purge({ status, olderThanMs })` to remove older jobs. (#338)\\n\\n## Fixes\\n\\n- Retry Redis lock renewal after an `ECONNRESET`. (#334)\\n\\n## Security\\n\\n- Signing component: upgrade quaykit to this release. (#336)\\n\\n## Deprecations\\n\\n- Deprecate `queue.clean()` in favor of `queue.purge()`. Migrate calls from `queue.clean(graceMs, status)` to `queue.purge({ status, olderThanMs: graceMs })`. (#338)\",\"bump\":null,\"sections\":null},{\"tool\":\"finish\",\"id\":null,\"version\":\"4.0.0\",\"notes\":\"# quaykit 4.0.0\\n\\nThis release adds a worker event for empty queues and improves Redis lock-renewal resilience. It also adds `queue.purge()` and deprecates `queue.clean()`.\\n\\n## Features\\n\\n- Emit `drained` when a worker finds the queue empty and has no active jobs. (#331)\\n- Add `queue.purge({ status, olderThanMs })` to remove older jobs. (#338)\\n\\n## Fixes\\n\\n- Retry Redis lock renewal after an `ECONNRESET`. (#334)\\n\\n## Security\\n\\n- Signing component: upgrade quaykit to this release. (#336)\\n\\n## Deprecations\\n\\n- Deprecate `queue.clean()` in favor of `queue.purge()`. Migrate calls from `queue.clean(graceMs, status)` to `queue.purge({ status, olderThanMs: graceMs })`. (#338)\",\"bump\":\"major\",\"sections\":[\"Features\",\"Fixes\",\"Security\",\"Deprecations\"]}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 22930,
+    "cached_input_tokens": 19328,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 476,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "e8f7c10bb5435019eed1b665",
+ "meta": {
+  "experiment": "e3",
+  "release": "r1",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4254,
+ "text": "{\"reason\":\"Fassung A vermeidet die unbelegten Garantien und absoluten Aussagen in Fassung B, insbesondere zur erneuten Ausführung beim nächsten Poll. Außerdem ist ihr Ton sachlicher.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A vermeidet die unbelegten Garantien und absoluten Aussagen in Fassung B, insbesondere zur erneuten Ausführung beim nächsten Poll. Außerdem ist ihr Ton sachlicher.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25393,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 54,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-4f7a-7e43-8f70-9e96c547140c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A vermeidet die unbelegten Garantien und absoluten Aussagen in Fassung B, insbesondere zur erneuten Ausführung beim nächsten Poll. Außerdem ist ihr Ton sachlicher.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25393,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 54,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

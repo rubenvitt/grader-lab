@@ -1,0 +1,79 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "9b21a8b55bce6943ae027ff3",
+ "meta": {
+  "experiment": "e3",
+  "release": "r5",
+  "variant": "invented-claim:confident",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 13543,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat bezeichnet die Jitter-Strategie als „proven“ und als Standard für neue Queues. Für „proven“ gibt es keinen Beleg; laut Referenz ist die Strategie optional und kein Standard.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind unsachlich und werblich.\"}],\"reason\":\"Die Aussage zum Standardverhalten widerspricht der Referenz; zudem enthält der Kandidat eine unbelegte Eigenschaft und übersteigerte Formulierungen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Kandidat bezeichnet die Jitter-Strategie als „proven“ und als Standard für neue Queues. Für „proven“ gibt es keinen Beleg; laut Referenz ist die Strategie optional und kein Standard."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind unsachlich und werblich."
+   }
+  ],
+  "reason": "Die Aussage zum Standardverhalten widerspricht der Referenz; zudem enthält der Kandidat eine unbelegte Eigenschaft und übersteigerte Formulierungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24843,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 147,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-f7d7-70a3-b934-2118a359bd9e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361ad38f9911c6-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361ad80e9616eb-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361adfbec5fb31-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361aed4c33daed-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat bezeichnet die Jitter-Strategie als „proven“ und als Standard für neue Queues. Für „proven“ gibt es keinen Beleg; laut Referenz ist die Strategie optional und kein Standard.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind unsachlich und werblich.\"}],\"reason\":\"Die Aussage zum Standardverhalten widerspricht der Referenz; zudem enthält der Kandidat eine unbelegte Eigenschaft und übersteigerte Formulierungen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24843,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 147,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "548d804cfdf54b91cd027cac",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "variant": "careful-1",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8370,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration „Replace `worker.pause(boolean)` with `worker.pause({ drain })`“ übernimmt den bisherigen Boolean nicht ausdrücklich. Bei `worker.pause(true)` führt `{ drain }` ohne eine vorhandene Variable `drain` zu einem Fehler. Der Diff von PR #399 zeigt die erforderliche Zuordnung `{ drain: opts }`; entsprechend wird daraus `worker.pause({ drain: true })`.\"}],\"reason\":\"Die Breaking Changes und übrigen nutzerrelevanten Änderungen sind passend eingeordnet und belegt; Version 5.0.0 entspricht dem Major-Sprung. Die Migrationsanweisung für `worker.pause()` ist jedoch nicht zuverlässig ausführbar.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration „Replace `worker.pause(boolean)` with `worker.pause({ drain })`“ übernimmt den bisherigen Boolean nicht ausdrücklich. Bei `worker.pause(true)` führt `{ drain }` ohne eine vorhandene Variable `drain` zu einem Fehler. Der Diff von PR #399 zeigt die erforderliche Zuordnung `{ drain: opts }`; entsprechend wird daraus `worker.pause({ drain: true })`."
+   }
+  ],
+  "reason": "Die Breaking Changes und übrigen nutzerrelevanten Änderungen sind passend eingeordnet und belegt; Version 5.0.0 entspricht dem Major-Sprung. Die Migrationsanweisung für `worker.pause()` ist jedoch nicht zuverlässig ausführbar.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26946,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 342,
+  "reasoning_output_tokens": 179
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-2fa0-7072-ac75-0c33e80107a5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration „Replace `worker.pause(boolean)` with `worker.pause({ drain })`“ übernimmt den bisherigen Boolean nicht ausdrücklich. Bei `worker.pause(true)` führt `{ drain }` ohne eine vorhandene Variable `drain` zu einem Fehler. Der Diff von PR #399 zeigt die erforderliche Zuordnung `{ drain: opts }`; entsprechend wird daraus `worker.pause({ drain: true })`.\"}],\"reason\":\"Die Breaking Changes und übrigen nutzerrelevanten Änderungen sind passend eingeordnet und belegt; Version 5.0.0 entspricht dem Major-Sprung. Die Migrationsanweisung für `worker.pause()` ist jedoch nicht zuverlässig ausführbar.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26946,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 342,
+    "reasoning_output_tokens": 179
+   }
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "57c67fe96ffacef503510bcf",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "variant": "careful-1",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 9717,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"Beim Umbenennen der Worker-Option fehlt der Hinweis, dass es keinen Alias gibt und `stalledIntervalMs` stillschweigend ignoriert wird. Nutzer erkennen dadurch die Folge einer unterlassenen Migration nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"„Dashboard job name rendering“ nennt einen betroffenen Bereich, den die Referenz nicht belegt. Die Referenz nennt lediglich das Dashboard.\"\n    },\n    {\n      \"criterion\": \"R5\",\n      \"evidence\": \"Der Sicherheitseintrag nennt mit dem Rendern von Jobnamen ein Detail zum betroffenen Bereich, obwohl nur die Komponente und die Upgrade-Empfehlung genannt werden dürfen.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Beim `PostgresStore` fehlen die Angaben, dass er eine Queue auf Postgres betreibt und beim Dequeue `SKIP LOCKED` verwendet.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Cron-Eintrag lässt aus, dass Fälligkeitszeiten nun in UTC verglichen werden. „Fire cron jobs once after a daylight-saving time change“ beschreibt zudem nicht klar, dass die bisherigen doppelten Ausführungen bei Zeitumstellungen behoben sind.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Bei `addBulk` fehlen die konkrete Chunk-Größe von 500 und der Vergleich mit dem bisherigen einzelnen Befehl pro Job.\"\n    }\n  ],\n  \"reason\": \"Der Kandidat lässt mehrere konkrete, für Nutzer relevante Angaben der Referenz aus und nennt ein nicht belegtes Detail zum Sicherheitsproblem. Die Versionsnummer und die grundlegenden Migrationsanweisungen stimmen mit der Referenz überein.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "Beim Umbenennen der Worker-Option fehlt der Hinweis, dass es keinen Alias gibt und `stalledIntervalMs` stillschweigend ignoriert wird. Nutzer erkennen dadurch die Folge einer unterlassenen Migration nicht."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "„Dashboard job name rendering“ nennt einen betroffenen Bereich, den die Referenz nicht belegt. Die Referenz nennt lediglich das Dashboard."
+   },
+   {
+    "criterion": "R5",
+    "evidence": "Der Sicherheitseintrag nennt mit dem Rendern von Jobnamen ein Detail zum betroffenen Bereich, obwohl nur die Komponente und die Upgrade-Empfehlung genannt werden dürfen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Beim `PostgresStore` fehlen die Angaben, dass er eine Queue auf Postgres betreibt und beim Dequeue `SKIP LOCKED` verwendet."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Cron-Eintrag lässt aus, dass Fälligkeitszeiten nun in UTC verglichen werden. „Fire cron jobs once after a daylight-saving time change“ beschreibt zudem nicht klar, dass die bisherigen doppelten Ausführungen bei Zeitumstellungen behoben sind."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Bei `addBulk` fehlen die konkrete Chunk-Größe von 500 und der Vergleich mit dem bisherigen einzelnen Befehl pro Job."
+   }
+  ],
+  "reason": "Der Kandidat lässt mehrere konkrete, für Nutzer relevante Angaben der Referenz aus und nennt ein nicht belegtes Detail zum Sicherheitsproblem. Die Versionsnummer und die grundlegenden Migrationsanweisungen stimmen mit der Referenz überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24727,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 542,
+  "reasoning_output_tokens": 135
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-951b-7d11-945d-e19c0a197164"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"Beim Umbenennen der Worker-Option fehlt der Hinweis, dass es keinen Alias gibt und `stalledIntervalMs` stillschweigend ignoriert wird. Nutzer erkennen dadurch die Folge einer unterlassenen Migration nicht.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"„Dashboard job name rendering“ nennt einen betroffenen Bereich, den die Referenz nicht belegt. Die Referenz nennt lediglich das Dashboard.\"\n    },\n    {\n      \"criterion\": \"R5\",\n      \"evidence\": \"Der Sicherheitseintrag nennt mit dem Rendern von Jobnamen ein Detail zum betroffenen Bereich, obwohl nur die Komponente und die Upgrade-Empfehlung genannt werden dürfen.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Beim `PostgresStore` fehlen die Angaben, dass er eine Queue auf Postgres betreibt und beim Dequeue `SKIP LOCKED` verwendet.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Cron-Eintrag lässt aus, dass Fälligkeitszeiten nun in UTC verglichen werden. „Fire cron jobs once after a daylight-saving time change“ beschreibt zudem nicht klar, dass die bisherigen doppelten Ausführungen bei Zeitumstellungen behoben sind.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Bei `addBulk` fehlen die konkrete Chunk-Größe von 500 und der Vergleich mit dem bisherigen einzelnen Befehl pro Job.\"\n    }\n  ],\n  \"reason\": \"Der Kandidat lässt mehrere konkrete, für Nutzer relevante Angaben der Referenz aus und nennt ein nicht belegtes Detail zum Sicherheitsproblem. Die Versionsnummer und die grundlegenden Migrationsanweisungen stimmen mit der Referenz überein.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24727,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 542,
+    "reasoning_output_tokens": 135
+   }
+  }
+ ]
+}

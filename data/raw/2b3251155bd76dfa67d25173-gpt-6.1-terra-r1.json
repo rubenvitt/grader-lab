@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "2b3251155bd76dfa67d25173",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "variant": "naive-1",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5153,
+ "text": "{\"violations\":[{\"criterion\":\"R5\",\"evidence\":\"Der Sicherheitshinweis zum Dashboard und die Upgrade-Empfehlung aus #358 fehlen vollständig.\"},{\"criterion\":\"R8\",\"evidence\":\"Bei der Umbenennung von `stalledIntervalMs` fehlt der Hinweis, dass kein Alias existiert und der alte Name stillschweigend ignoriert wird.\"},{\"criterion\":\"R2\",\"evidence\":\"„Cron jobs now fire once after daylight saving time changes“ behauptet, dass Cronjobs nach der Zeitumstellung genau einmal ausgelöst werden. Die Referenz sagt lediglich, dass sie bei der Zeitumstellung nicht mehr doppelt ausgelöst werden.\"}],\"reason\":\"Der Kandidat lässt den Sicherheitshinweis und eine wichtige Migrationsinformation aus. Außerdem formuliert er den Cron-Fix weitergehend als die Referenz.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R5",
+    "evidence": "Der Sicherheitshinweis zum Dashboard und die Upgrade-Empfehlung aus #358 fehlen vollständig."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Bei der Umbenennung von `stalledIntervalMs` fehlt der Hinweis, dass kein Alias existiert und der alte Name stillschweigend ignoriert wird."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "„Cron jobs now fire once after daylight saving time changes“ behauptet, dass Cronjobs nach der Zeitumstellung genau einmal ausgelöst werden. Die Referenz sagt lediglich, dass sie bei der Zeitumstellung nicht mehr doppelt ausgelöst werden."
+   }
+  ],
+  "reason": "Der Kandidat lässt den Sicherheitshinweis und eine wichtige Migrationsinformation aus. Außerdem formuliert er den Cron-Fix weitergehend als die Referenz.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24727,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 182,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-72c2-7781-b584-810268a947cb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R5\",\"evidence\":\"Der Sicherheitshinweis zum Dashboard und die Upgrade-Empfehlung aus #358 fehlen vollständig.\"},{\"criterion\":\"R8\",\"evidence\":\"Bei der Umbenennung von `stalledIntervalMs` fehlt der Hinweis, dass kein Alias existiert und der alte Name stillschweigend ignoriert wird.\"},{\"criterion\":\"R2\",\"evidence\":\"„Cron jobs now fire once after daylight saving time changes“ behauptet, dass Cronjobs nach der Zeitumstellung genau einmal ausgelöst werden. Die Referenz sagt lediglich, dass sie bei der Zeitumstellung nicht mehr doppelt ausgelöst werden.\"}],\"reason\":\"Der Kandidat lässt den Sicherheitshinweis und eine wichtige Migrationsinformation aus. Außerdem formuliert er den Cron-Fix weitergehend als die Referenz.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24727,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 182,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

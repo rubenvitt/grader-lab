@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "f7a20895dcc6a184dbe8e0a3",
+ "meta": {
+  "experiment": "e3",
+  "release": "r6",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5539,
+ "text": "{\"reason\":\"Fassung B vermeidet die zusätzlichen unbelegten Garantien aus Fassung A, insbesondere die garantierte Verschiebung des Jobs in die Failed-Menge. Außerdem verzichtet sie auf das werbliche „definitively“.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B vermeidet die zusätzlichen unbelegten Garantien aus Fassung A, insbesondere die garantierte Verschiebung des Jobs in die Failed-Menge. Außerdem verzichtet sie auf das werbliche „definitively“.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25250,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 63,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-6625-7460-9b65-6f9a38f859db"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B vermeidet die zusätzlichen unbelegten Garantien aus Fassung A, insbesondere die garantierte Verschiebung des Jobs in die Failed-Menge. Außerdem verzichtet sie auf das werbliche „definitively“.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25250,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 63,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

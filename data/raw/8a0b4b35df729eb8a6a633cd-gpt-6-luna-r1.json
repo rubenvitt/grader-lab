@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "8a0b4b35df729eb8a6a633cd",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "prompt": "naive",
+  "run": 1,
+  "turn": 1
+ },
+ "duration_ms": 7701,
+ "text": "{\"calls\":[{\"tool\":\"list_prs\",\"id\":null,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "list_prs",
+    "id": null,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 41928,
+  "cached_input_tokens": 40064,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 159,
+  "reasoning_output_tokens": 31
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-d66a-7ba3-81c9-f397f60dde54"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "Ich ermittle zuerst die gemergten PRs und prüfe anschließend die relevanten Details, bevor ich die Notes formuliere und das Release veröffentliche."
+   }
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_1",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"list_prs\",\"id\":null,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 41928,
+    "cached_input_tokens": 40064,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 159,
+    "reasoning_output_tokens": 31
+   }
+  }
+ ]
+}

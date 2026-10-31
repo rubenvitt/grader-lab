@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "8431f86150220d25fc8cc28f",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "variant": "naive-2",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 6770,
+ "text": "{\"reason\":\"Fassung A ist besser, weil sie den Sicherheitsfix samt Upgrade-Empfehlung nennt, ohne Details offenzulegen. Außerdem beschreibt sie das Ereignis `lockLost` und macht damit die Änderung für Nutzer konkreter.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil sie den Sicherheitsfix samt Upgrade-Empfehlung nennt, ohne Details offenzulegen. Außerdem beschreibt sie das Ereignis `lockLost` und macht damit die Änderung für Nutzer konkreter.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25190,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 62,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-6b43-7741-bf37-507985d5e611"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil sie den Sicherheitsfix samt Upgrade-Empfehlung nennt, ohne Details offenzulegen. Außerdem beschreibt sie das Ereignis `lockLost` und macht damit die Änderung für Nutzer konkreter.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25190,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

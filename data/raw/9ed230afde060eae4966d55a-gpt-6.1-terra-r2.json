@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "9ed230afde060eae4966d55a",
+ "meta": {
+  "experiment": "e3",
+  "release": "r6",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5548,
+ "text": "{\"reason\":\"Fassung A vermeidet die unbelegten Zusicherungen in Fassung B, insbesondere die garantierte Verschiebung des Jobs in den Failed-Set. Ob weitere Aussagen und die Versionsnummer durch die Änderungen gedeckt sind, lässt sich ohne Quellen oder Diffs nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A vermeidet die unbelegten Zusicherungen in Fassung B, insbesondere die garantierte Verschiebung des Jobs in den Failed-Set. Ob weitere Aussagen und die Versionsnummer durch die Änderungen gedeckt sind, lässt sich ohne Quellen oder Diffs nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25246,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 74,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-6581-7131-b7c1-68d5a479a29b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A vermeidet die unbelegten Zusicherungen in Fassung B, insbesondere die garantierte Verschiebung des Jobs in den Failed-Set. Ob weitere Aussagen und die Versionsnummer durch die Änderungen gedeckt sind, lässt sich ohne Quellen oder Diffs nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25246,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 74,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

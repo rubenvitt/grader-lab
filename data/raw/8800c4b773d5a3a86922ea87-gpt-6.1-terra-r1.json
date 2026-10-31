@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "8800c4b773d5a3a86922ea87",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "variant": "careful-1",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6692,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Signatur `queue.clean(graceMs, status)` und die Zuordnung von `graceMs` zu `olderThanMs` sind durch die Referenz nicht belegt.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration `worker.pause({ drain })` führt ohne Definition von `drain` nicht zuverlässig zum Ziel. Die Referenz nennt `worker.pause({ drain: true })`.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Jitter-Backoff fehlen die Angaben, dass die Strategie optional ist und Wiederholungen zufällig verteilt.\"},{\"criterion\":\"R8\",\"evidence\":\"Bei der Deprecation von `worker.pause(boolean)` fehlt, dass einmalig eine Warnung ausgegeben wird.\"}],\"reason\":\"Der Kandidat gibt Version und wesentliche Änderungen wieder, lässt aber nutzerrelevante Eigenschaften weg und enthält eine nicht belegte Migrationssignatur. Zudem ist der Migrationsschritt für `worker.pause()` nicht vollständig.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Signatur `queue.clean(graceMs, status)` und die Zuordnung von `graceMs` zu `olderThanMs` sind durch die Referenz nicht belegt."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration `worker.pause({ drain })` führt ohne Definition von `drain` nicht zuverlässig zum Ziel. Die Referenz nennt `worker.pause({ drain: true })`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Beim Jitter-Backoff fehlen die Angaben, dass die Strategie optional ist und Wiederholungen zufällig verteilt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Bei der Deprecation von `worker.pause(boolean)` fehlt, dass einmalig eine Warnung ausgegeben wird."
+   }
+  ],
+  "reason": "Der Kandidat gibt Version und wesentliche Änderungen wieder, lässt aber nutzerrelevante Eigenschaften weg und enthält eine nicht belegte Migrationssignatur. Zudem ist der Migrationsschritt für `worker.pause()` nicht vollständig.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25691,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 272,
+  "reasoning_output_tokens": 47
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-2ce8-7043-88e8-05d3b201442e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Signatur `queue.clean(graceMs, status)` und die Zuordnung von `graceMs` zu `olderThanMs` sind durch die Referenz nicht belegt.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration `worker.pause({ drain })` führt ohne Definition von `drain` nicht zuverlässig zum Ziel. Die Referenz nennt `worker.pause({ drain: true })`.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Jitter-Backoff fehlen die Angaben, dass die Strategie optional ist und Wiederholungen zufällig verteilt.\"},{\"criterion\":\"R8\",\"evidence\":\"Bei der Deprecation von `worker.pause(boolean)` fehlt, dass einmalig eine Warnung ausgegeben wird.\"}],\"reason\":\"Der Kandidat gibt Version und wesentliche Änderungen wieder, lässt aber nutzerrelevante Eigenschaften weg und enthält eine nicht belegte Migrationssignatur. Zudem ist der Migrationsschritt für `worker.pause()` nicht vollständig.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25691,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 272,
+    "reasoning_output_tokens": 47
+   }
+  }
+ ]
+}

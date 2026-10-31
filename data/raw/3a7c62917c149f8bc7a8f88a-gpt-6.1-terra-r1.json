@@ -1,0 +1,91 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "3a7c62917c149f8bc7a8f88a",
+ "meta": {
+  "experiment": "e3",
+  "release": "r5",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 15801,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes bezeichnen Jitter als Standard für neue Queues. Der Diff zu #395 ergänzt lediglich einen Zweig für `backoff.type === 'jitter'`; eine Änderung des Standards ist nicht belegt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage, Jitter sorge dafür, dass Retries nicht alle gleichzeitig eintreffen, ist als Garantie nicht belegt: #395 berechnet zufällige ganzzahlige Verzögerungen, die auch übereinstimmen können.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung nennt die Jitter-Strategie „proven“ und behauptet, der Graceful Shutdown sei „conclusively“ behoben. Die Diffs belegen weder diese Bewährung noch eine abschließende Behebung aller Shutdown-Probleme.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut #399 entspricht `pause(false)` jedoch `pause({ drain: false })`; die Empfehlung verändert für diesen Aufruf das Verhalten.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „proven jitter retry strategy“, „conclusively fixes“ und „without question“ sind werblich beziehungsweise unsachlich.\"}],\"reason\":\"Die Notes erfassen die Breaking Changes und die wesentlichen nutzerrelevanten Änderungen; der Major-Sprung auf 5.0.0 passt dazu. Einzelne Aussagen gehen jedoch über die Diffs hinaus, und die Pause-Migration erhält nicht für jeden bisherigen Aufruf das Verhalten.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes bezeichnen Jitter als Standard für neue Queues. Der Diff zu #395 ergänzt lediglich einen Zweig für `backoff.type === 'jitter'`; eine Änderung des Standards ist nicht belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage, Jitter sorge dafür, dass Retries nicht alle gleichzeitig eintreffen, ist als Garantie nicht belegt: #395 berechnet zufällige ganzzahlige Verzögerungen, die auch übereinstimmen können."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung nennt die Jitter-Strategie „proven“ und behauptet, der Graceful Shutdown sei „conclusively“ behoben. Die Diffs belegen weder diese Bewährung noch eine abschließende Behebung aller Shutdown-Probleme."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut #399 entspricht `pause(false)` jedoch `pause({ drain: false })`; die Empfehlung verändert für diesen Aufruf das Verhalten."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „proven jitter retry strategy“, „conclusively fixes“ und „without question“ sind werblich beziehungsweise unsachlich."
+   }
+  ],
+  "reason": "Die Notes erfassen die Breaking Changes und die wesentlichen nutzerrelevanten Änderungen; der Major-Sprung auf 5.0.0 passt dazu. Einzelne Aussagen gehen jedoch über die Diffs hinaus, und die Pause-Migration erhält nicht für jeden bisherigen Aufruf das Verhalten.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26946,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 346,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-fbf7-7173-9cfc-6e00cd2486cf"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361ad958cb9655-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361ade08693769-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361ae56f67e513-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361af21a48e52a-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes bezeichnen Jitter als Standard für neue Queues. Der Diff zu #395 ergänzt lediglich einen Zweig für `backoff.type === 'jitter'`; eine Änderung des Standards ist nicht belegt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage, Jitter sorge dafür, dass Retries nicht alle gleichzeitig eintreffen, ist als Garantie nicht belegt: #395 berechnet zufällige ganzzahlige Verzögerungen, die auch übereinstimmen können.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung nennt die Jitter-Strategie „proven“ und behauptet, der Graceful Shutdown sei „conclusively“ behoben. Die Diffs belegen weder diese Bewährung noch eine abschließende Behebung aller Shutdown-Probleme.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut #399 entspricht `pause(false)` jedoch `pause({ drain: false })`; die Empfehlung verändert für diesen Aufruf das Verhalten.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „proven jitter retry strategy“, „conclusively fixes“ und „without question“ sind werblich beziehungsweise unsachlich.\"}],\"reason\":\"Die Notes erfassen die Breaking Changes und die wesentlichen nutzerrelevanten Änderungen; der Major-Sprung auf 5.0.0 passt dazu. Einzelne Aussagen gehen jedoch über die Diffs hinaus, und die Pause-Migration erhält nicht für jeden bisherigen Aufruf das Verhalten.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26946,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 346,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

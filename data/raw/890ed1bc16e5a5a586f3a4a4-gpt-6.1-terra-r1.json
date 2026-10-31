@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "890ed1bc16e5a5a586f3a4a4",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "careful-1",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6706,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Beim Rate-Limiter fehlt, dass höchstens `max` Jobs pro `perMs` Millisekunden verarbeitet werden. Bei `timeout` fehlen die einmalige Warnung und der Hinweis, dass die Option vorerst weiter funktioniert.\"}],\"reason\":\"Der Kandidat nennt die richtigen Optionen und den Migrationsschritt, lässt aber für Nutzer wichtige Angaben zur Wirkung und zum Übergang weg.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "Beim Rate-Limiter fehlt, dass höchstens `max` Jobs pro `perMs` Millisekunden verarbeitet werden. Bei `timeout` fehlen die einmalige Warnung und der Hinweis, dass die Option vorerst weiter funktioniert."
+   }
+  ],
+  "reason": "Der Kandidat nennt die richtigen Optionen und den Migrationsschritt, lässt aber für Nutzer wichtige Angaben zur Wirkung und zum Übergang weg.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25350,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 105,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-e6c6-78c3-a13b-78387e98545b"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Beim Rate-Limiter fehlt, dass höchstens `max` Jobs pro `perMs` Millisekunden verarbeitet werden. Bei `timeout` fehlen die einmalige Warnung und der Hinweis, dass die Option vorerst weiter funktioniert.\"}],\"reason\":\"Der Kandidat nennt die richtigen Optionen und den Migrationsschritt, lässt aber für Nutzer wichtige Angaben zur Wirkung und zum Übergang weg.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25350,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 105,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "eee9fa147887ad5f947cdd4a",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "variant": "naive-1",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6798,
+ "text": "{\"violations\":[{\"criterion\":\"R5\",\"evidence\":\"Der mit `embargo` gekennzeichnete Fix #358 für das Dashboard fehlt in den Notes. Er muss ohne Details genannt werden; die betroffene Komponente und eine Upgrade-Empfehlung sind erlaubt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, Cron-Jobs würden nach Zeitumstellungen einmal ausgeführt. Der Diff von #357 zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; er belegt keine solche Garantie.\"}],\"reason\":\"Die Breaking Changes, Migrationsnamen und die Major-Version stimmen mit den gezeigten Änderungen überein. Der Embargo-Fix fehlt jedoch, und die Aussage zum Scheduler geht über den belegten Diff hinaus.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R5",
+    "evidence": "Der mit `embargo` gekennzeichnete Fix #358 für das Dashboard fehlt in den Notes. Er muss ohne Details genannt werden; die betroffene Komponente und eine Upgrade-Empfehlung sind erlaubt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, Cron-Jobs würden nach Zeitumstellungen einmal ausgeführt. Der Diff von #357 zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; er belegt keine solche Garantie."
+   }
+  ],
+  "reason": "Die Breaking Changes, Migrationsnamen und die Major-Version stimmen mit den gezeigten Änderungen überein. Der Embargo-Fix fehlt jedoch, und die Aussage zum Scheduler geht über den belegten Diff hinaus.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26866,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 223,
+  "reasoning_output_tokens": 45
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-78ae-72d3-b719-e17247aae713"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R5\",\"evidence\":\"Der mit `embargo` gekennzeichnete Fix #358 für das Dashboard fehlt in den Notes. Er muss ohne Details genannt werden; die betroffene Komponente und eine Upgrade-Empfehlung sind erlaubt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, Cron-Jobs würden nach Zeitumstellungen einmal ausgeführt. Der Diff von #357 zeigt lediglich, dass `cron.next` mit `{ tz: 'UTC' }` aufgerufen wird; er belegt keine solche Garantie.\"}],\"reason\":\"Die Breaking Changes, Migrationsnamen und die Major-Version stimmen mit den gezeigten Änderungen überein. Der Embargo-Fix fehlt jedoch, und die Aussage zum Scheduler geht über den belegten Diff hinaus.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26866,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 223,
+    "reasoning_output_tokens": 45
+   }
+  }
+ ]
+}

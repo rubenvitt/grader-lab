@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "08494076459a95d7df7d9277",
+ "meta": {
+  "experiment": "e3",
+  "release": "r3",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4476,
+ "text": "{\"reason\":\"Fassung B vermeidet die unbelegte Behauptung, dass große Importe etwa 40 % schneller seien. Außerdem ist sie sachlicher: Fassung A verwendet werbliche und übersteigerte Formulierungen wie „decisively“, „proven“ und „unquestionably“.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B vermeidet die unbelegte Behauptung, dass große Importe etwa 40 % schneller seien. Außerdem ist sie sachlicher: Fassung A verwendet werbliche und übersteigerte Formulierungen wie „decisively“, „proven“ und „unquestionably“.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25545,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 76,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-bd1b-7340-bac6-9c3676b82435"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B vermeidet die unbelegte Behauptung, dass große Importe etwa 40 % schneller seien. Außerdem ist sie sachlicher: Fassung A verwendet werbliche und übersteigerte Formulierungen wie „decisively“, „proven“ und „unquestionably“.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25545,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 76,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

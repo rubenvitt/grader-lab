@@ -1,0 +1,126 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "3540b287b19b6cb4e52470b3",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "prompt": "naive",
+  "run": 2,
+  "turn": 2
+ },
+ "duration_ms": 6741,
+ "text": "{\"calls\":[{\"tool\":\"get_pr\",\"id\":351,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":353,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":355,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":357,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":358,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":360,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":365,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":358,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "get_pr",
+    "id": 351,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 353,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 355,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 357,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 358,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 360,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 365,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 358,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 42374,
+  "cached_input_tokens": 33280,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 333,
+  "reasoning_output_tokens": 26
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-07eb-7133-8063-724617cf30a7"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "Ich prüfe die inhaltlich relevanten PRs und den Sicherheitsfix gebündelt, damit die Notes tatsächliche Änderungen und nötige Migrationen beschreiben."
+   }
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_1",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"get_pr\",\"id\":351,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":353,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":355,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":357,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":358,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":360,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":365,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":358,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 42374,
+    "cached_input_tokens": 33280,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 333,
+    "reasoning_output_tokens": 26
+   }
+  }
+ ]
+}

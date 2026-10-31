@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "b7fc9baeadcc0d0a9c50ca2f",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "careful-2",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6527,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Die Notes sind leer. Das neue Worker-Limit aus PR #376 mit `limiter: { max, perMs }` fehlt; laut Diff hat jede Worker-Instanz einen eigenen Token-Bucket.\"},{\"criterion\":\"R8\",\"evidence\":\"Die Notes sind leer. Die Deprecation aus PR #378 fehlt: `timeout` funktioniert weiterhin, gibt aber eine Warnung aus; Nutzer sollen stattdessen `timeoutMs` verwenden.\"}],\"reason\":\"Die Notes lassen zwei nutzerrelevante Änderungen aus. Eine Versionsnummer ist nicht angegeben, daher lässt sich ihre SemVer-Konformität nicht beurteilen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "Die Notes sind leer. Das neue Worker-Limit aus PR #376 mit `limiter: { max, perMs }` fehlt; laut Diff hat jede Worker-Instanz einen eigenen Token-Bucket."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Die Notes sind leer. Die Deprecation aus PR #378 fehlt: `timeout` funktioniert weiterhin, gibt aber eine Warnung aus; Nutzer sollen stattdessen `timeoutMs` verwenden."
+   }
+  ],
+  "reason": "Die Notes lassen zwei nutzerrelevante Änderungen aus. Eine Versionsnummer ist nicht angegeben, daher lässt sich ihre SemVer-Konformität nicht beurteilen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25353,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 267,
+  "reasoning_output_tokens": 112
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-ffde-7680-ba34-1424367a020e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Die Notes sind leer. Das neue Worker-Limit aus PR #376 mit `limiter: { max, perMs }` fehlt; laut Diff hat jede Worker-Instanz einen eigenen Token-Bucket.\"},{\"criterion\":\"R8\",\"evidence\":\"Die Notes sind leer. Die Deprecation aus PR #378 fehlt: `timeout` funktioniert weiterhin, gibt aber eine Warnung aus; Nutzer sollen stattdessen `timeoutMs` verwenden.\"}],\"reason\":\"Die Notes lassen zwei nutzerrelevante Änderungen aus. Eine Versionsnummer ist nicht angegeben, daher lässt sich ihre SemVer-Konformität nicht beurteilen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25353,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 267,
+    "reasoning_output_tokens": 112
+   }
+  }
+ ]
+}

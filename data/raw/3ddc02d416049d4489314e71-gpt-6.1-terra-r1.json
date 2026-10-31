@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "3ddc02d416049d4489314e71",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "variant": "naive-2",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4952,
+ "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Bei #413 fehlt, dass der Worker nach dem Verlust des Locks stattdessen `lockLost` ausgibt.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitshinweis zu `PostgresStore` (#414) und die Upgrade-Empfehlung fehlen vollständig.\"}],\"reason\":\"Der Kandidat lässt zwei für Nutzer wesentliche Fakten der Referenz aus: das Ereignis `lockLost` und den Sicherheitshinweis mit Upgrade-Empfehlung.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R8",
+    "evidence": "Bei #413 fehlt, dass der Worker nach dem Verlust des Locks stattdessen `lockLost` ausgibt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Sicherheitshinweis zu `PostgresStore` (#414) und die Upgrade-Empfehlung fehlen vollständig."
+   }
+  ],
+  "reason": "Der Kandidat lässt zwei für Nutzer wesentliche Fakten der Referenz aus: das Ereignis `lockLost` und den Sicherheitshinweis mit Upgrade-Empfehlung.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24451,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 121,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-6269-7840-82e8-77ec72da6bf9"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R8\",\"evidence\":\"Bei #413 fehlt, dass der Worker nach dem Verlust des Locks stattdessen `lockLost` ausgibt.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitshinweis zu `PostgresStore` (#414) und die Upgrade-Empfehlung fehlen vollständig.\"}],\"reason\":\"Der Kandidat lässt zwei für Nutzer wesentliche Fakten der Referenz aus: das Ereignis `lockLost` und den Sicherheitshinweis mit Upgrade-Empfehlung.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24451,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 121,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

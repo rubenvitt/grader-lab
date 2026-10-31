@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "77365954ea1af412dade6dec",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "variant": "careful-2",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5758,
+ "text": "{\"reason\":\"Fassung B erhält bei der Migration von `worker.pause(true|false)` den jeweiligen bisherigen Wert; Fassung A nennt nur `drain: true`. Außerdem zeigt B bei `queue.clean()` konkret, wie `graceMs` auf `olderThanMs` übertragen wird. Ob die Aussagen durch den Diff belegt sind, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B erhält bei der Migration von `worker.pause(true|false)` den jeweiligen bisherigen Wert; Fassung A nennt nur `drain: true`. Außerdem zeigt B bei `queue.clean()` konkret, wie `graceMs` auf `olderThanMs` übertragen wird. Ob die Aussagen durch den Diff belegt sind, lässt sich ohne die Quellen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 24745,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 143,
+  "reasoning_output_tokens": 49
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-4be8-77c3-a803-d16114df8e0f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B erhält bei der Migration von `worker.pause(true|false)` den jeweiligen bisherigen Wert; Fassung A nennt nur `drain: true`. Außerdem zeigt B bei `queue.clean()` konkret, wie `graceMs` auf `olderThanMs` übertragen wird. Ob die Aussagen durch den Diff belegt sind, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24745,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 143,
+    "reasoning_output_tokens": 49
+   }
+  }
+ ]
+}

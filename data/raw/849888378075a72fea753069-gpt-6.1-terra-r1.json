@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "849888378075a72fea753069",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "naive-2",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5867,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben den erneut eingeführten Rate Limiter und die Deprecation mit den Namen aus den Diffs. Version 4.1.0 passt zu den abwärtskompatiblen Änderungen; zurückgenommene und interne Änderungen sind nicht enthalten.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben den erneut eingeführten Rate Limiter und die Deprecation mit den Namen aus den Diffs. Version 4.1.0 passt zu den abwärtskompatiblen Änderungen; zurückgenommene und interne Änderungen sind nicht enthalten.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 26316,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 97,
+  "reasoning_output_tokens": 20
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-d565-7ad2-a792-ed5e3520adca"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben den erneut eingeführten Rate Limiter und die Deprecation mit den Namen aus den Diffs. Version 4.1.0 passt zu den abwärtskompatiblen Änderungen; zurückgenommene und interne Änderungen sind nicht enthalten.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26316,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 97,
+    "reasoning_output_tokens": 20
+   }
+  }
+ ]
+}

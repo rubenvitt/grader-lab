@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "999aa176c1494f0915d0ec8e",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "prompt": "careful",
+  "run": 2,
+  "turn": 3
+ },
+ "duration_ms": 10960,
+ "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"5.0.0\",\"notes\":\"# quaykit 5.0.0\\n\\nquaykit 5.0.0 adds an opt-in jitter retry strategy and improves worker shutdown and CLI error handling. This release also changes RedisStore construction and removes legacy APIs and options.\\n\\n## Breaking Changes\\n\\n- `RedisStore` now requires an explicit connection; pass `connection` to `new RedisStore({ connection })`. (#391)\\n  Migration: Replace `new RedisStore()` with `new RedisStore({ connection: yourRedisConnection })`.\\n- Removed the deprecated `Queue.clean()` method and `JobOptions.timeout` option. (#393)\\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })` and rename `timeout` to `timeoutMs`.\\n\\n## Features\\n\\n- Added the opt-in exponential jitter retry strategy with `backoff: { type: 'jitter', baseMs }`. (#395)\\n\\n## Fixes\\n\\n- `worker.close()` now observes `shutdownTimeoutMs` while waiting for active jobs. (#397)\\n- `quaykit inspect` now exits with a non-zero status when it fails. (#401)\\n\\n## Deprecations\\n\\n- Passing a boolean to `worker.pause()` is deprecated; use `worker.pause({ drain })`. (#399)\\n  Migration: Replace `worker.pause(true|false)` with `worker.pause({ drain: true|false })`.\" ,\"bump\":\"major\",\"sections\":[\"Breaking Changes\",\"Features\",\"Fixes\",\"Deprecations\"]}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "finish",
+    "id": null,
+    "version": "5.0.0",
+    "notes": "# quaykit 5.0.0\n\nquaykit 5.0.0 adds an opt-in jitter retry strategy and improves worker shutdown and CLI error handling. This release also changes RedisStore construction and removes legacy APIs and options.\n\n## Breaking Changes\n\n- `RedisStore` now requires an explicit connection; pass `connection` to `new RedisStore({ connection })`. (#391)\n  Migration: Replace `new RedisStore()` with `new RedisStore({ connection: yourRedisConnection })`.\n- Removed the deprecated `Queue.clean()` method and `JobOptions.timeout` option. (#393)\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })` and rename `timeout` to `timeoutMs`.\n\n## Features\n\n- Added the opt-in exponential jitter retry strategy with `backoff: { type: 'jitter', baseMs }`. (#395)\n\n## Fixes\n\n- `worker.close()` now observes `shutdownTimeoutMs` while waiting for active jobs. (#397)\n- `quaykit inspect` now exits with a non-zero status when it fails. (#401)\n\n## Deprecations\n\n- Passing a boolean to `worker.pause()` is deprecated; use `worker.pause({ drain })`. (#399)\n  Migration: Replace `worker.pause(true|false)` with `worker.pause({ drain: true|false })`.",
+    "bump": "major",
+    "sections": [
+     "Breaking Changes",
+     "Features",
+     "Fixes",
+     "Deprecations"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 46846,
+  "cached_input_tokens": 42240,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 724,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-9e02-7310-9c2f-ba61e5d59ab3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"5.0.0\",\"notes\":\"# quaykit 5.0.0\\n\\nquaykit 5.0.0 adds an opt-in jitter retry strategy and improves worker shutdown and CLI error handling. This release also changes RedisStore construction and removes legacy APIs and options.\\n\\n## Breaking Changes\\n\\n- `RedisStore` now requires an explicit connection; pass `connection` to `new RedisStore({ connection })`. (#391)\\n  Migration: Replace `new RedisStore()` with `new RedisStore({ connection: yourRedisConnection })`.\\n- Removed the deprecated `Queue.clean()` method and `JobOptions.timeout` option. (#393)\\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })` and rename `timeout` to `timeoutMs`.\\n\\n## Features\\n\\n- Added the opt-in exponential jitter retry strategy with `backoff: { type: 'jitter', baseMs }`. (#395)\\n\\n## Fixes\\n\\n- `worker.close()` now observes `shutdownTimeoutMs` while waiting for active jobs. (#397)\\n- `quaykit inspect` now exits with a non-zero status when it fails. (#401)\\n\\n## Deprecations\\n\\n- Passing a boolean to `worker.pause()` is deprecated; use `worker.pause({ drain })`. (#399)\\n  Migration: Replace `worker.pause(true|false)` with `worker.pause({ drain: true|false })`.\" ,\"bump\":\"major\",\"sections\":[\"Breaking Changes\",\"Features\",\"Fixes\",\"Deprecations\"]}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 46846,
+    "cached_input_tokens": 42240,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 724,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

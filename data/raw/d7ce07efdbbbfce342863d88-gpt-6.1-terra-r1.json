@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d7ce07efdbbbfce342863d88",
+ "meta": {
+  "experiment": "e3",
+  "release": "r3",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4968,
+ "text": "{\"reason\":\"Fassung A ist besser: Fassung B ergänzt eine unbelegte Leistungssteigerung von etwa 40 % und verwendet werbliche Formulierungen wie „proven“ und „unquestionably“. Die übrigen sachlichen Aussagen sind gleich; ihre Quellenlage lässt sich anhand der vorliegenden Texte nicht prüfen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser: Fassung B ergänzt eine unbelegte Leistungssteigerung von etwa 40 % und verwendet werbliche Formulierungen wie „proven“ und „unquestionably“. Die übrigen sachlichen Aussagen sind gleich; ihre Quellenlage lässt sich anhand der vorliegenden Texte nicht prüfen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25543,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 78,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-99fa-7423-8c54-6764bcf86e98"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser: Fassung B ergänzt eine unbelegte Leistungssteigerung von etwa 40 % und verwendet werbliche Formulierungen wie „proven“ und „unquestionably“. Die übrigen sachlichen Aussagen sind gleich; ihre Quellenlage lässt sich anhand der vorliegenden Texte nicht prüfen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25543,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 78,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

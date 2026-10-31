@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "582abbcd470d0d9d0fea81df",
+ "meta": {
+  "experiment": "e4",
+  "release": "r2",
+  "variant": "naive-2",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4877,
+ "text": "{\"reason\":\"Fassung B nennt den konkreten Migrationsschritt und ordnet `graceMs` korrekt `olderThanMs` zu; Fassung A lässt diese Zuordnung offen. Allerdings fehlt in B der in A genannte Sicherheitshinweis. Ohne die Diffs und Labels lässt sich nicht prüfen, ob dieser Hinweis belegt ist oder ob weitere Änderungen und die Versionsnummer stimmen; nach den sichtbaren Angaben ist B wegen der ausführbaren Migration und A wegen des Sicherheitshinweises jeweils im Vorteil.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung B nennt den konkreten Migrationsschritt und ordnet `graceMs` korrekt `olderThanMs` zu; Fassung A lässt diese Zuordnung offen. Allerdings fehlt in B der in A genannte Sicherheitshinweis. Ohne die Diffs und Labels lässt sich nicht prüfen, ob dieser Hinweis belegt ist oder ob weitere Änderungen und die Versionsnummer stimmen; nach den sichtbaren Angaben ist B wegen der ausführbaren Migration und A wegen des Sicherheitshinweises jeweils im Vorteil.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24526,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 117,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-4a83-73c2-88d6-cda6abe27ade"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt den konkreten Migrationsschritt und ordnet `graceMs` korrekt `olderThanMs` zu; Fassung A lässt diese Zuordnung offen. Allerdings fehlt in B der in A genannte Sicherheitshinweis. Ohne die Diffs und Labels lässt sich nicht prüfen, ob dieser Hinweis belegt ist oder ob weitere Änderungen und die Versionsnummer stimmen; nach den sichtbaren Angaben ist B wegen der ausführbaren Migration und A wegen des Sicherheitshinweises jeweils im Vorteil.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24526,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 117,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

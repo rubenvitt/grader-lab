@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "23a1083e21136318a3e4d760",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "variant": "careful-1",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8056,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 weist Schemanamen, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen, im Konstruktor zurück. Zuvor akzeptierte Namen können dadurch eine Konfigurationsänderung erfordern; unter „Breaking Changes“ fehlt diese Änderung.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die durch PR #414 eingeführte Einschränkung der Schemanamen ist eine potenziell inkompatible Änderung und erfordert nach der Rubric einen Major-Sprung.\"}],\"reason\":\"Die Validierung in PR #414 kann bestehende Konfigurationen zurückweisen und muss deshalb als Breaking Change berücksichtigt werden. Details dazu dürfen wegen des Embargos nicht in den öffentlichen Notes stehen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 weist Schemanamen, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen, im Konstruktor zurück. Zuvor akzeptierte Namen können dadurch eine Konfigurationsänderung erfordern; unter „Breaking Changes“ fehlt diese Änderung."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die durch PR #414 eingeführte Einschränkung der Schemanamen ist eine potenziell inkompatible Änderung und erfordert nach der Rubric einen Major-Sprung."
+   }
+  ],
+  "reason": "Die Validierung in PR #414 kann bestehende Konfigurationen zurückweisen und muss deshalb als Breaking Change berücksichtigt werden. Details dazu dürfen wegen des Embargos nicht in den öffentlichen Notes stehen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26293,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 276,
+  "reasoning_output_tokens": 84
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-75c7-7db1-9a56-cadc6fc14f83"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 weist Schemanamen, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen, im Konstruktor zurück. Zuvor akzeptierte Namen können dadurch eine Konfigurationsänderung erfordern; unter „Breaking Changes“ fehlt diese Änderung.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die durch PR #414 eingeführte Einschränkung der Schemanamen ist eine potenziell inkompatible Änderung und erfordert nach der Rubric einen Major-Sprung.\"}],\"reason\":\"Die Validierung in PR #414 kann bestehende Konfigurationen zurückweisen und muss deshalb als Breaking Change berücksichtigt werden. Details dazu dürfen wegen des Embargos nicht in den öffentlichen Notes stehen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26293,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 276,
+    "reasoning_output_tokens": 84
+   }
+  }
+ ]
+}

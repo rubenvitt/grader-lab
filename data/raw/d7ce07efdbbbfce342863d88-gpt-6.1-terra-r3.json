@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "d7ce07efdbbbfce342863d88",
+ "meta": {
+  "experiment": "e3",
+  "release": "r3",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4104,
+ "text": "{\"reason\":\"Fassung A ist sachlicher. Fassung B enthält werbliche Formulierungen und behauptet eine Leistungssteigerung von etwa 40 %, für die kein Beleg vorliegt.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist sachlicher. Fassung B enthält werbliche Formulierungen und behauptet eine Leistungssteigerung von etwa 40 %, für die kein Beleg vorliegt.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25543,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 53,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-bcdb-7cd1-9e52-744ffdd7008c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist sachlicher. Fassung B enthält werbliche Formulierungen und behauptet eine Leistungssteigerung von etwa 40 %, für die kein Beleg vorliegt.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25543,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

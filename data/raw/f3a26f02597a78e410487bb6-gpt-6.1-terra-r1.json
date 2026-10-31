@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "f3a26f02597a78e410487bb6",
+ "meta": {
+  "experiment": "e4",
+  "release": "r2",
+  "variant": "naive-1",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5648,
+ "text": "{\"reason\":\"Fassung A nennt den Sicherheitsfix und die Upgrade-Empfehlung, ohne Embargo-Details preiszugeben. Fassung B lässt diesen Eintrag aus, formuliert das `drained`-Ereignis ungenauer und enthält zudem einen fehlerhaften Abschluss im Migrationsbeispiel; dafür bildet sie `graceMs` explizit auf `olderThanMs` ab.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A nennt den Sicherheitsfix und die Upgrade-Empfehlung, ohne Embargo-Details preiszugeben. Fassung B lässt diesen Eintrag aus, formuliert das `drained`-Ereignis ungenauer und enthält zudem einen fehlerhaften Abschluss im Migrationsbeispiel; dafür bildet sie `graceMs` explizit auf `olderThanMs` ab.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25370,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 98,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-3642-7c70-8cba-9b333e127c8c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A nennt den Sicherheitsfix und die Upgrade-Empfehlung, ohne Embargo-Details preiszugeben. Fassung B lässt diesen Eintrag aus, formuliert das `drained`-Ereignis ungenauer und enthält zudem einen fehlerhaften Abschluss im Migrationsbeispiel; dafür bildet sie `graceMs` explizit auf `olderThanMs` ab.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25370,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 98,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

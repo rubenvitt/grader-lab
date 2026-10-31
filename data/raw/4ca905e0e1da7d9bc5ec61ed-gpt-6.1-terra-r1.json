@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "4ca905e0e1da7d9bc5ec61ed",
+ "meta": {
+  "experiment": "e4-r1",
+  "release": "r1",
+  "variant": "naive-2",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4491,
+ "text": "{\"reason\":\"Fassung B ordnet den geänderten Standardwert als Breaking Change ein, nennt einen konkreten Migrationsschritt und verwendet dafür eine passende Major-Version. Fassung A führt dieselbe Änderung lediglich unter Performance auf und bleibt bei einer Minor-Version; ob die Einzelheiten von B durch den Diff belegt sind, lässt sich anhand des vorliegenden Materials nicht prüfen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ordnet den geänderten Standardwert als Breaking Change ein, nennt einen konkreten Migrationsschritt und verwendet dafür eine passende Major-Version. Fassung A führt dieselbe Änderung lediglich unter Performance auf und bleibt bei einer Minor-Version; ob die Einzelheiten von B durch den Diff belegt sind, lässt sich anhand des vorliegenden Materials nicht prüfen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 24462,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 90,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-3625-73e2-841f-be5b3adecb33"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ordnet den geänderten Standardwert als Breaking Change ein, nennt einen konkreten Migrationsschritt und verwendet dafür eine passende Major-Version. Fassung A führt dieselbe Änderung lediglich unter Performance auf und bleibt bei einer Minor-Version; ob die Einzelheiten von B durch den Diff belegt sind, lässt sich anhand des vorliegenden Materials nicht prüfen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24462,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 90,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

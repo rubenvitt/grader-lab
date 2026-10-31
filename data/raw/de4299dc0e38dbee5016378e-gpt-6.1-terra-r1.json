@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "de4299dc0e38dbee5016378e",
+ "meta": {
+  "experiment": "e4-r1",
+  "release": "r1",
+  "variant": "careful-1",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5639,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration nennt nur `removeOnComplete: false`. Es fehlt der genaue Schritt, beim Erstellen der `Queue` `defaultJobOptions: { removeOnComplete: false }` zu übergeben.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Fix fehlt die für Nutzer relevante Auswirkung: Der Job bleibt nach einem synchronen Fehler nicht mehr bis zum Ablauf der Sperre im Status „active“ hängen.\"}],\"reason\":\"Die wesentlichen Änderungen und die Major-Version stimmen mit der Referenz überein. Der Migrationsschritt ist jedoch nicht ausreichend konkret, und der Fix beschreibt seine Auswirkung auf betroffene Jobs nicht vollständig.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration nennt nur `removeOnComplete: false`. Es fehlt der genaue Schritt, beim Erstellen der `Queue` `defaultJobOptions: { removeOnComplete: false }` zu übergeben."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Beim Fix fehlt die für Nutzer relevante Auswirkung: Der Job bleibt nach einem synchronen Fehler nicht mehr bis zum Ablauf der Sperre im Status „active“ hängen."
+   }
+  ],
+  "reason": "Die wesentlichen Änderungen und die Major-Version stimmen mit der Referenz überein. Der Migrationsschritt ist jedoch nicht ausreichend konkret, und der Fix beschreibt seine Auswirkung auf betroffene Jobs nicht vollständig.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24580,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 156,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-371d-7453-acdb-40525c830cf0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Die Migration nennt nur `removeOnComplete: false`. Es fehlt der genaue Schritt, beim Erstellen der `Queue` `defaultJobOptions: { removeOnComplete: false }` zu übergeben.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Fix fehlt die für Nutzer relevante Auswirkung: Der Job bleibt nach einem synchronen Fehler nicht mehr bis zum Ablauf der Sperre im Status „active“ hängen.\"}],\"reason\":\"Die wesentlichen Änderungen und die Major-Version stimmen mit der Referenz überein. Der Migrationsschritt ist jedoch nicht ausreichend konkret, und der Fix beschreibt seine Auswirkung auf betroffene Jobs nicht vollständig.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24580,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 156,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "07dee5a3aa091917e8a26f7e",
+ "meta": {
+  "experiment": "e3",
+  "release": "r5",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 6572,
+ "text": "{\"reason\":\"Fassung B ist sachlicher; Fassung A enthält mehrere unbegründet verstärkende Formulierungen. Ob die Jitter-Strategie standardmäßig oder nur optional aktiviert ist, lässt sich ohne Diff oder weitere Quellen nicht entscheiden.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist sachlicher; Fassung A enthält mehrere unbegründet verstärkende Formulierungen. Ob die Jitter-Strategie standardmäßig oder nur optional aktiviert ist, lässt sich ohne Diff oder weitere Quellen nicht entscheiden.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 24738,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 64,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-28f9-7d81-8bd0-88f8aa5d0d8d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist sachlicher; Fassung A enthält mehrere unbegründet verstärkende Formulierungen. Ob die Jitter-Strategie standardmäßig oder nur optional aktiviert ist, lässt sich ohne Diff oder weitere Quellen nicht entscheiden.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24738,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 64,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "2b99f80c28d338cc84564f6e",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "variant": "naive-2",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 7577,
+ "text": "{\"reason\":\"Fassung B beschreibt die Migration von `worker.pause()` mit `worker.pause({ drain })`, während Fassung A pauschal `drain: true` empfiehlt und damit einen bisherigen Aufruf mit `false` nicht abdeckt. Ob zusätzliche Detailaussagen wie „exponential“ oder die einmalige Warnung durch den Diff belegt sind, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt die Migration von `worker.pause()` mit `worker.pause({ drain })`, während Fassung A pauschal `drain: true` empfiehlt und damit einen bisherigen Aufruf mit `false` nicht abdeckt. Ob zusätzliche Detailaussagen wie „exponential“ oder die einmalige Warnung durch den Diff belegt sind, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25519,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 211,
+  "reasoning_output_tokens": 112
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-1dfa-74b2-9c41-28c28923a759"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt die Migration von `worker.pause()` mit `worker.pause({ drain })`, während Fassung A pauschal `drain: true` empfiehlt und damit einen bisherigen Aufruf mit `false` nicht abdeckt. Ob zusätzliche Detailaussagen wie „exponential“ oder die einmalige Warnung durch den Diff belegt sind, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25519,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 211,
+    "reasoning_output_tokens": 112
+   }
+  }
+ ]
+}

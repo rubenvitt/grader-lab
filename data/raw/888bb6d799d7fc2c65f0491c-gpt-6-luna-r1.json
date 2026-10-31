@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "888bb6d799d7fc2c65f0491c",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "prompt": "naive",
+  "run": 1,
+  "turn": 5
+ },
+ "duration_ms": 5108,
+ "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"5.0.0\",\"notes\":\"# quaykit 5.0.0\\n\\nThis release requires explicit Redis connections and removes legacy option shims. It adds jittered retry delays and fixes worker shutdown and CLI error exit behavior.\\n\\n## Breaking Changes\\n\\n- `RedisStore` now requires an explicit `connection` option. Pass `{ connection: ... }` when constructing it. (#391)\\n- Removed `queue.clean()` and the `timeout` job option. Use `queue.purge({ status, olderThanMs })` and `timeoutMs`, respectively. (#393)\\n\\n## Features\\n\\n- Added an exponential jitter retry strategy, configurable with `backoff: { type: 'jitter', baseMs }`. (#395)\\n\\n## Fixes\\n\\n- `worker.close()` now honors `shutdownTimeoutMs` while waiting for active jobs. (#397)\\n- `quaykit inspect` now exits with a non-zero status when it fails. (#401)\\n\\n## Deprecations\\n\\n- Passing a boolean to `worker.pause()` is deprecated. Use `worker.pause({ drain })`; boolean arguments continue to work with a warning. (#399)\",\"bump\":\"major\",\"sections\":[\"Breaking Changes\",\"Features\",\"Fixes\",\"Deprecations\"]}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "finish",
+    "id": null,
+    "version": "5.0.0",
+    "notes": "# quaykit 5.0.0\n\nThis release requires explicit Redis connections and removes legacy option shims. It adds jittered retry delays and fixes worker shutdown and CLI error exit behavior.\n\n## Breaking Changes\n\n- `RedisStore` now requires an explicit `connection` option. Pass `{ connection: ... }` when constructing it. (#391)\n- Removed `queue.clean()` and the `timeout` job option. Use `queue.purge({ status, olderThanMs })` and `timeoutMs`, respectively. (#393)\n\n## Features\n\n- Added an exponential jitter retry strategy, configurable with `backoff: { type: 'jitter', baseMs }`. (#395)\n\n## Fixes\n\n- `worker.close()` now honors `shutdownTimeoutMs` while waiting for active jobs. (#397)\n- `quaykit inspect` now exits with a non-zero status when it fails. (#401)\n\n## Deprecations\n\n- Passing a boolean to `worker.pause()` is deprecated. Use `worker.pause({ drain })`; boolean arguments continue to work with a warning. (#399)",
+    "bump": "major",
+    "sections": [
+     "Breaking Changes",
+     "Features",
+     "Fixes",
+     "Deprecations"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 22980,
+  "cached_input_tokens": 19328,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 291,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-0f0a-7e63-9b6c-68551634276e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"5.0.0\",\"notes\":\"# quaykit 5.0.0\\n\\nThis release requires explicit Redis connections and removes legacy option shims. It adds jittered retry delays and fixes worker shutdown and CLI error exit behavior.\\n\\n## Breaking Changes\\n\\n- `RedisStore` now requires an explicit `connection` option. Pass `{ connection: ... }` when constructing it. (#391)\\n- Removed `queue.clean()` and the `timeout` job option. Use `queue.purge({ status, olderThanMs })` and `timeoutMs`, respectively. (#393)\\n\\n## Features\\n\\n- Added an exponential jitter retry strategy, configurable with `backoff: { type: 'jitter', baseMs }`. (#395)\\n\\n## Fixes\\n\\n- `worker.close()` now honors `shutdownTimeoutMs` while waiting for active jobs. (#397)\\n- `quaykit inspect` now exits with a non-zero status when it fails. (#401)\\n\\n## Deprecations\\n\\n- Passing a boolean to `worker.pause()` is deprecated. Use `worker.pause({ drain })`; boolean arguments continue to work with a warning. (#399)\",\"bump\":\"major\",\"sections\":[\"Breaking Changes\",\"Features\",\"Fixes\",\"Deprecations\"]}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 22980,
+    "cached_input_tokens": 19328,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 291,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

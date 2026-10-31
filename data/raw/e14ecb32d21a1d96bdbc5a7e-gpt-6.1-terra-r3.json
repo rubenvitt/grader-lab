@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "e14ecb32d21a1d96bdbc5a7e",
+ "meta": {
+  "experiment": "e3",
+  "release": "r2",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4679,
+ "text": "{\"reason\":\"Fassung B formuliert die Änderung an der Lock-Erneuerung präziser und vermeidet die unbelegten Garantien sowie die werbliche Sprache von Fassung A. Ob B in allen Details durch die Quellen gedeckt ist, lässt sich ohne Diffs nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B formuliert die Änderung an der Lock-Erneuerung präziser und vermeidet die unbelegten Garantien sowie die werbliche Sprache von Fassung A. Ob B in allen Details durch die Quellen gedeckt ist, lässt sich ohne Diffs nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25385,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 74,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-87c5-7d83-b6bd-9ef1a521b9cc"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B formuliert die Änderung an der Lock-Erneuerung präziser und vermeidet die unbelegten Garantien sowie die werbliche Sprache von Fassung A. Ob B in allen Details durch die Quellen gedeckt ist, lässt sich ohne Diffs nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25385,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 74,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

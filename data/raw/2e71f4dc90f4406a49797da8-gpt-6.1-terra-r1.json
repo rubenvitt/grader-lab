@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "2e71f4dc90f4406a49797da8",
+ "meta": {
+  "experiment": "e4-r1",
+  "release": "r1",
+  "variant": "careful-2",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 6851,
+ "text": "{\"reason\":\"Fassung B ist brauchbarer: Sie zeigt die Migration direkt bei der Erstellung der `Queue` und beschreibt die Auswirkungen der Änderungen konkreter. Ob ihre zusätzlichen Details durch die Diffs belegt sind, lässt sich anhand der vorliegenden Texte nicht prüfen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist brauchbarer: Sie zeigt die Migration direkt bei der Erstellung der `Queue` und beschreibt die Auswirkungen der Änderungen konkreter. Ob ihre zusätzlichen Details durch die Diffs belegt sind, lässt sich anhand der vorliegenden Texte nicht prüfen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25340,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 159,
+  "reasoning_output_tokens": 90
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-590d-7bb2-b02d-bae489530beb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist brauchbarer: Sie zeigt die Migration direkt bei der Erstellung der `Queue` und beschreibt die Auswirkungen der Änderungen konkreter. Ob ihre zusätzlichen Details durch die Diffs belegt sind, lässt sich anhand der vorliegenden Texte nicht prüfen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25340,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 159,
+    "reasoning_output_tokens": 90
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "17d4a516fa27c8d526b3bf64",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "careful-2",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4192,
+ "text": "{\"reason\":\"Fassung B nennt konkrete Änderungen und einen Migrationsschritt; Fassung A enthält keine Release Notes. Ob die Aussagen von B durch den Diff gedeckt sind und die Versionsnummer zum vollständigen Release passt, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B nennt konkrete Änderungen und einen Migrationsschritt; Fassung A enthält keine Release Notes. Ob die Aussagen von B durch den Diff gedeckt sind und die Versionsnummer zum vollständigen Release passt, lässt sich ohne Quellen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25150,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 67,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-006c-7030-9a46-99b6c0cb1378"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt konkrete Änderungen und einen Migrationsschritt; Fassung A enthält keine Release Notes. Ob die Aussagen von B durch den Diff gedeckt sind und die Versionsnummer zum vollständigen Release passt, lässt sich ohne Quellen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25150,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 67,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

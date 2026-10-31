@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "ea2d5ff549c6d382d7c36a46",
+ "meta": {
+  "experiment": "e4-r1",
+  "release": "r1",
+  "variant": "naive-1",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 7380,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die Änderung von `removeOnComplete` wird als Performance-Verbesserung statt unter „Breaking Changes“ aufgeführt. Der neue Standardwert `true` entfernt abgeschlossene Jobs und ändert damit das bisherige Verhalten.\"},{\"criterion\":\"R2\",\"evidence\":\"Die behauptete Verringerung des Redis-Speicherverbrauchs für stark ausgelastete Queues ist durch die Referenz nicht belegt. Auch die Formulierung „throws before its first `await`“ entspricht nicht exakt dem referenzierten synchronen Fehlerfall.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt fehlt: Für das bisherige Verhalten muss beim Erstellen der `Queue` `defaultJobOptions: { removeOnComplete: false }` gesetzt werden.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag zu #307 erklärt weder den geänderten Standardwert noch, dass abgeschlossene Jobs danach nicht mehr aus der Queue abgerufen werden können. Beim JSON-Eintrag fehlt, dass die Queue-Statistiken statt als Tabelle als JSON ausgegeben werden.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Version `2.3.3` ist für die Breaking Change und das neue Feature nicht angemessen; die Referenz nennt `3.0.0`.\"}],\"reason\":\"Der Kandidat lässt die nutzerrelevanten Folgen und die Migration der Breaking Change aus und enthält nicht belegte beziehungsweise ungenaue Aussagen. Außerdem ist die Versionsnummer falsch.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "Die Änderung von `removeOnComplete` wird als Performance-Verbesserung statt unter „Breaking Changes“ aufgeführt. Der neue Standardwert `true` entfernt abgeschlossene Jobs und ändert damit das bisherige Verhalten."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die behauptete Verringerung des Redis-Speicherverbrauchs für stark ausgelastete Queues ist durch die Referenz nicht belegt. Auch die Formulierung „throws before its first `await`“ entspricht nicht exakt dem referenzierten synchronen Fehlerfall."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Der Migrationsschritt fehlt: Für das bisherige Verhalten muss beim Erstellen der `Queue` `defaultJobOptions: { removeOnComplete: false }` gesetzt werden."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Eintrag zu #307 erklärt weder den geänderten Standardwert noch, dass abgeschlossene Jobs danach nicht mehr aus der Queue abgerufen werden können. Beim JSON-Eintrag fehlt, dass die Queue-Statistiken statt als Tabelle als JSON ausgegeben werden."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Version `2.3.3` ist für die Breaking Change und das neue Feature nicht angemessen; die Referenz nennt `3.0.0`."
+   }
+  ],
+  "reason": "Der Kandidat lässt die nutzerrelevanten Folgen und die Migration der Breaking Change aus und enthält nicht belegte beziehungsweise ungenaue Aussagen. Außerdem ist die Versionsnummer falsch.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25419,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 327,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-196b-7202-af87-6027a72776ea"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die Änderung von `removeOnComplete` wird als Performance-Verbesserung statt unter „Breaking Changes“ aufgeführt. Der neue Standardwert `true` entfernt abgeschlossene Jobs und ändert damit das bisherige Verhalten.\"},{\"criterion\":\"R2\",\"evidence\":\"Die behauptete Verringerung des Redis-Speicherverbrauchs für stark ausgelastete Queues ist durch die Referenz nicht belegt. Auch die Formulierung „throws before its first `await`“ entspricht nicht exakt dem referenzierten synchronen Fehlerfall.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt fehlt: Für das bisherige Verhalten muss beim Erstellen der `Queue` `defaultJobOptions: { removeOnComplete: false }` gesetzt werden.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag zu #307 erklärt weder den geänderten Standardwert noch, dass abgeschlossene Jobs danach nicht mehr aus der Queue abgerufen werden können. Beim JSON-Eintrag fehlt, dass die Queue-Statistiken statt als Tabelle als JSON ausgegeben werden.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Version `2.3.3` ist für die Breaking Change und das neue Feature nicht angemessen; die Referenz nennt `3.0.0`.\"}],\"reason\":\"Der Kandidat lässt die nutzerrelevanten Folgen und die Migration der Breaking Change aus und enthält nicht belegte beziehungsweise ungenaue Aussagen. Außerdem ist die Versionsnummer falsch.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25419,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 327,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

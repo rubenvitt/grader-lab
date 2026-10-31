@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "fe4dffd859069731994566d4",
+ "meta": {
+  "experiment": "e3",
+  "release": "r1",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6701,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #304, der Job werde garantiert beim nächsten Poll erneut versucht. Der Diff zeigt nur, dass der Lock im `finally`-Block freigegeben wird; ein Wiederholungsversuch beim nächsten Poll ist nicht belegt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #307, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff ändert nur den Standardwert von `removeOnComplete` von `false` auf `true` und belegt diese konkrete Abrufaussage nicht.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung verwendet mit „definitively resolves“, „fully delivers“ und „permanently eliminates“ werbliche beziehungsweise absolute Formulierungen.\"}],\"reason\":\"Die Major-Version und die Migration zum bisherigen Standardwert passen zu #307. Die zurückgenommenen Lanes fehlen zutreffend; die Notes enthalten jedoch unbelegte Aussagen und unsachliche Formulierungen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #304, der Job werde garantiert beim nächsten Poll erneut versucht. Der Diff zeigt nur, dass der Lock im `finally`-Block freigegeben wird; ein Wiederholungsversuch beim nächsten Poll ist nicht belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten zu #307, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff ändert nur den Standardwert von `removeOnComplete` von `false` auf `true` und belegt diese konkrete Abrufaussage nicht."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Einleitung verwendet mit „definitively resolves“, „fully delivers“ und „permanently eliminates“ werbliche beziehungsweise absolute Formulierungen."
+   }
+  ],
+  "reason": "Die Major-Version und die Migration zum bisherigen Standardwert passen zu #307. Die zurückgenommenen Lanes fehlen zutreffend; die Notes enthalten jedoch unbelegte Aussagen und unsachliche Formulierungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26847,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 230,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-2635-73e3-8665-2afe2c5c904a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #304, der Job werde garantiert beim nächsten Poll erneut versucht. Der Diff zeigt nur, dass der Lock im `finally`-Block freigegeben wird; ein Wiederholungsversuch beim nächsten Poll ist nicht belegt.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten zu #307, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff ändert nur den Standardwert von `removeOnComplete` von `false` auf `true` und belegt diese konkrete Abrufaussage nicht.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung verwendet mit „definitively resolves“, „fully delivers“ und „permanently eliminates“ werbliche beziehungsweise absolute Formulierungen.\"}],\"reason\":\"Die Major-Version und die Migration zum bisherigen Standardwert passen zu #307. Die zurückgenommenen Lanes fehlen zutreffend; die Notes enthalten jedoch unbelegte Aussagen und unsachliche Formulierungen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26847,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 230,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

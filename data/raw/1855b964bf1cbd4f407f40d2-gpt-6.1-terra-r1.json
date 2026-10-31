@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "1855b964bf1cbd4f407f40d2",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "variant": "naive-2",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4638,
+ "text": "{\"violations\":[],\"reason\":\"Die Release Notes sind leer. Ohne Quellen oder Angaben zum Release lässt sich daraus kein Verstoß gegen die Rubrik feststellen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Release Notes sind leer. Ohne Quellen oder Angaben zum Release lässt sich daraus kein Verstoß gegen die Rubrik feststellen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25087,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 59,
+  "reasoning_output_tokens": 12
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-90c6-7b70-a57f-60e12fb74afd"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Release Notes sind leer. Ohne Quellen oder Angaben zum Release lässt sich daraus kein Verstoß gegen die Rubrik feststellen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25087,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_output_tokens": 12
+   }
+  }
+ ]
+}

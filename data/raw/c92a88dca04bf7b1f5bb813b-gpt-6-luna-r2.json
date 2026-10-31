@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "c92a88dca04bf7b1f5bb813b",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "prompt": "naive",
+  "run": 2,
+  "turn": 1
+ },
+ "duration_ms": 7376,
+ "text": "{\"calls\":[{\"tool\":\"list_prs\",\"id\":null,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "list_prs",
+    "id": null,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 63009,
+  "cached_input_tokens": 41600,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 167,
+  "reasoning_output_tokens": 31
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-b9c3-7cc0-be89-ce275f8f1c3c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "Ich sammle zuerst die gemergten PRs und hole anschließend gebündelt die Details der relevanten Änderungen."
+   }
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_1",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"list_prs\",\"id\":null,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 63009,
+    "cached_input_tokens": 41600,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 167,
+    "reasoning_output_tokens": 31
+   }
+  }
+ ]
+}

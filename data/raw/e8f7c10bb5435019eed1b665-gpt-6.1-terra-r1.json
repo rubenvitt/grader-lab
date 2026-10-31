@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "e8f7c10bb5435019eed1b665",
+ "meta": {
+  "experiment": "e3",
+  "release": "r1",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5201,
+ "text": "{\"reason\":\"Fassung A ist besser: Fassung B verwendet werbliche und absolute Formulierungen und ergänzt eine nicht belegte Garantie zur Wiederholung des Jobs beim nächsten Poll. Die übrigen Einträge sind inhaltlich gleich.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser: Fassung B verwendet werbliche und absolute Formulierungen und ergänzt eine nicht belegte Garantie zur Wiederholung des Jobs beim nächsten Poll. Die übrigen Einträge sind inhaltlich gleich.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25393,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 61,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-2635-75e0-b105-eccf33ee265e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser: Fassung B verwendet werbliche und absolute Formulierungen und ergänzt eine nicht belegte Garantie zur Wiederholung des Jobs beim nächsten Poll. Die übrigen Einträge sind inhaltlich gleich.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25393,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 61,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

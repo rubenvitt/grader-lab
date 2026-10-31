@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "2ade9b63f568a538e9fb5a72",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "variant": "careful-1",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5754,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und konkret. Aus dem Text selbst ergeben sich keine Verstöße gegen die Rubrik; Aussagen, die Quellen oder Diffs erfordern, gelten als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes sind sachlich und konkret. Aus dem Text selbst ergeben sich keine Verstöße gegen die Rubrik; Aussagen, die Quellen oder Diffs erfordern, gelten als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25161,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 57,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-7c06-7e51-861d-c977f1dd9349"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes sind sachlich und konkret. Aus dem Text selbst ergeben sich keine Verstöße gegen die Rubrik; Aussagen, die Quellen oder Diffs erfordern, gelten als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25161,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 57,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

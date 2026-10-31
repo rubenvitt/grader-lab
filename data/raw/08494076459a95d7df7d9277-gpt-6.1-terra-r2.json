@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "08494076459a95d7df7d9277",
+ "meta": {
+  "experiment": "e3",
+  "release": "r3",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4650,
+ "text": "{\"reason\":\"Fassung B verzichtet auf die unbelegte Aussage, dass große Importe etwa 40 % schneller seien. Außerdem ist ihr Ton sachlicher und vermeidet die Werbesprache aus Fassung A.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B verzichtet auf die unbelegte Aussage, dass große Importe etwa 40 % schneller seien. Außerdem ist ihr Ton sachlicher und vermeidet die Werbesprache aus Fassung A.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25543,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 57,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-ac42-7a71-956b-a13afb0e8a9a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B verzichtet auf die unbelegte Aussage, dass große Importe etwa 40 % schneller seien. Außerdem ist ihr Ton sachlicher und vermeidet die Werbesprache aus Fassung A.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25543,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 57,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "83e3b4574c0c98870cf9164b",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "variant": "naive-2",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4277,
+ "text": "{\"reason\":\"Fassung A ist besser, weil B zusätzliche, nicht belegte Aussagen enthält, etwa zur bisherigen Wartezeit beim Herunterfahren und zu einer einmaligen Warnung. Außerdem legt B bei der Migration von `worker.pause()` pauschal `drain: true` fest, statt den bisherigen booleschen Wert zu berücksichtigen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil B zusätzliche, nicht belegte Aussagen enthält, etwa zur bisherigen Wartezeit beim Herunterfahren und zu einer einmaligen Warnung. Außerdem legt B bei der Migration von `worker.pause()` pauschal `drain: true` fest, statt den bisherigen booleschen Wert zu berücksichtigen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24673,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 84,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-2730-7dd0-8ccc-4625a7137b1f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil B zusätzliche, nicht belegte Aussagen enthält, etwa zur bisherigen Wartezeit beim Herunterfahren und zu einer einmaligen Warnung. Außerdem legt B bei der Migration von `worker.pause()` pauschal `drain: true` fest, statt den bisherigen booleschen Wert zu berücksichtigen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24673,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 84,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

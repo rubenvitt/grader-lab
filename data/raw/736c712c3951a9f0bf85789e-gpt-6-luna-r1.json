@@ -1,0 +1,65 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "736c712c3951a9f0bf85789e",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "prompt": "careful",
+  "run": 1,
+  "turn": 6
+ },
+ "duration_ms": 4009,
+ "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"5.0.1\",\"notes\":\"# quaykit 5.0.1\\n\\nThis patch release prevents workers from acknowledging jobs after losing their lock and includes a PostgreSQL store security fix.\\n\\n## Fixes\\n\\n- A worker that no longer holds a job lock emits `lockLost` and does not acknowledge the job. (#413)\\n\\n## Security\\n\\n- PostgreSQL store: upgrade to this release. (#414)\",\"bump\":\"patch\",\"sections\":[\"Fixes\",\"Security\"]}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "finish",
+    "id": null,
+    "version": "5.0.1",
+    "notes": "# quaykit 5.0.1\n\nThis patch release prevents workers from acknowledging jobs after losing their lock and includes a PostgreSQL store security fix.\n\n## Fixes\n\n- A worker that no longer holds a job lock emits `lockLost` and does not acknowledge the job. (#413)\n\n## Security\n\n- PostgreSQL store: upgrade to this release. (#414)",
+    "bump": "patch",
+    "sections": [
+     "Fixes",
+     "Security"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 23024,
+  "cached_input_tokens": 19328,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 130,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-266b-7803-89eb-36cc33081caa"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"5.0.1\",\"notes\":\"# quaykit 5.0.1\\n\\nThis patch release prevents workers from acknowledging jobs after losing their lock and includes a PostgreSQL store security fix.\\n\\n## Fixes\\n\\n- A worker that no longer holds a job lock emits `lockLost` and does not acknowledge the job. (#413)\\n\\n## Security\\n\\n- PostgreSQL store: upgrade to this release. (#414)\",\"bump\":\"patch\",\"sections\":[\"Fixes\",\"Security\"]}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 23024,
+    "cached_input_tokens": 19328,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 130,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

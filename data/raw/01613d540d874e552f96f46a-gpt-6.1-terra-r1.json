@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "01613d540d874e552f96f46a",
+ "meta": {
+  "experiment": "e4",
+  "release": "r2",
+  "variant": "careful-1",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 8021,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat behauptet, `queue.purge()` werde neu hinzugefügt. Die Referenz nennt die Methode als Migrationsziel, belegt aber nicht, dass sie in diesem Release neu ist.\"},{\"criterion\":\"R5\",\"evidence\":\"„an issue in signing“ nennt die betroffene Komponente, was erlaubt ist. Der Kandidat bezeichnet den Fix jedoch nicht als Sicherheitsfix und vermittelt damit die Sicherheitsrelevanz nicht gleich brauchbar.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Fix für die Sperrverlängerung fehlt, dass nach `ECONNRESET` genau einmal erneut versucht wird.\"},{\"criterion\":\"R8\",\"evidence\":\"Bei `queue.clean()` fehlen die Hinweise, dass die Methode vorerst weiter funktioniert und einmalig eine Warnung ausgibt.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat beschreibt das `drained`-Ereignis als Folge einer leeren Queue. Laut Referenz wird es ausgelöst, wenn ein Poll keinen Job findet und kein Job aktiv ist; das ist nicht gleichbedeutend mit einer leeren Queue.\"}],\"reason\":\"Der Kandidat lässt für die Nutzung wichtige Einzelheiten weg und enthält eine nicht belegte Aussage zur Einführung von `queue.purge()`. Außerdem beschreibt er die Bedingung für `drained` abweichend und macht die Sicherheitsrelevanz des Fixes nicht deutlich.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Kandidat behauptet, `queue.purge()` werde neu hinzugefügt. Die Referenz nennt die Methode als Migrationsziel, belegt aber nicht, dass sie in diesem Release neu ist."
+   },
+   {
+    "criterion": "R5",
+    "evidence": "„an issue in signing“ nennt die betroffene Komponente, was erlaubt ist. Der Kandidat bezeichnet den Fix jedoch nicht als Sicherheitsfix und vermittelt damit die Sicherheitsrelevanz nicht gleich brauchbar."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Beim Fix für die Sperrverlängerung fehlt, dass nach `ECONNRESET` genau einmal erneut versucht wird."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Bei `queue.clean()` fehlen die Hinweise, dass die Methode vorerst weiter funktioniert und einmalig eine Warnung ausgibt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Kandidat beschreibt das `drained`-Ereignis als Folge einer leeren Queue. Laut Referenz wird es ausgelöst, wenn ein Poll keinen Job findet und kein Job aktiv ist; das ist nicht gleichbedeutend mit einer leeren Queue."
+   }
+  ],
+  "reason": "Der Kandidat lässt für die Nutzung wichtige Einzelheiten weg und enthält eine nicht belegte Aussage zur Einführung von `queue.purge()`. Außerdem beschreibt er die Bedingung für `drained` abweichend und macht die Sicherheitsrelevanz des Fixes nicht deutlich.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25505,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 348,
+  "reasoning_output_tokens": 38
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-4deb-7463-9636-331ba26c457c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat behauptet, `queue.purge()` werde neu hinzugefügt. Die Referenz nennt die Methode als Migrationsziel, belegt aber nicht, dass sie in diesem Release neu ist.\"},{\"criterion\":\"R5\",\"evidence\":\"„an issue in signing“ nennt die betroffene Komponente, was erlaubt ist. Der Kandidat bezeichnet den Fix jedoch nicht als Sicherheitsfix und vermittelt damit die Sicherheitsrelevanz nicht gleich brauchbar.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Fix für die Sperrverlängerung fehlt, dass nach `ECONNRESET` genau einmal erneut versucht wird.\"},{\"criterion\":\"R8\",\"evidence\":\"Bei `queue.clean()` fehlen die Hinweise, dass die Methode vorerst weiter funktioniert und einmalig eine Warnung ausgibt.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat beschreibt das `drained`-Ereignis als Folge einer leeren Queue. Laut Referenz wird es ausgelöst, wenn ein Poll keinen Job findet und kein Job aktiv ist; das ist nicht gleichbedeutend mit einer leeren Queue.\"}],\"reason\":\"Der Kandidat lässt für die Nutzung wichtige Einzelheiten weg und enthält eine nicht belegte Aussage zur Einführung von `queue.purge()`. Außerdem beschreibt er die Bedingung für `drained` abweichend und macht die Sicherheitsrelevanz des Fixes nicht deutlich.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25505,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 348,
+    "reasoning_output_tokens": 38
+   }
+  }
+ ]
+}

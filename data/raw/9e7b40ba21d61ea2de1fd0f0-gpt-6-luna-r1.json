@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "9e7b40ba21d61ea2de1fd0f0",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "prompt": "careful",
+  "run": 1,
+  "turn": 1
+ },
+ "duration_ms": 7333,
+ "text": "{\"calls\":[{\"tool\":\"list_prs\",\"id\":null,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "list_prs",
+    "id": null,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 42236,
+  "cached_input_tokens": 40064,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 150,
+  "reasoning_output_tokens": 28
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-d25c-7b00-8edc-647d6ed284f6"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "Ich ermittle zuerst alle gemergten PRs und prüfe anschließend für jede einzelne Beschreibung und Diff, bevor ich Version und Notes festlege."
+   }
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_1",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"list_prs\",\"id\":null,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 42236,
+    "cached_input_tokens": 40064,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 150,
+    "reasoning_output_tokens": 28
+   }
+  }
+ ]
+}

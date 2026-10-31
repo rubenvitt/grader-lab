@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "358a8e9b7dd7aa053fdc701b",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "naive-1",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5201,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat bezeichnet den Rate Limiter als „token-bucket“. Die Referenz nennt keinen solchen Mechanismus.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Limiter fehlt die Erklärung, dass höchstens `max` Jobs je `perMs` Millisekunden verarbeitet werden. Dadurch ist die Bedeutung der Konfigurationswerte weniger brauchbar als in der Referenz.\"}],\"reason\":\"Version und Deprecation stimmen mit der Referenz überein. Der Kandidat ergänzt jedoch einen unbelegten Mechanismus und erklärt die Wirkung der Limiter-Einstellungen nicht vollständig.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Kandidat bezeichnet den Rate Limiter als „token-bucket“. Die Referenz nennt keinen solchen Mechanismus."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Beim Limiter fehlt die Erklärung, dass höchstens `max` Jobs je `perMs` Millisekunden verarbeitet werden. Dadurch ist die Bedeutung der Konfigurationswerte weniger brauchbar als in der Referenz."
+   }
+  ],
+  "reason": "Version und Deprecation stimmen mit der Referenz überein. Der Kandidat ergänzt jedoch einen unbelegten Mechanismus und erklärt die Wirkung der Limiter-Einstellungen nicht vollständig.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25367,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 176,
+  "reasoning_output_tokens": 31
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-c1b8-72b0-b61a-c0e22e36aa3a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat bezeichnet den Rate Limiter als „token-bucket“. Die Referenz nennt keinen solchen Mechanismus.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Limiter fehlt die Erklärung, dass höchstens `max` Jobs je `perMs` Millisekunden verarbeitet werden. Dadurch ist die Bedeutung der Konfigurationswerte weniger brauchbar als in der Referenz.\"}],\"reason\":\"Version und Deprecation stimmen mit der Referenz überein. Der Kandidat ergänzt jedoch einen unbelegten Mechanismus und erklärt die Wirkung der Limiter-Einstellungen nicht vollständig.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25367,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 176,
+    "reasoning_output_tokens": 31
+   }
+  }
+ ]
+}

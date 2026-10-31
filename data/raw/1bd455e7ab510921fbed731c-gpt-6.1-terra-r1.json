@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "1bd455e7ab510921fbed731c",
+ "meta": {
+  "experiment": "e4",
+  "release": "r2",
+  "variant": "naive-1",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6248,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung behauptet, `queue.purge()` werde neu eingeführt. Die Referenz nennt es nur als Migrationsziel.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Ereignis `drained` fehlt die Bedingung, dass ein Poll keinen Job findet; eine leere Warteschlange und keine aktiven Jobs beschreiben den Auslöser nicht gleich genau.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Fix für die Lock-Erneuerung fehlt, dass nach `ECONNRESET` genau einmal erneut versucht wird.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsaufruf endet mit `>` statt mit `)` und ist daher kein gültiger Aufruf.\"},{\"criterion\":\"R5\",\"evidence\":\"Der Sicherheitshinweis und die Upgrade-Empfehlung aus der Referenz fehlen vollständig.\"}],\"reason\":\"Der Kandidat lässt den Sicherheitshinweis weg, beschreibt zwei Änderungen weniger genau und enthält eine unbelegte Aussage sowie einen ungültigen Migrationsaufruf. Die Versionsnummer stimmt mit der Referenz überein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung behauptet, `queue.purge()` werde neu eingeführt. Die Referenz nennt es nur als Migrationsziel."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Beim Ereignis `drained` fehlt die Bedingung, dass ein Poll keinen Job findet; eine leere Warteschlange und keine aktiven Jobs beschreiben den Auslöser nicht gleich genau."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Beim Fix für die Lock-Erneuerung fehlt, dass nach `ECONNRESET` genau einmal erneut versucht wird."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Der Migrationsaufruf endet mit `>` statt mit `)` und ist daher kein gültiger Aufruf."
+   },
+   {
+    "criterion": "R5",
+    "evidence": "Der Sicherheitshinweis und die Upgrade-Empfehlung aus der Referenz fehlen vollständig."
+   }
+  ],
+  "reason": "Der Kandidat lässt den Sicherheitshinweis weg, beschreibt zwei Änderungen weniger genau und enthält eine unbelegte Aussage sowie einen ungültigen Migrationsaufruf. Die Versionsnummer stimmt mit der Referenz überein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25479,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 245,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-3642-7fa2-98df-5c134cbe9970"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung behauptet, `queue.purge()` werde neu eingeführt. Die Referenz nennt es nur als Migrationsziel.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Ereignis `drained` fehlt die Bedingung, dass ein Poll keinen Job findet; eine leere Warteschlange und keine aktiven Jobs beschreiben den Auslöser nicht gleich genau.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Fix für die Lock-Erneuerung fehlt, dass nach `ECONNRESET` genau einmal erneut versucht wird.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsaufruf endet mit `>` statt mit `)` und ist daher kein gültiger Aufruf.\"},{\"criterion\":\"R5\",\"evidence\":\"Der Sicherheitshinweis und die Upgrade-Empfehlung aus der Referenz fehlen vollständig.\"}],\"reason\":\"Der Kandidat lässt den Sicherheitshinweis weg, beschreibt zwei Änderungen weniger genau und enthält eine unbelegte Aussage sowie einen ungültigen Migrationsaufruf. Die Versionsnummer stimmt mit der Referenz überein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25479,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 245,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

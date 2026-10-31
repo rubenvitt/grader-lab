@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "ed661cbb780527a82c2cfaac",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "variant": "careful-1",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 6235,
+ "text": "{\"reason\":\"Fassung B beschreibt die Migrationen präziser: Sie übernimmt `graceMs` als `olderThanMs` und erhält beim Ersetzen von `worker.pause(boolean)` den jeweiligen Wert über `drain`. Fassung A empfiehlt dagegen pauschal `drain: true` und lässt die Zuordnung für `queue.purge()` offen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt die Migrationen präziser: Sie übernimmt `graceMs` als `olderThanMs` und erhält beim Ersetzen von `worker.pause(boolean)` den jeweiligen Wert über `drain`. Fassung A empfiehlt dagegen pauschal `drain: true` und lässt die Zuordnung für `queue.purge()` offen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25584,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 115,
+  "reasoning_output_tokens": 26
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-3391-76b0-abe9-83eb40fceb5f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt die Migrationen präziser: Sie übernimmt `graceMs` als `olderThanMs` und erhält beim Ersetzen von `worker.pause(boolean)` den jeweiligen Wert über `drain`. Fassung A empfiehlt dagegen pauschal `drain: true` und lässt die Zuordnung für `queue.purge()` offen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25584,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 115,
+    "reasoning_output_tokens": 26
+   }
+  }
+ ]
+}

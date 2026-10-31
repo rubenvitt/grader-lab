@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "e14ecb32d21a1d96bdbc5a7e",
+ "meta": {
+  "experiment": "e3",
+  "release": "r2",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4672,
+ "text": "{\"reason\":\"Fassung B beschreibt die Wiederholung der Sperrenerneuerung konkret, während A ausnahmsloses Funktionieren und eine automatische Wiederverbindung garantiert. Außerdem verwendet A wertende Sprache; ob die technischen Aussagen durch die Diffs gedeckt sind, lässt sich ohne Quellen nicht vollständig beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B beschreibt die Wiederholung der Sperrenerneuerung konkret, während A ausnahmsloses Funktionieren und eine automatische Wiederverbindung garantiert. Außerdem verwendet A wertende Sprache; ob die technischen Aussagen durch die Diffs gedeckt sind, lässt sich ohne Quellen nicht vollständig beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25385,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 78,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-7581-70a3-b0be-94afe08d3b45"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B beschreibt die Wiederholung der Sperrenerneuerung konkret, während A ausnahmsloses Funktionieren und eine automatische Wiederverbindung garantiert. Außerdem verwendet A wertende Sprache; ob die technischen Aussagen durch die Diffs gedeckt sind, lässt sich ohne Quellen nicht vollständig beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25385,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 78,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

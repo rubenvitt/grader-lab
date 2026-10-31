@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "e3d99ed02241f7b66de88ab9",
+ "meta": {
+  "experiment": "e4",
+  "release": "r2",
+  "variant": "naive-1",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4812,
+ "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt endet mit `queue.purge({ status, olderThanMs: graceMs })>`; das zusätzliche `>` macht den Ausdruck als Code ungültig.\"}],\"reason\":\"Der Migrationsschritt enthält ein zusätzliches Zeichen und führt daher beim direkten Übernehmen zu einem Syntaxfehler. Weitere Verstöße lassen sich allein aus dem Text nicht belegen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R3",
+    "evidence": "Der Migrationsschritt endet mit `queue.purge({ status, olderThanMs: graceMs })>`; das zusätzliche `>` macht den Ausdruck als Code ungültig."
+   }
+  ],
+  "reason": "Der Migrationsschritt enthält ein zusätzliches Zeichen und führt daher beim direkten Übernehmen zu einem Syntaxfehler. Weitere Verstöße lassen sich allein aus dem Text nicht belegen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25241,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 103,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-3643-7080-8ffa-e4f57b18309a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt endet mit `queue.purge({ status, olderThanMs: graceMs })>`; das zusätzliche `>` macht den Ausdruck als Code ungültig.\"}],\"reason\":\"Der Migrationsschritt enthält ein zusätzliches Zeichen und führt daher beim direkten Übernehmen zu einem Syntaxfehler. Weitere Verstöße lassen sich allein aus dem Text nicht belegen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25241,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 103,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

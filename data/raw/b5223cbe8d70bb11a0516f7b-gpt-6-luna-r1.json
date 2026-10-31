@@ -1,0 +1,83 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "b5223cbe8d70bb11a0516f7b",
+ "meta": {
+  "experiment": "e4",
+  "release": "r2",
+  "prompt": "careful",
+  "run": 1,
+  "turn": 3
+ },
+ "duration_ms": 11371,
+ "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"3.1.0\",\"notes\":\"# quaykit 3.1.0\\n\\nWorkers now emit a `drained` event when the queue is empty and no jobs are active. This release also adds `queue.purge()` as the replacement for deprecated `queue.clean()`.\\n\\n## Features\\n\\n- Emit `drained` when the queue runs empty and has no active jobs (#331)\\n- Add `queue.purge({ status, olderThanMs })` to remove older jobs (#338)\\n\\n## Deprecations\\n\\n- Deprecate `queue.clean()` in favour of `queue.purge({ status, olderThanMs })` (#338)\\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })`.\\n\\n## Fixes\\n\\n- Retry lock renewal after a Redis connection reset (#334)\\n\\n## Security\\n\\n- Upgrade to address an issue in signing (#336)\",\"bump\":null,\"sections\":null},{\"tool\":\"finish\",\"id\":null,\"version\":\"3.1.0\",\"notes\":\"# quaykit 3.1.0\\n\\nWorkers now emit a `drained` event when the queue is empty and no jobs are active. This release also adds `queue.purge()` as the replacement for deprecated `queue.clean()`.\\n\\n## Features\\n\\n- Emit `drained` when the queue runs empty and has no active jobs (#331)\\n- Add `queue.purge({ status, olderThanMs })` to remove older jobs (#338)\\n\\n## Deprecations\\n\\n- Deprecate `queue.clean()` in favour of `queue.purge({ status, olderThanMs })` (#338)\\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })`.\\n\\n## Fixes\\n\\n- Retry lock renewal after a Redis connection reset (#334)\\n\\n## Security\\n\\n- Upgrade to address an issue in signing (#336)\",\"bump\":\"minor\",\"sections\":[\"Features\",\"Deprecations\",\"Fixes\",\"Security\"]}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "publish_release",
+    "id": null,
+    "version": "3.1.0",
+    "notes": "# quaykit 3.1.0\n\nWorkers now emit a `drained` event when the queue is empty and no jobs are active. This release also adds `queue.purge()` as the replacement for deprecated `queue.clean()`.\n\n## Features\n\n- Emit `drained` when the queue runs empty and has no active jobs (#331)\n- Add `queue.purge({ status, olderThanMs })` to remove older jobs (#338)\n\n## Deprecations\n\n- Deprecate `queue.clean()` in favour of `queue.purge({ status, olderThanMs })` (#338)\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })`.\n\n## Fixes\n\n- Retry lock renewal after a Redis connection reset (#334)\n\n## Security\n\n- Upgrade to address an issue in signing (#336)",
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "finish",
+    "id": null,
+    "version": "3.1.0",
+    "notes": "# quaykit 3.1.0\n\nWorkers now emit a `drained` event when the queue is empty and no jobs are active. This release also adds `queue.purge()` as the replacement for deprecated `queue.clean()`.\n\n## Features\n\n- Emit `drained` when the queue runs empty and has no active jobs (#331)\n- Add `queue.purge({ status, olderThanMs })` to remove older jobs (#338)\n\n## Deprecations\n\n- Deprecate `queue.clean()` in favour of `queue.purge({ status, olderThanMs })` (#338)\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })`.\n\n## Fixes\n\n- Retry lock renewal after a Redis connection reset (#334)\n\n## Security\n\n- Upgrade to address an issue in signing (#336)",
+    "bump": "minor",
+    "sections": [
+     "Features",
+     "Deprecations",
+     "Fixes",
+     "Security"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 46418,
+  "cached_input_tokens": 42112,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 1089,
+  "reasoning_output_tokens": 83
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-71a0-7c70-87f2-ffef26071ab5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "Die PRs sind geprüft. Einordnung: `drained` ist ein Feature, `queue.purge()` führt eine Deprecation ein, und der Security-Fix gehört knapp unter „Security“. Damit ist mindestens Minor erforderlich; ich fasse die Notes jetzt zusammen und veröffentliche sie."
+   }
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_1",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"3.1.0\",\"notes\":\"# quaykit 3.1.0\\n\\nWorkers now emit a `drained` event when the queue is empty and no jobs are active. This release also adds `queue.purge()` as the replacement for deprecated `queue.clean()`.\\n\\n## Features\\n\\n- Emit `drained` when the queue runs empty and has no active jobs (#331)\\n- Add `queue.purge({ status, olderThanMs })` to remove older jobs (#338)\\n\\n## Deprecations\\n\\n- Deprecate `queue.clean()` in favour of `queue.purge({ status, olderThanMs })` (#338)\\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })`.\\n\\n## Fixes\\n\\n- Retry lock renewal after a Redis connection reset (#334)\\n\\n## Security\\n\\n- Upgrade to address an issue in signing (#336)\",\"bump\":null,\"sections\":null},{\"tool\":\"finish\",\"id\":null,\"version\":\"3.1.0\",\"notes\":\"# quaykit 3.1.0\\n\\nWorkers now emit a `drained` event when the queue is empty and no jobs are active. This release also adds `queue.purge()` as the replacement for deprecated `queue.clean()`.\\n\\n## Features\\n\\n- Emit `drained` when the queue runs empty and has no active jobs (#331)\\n- Add `queue.purge({ status, olderThanMs })` to remove older jobs (#338)\\n\\n## Deprecations\\n\\n- Deprecate `queue.clean()` in favour of `queue.purge({ status, olderThanMs })` (#338)\\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })`.\\n\\n## Fixes\\n\\n- Retry lock renewal after a Redis connection reset (#334)\\n\\n## Security\\n\\n- Upgrade to address an issue in signing (#336)\",\"bump\":\"minor\",\"sections\":[\"Features\",\"Deprecations\",\"Fixes\",\"Security\"]}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 46418,
+    "cached_input_tokens": 42112,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1089,
+    "reasoning_output_tokens": 83
+   }
+  }
+ ]
+}

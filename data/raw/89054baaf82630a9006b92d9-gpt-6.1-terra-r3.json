@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "89054baaf82630a9006b92d9",
+ "meta": {
+  "experiment": "e3",
+  "release": "r4",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4440,
+ "text": "{\"reason\":\"Fassung B verwendet mit „proven“, „reliably“ und „without exception“ werbliche Formulierungen und macht eine aus dem vorliegenden Material nicht belegbare Garantie zur gemeinsamen Begrenzung. Auch die abweichende Aussage in A, dass jede Worker-Instanz eine eigene Begrenzung hat, lässt sich ohne Quellen nicht überprüfen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung B verwendet mit „proven“, „reliably“ und „without exception“ werbliche Formulierungen und macht eine aus dem vorliegenden Material nicht belegbare Garantie zur gemeinsamen Begrenzung. Auch die abweichende Aussage in A, dass jede Worker-Instanz eine eigene Begrenzung hat, lässt sich ohne Quellen nicht überprüfen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24422,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 88,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-f787-7671-ab2b-696e83aedd4a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B verwendet mit „proven“, „reliably“ und „without exception“ werbliche Formulierungen und macht eine aus dem vorliegenden Material nicht belegbare Garantie zur gemeinsamen Begrenzung. Auch die abweichende Aussage in A, dass jede Worker-Instanz eine eigene Begrenzung hat, lässt sich ohne Quellen nicht überprüfen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24422,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 88,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

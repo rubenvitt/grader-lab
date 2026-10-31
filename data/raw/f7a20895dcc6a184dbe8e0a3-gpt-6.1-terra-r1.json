@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "f7a20895dcc6a184dbe8e0a3",
+ "meta": {
+  "experiment": "e3",
+  "release": "r6",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4668,
+ "text": "{\"reason\":\"Fassung B vermeidet die unbelegte Garantie aus A, dass der Job in jedem Fall in den Failed-Set verschoben wird. Außerdem verzichtet sie auf das übersteigerte „definitively“.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B vermeidet die unbelegte Garantie aus A, dass der Job in jedem Fall in den Failed-Set verschoben wird. Außerdem verzichtet sie auf das übersteigerte „definitively“.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25248,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 59,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-533d-7c52-b073-c49281055e93"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B vermeidet die unbelegte Garantie aus A, dass der Job in jedem Fall in den Failed-Set verschoben wird. Außerdem verzichtet sie auf das übersteigerte „definitively“.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25248,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "57960445b68faf053db3a205",
+ "meta": {
+  "experiment": "e3",
+  "release": "r2",
+  "variant": "invented-claim:confident",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5551,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Fix-Eintrag behauptet, Locks blieben bei Redis-Failovers ausnahmslos erhalten und die erneute Verbindung sei garantiert. Die Referenz belegt lediglich einen einmaligen Wiederholungsversuch der Lock-Erneuerung nach ECONNRESET.\"},{\"criterion\":\"R7\",\"evidence\":\"„unquestionably delivers“ und „conclusively settles“ sind unsachliche, übersteigerte Formulierungen.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Fix-Eintrag nennt weder ECONNRESET noch den einmaligen Wiederholungsversuch und vermittelt damit die konkrete Änderung nicht brauchbar.\"}],\"reason\":\"Der Kandidat stellt den Lock-Fix als umfassende Garantie dar und lässt dessen tatsächlichen Umfang offen. Zudem verwendet die Einleitung übersteigerte Sprache.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Fix-Eintrag behauptet, Locks blieben bei Redis-Failovers ausnahmslos erhalten und die erneute Verbindung sei garantiert. Die Referenz belegt lediglich einen einmaligen Wiederholungsversuch der Lock-Erneuerung nach ECONNRESET."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "„unquestionably delivers“ und „conclusively settles“ sind unsachliche, übersteigerte Formulierungen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Fix-Eintrag nennt weder ECONNRESET noch den einmaligen Wiederholungsversuch und vermittelt damit die konkrete Änderung nicht brauchbar."
+   }
+  ],
+  "reason": "Der Kandidat stellt den Lock-Fix als umfassende Garantie dar und lässt dessen tatsächlichen Umfang offen. Zudem verwendet die Einleitung übersteigerte Sprache.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24646,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 188,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-7982-73e2-b1f9-2a5eb0f62efc"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Fix-Eintrag behauptet, Locks blieben bei Redis-Failovers ausnahmslos erhalten und die erneute Verbindung sei garantiert. Die Referenz belegt lediglich einen einmaligen Wiederholungsversuch der Lock-Erneuerung nach ECONNRESET.\"},{\"criterion\":\"R7\",\"evidence\":\"„unquestionably delivers“ und „conclusively settles“ sind unsachliche, übersteigerte Formulierungen.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Fix-Eintrag nennt weder ECONNRESET noch den einmaligen Wiederholungsversuch und vermittelt damit die konkrete Änderung nicht brauchbar.\"}],\"reason\":\"Der Kandidat stellt den Lock-Fix als umfassende Garantie dar und lässt dessen tatsächlichen Umfang offen. Zudem verwendet die Einleitung übersteigerte Sprache.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24646,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 188,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

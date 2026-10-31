@@ -1,0 +1,86 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "db9c33d1c2248b20e5523de2",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "prompt": "naive",
+  "run": 1,
+  "turn": 3
+ },
+ "duration_ms": 9538,
+ "text": "{\"calls\":[{\"tool\":\"get_pr\",\"id\":399,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_issue\",\"id\":388,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_issue\",\"id\":392,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "get_pr",
+    "id": 399,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_issue",
+    "id": 388,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_issue",
+    "id": 392,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 45160,
+  "cached_input_tokens": 41728,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 298,
+  "reasoning_output_tokens": 87
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-942c-7002-b415-991ea93a5650"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "Die gemergten Änderungen reichen für eine klare Einordnung: Es gibt einen Breaking Change, eine neue Retry-Strategie, zwei Fehlerbehebungen und eine Deprecation. Ich hole noch PR 399 vollständig ab und prüfe, ob die Versionsvorgabe für das Release gestützt ist, bevor ich veröffentliche."
+   }
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_1",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"get_pr\",\"id\":399,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_issue\",\"id\":388,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_issue\",\"id\":392,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 45160,
+    "cached_input_tokens": 41728,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 298,
+    "reasoning_output_tokens": 87
+   }
+  }
+ ]
+}

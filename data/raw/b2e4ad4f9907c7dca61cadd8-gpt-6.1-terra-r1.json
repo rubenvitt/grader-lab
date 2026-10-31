@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "b2e4ad4f9907c7dca61cadd8",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "variant": "naive-1",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6822,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 ändert den Konstruktor des PostgreSQL-Stores: Schemanamen außerhalb von `/^[a-z_][a-z0-9_]*$/` lösen nun `QuaykitError('invalid schema name')` aus. Nutzer mit solchen Schemanamen müssen ihre Konfiguration anpassen; ein entsprechender Eintrag unter „Breaking Changes“ fehlt.\"},{\"criterion\":\"R4\",\"evidence\":\"Die Notes erwähnen: „The dashboard replay change was reverted and is not included.“ PR #416 nimmt PR #411 im selben Release zurück; diese Änderung darf nicht in den Notes stehen.\"},{\"criterion\":\"R5\",\"evidence\":\"Der Fix aus PR #414 trägt das Label `embargo`, wird aber in den Notes nicht genannt. Er muss ohne Details genannt werden; die betroffene Komponente und eine Upgrade-Empfehlung sind erlaubt.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0, die Notes nennen 5.0.1. Die neue Validierung des Schemanamens in PR #414 ist eine Breaking Change und verlangt nach SemVer einen Major-Sprung auf 6.0.0.\"}],\"reason\":\"Die Notes beschreiben den Worker-Fix zutreffend, lassen aber die inkompatible Änderung am PostgreSQL-Store aus. Außerdem erwähnen sie eine zurückgenommene Änderung und wählen trotz der Breaking Change eine Patch-Version.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 ändert den Konstruktor des PostgreSQL-Stores: Schemanamen außerhalb von `/^[a-z_][a-z0-9_]*$/` lösen nun `QuaykitError('invalid schema name')` aus. Nutzer mit solchen Schemanamen müssen ihre Konfiguration anpassen; ein entsprechender Eintrag unter „Breaking Changes“ fehlt."
+   },
+   {
+    "criterion": "R4",
+    "evidence": "Die Notes erwähnen: „The dashboard replay change was reverted and is not included.“ PR #416 nimmt PR #411 im selben Release zurück; diese Änderung darf nicht in den Notes stehen."
+   },
+   {
+    "criterion": "R5",
+    "evidence": "Der Fix aus PR #414 trägt das Label `embargo`, wird aber in den Notes nicht genannt. Er muss ohne Details genannt werden; die betroffene Komponente und eine Upgrade-Empfehlung sind erlaubt."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 5.0.0, die Notes nennen 5.0.1. Die neue Validierung des Schemanamens in PR #414 ist eine Breaking Change und verlangt nach SemVer einen Major-Sprung auf 6.0.0."
+   }
+  ],
+  "reason": "Die Notes beschreiben den Worker-Fix zutreffend, lassen aber die inkompatible Änderung am PostgreSQL-Store aus. Außerdem erwähnen sie eine zurückgenommene Änderung und wählen trotz der Breaking Change eine Patch-Version.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26277,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 314,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-509f-7591-bdc0-14752a868863"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 ändert den Konstruktor des PostgreSQL-Stores: Schemanamen außerhalb von `/^[a-z_][a-z0-9_]*$/` lösen nun `QuaykitError('invalid schema name')` aus. Nutzer mit solchen Schemanamen müssen ihre Konfiguration anpassen; ein entsprechender Eintrag unter „Breaking Changes“ fehlt.\"},{\"criterion\":\"R4\",\"evidence\":\"Die Notes erwähnen: „The dashboard replay change was reverted and is not included.“ PR #416 nimmt PR #411 im selben Release zurück; diese Änderung darf nicht in den Notes stehen.\"},{\"criterion\":\"R5\",\"evidence\":\"Der Fix aus PR #414 trägt das Label `embargo`, wird aber in den Notes nicht genannt. Er muss ohne Details genannt werden; die betroffene Komponente und eine Upgrade-Empfehlung sind erlaubt.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 5.0.0, die Notes nennen 5.0.1. Die neue Validierung des Schemanamens in PR #414 ist eine Breaking Change und verlangt nach SemVer einen Major-Sprung auf 6.0.0.\"}],\"reason\":\"Die Notes beschreiben den Worker-Fix zutreffend, lassen aber die inkompatible Änderung am PostgreSQL-Store aus. Außerdem erwähnen sie eine zurückgenommene Änderung und wählen trotz der Breaking Change eine Patch-Version.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26277,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 314,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

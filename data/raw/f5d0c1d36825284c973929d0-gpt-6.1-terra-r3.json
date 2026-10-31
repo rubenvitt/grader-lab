@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "f5d0c1d36825284c973929d0",
+ "meta": {
+  "experiment": "e3",
+  "release": "r1",
+  "variant": "invented-claim:confident",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 8013,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Aussage, der Job werde garantiert beim nächsten Poll erneut versucht, ist durch die Referenz nicht gedeckt. Auch „permanently eliminates“ behauptet eine nicht belegte Dauerhaftigkeit.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Formulierungen „definitively resolves“, „fully delivers“ und „permanently eliminates“ sind übersteigerte Werbesprache statt eines sachlichen Tons.\"}],\"reason\":\"Die fachlichen Änderungen, der Migrationsschritt und die Versionsnummer stimmen mit der Referenz überein. Der Kandidat enthält jedoch unbelegte Garantien und übersteigerte Formulierungen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage, der Job werde garantiert beim nächsten Poll erneut versucht, ist durch die Referenz nicht gedeckt. Auch „permanently eliminates“ behauptet eine nicht belegte Dauerhaftigkeit."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Formulierungen „definitively resolves“, „fully delivers“ und „permanently eliminates“ sind übersteigerte Werbesprache statt eines sachlichen Tons."
+   }
+  ],
+  "reason": "Die fachlichen Änderungen, der Migrationsschritt und die Versionsnummer stimmen mit der Referenz überein. Der Kandidat enthält jedoch unbelegte Garantien und übersteigerte Formulierungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25502,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 153,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-3f60-73e1-8635-3fb626930f24"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Aussage, der Job werde garantiert beim nächsten Poll erneut versucht, ist durch die Referenz nicht gedeckt. Auch „permanently eliminates“ behauptet eine nicht belegte Dauerhaftigkeit.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Formulierungen „definitively resolves“, „fully delivers“ und „permanently eliminates“ sind übersteigerte Werbesprache statt eines sachlichen Tons.\"}],\"reason\":\"Die fachlichen Änderungen, der Migrationsschritt und die Versionsnummer stimmen mit der Referenz überein. Der Kandidat enthält jedoch unbelegte Garantien und übersteigerte Formulierungen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25502,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 153,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

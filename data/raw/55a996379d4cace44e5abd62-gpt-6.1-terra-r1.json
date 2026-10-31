@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "55a996379d4cace44e5abd62",
+ "meta": {
+  "experiment": "e4",
+  "release": "r2",
+  "variant": "naive-2",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4916,
+ "text": "{\"reason\":\"Fassung B nennt zusätzlich den Sicherheitsfix und empfiehlt das Upgrade, ohne Details zur Schwachstelle offenzulegen. Fassung A beschreibt dagegen die Migration genauer; ob B mit „retries once“ eine unbelegte Aussage macht, lässt sich ohne die Diffs nicht prüfen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B nennt zusätzlich den Sicherheitsfix und empfiehlt das Upgrade, ohne Details zur Schwachstelle offenzulegen. Fassung A beschreibt dagegen die Migration genauer; ob B mit „retries once“ eine unbelegte Aussage macht, lässt sich ohne die Diffs nicht prüfen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 24528,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 72,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-4c35-72e2-9f3e-cfcfd989ec9c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt zusätzlich den Sicherheitsfix und empfiehlt das Upgrade, ohne Details zur Schwachstelle offenzulegen. Fassung A beschreibt dagegen die Migration genauer; ob B mit „retries once“ eine unbelegte Aussage macht, lässt sich ohne die Diffs nicht prüfen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24528,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 72,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

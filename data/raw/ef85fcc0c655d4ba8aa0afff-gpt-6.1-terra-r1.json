@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "ef85fcc0c655d4ba8aa0afff",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "naive-2",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5031,
+ "text": "{\"reason\":\"Fassung A erklärt beim Rate Limiter konkret, wie `max` und `perMs` wirken und dass das Limit pro Worker-Instanz gilt. Fassung B ist beim Feature-Eintrag weniger präzise und ergänzt einen Anwendungszweck, der aus dem Prüfmaterial nicht belegt ist.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A erklärt beim Rate Limiter konkret, wie `max` und `perMs` wirken und dass das Limit pro Worker-Instanz gilt. Fassung B ist beim Feature-Eintrag weniger präzise und ergänzt einen Anwendungszweck, der aus dem Prüfmaterial nicht belegt ist.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25265,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 79,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-d931-74a0-a7f5-73fa1ab52142"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A erklärt beim Rate Limiter konkret, wie `max` und `perMs` wirken und dass das Limit pro Worker-Instanz gilt. Fassung B ist beim Feature-Eintrag weniger präzise und ergänzt einen Anwendungszweck, der aus dem Prüfmaterial nicht belegt ist.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25265,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 79,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

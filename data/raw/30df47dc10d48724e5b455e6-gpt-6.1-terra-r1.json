@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "30df47dc10d48724e5b455e6",
+ "meta": {
+  "experiment": "e4-r1",
+  "release": "r1",
+  "variant": "careful-2",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4951,
+ "text": "{\"reason\":\"Beide Fassungen nennen dieselben Änderungen, ordnen die Default-Änderung als Breaking Change ein und geben denselben Migrationsschritt an. Unterschiede in Formulierung und Detailgrad begründen hier keinen sachlichen Vorteil; die Quellen selbst liegen für eine weitergehende Prüfung nicht vor.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen nennen dieselben Änderungen, ordnen die Default-Änderung als Breaking Change ein und geben denselben Migrationsschritt an. Unterschiede in Formulierung und Detailgrad begründen hier keinen sachlichen Vorteil; die Quellen selbst liegen für eine weitergehende Prüfung nicht vor.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 24486,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 77,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-54f9-7023-8a29-9a0fee7d0e03"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen nennen dieselben Änderungen, ordnen die Default-Änderung als Breaking Change ein und geben denselben Migrationsschritt an. Unterschiede in Formulierung und Detailgrad begründen hier keinen sachlichen Vorteil; die Quellen selbst liegen für eine weitergehende Prüfung nicht vor.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24486,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 77,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

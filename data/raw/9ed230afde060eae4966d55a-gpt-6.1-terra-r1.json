@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "9ed230afde060eae4966d55a",
+ "meta": {
+  "experiment": "e3",
+  "release": "r6",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 7005,
+ "text": "{\"reason\":\"Fassung B enthält mit „definitively“, „reliably“ und der garantierten Verschiebung in den Failed-Set zusätzliche unbelegte Zusicherungen. Fassung A vermeidet diese Aussagen; im Übrigen sind die Fassungen inhaltlich gleich.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung B enthält mit „definitively“, „reliably“ und der garantierten Verschiebung in den Failed-Set zusätzliche unbelegte Zusicherungen. Fassung A vermeidet diese Aussagen; im Übrigen sind die Fassungen inhaltlich gleich.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24400,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 72,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-5101-7e51-a322-79f3d891a530"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B enthält mit „definitively“, „reliably“ und der garantierten Verschiebung in den Failed-Set zusätzliche unbelegte Zusicherungen. Fassung A vermeidet diese Aussagen; im Übrigen sind die Fassungen inhaltlich gleich.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24400,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 72,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

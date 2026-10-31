@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "f5d0c1d36825284c973929d0",
+ "meta": {
+  "experiment": "e3",
+  "release": "r1",
+  "variant": "invented-claim:confident",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5844,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung behauptet, das Aufbewahrungsproblem sei endgültig gelöst und das Lock-Leck dauerhaft beseitigt. Diese weitreichenden Zusicherungen sind durch die Referenz nicht gedeckt. Auch die Garantie, dass der Job beim nächsten Poll erneut versucht wird, steht nicht in der Referenz.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „definitively resolves“, „fully delivers“ und „permanently eliminates“ sind werblich und übertrieben statt sachlich.\"}],\"reason\":\"Der Kandidat enthält die wesentlichen Änderungen und die korrekte Migration, ergänzt aber unbelegte Zusicherungen und übertriebene Formulierungen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung behauptet, das Aufbewahrungsproblem sei endgültig gelöst und das Lock-Leck dauerhaft beseitigt. Diese weitreichenden Zusicherungen sind durch die Referenz nicht gedeckt. Auch die Garantie, dass der Job beim nächsten Poll erneut versucht wird, steht nicht in der Referenz."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „definitively resolves“, „fully delivers“ und „permanently eliminates“ sind werblich und übertrieben statt sachlich."
+   }
+  ],
+  "reason": "Der Kandidat enthält die wesentlichen Änderungen und die korrekte Migration, ergänzt aber unbelegte Zusicherungen und übertriebene Formulierungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25502,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 167,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-2635-7323-bae4-8a0b11579a3c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung behauptet, das Aufbewahrungsproblem sei endgültig gelöst und das Lock-Leck dauerhaft beseitigt. Diese weitreichenden Zusicherungen sind durch die Referenz nicht gedeckt. Auch die Garantie, dass der Job beim nächsten Poll erneut versucht wird, steht nicht in der Referenz.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „definitively resolves“, „fully delivers“ und „permanently eliminates“ sind werblich und übertrieben statt sachlich.\"}],\"reason\":\"Der Kandidat enthält die wesentlichen Änderungen und die korrekte Migration, ergänzt aber unbelegte Zusicherungen und übertriebene Formulierungen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25502,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 167,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

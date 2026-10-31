@@ -1,0 +1,66 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "a11816386f97e4ef09b9df15",
+ "meta": {
+  "experiment": "e4",
+  "release": "r1",
+  "prompt": "careful",
+  "run": 1,
+  "turn": 4
+ },
+ "duration_ms": 6376,
+ "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"3.0.0\",\"notes\":\"# quaykit 3.0.0\\n\\nThis release changes the default handling of completed jobs, fixes lock release when handlers throw synchronously, and adds JSON output to `quaykit inspect`.\\n\\n## Breaking Changes\\n\\n- Completed jobs are now removed by default. Set `removeOnComplete` to `false` to retain them. (#307)\\n\\n## Features\\n\\n- `quaykit inspect --json` prints queue statistics as JSON. (#318)\\n\\n## Fixes\\n\\n- Release the worker lock when a job handler throws synchronously. (#304)\",\"bump\":\"major\",\"sections\":[\"Breaking Changes\",\"Features\",\"Fixes\"]}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "finish",
+    "id": null,
+    "version": "3.0.0",
+    "notes": "# quaykit 3.0.0\n\nThis release changes the default handling of completed jobs, fixes lock release when handlers throw synchronously, and adds JSON output to `quaykit inspect`.\n\n## Breaking Changes\n\n- Completed jobs are now removed by default. Set `removeOnComplete` to `false` to retain them. (#307)\n\n## Features\n\n- `quaykit inspect --json` prints queue statistics as JSON. (#318)\n\n## Fixes\n\n- Release the worker lock when a job handler throws synchronously. (#304)",
+    "bump": "major",
+    "sections": [
+     "Breaking Changes",
+     "Features",
+     "Fixes"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 46974,
+  "cached_input_tokens": 35584,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 288,
+  "reasoning_output_tokens": 80
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-005a-76f0-b848-5124b7a598fa"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"3.0.0\",\"notes\":\"# quaykit 3.0.0\\n\\nThis release changes the default handling of completed jobs, fixes lock release when handlers throw synchronously, and adds JSON output to `quaykit inspect`.\\n\\n## Breaking Changes\\n\\n- Completed jobs are now removed by default. Set `removeOnComplete` to `false` to retain them. (#307)\\n\\n## Features\\n\\n- `quaykit inspect --json` prints queue statistics as JSON. (#318)\\n\\n## Fixes\\n\\n- Release the worker lock when a job handler throws synchronously. (#304)\",\"bump\":\"major\",\"sections\":[\"Breaking Changes\",\"Features\",\"Fixes\"]}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 46974,
+    "cached_input_tokens": 35584,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 288,
+    "reasoning_output_tokens": 80
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "885ae8970285d6c790033549",
+ "meta": {
+  "experiment": "e4",
+  "release": "r2",
+  "variant": "careful-2",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6465,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes geben die nutzerrelevanten Änderungen und den Migrationsschritt quellengestützt wieder; der Sicherheitseintrag wahrt das Embargo. Version 4.0.0 ist nach SemVer zulässig, auch wenn die belegten Änderungen keinen Major-Sprung verlangen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes geben die nutzerrelevanten Änderungen und den Migrationsschritt quellengestützt wieder; der Sicherheitseintrag wahrt das Embargo. Version 4.0.0 ist nach SemVer zulässig, auch wenn die belegten Änderungen keinen Major-Sprung verlangen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 26588,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 79,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-5f69-7040-bcd7-e64b3ef2e22e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes geben die nutzerrelevanten Änderungen und den Migrationsschritt quellengestützt wieder; der Sicherheitseintrag wahrt das Embargo. Version 4.0.0 ist nach SemVer zulässig, auch wenn die belegten Änderungen keinen Major-Sprung verlangen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26588,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 79,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

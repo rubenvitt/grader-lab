@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "801bb471e40473275933e717",
+ "meta": {
+  "experiment": "e3",
+  "release": "r3",
+  "variant": "invented-claim:confident",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5998,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Die Formulierungen „decisively renames“, „fully commits“, „proven Postgres store“ und „unquestionably makes large imports about 40% faster“ sind werblich beziehungsweise übertrieben.\"}],\"reason\":\"Die Release Notes enthalten wertende und werbliche Formulierungen. Ob die technischen Aussagen und Zahlen durch die Änderungen belegt sind, lässt sich ohne Quellen nicht prüfen und wird daher als erfüllt behandelt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Die Formulierungen „decisively renames“, „fully commits“, „proven Postgres store“ und „unquestionably makes large imports about 40% faster“ sind werblich beziehungsweise übertrieben."
+   }
+  ],
+  "reason": "Die Release Notes enthalten wertende und werbliche Formulierungen. Ob die technischen Aussagen und Zahlen durch die Änderungen belegt sind, lässt sich ohne Quellen nicht prüfen und wird daher als erfüllt behandelt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25343,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 181,
+  "reasoning_output_tokens": 64
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-a56b-7aa1-ba70-7b25e6a02eb0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Die Formulierungen „decisively renames“, „fully commits“, „proven Postgres store“ und „unquestionably makes large imports about 40% faster“ sind werblich beziehungsweise übertrieben.\"}],\"reason\":\"Die Release Notes enthalten wertende und werbliche Formulierungen. Ob die technischen Aussagen und Zahlen durch die Änderungen belegt sind, lässt sich ohne Quellen nicht prüfen und wird daher als erfüllt behandelt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25343,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 181,
+    "reasoning_output_tokens": 64
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "27225bc8f0e1bfcf5af412d4",
+ "meta": {
+  "experiment": "e4",
+  "release": "r2",
+  "variant": "careful-2",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5298,
+ "text": "{\"reason\":\"Fassung A ist brauchbarer: Sie nennt die betroffene Komponente beim Sicherheitshinweis und zeigt bei der Migration ausdrücklich, dass `graceMs` zu `olderThanMs` wird. Ob Versionsnummern und Tatsachenbehauptungen zu den Diffs passen, lässt sich ohne diese Quellen nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist brauchbarer: Sie nennt die betroffene Komponente beim Sicherheitshinweis und zeigt bei der Migration ausdrücklich, dass `graceMs` zu `olderThanMs` wird. Ob Versionsnummern und Tatsachenbehauptungen zu den Diffs passen, lässt sich ohne diese Quellen nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25395,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 142,
+  "reasoning_output_tokens": 59
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-7291-7781-92ca-07b8d2b0db9a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist brauchbarer: Sie nennt die betroffene Komponente beim Sicherheitshinweis und zeigt bei der Migration ausdrücklich, dass `graceMs` zu `olderThanMs` wird. Ob Versionsnummern und Tatsachenbehauptungen zu den Diffs passen, lässt sich ohne diese Quellen nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25395,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 142,
+    "reasoning_output_tokens": 59
+   }
+  }
+ ]
+}

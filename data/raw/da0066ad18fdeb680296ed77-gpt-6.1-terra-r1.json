@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "da0066ad18fdeb680296ed77",
+ "meta": {
+  "experiment": "e4-r1",
+  "release": "r1",
+  "variant": "naive-2",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 7633,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die Änderung des Defaults von `removeOnComplete` steht unter „Performance“ statt unter „Breaking Changes“, obwohl Nutzer ihre Konfiguration anpassen müssen, um abgeschlossene Jobs weiterhin abrufen zu können.\"},{\"criterion\":\"R2\",\"evidence\":\"Die angegebene Begründung, das Entfernen abgeschlossener Jobs reduziere die Redis-Speichernutzung, hat in der Referenz keine Entsprechung.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt fehlt: Beim Erstellen der `Queue` muss `defaultJobOptions: { removeOnComplete: false }` gesetzt werden, um das bisherige Verhalten beizubehalten.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag zu abgeschlossenen Jobs nennt weder `removeOnComplete` noch die Folge, dass sich abgeschlossene Jobs standardmäßig nicht mehr aus der Queue abrufen lassen. Nutzer erkennen dadurch nicht ausreichend, ob sie handeln müssen.\"},{\"criterion\":\"R9\",\"evidence\":\"Der Kandidat nennt Version `2.4.0`; die Breaking Change verlangt einen Major-Sprung. Die Referenz nennt `3.0.0`.\"}],\"reason\":\"Der Kandidat gibt Feature und Worker-Fix im Wesentlichen wieder, behandelt aber die Änderung des Defaults nicht ausreichend als Breaking Change. Außerdem enthält er eine nicht belegte Begründung und eine falsche Versionsnummer.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "Die Änderung des Defaults von `removeOnComplete` steht unter „Performance“ statt unter „Breaking Changes“, obwohl Nutzer ihre Konfiguration anpassen müssen, um abgeschlossene Jobs weiterhin abrufen zu können."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die angegebene Begründung, das Entfernen abgeschlossener Jobs reduziere die Redis-Speichernutzung, hat in der Referenz keine Entsprechung."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Der Migrationsschritt fehlt: Beim Erstellen der `Queue` muss `defaultJobOptions: { removeOnComplete: false }` gesetzt werden, um das bisherige Verhalten beizubehalten."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Eintrag zu abgeschlossenen Jobs nennt weder `removeOnComplete` noch die Folge, dass sich abgeschlossene Jobs standardmäßig nicht mehr aus der Queue abrufen lassen. Nutzer erkennen dadurch nicht ausreichend, ob sie handeln müssen."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Der Kandidat nennt Version `2.4.0`; die Breaking Change verlangt einen Major-Sprung. Die Referenz nennt `3.0.0`."
+   }
+  ],
+  "reason": "Der Kandidat gibt Feature und Worker-Fix im Wesentlichen wieder, behandelt aber die Änderung des Defaults nicht ausreichend als Breaking Change. Außerdem enthält er eine nicht belegte Begründung und eine falsche Versionsnummer.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25415,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 304,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-196b-71e2-9806-105c873f1213"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die Änderung des Defaults von `removeOnComplete` steht unter „Performance“ statt unter „Breaking Changes“, obwohl Nutzer ihre Konfiguration anpassen müssen, um abgeschlossene Jobs weiterhin abrufen zu können.\"},{\"criterion\":\"R2\",\"evidence\":\"Die angegebene Begründung, das Entfernen abgeschlossener Jobs reduziere die Redis-Speichernutzung, hat in der Referenz keine Entsprechung.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt fehlt: Beim Erstellen der `Queue` muss `defaultJobOptions: { removeOnComplete: false }` gesetzt werden, um das bisherige Verhalten beizubehalten.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Eintrag zu abgeschlossenen Jobs nennt weder `removeOnComplete` noch die Folge, dass sich abgeschlossene Jobs standardmäßig nicht mehr aus der Queue abrufen lassen. Nutzer erkennen dadurch nicht ausreichend, ob sie handeln müssen.\"},{\"criterion\":\"R9\",\"evidence\":\"Der Kandidat nennt Version `2.4.0`; die Breaking Change verlangt einen Major-Sprung. Die Referenz nennt `3.0.0`.\"}],\"reason\":\"Der Kandidat gibt Feature und Worker-Fix im Wesentlichen wieder, behandelt aber die Änderung des Defaults nicht ausreichend als Breaking Change. Außerdem enthält er eine nicht belegte Begründung und eine falsche Versionsnummer.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25415,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 304,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

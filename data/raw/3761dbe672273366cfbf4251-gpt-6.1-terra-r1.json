@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "3761dbe672273366cfbf4251",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "careful-1",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4845,
+ "text": "{\"reason\":\"Fassung A nennt mit der Umbenennung von `timeout` zu `timeoutMs` einen konkreten Migrationsschritt. Fassung B ergänzt Aussagen zur genauen Begrenzung, zur einmaligen Warnung und zur weiteren Funktion von `timeout`, die ohne die zugehörigen Diffs nicht überprüfbar sind.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A nennt mit der Umbenennung von `timeout` zu `timeoutMs` einen konkreten Migrationsschritt. Fassung B ergänzt Aussagen zur genauen Begrenzung, zur einmaligen Warnung und zur weiteren Funktion von `timeout`, die ohne die zugehörigen Diffs nicht überprüfbar sind.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24393,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 82,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-ed2e-79c1-838a-646de24d22e6"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A nennt mit der Umbenennung von `timeout` zu `timeoutMs` einen konkreten Migrationsschritt. Fassung B ergänzt Aussagen zur genauen Begrenzung, zur einmaligen Warnung und zur weiteren Funktion von `timeout`, die ohne die zugehörigen Diffs nicht überprüfbar sind.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24393,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 82,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

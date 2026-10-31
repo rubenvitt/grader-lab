@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "6b542a45cb968c19fd380f3c",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "variant": "careful-2",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5398,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Jitter-Strategie wird als „exponential“ bezeichnet. Die Referenz belegt keine exponentielle Berechnung.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Deprecation-Eintrag fehlt, dass die boolesche Übergabe an `worker.pause()` eine einmalige Warnung ausgibt.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` empfiehlt `drain: true|false`. Die Referenz belegt nur `worker.pause({ drain: true })`; eine entsprechende Zuordnung für beide booleschen Werte ist nicht belegt.\"}],\"reason\":\"Der Kandidat ergänzt eine nicht belegte Eigenschaft der Jitter-Strategie und erweitert die Migration für `worker.pause()` über die Referenz hinaus. Zudem fehlt die einmalige Warnung bei der Deprecation.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Jitter-Strategie wird als „exponential“ bezeichnet. Die Referenz belegt keine exponentielle Berechnung."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Beim Deprecation-Eintrag fehlt, dass die boolesche Übergabe an `worker.pause()` eine einmalige Warnung ausgibt."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause()` empfiehlt `drain: true|false`. Die Referenz belegt nur `worker.pause({ drain: true })`; eine entsprechende Zuordnung für beide booleschen Werte ist nicht belegt."
+   }
+  ],
+  "reason": "Der Kandidat ergänzt eine nicht belegte Eigenschaft der Jitter-Strategie und erweitert die Migration für `worker.pause()` über die Referenz hinaus. Zudem fehlt die einmalige Warnung bei der Deprecation.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25702,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 194,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-3b8a-7831-8b82-945b44918a11"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Jitter-Strategie wird als „exponential“ bezeichnet. Die Referenz belegt keine exponentielle Berechnung.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Deprecation-Eintrag fehlt, dass die boolesche Übergabe an `worker.pause()` eine einmalige Warnung ausgibt.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` empfiehlt `drain: true|false`. Die Referenz belegt nur `worker.pause({ drain: true })`; eine entsprechende Zuordnung für beide booleschen Werte ist nicht belegt.\"}],\"reason\":\"Der Kandidat ergänzt eine nicht belegte Eigenschaft der Jitter-Strategie und erweitert die Migration für `worker.pause()` über die Referenz hinaus. Zudem fehlt die einmalige Warnung bei der Deprecation.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25702,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 194,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

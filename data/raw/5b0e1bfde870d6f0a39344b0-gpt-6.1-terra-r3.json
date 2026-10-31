@@ -1,0 +1,79 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "5b0e1bfde870d6f0a39344b0",
+ "meta": {
+  "experiment": "e3",
+  "release": "r3",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 9276,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Bei #351 behaupten die Notes, der alte Optionsname werde stillschweigend ignoriert. Der Diff zeigt die Umbenennung, aber weder die vollständige Optionsverarbeitung noch das Laufzeitverhalten bei unbekannten Optionen.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung bezeichnet den PostgresStore als „proven“. Die Quellen belegen keine Erprobung, die diese Aussage trägt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes garantieren für #357, dass Cron-Jobs beim Zeitwechsel nicht mehr doppelt ausgeführt werden. Der Diff zeigt die Verwendung von `tz: 'UTC'`, belegt aber keine allgemeine Garantie für alle Zeitwechsel.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Für #360 behaupten die Notes eine Beschleunigung großer Importe um etwa 40 %. Der Diff zeigt nur die Aufteilung in Blöcke zu 500 Jobs; laut PR-Text wurde die Wirkung nicht gemessen.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Ankündigung, Details zu #358 würden in einer separaten Sicherheitsmitteilung folgen, ist durch die Quellen nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Formulierungen wie „decisively“, „fully commits“, „proven“ und „unquestionably“ sind werblich beziehungsweise überbetont statt sachlich.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die Breaking Changes und wählen dafür mit 4.0.0 einen passenden Major-Sprung. Mehrere Aussagen gehen jedoch über die Diffs hinaus oder verwenden unsachliche Wortwahl.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Bei #351 behaupten die Notes, der alte Optionsname werde stillschweigend ignoriert. Der Diff zeigt die Umbenennung, aber weder die vollständige Optionsverarbeitung noch das Laufzeitverhalten bei unbekannten Optionen."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung bezeichnet den PostgresStore als „proven“. Die Quellen belegen keine Erprobung, die diese Aussage trägt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes garantieren für #357, dass Cron-Jobs beim Zeitwechsel nicht mehr doppelt ausgeführt werden. Der Diff zeigt die Verwendung von `tz: 'UTC'`, belegt aber keine allgemeine Garantie für alle Zeitwechsel."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Für #360 behaupten die Notes eine Beschleunigung großer Importe um etwa 40 %. Der Diff zeigt nur die Aufteilung in Blöcke zu 500 Jobs; laut PR-Text wurde die Wirkung nicht gemessen."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Ankündigung, Details zu #358 würden in einer separaten Sicherheitsmitteilung folgen, ist durch die Quellen nicht belegt."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „decisively“, „fully commits“, „proven“ und „unquestionably“ sind werblich beziehungsweise überbetont statt sachlich."
+   }
+  ],
+  "reason": "Die Notes erfassen die Breaking Changes und wählen dafür mit 4.0.0 einen passenden Major-Sprung. Mehrere Aussagen gehen jedoch über die Diffs hinaus oder verwenden unsachliche Wortwahl.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26939,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 464,
+  "reasoning_output_tokens": 52
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-b0dd-79e1-8b56-116e99d7a9c3"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Bei #351 behaupten die Notes, der alte Optionsname werde stillschweigend ignoriert. Der Diff zeigt die Umbenennung, aber weder die vollständige Optionsverarbeitung noch das Laufzeitverhalten bei unbekannten Optionen.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung bezeichnet den PostgresStore als „proven“. Die Quellen belegen keine Erprobung, die diese Aussage trägt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes garantieren für #357, dass Cron-Jobs beim Zeitwechsel nicht mehr doppelt ausgeführt werden. Der Diff zeigt die Verwendung von `tz: 'UTC'`, belegt aber keine allgemeine Garantie für alle Zeitwechsel.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Für #360 behaupten die Notes eine Beschleunigung großer Importe um etwa 40 %. Der Diff zeigt nur die Aufteilung in Blöcke zu 500 Jobs; laut PR-Text wurde die Wirkung nicht gemessen.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Ankündigung, Details zu #358 würden in einer separaten Sicherheitsmitteilung folgen, ist durch die Quellen nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Formulierungen wie „decisively“, „fully commits“, „proven“ und „unquestionably“ sind werblich beziehungsweise überbetont statt sachlich.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die Breaking Changes und wählen dafür mit 4.0.0 einen passenden Major-Sprung. Mehrere Aussagen gehen jedoch über die Diffs hinaus oder verwenden unsachliche Wortwahl.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26939,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 464,
+    "reasoning_output_tokens": 52
+   }
+  }
+ ]
+}

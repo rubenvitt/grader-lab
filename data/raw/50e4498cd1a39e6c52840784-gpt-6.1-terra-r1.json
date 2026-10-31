@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "50e4498cd1a39e6c52840784",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "careful-1",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 7239,
+ "text": "{\"reason\":\"Beide Fassungen beschreiben dieselben Änderungen und nennen dieselbe Migration. Die zusätzlichen Angaben in A zum Warnverhalten lassen sich ohne die Diffs nicht auf ihre Richtigkeit prüfen; daraus ergibt sich kein belegbarer Vorteil.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen beschreiben dieselben Änderungen und nennen dieselbe Migration. Die zusätzlichen Angaben in A zum Warnverhalten lassen sich ohne die Diffs nicht auf ihre Richtigkeit prüfen; daraus ergibt sich kein belegbarer Vorteil.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25241,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 222,
+  "reasoning_output_tokens": 158
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-ecd5-7c61-b318-3a5c8af95b56"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen beschreiben dieselben Änderungen und nennen dieselbe Migration. Die zusätzlichen Angaben in A zum Warnverhalten lassen sich ohne die Diffs nicht auf ihre Richtigkeit prüfen; daraus ergibt sich kein belegbarer Vorteil.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25241,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 222,
+    "reasoning_output_tokens": 158
+   }
+  }
+ ]
+}

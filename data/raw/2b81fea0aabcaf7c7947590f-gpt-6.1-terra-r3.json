@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "2b81fea0aabcaf7c7947590f",
+ "meta": {
+  "experiment": "e3",
+  "release": "r5",
+  "variant": "invented-claim:confident",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5153,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die Änderung des Defaults für neue Queues auf die Retry-Strategie „jitter“ steht unter „Features“ statt unter „Breaking Changes“.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „proven jitter retry strategy“, „conclusively fixes“ und „without question“ sind nicht sachlich.\"}],\"reason\":\"Die Notes ordnen eine Änderung des Defaults nicht als Breaking Change ein und enthalten werbliche beziehungsweise übersteigerte Formulierungen. Aussagen, die nur anhand von Quellen oder Diffs überprüfbar wären, wurden gemäß Vorgabe nicht beanstandet.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "Die Änderung des Defaults für neue Queues auf die Retry-Strategie „jitter“ steht unter „Features“ statt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „proven jitter retry strategy“, „conclusively fixes“ und „without question“ sind nicht sachlich."
+   }
+  ],
+  "reason": "Die Notes ordnen eine Änderung des Defaults nicht als Breaking Change ein und enthalten werbliche beziehungsweise übersteigerte Formulierungen. Aussagen, die nur anhand von Quellen oder Diffs überprüfbar wären, wurden gemäß Vorgabe nicht beanstandet.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24515,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 185,
+  "reasoning_output_tokens": 37
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-3cd9-71e1-8745-9d1581095a71"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die Änderung des Defaults für neue Queues auf die Retry-Strategie „jitter“ steht unter „Features“ statt unter „Breaking Changes“.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „proven jitter retry strategy“, „conclusively fixes“ und „without question“ sind nicht sachlich.\"}],\"reason\":\"Die Notes ordnen eine Änderung des Defaults nicht als Breaking Change ein und enthalten werbliche beziehungsweise übersteigerte Formulierungen. Aussagen, die nur anhand von Quellen oder Diffs überprüfbar wären, wurden gemäß Vorgabe nicht beanstandet.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24515,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 185,
+    "reasoning_output_tokens": 37
+   }
+  }
+ ]
+}

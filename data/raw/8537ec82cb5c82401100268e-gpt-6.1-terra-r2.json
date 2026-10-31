@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "8537ec82cb5c82401100268e",
+ "meta": {
+  "experiment": "e3",
+  "release": "r6",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7128,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 ändert den Konstruktor so, dass zuvor akzeptierte Schemanamen, die nicht dem neuen Muster entsprechen, einen Fehler auslösen. Nutzer mit solchen Namen müssen ihre Konfiguration ändern; die Änderung fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes garantieren, dass der Worker den Job in die Menge fehlgeschlagener Jobs verschiebt. Der Diff von #413 zeigt nur die Prüfung der Sperre, das Auslösen von `lockLost` und einen vorzeitigen Rücksprung; eine solche Verschiebung ist nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Auf die letzte Version 5.0.0 folgt in den Notes 5.0.1. Die inkompatible Änderung an akzeptierten Schemanamen in #414 erfordert nach der Rubrik einen Major-Sprung.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die inkompatible Konfigurationsänderung nicht als Breaking Change und wählen deshalb eine unpassende Versionsnummer. Außerdem behaupten sie für #413 ein Verhalten, das der Diff nicht belegt.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 ändert den Konstruktor so, dass zuvor akzeptierte Schemanamen, die nicht dem neuen Muster entsprechen, einen Fehler auslösen. Nutzer mit solchen Namen müssen ihre Konfiguration ändern; die Änderung fehlt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes garantieren, dass der Worker den Job in die Menge fehlgeschlagener Jobs verschiebt. Der Diff von #413 zeigt nur die Prüfung der Sperre, das Auslösen von `lockLost` und einen vorzeitigen Rücksprung; eine solche Verschiebung ist nicht belegt."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Auf die letzte Version 5.0.0 folgt in den Notes 5.0.1. Die inkompatible Änderung an akzeptierten Schemanamen in #414 erfordert nach der Rubrik einen Major-Sprung."
+   }
+  ],
+  "reason": "Die Notes erfassen die inkompatible Konfigurationsänderung nicht als Breaking Change und wählen deshalb eine unpassende Versionsnummer. Außerdem behaupten sie für #413 ein Verhalten, das der Diff nicht belegt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26325,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 382,
+  "reasoning_output_tokens": 95
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-5a91-7cc2-bee8-6009869fa634"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 ändert den Konstruktor so, dass zuvor akzeptierte Schemanamen, die nicht dem neuen Muster entsprechen, einen Fehler auslösen. Nutzer mit solchen Namen müssen ihre Konfiguration ändern; die Änderung fehlt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes garantieren, dass der Worker den Job in die Menge fehlgeschlagener Jobs verschiebt. Der Diff von #413 zeigt nur die Prüfung der Sperre, das Auslösen von `lockLost` und einen vorzeitigen Rücksprung; eine solche Verschiebung ist nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Auf die letzte Version 5.0.0 folgt in den Notes 5.0.1. Die inkompatible Änderung an akzeptierten Schemanamen in #414 erfordert nach der Rubrik einen Major-Sprung.\"\n    }\n  ],\n  \"reason\": \"Die Notes erfassen die inkompatible Konfigurationsänderung nicht als Breaking Change und wählen deshalb eine unpassende Versionsnummer. Außerdem behaupten sie für #413 ein Verhalten, das der Diff nicht belegt.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26325,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 382,
+    "reasoning_output_tokens": 95
+   }
+  }
+ ]
+}

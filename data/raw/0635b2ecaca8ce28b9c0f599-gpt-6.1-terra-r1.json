@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "0635b2ecaca8ce28b9c0f599",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "naive-1",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4566,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Änderungen und die weiterhin unterstützte Option konkret. Aus dem Text selbst ergibt sich kein Verstoß gegen die Rubrik.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben die Änderungen und die weiterhin unterstützte Option konkret. Aus dem Text selbst ergibt sich kein Verstoß gegen die Rubrik.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25193,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 49,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-c390-7dc0-8730-0180028b1cea"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die Änderungen und die weiterhin unterstützte Option konkret. Aus dem Text selbst ergibt sich kein Verstoß gegen die Rubrik.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25193,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

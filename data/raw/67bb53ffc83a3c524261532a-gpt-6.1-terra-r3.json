@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "67bb53ffc83a3c524261532a",
+ "meta": {
+  "experiment": "e3",
+  "release": "r4",
+  "variant": "invented-claim:confident",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 6004,
+ "text": "{\"violations\":[],\"reason\":\"Die Einträge beschreiben konkrete Änderungen und nennen für die veraltete Option einen Migrationsschritt. Ob die technischen Aussagen und Optionsnamen durch die Quellen gedeckt sind, lässt sich anhand der Notes allein nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Einträge beschreiben konkrete Änderungen und nennen für die veraltete Option einen Migrationsschritt. Ob die technischen Aussagen und Optionsnamen durch die Quellen gedeckt sind, lässt sich anhand der Notes allein nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25201,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 182,
+  "reasoning_output_tokens": 115
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-efb6-7830-ad72-1141e93a3c07"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Einträge beschreiben konkrete Änderungen und nennen für die veraltete Option einen Migrationsschritt. Ob die technischen Aussagen und Optionsnamen durch die Quellen gedeckt sind, lässt sich anhand der Notes allein nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25201,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 182,
+    "reasoning_output_tokens": 115
+   }
+  }
+ ]
+}

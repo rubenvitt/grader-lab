@@ -1,0 +1,62 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "1dd62bad329e17d8d82d052d",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "prompt": "careful",
+  "run": 2,
+  "turn": 3
+ },
+ "duration_ms": 7427,
+ "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"5.0.1\",\"notes\":\"# quaykit 5.0.1\\n\\nThis release fixes worker behavior after lock loss and improves PostgreSQL schema name handling.\\n\\n## Fixes\\n\\n- A worker no longer acknowledges a job after losing its lock, and emits `lockLost` (#413)\\n\\n## Security\\n\\n- PostgreSQL queue storage: upgrade to this release (#414)\",\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "publish_release",
+    "id": null,
+    "version": "5.0.1",
+    "notes": "# quaykit 5.0.1\n\nThis release fixes worker behavior after lock loss and improves PostgreSQL schema name handling.\n\n## Fixes\n\n- A worker no longer acknowledges a job after losing its lock, and emits `lockLost` (#413)\n\n## Security\n\n- PostgreSQL queue storage: upgrade to this release (#414)",
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 45474,
+  "cached_input_tokens": 41856,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 222,
+  "reasoning_output_tokens": 59
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-c50d-70f2-ace1-7fc8efcb659f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"5.0.1\",\"notes\":\"# quaykit 5.0.1\\n\\nThis release fixes worker behavior after lock loss and improves PostgreSQL schema name handling.\\n\\n## Fixes\\n\\n- A worker no longer acknowledges a job after losing its lock, and emits `lockLost` (#413)\\n\\n## Security\\n\\n- PostgreSQL queue storage: upgrade to this release (#414)\",\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 45474,
+    "cached_input_tokens": 41856,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 222,
+    "reasoning_output_tokens": 59
+   }
+  }
+ ]
+}

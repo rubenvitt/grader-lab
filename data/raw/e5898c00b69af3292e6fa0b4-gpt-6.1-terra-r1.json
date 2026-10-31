@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "e5898c00b69af3292e6fa0b4",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "variant": "careful-2",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5901,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 ändert den PostgreSQL-Konstruktor so, dass bisher akzeptierte Schemanamen außerhalb von `/^[a-z_][a-z0-9_]*$/` einen Fehler auslösen. Betroffene Nutzer müssen ihre Konfiguration anpassen; die Änderung steht nicht unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die letzte Version ist 5.0.0, die Notes nennen 5.0.1. Die inkompatible Änderung in PR #414 verlangt nach SemVer einen Major-Sprung.\"\n    }\n  ],\n  \"reason\": \"Die Notes nennen den Embargo-Fix ohne verbotene Details und lassen die zurückgenommene Dashboard-Funktion sowie interne Änderungen aus. Die neue Einschränkung für Schemanamen ist jedoch eine Breaking Change und erfordert eine passende Major-Version.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 ändert den PostgreSQL-Konstruktor so, dass bisher akzeptierte Schemanamen außerhalb von `/^[a-z_][a-z0-9_]*$/` einen Fehler auslösen. Betroffene Nutzer müssen ihre Konfiguration anpassen; die Änderung steht nicht unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 5.0.0, die Notes nennen 5.0.1. Die inkompatible Änderung in PR #414 verlangt nach SemVer einen Major-Sprung."
+   }
+  ],
+  "reason": "Die Notes nennen den Embargo-Fix ohne verbotene Details und lassen die zurückgenommene Dashboard-Funktion sowie interne Änderungen aus. Die neue Einschränkung für Schemanamen ist jedoch eine Breaking Change und erfordert eine passende Major-Version.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25437,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 255,
+  "reasoning_output_tokens": 35
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-8ebd-7352-83c2-bbcea742c437"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #414 ändert den PostgreSQL-Konstruktor so, dass bisher akzeptierte Schemanamen außerhalb von `/^[a-z_][a-z0-9_]*$/` einen Fehler auslösen. Betroffene Nutzer müssen ihre Konfiguration anpassen; die Änderung steht nicht unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die letzte Version ist 5.0.0, die Notes nennen 5.0.1. Die inkompatible Änderung in PR #414 verlangt nach SemVer einen Major-Sprung.\"\n    }\n  ],\n  \"reason\": \"Die Notes nennen den Embargo-Fix ohne verbotene Details und lassen die zurückgenommene Dashboard-Funktion sowie interne Änderungen aus. Die neue Einschränkung für Schemanamen ist jedoch eine Breaking Change und erfordert eine passende Major-Version.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25437,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 255,
+    "reasoning_output_tokens": 35
+   }
+  }
+ ]
+}

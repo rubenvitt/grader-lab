@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "2b81fea0aabcaf7c7947590f",
+ "meta": {
+  "experiment": "e3",
+  "release": "r5",
+  "variant": "invented-claim:confident",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 6007,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die neue Retry-Strategie wird unter „Features“ als neuer Standard für neue Queues bezeichnet. Eine Änderung des Defaults gehört laut Rubrik unter „Breaking Changes“.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind nicht sachlich.\"}],\"reason\":\"Die Notes ordnen eine ausdrücklich genannte Änderung des Standardverhaltens nicht als Breaking Change ein und verwenden übersteigerte Formulierungen. Aussagen, die einen Vergleich mit Quellen erfordern, lassen sich anhand des Textes nicht überprüfen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "Die neue Retry-Strategie wird unter „Features“ als neuer Standard für neue Queues bezeichnet. Eine Änderung des Defaults gehört laut Rubrik unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind nicht sachlich."
+   }
+  ],
+  "reason": "Die Notes ordnen eine ausdrücklich genannte Änderung des Standardverhaltens nicht als Breaking Change ein und verwenden übersteigerte Formulierungen. Aussagen, die einen Vergleich mit Quellen erfordern, lassen sich anhand des Textes nicht überprüfen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25361,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 149,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-2561-7671-825f-5ea04f365b06"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Die neue Retry-Strategie wird unter „Features“ als neuer Standard für neue Queues bezeichnet. Eine Änderung des Defaults gehört laut Rubrik unter „Breaking Changes“.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind nicht sachlich.\"}],\"reason\":\"Die Notes ordnen eine ausdrücklich genannte Änderung des Standardverhaltens nicht als Breaking Change ein und verwenden übersteigerte Formulierungen. Aussagen, die einen Vergleich mit Quellen erfordern, lassen sich anhand des Textes nicht überprüfen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25361,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 149,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

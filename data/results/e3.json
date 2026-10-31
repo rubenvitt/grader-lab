@@ -1,0 +1,4127 @@
+{
+ "complete": true,
+ "prompt_version": "v1",
+ "expected": 12,
+ "rows": [
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "schema",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "pr-refs",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "semver-labels",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "wording",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "ref-similarity",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "functional",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "trajectory",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "schema",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "pr-refs",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "semver-labels",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "wording",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "ref-similarity",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "functional",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "trajectory",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "schema",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "pr-refs",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "semver-labels",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "wording",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "ref-similarity",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "functional",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "trajectory",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "schema",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "pr-refs",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "semver-labels",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "wording",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "ref-similarity",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "functional",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "trajectory",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "schema",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "pr-refs",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "semver-labels",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "wording",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "ref-similarity",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "functional",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "trajectory",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "schema",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "pr-refs",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "semver-labels",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "wording",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "ref-similarity",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "functional",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "trajectory",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "schema",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "pr-refs",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "semver-labels",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "wording",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "ref-similarity",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "functional",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "trajectory",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "schema",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "pr-refs",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "semver-labels",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "wording",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "ref-similarity",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "functional",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "trajectory",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "schema",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "pr-refs",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "semver-labels",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "wording",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "ref-similarity",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "functional",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "trajectory",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "schema",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "pr-refs",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "semver-labels",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "wording",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "ref-similarity",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "functional",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "trajectory",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "schema",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "pr-refs",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "semver-labels",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "wording",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "ref-similarity",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "functional",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "grader": "trajectory",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "schema",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "pr-refs",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "semver-labels",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "wording",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "ref-similarity",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "functional",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "grader": "trajectory",
+   "rep": 0,
+   "pass": true,
+   "model": null,
+   "prompt_version": "v1",
+   "findings": []
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat ergänzt eine nicht belegte Aussage zum Zeitpunkt des erneuten Versuchs. Die übrigen Angaben entsprechen der Referenz.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Fix-Eintrag behauptet, der Job werde beim nächsten Poll erneut versucht. Die Referenz belegt lediglich, dass die Sperre freigegeben wird und der Job nicht bis zu deren Ablauf aktiv bleibt."
+    }
+   ],
+   "tainted": false,
+   "raw": "482a4d6aa41ac40fba4b8625-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes geben die verbleibenden nutzerrelevanten Änderungen und die Migration zum geänderten Standardwert wieder. Die Aussage zum Retry in #304 geht über den belegten Diff hinaus.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Eintrag zu #304 behauptet, der Job werde beim nächsten Poll erneut versucht. Der Diff belegt nur, dass der Lock im `finally`-Block freigegeben wird; ein Retry oder dessen Zeitpunkt ist nicht belegt."
+    }
+   ],
+   "tainted": false,
+   "raw": "ce3a95584486a1f04ce80a44-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 1,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes beschreiben konkrete Änderungen und nennen für den geänderten Standardwert einen Migrationsschritt. Aus dem Text selbst ergeben sich keine Verstöße oder inneren Widersprüche; die Richtigkeit gegenüber den Quellen lässt sich ohne diese nicht prüfen.",
+   "violations": [],
+   "tainted": false,
+   "raw": "a70cb33c352e57ebe1dec6aa-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat ergänzt beim Worker-Fix eine nicht belegte Aussage zum erneuten Versuch. Die übrigen Angaben stimmen mit der Referenz überein.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Kandidat behauptet, dass der Job beim nächsten Poll erneut versucht wird. Die Referenz belegt nur, dass der Worker die Sperre freigibt und der Job nicht bis zum Ablauf der Sperre im Status „active“ verbleibt."
+    }
+   ],
+   "tainted": false,
+   "raw": "482a4d6aa41ac40fba4b8625-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Release Notes enthalten eine nicht durch die Quellen belegte Aussage zum erneuten Versuch nach einem Handler-Fehler.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes zu #304 behaupten, der Job werde „on the next poll“ erneut versucht. Der Diff belegt nur, dass die Sperre im `finally`-Block freigegeben wird; Zeitpunkt und Verhalten eines erneuten Versuchs sind nicht belegt."
+    }
+   ],
+   "tainted": false,
+   "raw": "ce3a95584486a1f04ce80a44-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 2,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Aus dem Text selbst ergeben sich keine erkennbaren Verstöße. Ob die Aussagen und der Migrationsschritt mit dem Code übereinstimmen, lässt sich ohne Quellen nicht prüfen.",
+   "violations": [],
+   "tainted": false,
+   "raw": "a70cb33c352e57ebe1dec6aa-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat entspricht der Referenz bis auf die zusätzliche, unbelegte Aussage zum erneuten Versuch des Jobs.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Fix-Eintrag behauptet zusätzlich, dass der Job beim nächsten Poll erneut versucht wird. Diese Aussage ist durch die Referenz nicht belegt."
+    }
+   ],
+   "tainted": false,
+   "raw": "482a4d6aa41ac40fba4b8625-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Diff zu #304 belegt die Freigabe der Sperre, aber weder den Zeitpunkt noch die Durchführung eines erneuten Versuchs. Die übrigen Aussagen und die Versionsnummer stehen im Einklang mit den Quellen und der Rubric.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Eintrag zu #304 verspricht, dass der Job beim nächsten Poll erneut versucht wird. Der Diff zeigt nur, dass die Sperre im `finally`-Block freigegeben wird; ein erneuter Versuch beim nächsten Poll ist nicht belegt."
+    }
+   ],
+   "tainted": false,
+   "raw": "ce3a95584486a1f04ce80a44-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 3,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Aus dem Text selbst ergeben sich keine Verstöße. Ob die Aussagen und der Migrationsschritt durch den Code gedeckt sind, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.",
+   "violations": [],
+   "tainted": false,
+   "raw": "a70cb33c352e57ebe1dec6aa-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 1,
+   "pass": true,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A ist besser, weil B zusätzlich behauptet, dass der Job beim nächsten Poll erneut versucht wird. Da keine Quellen oder Diffs vorliegen, ist diese zusätzliche Aussage nicht belegt. | Kandidat zuerst: equal, Fassung A enthält zusätzlich die Aussage, dass der Job beim nächsten Poll erneut versucht wird. Ohne Diff oder andere Quellen lässt sich weder diese Aussage noch ihre Belegung beurteilen; anhand der gegebenen Informationen sind die Fassungen daher gleichwertig.",
+   "tainted": false,
+   "raw": [
+    "3080fc12a54e2f20bfab1331-gpt-6.1-terra-r1.json",
+    "4b6eb4e419b703404c5abe62-gpt-6.1-terra-r1.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 2,
+   "pass": true,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: equal, Fassung B ergänzt, dass der Job beim nächsten Poll erneut versucht wird. Ob diese zusätzliche Aussage durch den Diff belegt ist, lässt sich ohne Quellen nicht beurteilen; ein sachlicher Vorteil einer Fassung ist daher nicht feststellbar. | Kandidat zuerst: equal, Fassung A enthält zusätzlich die Aussage, dass der Job beim nächsten Poll erneut versucht wird. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, ob diese Aussage belegt ist; beide Fassungen sind anhand der vorliegenden Informationen gleichwertig.",
+   "tainted": false,
+   "raw": [
+    "3080fc12a54e2f20bfab1331-gpt-6.1-terra-r2.json",
+    "4b6eb4e419b703404c5abe62-gpt-6.1-terra-r2.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 3,
+   "pass": true,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: equal, Fassung B ergänzt, dass der Job beim nächsten Poll erneut versucht wird. Ohne Quellen lässt sich nicht beurteilen, ob diese zusätzliche Aussage belegt ist; ansonsten sind die Fassungen inhaltlich gleich. | Kandidat zuerst: equal, Fassung A enthält zusätzlich die Aussage, dass der Job beim nächsten Poll erneut versucht wird. Ohne Diff oder andere Quellen lässt sich weder ihre Richtigkeit noch ein daraus entstehender Vorteil beurteilen; im Übrigen sind die Fassungen inhaltlich gleich.",
+   "tainted": false,
+   "raw": [
+    "3080fc12a54e2f20bfab1331-gpt-6.1-terra-r3.json",
+    "4b6eb4e419b703404c5abe62-gpt-6.1-terra-r3.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat übernimmt die wesentlichen Änderungen und den Migrationsschritt korrekt, ergänzt aber unbelegte Garantien und verwendet übersteigerte Sprache.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "„always releases“ und die Garantie, dass der Job beim nächsten Poll erneut versucht wird, gehen über die Referenz hinaus. Auch „permanently eliminates“ behauptet eine nicht belegte Dauerhaftigkeit."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Die Formulierungen „definitively resolves“, „fully delivers“ und „permanently eliminates“ sind werblich beziehungsweise übersteigernd."
+    }
+   ],
+   "tainted": false,
+   "raw": "f5d0c1d36825284c973929d0-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Major-Version und die Migration zum bisherigen Standardwert passen zu #307. Die zurückgenommenen Lanes fehlen zutreffend; die Notes enthalten jedoch unbelegte Aussagen und unsachliche Formulierungen.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten zu #304, der Job werde garantiert beim nächsten Poll erneut versucht. Der Diff zeigt nur, dass der Lock im `finally`-Block freigegeben wird; ein Wiederholungsversuch beim nächsten Poll ist nicht belegt."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten zu #307, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff ändert nur den Standardwert von `removeOnComplete` von `false` auf `true` und belegt diese konkrete Abrufaussage nicht."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Die Einleitung verwendet mit „definitively resolves“, „fully delivers“ und „permanently eliminates“ werbliche beziehungsweise absolute Formulierungen."
+    }
+   ],
+   "tainted": false,
+   "raw": "fe4dffd859069731994566d4-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Einleitung formuliert die Änderungen übersteigert statt sachlich. Ob die technischen Aussagen und Migrationsschritte durch den Code gedeckt sind, lässt sich allein anhand der Notes nicht prüfen.",
+   "violations": [
+    {
+     "criterion": "R7",
+     "evidence": "„definitively resolves“, „fully delivers“ und „permanently eliminates“ verwenden übersteigerte Sprache."
+    }
+   ],
+   "tainted": false,
+   "raw": "eb20913a108b0ed3d95136e4-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat enthält die wesentlichen Änderungen und die korrekte Migration, ergänzt aber unbelegte Zusicherungen und übertriebene Formulierungen.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Einleitung behauptet, das Aufbewahrungsproblem sei endgültig gelöst und das Lock-Leck dauerhaft beseitigt. Diese weitreichenden Zusicherungen sind durch die Referenz nicht gedeckt. Auch die Garantie, dass der Job beim nächsten Poll erneut versucht wird, steht nicht in der Referenz."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Formulierungen wie „definitively resolves“, „fully delivers“ und „permanently eliminates“ sind werblich und übertrieben statt sachlich."
+    }
+   ],
+   "tainted": false,
+   "raw": "f5d0c1d36825284c973929d0-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes enthalten unbelegte Garantien zum Aufbewahrungsverhalten und zur Behandlung fehlgeschlagener Jobs sowie übersteigerte Formulierungen. Der Breaking Change und die Migration sind korrekt eingeordnet; die zurückgenommenen Lanes erscheinen nicht in den Notes.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Einleitung behauptet, das Release löse die Aufbewahrung von Jobs endgültig und beseitige das Lock-Leck dauerhaft. #307 ändert nur den Standardwert von `removeOnComplete`; #304 fügt eine Freigabe im `finally`-Block hinzu. Die Diffs belegen keine so umfassenden Garantien."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Der Eintrag zu #304 garantiert einen erneuten Versuch beim nächsten Poll. Der Diff zeigt nur, dass die Freigabe des Locks im `finally`-Block aufgerufen wird; ein erneuter Versuch oder dessen Zeitpunkt ist nicht belegt."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Die Einleitung verwendet mit „definitively resolves“, „fully delivers“ und „permanently eliminates“ übersteigerte Formulierungen statt eines sachlichen Tons."
+    }
+   ],
+   "tainted": false,
+   "raw": "fe4dffd859069731994566d4-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Einleitung verwendet eine überschwängliche Sprache statt eines sachlichen Tons. Ob die weiteren Aussagen und Garantien durch die Änderungen gedeckt sind, lässt sich ohne Quellen nicht prüfen.",
+   "violations": [
+    {
+     "criterion": "R7",
+     "evidence": "„definitively resolves“, „fully delivers“ und „permanently eliminates“ sind werbliche, absolute Formulierungen."
+    }
+   ],
+   "tainted": false,
+   "raw": "eb20913a108b0ed3d95136e4-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die fachlichen Änderungen, der Migrationsschritt und die Versionsnummer stimmen mit der Referenz überein. Der Kandidat enthält jedoch unbelegte Garantien und übersteigerte Formulierungen.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Aussage, der Job werde garantiert beim nächsten Poll erneut versucht, ist durch die Referenz nicht gedeckt. Auch „permanently eliminates“ behauptet eine nicht belegte Dauerhaftigkeit."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Die Formulierungen „definitively resolves“, „fully delivers“ und „permanently eliminates“ sind übersteigerte Werbesprache statt eines sachlichen Tons."
+    }
+   ],
+   "tainted": false,
+   "raw": "f5d0c1d36825284c973929d0-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes beschreiben die wesentlichen Nutzeränderungen und den Major-Sprung, enthalten aber unbelegte Aussagen und übersteigerte Formulierungen.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Eintrag zu #307 behauptet, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff belegt lediglich die Änderung des Standardwerts von `removeOnComplete` auf `true`, nicht das konkrete Abrufverhalten."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Der Eintrag zu #304 garantiert einen erneuten Versuch beim nächsten Poll. Der Diff zeigt, dass das Lock im `finally`-Block freigegeben wird; eine Wiederholung oder deren Zeitpunkt ist daraus nicht belegt."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Die Einleitung verwendet mit „definitively resolves“, „fully delivers“ und „permanently eliminates“ werbliche beziehungsweise übersteigerte Formulierungen."
+    }
+   ],
+   "tainted": false,
+   "raw": "fe4dffd859069731994566d4-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Einleitung verwendet einen unsachlichen, übersteigerten Ton. Ob die konkreten Aussagen und Garantien durch den Code belegt sind, lässt sich ohne Quellen nicht prüfen.",
+   "violations": [
+    {
+     "criterion": "R7",
+     "evidence": "„definitively resolves“, „fully delivers“ und „permanently eliminates“ verwenden werbliche und absolute Formulierungen."
+    }
+   ],
+   "tainted": false,
+   "raw": "eb20913a108b0ed3d95136e4-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 1,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A ist besser: Fassung B verwendet werbliche und absolute Formulierungen und ergänzt eine nicht belegte Garantie zur Wiederholung des Jobs beim nächsten Poll. Die übrigen Einträge sind inhaltlich gleich. | Kandidat zuerst: B, Fassung B ist sachlicher und vermeidet die unbelegte Garantie aus Fassung A, dass der Job beim nächsten Poll erneut versucht wird. Beide Fassungen enthalten dieselben übrigen konkreten Einträge; ohne die zugrunde liegenden Diffs lassen sich deren Aussagen nicht abschließend prüfen.",
+   "tainted": false,
+   "raw": [
+    "e8f7c10bb5435019eed1b665-gpt-6.1-terra-r1.json",
+    "11290f3fef87aeda1e43f1bb-gpt-6.1-terra-r1.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 2,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A ist sachlicher und vermeidet die unbelegten Garantien und Superlative in Fassung B. Insbesondere behauptet B zusätzlich eine garantierte Wiederholung beim nächsten Poll, für die im Prüfmaterial kein Beleg vorliegt. | Kandidat zuerst: B, Fassung B ist sachlicher und verzichtet auf die unbelegte Garantie aus A, dass der Job beim nächsten Poll erneut versucht wird. Die übrigen inhaltlichen Aussagen sind gleich; ohne Quellen lassen sie sich nicht unabhängig überprüfen.",
+   "tainted": false,
+   "raw": [
+    "e8f7c10bb5435019eed1b665-gpt-6.1-terra-r2.json",
+    "11290f3fef87aeda1e43f1bb-gpt-6.1-terra-r2.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r1",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 3,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A vermeidet die unbelegten Garantien und absoluten Aussagen in Fassung B, insbesondere zur erneuten Ausführung beim nächsten Poll. Außerdem ist ihr Ton sachlicher. | Kandidat zuerst: B, Fassung B ist sachlicher und verzichtet auf die unbelegten Garantien in Fassung A, insbesondere dass der Job beim nächsten Polling erneut versucht wird. Die konkreten Änderungen und der Migrationshinweis sind ansonsten gleich.",
+   "tainted": false,
+   "raw": [
+    "e8f7c10bb5435019eed1b665-gpt-6.1-terra-r3.json",
+    "11290f3fef87aeda1e43f1bb-gpt-6.1-terra-r3.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat ersetzt die konkrete Beschreibung des Fixes durch nicht belegte Aussagen und lässt wesentliche Bedingungen des tatsächlichen Verhaltens weg.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Eintrag zu #334 behauptet, dass Worker ihre Locks über Redis-Failover hinweg behalten und die Erneuerung automatisch erneut verbindet. Die Referenz belegt lediglich einen einmaligen Wiederholungsversuch der Lock-Erneuerung nach `ECONNRESET`."
+    },
+    {
+     "criterion": "R8",
+     "evidence": "Der Eintrag zu #334 nennt weder `ECONNRESET` als Auslöser noch die Beschränkung auf einen Wiederholungsversuch. Dadurch ist das tatsächliche Verhalten für Nutzer nicht erkennbar."
+    }
+   ],
+   "tainted": false,
+   "raw": "dc7796f11b5f2e6dcdfb5f53-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes enthalten unbelegte Aussagen zur Lock-Erneuerung und einen unvollständigen Migrationsaufruf. Außerdem bleibt der Sicherheitseintrag zu allgemein, obwohl die betroffene Komponente genannt werden darf.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Eintrag zu #334 behauptet, Worker behielten ihre Locks bei Redis-Failovern und die Erneuerung verbinde sich automatisch erneut. Der Diff zeigt nur einen erneuten Aufruf von `pexpire` bei `ECONNRESET`; er belegt weder eine erneute Verbindung noch den Erhalt des Locks."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Einleitung spricht von einem erneuten Versuch nach einer unterbrochenen Verbindung. Der Diff zu #334 behandelt ausschließlich Fehler mit dem Code `ECONNRESET`, nicht nachweislich jeden Verbindungsabbruch."
+    },
+    {
+     "criterion": "R3",
+     "evidence": "Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` übernimmt `graceMs` nicht. Wie der Diff zeigt, muss der entsprechende Aufruf `queue.purge({ status, olderThanMs: graceMs })` lauten."
+    },
+    {
+     "criterion": "R8",
+     "evidence": "Der Sicherheitseintrag nennt nur ein allgemeines Sicherheitsproblem. Die Quelle #336 zeigt, dass die Signaturprüfung betroffen ist; diese Komponente darf gemäß R5 genannt werden und würde den Eintrag nutzbar machen, ohne Details preiszugeben."
+    }
+   ],
+   "tainted": false,
+   "raw": "63ae99f5e983f775d36bc093-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 1,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Aus dem Text allein ist kein Verstoß eindeutig erkennbar. Ob die Aussagen und die Migration mit dem Code übereinstimmen, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.",
+   "violations": [],
+   "tainted": false,
+   "raw": "479be9e45aa9b949f70e376a-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat ersetzt das belegte Verhalten bei der Lock-Erneuerung durch weitergehende, nicht belegte Aussagen und lässt die konkrete Änderung weg.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Fix behauptet, Worker behielten ihre Locks bei Redis-Failovern und die Erneuerung verbinde sich automatisch neu. Die Referenz belegt lediglich einen erneuten Versuch der Lock-Erneuerung nach `ECONNRESET`."
+    },
+    {
+     "criterion": "R8",
+     "evidence": "Beim Fix fehlt die konkrete Information, dass die Lock-Erneuerung nach `ECONNRESET` genau einmal erneut versucht wird."
+    }
+   ],
+   "tainted": false,
+   "raw": "dc7796f11b5f2e6dcdfb5f53-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes enthalten unbelegte Aussagen zur Lock-Erneuerung, einen unvollständigen Migrationsschritt und einen zu allgemeinen Sicherheitseintrag. Die Versionsnummer 3.1.0 passt zu den belegten Features und der Deprecation.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Eintrag zu #334 behauptet, Worker behielten ihre Locks bei Redis-Failovers und die Erneuerung verbinde sich automatisch neu. Der Diff versucht `pexpire` bei `ECONNRESET` genau einmal erneut; eine Wiederverbindung oder der Erhalt des Locks wird nicht garantiert."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Einleitung spricht allgemein von einem erneuten Versuch nach einer unterbrochenen Verbindung. Der Diff zu #334 behandelt nur Fehler mit dem Code `ECONNRESET`; andere Fehler werden weitergeworfen."
+    },
+    {
+     "criterion": "R3",
+     "evidence": "Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` erklärt nicht, dass der bisherige Wert `graceMs` als `olderThanMs: graceMs` übergeben werden muss. Im bisherigen Aufruf ist keine Variable `olderThanMs` genannt."
+    },
+    {
+     "criterion": "R8",
+     "evidence": "Der Security-Eintrag nennt nur ein allgemeines Sicherheitsproblem. Die betroffene Komponente `signing` aus #336 darf trotz Embargo genannt werden und würde Nutzern helfen, die Änderung einzuordnen."
+    }
+   ],
+   "tainted": false,
+   "raw": "63ae99f5e983f775d36bc093-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 2,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Aus dem Text selbst ergeben sich keine erkennbaren Verstöße. Ob die Aussagen und der Migrationsschritt mit dem Code übereinstimmen, lässt sich ohne Quellen nicht prüfen und gilt daher als erfüllt.",
+   "violations": [],
+   "tainted": false,
+   "raw": "479be9e45aa9b949f70e376a-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat ersetzt den belegten Fix durch weitergehende Aussagen und lässt dessen konkrete Bedingungen aus. Die übrigen Einträge und die Version stimmen mit der Referenz überein.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Eintrag zu #334 behauptet, Worker behielten ihre Locks bei Redis-Failovern und die Erneuerung verbinde sich automatisch erneut. Die Referenz belegt nur einen einmaligen Wiederholungsversuch nach `ECONNRESET`."
+    },
+    {
+     "criterion": "R8",
+     "evidence": "Der Eintrag zu #334 nennt weder `ECONNRESET` noch, dass die Lock-Erneuerung genau einmal wiederholt wird. Damit beschreibt er die tatsächliche Änderung nicht ausreichend konkret."
+    }
+   ],
+   "tainted": false,
+   "raw": "dc7796f11b5f2e6dcdfb5f53-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Diffs belegen das Ereignis, die Deprecation und einen begrenzten Wiederholungsversuch bei der Lock-Verlängerung. Die Notes überzeichnen jedoch den Fix, enthalten einen unvollständigen Migrationsschritt und benennen die vom Sicherheitsfix betroffene Komponente nicht.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Aussage zu #334, Worker behielten ihre Locks bei Redis-Failovers und die Verlängerung verbinde sich automatisch neu, ist nicht belegt. Der Diff versucht `pexpire` nur nach einem Fehler mit Code `ECONNRESET` einmal erneut; er garantiert weder einen Erhalt des Locks noch eine automatische Neuverbindung."
+    },
+    {
+     "criterion": "R3",
+     "evidence": "Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` übernimmt den vorhandenen Wert `graceMs` nicht. Der entsprechende Aufruf lautet `queue.purge({ status, olderThanMs: graceMs })`."
+    },
+    {
+     "criterion": "R8",
+     "evidence": "Der Security-Eintrag nennt nur ein allgemeines Sicherheitsproblem. Die betroffene Komponente `signing` wird nicht genannt, obwohl ihre Nennung nach R5 erlaubt ist; Nutzer können daher nicht erkennen, welcher Teil der Bibliothek betroffen ist."
+    }
+   ],
+   "tainted": false,
+   "raw": "63ae99f5e983f775d36bc093-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 3,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Aus dem Text selbst ergeben sich keine Verstöße. Aussagen über den tatsächlichen Diff, die Migration und die Quellenlage lassen sich ohne weitere Quellen nicht prüfen und gelten daher als erfüllt.",
+   "violations": [],
+   "tainted": false,
+   "raw": "479be9e45aa9b949f70e376a-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 1,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Die Fassungen unterscheiden sich nur bei #334. B behauptet zusätzlich den Erhalt von Locks bei Redis-Failovers und eine automatische Wiederverbindung; dafür liegt im Prüfmaterial kein Beleg vor, während A den Retry nach `ECONNRESET` konkreter beschreibt. | Kandidat zuerst: B, Fassung B beschreibt den Fix konkret als einmaligen Wiederholungsversuch nach `ECONNRESET`. Fassung A behauptet darüber hinaus, dass Worker ihre Locks bei Redis-Failovers behalten und sich die Erneuerung automatisch neu verbindet; diese Garantien sind aus den vorliegenden Angaben nicht belegt.",
+   "tainted": false,
+   "raw": [
+    "a80eb328568efbc65efab28d-gpt-6.1-terra-r1.json",
+    "21ca0adddc1ac9ad51dc27d7-gpt-6.1-terra-r1.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 2,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, A beschreibt den Fix konkret als einmaligen Wiederholungsversuch nach `ECONNRESET`. B behauptet dagegen, dass Worker ihre Locks bei Redis-Failovern behalten; diese weitergehende Zusicherung lässt sich ohne Diff nicht belegen. | Kandidat zuerst: B, Fassung B beschreibt die einmalige Wiederholung bei `ECONNRESET` konkret und ohne die weitreichende Garantie aus Fassung A, dass Sperren bei Redis-Failovers erhalten bleiben. Ob die Angaben durch den Diff belegt sind, lässt sich ohne die Quellen nicht abschließend beurteilen.",
+   "tainted": false,
+   "raw": [
+    "a80eb328568efbc65efab28d-gpt-6.1-terra-r2.json",
+    "21ca0adddc1ac9ad51dc27d7-gpt-6.1-terra-r2.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 3,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A beschreibt den Fix konkreter und zurückhaltender. Fassung B verspricht dagegen, dass Worker ihre Locks bei Redis-Failovers behalten und sich die Erneuerung automatisch neu verbindet; dafür liefern die vorliegenden Texte keinen Beleg. | Kandidat zuerst: B, Fassung B beschreibt den erneuten Versuch bei `ECONNRESET` konkret und stimmt damit mit der Einleitung überein. Fassung A behauptet darüber hinaus, dass Sperren bei Redis-Failovern erhalten bleiben und die Verbindung automatisch wiederhergestellt wird; diese Garantien sind durch das vorliegende Material nicht belegt.",
+   "tainted": false,
+   "raw": [
+    "a80eb328568efbc65efab28d-gpt-6.1-terra-r3.json",
+    "21ca0adddc1ac9ad51dc27d7-gpt-6.1-terra-r3.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat beschreibt die Lock-Erneuerung mit unbelegten Garantien und lässt das tatsächlich geänderte Verhalten aus. Außerdem enthält die Einleitung unsachliche Formulierungen.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Fix-Eintrag behauptet, dass Worker ihre Locks bei Redis-Failovern ausnahmslos behalten und die Erneuerung garantiert automatisch neu verbindet. Die Referenz belegt nur einen erneuten Versuch nach `ECONNRESET`."
+    },
+    {
+     "criterion": "R8",
+     "evidence": "Der Fix-Eintrag nennt den konkreten Auslöser `ECONNRESET` und den einmaligen erneuten Versuch nicht. Dadurch ist die tatsächliche Änderung für Nutzer nicht erkennbar."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Formulierungen wie „unquestionably delivers“ und „conclusively settles“ sind werblich und nicht sachlich."
+    }
+   ],
+   "tainted": false,
+   "raw": "57960445b68faf053db3a205-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes enthalten eine unbelegte Garantie, eine unvollständige Migrationsanweisung und übersteigerte Formulierungen. Außerdem lässt der Sicherheitseintrag die betroffene Komponente offen.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten für #334, Locks blieben bei Redis-Failovern ausnahmslos erhalten und die Erneuerung verbinde sich garantiert automatisch neu. Der Diff wiederholt lediglich einen fehlgeschlagenen `pexpire`-Aufruf einmal bei `ECONNRESET`; eine Wiederverbindung oder Erfolgsgarantie ist nicht zu sehen."
+    },
+    {
+     "criterion": "R3",
+     "evidence": "Die Migration für #338 nennt `queue.purge({ status, olderThanMs })`, erklärt aber nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Der Diff zeigt die konkrete Zuordnung `queue.purge({ status, olderThanMs: graceMs })`."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Die Einleitung verwendet mit „unquestionably delivers“ und „conclusively settles“ werbliche und übersteigerte Formulierungen."
+    },
+    {
+     "criterion": "R8",
+     "evidence": "Der Sicherheitseintrag zu #336 nennt nur „a security issue“. Die Quelle weist die betroffene Komponente `signing` aus; deren Nennung wäre auch unter dem Embargo zulässig und würde den Eintrag für Nutzer einordnen."
+    }
+   ],
+   "tainted": false,
+   "raw": "3d14c2e983af50ae8c37cd91-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Einleitung ist nicht durchgehend sachlich formuliert. Die übrigen Kriterien lassen sich anhand des Textes nicht als verletzt feststellen.",
+   "violations": [
+    {
+     "criterion": "R7",
+     "evidence": "Die Einleitung verwendet die werblichen Formulierungen „unquestionably delivers“ und „conclusively settles“."
+    }
+   ],
+   "tainted": false,
+   "raw": "c904cdfae10f0dcec24f9a48-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat vermittelt den Fix zur Lock-Erneuerung falsch und enthält unbelegte Garantien. Zudem ist der Ton stellenweise übersteigert.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Eintrag zu #334 behauptet, Worker behielten ihre Locks bei Redis-Failovers ausnahmslos und die Erneuerung verbinde sich garantiert automatisch neu. Die Referenz belegt lediglich einen erneuten Versuch nach ECONNRESET."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Formulierungen wie „unquestionably delivers“ und „conclusively settles“ sind werbend und übersteigert."
+    },
+    {
+     "criterion": "R8",
+     "evidence": "Der Fix-Eintrag beschreibt nicht die konkrete Änderung: Lock Renewal versucht es nach ECONNRESET einmal erneut, statt sofort fehlzuschlagen."
+    }
+   ],
+   "tainted": false,
+   "raw": "57960445b68faf053db3a205-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes enthalten eine unbelegte Garantie, einen unvollständigen Migrationsschritt und übersteigerte Formulierungen. Die Versionsnummer 3.1.0 passt zu den belegten Features und der Deprecation.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten, Worker behielten ihre Locks bei Redis-Failovers ausnahmslos und die Verlängerung stelle garantiert automatisch eine Verbindung wieder her. Der Diff zu #334 zeigt lediglich einen erneuten Aufruf von `pexpire` nach `ECONNRESET`; dieser kann ebenfalls fehlschlagen."
+    },
+    {
+     "criterion": "R3",
+     "evidence": "Die Migration von `queue.clean(graceMs, status)` zu `queue.purge({ status, olderThanMs })` zeigt nicht, dass der bisherige Wert `graceMs` als `olderThanMs` übergeben werden muss. Der Diff verwendet `queue.purge({ status, olderThanMs: graceMs })`."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Die Einleitung verwendet mit „unquestionably delivers“ und „conclusively settles“ werbende, übersteigerte Formulierungen."
+    }
+   ],
+   "tainted": false,
+   "raw": "3d14c2e983af50ae8c37cd91-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Einleitung verwendet wertende Sprache. Der Sicherheitseintrag bleibt so allgemein, dass seine Relevanz für Nutzer nicht erkennbar ist. Aussagen, die einen Abgleich mit Quellen erfordern, wurden als erfüllt behandelt.",
+   "violations": [
+    {
+     "criterion": "R7",
+     "evidence": "Die Formulierungen „unquestionably delivers“ und „conclusively settles“ sind nicht sachlich."
+    },
+    {
+     "criterion": "R8",
+     "evidence": "„Fixes a security issue“ nennt keine betroffene Komponente. Nutzer können daher nicht erkennen, welchen Teil der Bibliothek die Änderung betrifft."
+    }
+   ],
+   "tainted": false,
+   "raw": "c904cdfae10f0dcec24f9a48-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat stellt den Lock-Fix als umfassende Garantie dar und lässt dessen tatsächlichen Umfang offen. Zudem verwendet die Einleitung übersteigerte Sprache.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Fix-Eintrag behauptet, Locks blieben bei Redis-Failovers ausnahmslos erhalten und die erneute Verbindung sei garantiert. Die Referenz belegt lediglich einen einmaligen Wiederholungsversuch der Lock-Erneuerung nach ECONNRESET."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "„unquestionably delivers“ und „conclusively settles“ sind unsachliche, übersteigerte Formulierungen."
+    },
+    {
+     "criterion": "R8",
+     "evidence": "Der Fix-Eintrag nennt weder ECONNRESET noch den einmaligen Wiederholungsversuch und vermittelt damit die konkrete Änderung nicht brauchbar."
+    }
+   ],
+   "tainted": false,
+   "raw": "57960445b68faf053db3a205-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes enthalten unbelegte Garantien zur Lock-Erneuerung, einen unvollständigen Migrationsschritt und überzogene Formulierungen. Der Sicherheitseintrag lässt zudem die nach der Embargo-Regel zulässige und für Nutzer hilfreiche Komponente aus.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes versprechen, dass Worker ihre Locks bei Redis-Failovern ausnahmslos behalten und die Erneuerung garantiert automatisch neu verbindet (#334). Der Diff versucht bei `ECONNRESET` lediglich `pexpire` einmal erneut; er stellt weder eine Wiederverbindung noch den Erhalt des Locks sicher."
+    },
+    {
+     "criterion": "R3",
+     "evidence": "Die Migration zu `queue.purge({ status, olderThanMs })` erklärt nicht, dass der bisherige Wert von `graceMs` als `olderThanMs` übergeben werden muss. Der Diff verwendet dafür `queue.purge({ status, olderThanMs: graceMs })`."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Die Einleitung verwendet mit „unquestionably delivers“ und „conclusively settles“ werbende beziehungsweise überzogene Formulierungen."
+    },
+    {
+     "criterion": "R8",
+     "evidence": "Der Sicherheitseintrag nennt nur „a security issue“. Er benennt nicht die betroffene Komponente `signing`, obwohl deren Nennung laut R5 erlaubt ist und Nutzern die Einordnung erleichtert."
+    }
+   ],
+   "tainted": false,
+   "raw": "3d14c2e983af50ae8c37cd91-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Einleitung verwendet einen unsachlich werblichen Ton. Ob die übrigen Aussagen und Garantien durch die Änderungen gedeckt sind, lässt sich ohne Quellen nicht prüfen.",
+   "violations": [
+    {
+     "criterion": "R7",
+     "evidence": "„This release unquestionably delivers“ und „conclusively settles“ sind werblich und überzogen."
+    }
+   ],
+   "tainted": false,
+   "raw": "c904cdfae10f0dcec24f9a48-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 1,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A beschreibt die Änderung an der Lock-Erneuerung konkret und zurückhaltend. Fassung B behauptet dagegen ausnahmslose Garantien und verwendet werbliche Formulierungen; die behaupteten Garantien lassen sich aus den vorliegenden Texten nicht belegen. | Kandidat zuerst: B, Fassung B beschreibt die Änderung an der Lock-Erneuerung konkret und ohne die weitreichende Garantie aus Fassung A. Zudem vermeidet sie deren werblichen Ton; ob die technischen Aussagen durch die Diffs gedeckt sind, lässt sich ohne Quellen nicht beurteilen.",
+   "tainted": false,
+   "raw": [
+    "dae2bc84b9f0d1a9aef80f87-gpt-6.1-terra-r1.json",
+    "e14ecb32d21a1d96bdbc5a7e-gpt-6.1-terra-r1.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 2,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A beschreibt die Änderung an der Lock-Erneuerung konkret und zurückhaltend. Fassung B behauptet dagegen ausnahmslose Garantien und verwendet werbliche Formulierungen; diese Aussagen sind anhand des vorliegenden Materials nicht belegt. | Kandidat zuerst: B, Fassung B beschreibt die Wiederholung der Sperrenerneuerung konkret, während A ausnahmsloses Funktionieren und eine automatische Wiederverbindung garantiert. Außerdem verwendet A wertende Sprache; ob die technischen Aussagen durch die Diffs gedeckt sind, lässt sich ohne Quellen nicht vollständig beurteilen.",
+   "tainted": false,
+   "raw": [
+    "dae2bc84b9f0d1a9aef80f87-gpt-6.1-terra-r2.json",
+    "e14ecb32d21a1d96bdbc5a7e-gpt-6.1-terra-r2.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r2",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 3,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A beschreibt die Änderung an der Lock-Erneuerung konkret und sachlich. Fassung B behauptet dagegen ausnahmslose Garantien und verwendet werbliche Formulierungen, die sich aus den vorliegenden Texten nicht belegen lassen. | Kandidat zuerst: B, Fassung B formuliert die Änderung an der Lock-Erneuerung präziser und vermeidet die unbelegten Garantien sowie die werbliche Sprache von Fassung A. Ob B in allen Details durch die Quellen gedeckt ist, lässt sich ohne Diffs nicht beurteilen.",
+   "tainted": false,
+   "raw": [
+    "dae2bc84b9f0d1a9aef80f87-gpt-6.1-terra-r3.json",
+    "e14ecb32d21a1d96bdbc5a7e-gpt-6.1-terra-r3.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat ergänzt eine nicht belegte Leistungszahl. Die übrigen Angaben entsprechen der Referenz.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Aussage, dass große Importe durch die Änderung an `addBulk` etwa 40 % schneller sind, hat keine Entsprechung in der Referenz."
+    }
+   ],
+   "tainted": false,
+   "raw": "08790bcb8823842ad23c6d5f-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Diffs belegen die aufgeführten Änderungen und den Major-Sprung auf 4.0.0. Drei Aussagen der Notes gehen jedoch über die Quellen hinaus.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten, der alte Optionsname `stalledIntervalMs` werde „silently ignored“ (#351). Der Diff zeigt die Umbenennung, aber nicht, wie eine unbekannte Option zur Laufzeit behandelt wird."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes versprechen, dass Details zum Sicherheitsproblem in einem separaten Advisory folgen (#358). Die Quellen belegen keine solche Veröffentlichung."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten, große Importe seien durch #360 etwa 40 % schneller. Der PR-Text sagt ausdrücklich, dass die Verbesserung noch nicht gemessen wurde."
+    }
+   ],
+   "tainted": false,
+   "raw": "078e20a530913bf746887bdb-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 1,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Text enthält konkrete Änderungen und Migrationshinweise; der Sicherheitseintrag nennt keine verbotenen Details. Ob technische Aussagen und Leistungszahlen durch die Quellen gedeckt sind, lässt sich ohne Quellen nicht prüfen und gilt daher gemäß Vorgabe als erfüllt.",
+   "violations": [],
+   "tainted": false,
+   "raw": "9f62ea0ee20bd8e8c016bceb-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat ergänzt eine unbelegte Leistungsangabe. Die übrigen Angaben stimmen mit der Referenz überein.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Kandidat behauptet, große Importe seien mit `addBulk` etwa 40 % schneller. Die Referenz nennt keine Geschwindigkeitsmessung und belegt diese Zahl nicht."
+    }
+   ],
+   "tainted": false,
+   "raw": "08790bcb8823842ad23c6d5f-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Breaking Changes, die Migration, das Embargo und der Major-Sprung auf 4.0.0 sind durch die Quellen gedeckt beziehungsweise mit der Rubric vereinbar. Zwei Aussagen gehen jedoch über das hinaus, was die gezeigten Quellen belegen.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Angabe, große Importe seien „about 40% faster“ (#360), ist nicht belegt: Der PR-Text sagt ausdrücklich, dass keine Messung vorgenommen wurde; der Diff zeigt lediglich die Verarbeitung in 500er-Chunks."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Bei #351 behaupten die Notes, der alte Optionsname werde stillschweigend ignoriert. Der gezeigte Diff entfernt den Namen aus dem Typ und ersetzt den Zugriff, belegt aber weder das Laufzeitverhalten bei Übergabe der alten Option noch das vollständige Fehlen eines Alias."
+    }
+   ],
+   "tainted": false,
+   "raw": "078e20a530913bf746887bdb-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 2,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Aus dem Text selbst sind keine Verstöße gegen die Rubrik erkennbar. Aussagen, die nur anhand von Quellen überprüft werden könnten, gelten gemäß Vorgabe als erfüllt.",
+   "violations": [],
+   "tainted": false,
+   "raw": "9f62ea0ee20bd8e8c016bceb-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat ergänzt eine nicht belegte Leistungszahl. Die übrigen Angaben stimmen mit der Referenz überein.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Aussage, dass große Importe etwa 40 % schneller sind, hat keine Entsprechung in der Referenz."
+    }
+   ],
+   "tainted": false,
+   "raw": "08790bcb8823842ad23c6d5f-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes enthalten Aussagen, die über die vorgelegten Diffs und Quellen hinausgehen. Die Versionsnummer und die Einordnung der Breaking Changes passen zu den belegten Änderungen.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes zu #351 behaupten, `stalledIntervalMs` werde stillschweigend ignoriert. Der Diff zeigt die Umbenennung der Option, belegt aber weder das Fehlen eines Alias noch das Verhalten bei Verwendung des alten Namens."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes zu #357 garantieren, dass Cron-Jobs beim Wechsel der Uhrzeit nicht mehr doppelt ausgeführt werden. Der Diff zeigt den Aufruf von `cron.next` mit `{ tz: 'UTC' }`, belegt diese allgemeine Garantie aber nicht."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes zu #360 behaupten, große Importe seien etwa 40 % schneller. Der Diff zeigt Chargen von 500 Jobs; laut PR-Text wurde die Verbesserung nicht gemessen."
+    }
+   ],
+   "tainted": false,
+   "raw": "078e20a530913bf746887bdb-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 3,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Aus dem Text selbst sind keine Verstöße erkennbar. Aussagen, die einen Vergleich mit Quellen oder Diffs erfordern, gelten gemäß Vorgehen als erfüllt.",
+   "violations": [],
+   "tainted": false,
+   "raw": "9f62ea0ee20bd8e8c016bceb-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 1,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung B behauptet zusätzlich, dass große Importe etwa 40 % schneller sind. Für diese Zahl liegt in den vorgelegten Texten kein Beleg vor; Fassung A vermeidet diese unbelegte Aussage. | Kandidat zuerst: B, Fassung A behauptet zusätzlich, dass große Importe etwa 40 % schneller sind. Für diese konkrete Zahl liegt im Prüfmaterial kein Beleg vor; Fassung B vermeidet die unbelegte Aussage.",
+   "tainted": false,
+   "raw": [
+    "227aabfd00ca57fede2b7fab-gpt-6.1-terra-r1.json",
+    "e896a977a44ddca4a17ca2af-gpt-6.1-terra-r1.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 2,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung B ergänzt die Aussage, dass große Importe etwa 40 % schneller sind. Für diese Zahl liegt in den gegebenen Informationen kein Beleg vor; Fassung A vermeidet diese unbelegte Aussage. | Kandidat zuerst: B, Fassung B verzichtet auf die konkrete Angabe, dass große Importe etwa 40 % schneller seien. Für diese Zahl liefert das Prüfmaterial keinen Beleg; ansonsten sind die Fassungen inhaltlich gleich.",
+   "tainted": false,
+   "raw": [
+    "227aabfd00ca57fede2b7fab-gpt-6.1-terra-r2.json",
+    "e896a977a44ddca4a17ca2af-gpt-6.1-terra-r2.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 3,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung B ergänzt eine Leistungssteigerung von etwa 40 %, für die kein Beleg vorliegt. Fassung A enthält diese zusätzliche unbelegte Aussage nicht; ansonsten sind die Fassungen inhaltlich gleich. | Kandidat zuerst: B, Fassung A behauptet, große Importe seien etwa 40 % schneller. Für diese Zahl wird keine Quelle genannt; Fassung B verzichtet auf die unbelegte Angabe und ist ansonsten inhaltlich gleich.",
+   "tainted": false,
+   "raw": [
+    "227aabfd00ca57fede2b7fab-gpt-6.1-terra-r3.json",
+    "e896a977a44ddca4a17ca2af-gpt-6.1-terra-r3.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat übernimmt die nutzerrelevanten Änderungen und Migrationsschritte korrekt, ergänzt aber unbelegte Leistungs- und Qualitätsbehauptungen und verwendet stellenweise werbliche Sprache.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "„proven Postgres store“ behauptet eine Bewährtheit, die die Referenz nicht belegt. Auch die Aussage, große Importe seien durch `addBulk` etwa 40 % schneller, hat dort keine Entsprechung."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "„decisively“, „fully commits“, „proven“ und „unquestionably“ sind wertende beziehungsweise werbliche Formulierungen statt sachlicher Beschreibung."
+    }
+   ],
+   "tainted": false,
+   "raw": "8b229da60760815c87d4c53c-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Breaking Changes und ihre Migration sind anhand der Diffs korrekt benannt; auch der Major-Sprung auf 4.0.0 passt. Die Notes enthalten jedoch unbelegte Aussagen und wertende Sprache.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Aussage, `stalledIntervalMs` werde „silently ignored“, ist durch den Diff von PR #351 nicht belegt; er zeigt die Umbenennung, aber nicht das Verhalten bei Übergabe der alten Option."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "„proven Postgres store“ ist nicht belegt. PR #355 zeigt die Implementierung und den Export, aber keinen Nachweis für diese Bewertung."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Aussage, große Importe seien durch `addBulk` „about 40% faster“, ist nicht belegt. PR #360 nennt ausdrücklich keine Messung; der Diff zeigt nur die Bündelung in Blöcken von 500."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "„decisively“, „fully commits“, „proven“ und „unquestionably“ sind wertende beziehungsweise werbliche Formulierungen."
+    }
+   ],
+   "tainted": false,
+   "raw": "5b0e1bfde870d6f0a39344b0-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes enthalten werbende Formulierungen und verstoßen damit gegen den geforderten sachlichen Ton. Ob die technischen Aussagen und die Leistungszahl durch Quellen gedeckt sind, lässt sich allein anhand des Textes nicht prüfen.",
+   "violations": [
+    {
+     "criterion": "R7",
+     "evidence": "„decisively“, „fully commits“, „proven“ und „unquestionably“ sind werbende oder wertende Formulierungen."
+    }
+   ],
+   "tainted": false,
+   "raw": "801bb471e40473275933e717-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat übernimmt die wesentlichen Änderungen und Migrationsschritte korrekt, ergänzt aber unbelegte Qualitäts- und Leistungsbehauptungen und verwendet werbliche Sprache.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Aussagen „proven Postgres store“ und „about 40% faster“ sind durch die Referenz nicht belegt. Auch die Gewissheit „unquestionably“ ist nicht gedeckt."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Formulierungen wie „decisively“, „fully commits“, „proven“ und „unquestionably“ sind werblich statt sachlich."
+    }
+   ],
+   "tainted": false,
+   "raw": "8b229da60760815c87d4c53c-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes enthalten unbelegte Aussagen und wertende Formulierungen. Die Breaking Changes und ihre Migrationen sind ansonsten erkennbar aufgeführt; der Major-Sprung von 3.1.0 auf 4.0.0 passt zum Inhalt.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Bei #351 behaupten die Notes, es gebe keinen Alias und der alte Optionsname werde stillschweigend ignoriert. Der gezeigte Diff ersetzt den Namen im Interface und bei der Verwendung, belegt aber weder das Fehlen einer anderen Alias-Behandlung noch das Verhalten bei Übergabe des alten Namens."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Aussage, Cron-Jobs würden nach einer Zeitumstellung nicht mehr doppelt ausgelöst, ist als allgemeine Garantie formuliert. #357 zeigt die Verwendung von `cron.next` mit `tz: 'UTC'`, belegt aber nicht, dass alle Fälle von doppelten Ausführungen behoben sind."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die behauptete Beschleunigung großer Importe um etwa 40 % ist nicht belegt. In #360 steht ausdrücklich, dass die Wirkung noch nicht gemessen wurde."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Ankündigung, Details zu #358 würden in einem separaten Advisory folgen, ist durch die Quellen nicht belegt."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Formulierungen wie „decisively“, „fully commits“, „proven Postgres store“ und „unquestionably“ sind wertend beziehungsweise werblich statt sachlich."
+    }
+   ],
+   "tainted": false,
+   "raw": "5b0e1bfde870d6f0a39344b0-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Release Notes enthalten wertende und werbliche Formulierungen. Ob die technischen Aussagen und Zahlen durch die Änderungen belegt sind, lässt sich ohne Quellen nicht prüfen und wird daher als erfüllt behandelt.",
+   "violations": [
+    {
+     "criterion": "R7",
+     "evidence": "Die Formulierungen „decisively renames“, „fully commits“, „proven Postgres store“ und „unquestionably makes large imports about 40% faster“ sind werblich beziehungsweise übertrieben."
+    }
+   ],
+   "tainted": false,
+   "raw": "801bb471e40473275933e717-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat gibt die wesentlichen Änderungen und Migrationsschritte korrekt wieder, ergänzt aber unbelegte Behauptungen und werbliche Formulierungen.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "„proven Postgres store“ behauptet eine Bewährung, für die es in der Referenz keinen Beleg gibt. Die Angabe, große Importe seien „about 40% faster“, ist ebenfalls nicht belegt."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "„decisively“, „fully commits“ und „proven“ sind werblich; „unquestionably“ verstärkt die unbelegte Leistungsbehauptung."
+    }
+   ],
+   "tainted": false,
+   "raw": "8b229da60760815c87d4c53c-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes erfassen die Breaking Changes und wählen dafür mit 4.0.0 einen passenden Major-Sprung. Mehrere Aussagen gehen jedoch über die Diffs hinaus oder verwenden unsachliche Wortwahl.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Bei #351 behaupten die Notes, der alte Optionsname werde stillschweigend ignoriert. Der Diff zeigt die Umbenennung, aber weder die vollständige Optionsverarbeitung noch das Laufzeitverhalten bei unbekannten Optionen."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Einleitung bezeichnet den PostgresStore als „proven“. Die Quellen belegen keine Erprobung, die diese Aussage trägt."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes garantieren für #357, dass Cron-Jobs beim Zeitwechsel nicht mehr doppelt ausgeführt werden. Der Diff zeigt die Verwendung von `tz: 'UTC'`, belegt aber keine allgemeine Garantie für alle Zeitwechsel."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Für #360 behaupten die Notes eine Beschleunigung großer Importe um etwa 40 %. Der Diff zeigt nur die Aufteilung in Blöcke zu 500 Jobs; laut PR-Text wurde die Wirkung nicht gemessen."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Ankündigung, Details zu #358 würden in einer separaten Sicherheitsmitteilung folgen, ist durch die Quellen nicht belegt."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Formulierungen wie „decisively“, „fully commits“, „proven“ und „unquestionably“ sind werblich beziehungsweise überbetont statt sachlich."
+    }
+   ],
+   "tainted": false,
+   "raw": "5b0e1bfde870d6f0a39344b0-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Release Notes enthalten wertende und werbliche Formulierungen. Ob die technischen Aussagen und Migrationsschritte zutreffen, lässt sich ohne Quellen nicht prüfen und wird daher als erfüllt gewertet.",
+   "violations": [
+    {
+     "criterion": "R7",
+     "evidence": "Die Formulierungen „decisively renames“, „fully commits to ESM“, „proven Postgres store“ und „unquestionably makes large imports about 40% faster“ sind werblich statt sachlich."
+    }
+   ],
+   "tainted": false,
+   "raw": "801bb471e40473275933e717-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 1,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A ist besser: Fassung B ergänzt eine unbelegte Leistungssteigerung von etwa 40 % und verwendet werbliche Formulierungen wie „proven“ und „unquestionably“. Die übrigen sachlichen Aussagen sind gleich; ihre Quellenlage lässt sich anhand der vorliegenden Texte nicht prüfen. | Kandidat zuerst: B, Fassung B verzichtet auf die unbelegte Angabe, große Importe seien etwa 40 % schneller, und vermeidet die werblichen Formulierungen aus Fassung A. Die übrigen Aussagen sind gleich; ohne die zugrunde liegenden Diffs lässt sich ihre Belegung nicht prüfen.",
+   "tainted": false,
+   "raw": [
+    "d7ce07efdbbbfce342863d88-gpt-6.1-terra-r1.json",
+    "08494076459a95d7df7d9277-gpt-6.1-terra-r1.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 2,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A vermeidet die unbelegte Leistungsbehauptung von etwa 40 % in Fassung B und bleibt sachlich. Fassung B verwendet zusätzlich wertende Formulierungen wie „proven“ und „unquestionably“. | Kandidat zuerst: B, Fassung B verzichtet auf die unbelegte Aussage, dass große Importe etwa 40 % schneller seien. Außerdem ist ihr Ton sachlicher und vermeidet die Werbesprache aus Fassung A.",
+   "tainted": false,
+   "raw": [
+    "d7ce07efdbbbfce342863d88-gpt-6.1-terra-r2.json",
+    "08494076459a95d7df7d9277-gpt-6.1-terra-r2.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r3",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 3,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A ist sachlicher. Fassung B enthält werbliche Formulierungen und behauptet eine Leistungssteigerung von etwa 40 %, für die kein Beleg vorliegt. | Kandidat zuerst: B, Fassung B vermeidet die unbelegte Behauptung, dass große Importe etwa 40 % schneller seien. Außerdem ist sie sachlicher: Fassung A verwendet werbliche und übersteigerte Formulierungen wie „decisively“, „proven“ und „unquestionably“.",
+   "tainted": false,
+   "raw": [
+    "d7ce07efdbbbfce342863d88-gpt-6.1-terra-r3.json",
+    "08494076459a95d7df7d9277-gpt-6.1-terra-r3.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Beschreibung des Rate-Limiters widerspricht der Referenz in einem wesentlichen Punkt. Die übrigen Angaben stimmen überein.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Kandidat behauptet, das Limit werde von allen Workern einer Queue gemeinsam genutzt. Laut Referenz hat jede Worker-Instanz ein eigenes Limit."
+    }
+   ],
+   "tainted": false,
+   "raw": "3fbb27c3eab60bf45679674b-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes geben die endgültigen Änderungen und den Migrationsnamen wieder; Version 4.1.0 passt zu Feature und Deprecation. Die Aussage zur gemeinsamen Nutzung des Limits widerspricht jedoch dem Diff.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten, das Limit werde von allen Workern einer Queue geteilt. Der Diff von PR #376 legt dagegen ausdrücklich einen eigenen Token-Bucket pro Worker-Instanz an, der nicht geteilt wird."
+    }
+   ],
+   "tainted": false,
+   "raw": "6a00b26d84a788ca9492b1d2-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 1,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Einträge beschreiben konkrete Änderungen und nennen beim veralteten Parameter einen Migrationsschritt. Ohne Quellen lassen sich die technischen Aussagen und die Versionsnummer nicht weiter prüfen; aus dem Text selbst ergibt sich kein Verstoß.",
+   "violations": [],
+   "tainted": false,
+   "raw": "3f93bbd83ce98c7406bc2f4f-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat beschreibt den Geltungsbereich des Rate-Limits falsch. Die übrigen Angaben stimmen mit der Referenz überein.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Kandidat behauptet, dass das Limit von allen Workern einer Queue geteilt wird. Laut Referenz hat jede Worker-Instanz ein eigenes Limit."
+    }
+   ],
+   "tainted": false,
+   "raw": "3fbb27c3eab60bf45679674b-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die endgültige Limiter-Option und die Migration von `timeout` sind korrekt benannt. Die Aussagen zum Geltungsbereich und zur garantierten Begrenzung des Limiters sind jedoch durch den Diff widerlegt beziehungsweise nicht belegt.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten, das Limit werde von allen Workern einer Queue gemeinsam genutzt. Der Diff von #376 legt dagegen ausdrücklich einen eigenen Token-Bucket pro Worker-Instanz an, der nicht geteilt wird."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes garantieren höchstens `max` Jobs pro `perMs` Millisekunden. #376 zeigt die Verwendung eines Token-Buckets, aber weder dessen Implementierung noch eine solche Garantie für jedes Zeitintervall."
+    }
+   ],
+   "tainted": false,
+   "raw": "6a00b26d84a788ca9492b1d2-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 2,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes beschreiben die Änderungen und den Migrationsschritt konkret. Aus dem Text selbst ergibt sich kein Verstoß; die Versionsnummer ist mit einem Feature und einer Deprecation vereinbar.",
+   "violations": [],
+   "tainted": false,
+   "raw": "3f93bbd83ce98c7406bc2f4f-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat gibt den Geltungsbereich des Rate-Limits falsch wieder. Die übrigen Angaben stimmen mit der Referenz überein.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Kandidat behauptet, das Limit werde von allen Workern einer Queue geteilt. Laut Referenz hat jede Worker-Instanz ihr eigenes Limit."
+    }
+   ],
+   "tainted": false,
+   "raw": "3fbb27c3eab60bf45679674b-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die übrigen Angaben zum erneut eingeführten Rate-Limiter und zur Deprecation stimmen mit den Diffs überein. Version 4.1.0 passt zum neuen Feature und zur Deprecation.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten, das Limit werde von allen Workern einer Queue geteilt. Der Diff von PR #376 erstellt dagegen einen Token-Bucket pro Worker-Instanz und bezeichnet ihn ausdrücklich als nicht geteilt."
+    }
+   ],
+   "tainted": false,
+   "raw": "6a00b26d84a788ca9492b1d2-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 3,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes beschreiben die Änderungen und die Migration konkret. Aus dem Text allein ergeben sich keine Verstöße; die Übereinstimmung mit den Quellen lässt sich nicht prüfen.",
+   "violations": [],
+   "tainted": false,
+   "raw": "3f93bbd83ce98c7406bc2f4f-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 1,
+   "pass": true,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: equal, Die Fassungen unterscheiden sich nur darin, ob das Rate-Limit pro Worker-Instanz oder für alle Worker einer Queue gilt. Ohne den zugehörigen Diff lässt sich nicht beurteilen, welche Aussage belegt ist; nach den verfügbaren Informationen sind sie daher gleichwertig. | Kandidat zuerst: equal, Die Fassungen unterscheiden sich nur darin, ob das Limit pro Queue geteilt wird oder für jede Worker-Instanz separat gilt. Ohne den Diff oder andere Quellen lässt sich nicht beurteilen, welche Aussage zutrifft; die Fassungen sind daher anhand des vorliegenden Materials gleichwertig.",
+   "tainted": false,
+   "raw": [
+    "75850f3ac00572dbce84ca42-gpt-6.1-terra-r1.json",
+    "89ed8666ab71219fa44a159e-gpt-6.1-terra-r1.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 2,
+   "pass": true,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: equal, Die Fassungen unterscheiden sich nur darin, ob das Limit pro Worker oder gemeinsam für alle Worker einer Queue gilt. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, welche Aussage belegt ist. | Kandidat zuerst: equal, Die Fassungen unterscheiden sich nur darin, ob das Limit pro Queue geteilt wird oder für jede Worker-Instanz separat gilt. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, welche Aussage belegt ist.",
+   "tainted": false,
+   "raw": [
+    "75850f3ac00572dbce84ca42-gpt-6.1-terra-r2.json",
+    "89ed8666ab71219fa44a159e-gpt-6.1-terra-r2.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 3,
+   "pass": true,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: equal, Die Fassungen unterscheiden sich nur darin, ob das Limit pro Worker-Instanz oder für alle Worker einer Queue gilt. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, welche Aussage belegt ist; nach den verfügbaren Informationen sind die Fassungen gleichwertig. | Kandidat zuerst: equal, Die Fassungen unterscheiden sich nur darin, ob das Limit für alle Worker einer Queue gemeinsam oder pro Worker-Instanz gilt. Da keine Diffs oder anderen Quellen vorliegen, lässt sich nicht beurteilen, welche Aussage zutrifft.",
+   "tainted": false,
+   "raw": [
+    "75850f3ac00572dbce84ca42-gpt-6.1-terra-r3.json",
+    "89ed8666ab71219fa44a159e-gpt-6.1-terra-r3.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat beschreibt den Geltungsbereich des Limits falsch und ergänzt unbelegte Zusicherungen. Die übrigen Angaben einschließlich Version und Migration stimmen mit der Referenz überein.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Kandidat behauptet, das Limit werde ausnahmslos von allen Workern einer Queue geteilt. Laut Referenz hat jede Worker-Instanz ihr eigenes Limit. Auch „proven“ und „reliably“ sind durch die Referenz nicht belegt."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "„proven rate limiter“ und die Zusicherung „reliably … without exception“ sind unsachliche Werbe- beziehungsweise Garantiesprache."
+    }
+   ],
+   "tainted": false,
+   "raw": "a38ccc10c57a1dec278022b7-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Versionsnummer 4.1.0 passt zu Feature und Deprecation. Die Notes geben die endgültigen Optionsnamen und die Migration korrekt wieder, enthalten aber unbelegte und dem Diff widersprechende Aussagen zum Rate Limiter.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Einleitung nennt den Rate Limiter „proven“. Die Quellen enthalten keinen Beleg für diese Eigenschaft."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten, das Limit werde zuverlässig und ausnahmslos von allen Workern einer Queue geteilt. Der Diff von #376 legt dagegen ausdrücklich einen eigenen, nicht geteilten Token Bucket pro Worker-Instanz an."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Die Formulierungen „proven rate limiter“ und „reliably … without exception“ sind werblich beziehungsweise übersteigernd."
+    }
+   ],
+   "tainted": false,
+   "raw": "f5a3641599f8a6ac7e64faa8-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 1,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Aus dem Text selbst ergeben sich keine überprüfbaren Verstöße. Ob die Aussagen und der Migrationsschritt durch die Quellen gedeckt sind, lässt sich ohne diese nicht beurteilen und gilt daher als erfüllt.",
+   "violations": [],
+   "tainted": false,
+   "raw": "67bb53ffc83a3c524261532a-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat beschreibt den Geltungsbereich des Limits falsch und ergänzt unbelegte, übersteigerte Aussagen. Die übrigen Angaben und die Version entsprechen der Referenz.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Kandidat behauptet, das Limit werde ausnahmslos von allen Workern einer Queue geteilt. Laut Referenz hat jede Worker-Instanz ihr eigenes Limit. Auch „proven“ ist durch die Referenz nicht belegt."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "„proven“ und „reliably … without exception“ sind werbende beziehungsweise übersteigerte Formulierungen."
+    },
+    {
+     "criterion": "R8",
+     "evidence": "Die falsche Aussage zum geteilten Limit vermittelt Nutzern ein unzutreffendes Bild davon, wie die Begrenzung wirkt."
+    }
+   ],
+   "tainted": false,
+   "raw": "a38ccc10c57a1dec278022b7-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes beschreiben den Geltungsbereich des Rate Limits entgegen dem Diff und enthalten eine unbelegte Aussage über seine Bewährung. Die Versionsnummer 4.1.0 und die Migration zu `timeoutMs` passen zu den gezeigten Änderungen.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten, das Limit werde zuverlässig und ausnahmslos von allen Workern einer Queue geteilt. Der Diff von #376 legt dagegen ausdrücklich einen eigenen, nicht geteilten Token Bucket pro Worker-Instanz an."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Einleitung bezeichnet den Rate Limiter als „proven“. Die Quellen enthalten keinen Beleg für diese Bewährung."
+    }
+   ],
+   "tainted": false,
+   "raw": "f5a3641599f8a6ac7e64faa8-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 2,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Einträge beschreiben konkrete Änderungen und nennen einen Migrationsschritt. Ob die Zusicherungen und Optionsnamen durch den Code gedeckt sind, lässt sich ohne Quellen nicht prüfen.",
+   "violations": [],
+   "tainted": false,
+   "raw": "67bb53ffc83a3c524261532a-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat widerspricht der Referenz bei der Wirkung des Rate-Limits und ergänzt unbelegte, übersteigerte Aussagen. Die Deprecation, die Migration und die Versionsnummer stimmen überein.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Kandidat behauptet, das Limit werde ausnahmslos von allen Workern einer Queue gemeinsam genutzt. Laut Referenz hat jede Worker-Instanz ihr eigenes Limit. Auch „proven“ ist durch die Referenz nicht belegt."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "„proven“ und „reliably … without exception“ verwenden werbliche beziehungsweise übersteigerte Formulierungen."
+    },
+    {
+     "criterion": "R8",
+     "evidence": "Die falsche Aussage zur gemeinsamen Nutzung des Limits vermittelt ein unbrauchbares Bild davon, wie die Begrenzung für mehrere Worker wirkt."
+    }
+   ],
+   "tainted": false,
+   "raw": "a38ccc10c57a1dec278022b7-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes enthalten unbelegte Eigenschaften und eine Aussage, die dem Diff widerspricht. Die Versionsnummer 4.1.0 passt zum Feature und zur Deprecation.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Einleitung bezeichnet den Rate-Limiter als „proven“. Die Quellen belegen diese Eigenschaft nicht; der Diff von #376 zeigt lediglich seine Implementierung."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten, das Limit werde „reliably shared across all workers of a queue, without exception“. Der Diff von #376 legt dagegen ausdrücklich einen eigenen, nicht geteilten Token-Bucket pro Worker-Instanz an."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes garantieren höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff von #376 zeigt zwar die Verwendung eines Token-Buckets, belegt aber keine solche strikte Obergrenze für jedes Zeitfenster."
+    }
+   ],
+   "tainted": false,
+   "raw": "f5a3641599f8a6ac7e64faa8-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 3,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Einträge beschreiben konkrete Änderungen und nennen für die veraltete Option einen Migrationsschritt. Ob die technischen Aussagen und Optionsnamen durch die Quellen gedeckt sind, lässt sich anhand der Notes allein nicht prüfen.",
+   "violations": [],
+   "tainted": false,
+   "raw": "67bb53ffc83a3c524261532a-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 1,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung B behauptet zusätzlich eine ausnahmslos zuverlässige, gemeinsam genutzte Begrenzung und bezeichnet sie als erprobt; dafür liegen keine Belege vor. Fassung A enthält ebenfalls eine unbelegte Aussage zur Begrenzung pro Worker-Instanz, verzichtet aber auf die weiteren unbelegten Garantien und die Werbesprache. | Kandidat zuerst: B, B vermeidet die unbelegte Garantie aus A, dass das Limit ausnahmslos über alle Worker einer Queue hinweg geteilt wird. Welche Aussage zur Geltung des Limits zutrifft, lässt sich ohne die genannten Quellen oder Diffs allerdings nicht prüfen.",
+   "tainted": false,
+   "raw": [
+    "89054baaf82630a9006b92d9-gpt-6.1-terra-r1.json",
+    "cdf9bb0827aceef7874a3f0c-gpt-6.1-terra-r1.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 2,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung B enthält mit „proven“, „reliably“ und „without exception“ unbelegte Wertungen und Garantien. Ob die Begrenzung pro Worker oder über alle Worker einer Queue gilt, lässt sich ohne Quellen nicht beurteilen; Fassung A vermeidet jedoch die zusätzlichen Behauptungen und die Werbesprache. | Kandidat zuerst: B, Fassung A verwendet mit „proven“ Werbesprache und behauptet eine uneingeschränkte, gemeinsam genutzte Begrenzung. Fassung B formuliert sachlich; welche Aussage zur Begrenzung zutrifft, lässt sich ohne Diff nicht beurteilen.",
+   "tainted": false,
+   "raw": [
+    "89054baaf82630a9006b92d9-gpt-6.1-terra-r2.json",
+    "cdf9bb0827aceef7874a3f0c-gpt-6.1-terra-r2.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r4",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 3,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung B verwendet mit „proven“, „reliably“ und „without exception“ werbliche Formulierungen und macht eine aus dem vorliegenden Material nicht belegbare Garantie zur gemeinsamen Begrenzung. Auch die abweichende Aussage in A, dass jede Worker-Instanz eine eigene Begrenzung hat, lässt sich ohne Quellen nicht überprüfen. | Kandidat zuerst: B, Fassung B beschreibt den Limiter sachlich, während Fassung A unbelegte Garantien zur gemeinsamen und ausnahmslosen Durchsetzung sowie werbliche Formulierungen enthält. Die übrigen Aussagen sind in beiden Fassungen gleich; ob sie durch den Diff gedeckt sind, lässt sich ohne Quellen nicht beurteilen.",
+   "tainted": false,
+   "raw": [
+    "89054baaf82630a9006b92d9-gpt-6.1-terra-r3.json",
+    "cdf9bb0827aceef7874a3f0c-gpt-6.1-terra-r3.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Aussage zum Standardverhalten der Retry-Strategie widerspricht der Referenz. Die übrigen Einträge und die Versionsnummer stimmen überein.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Kandidat behauptet, die Jitter-Strategie sei für neue Queues der Standard. Laut Referenz ist sie opt-in und muss ausdrücklich aktiviert werden."
+    }
+   ],
+   "tainted": false,
+   "raw": "f8d359703a484d95f7972e09-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes enthalten eine unbelegte Aussage zum Jitter-Default und eine nicht garantierte Wirkung. Außerdem erhält der angegebene Migrationsschritt für `worker.pause(false)` das bisherige Verhalten nicht.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten, die Jitter-Strategie sei „now the default for new queues“. Der Diff von PR #395 fügt sie nur für `backoff.type === 'jitter'` hinzu; eine Änderung des Defaults ist nicht belegt. Auch die Aussage, die Retries kämen dadurch nicht alle gleichzeitig an, ist als Garantie nicht gedeckt: Die zufällig berechneten und abgerundeten Verzögerungen können gleich sein."
+    },
+    {
+     "criterion": "R3",
+     "evidence": "Die Migration in den Notes empfiehlt pauschal `worker.pause({ drain: true })`. Laut PR #399 wird der bisherige boolesche Wert direkt auf `drain` übertragen; für `worker.pause(false)` muss die Migration daher `worker.pause({ drain: false })` verwenden, um das Verhalten beizubehalten."
+    }
+   ],
+   "tainted": false,
+   "raw": "15c17d15bc39e91cf116b98e-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Änderung des Standardverhaltens für neue Queues ist nach R1 als Breaking Change einzuordnen. Weitere Verstöße lassen sich aus dem Text allein nicht feststellen.",
+   "violations": [
+    {
+     "criterion": "R1",
+     "evidence": "Die neue Retry-Strategie ist laut Features-Eintrag „now the default for new queues“, steht aber nicht unter „Breaking Changes“."
+    }
+   ],
+   "tainted": false,
+   "raw": "6e07eb993bffcf211ddf4c37-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat gibt den Standard der neuen Retry-Strategie falsch wieder. Die übrigen Angaben stimmen mit der Referenz überein.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Kandidat behauptet, die Jitter-Strategie sei für neue Queues der Standard. Laut Referenz ist sie optional und muss ausdrücklich aktiviert werden."
+    }
+   ],
+   "tainted": false,
+   "raw": "f8d359703a484d95f7972e09-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Breaking Changes und die Major-Version sind korrekt ausgewiesen. Die Notes enthalten jedoch zwei nicht belegte Aussagen zur Jitter-Strategie und einen unvollständigen Migrationsschritt für `worker.pause()`.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten, `jitter` sei „the default for new queues“. Der Diff zu #395 ergänzt lediglich einen Zweig für `backoff.type === 'jitter'`; eine Änderung des Defaults ist nicht belegt."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Aussage, Jitter sorge dafür, dass Wiederholungen „do not all arrive at once“, ist als Garantie nicht belegt. Der Zufallswert in #395 kann für mehrere Wiederholungen denselben Delay ergeben."
+    },
+    {
+     "criterion": "R3",
+     "evidence": "Die Migration für den veralteten booleschen Aufruf von `worker.pause()` nennt nur `worker.pause({ drain: true })`. Für den bisherigen Aufruf `worker.pause(false)` wäre `worker.pause({ drain: false })` nötig, um das Verhalten beizubehalten; #399 übernimmt den jeweiligen booleschen Wert in `drain`."
+    }
+   ],
+   "tainted": false,
+   "raw": "15c17d15bc39e91cf116b98e-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes beschreiben eine Änderung des Standardverhaltens, die nach R1 als Breaking Change einzuordnen ist. Weitere Verstöße lassen sich aus dem Text allein nicht belegen.",
+   "violations": [
+    {
+     "criterion": "R1",
+     "evidence": "Die neue Retry-Strategie `backoff: { type: 'jitter', baseMs }` ist laut Notes jetzt der Standard für neue Queues, steht aber unter „Features“ statt unter „Breaking Changes“."
+    }
+   ],
+   "tainted": false,
+   "raw": "6e07eb993bffcf211ddf4c37-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat gibt den Aktivierungszustand der neuen Retry-Strategie falsch wieder. Die übrigen Angaben stimmen mit der Referenz überein.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Kandidat behauptet, die Jitter-Retry-Strategie sei für neue Queues der Standard. Laut Referenz ist sie optional und muss ausdrücklich aktiviert werden."
+    }
+   ],
+   "tainted": false,
+   "raw": "f8d359703a484d95f7972e09-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die meisten nutzerrelevanten Änderungen und die erforderlichen Breaking Changes sind erfasst. Die Aussagen zu Jitter gehen jedoch über den Diff hinaus, und die Pause-Migration deckt den bisherigen Wert `false` nicht korrekt ab.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten, `jitter` sei der neue Standard für Queues. Der Diff zu PR #395 ergänzt nur einen Zweig für `backoff.type === 'jitter'`; eine Änderung des Standardwerts ist nicht belegt."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten, durch Jitter träfen Retries nicht mehr alle gleichzeitig ein. PR #395 berechnet zwar zufällige Verzögerungen, garantiert aber keine unterschiedlichen Werte; mehrere Retries können denselben Wert erhalten."
+    },
+    {
+     "criterion": "R3",
+     "evidence": "Die Migration für `worker.pause(boolean)` nennt ausschließlich `worker.pause({ drain: true })`. Für bisheriges `worker.pause(false)` muss `worker.pause({ drain: false })` verwendet oder das Argument weggelassen werden, um das bisherige Verhalten zu erhalten."
+    }
+   ],
+   "tainted": false,
+   "raw": "15c17d15bc39e91cf116b98e-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes nennen eine Änderung des Standardverhaltens, ordnen sie aber nicht als Breaking Change ein. Die übrigen Kriterien lassen sich aus dem Text allein nicht als verletzt erkennen.",
+   "violations": [
+    {
+     "criterion": "R1",
+     "evidence": "Die neue Retry-Strategie ist „now the default for new queues“, steht aber unter „Features“ statt unter „Breaking Changes“."
+    }
+   ],
+   "tainted": false,
+   "raw": "6e07eb993bffcf211ddf4c37-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 1,
+   "pass": true,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: equal, Die Fassungen unterscheiden sich nur darin, ob die Jitter-Strategie optional oder für neue Queues voreingestellt ist. Ohne den zugrunde liegenden Diff lässt sich nicht beurteilen, welche Aussage zutrifft und ob eine Änderung des Defaults als Breaking Change aufgeführt werden müsste. | Kandidat zuerst: B, Fassung A nennt eine Änderung des Standardverhaltens, ordnet sie aber unter „Features“ statt unter „Breaking Changes“ ein. Fassung B beschreibt die Strategie als optional und hat diesen Widerspruch nicht; welche Aussage zum tatsächlichen Verhalten zutrifft, lässt sich ohne Diff nicht prüfen.",
+   "tainted": false,
+   "raw": [
+    "ad09bcbc0a5d9fae87cb38ee-gpt-6.1-terra-r1.json",
+    "e3a9b71b433895cae515b0c4-gpt-6.1-terra-r1.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 2,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung B bezeichnet die neue Retry-Strategie als Standard, ordnet diese Änderung aber nicht unter „Breaking Changes“ ein. Fassung A beschreibt sie dagegen als optional; welche Aussage dem Diff entspricht, lässt sich ohne Quellen nicht beurteilen. | Kandidat zuerst: B, Fassung A bezeichnet die Jitter-Strategie als neuen Standard, führt diese Änderung aber nicht unter „Breaking Changes“ auf. Fassung B beschreibt sie als Opt-in und vermeidet damit diesen Widerspruch; welche Beschreibung dem tatsächlichen Diff entspricht, lässt sich ohne Quellen nicht beurteilen.",
+   "tainted": false,
+   "raw": [
+    "ad09bcbc0a5d9fae87cb38ee-gpt-6.1-terra-r2.json",
+    "e3a9b71b433895cae515b0c4-gpt-6.1-terra-r2.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 3,
+   "pass": true,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A ist besser, weil sie die Jitter-Strategie als optional beschreibt. Fassung B behauptet dagegen eine Änderung des Standardverhaltens, führt diese aber nicht unter „Breaking Changes“ auf; welche Aussage tatsächlich durch den Diff gedeckt ist, lässt sich ohne Quellen nicht beurteilen. | Kandidat zuerst: equal, Die Fassungen unterscheiden sich nur darin, ob die neue Retry-Strategie Standard oder opt-in ist. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, welche Aussage zutrifft und ob eine Breaking Change vorliegt.",
+   "tainted": false,
+   "raw": [
+    "ad09bcbc0a5d9fae87cb38ee-gpt-6.1-terra-r3.json",
+    "e3a9b71b433895cae515b0c4-gpt-6.1-terra-r3.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Aussage zum Standardverhalten widerspricht der Referenz; zudem enthält der Kandidat eine unbelegte Eigenschaft und übersteigerte Formulierungen.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Kandidat bezeichnet die Jitter-Strategie als „proven“ und als Standard für neue Queues. Für „proven“ gibt es keinen Beleg; laut Referenz ist die Strategie optional und kein Standard."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind unsachlich und werblich."
+    }
+   ],
+   "tainted": false,
+   "raw": "9b21a8b55bce6943ae027ff3-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes erfassen die Breaking Changes und die wesentlichen nutzerrelevanten Änderungen; der Major-Sprung auf 5.0.0 passt dazu. Einzelne Aussagen gehen jedoch über die Diffs hinaus, und die Pause-Migration erhält nicht für jeden bisherigen Aufruf das Verhalten.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes bezeichnen Jitter als Standard für neue Queues. Der Diff zu #395 ergänzt lediglich einen Zweig für `backoff.type === 'jitter'`; eine Änderung des Standards ist nicht belegt."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Aussage, Jitter sorge dafür, dass Retries nicht alle gleichzeitig eintreffen, ist als Garantie nicht belegt: #395 berechnet zufällige ganzzahlige Verzögerungen, die auch übereinstimmen können."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Einleitung nennt die Jitter-Strategie „proven“ und behauptet, der Graceful Shutdown sei „conclusively“ behoben. Die Diffs belegen weder diese Bewährung noch eine abschließende Behebung aller Shutdown-Probleme."
+    },
+    {
+     "criterion": "R3",
+     "evidence": "Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut #399 entspricht `pause(false)` jedoch `pause({ drain: false })`; die Empfehlung verändert für diesen Aufruf das Verhalten."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Formulierungen wie „proven jitter retry strategy“, „conclusively fixes“ und „without question“ sind werblich beziehungsweise unsachlich."
+    }
+   ],
+   "tainted": false,
+   "raw": "3a7c62917c149f8bc7a8f88a-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes nennen eine Änderung des Standardverhaltens außerhalb der Breaking Changes und verwenden wertende, übersteigerte Formulierungen. Ob die einzelnen technischen Aussagen und Migrationsschritte durch die Quellen gedeckt sind, lässt sich anhand des Textes allein nicht prüfen.",
+   "violations": [
+    {
+     "criterion": "R1",
+     "evidence": "Die neue Retry-Strategie ist laut Features-Eintrag „now the default for new queues“, steht aber nicht unter „Breaking Changes“."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind nicht sachlich."
+    }
+   ],
+   "tainted": false,
+   "raw": "2b81fea0aabcaf7c7947590f-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat gibt den Aktivierungsmodus der Jitter-Strategie falsch wieder und enthält unbelegte sowie unsachliche Formulierungen. Die übrigen nutzerrelevanten Änderungen und Migrationsschritte entsprechen der Referenz.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Kandidat behauptet, Jitter sei der Standard für neue Queues. Laut Referenz ist die Strategie optional und muss ausdrücklich aktiviert werden. Auch „proven“ ist durch die Referenz nicht belegt."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind unsachlich beziehungsweise werbend."
+    }
+   ],
+   "tainted": false,
+   "raw": "9b21a8b55bce6943ae027ff3-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die wesentlichen Breaking Changes sind aufgeführt und der Major-Sprung auf 5.0.0 passt zu ihnen. Einzelne Aussagen gehen jedoch über die Diffs hinaus, und ein Migrationsschritt erhält nicht für alle bisherigen Aufrufe das Verhalten.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten, `jitter` sei der Standard für neue Queues. Der Diff zu #395 ergänzt lediglich einen Zweig für `backoff.type === 'jitter'`; eine Änderung des Standards ist nicht belegt."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Aussage, Jitter sorge dafür, dass Wiederholungen nicht alle gleichzeitig eintreffen, ist zu weitgehend. #395 berechnet zufällige Verzögerungen mit `Math.floor(...)`; gleiche Verzögerungen bleiben möglich. Auch die Beschreibung als „proven“ ist durch den Diff nicht belegt."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Einleitung behauptet, der geregelte Shutdown sei „conclusively“ behoben. #397 zeigt, dass `worker.close()` auf den Abschluss aktiver Jobs oder den Timeout wartet; eine umfassende Garantie für den Shutdown belegt der Diff nicht."
+    },
+    {
+     "criterion": "R3",
+     "evidence": "Die Migration für `worker.pause()` empfiehlt ausschließlich `worker.pause({ drain: true })`. Wer bisher `worker.pause(false)` verwendet, muss für dasselbe Verhalten `worker.pause({ drain: false })` verwenden."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Die Formulierungen „proven jitter retry strategy“, „conclusively fixes“ und „without question“ sind wertend beziehungsweise werblich statt sachlich."
+    }
+   ],
+   "tainted": false,
+   "raw": "3a7c62917c149f8bc7a8f88a-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes ordnen eine ausdrücklich genannte Änderung des Standardverhaltens nicht als Breaking Change ein und verwenden übersteigerte Formulierungen. Aussagen, die einen Vergleich mit Quellen erfordern, lassen sich anhand des Textes nicht überprüfen.",
+   "violations": [
+    {
+     "criterion": "R1",
+     "evidence": "Die neue Retry-Strategie wird unter „Features“ als neuer Standard für neue Queues bezeichnet. Eine Änderung des Defaults gehört laut Rubrik unter „Breaking Changes“."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind nicht sachlich."
+    }
+   ],
+   "tainted": false,
+   "raw": "2b81fea0aabcaf7c7947590f-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat gibt den Aktivierungsmodus der Jitter-Strategie falsch wieder und enthält unbelegte beziehungsweise werbliche Formulierungen. Die übrigen Änderungen und Migrationsschritte entsprechen der Referenz.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Jitter-Strategie wird als Standard für neue Queues bezeichnet; laut Referenz muss sie ausdrücklich aktiviert werden. Auch „proven“ ist durch die Referenz nicht belegt."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind wertend und unsachlich."
+    }
+   ],
+   "tainted": false,
+   "raw": "9b21a8b55bce6943ae027ff3-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes enthalten unbelegte Aussagen zur Retry-Strategie und eine unvollständige Migrationsanweisung für `worker.pause()`. Außerdem widersprechen mehrere Formulierungen dem geforderten sachlichen Ton.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten, `jitter` sei der Standard für neue Queues. Der Diff von #395 ergänzt nur einen Zweig für `backoff.type === 'jitter'` und ändert keinen Standardwert."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Aussage, zufällige Verzögerungen sorgten dafür, dass Retries nicht alle gleichzeitig eintreffen, ist nicht garantiert: #395 berechnet ganzzahlige Zufallswerte, die für mehrere Retries gleich ausfallen können. Auch die Bezeichnung „proven“ ist nicht belegt."
+    },
+    {
+     "criterion": "R3",
+     "evidence": "Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut #399 entspricht `pause(false)` jedoch `pause({ drain: false })`; der vorgeschlagene Aufruf erhält dieses Verhalten nicht."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind nicht sachlich."
+    }
+   ],
+   "tainted": false,
+   "raw": "3a7c62917c149f8bc7a8f88a-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes ordnen eine Änderung des Defaults nicht als Breaking Change ein und enthalten werbliche beziehungsweise übersteigerte Formulierungen. Aussagen, die nur anhand von Quellen oder Diffs überprüfbar wären, wurden gemäß Vorgabe nicht beanstandet.",
+   "violations": [
+    {
+     "criterion": "R1",
+     "evidence": "Die Änderung des Defaults für neue Queues auf die Retry-Strategie „jitter“ steht unter „Features“ statt unter „Breaking Changes“."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Formulierungen wie „proven jitter retry strategy“, „conclusively fixes“ und „without question“ sind nicht sachlich."
+    }
+   ],
+   "tainted": false,
+   "raw": "2b81fea0aabcaf7c7947590f-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 1,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A ist sachlicher; Fassung B verwendet unbelegte Wertungen wie „proven“ und „conclusively“. Zudem behauptet B, die Jitter-Strategie sei der neue Standard, während A sie als optional beschreibt; ohne Quellen lässt sich diese Abweichung nicht auflösen. | Kandidat zuerst: B, Fassung B ist sachlicher; Fassung A verwendet unbegründet verstärkende Formulierungen wie „proven“ und „conclusively“. Ob die Jitter-Strategie standardmäßig aktiv oder optional ist, lässt sich ohne Diff nicht prüfen; wäre sie standardmäßig aktiv, fehlte in A zudem die Einordnung als Breaking Change.",
+   "tainted": false,
+   "raw": [
+    "a7f2934623a4e989339f8e53-gpt-6.1-terra-r1.json",
+    "07dee5a3aa091917e8a26f7e-gpt-6.1-terra-r1.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 2,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A ist sachlicher; Fassung B verwendet wertende und unbelegte Formulierungen wie „proven“ und „without question“. Ob Jitter standardmäßig aktiviert oder opt-in ist, lässt sich ohne die Diffs nicht beurteilen. | Kandidat zuerst: B, Fassung B ist sachlicher; Fassung A enthält mehrere unbegründet verstärkende Formulierungen. Ob die Jitter-Strategie standardmäßig oder nur optional aktiviert ist, lässt sich ohne Diff oder weitere Quellen nicht entscheiden.",
+   "tainted": false,
+   "raw": [
+    "a7f2934623a4e989339f8e53-gpt-6.1-terra-r2.json",
+    "07dee5a3aa091917e8a26f7e-gpt-6.1-terra-r2.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r5",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 3,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A ist sachlicher; Fassung B verwendet unbelegte Wertungen wie „proven“ und „conclusively“. Die Fassungen widersprechen sich zudem beim Jitter-Standard; ohne Diff lässt sich nicht feststellen, welche dieser Aussagen zutrifft. | Kandidat zuerst: B, Fassung B ist sachlicher; Fassung A verwendet unbelegte Verstärkungen und wertende Formulierungen wie „definitively“ und „proven“. Ob Jitter standardmäßig aktiviert oder optional ist, lässt sich ohne Diff nicht beurteilen.",
+   "tainted": false,
+   "raw": [
+    "a7f2934623a4e989339f8e53-gpt-6.1-terra-r3.json",
+    "07dee5a3aa091917e8a26f7e-gpt-6.1-terra-r3.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat vermittelt die übrigen Angaben wie die Referenz, ergänzt aber eine nicht belegte Aussage zum Verhalten nach einem Lock-Verlust.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Kandidat behauptet zusätzlich, dass der Job in die Failed-Menge verschoben wird. Dafür gibt es in der Referenz keine Entsprechung."
+    }
+   ],
+   "tainted": false,
+   "raw": "8da69268d86a533efdede04d-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes enthalten eine unbelegte Aussage zum Verhalten nach einem Lock-Verlust. Außerdem fehlt die inkompatible Änderung an PostgreSQL-Schema-Namen als Breaking Change, und die Versionsnummer berücksichtigt sie nicht.",
+   "violations": [
+    {
+     "criterion": "R1",
+     "evidence": "PR #414 ändert den Konstruktor so, dass Schema-Namen außerhalb von `/^[a-z_][a-z0-9_]*$/` einen Fehler auslösen. Bestehende Konfigurationen mit solchen Namen müssen angepasst werden; ein Eintrag unter „Breaking Changes“ fehlt."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten zu PR #413, der Job werde in die fehlgeschlagene Menge verschoben. Der Diff emittiert lediglich `lockLost` und kehrt vor `ack` zurück; ein Verschieben ist nicht belegt."
+    },
+    {
+     "criterion": "R9",
+     "evidence": "Die letzte Version ist 5.0.0. Die inkompatible Einschränkung der Schema-Namen in PR #414 verlangt einen Major-Sprung; 5.0.1 reicht nach R9 nicht aus."
+    }
+   ],
+   "tainted": false,
+   "raw": "9edc0a12932e8d88763a7d22-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 1,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes nennen konkrete Änderungen und eine Upgrade-Empfehlung, ohne Details zum Sicherheitsproblem offenzulegen. Aus dem Text selbst ergibt sich kein Verstoß; die Übereinstimmung mit den Quellen lässt sich nicht prüfen.",
+   "violations": [],
+   "tainted": false,
+   "raw": "08c54040fd4463c91b49cd93-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat ergänzt eine nicht belegte Aussage über den Zustand des Jobs. Die übrigen Angaben entsprechen der Referenz.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Kandidat behauptet zusätzlich, dass der Job nach einem Lock-Verlust in die Failed-Menge verschoben wird („moves the job to the failed set“). Dafür gibt es in der Referenz keine Entsprechung."
+    }
+   ],
+   "tainted": false,
+   "raw": "8da69268d86a533efdede04d-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes enthalten eine unbelegte Aussage und berücksichtigen die inkompatible Änderung an der PostgreSQL-Konfiguration weder als Breaking Change noch bei der Versionswahl.",
+   "violations": [
+    {
+     "criterion": "R1",
+     "evidence": "PR #414 lässt `PostgresStore` nun Schemanamen zurückweisen, die nicht `/^[a-z_][a-z0-9_]*$/` entsprechen. Nutzer mit bisher akzeptierten Schemanamen müssen ihre Konfiguration anpassen; die Änderung fehlt unter „Breaking Changes“."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes zu #413 behaupten, der Job werde in die Failed-Menge verschoben. Der Diff belegt nur, dass `lockLost` ausgelöst und die Methode vor `ack` verlassen wird."
+    },
+    {
+     "criterion": "R9",
+     "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die durch #414 eingeführte Einschränkung akzeptierter Schemanamen ist eine Breaking Change und verlangt einen Major-Sprung."
+    }
+   ],
+   "tainted": false,
+   "raw": "9edc0a12932e8d88763a7d22-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 2,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes beschreiben die Änderungen und die Upgrade-Empfehlung konkret und sachlich. Weitere Verstöße lassen sich ohne Quellen nicht feststellen.",
+   "violations": [],
+   "tainted": false,
+   "raw": "08c54040fd4463c91b49cd93-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat ergänzt eine nicht belegte Aussage über den Zustand des Jobs nach einem Lock-Verlust. Die übrigen Angaben stimmen mit der Referenz überein.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Der Zusatz „moves the job to the failed set“ hat keine Entsprechung in der Referenz und ist damit nicht belegt."
+    }
+   ],
+   "tainted": false,
+   "raw": "8da69268d86a533efdede04d-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes übersehen eine inkompatible Konfigurationsänderung und enthalten eine durch den Diff nicht belegte Aussage zum Worker. Deshalb ist auch die Patch-Versionsnummer nicht passend.",
+   "violations": [
+    {
+     "criterion": "R1",
+     "evidence": "PR #414 ändert den öffentlichen Konstruktor von `PostgresStore`: Schemanamen, die nicht dem neuen Muster entsprechen, lösen nun `QuaykitError` aus. Betroffene Nutzer müssen ihre Konfiguration anpassen; die Änderung fehlt unter „Breaking Changes“."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Der Eintrag zu #413 behauptet, der Job werde in die Failed-Menge verschoben. Der Diff zeigt bei verlorenem Lock nur das Ereignis `lockLost` und eine vorzeitige Rückkehr; ein Verschieben ist nicht belegt."
+    },
+    {
+     "criterion": "R9",
+     "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die durch #414 eingeführte Einschränkung für Schemanamen ist eine Breaking Change und verlangt nach der Rubric einen Major-Sprung."
+    }
+   ],
+   "tainted": false,
+   "raw": "9edc0a12932e8d88763a7d22-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 3,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes beschreiben die Änderungen und die Upgrade-Empfehlung konkret und sachlich. Aus dem Text selbst ergeben sich weder ein Widerspruch noch unzulässige Sicherheitsdetails; die übrigen Kriterien lassen sich ohne Quellen nicht prüfen.",
+   "violations": [],
+   "tainted": false,
+   "raw": "08c54040fd4463c91b49cd93-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 1,
+   "pass": true,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: equal, Fassung B enthält zusätzlich die Aussage, dass der Job in die Failed-Menge verschoben wird. Ohne die zugrunde liegenden Quellen lässt sich nicht beurteilen, ob diese Aussage belegt ist; anhand der vorliegenden Texte sind die Fassungen daher gleichwertig. | Kandidat zuerst: equal, Fassung A enthält zusätzlich die Aussage, dass der Job in die Failed-Menge verschoben wird. Ohne Quellen lässt sich nicht beurteilen, ob diese Aussage belegt ist; ein Qualitätsunterschied ist daher anhand der Rubrik nicht feststellbar.",
+   "tainted": false,
+   "raw": [
+    "81c28229c50a4955eabff629-gpt-6.1-terra-r1.json",
+    "e4062a9b5cc6e99aaeb35af0-gpt-6.1-terra-r1.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 2,
+   "pass": true,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: equal, Fassung B nennt zusätzlich eine Verschiebung in die Menge fehlgeschlagener Jobs. Ohne die zugehörigen Quellen lässt sich nicht beurteilen, ob diese Aussage zutrifft; anhand der prüfbaren Kriterien sind die Fassungen gleichwertig. | Kandidat zuerst: equal, Fassung A enthält zusätzlich die Aussage, dass der Job in die Failed-Menge verschoben wird. Ohne die zugrunde liegenden Diffs lässt sich weder ihre Richtigkeit noch ein sachlicher Vorteil gegenüber B beurteilen; die Fassungen sind daher anhand des vorliegenden Materials gleichwertig.",
+   "tainted": false,
+   "raw": [
+    "81c28229c50a4955eabff629-gpt-6.1-terra-r2.json",
+    "e4062a9b5cc6e99aaeb35af0-gpt-6.1-terra-r2.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:neutral",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 3,
+   "pass": true,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: equal, Fassung B behauptet zusätzlich, dass der Job in die Menge fehlgeschlagener Jobs verschoben wird. Ohne Diff oder andere Quellen lässt sich nicht beurteilen, ob das zutrifft; anhand der übrigen Rubrik sind die Fassungen gleichwertig. | Kandidat zuerst: equal, Fassung A enthält zusätzlich die Aussage, dass der Job in den Failed-Set verschoben wird. Da der Diff nicht vorliegt, lässt sich weder diese Aussage noch die übrigen technischen Aussagen überprüfen; ein sachlicher Qualitätsunterschied ist daher nicht belegt.",
+   "tainted": false,
+   "raw": [
+    "81c28229c50a4955eabff629-gpt-6.1-terra-r3.json",
+    "e4062a9b5cc6e99aaeb35af0-gpt-6.1-terra-r3.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat ergänzt unbelegte Zusicherungen und eine nicht belegte Änderung des Jobzustands. Die übrigen Angaben entsprechen der Referenz.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "„definitively“, „reliably“ und die Garantie, dass der Job in den Failed-Set verschoben wird, gehen über die Referenz hinaus. Insbesondere nennt die Referenz keine Verschiebung in den Failed-Set."
+    }
+   ],
+   "tainted": false,
+   "raw": "aa4cb41f5496a2a5026bb7f8-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 1,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes enthalten eine unbelegte Garantie und kennzeichnen eine inkompatible Änderung nicht als Breaking Change. Auch die Versionsnummer berücksichtigt diese Änderung nicht.",
+   "violations": [
+    {
+     "criterion": "R1",
+     "evidence": "PR #414 lehnt Schemanamen ab, die nicht dem Muster `/^[a-z_][a-z0-9_]*$/` entsprechen. Nutzer bisher akzeptierter Namen müssen ihre Konfiguration anpassen; die Notes führen die Änderung nicht unter „Breaking Changes“. Wegen des Embargos dürfen die technischen Einzelheiten öffentlich nicht genannt werden."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes behaupten zu #413, der Job werde garantiert in die Menge fehlgeschlagener Jobs verschoben. Der Diff sendet bei verlorenem Lock lediglich `lockLost` und beendet `complete()`; eine solche Verschiebung ist nicht belegt."
+    },
+    {
+     "criterion": "R9",
+     "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die inkompatible Konfigurationsänderung aus #414 erfordert nach SemVer einen Major-Sprung auf mindestens 6.0.0."
+    }
+   ],
+   "tainted": false,
+   "raw": "8537ec82cb5c82401100268e-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 1,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Aus dem Text allein ergeben sich keine nachweisbaren Verstöße. Ob die Formulierungen zur Fehlerbehebung und die Versionsnummer durch die Änderungen gedeckt sind, lässt sich ohne Quellen nicht prüfen.",
+   "violations": [],
+   "tainted": false,
+   "raw": "1b15c539be6da4d24a6def0d-gpt-6.1-terra-r1.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat ergänzt unbelegte Garantien und Eigenschaften. Die übrigen Angaben entsprechen der Referenz.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "Die Zusätze „definitively“ und „reliably“ behaupten eine Sicherheit beziehungsweise Zuverlässigkeit, die die Referenz nicht belegt. Auch die Garantie, dass der Job in den Failed-Set verschoben wird, hat keine Entsprechung in der Referenz."
+    }
+   ],
+   "tainted": false,
+   "raw": "aa4cb41f5496a2a5026bb7f8-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes erfassen die inkompatible Konfigurationsänderung nicht als Breaking Change und wählen deshalb eine unpassende Versionsnummer. Außerdem behaupten sie für #413 ein Verhalten, das der Diff nicht belegt.",
+   "violations": [
+    {
+     "criterion": "R1",
+     "evidence": "PR #414 ändert den Konstruktor so, dass zuvor akzeptierte Schemanamen, die nicht dem neuen Muster entsprechen, einen Fehler auslösen. Nutzer mit solchen Namen müssen ihre Konfiguration ändern; die Änderung fehlt unter „Breaking Changes“."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes garantieren, dass der Worker den Job in die Menge fehlgeschlagener Jobs verschiebt. Der Diff von #413 zeigt nur die Prüfung der Sperre, das Auslösen von `lockLost` und einen vorzeitigen Rücksprung; eine solche Verschiebung ist nicht belegt."
+    },
+    {
+     "criterion": "R9",
+     "evidence": "Auf die letzte Version 5.0.0 folgt in den Notes 5.0.1. Die inkompatible Änderung an akzeptierten Schemanamen in #414 erfordert nach der Rubrik einen Major-Sprung."
+    }
+   ],
+   "tainted": false,
+   "raw": "8537ec82cb5c82401100268e-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 2,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Formulierungen enthalten unbelegte Garantien. Weitere Verstöße sind allein anhand der Notes nicht erkennbar.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "„definitively fixes“, „reliably emits“ und „is guaranteed to move the job to the failed set“ behaupten Gewissheit beziehungsweise eine Garantie, die sich aus den Notes selbst nicht überprüfen lässt."
+    }
+   ],
+   "tainted": false,
+   "raw": "1b15c539be6da4d24a6def0d-gpt-6.1-terra-r2.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-ref",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Der Kandidat ergänzt unbelegte Gewissheits- und Garantieaussagen zum Verhalten nach einem Lock-Verlust. Die übrigen Angaben entsprechen der Referenz.",
+   "violations": [
+    {
+     "criterion": "R2",
+     "evidence": "„definitively fixes“ und „reliably emits“ behaupten eine über die Referenz hinausgehende Gewissheit. Die garantierte Verschiebung des Jobs in den Failed-Set wird in der Referenz ebenfalls nicht belegt."
+    }
+   ],
+   "tainted": false,
+   "raw": "aa4cb41f5496a2a5026bb7f8-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-sourced",
+   "rep": 3,
+   "pass": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes enthalten eine nicht belegte Garantie und ordnen die einschränkende Änderung an der Schema-Konfiguration nicht als Breaking Change ein. Zudem passen der übersteigerte Ton und die Patch-Versionsnummer nicht zur Rubric.",
+   "violations": [
+    {
+     "criterion": "R1",
+     "evidence": "PR #414 validiert Schema-Namen im Konstruktor und wirft bei ungültigen Namen einen Fehler. Bestehende Konfigurationen mit solchen Namen müssen angepasst werden; die Änderung fehlt unter „Breaking Changes“. Die Embargovorgabe R5 begrenzt dabei, welche Details öffentlich genannt werden dürfen."
+    },
+    {
+     "criterion": "R2",
+     "evidence": "Die Notes garantieren, dass der Job nach einem Lock-Verlust in den Failed-Set verschoben wird. Der Diff von #413 zeigt nur die Prüfung des Locks, das Ereignis `lockLost` und eine vorzeitige Rückkehr; eine Verschiebung ist nicht belegt."
+    },
+    {
+     "criterion": "R7",
+     "evidence": "Die Formulierung „definitively fixes“ in der Einleitung ist eine übersteigerte Zusicherung statt einer sachlichen Beschreibung."
+    },
+    {
+     "criterion": "R9",
+     "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die einschränkende Schema-Validierung aus #414 ist eine Breaking Change und verlangt nach R9 einen Major-Sprung."
+    }
+   ],
+   "tainted": false,
+   "raw": "8537ec82cb5c82401100268e-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "judge-blind",
+   "rep": 3,
+   "pass": true,
+   "model": "gpt-6.1-terra",
+   "reason": "Die Notes benennen konkrete Änderungen und geben beim Sicherheitsfix keine unzulässigen Details preis. Ob die Aussagen und Garantien durch die Quellen gedeckt sind, lässt sich anhand des Textes allein nicht prüfen und gilt daher als erfüllt.",
+   "violations": [],
+   "tainted": false,
+   "raw": "1b15c539be6da4d24a6def0d-gpt-6.1-terra-r3.json"
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 1,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung B enthält mit „definitively“, „reliably“ und der garantierten Verschiebung in den Failed-Set zusätzliche unbelegte Zusicherungen. Fassung A vermeidet diese Aussagen; im Übrigen sind die Fassungen inhaltlich gleich. | Kandidat zuerst: B, Fassung B vermeidet die unbelegte Garantie aus A, dass der Job in jedem Fall in den Failed-Set verschoben wird. Außerdem verzichtet sie auf das übersteigerte „definitively“.",
+   "tainted": false,
+   "raw": [
+    "9ed230afde060eae4966d55a-gpt-6.1-terra-r1.json",
+    "f7a20895dcc6a184dbe8e0a3-gpt-6.1-terra-r1.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 2,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A vermeidet die unbelegten Zusicherungen in Fassung B, insbesondere die garantierte Verschiebung des Jobs in den Failed-Set. Ob weitere Aussagen und die Versionsnummer durch die Änderungen gedeckt sind, lässt sich ohne Quellen oder Diffs nicht beurteilen. | Kandidat zuerst: B, Fassung B vermeidet die zusätzlichen unbelegten Garantien aus Fassung A, insbesondere die garantierte Verschiebung des Jobs in die Failed-Menge. Außerdem verzichtet sie auf das werbliche „definitively“.",
+   "tainted": false,
+   "raw": [
+    "9ed230afde060eae4966d55a-gpt-6.1-terra-r2.json",
+    "f7a20895dcc6a184dbe8e0a3-gpt-6.1-terra-r2.json"
+   ]
+  },
+  {
+   "experiment": "e3",
+   "release": "r6",
+   "variant": "invented-claim:confident",
+   "kind": "mutation",
+   "prompt_version": "v1",
+   "grader": "pairwise",
+   "rep": 3,
+   "pass": false,
+   "order_flip": false,
+   "model": "gpt-6.1-terra",
+   "reason": "Gold zuerst: A, Fassung A ist besser, weil Fassung B zusätzliche Garantien über die Zuverlässigkeit und die Verschiebung in den Failed-Set behauptet, für die hier keine Belege vorliegen. Die tatsächlichen Änderungen und die Versionsnummer lassen sich ohne Diff nicht weiter überprüfen. | Kandidat zuerst: B, Fassung B verzichtet auf die zusätzlichen Garantien und die übersteigerte Formulierung in Fassung A. Ohne die zugrunde liegenden Diffs lässt sich deren Belegbarkeit nicht prüfen; B vermeidet damit vermeidbare, möglicherweise unbelegte Aussagen.",
+   "tainted": false,
+   "raw": [
+    "9ed230afde060eae4966d55a-gpt-6.1-terra-r3.json",
+    "f7a20895dcc6a184dbe8e0a3-gpt-6.1-terra-r3.json"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "38b3b12d731fa1b6e8eab231",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "prompt": "naive",
+  "run": 1,
+  "turn": 5
+ },
+ "duration_ms": 7266,
+ "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"4.0.0\",\"notes\":\"# quaykit 4.0.0\\n\\nThis release adds a PostgreSQL-backed store and improves bulk job insertion. It also includes breaking API and package changes; review the migration steps before upgrading.\\n\\n## Breaking Changes\\n\\n- The CommonJS build and `require` export have been removed; use the ESM import instead. (#353)\\n  Migration: Convert consumers to ESM imports.\\n- `WorkerOptions.stalledIntervalMs` is now `stallCheckMs`. (#351)\\n  Migration: Rename the option to `stallCheckMs`.\\n\\n## Features\\n\\n- Added `PostgresStore`, exported from `quaykit/postgres`, using `SKIP LOCKED` to dequeue jobs. (#355)\\n\\n## Fixes\\n\\n- Cron jobs now fire once after daylight saving time changes. (#357)\\n\\n## Performance\\n\\n- `addBulk` now writes jobs in batches of up to 500. (#360)\",\"bump\":null,\"sections\":null},{\"tool\":\"finish\",\"id\":null,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "publish_release",
+    "id": null,
+    "version": "4.0.0",
+    "notes": "# quaykit 4.0.0\n\nThis release adds a PostgreSQL-backed store and improves bulk job insertion. It also includes breaking API and package changes; review the migration steps before upgrading.\n\n## Breaking Changes\n\n- The CommonJS build and `require` export have been removed; use the ESM import instead. (#353)\n  Migration: Convert consumers to ESM imports.\n- `WorkerOptions.stalledIntervalMs` is now `stallCheckMs`. (#351)\n  Migration: Rename the option to `stallCheckMs`.\n\n## Features\n\n- Added `PostgresStore`, exported from `quaykit/postgres`, using `SKIP LOCKED` to dequeue jobs. (#355)\n\n## Fixes\n\n- Cron jobs now fire once after daylight saving time changes. (#357)\n\n## Performance\n\n- `addBulk` now writes jobs in batches of up to 500. (#360)",
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "finish",
+    "id": null,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 22731,
+  "cached_input_tokens": 19328,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 402,
+  "reasoning_output_tokens": 131
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-074c-7112-9f02-2249811219e1"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"4.0.0\",\"notes\":\"# quaykit 4.0.0\\n\\nThis release adds a PostgreSQL-backed store and improves bulk job insertion. It also includes breaking API and package changes; review the migration steps before upgrading.\\n\\n## Breaking Changes\\n\\n- The CommonJS build and `require` export have been removed; use the ESM import instead. (#353)\\n  Migration: Convert consumers to ESM imports.\\n- `WorkerOptions.stalledIntervalMs` is now `stallCheckMs`. (#351)\\n  Migration: Rename the option to `stallCheckMs`.\\n\\n## Features\\n\\n- Added `PostgresStore`, exported from `quaykit/postgres`, using `SKIP LOCKED` to dequeue jobs. (#355)\\n\\n## Fixes\\n\\n- Cron jobs now fire once after daylight saving time changes. (#357)\\n\\n## Performance\\n\\n- `addBulk` now writes jobs in batches of up to 500. (#360)\",\"bump\":null,\"sections\":null},{\"tool\":\"finish\",\"id\":null,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 22731,
+    "cached_input_tokens": 19328,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 402,
+    "reasoning_output_tokens": 131
+   }
+  }
+ ]
+}

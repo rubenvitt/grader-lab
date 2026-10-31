@@ -1,0 +1,150 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "7c3ccb4aef2b76b4e565ed3a",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "prompt": "naive",
+  "run": 1,
+  "turn": 2
+ },
+ "duration_ms": 6670,
+ "text": "{\"calls\":[{\"tool\":\"get_pr\",\"id\":391,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":391,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":393,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":393,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":395,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":395,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":397,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":397,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":399,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":399,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":401,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":401,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "get_pr",
+    "id": 391,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 391,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 393,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 393,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 395,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 395,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 397,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 397,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 399,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 399,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_pr",
+    "id": 401,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 401,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 45270,
+  "cached_input_tokens": 40064,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 375,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-2f02-7c73-bfa8-aabdb638b129"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"get_pr\",\"id\":391,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":391,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":393,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":393,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":395,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":395,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":397,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":397,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":399,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":399,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_pr\",\"id\":401,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":401,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 45270,
+    "cached_input_tokens": 40064,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 375,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

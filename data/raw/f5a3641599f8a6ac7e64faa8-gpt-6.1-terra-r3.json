@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "f5a3641599f8a6ac7e64faa8",
+ "meta": {
+  "experiment": "e3",
+  "release": "r4",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5962,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung bezeichnet den Rate-Limiter als „proven“. Die Quellen belegen diese Eigenschaft nicht; der Diff von #376 zeigt lediglich seine Implementierung.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, das Limit werde „reliably shared across all workers of a queue, without exception“. Der Diff von #376 legt dagegen ausdrücklich einen eigenen, nicht geteilten Token-Bucket pro Worker-Instanz an.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes garantieren höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff von #376 zeigt zwar die Verwendung eines Token-Buckets, belegt aber keine solche strikte Obergrenze für jedes Zeitfenster.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten unbelegte Eigenschaften und eine Aussage, die dem Diff widerspricht. Die Versionsnummer 4.1.0 passt zum Feature und zur Deprecation.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung bezeichnet den Rate-Limiter als „proven“. Die Quellen belegen diese Eigenschaft nicht; der Diff von #376 zeigt lediglich seine Implementierung."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, das Limit werde „reliably shared across all workers of a queue, without exception“. Der Diff von #376 legt dagegen ausdrücklich einen eigenen, nicht geteilten Token-Bucket pro Worker-Instanz an."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes garantieren höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff von #376 zeigt zwar die Verwendung eines Token-Buckets, belegt aber keine solche strikte Obergrenze für jedes Zeitfenster."
+   }
+  ],
+  "reason": "Die Notes enthalten unbelegte Eigenschaften und eine Aussage, die dem Diff widerspricht. Die Versionsnummer 4.1.0 passt zum Feature und zur Deprecation.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26321,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 291,
+  "reasoning_output_tokens": 40
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-ef89-7582-9b74-dfc1da93287d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung bezeichnet den Rate-Limiter als „proven“. Die Quellen belegen diese Eigenschaft nicht; der Diff von #376 zeigt lediglich seine Implementierung.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, das Limit werde „reliably shared across all workers of a queue, without exception“. Der Diff von #376 legt dagegen ausdrücklich einen eigenen, nicht geteilten Token-Bucket pro Worker-Instanz an.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes garantieren höchstens `max` Jobs pro `perMs` Millisekunden. Der Diff von #376 zeigt zwar die Verwendung eines Token-Buckets, belegt aber keine solche strikte Obergrenze für jedes Zeitfenster.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten unbelegte Eigenschaften und eine Aussage, die dem Diff widerspricht. Die Versionsnummer 4.1.0 passt zum Feature und zur Deprecation.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26321,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 291,
+    "reasoning_output_tokens": 40
+   }
+  }
+ ]
+}

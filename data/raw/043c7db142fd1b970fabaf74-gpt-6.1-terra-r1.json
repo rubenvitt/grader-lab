@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "043c7db142fd1b970fabaf74",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "variant": "careful-2",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 6477,
+ "text": "{\"reason\":\"Beide Fassungen ordnen dieselben Änderungen vergleichbar ein und nennen dieselbe Major-Version. B enthält zusätzliche technische Details, deren Richtigkeit sich ohne Diffs oder andere Quellen ebenso wenig prüfen lässt wie die Aussagen in A; deshalb ist keine Fassung nach der beurteilbaren Rubrik eindeutig besser.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Beide Fassungen ordnen dieselben Änderungen vergleichbar ein und nennen dieselbe Major-Version. B enthält zusätzliche technische Details, deren Richtigkeit sich ohne Diffs oder andere Quellen ebenso wenig prüfen lässt wie die Aussagen in A; deshalb ist keine Fassung nach der beurteilbaren Rubrik eindeutig besser.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25472,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 197,
+  "reasoning_output_tokens": 117
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-bb17-7160-8d6f-8b58ab80dd53"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Beide Fassungen ordnen dieselben Änderungen vergleichbar ein und nennen dieselbe Major-Version. B enthält zusätzliche technische Details, deren Richtigkeit sich ohne Diffs oder andere Quellen ebenso wenig prüfen lässt wie die Aussagen in A; deshalb ist keine Fassung nach der beurteilbaren Rubrik eindeutig besser.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25472,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 197,
+    "reasoning_output_tokens": 117
+   }
+  }
+ ]
+}

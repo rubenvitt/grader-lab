@@ -1,0 +1,66 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "94c4e26edab9af2ddc567fb8",
+ "meta": {
+  "experiment": "e4",
+  "release": "r1",
+  "prompt": "naive",
+  "run": 2,
+  "turn": 3
+ },
+ "duration_ms": 4322,
+ "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"2.4.0\",\"notes\":\"# quaykit 2.4.0\\n\\nThis release adds machine-readable queue inspection and fixes a worker lock leak when a handler throws synchronously. Completed jobs are now removed by default to reduce Redis memory use.\\n\\n## Features\\n\\n- Add `quaykit inspect --json` for machine-readable queue statistics (#318)\\n\\n## Fixes\\n\\n- Release job locks even when handlers throw synchronously (#304)\\n\\n## Performance\\n\\n- Remove completed jobs by default to reduce Redis memory use (#307)\",\"bump\":\"minor\",\"sections\":[\"Features\",\"Fixes\",\"Performance\"]}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "finish",
+    "id": null,
+    "version": "2.4.0",
+    "notes": "# quaykit 2.4.0\n\nThis release adds machine-readable queue inspection and fixes a worker lock leak when a handler throws synchronously. Completed jobs are now removed by default to reduce Redis memory use.\n\n## Features\n\n- Add `quaykit inspect --json` for machine-readable queue statistics (#318)\n\n## Fixes\n\n- Release job locks even when handlers throw synchronously (#304)\n\n## Performance\n\n- Remove completed jobs by default to reduce Redis memory use (#307)",
+    "bump": "minor",
+    "sections": [
+     "Features",
+     "Fixes",
+     "Performance"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 21957,
+  "cached_input_tokens": 0,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 157,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-c95a-7033-823c-9a9c86103555"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"2.4.0\",\"notes\":\"# quaykit 2.4.0\\n\\nThis release adds machine-readable queue inspection and fixes a worker lock leak when a handler throws synchronously. Completed jobs are now removed by default to reduce Redis memory use.\\n\\n## Features\\n\\n- Add `quaykit inspect --json` for machine-readable queue statistics (#318)\\n\\n## Fixes\\n\\n- Release job locks even when handlers throw synchronously (#304)\\n\\n## Performance\\n\\n- Remove completed jobs by default to reduce Redis memory use (#307)\",\"bump\":\"minor\",\"sections\":[\"Features\",\"Fixes\",\"Performance\"]}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 21957,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 157,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

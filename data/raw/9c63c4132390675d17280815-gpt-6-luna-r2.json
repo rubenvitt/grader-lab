@@ -1,0 +1,62 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "9c63c4132390675d17280815",
+ "meta": {
+  "experiment": "e4",
+  "release": "r2",
+  "prompt": "naive",
+  "run": 2,
+  "turn": 3
+ },
+ "duration_ms": 5973,
+ "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"3.1.0\",\"notes\":\"# quaykit 3.1.0\\n\\nWorkers can now signal when the queue is empty, and Redis lock renewal is more resilient to reconnects. The positional `queue.clean()` method is deprecated in favor of `queue.purge()`.\\n\\n## Features\\n\\n- Emit `drained` when a worker has no active jobs and the queue is empty. (#331)\\n\\n## Fixes\\n\\n- Retry lock renewal after a Redis connection reset. (#334)\\n\\n## Deprecations\\n\\n- Deprecate `queue.clean()` in favor of `queue.purge({ status, olderThanMs })`. Existing calls continue to work and log a warning once. (#338)\\n\\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })`.\" ,\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "publish_release",
+    "id": null,
+    "version": "3.1.0",
+    "notes": "# quaykit 3.1.0\n\nWorkers can now signal when the queue is empty, and Redis lock renewal is more resilient to reconnects. The positional `queue.clean()` method is deprecated in favor of `queue.purge()`.\n\n## Features\n\n- Emit `drained` when a worker has no active jobs and the queue is empty. (#331)\n\n## Fixes\n\n- Retry lock renewal after a Redis connection reset. (#334)\n\n## Deprecations\n\n- Deprecate `queue.clean()` in favor of `queue.purge({ status, olderThanMs })`. Existing calls continue to work and log a warning once. (#338)\n\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })`.",
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 21986,
+  "cached_input_tokens": 12288,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 307,
+  "reasoning_output_tokens": 86
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-5a44-76e1-acea-452229bcfb0f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"3.1.0\",\"notes\":\"# quaykit 3.1.0\\n\\nWorkers can now signal when the queue is empty, and Redis lock renewal is more resilient to reconnects. The positional `queue.clean()` method is deprecated in favor of `queue.purge()`.\\n\\n## Features\\n\\n- Emit `drained` when a worker has no active jobs and the queue is empty. (#331)\\n\\n## Fixes\\n\\n- Retry lock renewal after a Redis connection reset. (#334)\\n\\n## Deprecations\\n\\n- Deprecate `queue.clean()` in favor of `queue.purge({ status, olderThanMs })`. Existing calls continue to work and log a warning once. (#338)\\n\\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })`.\" ,\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 21986,
+    "cached_input_tokens": 12288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 307,
+    "reasoning_output_tokens": 86
+   }
+  }
+ ]
+}

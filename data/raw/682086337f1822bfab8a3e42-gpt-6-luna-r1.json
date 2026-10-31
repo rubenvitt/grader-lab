@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "682086337f1822bfab8a3e42",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "prompt": "careful",
+  "run": 1,
+  "turn": 3
+ },
+ "duration_ms": 11450,
+ "text": "{\"calls\":[{\"tool\":\"list_prs\",\"id\":null,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "list_prs",
+    "id": null,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 99781,
+  "cached_input_tokens": 92544,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 228,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-a3e4-7403-a45b-52780d1057c8"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "Ich prüfe noch die übrigen gemergten PRs samt Diffs und möglichen Relands. Die bereits zurückgenommene Dashboard-Funktion lasse ich aus den Notes heraus."
+   }
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_1",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"list_prs\",\"id\":null,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 99781,
+    "cached_input_tokens": 92544,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 228,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

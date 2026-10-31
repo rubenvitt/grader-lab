@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "a6089ea65fe16b9f5a4a3719",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "prompt": "careful",
+  "run": 1,
+  "turn": 4
+ },
+ "duration_ms": 11553,
+ "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"5.0.0\",\"notes\":\"# quaykit 5.0.0\\n\\nThis release requires an explicit Redis connection and removes the legacy `Queue.clean()` method and `JobOptions.timeout` option. It also adds jitter backoff and fixes graceful worker shutdown and CLI error exit codes.\\n\\n## Breaking Changes\\n\\n- `RedisStore` now requires a `connection` option. Pass `connection` to `new RedisStore({ connection })`. (#391)\\n  Migration: Add `connection` to every `RedisStore` constructor.\\n- Removed `Queue.clean()` and the `JobOptions.timeout` option. (#393)\\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })`; replace `timeout` with `timeoutMs`.\\n\\n## Features\\n\\n- Added the `jitter` backoff strategy, configurable with `backoff: { type: 'jitter', baseMs }`. (#395)\\n\\n## Fixes\\n\\n- `worker.close()` now honors `shutdownTimeoutMs` while waiting for active jobs. (#397)\\n- `quaykit inspect` now exits with a non-zero code when inspection fails. (#401)\\n\\n## Deprecations\\n\\n- Passing a boolean to `worker.pause()` is deprecated. Use `worker.pause({ drain })`. (#399)\\n  Migration: Replace `worker.pause(boolean)` with `worker.pause({ drain })`.\" ,\"bump\":null,\"sections\":null},{\"tool\":\"finish\",\"id\":null,\"version\":\"5.0.0\",\"notes\":\"# quaykit 5.0.0\\n\\nThis release requires an explicit Redis connection and removes the legacy `Queue.clean()` method and `JobOptions.timeout` option. It also adds jitter backoff and fixes graceful worker shutdown and CLI error exit codes.\\n\\n## Breaking Changes\\n\\n- `RedisStore` now requires a `connection` option. Pass `connection` to `new RedisStore({ connection })`. (#391)\\n  Migration: Add `connection` to every `RedisStore` constructor.\\n- Removed `Queue.clean()` and the `JobOptions.timeout` option. (#393)\\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })`; replace `timeout` with `timeoutMs`.\\n\\n## Features\\n\\n- Added the `jitter` backoff strategy, configurable with `backoff: { type: 'jitter', baseMs }`. (#395)\\n\\n## Fixes\\n\\n- `worker.close()` now honors `shutdownTimeoutMs` while waiting for active jobs. (#397)\\n- `quaykit inspect` now exits with a non-zero code when inspection fails. (#401)\\n\\n## Deprecations\\n\\n- Passing a boolean to `worker.pause()` is deprecated. Use `worker.pause({ drain })`. (#399)\\n  Migration: Replace `worker.pause(boolean)` with `worker.pause({ drain })`.\",\"bump\":\"major\",\"sections\":[\"Breaking Changes\",\"Features\",\"Fixes\",\"Deprecations\"]}] }",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "publish_release",
+    "id": null,
+    "version": "5.0.0",
+    "notes": "# quaykit 5.0.0\n\nThis release requires an explicit Redis connection and removes the legacy `Queue.clean()` method and `JobOptions.timeout` option. It also adds jitter backoff and fixes graceful worker shutdown and CLI error exit codes.\n\n## Breaking Changes\n\n- `RedisStore` now requires a `connection` option. Pass `connection` to `new RedisStore({ connection })`. (#391)\n  Migration: Add `connection` to every `RedisStore` constructor.\n- Removed `Queue.clean()` and the `JobOptions.timeout` option. (#393)\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })`; replace `timeout` with `timeoutMs`.\n\n## Features\n\n- Added the `jitter` backoff strategy, configurable with `backoff: { type: 'jitter', baseMs }`. (#395)\n\n## Fixes\n\n- `worker.close()` now honors `shutdownTimeoutMs` while waiting for active jobs. (#397)\n- `quaykit inspect` now exits with a non-zero code when inspection fails. (#401)\n\n## Deprecations\n\n- Passing a boolean to `worker.pause()` is deprecated. Use `worker.pause({ drain })`. (#399)\n  Migration: Replace `worker.pause(boolean)` with `worker.pause({ drain })`.",
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "finish",
+    "id": null,
+    "version": "5.0.0",
+    "notes": "# quaykit 5.0.0\n\nThis release requires an explicit Redis connection and removes the legacy `Queue.clean()` method and `JobOptions.timeout` option. It also adds jitter backoff and fixes graceful worker shutdown and CLI error exit codes.\n\n## Breaking Changes\n\n- `RedisStore` now requires a `connection` option. Pass `connection` to `new RedisStore({ connection })`. (#391)\n  Migration: Add `connection` to every `RedisStore` constructor.\n- Removed `Queue.clean()` and the `JobOptions.timeout` option. (#393)\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })`; replace `timeout` with `timeoutMs`.\n\n## Features\n\n- Added the `jitter` backoff strategy, configurable with `backoff: { type: 'jitter', baseMs }`. (#395)\n\n## Fixes\n\n- `worker.close()` now honors `shutdownTimeoutMs` while waiting for active jobs. (#397)\n- `quaykit inspect` now exits with a non-zero code when inspection fails. (#401)\n\n## Deprecations\n\n- Passing a boolean to `worker.pause()` is deprecated. Use `worker.pause({ drain })`. (#399)\n  Migration: Replace `worker.pause(boolean)` with `worker.pause({ drain })`.",
+    "bump": "major",
+    "sections": [
+     "Breaking Changes",
+     "Features",
+     "Fixes",
+     "Deprecations"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 76701,
+  "cached_input_tokens": 68992,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 783,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-deb6-7ed3-9ae6-9c43a41105b0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"5.0.0\",\"notes\":\"# quaykit 5.0.0\\n\\nThis release requires an explicit Redis connection and removes the legacy `Queue.clean()` method and `JobOptions.timeout` option. It also adds jitter backoff and fixes graceful worker shutdown and CLI error exit codes.\\n\\n## Breaking Changes\\n\\n- `RedisStore` now requires a `connection` option. Pass `connection` to `new RedisStore({ connection })`. (#391)\\n  Migration: Add `connection` to every `RedisStore` constructor.\\n- Removed `Queue.clean()` and the `JobOptions.timeout` option. (#393)\\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })`; replace `timeout` with `timeoutMs`.\\n\\n## Features\\n\\n- Added the `jitter` backoff strategy, configurable with `backoff: { type: 'jitter', baseMs }`. (#395)\\n\\n## Fixes\\n\\n- `worker.close()` now honors `shutdownTimeoutMs` while waiting for active jobs. (#397)\\n- `quaykit inspect` now exits with a non-zero code when inspection fails. (#401)\\n\\n## Deprecations\\n\\n- Passing a boolean to `worker.pause()` is deprecated. Use `worker.pause({ drain })`. (#399)\\n  Migration: Replace `worker.pause(boolean)` with `worker.pause({ drain })`.\" ,\"bump\":null,\"sections\":null},{\"tool\":\"finish\",\"id\":null,\"version\":\"5.0.0\",\"notes\":\"# quaykit 5.0.0\\n\\nThis release requires an explicit Redis connection and removes the legacy `Queue.clean()` method and `JobOptions.timeout` option. It also adds jitter backoff and fixes graceful worker shutdown and CLI error exit codes.\\n\\n## Breaking Changes\\n\\n- `RedisStore` now requires a `connection` option. Pass `connection` to `new RedisStore({ connection })`. (#391)\\n  Migration: Add `connection` to every `RedisStore` constructor.\\n- Removed `Queue.clean()` and the `JobOptions.timeout` option. (#393)\\n  Migration: Replace `queue.clean(graceMs, status)` with `queue.purge({ status, olderThanMs: graceMs })`; replace `timeout` with `timeoutMs`.\\n\\n## Features\\n\\n- Added the `jitter` backoff strategy, configurable with `backoff: { type: 'jitter', baseMs }`. (#395)\\n\\n## Fixes\\n\\n- `worker.close()` now honors `shutdownTimeoutMs` while waiting for active jobs. (#397)\\n- `quaykit inspect` now exits with a non-zero code when inspection fails. (#401)\\n\\n## Deprecations\\n\\n- Passing a boolean to `worker.pause()` is deprecated. Use `worker.pause({ drain })`. (#399)\\n  Migration: Replace `worker.pause(boolean)` with `worker.pause({ drain })`.\",\"bump\":\"major\",\"sections\":[\"Breaking Changes\",\"Features\",\"Fixes\",\"Deprecations\"]}] }"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 76701,
+    "cached_input_tokens": 68992,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 783,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

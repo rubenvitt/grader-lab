@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "40c6d10fe9264a88b7fb08a4",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "careful-1",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 5342,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes geben den endgültigen Rate Limiter und die Deprecation samt passender Migration wieder. Version 4.1.0 entspricht den enthaltenen Features und der Deprecation.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes geben den endgültigen Rate Limiter und die Deprecation samt passender Migration wieder. Version 4.1.0 entspricht den enthaltenen Features und der Deprecation.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 26288,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 92,
+  "reasoning_output_tokens": 31
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-eaf9-7cd0-8fe4-151ba0796e9d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes geben den endgültigen Rate Limiter und die Deprecation samt passender Migration wieder. Version 4.1.0 entspricht den enthaltenen Features und der Deprecation.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26288,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 92,
+    "reasoning_output_tokens": 31
+   }
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "80b48401cfdf5a27c00e2e1f",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "variant": "naive-1",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 7424,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Jitter-Strategie wird als „exponential“ bezeichnet. Diese Eigenschaft ist in der Referenz nicht belegt.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim RedisStore fehlt das bisherige Verhalten: Ohne `connection` wurde zuvor eine Verbindung zu `localhost:6379` aufgebaut; jetzt wird ein Fehler ausgelöst.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim neuen Jitter-Retry fehlt, dass die Strategie ausdrücklich aktiviert werden muss und Wiederholungsversuche zufällig verteilt.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` nennt `{ drain }` statt des konkreten Referenzaufrufs `worker.pause({ drain: true })`. Ohne einen passend definierten Wert für `drain` führt der angegebene Aufruf nicht zuverlässig zum Ziel.\"},{\"criterion\":\"R8\",\"evidence\":\"Bei der Deprecation von `worker.pause()` fehlt, dass die Warnung nur einmal protokolliert wird.\"}],\"reason\":\"Der Kandidat übernimmt die wesentlichen Änderungen und die passende Major-Version, enthält aber eine unbelegte Eigenschaft und lässt mehrere für Verhalten und Migration relevante Details aus.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Jitter-Strategie wird als „exponential“ bezeichnet. Diese Eigenschaft ist in der Referenz nicht belegt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Beim RedisStore fehlt das bisherige Verhalten: Ohne `connection` wurde zuvor eine Verbindung zu `localhost:6379` aufgebaut; jetzt wird ein Fehler ausgelöst."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Beim neuen Jitter-Retry fehlt, dass die Strategie ausdrücklich aktiviert werden muss und Wiederholungsversuche zufällig verteilt."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause()` nennt `{ drain }` statt des konkreten Referenzaufrufs `worker.pause({ drain: true })`. Ohne einen passend definierten Wert für `drain` führt der angegebene Aufruf nicht zuverlässig zum Ziel."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Bei der Deprecation von `worker.pause()` fehlt, dass die Warnung nur einmal protokolliert wird."
+   }
+  ],
+  "reason": "Der Kandidat übernimmt die wesentlichen Änderungen und die passende Major-Version, enthält aber eine unbelegte Eigenschaft und lässt mehrere für Verhalten und Migration relevante Details aus.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24785,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 260,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-00ee-7061-8063-eb2cafd69174"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Jitter-Strategie wird als „exponential“ bezeichnet. Diese Eigenschaft ist in der Referenz nicht belegt.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim RedisStore fehlt das bisherige Verhalten: Ohne `connection` wurde zuvor eine Verbindung zu `localhost:6379` aufgebaut; jetzt wird ein Fehler ausgelöst.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim neuen Jitter-Retry fehlt, dass die Strategie ausdrücklich aktiviert werden muss und Wiederholungsversuche zufällig verteilt.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` nennt `{ drain }` statt des konkreten Referenzaufrufs `worker.pause({ drain: true })`. Ohne einen passend definierten Wert für `drain` führt der angegebene Aufruf nicht zuverlässig zum Ziel.\"},{\"criterion\":\"R8\",\"evidence\":\"Bei der Deprecation von `worker.pause()` fehlt, dass die Warnung nur einmal protokolliert wird.\"}],\"reason\":\"Der Kandidat übernimmt die wesentlichen Änderungen und die passende Major-Version, enthält aber eine unbelegte Eigenschaft und lässt mehrere für Verhalten und Migration relevante Details aus.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24785,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 260,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

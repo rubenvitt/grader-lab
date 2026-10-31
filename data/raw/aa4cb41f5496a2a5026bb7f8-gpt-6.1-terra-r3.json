@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "aa4cb41f5496a2a5026bb7f8",
+ "meta": {
+  "experiment": "e3",
+  "release": "r6",
+  "variant": "invented-claim:confident",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5834,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"„definitively fixes“ und „reliably emits“ behaupten eine über die Referenz hinausgehende Gewissheit. Die garantierte Verschiebung des Jobs in den Failed-Set wird in der Referenz ebenfalls nicht belegt.\"}],\"reason\":\"Der Kandidat ergänzt unbelegte Gewissheits- und Garantieaussagen zum Verhalten nach einem Lock-Verlust. Die übrigen Angaben entsprechen der Referenz.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "„definitively fixes“ und „reliably emits“ behaupten eine über die Referenz hinausgehende Gewissheit. Die garantierte Verschiebung des Jobs in den Failed-Set wird in der Referenz ebenfalls nicht belegt."
+   }
+  ],
+  "reason": "Der Kandidat ergänzt unbelegte Gewissheits- und Garantieaussagen zum Verhalten nach einem Lock-Verlust. Die übrigen Angaben entsprechen der Referenz.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25357,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 113,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-67c7-7251-8ce1-585997014f37"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"„definitively fixes“ und „reliably emits“ behaupten eine über die Referenz hinausgehende Gewissheit. Die garantierte Verschiebung des Jobs in den Failed-Set wird in der Referenz ebenfalls nicht belegt.\"}],\"reason\":\"Der Kandidat ergänzt unbelegte Gewissheits- und Garantieaussagen zum Verhalten nach einem Lock-Verlust. Die übrigen Angaben entsprechen der Referenz.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25357,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 113,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

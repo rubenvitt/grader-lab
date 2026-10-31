@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "b76e03802062c4bc539d91e3",
+ "meta": {
+  "experiment": "e4-r1",
+  "release": "r1",
+  "variant": "careful-1",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4302,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes benennen die Änderung des Defaults als Breaking Change und beschreiben eine konkrete Anpassung. Weitere Verstöße lassen sich aus dem Text allein nicht erkennen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes benennen die Änderung des Defaults als Breaking Change und beschreiben eine konkrete Anpassung. Weitere Verstöße lassen sich aus dem Text allein nicht erkennen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25196,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 52,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-4423-7890-b072-198fb859719f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes benennen die Änderung des Defaults als Breaking Change und beschreiben eine konkrete Anpassung. Weitere Verstöße lassen sich aus dem Text allein nicht erkennen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25196,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 52,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "801bb471e40473275933e717",
+ "meta": {
+  "experiment": "e3",
+  "release": "r3",
+  "variant": "invented-claim:confident",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5733,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Die Formulierungen „decisively renames“, „fully commits to ESM“, „proven Postgres store“ und „unquestionably makes large imports about 40% faster“ sind werblich statt sachlich.\"}],\"reason\":\"Die Release Notes enthalten wertende und werbliche Formulierungen. Ob die technischen Aussagen und Migrationsschritte zutreffen, lässt sich ohne Quellen nicht prüfen und wird daher als erfüllt gewertet.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "Die Formulierungen „decisively renames“, „fully commits to ESM“, „proven Postgres store“ und „unquestionably makes large imports about 40% faster“ sind werblich statt sachlich."
+   }
+  ],
+  "reason": "Die Release Notes enthalten wertende und werbliche Formulierungen. Ob die technischen Aussagen und Migrationsschritte zutreffen, lässt sich ohne Quellen nicht prüfen und wird daher als erfüllt gewertet.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24493,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 193,
+  "reasoning_output_tokens": 74
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-bb87-7a10-8c3d-ca825677846f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"Die Formulierungen „decisively renames“, „fully commits to ESM“, „proven Postgres store“ und „unquestionably makes large imports about 40% faster“ sind werblich statt sachlich.\"}],\"reason\":\"Die Release Notes enthalten wertende und werbliche Formulierungen. Ob die technischen Aussagen und Migrationsschritte zutreffen, lässt sich ohne Quellen nicht prüfen und wird daher als erfüllt gewertet.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24493,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 193,
+    "reasoning_output_tokens": 74
+   }
+  }
+ ]
+}

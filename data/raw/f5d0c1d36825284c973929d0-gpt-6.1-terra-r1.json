@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "f5d0c1d36825284c973929d0",
+ "meta": {
+  "experiment": "e3",
+  "release": "r1",
+  "variant": "invented-claim:confident",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6460,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"„always releases“ und die Garantie, dass der Job beim nächsten Poll erneut versucht wird, gehen über die Referenz hinaus. Auch „permanently eliminates“ behauptet eine nicht belegte Dauerhaftigkeit.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Formulierungen „definitively resolves“, „fully delivers“ und „permanently eliminates“ sind werblich beziehungsweise übersteigernd.\"}],\"reason\":\"Der Kandidat übernimmt die wesentlichen Änderungen und den Migrationsschritt korrekt, ergänzt aber unbelegte Garantien und verwendet übersteigerte Sprache.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "„always releases“ und die Garantie, dass der Job beim nächsten Poll erneut versucht wird, gehen über die Referenz hinaus. Auch „permanently eliminates“ behauptet eine nicht belegte Dauerhaftigkeit."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Formulierungen „definitively resolves“, „fully delivers“ und „permanently eliminates“ sind werblich beziehungsweise übersteigernd."
+   }
+  ],
+  "reason": "Der Kandidat übernimmt die wesentlichen Änderungen und den Migrationsschritt korrekt, ergänzt aber unbelegte Garantien und verwendet übersteigerte Sprache.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25498,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 141,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-2635-7210-8782-0b56a17e023f"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"„always releases“ und die Garantie, dass der Job beim nächsten Poll erneut versucht wird, gehen über die Referenz hinaus. Auch „permanently eliminates“ behauptet eine nicht belegte Dauerhaftigkeit.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Formulierungen „definitively resolves“, „fully delivers“ und „permanently eliminates“ sind werblich beziehungsweise übersteigernd.\"}],\"reason\":\"Der Kandidat übernimmt die wesentlichen Änderungen und den Migrationsschritt korrekt, ergänzt aber unbelegte Garantien und verwendet übersteigerte Sprache.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25498,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 141,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

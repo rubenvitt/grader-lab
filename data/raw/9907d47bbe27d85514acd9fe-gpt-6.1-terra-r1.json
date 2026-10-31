@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "9907d47bbe27d85514acd9fe",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "naive-2",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5357,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die neue Option und den Migrationsschritt konkret. Die Deprecation lässt die alte Option weiterhin funktionieren; die Minor-Version passt zu den beschriebenen Änderungen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes beschreiben die neue Option und den Migrationsschritt konkret. Die Deprecation lässt die alte Option weiterhin funktionieren; die Minor-Version passt zu den beschriebenen Änderungen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 24350,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 57,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-d608-7dd2-ac8b-a9eb91cfd2ac"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes beschreiben die neue Option und den Migrationsschritt konkret. Die Deprecation lässt die alte Option weiterhin funktionieren; die Minor-Version passt zu den beschriebenen Änderungen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24350,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 57,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

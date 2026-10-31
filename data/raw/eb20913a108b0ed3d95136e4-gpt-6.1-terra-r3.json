@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "eb20913a108b0ed3d95136e4",
+ "meta": {
+  "experiment": "e3",
+  "release": "r1",
+  "variant": "invented-claim:confident",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 6122,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"„definitively resolves“, „fully delivers“ und „permanently eliminates“ verwenden werbliche und absolute Formulierungen.\"}],\"reason\":\"Die Einleitung verwendet einen unsachlichen, übersteigerten Ton. Ob die konkreten Aussagen und Garantien durch den Code belegt sind, lässt sich ohne Quellen nicht prüfen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "„definitively resolves“, „fully delivers“ und „permanently eliminates“ verwenden werbliche und absolute Formulierungen."
+   }
+  ],
+  "reason": "Die Einleitung verwendet einen unsachlichen, übersteigerten Ton. Ob die konkreten Aussagen und Garantien durch den Code belegt sind, lässt sich ohne Quellen nicht prüfen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25266,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 94,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-4bcd-7a02-8ad9-dcda30eee2d4"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"„definitively resolves“, „fully delivers“ und „permanently eliminates“ verwenden werbliche und absolute Formulierungen.\"}],\"reason\":\"Die Einleitung verwendet einen unsachlichen, übersteigerten Ton. Ob die konkreten Aussagen und Garantien durch den Code belegt sind, lässt sich ohne Quellen nicht prüfen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25266,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 94,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

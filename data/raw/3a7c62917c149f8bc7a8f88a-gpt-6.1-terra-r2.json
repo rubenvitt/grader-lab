@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "3a7c62917c149f8bc7a8f88a",
+ "meta": {
+  "experiment": "e3",
+  "release": "r5",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 9262,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, `jitter` sei der Standard für neue Queues. Der Diff zu #395 ergänzt lediglich einen Zweig für `backoff.type === 'jitter'`; eine Änderung des Standards ist nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage, Jitter sorge dafür, dass Wiederholungen nicht alle gleichzeitig eintreffen, ist zu weitgehend. #395 berechnet zufällige Verzögerungen mit `Math.floor(...)`; gleiche Verzögerungen bleiben möglich. Auch die Beschreibung als „proven“ ist durch den Diff nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung behauptet, der geregelte Shutdown sei „conclusively“ behoben. #397 zeigt, dass `worker.close()` auf den Abschluss aktiver Jobs oder den Timeout wartet; eine umfassende Garantie für den Shutdown belegt der Diff nicht.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause()` empfiehlt ausschließlich `worker.pause({ drain: true })`. Wer bisher `worker.pause(false)` verwendet, muss für dasselbe Verhalten `worker.pause({ drain: false })` verwenden.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Die Formulierungen „proven jitter retry strategy“, „conclusively fixes“ und „without question“ sind wertend beziehungsweise werblich statt sachlich.\"\n    }\n  ],\n  \"reason\": \"Die wesentlichen Breaking Changes sind aufgeführt und der Major-Sprung auf 5.0.0 passt zu ihnen. Einzelne Aussagen gehen jedoch über die Diffs hinaus, und ein Migrationsschritt erhält nicht für alle bisherigen Aufrufe das Verhalten.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, `jitter` sei der Standard für neue Queues. Der Diff zu #395 ergänzt lediglich einen Zweig für `backoff.type === 'jitter'`; eine Änderung des Standards ist nicht belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage, Jitter sorge dafür, dass Wiederholungen nicht alle gleichzeitig eintreffen, ist zu weitgehend. #395 berechnet zufällige Verzögerungen mit `Math.floor(...)`; gleiche Verzögerungen bleiben möglich. Auch die Beschreibung als „proven“ ist durch den Diff nicht belegt."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung behauptet, der geregelte Shutdown sei „conclusively“ behoben. #397 zeigt, dass `worker.close()` auf den Abschluss aktiver Jobs oder den Timeout wartet; eine umfassende Garantie für den Shutdown belegt der Diff nicht."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause()` empfiehlt ausschließlich `worker.pause({ drain: true })`. Wer bisher `worker.pause(false)` verwendet, muss für dasselbe Verhalten `worker.pause({ drain: false })` verwenden."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Formulierungen „proven jitter retry strategy“, „conclusively fixes“ und „without question“ sind wertend beziehungsweise werblich statt sachlich."
+   }
+  ],
+  "reason": "Die wesentlichen Breaking Changes sind aufgeführt und der Major-Sprung auf 5.0.0 passt zu ihnen. Einzelne Aussagen gehen jedoch über die Diffs hinaus, und ein Migrationsschritt erhält nicht für alle bisherigen Aufrufe das Verhalten.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26944,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 462,
+  "reasoning_output_tokens": 48
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-2498-7c63-8341-2fb48784d7b9"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, `jitter` sei der Standard für neue Queues. Der Diff zu #395 ergänzt lediglich einen Zweig für `backoff.type === 'jitter'`; eine Änderung des Standards ist nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage, Jitter sorge dafür, dass Wiederholungen nicht alle gleichzeitig eintreffen, ist zu weitgehend. #395 berechnet zufällige Verzögerungen mit `Math.floor(...)`; gleiche Verzögerungen bleiben möglich. Auch die Beschreibung als „proven“ ist durch den Diff nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Einleitung behauptet, der geregelte Shutdown sei „conclusively“ behoben. #397 zeigt, dass `worker.close()` auf den Abschluss aktiver Jobs oder den Timeout wartet; eine umfassende Garantie für den Shutdown belegt der Diff nicht.\"\n    },\n    {\n      \"criterion\": \"R3\",\n      \"evidence\": \"Die Migration für `worker.pause()` empfiehlt ausschließlich `worker.pause({ drain: true })`. Wer bisher `worker.pause(false)` verwendet, muss für dasselbe Verhalten `worker.pause({ drain: false })` verwenden.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Die Formulierungen „proven jitter retry strategy“, „conclusively fixes“ und „without question“ sind wertend beziehungsweise werblich statt sachlich.\"\n    }\n  ],\n  \"reason\": \"Die wesentlichen Breaking Changes sind aufgeführt und der Major-Sprung auf 5.0.0 passt zu ihnen. Einzelne Aussagen gehen jedoch über die Diffs hinaus, und ein Migrationsschritt erhält nicht für alle bisherigen Aufrufe das Verhalten.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26944,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 462,
+    "reasoning_output_tokens": 48
+   }
+  }
+ ]
+}

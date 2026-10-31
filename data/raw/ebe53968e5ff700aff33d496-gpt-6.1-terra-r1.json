@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "ebe53968e5ff700aff33d496",
+ "meta": {
+  "experiment": "e4-r1",
+  "release": "r1",
+  "variant": "careful-1",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5119,
+ "text": "{\"reason\":\"Fassung A ist brauchbarer, weil sie den bisherigen und den neuen Standardwert nennt und ein konkretes Migrationsbeispiel für die Queue-Konfiguration zeigt. Fassung B sagt lediglich, dass `removeOnComplete` gesetzt werden soll, ohne anzugeben, wo dies geschieht.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist brauchbarer, weil sie den bisherigen und den neuen Standardwert nennt und ein konkretes Migrationsbeispiel für die Queue-Konfiguration zeigt. Fassung B sagt lediglich, dass `removeOnComplete` gesetzt werden soll, ohne anzugeben, wo dies geschieht.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25323,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 109,
+  "reasoning_output_tokens": 32
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-4504-73d2-8479-450026ddc8ea"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist brauchbarer, weil sie den bisherigen und den neuen Standardwert nennt und ein konkretes Migrationsbeispiel für die Queue-Konfiguration zeigt. Fassung B sagt lediglich, dass `removeOnComplete` gesetzt werden soll, ohne anzugeben, wo dies geschieht.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25323,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 109,
+    "reasoning_output_tokens": 32
+   }
+  }
+ ]
+}

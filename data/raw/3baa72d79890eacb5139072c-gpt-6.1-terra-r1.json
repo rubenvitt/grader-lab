@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "3baa72d79890eacb5139072c",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "variant": "naive-2",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6750,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat bezeichnet die Jitter-Strategie als „exponential“. Die Referenz belegt lediglich eine zufällige Verteilung der Wiederholungsversuche, keine exponentielle Strategie.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` lautet im Kandidaten `worker.pause({ drain })` statt `worker.pause({ drain: true })`. Der angegebene Ausdruck setzt eine Variable voraus und führt nicht zuverlässig zur empfohlenen Einstellung.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Jitter-Backoff fehlt die Erklärung, dass Wiederholungsversuche zufällig verteilt werden, damit sie nicht gleichzeitig eintreffen. Bei `worker.pause()` fehlt zudem der Hinweis, dass die Verwendung des booleschen Arguments einmalig eine Warnung ausgibt.\"}],\"reason\":\"Der Kandidat enthält eine nicht belegte Eigenschaft und einen ungenauen Migrationsschritt. Außerdem fehlen zwei für Nutzer relevante Verhaltensdetails.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Kandidat bezeichnet die Jitter-Strategie als „exponential“. Die Referenz belegt lediglich eine zufällige Verteilung der Wiederholungsversuche, keine exponentielle Strategie."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause()` lautet im Kandidaten `worker.pause({ drain })` statt `worker.pause({ drain: true })`. Der angegebene Ausdruck setzt eine Variable voraus und führt nicht zuverlässig zur empfohlenen Einstellung."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Beim Jitter-Backoff fehlt die Erklärung, dass Wiederholungsversuche zufällig verteilt werden, damit sie nicht gleichzeitig eintreffen. Bei `worker.pause()` fehlt zudem der Hinweis, dass die Verwendung des booleschen Arguments einmalig eine Warnung ausgibt."
+   }
+  ],
+  "reason": "Der Kandidat enthält eine nicht belegte Eigenschaft und einen ungenauen Migrationsschritt. Außerdem fehlen zwei für Nutzer relevante Verhaltensdetails.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25626,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 220,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-1934-7fd2-80cc-28692ef008c1"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat bezeichnet die Jitter-Strategie als „exponential“. Die Referenz belegt lediglich eine zufällige Verteilung der Wiederholungsversuche, keine exponentielle Strategie.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` lautet im Kandidaten `worker.pause({ drain })` statt `worker.pause({ drain: true })`. Der angegebene Ausdruck setzt eine Variable voraus und führt nicht zuverlässig zur empfohlenen Einstellung.\"},{\"criterion\":\"R8\",\"evidence\":\"Beim Jitter-Backoff fehlt die Erklärung, dass Wiederholungsversuche zufällig verteilt werden, damit sie nicht gleichzeitig eintreffen. Bei `worker.pause()` fehlt zudem der Hinweis, dass die Verwendung des booleschen Arguments einmalig eine Warnung ausgibt.\"}],\"reason\":\"Der Kandidat enthält eine nicht belegte Eigenschaft und einen ungenauen Migrationsschritt. Außerdem fehlen zwei für Nutzer relevante Verhaltensdetails.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25626,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 220,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

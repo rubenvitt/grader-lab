@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "a38ccc10c57a1dec278022b7",
+ "meta": {
+  "experiment": "e3",
+  "release": "r4",
+  "variant": "invented-claim:confident",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6760,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Kandidat behauptet, das Limit werde ausnahmslos von allen Workern einer Queue geteilt. Laut Referenz hat jede Worker-Instanz ihr eigenes Limit. Auch „proven“ ist durch die Referenz nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"„proven“ und „reliably … without exception“ sind werbende beziehungsweise übersteigerte Formulierungen.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Die falsche Aussage zum geteilten Limit vermittelt Nutzern ein unzutreffendes Bild davon, wie die Begrenzung wirkt.\"\n    }\n  ],\n  \"reason\": \"Der Kandidat beschreibt den Geltungsbereich des Limits falsch und ergänzt unbelegte, übersteigerte Aussagen. Die übrigen Angaben und die Version entsprechen der Referenz.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Kandidat behauptet, das Limit werde ausnahmslos von allen Workern einer Queue geteilt. Laut Referenz hat jede Worker-Instanz ihr eigenes Limit. Auch „proven“ ist durch die Referenz nicht belegt."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "„proven“ und „reliably … without exception“ sind werbende beziehungsweise übersteigerte Formulierungen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Die falsche Aussage zum geteilten Limit vermittelt Nutzern ein unzutreffendes Bild davon, wie die Begrenzung wirkt."
+   }
+  ],
+  "reason": "Der Kandidat beschreibt den Geltungsbereich des Limits falsch und ergänzt unbelegte, übersteigerte Aussagen. Die übrigen Angaben und die Version entsprechen der Referenz.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25375,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 220,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-d517-7792-841e-7e94264cd84e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Kandidat behauptet, das Limit werde ausnahmslos von allen Workern einer Queue geteilt. Laut Referenz hat jede Worker-Instanz ihr eigenes Limit. Auch „proven“ ist durch die Referenz nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"„proven“ und „reliably … without exception“ sind werbende beziehungsweise übersteigerte Formulierungen.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Die falsche Aussage zum geteilten Limit vermittelt Nutzern ein unzutreffendes Bild davon, wie die Begrenzung wirkt.\"\n    }\n  ],\n  \"reason\": \"Der Kandidat beschreibt den Geltungsbereich des Limits falsch und ergänzt unbelegte, übersteigerte Aussagen. Die übrigen Angaben und die Version entsprechen der Referenz.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25375,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 220,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

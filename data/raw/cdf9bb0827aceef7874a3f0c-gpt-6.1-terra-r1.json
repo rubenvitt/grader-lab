@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "cdf9bb0827aceef7874a3f0c",
+ "meta": {
+  "experiment": "e3",
+  "release": "r4",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4679,
+ "text": "{\"reason\":\"B vermeidet die unbelegte Garantie aus A, dass das Limit ausnahmslos über alle Worker einer Queue hinweg geteilt wird. Welche Aussage zur Geltung des Limits zutrifft, lässt sich ohne die genannten Quellen oder Diffs allerdings nicht prüfen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "B vermeidet die unbelegte Garantie aus A, dass das Limit ausnahmslos über alle Worker einer Queue hinweg geteilt wird. Welche Aussage zur Geltung des Limits zutrifft, lässt sich ohne die genannten Quellen oder Diffs allerdings nicht prüfen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 24420,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 68,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-d1eb-7811-b1af-56298c6c0a63"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"B vermeidet die unbelegte Garantie aus A, dass das Limit ausnahmslos über alle Worker einer Queue hinweg geteilt wird. Welche Aussage zur Geltung des Limits zutrifft, lässt sich ohne die genannten Quellen oder Diffs allerdings nicht prüfen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24420,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 68,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "9ed230afde060eae4966d55a",
+ "meta": {
+  "experiment": "e3",
+  "release": "r6",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4488,
+ "text": "{\"reason\":\"Fassung A ist besser, weil Fassung B zusätzliche Garantien über die Zuverlässigkeit und die Verschiebung in den Failed-Set behauptet, für die hier keine Belege vorliegen. Die tatsächlichen Änderungen und die Versionsnummer lassen sich ohne Diff nicht weiter überprüfen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil Fassung B zusätzliche Garantien über die Zuverlässigkeit und die Verschiebung in den Failed-Set behauptet, für die hier keine Belege vorliegen. Die tatsächlichen Änderungen und die Versionsnummer lassen sich ohne Diff nicht weiter überprüfen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25248,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 73,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-7671-72e2-add4-b40066365b5c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil Fassung B zusätzliche Garantien über die Zuverlässigkeit und die Verschiebung in den Failed-Set behauptet, für die hier keine Belege vorliegen. Die tatsächlichen Änderungen und die Versionsnummer lassen sich ohne Diff nicht weiter überprüfen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25248,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 73,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "f5a3641599f8a6ac7e64faa8",
+ "meta": {
+  "experiment": "e3",
+  "release": "r4",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6704,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, das Limit werde zuverlässig und ausnahmslos von allen Workern einer Queue geteilt. Der Diff von #376 legt dagegen ausdrücklich einen eigenen, nicht geteilten Token Bucket pro Worker-Instanz an.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung bezeichnet den Rate Limiter als „proven“. Die Quellen enthalten keinen Beleg für diese Bewährung.\"}],\"reason\":\"Die Notes beschreiben den Geltungsbereich des Rate Limits entgegen dem Diff und enthalten eine unbelegte Aussage über seine Bewährung. Die Versionsnummer 4.1.0 und die Migration zu `timeoutMs` passen zu den gezeigten Änderungen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, das Limit werde zuverlässig und ausnahmslos von allen Workern einer Queue geteilt. Der Diff von #376 legt dagegen ausdrücklich einen eigenen, nicht geteilten Token Bucket pro Worker-Instanz an."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung bezeichnet den Rate Limiter als „proven“. Die Quellen enthalten keinen Beleg für diese Bewährung."
+   }
+  ],
+  "reason": "Die Notes beschreiben den Geltungsbereich des Rate Limits entgegen dem Diff und enthalten eine unbelegte Aussage über seine Bewährung. Die Versionsnummer 4.1.0 und die Migration zu `timeoutMs` passen zu den gezeigten Änderungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26317,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 252,
+  "reasoning_output_tokens": 88
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-d584-7d91-8cc7-35427e925159"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, das Limit werde zuverlässig und ausnahmslos von allen Workern einer Queue geteilt. Der Diff von #376 legt dagegen ausdrücklich einen eigenen, nicht geteilten Token Bucket pro Worker-Instanz an.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung bezeichnet den Rate Limiter als „proven“. Die Quellen enthalten keinen Beleg für diese Bewährung.\"}],\"reason\":\"Die Notes beschreiben den Geltungsbereich des Rate Limits entgegen dem Diff und enthalten eine unbelegte Aussage über seine Bewährung. Die Versionsnummer 4.1.0 und die Migration zu `timeoutMs` passen zu den gezeigten Änderungen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26317,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 252,
+    "reasoning_output_tokens": 88
+   }
+  }
+ ]
+}

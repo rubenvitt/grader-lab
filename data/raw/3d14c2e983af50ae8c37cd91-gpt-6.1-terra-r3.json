@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "3d14c2e983af50ae8c37cd91",
+ "meta": {
+  "experiment": "e3",
+  "release": "r2",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7997,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes versprechen, dass Worker ihre Locks bei Redis-Failovern ausnahmslos behalten und die Erneuerung garantiert automatisch neu verbindet (#334). Der Diff versucht bei `ECONNRESET` lediglich `pexpire` einmal erneut; er stellt weder eine Wiederverbindung noch den Erhalt des Locks sicher.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration zu `queue.purge({ status, olderThanMs })` erklärt nicht, dass der bisherige Wert von `graceMs` als `olderThanMs` übergeben werden muss. Der Diff verwendet dafür `queue.purge({ status, olderThanMs: graceMs })`.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung verwendet mit „unquestionably delivers“ und „conclusively settles“ werbende beziehungsweise überzogene Formulierungen.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag nennt nur „a security issue“. Er benennt nicht die betroffene Komponente `signing`, obwohl deren Nennung laut R5 erlaubt ist und Nutzern die Einordnung erleichtert.\"}],\"reason\":\"Die Notes enthalten unbelegte Garantien zur Lock-Erneuerung, einen unvollständigen Migrationsschritt und überzogene Formulierungen. Der Sicherheitseintrag lässt zudem die nach der Embargo-Regel zulässige und für Nutzer hilfreiche Komponente aus.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes versprechen, dass Worker ihre Locks bei Redis-Failovern ausnahmslos behalten und die Erneuerung garantiert automatisch neu verbindet (#334). Der Diff versucht bei `ECONNRESET` lediglich `pexpire` einmal erneut; er stellt weder eine Wiederverbindung noch den Erhalt des Locks sicher."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration zu `queue.purge({ status, olderThanMs })` erklärt nicht, dass der bisherige Wert von `graceMs` als `olderThanMs` übergeben werden muss. Der Diff verwendet dafür `queue.purge({ status, olderThanMs: graceMs })`."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Einleitung verwendet mit „unquestionably delivers“ und „conclusively settles“ werbende beziehungsweise überzogene Formulierungen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Sicherheitseintrag nennt nur „a security issue“. Er benennt nicht die betroffene Komponente `signing`, obwohl deren Nennung laut R5 erlaubt ist und Nutzern die Einordnung erleichtert."
+   }
+  ],
+  "reason": "Die Notes enthalten unbelegte Garantien zur Lock-Erneuerung, einen unvollständigen Migrationsschritt und überzogene Formulierungen. Der Sicherheitseintrag lässt zudem die nach der Embargo-Regel zulässige und für Nutzer hilfreiche Komponente aus.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26576,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 398,
+  "reasoning_output_tokens": 85
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-7ab6-7253-8274-7ea5b1621735"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes versprechen, dass Worker ihre Locks bei Redis-Failovern ausnahmslos behalten und die Erneuerung garantiert automatisch neu verbindet (#334). Der Diff versucht bei `ECONNRESET` lediglich `pexpire` einmal erneut; er stellt weder eine Wiederverbindung noch den Erhalt des Locks sicher.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration zu `queue.purge({ status, olderThanMs })` erklärt nicht, dass der bisherige Wert von `graceMs` als `olderThanMs` übergeben werden muss. Der Diff verwendet dafür `queue.purge({ status, olderThanMs: graceMs })`.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung verwendet mit „unquestionably delivers“ und „conclusively settles“ werbende beziehungsweise überzogene Formulierungen.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Sicherheitseintrag nennt nur „a security issue“. Er benennt nicht die betroffene Komponente `signing`, obwohl deren Nennung laut R5 erlaubt ist und Nutzern die Einordnung erleichtert.\"}],\"reason\":\"Die Notes enthalten unbelegte Garantien zur Lock-Erneuerung, einen unvollständigen Migrationsschritt und überzogene Formulierungen. Der Sicherheitseintrag lässt zudem die nach der Embargo-Regel zulässige und für Nutzer hilfreiche Komponente aus.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26576,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 398,
+    "reasoning_output_tokens": 85
+   }
+  }
+ ]
+}

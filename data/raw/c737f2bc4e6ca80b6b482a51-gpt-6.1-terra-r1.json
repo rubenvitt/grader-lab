@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "c737f2bc4e6ca80b6b482a51",
+ "meta": {
+  "experiment": "e4",
+  "release": "r2",
+  "variant": "naive-1",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5168,
+ "text": "{\"reason\":\"Fassung B nennt zusätzlich den Sicherheitsfix ohne verbotene Details. Fassung A zeigt den Migrationsaufruf dagegen genauer, während B die Zuordnung von `graceMs` zu `olderThanMs` offenlässt; ohne Diff und weitere Quellen lässt sich jedoch nicht beurteilen, welche dieser Aussagen zutrifft oder ob andere Anforderungen verletzt sind. Die Fassungen sind daher anhand des vorliegenden Materials nicht verlässlich gegeneinander zu gewichten.\",\"better\":\"equal\"}",
+ "parsed": {
+  "reason": "Fassung B nennt zusätzlich den Sicherheitsfix ohne verbotene Details. Fassung A zeigt den Migrationsaufruf dagegen genauer, während B die Zuordnung von `graceMs` zu `olderThanMs` offenlässt; ohne Diff und weitere Quellen lässt sich jedoch nicht beurteilen, welche dieser Aussagen zutrifft oder ob andere Anforderungen verletzt sind. Die Fassungen sind daher anhand des vorliegenden Materials nicht verlässlich gegeneinander zu gewichten.",
+  "better": "equal"
+ },
+ "usage": {
+  "input_tokens": 25370,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 109,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-3642-7d60-8359-2882747f216e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt zusätzlich den Sicherheitsfix ohne verbotene Details. Fassung A zeigt den Migrationsaufruf dagegen genauer, während B die Zuordnung von `graceMs` zu `olderThanMs` offenlässt; ohne Diff und weitere Quellen lässt sich jedoch nicht beurteilen, welche dieser Aussagen zutrifft oder ob andere Anforderungen verletzt sind. Die Fassungen sind daher anhand des vorliegenden Materials nicht verlässlich gegeneinander zu gewichten.\",\"better\":\"equal\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25370,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 109,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

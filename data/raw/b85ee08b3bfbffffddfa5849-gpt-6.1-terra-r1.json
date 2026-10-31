@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "b85ee08b3bfbffffddfa5849",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "naive-1",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 6835,
+ "text": "{\"reason\":\"Fassung B erklärt konkreter, was `max` und `perMs` für die Verarbeitung bedeuten, und nennt den Migrationsschritt unmittelbar beim veralteten Optionsnamen. Ob diese Details durch den Diff belegt sind und ob die Versionsnummer passt, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B erklärt konkreter, was `max` und `perMs` für die Verarbeitung bedeuten, und nennt den Migrationsschritt unmittelbar beim veralteten Optionsnamen. Ob diese Details durch den Diff belegt sind und ob die Versionsnummer passt, lässt sich ohne die Quellen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25262,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 220,
+  "reasoning_output_tokens": 139
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-d281-7ed2-bab7-b8a00561a812"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B erklärt konkreter, was `max` und `perMs` für die Verarbeitung bedeuten, und nennt den Migrationsschritt unmittelbar beim veralteten Optionsnamen. Ob diese Details durch den Diff belegt sind und ob die Versionsnummer passt, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25262,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 220,
+    "reasoning_output_tokens": 139
+   }
+  }
+ ]
+}

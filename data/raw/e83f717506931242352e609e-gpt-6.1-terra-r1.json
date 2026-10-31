@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "e83f717506931242352e609e",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "variant": "careful-1",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5258,
+ "text": "{\"reason\":\"Fassung A beschreibt den Fix bei Lock-Verlust klar, ohne einen weiteren Ablauf zu behaupten. Fassung B ergänzt nicht belegte Angaben zum Überschreiben des Zustands und zu einem späteren Advisory; beide Fassungen behandeln den Sicherheitshinweis ausreichend zurückhaltend.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A beschreibt den Fix bei Lock-Verlust klar, ohne einen weiteren Ablauf zu behaupten. Fassung B ergänzt nicht belegte Angaben zum Überschreiben des Zustands und zu einem späteren Advisory; beide Fassungen behandeln den Sicherheitshinweis ausreichend zurückhaltend.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25212,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 72,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-81d3-7570-afd2-1fc4f5b04e20"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A beschreibt den Fix bei Lock-Verlust klar, ohne einen weiteren Ablauf zu behaupten. Fassung B ergänzt nicht belegte Angaben zum Überschreiben des Zustands und zu einem späteren Advisory; beide Fassungen behandeln den Sicherheitshinweis ausreichend zurückhaltend.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25212,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 72,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

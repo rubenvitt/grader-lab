@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "9b21a8b55bce6943ae027ff3",
+ "meta": {
+  "experiment": "e3",
+  "release": "r5",
+  "variant": "invented-claim:confident",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6437,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat behauptet, Jitter sei der Standard für neue Queues. Laut Referenz ist die Strategie optional und muss ausdrücklich aktiviert werden. Auch „proven“ ist durch die Referenz nicht belegt.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind unsachlich beziehungsweise werbend.\"}],\"reason\":\"Der Kandidat gibt den Aktivierungsmodus der Jitter-Strategie falsch wieder und enthält unbelegte sowie unsachliche Formulierungen. Die übrigen nutzerrelevanten Änderungen und Migrationsschritte entsprechen der Referenz.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Kandidat behauptet, Jitter sei der Standard für neue Queues. Laut Referenz ist die Strategie optional und muss ausdrücklich aktiviert werden. Auch „proven“ ist durch die Referenz nicht belegt."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind unsachlich beziehungsweise werbend."
+   }
+  ],
+  "reason": "Der Kandidat gibt den Aktivierungsmodus der Jitter-Strategie falsch wieder und enthält unbelegte sowie unsachliche Formulierungen. Die übrigen nutzerrelevanten Änderungen und Migrationsschritte entsprechen der Referenz.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25689,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 161,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-0cd0-7ff2-b324-93f63d1dfc55"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Kandidat behauptet, Jitter sei der Standard für neue Queues. Laut Referenz ist die Strategie optional und muss ausdrücklich aktiviert werden. Auch „proven“ ist durch die Referenz nicht belegt.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind unsachlich beziehungsweise werbend.\"}],\"reason\":\"Der Kandidat gibt den Aktivierungsmodus der Jitter-Strategie falsch wieder und enthält unbelegte sowie unsachliche Formulierungen. Die übrigen nutzerrelevanten Änderungen und Migrationsschritte entsprechen der Referenz.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25689,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 161,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "625c36d67a69db9ddf032f32",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "variant": "naive-1",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5593,
+ "text": "{\"reason\":\"Fassung A ist besser: Sie vermeidet zusätzliche, durch das Prüfmaterial nicht belegte Aussagen, etwa dass die Warnung nur einmal erscheint oder der Worker zuvor unbegrenzt wartete. Außerdem erhält ihr Migrationshinweis für `worker.pause()` den bisherigen `drain`-Wert, während Fassung B pauschal `true` vorgibt.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser: Sie vermeidet zusätzliche, durch das Prüfmaterial nicht belegte Aussagen, etwa dass die Warnung nur einmal erscheint oder der Worker zuvor unbegrenzt wartete. Außerdem erhält ihr Migrationshinweis für `worker.pause()` den bisherigen `drain`-Wert, während Fassung B pauschal `true` vorgibt.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25526,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 126,
+  "reasoning_output_tokens": 34
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-114d-7420-8a51-fa73a68ffbbe"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser: Sie vermeidet zusätzliche, durch das Prüfmaterial nicht belegte Aussagen, etwa dass die Warnung nur einmal erscheint oder der Worker zuvor unbegrenzt wartete. Außerdem erhält ihr Migrationshinweis für `worker.pause()` den bisherigen `drain`-Wert, während Fassung B pauschal `true` vorgibt.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25526,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 126,
+    "reasoning_output_tokens": 34
+   }
+  }
+ ]
+}

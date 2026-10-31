@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d25b78ce7d20f7e6e205a4e0",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "careful-2",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4401,
+ "text": "{\"reason\":\"Fassung A enthält konkrete, nutzbare Release Notes; Fassung B enthält keinerlei Informationen. Da keine Diffs oder weiteren Quellen vorliegen, lassen sich die Aussagen und die Versionsnummer von A nicht unabhängig prüfen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A enthält konkrete, nutzbare Release Notes; Fassung B enthält keinerlei Informationen. Da keine Diffs oder weiteren Quellen vorliegen, lassen sich die Aussagen und die Versionsnummer von A nicht unabhängig prüfen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25152,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 60,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-001e-72a3-8c8e-dd128bfdaf72"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A enthält konkrete, nutzbare Release Notes; Fassung B enthält keinerlei Informationen. Da keine Diffs oder weiteren Quellen vorliegen, lassen sich die Aussagen und die Versionsnummer von A nicht unabhängig prüfen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25152,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 60,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

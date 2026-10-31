@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "fe4dffd859069731994566d4",
+ "meta": {
+  "experiment": "e3",
+  "release": "r1",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7372,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung behauptet, das Release löse die Aufbewahrung von Jobs endgültig und beseitige das Lock-Leck dauerhaft. #307 ändert nur den Standardwert von `removeOnComplete`; #304 fügt eine Freigabe im `finally`-Block hinzu. Die Diffs belegen keine so umfassenden Garantien.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #304 garantiert einen erneuten Versuch beim nächsten Poll. Der Diff zeigt nur, dass die Freigabe des Locks im `finally`-Block aufgerufen wird; ein erneuter Versuch oder dessen Zeitpunkt ist nicht belegt.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung verwendet mit „definitively resolves“, „fully delivers“ und „permanently eliminates“ übersteigerte Formulierungen statt eines sachlichen Tons.\"}],\"reason\":\"Die Notes enthalten unbelegte Garantien zum Aufbewahrungsverhalten und zur Behandlung fehlgeschlagener Jobs sowie übersteigerte Formulierungen. Der Breaking Change und die Migration sind korrekt eingeordnet; die zurückgenommenen Lanes erscheinen nicht in den Notes.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung behauptet, das Release löse die Aufbewahrung von Jobs endgültig und beseitige das Lock-Leck dauerhaft. #307 ändert nur den Standardwert von `removeOnComplete`; #304 fügt eine Freigabe im `finally`-Block hinzu. Die Diffs belegen keine so umfassenden Garantien."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #304 garantiert einen erneuten Versuch beim nächsten Poll. Der Diff zeigt nur, dass die Freigabe des Locks im `finally`-Block aufgerufen wird; ein erneuter Versuch oder dessen Zeitpunkt ist nicht belegt."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Einleitung verwendet mit „definitively resolves“, „fully delivers“ und „permanently eliminates“ übersteigerte Formulierungen statt eines sachlichen Tons."
+   }
+  ],
+  "reason": "Die Notes enthalten unbelegte Garantien zum Aufbewahrungsverhalten und zur Behandlung fehlgeschlagener Jobs sowie übersteigerte Formulierungen. Der Breaking Change und die Migration sind korrekt eingeordnet; die zurückgenommenen Lanes erscheinen nicht in den Notes.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26847,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 317,
+  "reasoning_output_tokens": 61
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-392e-7763-9848-b099200b5ddf"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung behauptet, das Release löse die Aufbewahrung von Jobs endgültig und beseitige das Lock-Leck dauerhaft. #307 ändert nur den Standardwert von `removeOnComplete`; #304 fügt eine Freigabe im `finally`-Block hinzu. Die Diffs belegen keine so umfassenden Garantien.\"},{\"criterion\":\"R2\",\"evidence\":\"Der Eintrag zu #304 garantiert einen erneuten Versuch beim nächsten Poll. Der Diff zeigt nur, dass die Freigabe des Locks im `finally`-Block aufgerufen wird; ein erneuter Versuch oder dessen Zeitpunkt ist nicht belegt.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Einleitung verwendet mit „definitively resolves“, „fully delivers“ und „permanently eliminates“ übersteigerte Formulierungen statt eines sachlichen Tons.\"}],\"reason\":\"Die Notes enthalten unbelegte Garantien zum Aufbewahrungsverhalten und zur Behandlung fehlgeschlagener Jobs sowie übersteigerte Formulierungen. Der Breaking Change und die Migration sind korrekt eingeordnet; die zurückgenommenen Lanes erscheinen nicht in den Notes.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26847,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 317,
+    "reasoning_output_tokens": 61
+   }
+  }
+ ]
+}

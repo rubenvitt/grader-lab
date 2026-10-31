@@ -1,0 +1,76 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "ae9e524f35fffbb332874d15",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "prompt": "careful",
+  "run": 2,
+  "turn": 3
+ },
+ "duration_ms": 8270,
+ "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"4.0.0\",\"notes\":\"# quaykit 4.0.0\\n\\nThis release adds a Postgres-backed store and fixes cron scheduling across daylight-saving changes. It also renames a public worker option and removes the CommonJS entry point, which require migration.\\n\\n## Breaking Changes\\n\\n- Rename `stalledIntervalMs` to `stallCheckMs` in `WorkerOptions`. Migration: replace `stalledIntervalMs` with `stallCheckMs`. (#351)\\n- The CommonJS `require` entry point is no longer exported. Migration: use the ESM import entry point. (#353)\\n\\n## Features\\n\\n- Add `PostgresStore`, exported from `quaykit/postgres`. (#355)\\n\\n## Fixes\\n\\n- Ensure cron jobs fire once after a daylight-saving time change. (#357)\\n\\n## Security\\n\\n- Dashboard: upgrade quaykit to address the reported issue. (#358)\\n\\n## Performance\\n\\n- Batch writes in `addBulk`. (#360) \" ,\"bump\":null,\"sections\":null},{\"tool\":\"finish\",\"id\":null,\"version\":\"4.0.0\",\"notes\":\"# quaykit 4.0.0\\n\\nThis release adds a Postgres-backed store and fixes cron scheduling across daylight-saving changes. It also renames a public worker option and removes the CommonJS entry point, which require migration.\\n\\n## Breaking Changes\\n\\n- Rename `stalledIntervalMs` to `stallCheckMs` in `WorkerOptions`. Migration: replace `stalledIntervalMs` with `stallCheckMs`. (#351)\\n- The CommonJS `require` entry point is no longer exported. Migration: use the ESM import entry point. (#353)\\n\\n## Features\\n\\n- Add `PostgresStore`, exported from `quaykit/postgres`. (#355)\\n\\n## Fixes\\n\\n- Ensure cron jobs fire once after a daylight-saving time change. (#357)\\n\\n## Security\\n\\n- Dashboard: upgrade quaykit to address the reported issue. (#358)\\n\\n## Performance\\n\\n- Batch writes in `addBulk`. (#360)\",\"bump\":\"major\",\"sections\":[\"Breaking Changes\",\"Features\",\"Fixes\",\"Security\",\"Performance\"]}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "publish_release",
+    "id": null,
+    "version": "4.0.0",
+    "notes": "# quaykit 4.0.0\n\nThis release adds a Postgres-backed store and fixes cron scheduling across daylight-saving changes. It also renames a public worker option and removes the CommonJS entry point, which require migration.\n\n## Breaking Changes\n\n- Rename `stalledIntervalMs` to `stallCheckMs` in `WorkerOptions`. Migration: replace `stalledIntervalMs` with `stallCheckMs`. (#351)\n- The CommonJS `require` entry point is no longer exported. Migration: use the ESM import entry point. (#353)\n\n## Features\n\n- Add `PostgresStore`, exported from `quaykit/postgres`. (#355)\n\n## Fixes\n\n- Ensure cron jobs fire once after a daylight-saving time change. (#357)\n\n## Security\n\n- Dashboard: upgrade quaykit to address the reported issue. (#358)\n\n## Performance\n\n- Batch writes in `addBulk`. (#360) ",
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "finish",
+    "id": null,
+    "version": "4.0.0",
+    "notes": "# quaykit 4.0.0\n\nThis release adds a Postgres-backed store and fixes cron scheduling across daylight-saving changes. It also renames a public worker option and removes the CommonJS entry point, which require migration.\n\n## Breaking Changes\n\n- Rename `stalledIntervalMs` to `stallCheckMs` in `WorkerOptions`. Migration: replace `stalledIntervalMs` with `stallCheckMs`. (#351)\n- The CommonJS `require` entry point is no longer exported. Migration: use the ESM import entry point. (#353)\n\n## Features\n\n- Add `PostgresStore`, exported from `quaykit/postgres`. (#355)\n\n## Fixes\n\n- Ensure cron jobs fire once after a daylight-saving time change. (#357)\n\n## Security\n\n- Dashboard: upgrade quaykit to address the reported issue. (#358)\n\n## Performance\n\n- Batch writes in `addBulk`. (#360)",
+    "bump": "major",
+    "sections": [
+     "Breaking Changes",
+     "Features",
+     "Fixes",
+     "Security",
+     "Performance"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 23341,
+  "cached_input_tokens": 19328,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 607,
+  "reasoning_output_tokens": 109
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-73d3-7a62-9e0c-39ba50d356eb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"4.0.0\",\"notes\":\"# quaykit 4.0.0\\n\\nThis release adds a Postgres-backed store and fixes cron scheduling across daylight-saving changes. It also renames a public worker option and removes the CommonJS entry point, which require migration.\\n\\n## Breaking Changes\\n\\n- Rename `stalledIntervalMs` to `stallCheckMs` in `WorkerOptions`. Migration: replace `stalledIntervalMs` with `stallCheckMs`. (#351)\\n- The CommonJS `require` entry point is no longer exported. Migration: use the ESM import entry point. (#353)\\n\\n## Features\\n\\n- Add `PostgresStore`, exported from `quaykit/postgres`. (#355)\\n\\n## Fixes\\n\\n- Ensure cron jobs fire once after a daylight-saving time change. (#357)\\n\\n## Security\\n\\n- Dashboard: upgrade quaykit to address the reported issue. (#358)\\n\\n## Performance\\n\\n- Batch writes in `addBulk`. (#360) \" ,\"bump\":null,\"sections\":null},{\"tool\":\"finish\",\"id\":null,\"version\":\"4.0.0\",\"notes\":\"# quaykit 4.0.0\\n\\nThis release adds a Postgres-backed store and fixes cron scheduling across daylight-saving changes. It also renames a public worker option and removes the CommonJS entry point, which require migration.\\n\\n## Breaking Changes\\n\\n- Rename `stalledIntervalMs` to `stallCheckMs` in `WorkerOptions`. Migration: replace `stalledIntervalMs` with `stallCheckMs`. (#351)\\n- The CommonJS `require` entry point is no longer exported. Migration: use the ESM import entry point. (#353)\\n\\n## Features\\n\\n- Add `PostgresStore`, exported from `quaykit/postgres`. (#355)\\n\\n## Fixes\\n\\n- Ensure cron jobs fire once after a daylight-saving time change. (#357)\\n\\n## Security\\n\\n- Dashboard: upgrade quaykit to address the reported issue. (#358)\\n\\n## Performance\\n\\n- Batch writes in `addBulk`. (#360)\",\"bump\":\"major\",\"sections\":[\"Breaking Changes\",\"Features\",\"Fixes\",\"Security\",\"Performance\"]}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 23341,
+    "cached_input_tokens": 19328,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 607,
+    "reasoning_output_tokens": 109
+   }
+  }
+ ]
+}

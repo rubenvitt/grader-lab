@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "1b15c539be6da4d24a6def0d",
+ "meta": {
+  "experiment": "e3",
+  "release": "r6",
+  "variant": "invented-claim:confident",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 4196,
+ "text": "{\"violations\":[],\"reason\":\"Aus dem Text allein ergeben sich keine nachweisbaren Verstöße. Ob die Formulierungen zur Fehlerbehebung und die Versionsnummer durch die Änderungen gedeckt sind, lässt sich ohne Quellen nicht prüfen.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Aus dem Text allein ergeben sich keine nachweisbaren Verstöße. Ob die Formulierungen zur Fehlerbehebung und die Versionsnummer durch die Änderungen gedeckt sind, lässt sich ohne Quellen nicht prüfen.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25193,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 61,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-4f47-7e23-8e2b-ac8f7d2e3735"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Aus dem Text allein ergeben sich keine nachweisbaren Verstöße. Ob die Formulierungen zur Fehlerbehebung und die Versionsnummer durch die Änderungen gedeckt sind, lässt sich ohne Quellen nicht prüfen.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25193,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 61,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

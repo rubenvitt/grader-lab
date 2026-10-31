@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "9b039dd565dd89080e48f2f8",
+ "meta": {
+  "experiment": "e4",
+  "release": "r2",
+  "variant": "naive-1",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6088,
+ "text": "{\"violations\":[{\"criterion\":\"R5\",\"evidence\":\"Der mit `embargo` gekennzeichnete Fix für die Signaturprüfung aus PR #336 fehlt in den Notes. Er muss ohne Details genannt werden; eine Upgrade-Empfehlung ist erlaubt.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt endet mit `queue.purge({ status, olderThanMs: graceMs })>` statt mit dem gültigen Aufruf `queue.purge({ status, olderThanMs: graceMs })`. Zudem fehlt das schließende Backtick.\"}],\"reason\":\"Die Diffs belegen ein neues Worker-Ereignis, einen gezielten Wiederholungsversuch bei `ECONNRESET`, einen embargo-belegten Fix und die neue `purge()`-Methode samt Deprecation von `clean()`. Die Version 3.1.0 passt zu den neuen Funktionen und der Deprecation, aber die Notes lassen den embargo-belegten Fix aus und enthalten einen fehlerhaften Migrationsschritt.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R5",
+    "evidence": "Der mit `embargo` gekennzeichnete Fix für die Signaturprüfung aus PR #336 fehlt in den Notes. Er muss ohne Details genannt werden; eine Upgrade-Empfehlung ist erlaubt."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Der Migrationsschritt endet mit `queue.purge({ status, olderThanMs: graceMs })>` statt mit dem gültigen Aufruf `queue.purge({ status, olderThanMs: graceMs })`. Zudem fehlt das schließende Backtick."
+   }
+  ],
+  "reason": "Die Diffs belegen ein neues Worker-Ereignis, einen gezielten Wiederholungsversuch bei `ECONNRESET`, einen embargo-belegten Fix und die neue `purge()`-Methode samt Deprecation von `clean()`. Die Version 3.1.0 passt zu den neuen Funktionen und der Deprecation, aber die Notes lassen den embargo-belegten Fix aus und enthalten einen fehlerhaften Migrationsschritt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26563,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 278,
+  "reasoning_output_tokens": 48
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-3642-7b61-b8bd-1b454fc495af"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R5\",\"evidence\":\"Der mit `embargo` gekennzeichnete Fix für die Signaturprüfung aus PR #336 fehlt in den Notes. Er muss ohne Details genannt werden; eine Upgrade-Empfehlung ist erlaubt.\"},{\"criterion\":\"R3\",\"evidence\":\"Der Migrationsschritt endet mit `queue.purge({ status, olderThanMs: graceMs })>` statt mit dem gültigen Aufruf `queue.purge({ status, olderThanMs: graceMs })`. Zudem fehlt das schließende Backtick.\"}],\"reason\":\"Die Diffs belegen ein neues Worker-Ereignis, einen gezielten Wiederholungsversuch bei `ECONNRESET`, einen embargo-belegten Fix und die neue `purge()`-Methode samt Deprecation von `clean()`. Die Version 3.1.0 passt zu den neuen Funktionen und der Deprecation, aber die Notes lassen den embargo-belegten Fix aus und enthalten einen fehlerhaften Migrationsschritt.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26563,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 278,
+    "reasoning_output_tokens": 48
+   }
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "9efae7872ab926671d422b29",
+ "meta": {
+  "experiment": "e4",
+  "release": "r2",
+  "variant": "careful-2",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5418,
+ "text": "{\"reason\":\"Fassung B zeigt den Migrationsschritt vollständig: Sie übergibt den bisherigen Wert `graceMs` als `olderThanMs`. In Fassung A bleibt offen, woher der Wert `olderThanMs` kommt; ob die Versionsnummern und übrigen Aussagen durch die Diffs gedeckt sind, lässt sich ohne diese Quellen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B zeigt den Migrationsschritt vollständig: Sie übergibt den bisherigen Wert `graceMs` als `olderThanMs`. In Fassung A bleibt offen, woher der Wert `olderThanMs` kommt; ob die Versionsnummern und übrigen Aussagen durch die Diffs gedeckt sind, lässt sich ohne diese Quellen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25395,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 137,
+  "reasoning_output_tokens": 45
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-6dc0-7e31-9d64-06ec7f304d45"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B zeigt den Migrationsschritt vollständig: Sie übergibt den bisherigen Wert `graceMs` als `olderThanMs`. In Fassung A bleibt offen, woher der Wert `olderThanMs` kommt; ob die Versionsnummern und übrigen Aussagen durch die Diffs gedeckt sind, lässt sich ohne diese Quellen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25395,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 137,
+    "reasoning_output_tokens": 45
+   }
+  }
+ ]
+}

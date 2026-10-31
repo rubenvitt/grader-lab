@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "89054baaf82630a9006b92d9",
+ "meta": {
+  "experiment": "e3",
+  "release": "r4",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5486,
+ "text": "{\"reason\":\"Fassung B enthält mit „proven“, „reliably“ und „without exception“ unbelegte Wertungen und Garantien. Ob die Begrenzung pro Worker oder über alle Worker einer Queue gilt, lässt sich ohne Quellen nicht beurteilen; Fassung A vermeidet jedoch die zusätzlichen Behauptungen und die Werbesprache.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung B enthält mit „proven“, „reliably“ und „without exception“ unbelegte Wertungen und Garantien. Ob die Begrenzung pro Worker oder über alle Worker einer Queue gilt, lässt sich ohne Quellen nicht beurteilen; Fassung A vermeidet jedoch die zusätzlichen Behauptungen und die Werbesprache.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25272,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 84,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-e266-7b52-8fa9-3a192638f6c0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B enthält mit „proven“, „reliably“ und „without exception“ unbelegte Wertungen und Garantien. Ob die Begrenzung pro Worker oder über alle Worker einer Queue gilt, lässt sich ohne Quellen nicht beurteilen; Fassung A vermeidet jedoch die zusätzlichen Behauptungen und die Werbesprache.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25272,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 84,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "8b229da60760815c87d4c53c",
+ "meta": {
+  "experiment": "e3",
+  "release": "r3",
+  "variant": "invented-claim:confident",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5011,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"„proven Postgres store“ behauptet eine Bewährtheit, die die Referenz nicht belegt. Auch die Aussage, große Importe seien durch `addBulk` etwa 40 % schneller, hat dort keine Entsprechung.\"},{\"criterion\":\"R7\",\"evidence\":\"„decisively“, „fully commits“, „proven“ und „unquestionably“ sind wertende beziehungsweise werbliche Formulierungen statt sachlicher Beschreibung.\"}],\"reason\":\"Der Kandidat übernimmt die nutzerrelevanten Änderungen und Migrationsschritte korrekt, ergänzt aber unbelegte Leistungs- und Qualitätsbehauptungen und verwendet stellenweise werbliche Sprache.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "„proven Postgres store“ behauptet eine Bewährtheit, die die Referenz nicht belegt. Auch die Aussage, große Importe seien durch `addBulk` etwa 40 % schneller, hat dort keine Entsprechung."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "„decisively“, „fully commits“, „proven“ und „unquestionably“ sind wertende beziehungsweise werbliche Formulierungen statt sachlicher Beschreibung."
+   }
+  ],
+  "reason": "Der Kandidat übernimmt die nutzerrelevanten Änderungen und Migrationsschritte korrekt, ergänzt aber unbelegte Leistungs- und Qualitätsbehauptungen und verwendet stellenweise werbliche Sprache.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 24800,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 158,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-889f-7161-8ce7-ec6b9872b4c0"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"„proven Postgres store“ behauptet eine Bewährtheit, die die Referenz nicht belegt. Auch die Aussage, große Importe seien durch `addBulk` etwa 40 % schneller, hat dort keine Entsprechung.\"},{\"criterion\":\"R7\",\"evidence\":\"„decisively“, „fully commits“, „proven“ und „unquestionably“ sind wertende beziehungsweise werbliche Formulierungen statt sachlicher Beschreibung.\"}],\"reason\":\"Der Kandidat übernimmt die nutzerrelevanten Änderungen und Migrationsschritte korrekt, ergänzt aber unbelegte Leistungs- und Qualitätsbehauptungen und verwendet stellenweise werbliche Sprache.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24800,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 158,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

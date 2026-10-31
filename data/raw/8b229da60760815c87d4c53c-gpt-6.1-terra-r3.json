@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "8b229da60760815c87d4c53c",
+ "meta": {
+  "experiment": "e3",
+  "release": "r3",
+  "variant": "invented-claim:confident",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 6611,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"„proven Postgres store“ behauptet eine Bewährung, für die es in der Referenz keinen Beleg gibt. Die Angabe, große Importe seien „about 40% faster“, ist ebenfalls nicht belegt.\"},{\"criterion\":\"R7\",\"evidence\":\"„decisively“, „fully commits“ und „proven“ sind werblich; „unquestionably“ verstärkt die unbelegte Leistungsbehauptung.\"}],\"reason\":\"Der Kandidat gibt die wesentlichen Änderungen und Migrationsschritte korrekt wieder, ergänzt aber unbelegte Behauptungen und werbliche Formulierungen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "„proven Postgres store“ behauptet eine Bewährung, für die es in der Referenz keinen Beleg gibt. Die Angabe, große Importe seien „about 40% faster“, ist ebenfalls nicht belegt."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "„decisively“, „fully commits“ und „proven“ sind werblich; „unquestionably“ verstärkt die unbelegte Leistungsbehauptung."
+   }
+  ],
+  "reason": "Der Kandidat gibt die wesentlichen Änderungen und Migrationsschritte korrekt wieder, ergänzt aber unbelegte Behauptungen und werbliche Formulierungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25650,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 150,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-ad57-7ff1-8585-6731e1583371"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"„proven Postgres store“ behauptet eine Bewährung, für die es in der Referenz keinen Beleg gibt. Die Angabe, große Importe seien „about 40% faster“, ist ebenfalls nicht belegt.\"},{\"criterion\":\"R7\",\"evidence\":\"„decisively“, „fully commits“ und „proven“ sind werblich; „unquestionably“ verstärkt die unbelegte Leistungsbehauptung.\"}],\"reason\":\"Der Kandidat gibt die wesentlichen Änderungen und Migrationsschritte korrekt wieder, ergänzt aber unbelegte Behauptungen und werbliche Formulierungen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25650,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 150,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

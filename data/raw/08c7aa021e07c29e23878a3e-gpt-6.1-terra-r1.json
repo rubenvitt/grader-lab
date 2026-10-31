@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "08c7aa021e07c29e23878a3e",
+ "meta": {
+  "experiment": "e4-r1",
+  "release": "r1",
+  "variant": "naive-1",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7732,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #307 ändert den öffentlichen Standardwert von `removeOnComplete` von `false` auf `true`. Nutzer, die abgeschlossene Jobs weiterhin behalten möchten, müssen ihre Konfiguration anpassen. Die Änderung steht unter „Performance“ statt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, PR #307 reduziere die Redis-Speichernutzung bei ausgelasteten Warteschlangen. Der Diff ändert lediglich den Standardwert von `removeOnComplete`; eine tatsächliche Speicherreduktion unter diesen Bedingungen wird dadurch nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Eintrag zu PR #307 nennt weder den geänderten Standardwert `removeOnComplete: true` noch, dass Nutzer für die bisherige Aufbewahrung `removeOnComplete: false` setzen müssen.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 2.3.3 nach 2.3.2. Die Änderung des Standardwerts in PR #307 ist gemäß Rubrik ein Breaking Change und verlangt einen Major-Sprung auf mindestens 3.0.0.\"\n    }\n  ],\n  \"reason\": \"Die Notes verschleiern eine inkompatible Änderung des Standardverhaltens und wählen dafür eine zu niedrige Versionsnummer. Außerdem ist die behauptete Speicherreduktion durch den Diff nicht belegt.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #307 ändert den öffentlichen Standardwert von `removeOnComplete` von `false` auf `true`. Nutzer, die abgeschlossene Jobs weiterhin behalten möchten, müssen ihre Konfiguration anpassen. Die Änderung steht unter „Performance“ statt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, PR #307 reduziere die Redis-Speichernutzung bei ausgelasteten Warteschlangen. Der Diff ändert lediglich den Standardwert von `removeOnComplete`; eine tatsächliche Speicherreduktion unter diesen Bedingungen wird dadurch nicht belegt."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Eintrag zu PR #307 nennt weder den geänderten Standardwert `removeOnComplete: true` noch, dass Nutzer für die bisherige Aufbewahrung `removeOnComplete: false` setzen müssen."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 2.3.3 nach 2.3.2. Die Änderung des Standardwerts in PR #307 ist gemäß Rubrik ein Breaking Change und verlangt einen Major-Sprung auf mindestens 3.0.0."
+   }
+  ],
+  "reason": "Die Notes verschleiern eine inkompatible Änderung des Standardverhaltens und wählen dafür eine zu niedrige Versionsnummer. Außerdem ist die behauptete Speicherreduktion durch den Diff nicht belegt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25922,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 346,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-196b-7752-a065-def89f7b9eeb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R1\",\n      \"evidence\": \"PR #307 ändert den öffentlichen Standardwert von `removeOnComplete` von `false` auf `true`. Nutzer, die abgeschlossene Jobs weiterhin behalten möchten, müssen ihre Konfiguration anpassen. Die Änderung steht unter „Performance“ statt unter „Breaking Changes“.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Notes behaupten, PR #307 reduziere die Redis-Speichernutzung bei ausgelasteten Warteschlangen. Der Diff ändert lediglich den Standardwert von `removeOnComplete`; eine tatsächliche Speicherreduktion unter diesen Bedingungen wird dadurch nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R8\",\n      \"evidence\": \"Der Eintrag zu PR #307 nennt weder den geänderten Standardwert `removeOnComplete: true` noch, dass Nutzer für die bisherige Aufbewahrung `removeOnComplete: false` setzen müssen.\"\n    },\n    {\n      \"criterion\": \"R9\",\n      \"evidence\": \"Die Notes nennen Version 2.3.3 nach 2.3.2. Die Änderung des Standardwerts in PR #307 ist gemäß Rubrik ein Breaking Change und verlangt einen Major-Sprung auf mindestens 3.0.0.\"\n    }\n  ],\n  \"reason\": \"Die Notes verschleiern eine inkompatible Änderung des Standardverhaltens und wählen dafür eine zu niedrige Versionsnummer. Außerdem ist die behauptete Speicherreduktion durch den Diff nicht belegt.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25922,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 346,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

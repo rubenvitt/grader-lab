@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "5b0e1bfde870d6f0a39344b0",
+ "meta": {
+  "experiment": "e3",
+  "release": "r3",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8011,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Bei #351 behaupten die Notes, es gebe keinen Alias und der alte Optionsname werde stillschweigend ignoriert. Der gezeigte Diff ersetzt den Namen im Interface und bei der Verwendung, belegt aber weder das Fehlen einer anderen Alias-Behandlung noch das Verhalten bei Übergabe des alten Namens.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage, Cron-Jobs würden nach einer Zeitumstellung nicht mehr doppelt ausgelöst, ist als allgemeine Garantie formuliert. #357 zeigt die Verwendung von `cron.next` mit `tz: 'UTC'`, belegt aber nicht, dass alle Fälle von doppelten Ausführungen behoben sind.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die behauptete Beschleunigung großer Importe um etwa 40 % ist nicht belegt. In #360 steht ausdrücklich, dass die Wirkung noch nicht gemessen wurde.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Ankündigung, Details zu #358 würden in einem separaten Advisory folgen, ist durch die Quellen nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Formulierungen wie „decisively“, „fully commits“, „proven Postgres store“ und „unquestionably“ sind wertend beziehungsweise werblich statt sachlich.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten unbelegte Aussagen und wertende Formulierungen. Die Breaking Changes und ihre Migrationen sind ansonsten erkennbar aufgeführt; der Major-Sprung von 3.1.0 auf 4.0.0 passt zum Inhalt.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Bei #351 behaupten die Notes, es gebe keinen Alias und der alte Optionsname werde stillschweigend ignoriert. Der gezeigte Diff ersetzt den Namen im Interface und bei der Verwendung, belegt aber weder das Fehlen einer anderen Alias-Behandlung noch das Verhalten bei Übergabe des alten Namens."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage, Cron-Jobs würden nach einer Zeitumstellung nicht mehr doppelt ausgelöst, ist als allgemeine Garantie formuliert. #357 zeigt die Verwendung von `cron.next` mit `tz: 'UTC'`, belegt aber nicht, dass alle Fälle von doppelten Ausführungen behoben sind."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die behauptete Beschleunigung großer Importe um etwa 40 % ist nicht belegt. In #360 steht ausdrücklich, dass die Wirkung noch nicht gemessen wurde."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Ankündigung, Details zu #358 würden in einem separaten Advisory folgen, ist durch die Quellen nicht belegt."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „decisively“, „fully commits“, „proven Postgres store“ und „unquestionably“ sind wertend beziehungsweise werblich statt sachlich."
+   }
+  ],
+  "reason": "Die Notes enthalten unbelegte Aussagen und wertende Formulierungen. Die Breaking Changes und ihre Migrationen sind ansonsten erkennbar aufgeführt; der Major-Sprung von 3.1.0 auf 4.0.0 passt zum Inhalt.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26939,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 473,
+  "reasoning_output_tokens": 77
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-9c38-7741-899f-7f025c1b2233"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Bei #351 behaupten die Notes, es gebe keinen Alias und der alte Optionsname werde stillschweigend ignoriert. Der gezeigte Diff ersetzt den Namen im Interface und bei der Verwendung, belegt aber weder das Fehlen einer anderen Alias-Behandlung noch das Verhalten bei Übergabe des alten Namens.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Aussage, Cron-Jobs würden nach einer Zeitumstellung nicht mehr doppelt ausgelöst, ist als allgemeine Garantie formuliert. #357 zeigt die Verwendung von `cron.next` mit `tz: 'UTC'`, belegt aber nicht, dass alle Fälle von doppelten Ausführungen behoben sind.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die behauptete Beschleunigung großer Importe um etwa 40 % ist nicht belegt. In #360 steht ausdrücklich, dass die Wirkung noch nicht gemessen wurde.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Die Ankündigung, Details zu #358 würden in einem separaten Advisory folgen, ist durch die Quellen nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Formulierungen wie „decisively“, „fully commits“, „proven Postgres store“ und „unquestionably“ sind wertend beziehungsweise werblich statt sachlich.\"\n    }\n  ],\n  \"reason\": \"Die Notes enthalten unbelegte Aussagen und wertende Formulierungen. Die Breaking Changes und ihre Migrationen sind ansonsten erkennbar aufgeführt; der Major-Sprung von 3.1.0 auf 4.0.0 passt zum Inhalt.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26939,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 473,
+    "reasoning_output_tokens": 77
+   }
+  }
+ ]
+}

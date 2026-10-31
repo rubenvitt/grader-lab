@@ -1,0 +1,63 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "4afd5cd528f559880b8fdea3",
+ "meta": {
+  "experiment": "e4-r1",
+  "release": "r1",
+  "variant": "naive-2",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 6098,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"„Remove completed jobs by default“ beschreibt eine Änderung des Standardverhaltens, steht aber unter „Performance“ statt unter „Breaking Changes“.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Änderung „Remove completed jobs by default“ ist ein Breaking Change. Dafür ist ein Major-Sprung erforderlich; angegeben ist Version 2.4.0.\"}],\"reason\":\"Die Notes benennen eine Änderung des Standardverhaltens, ordnen sie aber weder als Breaking Change ein noch weisen sie eine passende Major-Version aus. Die übrigen Kriterien lassen sich anhand des Textes nicht als verletzt feststellen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "„Remove completed jobs by default“ beschreibt eine Änderung des Standardverhaltens, steht aber unter „Performance“ statt unter „Breaking Changes“."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Änderung „Remove completed jobs by default“ ist ein Breaking Change. Dafür ist ein Major-Sprung erforderlich; angegeben ist Version 2.4.0."
+   }
+  ],
+  "reason": "Die Notes benennen eine Änderung des Standardverhaltens, ordnen sie aber weder als Breaking Change ein noch weisen sie eine passende Major-Version aus. Die übrigen Kriterien lassen sich anhand des Textes nicht als verletzt feststellen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25181,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 146,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-2d37-78f2-93d5-3d0ecc6e8152"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"„Remove completed jobs by default“ beschreibt eine Änderung des Standardverhaltens, steht aber unter „Performance“ statt unter „Breaking Changes“.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Änderung „Remove completed jobs by default“ ist ein Breaking Change. Dafür ist ein Major-Sprung erforderlich; angegeben ist Version 2.4.0.\"}],\"reason\":\"Die Notes benennen eine Änderung des Standardverhaltens, ordnen sie aber weder als Breaking Change ein noch weisen sie eine passende Major-Version aus. Die übrigen Kriterien lassen sich anhand des Textes nicht als verletzt feststellen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25181,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 146,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

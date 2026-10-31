@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "0a1ceab12447a02d71b44ba5",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "variant": "careful-2",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5405,
+ "text": "{\"reason\":\"Fassung A erhält bei der Migration von `worker.pause(true|false)` den jeweiligen Boolean-Wert; Fassung B empfiehlt pauschal `drain: true` und ändert damit für `false` das Verhalten. Ob die übrigen Aussagen durch die Diffs gedeckt sind, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A erhält bei der Migration von `worker.pause(true|false)` den jeweiligen Boolean-Wert; Fassung B empfiehlt pauschal `drain: true` und ändert damit für `false` das Verhalten. Ob die übrigen Aussagen durch die Diffs gedeckt sind, lässt sich ohne die Quellen nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25595,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 109,
+  "reasoning_output_tokens": 23
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-4d0c-75b0-bdf6-1025ac18e677"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A erhält bei der Migration von `worker.pause(true|false)` den jeweiligen Boolean-Wert; Fassung B empfiehlt pauschal `drain: true` und ändert damit für `false` das Verhalten. Ob die übrigen Aussagen durch die Diffs gedeckt sind, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25595,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 109,
+    "reasoning_output_tokens": 23
+   }
+  }
+ ]
+}

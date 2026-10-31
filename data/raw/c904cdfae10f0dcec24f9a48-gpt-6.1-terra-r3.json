@@ -1,0 +1,59 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "c904cdfae10f0dcec24f9a48",
+ "meta": {
+  "experiment": "e3",
+  "release": "r2",
+  "variant": "invented-claim:confident",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5587,
+ "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"„This release unquestionably delivers“ und „conclusively settles“ sind werblich und überzogen.\"}],\"reason\":\"Die Einleitung verwendet einen unsachlich werblichen Ton. Ob die übrigen Aussagen und Garantien durch die Änderungen gedeckt sind, lässt sich ohne Quellen nicht prüfen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R7",
+    "evidence": "„This release unquestionably delivers“ und „conclusively settles“ sind werblich und überzogen."
+   }
+  ],
+  "reason": "Die Einleitung verwendet einen unsachlich werblichen Ton. Ob die übrigen Aussagen und Garantien durch die Änderungen gedeckt sind, lässt sich ohne Quellen nicht prüfen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25252,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 87,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-8579-7732-959b-e3e3352a3983"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R7\",\"evidence\":\"„This release unquestionably delivers“ und „conclusively settles“ sind werblich und überzogen.\"}],\"reason\":\"Die Einleitung verwendet einen unsachlich werblichen Ton. Ob die übrigen Aussagen und Garantien durch die Änderungen gedeckt sind, lässt sich ohne Quellen nicht prüfen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25252,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 87,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

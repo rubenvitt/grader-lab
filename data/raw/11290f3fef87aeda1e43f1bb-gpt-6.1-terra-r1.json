@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "11290f3fef87aeda1e43f1bb",
+ "meta": {
+  "experiment": "e3",
+  "release": "r1",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4869,
+ "text": "{\"reason\":\"Fassung B ist sachlicher und vermeidet die unbelegte Garantie aus Fassung A, dass der Job beim nächsten Poll erneut versucht wird. Beide Fassungen enthalten dieselben übrigen konkreten Einträge; ohne die zugrunde liegenden Diffs lassen sich deren Aussagen nicht abschließend prüfen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B ist sachlicher und vermeidet die unbelegte Garantie aus Fassung A, dass der Job beim nächsten Poll erneut versucht wird. Beide Fassungen enthalten dieselben übrigen konkreten Einträge; ohne die zugrunde liegenden Diffs lassen sich deren Aussagen nicht abschließend prüfen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25393,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 75,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-2635-75c0-b030-6c747ab239c7"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B ist sachlicher und vermeidet die unbelegte Garantie aus Fassung A, dass der Job beim nächsten Poll erneut versucht wird. Beide Fassungen enthalten dieselben übrigen konkreten Einträge; ohne die zugrunde liegenden Diffs lassen sich deren Aussagen nicht abschließend prüfen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25393,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 75,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

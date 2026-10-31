@@ -1,0 +1,62 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "a8fa0421b245cea127c84d18",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "prompt": "naive",
+  "run": 2,
+  "turn": 3
+ },
+ "duration_ms": 8320,
+ "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"5.0.1\",\"notes\":\"# quaykit 5.0.1\\n\\nFixes a worker state race that could occur when a job lock expired during processing.\\n\\n## Fixes\\n\\n- Prevents `complete()` from acknowledging a job or overwriting state after the lock is lost. (#413)\",\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "publish_release",
+    "id": null,
+    "version": "5.0.1",
+    "notes": "# quaykit 5.0.1\n\nFixes a worker state race that could occur when a job lock expired during processing.\n\n## Fixes\n\n- Prevents `complete()` from acknowledging a job or overwriting state after the lock is lost. (#413)",
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 43065,
+  "cached_input_tokens": 40576,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 267,
+  "reasoning_output_tokens": 119
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-a487-7ce3-87ae-1adc7cead262"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"5.0.1\",\"notes\":\"# quaykit 5.0.1\\n\\nFixes a worker state race that could occur when a job lock expired during processing.\\n\\n## Fixes\\n\\n- Prevents `complete()` from acknowledging a job or overwriting state after the lock is lost. (#413)\",\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 43065,
+    "cached_input_tokens": 40576,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 267,
+    "reasoning_output_tokens": 119
+   }
+  }
+ ]
+}

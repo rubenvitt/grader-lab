@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "0da66af32b6719d6aab49935",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "variant": "careful-2",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 6577,
+ "text": "{\"reason\":\"Fassung B wahrt das Embargo besser: Sie nennt die betroffene Komponente und empfiehlt das Upgrade, während Fassung A die Behandlung von PostgreSQL-Schemanamen als Änderung preisgibt. Ob die Aussagen zum Worker durch den Diff belegt sind, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B wahrt das Embargo besser: Sie nennt die betroffene Komponente und empfiehlt das Upgrade, während Fassung A die Behandlung von PostgreSQL-Schemanamen als Änderung preisgibt. Ob die Aussagen zum Worker durch den Diff belegt sind, lässt sich ohne die Quellen nicht beurteilen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25206,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 212,
+  "reasoning_output_tokens": 131
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-9537-7403-ac2c-9d9f5dae5314"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B wahrt das Embargo besser: Sie nennt die betroffene Komponente und empfiehlt das Upgrade, während Fassung A die Behandlung von PostgreSQL-Schemanamen als Änderung preisgibt. Ob die Aussagen zum Worker durch den Diff belegt sind, lässt sich ohne die Quellen nicht beurteilen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25206,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 212,
+    "reasoning_output_tokens": 131
+   }
+  }
+ ]
+}

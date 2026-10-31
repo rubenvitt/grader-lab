@@ -1,0 +1,62 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "aae3a1f3b45d34d3c646abb8",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "prompt": "careful",
+  "run": 1,
+  "turn": 5
+ },
+ "duration_ms": 7219,
+ "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"5.0.1\",\"notes\":\"# quaykit 5.0.1\\n\\nThis patch release prevents workers from acknowledging jobs after losing their lock and includes a PostgreSQL store security fix.\\n\\n## Fixes\\n\\n- A worker that no longer holds a job lock emits `lockLost` and does not acknowledge the job. (#413)\\n\\n## Security\\n\\n- PostgreSQL store: upgrade to this release. (#414)\",\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "publish_release",
+    "id": null,
+    "version": "5.0.1",
+    "notes": "# quaykit 5.0.1\n\nThis patch release prevents workers from acknowledging jobs after losing their lock and includes a PostgreSQL store security fix.\n\n## Fixes\n\n- A worker that no longer holds a job lock emits `lockLost` and does not acknowledge the job. (#413)\n\n## Security\n\n- PostgreSQL store: upgrade to this release. (#414)",
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 45709,
+  "cached_input_tokens": 34816,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 339,
+  "reasoning_output_tokens": 176
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-0a2a-7530-acac-32a73053b77e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"5.0.1\",\"notes\":\"# quaykit 5.0.1\\n\\nThis patch release prevents workers from acknowledging jobs after losing their lock and includes a PostgreSQL store security fix.\\n\\n## Fixes\\n\\n- A worker that no longer holds a job lock emits `lockLost` and does not acknowledge the job. (#413)\\n\\n## Security\\n\\n- PostgreSQL store: upgrade to this release. (#414)\",\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 45709,
+    "cached_input_tokens": 34816,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 339,
+    "reasoning_output_tokens": 176
+   }
+  }
+ ]
+}

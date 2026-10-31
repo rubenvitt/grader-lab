@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "e8f7c10bb5435019eed1b665",
+ "meta": {
+  "experiment": "e3",
+  "release": "r1",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4403,
+ "text": "{\"reason\":\"Fassung A ist sachlicher und vermeidet die unbelegten Garantien und Superlative in Fassung B. Insbesondere behauptet B zusätzlich eine garantierte Wiederholung beim nächsten Poll, für die im Prüfmaterial kein Beleg vorliegt.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist sachlicher und vermeidet die unbelegten Garantien und Superlative in Fassung B. Insbesondere behauptet B zusätzlich eine garantierte Wiederholung beim nächsten Poll, für die im Prüfmaterial kein Beleg vorliegt.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25393,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 67,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-3a92-7fc0-8a59-b679148279a5"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist sachlicher und vermeidet die unbelegten Garantien und Superlative in Fassung B. Insbesondere behauptet B zusätzlich eine garantierte Wiederholung beim nächsten Poll, für die im Prüfmaterial kein Beleg vorliegt.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25393,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 67,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

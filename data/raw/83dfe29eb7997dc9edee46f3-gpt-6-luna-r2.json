@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "83dfe29eb7997dc9edee46f3",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "prompt": "naive",
+  "run": 2,
+  "turn": 3
+ },
+ "duration_ms": 8287,
+ "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"4.1.0\",\"notes\":\"# quaykit 4.1.0\\n\\nAdds a per-worker rate limiter to help keep downstream API usage within configured limits. Deprecates the job option `timeout` in favor of `timeoutMs`; the old option continues to work and logs a warning once.\\n\\n## Features\\n\\n- Add worker rate limiting with `limiter: { max, perMs }`. (#376)\\n\\n## Deprecations\\n\\n- Deprecate job option `timeout` in favor of `timeoutMs`; migrate by renaming the option. (#378)\\n  Migration: Replace `timeout` with `timeoutMs` in job options.\" ,\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "publish_release",
+    "id": null,
+    "version": "4.1.0",
+    "notes": "# quaykit 4.1.0\n\nAdds a per-worker rate limiter to help keep downstream API usage within configured limits. Deprecates the job option `timeout` in favor of `timeoutMs`; the old option continues to work and logs a warning once.\n\n## Features\n\n- Add worker rate limiting with `limiter: { max, perMs }`. (#376)\n\n## Deprecations\n\n- Deprecate job option `timeout` in favor of `timeoutMs`; migrate by renaming the option. (#378)\n  Migration: Replace `timeout` with `timeoutMs` in job options.",
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 43781,
+  "cached_input_tokens": 40960,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 422,
+  "reasoning_output_tokens": 129
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-8afb-7583-9bd8-b4b370577f0e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "Ich berücksichtige nur die tatsächlich wirksamen gemergten Änderungen: den erneut eingeführten Rate Limiter und die Timeout-Deprecation; der revertierte PR wird nicht als Feature aufgeführt."
+   }
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_1",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"4.1.0\",\"notes\":\"# quaykit 4.1.0\\n\\nAdds a per-worker rate limiter to help keep downstream API usage within configured limits. Deprecates the job option `timeout` in favor of `timeoutMs`; the old option continues to work and logs a warning once.\\n\\n## Features\\n\\n- Add worker rate limiting with `limiter: { max, perMs }`. (#376)\\n\\n## Deprecations\\n\\n- Deprecate job option `timeout` in favor of `timeoutMs`; migrate by renaming the option. (#378)\\n  Migration: Replace `timeout` with `timeoutMs` in job options.\" ,\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 43781,
+    "cached_input_tokens": 40960,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 422,
+    "reasoning_output_tokens": 129
+   }
+  }
+ ]
+}

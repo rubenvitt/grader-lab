@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "1b15c539be6da4d24a6def0d",
+ "meta": {
+  "experiment": "e3",
+  "release": "r6",
+  "variant": "invented-claim:confident",
+  "grader": "judge-blind"
+ },
+ "duration_ms": 5090,
+ "text": "{\"violations\":[],\"reason\":\"Die Notes benennen konkrete Änderungen und geben beim Sicherheitsfix keine unzulässigen Details preis. Ob die Aussagen und Garantien durch die Quellen gedeckt sind, lässt sich anhand des Textes allein nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}",
+ "parsed": {
+  "violations": [],
+  "reason": "Die Notes benennen konkrete Änderungen und geben beim Sicherheitsfix keine unzulässigen Details preis. Ob die Aussagen und Garantien durch die Quellen gedeckt sind, lässt sich anhand des Textes allein nicht prüfen und gilt daher als erfüllt.",
+  "pass": true
+ },
+ "usage": {
+  "input_tokens": 25195,
+  "cached_input_tokens": 0,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 139,
+  "reasoning_output_tokens": 69
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-714a-7f92-b580-f2ff7f3a5c4a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[],\"reason\":\"Die Notes benennen konkrete Änderungen und geben beim Sicherheitsfix keine unzulässigen Details preis. Ob die Aussagen und Garantien durch die Quellen gedeckt sind, lässt sich anhand des Textes allein nicht prüfen und gilt daher als erfüllt.\",\"pass\":true}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25195,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 139,
+    "reasoning_output_tokens": 69
+   }
+  }
+ ]
+}

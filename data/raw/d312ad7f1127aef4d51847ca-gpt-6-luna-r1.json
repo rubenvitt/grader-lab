@@ -1,0 +1,70 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "d312ad7f1127aef4d51847ca",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "prompt": "naive",
+  "run": 1,
+  "turn": 3
+ },
+ "duration_ms": 6232,
+ "text": "{\"calls\":[{\"tool\":\"get_diff\",\"id\":353,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":351,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "get_diff",
+    "id": 353,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   },
+   {
+    "tool": "get_diff",
+    "id": 351,
+    "version": null,
+    "notes": null,
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 21697,
+  "cached_input_tokens": 19200,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 191,
+  "reasoning_output_tokens": 122
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-5db6-7721-9d96-b6de3a9ec770"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"get_diff\",\"id\":353,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null},{\"tool\":\"get_diff\",\"id\":351,\"version\":null,\"notes\":null,\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 21697,
+    "cached_input_tokens": 19200,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 191,
+    "reasoning_output_tokens": 122
+   }
+  }
+ ]
+}

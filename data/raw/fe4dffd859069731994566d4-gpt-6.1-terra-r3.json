@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "fe4dffd859069731994566d4",
+ "meta": {
+  "experiment": "e3",
+  "release": "r1",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6893,
+ "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #307 behauptet, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff belegt lediglich die Änderung des Standardwerts von `removeOnComplete` auf `true`, nicht das konkrete Abrufverhalten.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #304 garantiert einen erneuten Versuch beim nächsten Poll. Der Diff zeigt, dass das Lock im `finally`-Block freigegeben wird; eine Wiederholung oder deren Zeitpunkt ist daraus nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Die Einleitung verwendet mit „definitively resolves“, „fully delivers“ und „permanently eliminates“ werbliche beziehungsweise übersteigerte Formulierungen.\"\n    }\n  ],\n  \"reason\": \"Die Notes beschreiben die wesentlichen Nutzeränderungen und den Major-Sprung, enthalten aber unbelegte Aussagen und übersteigerte Formulierungen.\",\n  \"pass\": false\n}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #307 behauptet, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff belegt lediglich die Änderung des Standardwerts von `removeOnComplete` auf `true`, nicht das konkrete Abrufverhalten."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Der Eintrag zu #304 garantiert einen erneuten Versuch beim nächsten Poll. Der Diff zeigt, dass das Lock im `finally`-Block freigegeben wird; eine Wiederholung oder deren Zeitpunkt ist daraus nicht belegt."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Einleitung verwendet mit „definitively resolves“, „fully delivers“ und „permanently eliminates“ werbliche beziehungsweise übersteigerte Formulierungen."
+   }
+  ],
+  "reason": "Die Notes beschreiben die wesentlichen Nutzeränderungen und den Major-Sprung, enthalten aber unbelegte Aussagen und übersteigerte Formulierungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26843,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 290,
+  "reasoning_output_tokens": 41
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-404c-7a73-954f-b3d01c9aa64a"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\n  \"violations\": [\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #307 behauptet, ein abgeschlossener Job könne ohne Opt-in nicht mehr aus der Queue abgerufen werden. Der Diff belegt lediglich die Änderung des Standardwerts von `removeOnComplete` auf `true`, nicht das konkrete Abrufverhalten.\"\n    },\n    {\n      \"criterion\": \"R2\",\n      \"evidence\": \"Der Eintrag zu #304 garantiert einen erneuten Versuch beim nächsten Poll. Der Diff zeigt, dass das Lock im `finally`-Block freigegeben wird; eine Wiederholung oder deren Zeitpunkt ist daraus nicht belegt.\"\n    },\n    {\n      \"criterion\": \"R7\",\n      \"evidence\": \"Die Einleitung verwendet mit „definitively resolves“, „fully delivers“ und „permanently eliminates“ werbliche beziehungsweise übersteigerte Formulierungen.\"\n    }\n  ],\n  \"reason\": \"Die Notes beschreiben die wesentlichen Nutzeränderungen und den Major-Sprung, enthalten aber unbelegte Aussagen und übersteigerte Formulierungen.\",\n  \"pass\": false\n}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26843,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 290,
+    "reasoning_output_tokens": 41
+   }
+  }
+ ]
+}

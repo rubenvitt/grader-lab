@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "89054baaf82630a9006b92d9",
+ "meta": {
+  "experiment": "e3",
+  "release": "r4",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5027,
+ "text": "{\"reason\":\"Fassung B behauptet zusätzlich eine ausnahmslos zuverlässige, gemeinsam genutzte Begrenzung und bezeichnet sie als erprobt; dafür liegen keine Belege vor. Fassung A enthält ebenfalls eine unbelegte Aussage zur Begrenzung pro Worker-Instanz, verzichtet aber auf die weiteren unbelegten Garantien und die Werbesprache.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung B behauptet zusätzlich eine ausnahmslos zuverlässige, gemeinsam genutzte Begrenzung und bezeichnet sie als erprobt; dafür liegen keine Belege vor. Fassung A enthält ebenfalls eine unbelegte Aussage zur Begrenzung pro Worker-Instanz, verzichtet aber auf die weiteren unbelegten Garantien und die Werbesprache.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25270,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 89,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-ce98-7492-9b8f-89a12b0d5f9c"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B behauptet zusätzlich eine ausnahmslos zuverlässige, gemeinsam genutzte Begrenzung und bezeichnet sie als erprobt; dafür liegen keine Belege vor. Fassung A enthält ebenfalls eine unbelegte Aussage zur Begrenzung pro Worker-Instanz, verzichtet aber auf die weiteren unbelegten Garantien und die Werbesprache.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25270,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 89,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

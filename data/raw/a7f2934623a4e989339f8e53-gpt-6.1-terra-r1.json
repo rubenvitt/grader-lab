@@ -1,0 +1,62 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "a7f2934623a4e989339f8e53",
+ "meta": {
+  "experiment": "e3",
+  "release": "r5",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 7736,
+ "text": "{\"reason\":\"Fassung A ist sachlicher; Fassung B verwendet unbelegte Wertungen wie „proven“ und „conclusively“. Zudem behauptet B, die Jitter-Strategie sei der neue Standard, während A sie als optional beschreibt; ohne Quellen lässt sich diese Abweichung nicht auflösen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist sachlicher; Fassung B verwendet unbelegte Wertungen wie „proven“ und „conclusively“. Zudem behauptet B, die Jitter-Strategie sei der neue Standard, während A sie als optional beschreibt; ohne Quellen lässt sich diese Abweichung nicht auflösen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25584,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 78,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-072b-7f02-b686-6b286168ceeb"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361aedbe3de504-TXL)"
+  },
+  {
+   "type": "error",
+   "message": "Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: a5361af2a89fe51b-TXL)"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist sachlicher; Fassung B verwendet unbelegte Wertungen wie „proven“ und „conclusively“. Zudem behauptet B, die Jitter-Strategie sei der neue Standard, während A sie als optional beschreibt; ohne Quellen lässt sich diese Abweichung nicht auflösen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25584,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 78,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

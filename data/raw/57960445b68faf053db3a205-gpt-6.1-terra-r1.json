@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "57960445b68faf053db3a205",
+ "meta": {
+  "experiment": "e3",
+  "release": "r2",
+  "variant": "invented-claim:confident",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 5773,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Fix-Eintrag behauptet, dass Worker ihre Locks bei Redis-Failovern ausnahmslos behalten und die Erneuerung garantiert automatisch neu verbindet. Die Referenz belegt nur einen erneuten Versuch nach `ECONNRESET`.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Fix-Eintrag nennt den konkreten Auslöser `ECONNRESET` und den einmaligen erneuten Versuch nicht. Dadurch ist die tatsächliche Änderung für Nutzer nicht erkennbar.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „unquestionably delivers“ und „conclusively settles“ sind werblich und nicht sachlich.\"}],\"reason\":\"Der Kandidat beschreibt die Lock-Erneuerung mit unbelegten Garantien und lässt das tatsächlich geänderte Verhalten aus. Außerdem enthält die Einleitung unsachliche Formulierungen.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Der Fix-Eintrag behauptet, dass Worker ihre Locks bei Redis-Failovern ausnahmslos behalten und die Erneuerung garantiert automatisch neu verbindet. Die Referenz belegt nur einen erneuten Versuch nach `ECONNRESET`."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Fix-Eintrag nennt den konkreten Auslöser `ECONNRESET` und den einmaligen erneuten Versuch nicht. Dadurch ist die tatsächliche Änderung für Nutzer nicht erkennbar."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „unquestionably delivers“ und „conclusively settles“ sind werblich und nicht sachlich."
+   }
+  ],
+  "reason": "Der Kandidat beschreibt die Lock-Erneuerung mit unbelegten Garantien und lässt das tatsächlich geänderte Verhalten aus. Außerdem enthält die Einleitung unsachliche Formulierungen.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25492,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 204,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-55f1-74c2-8834-cf926ed1a394"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Der Fix-Eintrag behauptet, dass Worker ihre Locks bei Redis-Failovern ausnahmslos behalten und die Erneuerung garantiert automatisch neu verbindet. Die Referenz belegt nur einen erneuten Versuch nach `ECONNRESET`.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Fix-Eintrag nennt den konkreten Auslöser `ECONNRESET` und den einmaligen erneuten Versuch nicht. Dadurch ist die tatsächliche Änderung für Nutzer nicht erkennbar.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „unquestionably delivers“ und „conclusively settles“ sind werblich und nicht sachlich.\"}],\"reason\":\"Der Kandidat beschreibt die Lock-Erneuerung mit unbelegten Garantien und lässt das tatsächlich geänderte Verhalten aus. Außerdem enthält die Einleitung unsachliche Formulierungen.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25492,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 204,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

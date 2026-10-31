@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "f1038de6cc9aed26fb727986",
+ "meta": {
+  "experiment": "e4",
+  "release": "r5",
+  "variant": "careful-1",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5425,
+ "text": "{\"reason\":\"Fassung A gibt für die Migration von `Queue.clean()` die Zuordnung von `graceMs` zu `olderThanMs` ausdrücklich an und erhält bei `worker.pause()` den bisherigen booleschen Wert. Fassung B empfiehlt dagegen pauschal `drain: true` und enthält zusätzliche Aussagen, deren Beleg sich aus dem vorliegenden Material nicht prüfen lässt.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A gibt für die Migration von `Queue.clean()` die Zuordnung von `graceMs` zu `olderThanMs` ausdrücklich an und erhält bei `worker.pause()` den bisherigen booleschen Wert. Fassung B empfiehlt dagegen pauschal `drain: true` und enthält zusätzliche Aussagen, deren Beleg sich aus dem vorliegenden Material nicht prüfen lässt.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24736,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 92,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a1941a-37d9-7311-aed0-2087474ea0ae"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A gibt für die Migration von `Queue.clean()` die Zuordnung von `graceMs` zu `olderThanMs` ausdrücklich an und erhält bei `worker.pause()` den bisherigen booleschen Wert. Fassung B empfiehlt dagegen pauschal `drain: true` und enthält zusätzliche Aussagen, deren Beleg sich aus dem vorliegenden Material nicht prüfen lässt.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24736,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 92,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

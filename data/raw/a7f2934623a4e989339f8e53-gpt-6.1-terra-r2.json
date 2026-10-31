@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "a7f2934623a4e989339f8e53",
+ "meta": {
+  "experiment": "e3",
+  "release": "r5",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5961,
+ "text": "{\"reason\":\"Fassung A ist sachlicher; Fassung B verwendet wertende und unbelegte Formulierungen wie „proven“ und „without question“. Ob Jitter standardmäßig aktiviert oder opt-in ist, lässt sich ohne die Diffs nicht beurteilen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist sachlicher; Fassung B verwendet wertende und unbelegte Formulierungen wie „proven“ und „without question“. Ob Jitter standardmäßig aktiviert oder opt-in ist, lässt sich ohne die Diffs nicht beurteilen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25584,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 96,
+  "reasoning_output_tokens": 27
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-25f5-7651-9f2d-acf3588ed8a7"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist sachlicher; Fassung B verwendet wertende und unbelegte Formulierungen wie „proven“ und „without question“. Ob Jitter standardmäßig aktiviert oder opt-in ist, lässt sich ohne die Diffs nicht beurteilen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25584,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 96,
+    "reasoning_output_tokens": 27
+   }
+  }
+ ]
+}

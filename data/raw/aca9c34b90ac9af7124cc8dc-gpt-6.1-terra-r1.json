@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "aca9c34b90ac9af7124cc8dc",
+ "meta": {
+  "experiment": "e4",
+  "release": "r2",
+  "variant": "careful-1",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 5622,
+ "text": "{\"reason\":\"Fassung B nennt den konkreten Migrationsschritt mit der Zuordnung `olderThanMs: graceMs` und benennt beim Security-Hinweis die betroffene Komponente, ohne verbotene Details preiszugeben. Fassung A lässt die Zuordnung des bisherigen Arguments `graceMs` offen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B nennt den konkreten Migrationsschritt mit der Zuordnung `olderThanMs: graceMs` und benennt beim Security-Hinweis die betroffene Komponente, ohne verbotene Details preiszugeben. Fassung A lässt die Zuordnung des bisherigen Arguments `graceMs` offen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25396,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 119,
+  "reasoning_output_tokens": 38
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-5ca0-7962-a0c2-6edc73286fdd"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B nennt den konkreten Migrationsschritt mit der Zuordnung `olderThanMs: graceMs` und benennt beim Security-Hinweis die betroffene Komponente, ohne verbotene Details preiszugeben. Fassung A lässt die Zuordnung des bisherigen Arguments `graceMs` offen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25396,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 119,
+    "reasoning_output_tokens": 38
+   }
+  }
+ ]
+}

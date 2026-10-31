@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "dae2bc84b9f0d1a9aef80f87",
+ "meta": {
+  "experiment": "e3",
+  "release": "r2",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4297,
+ "text": "{\"reason\":\"Fassung A beschreibt die Änderung an der Lock-Erneuerung konkret und zurückhaltend. Fassung B behauptet dagegen ausnahmslose Garantien und verwendet werbliche Formulierungen; die behaupteten Garantien lassen sich aus den vorliegenden Texten nicht belegen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A beschreibt die Änderung an der Lock-Erneuerung konkret und zurückhaltend. Fassung B behauptet dagegen ausnahmslose Garantien und verwendet werbliche Formulierungen; die behaupteten Garantien lassen sich aus den vorliegenden Texten nicht belegen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 24535,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 73,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-601c-7892-9a3a-927e50a3c060"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A beschreibt die Änderung an der Lock-Erneuerung konkret und zurückhaltend. Fassung B behauptet dagegen ausnahmslose Garantien und verwendet werbliche Formulierungen; die behaupteten Garantien lassen sich aus den vorliegenden Texten nicht belegen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 24535,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 73,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

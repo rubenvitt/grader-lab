@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "b9471fcee2fd268907689559",
+ "meta": {
+  "experiment": "e4-r1",
+  "release": "r1",
+  "variant": "naive-2",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7552,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #307 ändert `removeOnComplete` von `false` auf `true`. Die Notes nennen die Änderung nur unter „Performance“, obwohl Nutzer, die abgeschlossene Jobs behalten wollen, ihre Konfiguration anpassen müssen.\"},{\"criterion\":\"R8\",\"evidence\":\"Die Notes nennen den neuen Standard `removeOnComplete: true`, allerdings nur indirekt als Entfernung abgeschlossener Jobs. Sie erklären nicht, dass Nutzer zum bisherigen Verhalten `removeOnComplete: false` setzen müssen.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 2.3.2. Der geänderte Standard aus PR #307 ist eine Breaking Change und verlangt einen Major-Sprung; die Notes nennen stattdessen Version 2.4.0.\"}],\"reason\":\"Die Notes decken die relevanten Änderungen ab und lassen die zurückgenommenen Lanes aus. Die Änderung des Standards für abgeschlossene Jobs ist jedoch nicht als Breaking Change eingeordnet und ihre Auswirkung auf bestehende Konfigurationen nicht ausreichend erklärt; außerdem ist der Versionssprung zu klein.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #307 ändert `removeOnComplete` von `false` auf `true`. Die Notes nennen die Änderung nur unter „Performance“, obwohl Nutzer, die abgeschlossene Jobs behalten wollen, ihre Konfiguration anpassen müssen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Die Notes nennen den neuen Standard `removeOnComplete: true`, allerdings nur indirekt als Entfernung abgeschlossener Jobs. Sie erklären nicht, dass Nutzer zum bisherigen Verhalten `removeOnComplete: false` setzen müssen."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die letzte Version ist 2.3.2. Der geänderte Standard aus PR #307 ist eine Breaking Change und verlangt einen Major-Sprung; die Notes nennen stattdessen Version 2.4.0."
+   }
+  ],
+  "reason": "Die Notes decken die relevanten Änderungen ab und lassen die zurückgenommenen Lanes aus. Die Änderung des Standards für abgeschlossene Jobs ist jedoch nicht als Breaking Change eingeordnet und ihre Auswirkung auf bestehende Konfigurationen nicht ausreichend erklärt; außerdem ist der Versionssprung zu klein.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26766,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 240,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-2c27-7790-ac29-c705c3c3be0d"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #307 ändert `removeOnComplete` von `false` auf `true`. Die Notes nennen die Änderung nur unter „Performance“, obwohl Nutzer, die abgeschlossene Jobs behalten wollen, ihre Konfiguration anpassen müssen.\"},{\"criterion\":\"R8\",\"evidence\":\"Die Notes nennen den neuen Standard `removeOnComplete: true`, allerdings nur indirekt als Entfernung abgeschlossener Jobs. Sie erklären nicht, dass Nutzer zum bisherigen Verhalten `removeOnComplete: false` setzen müssen.\"},{\"criterion\":\"R9\",\"evidence\":\"Die letzte Version ist 2.3.2. Der geänderte Standard aus PR #307 ist eine Breaking Change und verlangt einen Major-Sprung; die Notes nennen stattdessen Version 2.4.0.\"}],\"reason\":\"Die Notes decken die relevanten Änderungen ab und lassen die zurückgenommenen Lanes aus. Die Änderung des Standards für abgeschlossene Jobs ist jedoch nicht als Breaking Change eingeordnet und ihre Auswirkung auf bestehende Konfigurationen nicht ausreichend erklärt; außerdem ist der Versionssprung zu klein.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26766,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 240,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

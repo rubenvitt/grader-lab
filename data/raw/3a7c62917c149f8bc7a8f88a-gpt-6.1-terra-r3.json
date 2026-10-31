@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "3a7c62917c149f8bc7a8f88a",
+ "meta": {
+  "experiment": "e3",
+  "release": "r5",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 8426,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, `jitter` sei der Standard für neue Queues. Der Diff von #395 ergänzt nur einen Zweig für `backoff.type === 'jitter'` und ändert keinen Standardwert.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage, zufällige Verzögerungen sorgten dafür, dass Retries nicht alle gleichzeitig eintreffen, ist nicht garantiert: #395 berechnet ganzzahlige Zufallswerte, die für mehrere Retries gleich ausfallen können. Auch die Bezeichnung „proven“ ist nicht belegt.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut #399 entspricht `pause(false)` jedoch `pause({ drain: false })`; der vorgeschlagene Aufruf erhält dieses Verhalten nicht.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind nicht sachlich.\"}],\"reason\":\"Die Notes enthalten unbelegte Aussagen zur Retry-Strategie und eine unvollständige Migrationsanweisung für `worker.pause()`. Außerdem widersprechen mehrere Formulierungen dem geforderten sachlichen Ton.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, `jitter` sei der Standard für neue Queues. Der Diff von #395 ergänzt nur einen Zweig für `backoff.type === 'jitter'` und ändert keinen Standardwert."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Aussage, zufällige Verzögerungen sorgten dafür, dass Retries nicht alle gleichzeitig eintreffen, ist nicht garantiert: #395 berechnet ganzzahlige Zufallswerte, die für mehrere Retries gleich ausfallen können. Auch die Bezeichnung „proven“ ist nicht belegt."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut #399 entspricht `pause(false)` jedoch `pause({ drain: false })`; der vorgeschlagene Aufruf erhält dieses Verhalten nicht."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind nicht sachlich."
+   }
+  ],
+  "reason": "Die Notes enthalten unbelegte Aussagen zur Retry-Strategie und eine unvollständige Migrationsanweisung für `worker.pause()`. Außerdem widersprechen mehrere Formulierungen dem geforderten sachlichen Ton.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26098,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 349,
+  "reasoning_output_tokens": 66
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-39b0-79f0-bb13-a16a94122f84"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, `jitter` sei der Standard für neue Queues. Der Diff von #395 ergänzt nur einen Zweig für `backoff.type === 'jitter'` und ändert keinen Standardwert.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Aussage, zufällige Verzögerungen sorgten dafür, dass Retries nicht alle gleichzeitig eintreffen, ist nicht garantiert: #395 berechnet ganzzahlige Zufallswerte, die für mehrere Retries gleich ausfallen können. Auch die Bezeichnung „proven“ ist nicht belegt.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migration für `worker.pause()` empfiehlt pauschal `worker.pause({ drain: true })`. Laut #399 entspricht `pause(false)` jedoch `pause({ drain: false })`; der vorgeschlagene Aufruf erhält dieses Verhalten nicht.\"},{\"criterion\":\"R7\",\"evidence\":\"Formulierungen wie „definitively“, „proven“, „conclusively“ und „without question“ sind nicht sachlich.\"}],\"reason\":\"Die Notes enthalten unbelegte Aussagen zur Retry-Strategie und eine unvollständige Migrationsanweisung für `worker.pause()`. Außerdem widersprechen mehrere Formulierungen dem geforderten sachlichen Ton.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26098,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 349,
+    "reasoning_output_tokens": 66
+   }
+  }
+ ]
+}

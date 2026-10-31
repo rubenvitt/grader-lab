@@ -1,0 +1,65 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 2,
+ "input_hash": "e9596695f175033661772ec3",
+ "meta": {
+  "experiment": "e4",
+  "release": "r6",
+  "prompt": "careful",
+  "run": 2,
+  "turn": 4
+ },
+ "duration_ms": 4670,
+ "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"5.0.1\",\"notes\":\"# quaykit 5.0.1\\n\\nThis release fixes worker behavior after lock loss and improves PostgreSQL schema name handling.\\n\\n## Fixes\\n\\n- A worker no longer acknowledges a job after losing its lock, and emits `lockLost` (#413)\\n\\n## Security\\n\\n- PostgreSQL queue storage: upgrade to this release (#414)\",\"bump\":\"patch\",\"sections\":[\"Fixes\",\"Security\"]}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "finish",
+    "id": null,
+    "version": "5.0.1",
+    "notes": "# quaykit 5.0.1\n\nThis release fixes worker behavior after lock loss and improves PostgreSQL schema name handling.\n\n## Fixes\n\n- A worker no longer acknowledges a job after losing its lock, and emits `lockLost` (#413)\n\n## Security\n\n- PostgreSQL queue storage: upgrade to this release (#414)",
+    "bump": "patch",
+    "sections": [
+     "Fixes",
+     "Security"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 22823,
+  "cached_input_tokens": 19328,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 122,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-f95a-7e93-8a66-99371b9aee17"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"finish\",\"id\":null,\"version\":\"5.0.1\",\"notes\":\"# quaykit 5.0.1\\n\\nThis release fixes worker behavior after lock loss and improves PostgreSQL schema name handling.\\n\\n## Fixes\\n\\n- A worker no longer acknowledges a job after losing its lock, and emits `lockLost` (#413)\\n\\n## Security\\n\\n- PostgreSQL queue storage: upgrade to this release (#414)\",\"bump\":\"patch\",\"sections\":[\"Fixes\",\"Security\"]}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 22823,
+    "cached_input_tokens": 19328,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 122,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

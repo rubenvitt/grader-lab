@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "6aeb83d61686b66609d44f01",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "naive-2",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 5385,
+ "text": "{\"reason\":\"Fassung B erklärt konkreter, wie `max` und `perMs` zusammenwirken und dass das Limit für jede Worker-Instanz einzeln gilt. Beide Fassungen nennen dieselbe Migration und dieselbe Version.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B erklärt konkreter, wie `max` und `perMs` zusammenwirken und dass das Limit für jede Worker-Instanz einzeln gilt. Beide Fassungen nennen dieselbe Migration und dieselbe Version.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25265,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 117,
+  "reasoning_output_tokens": 53
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-de15-7821-8ac4-48049254b077"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B erklärt konkreter, wie `max` und `perMs` zusammenwirken und dass das Limit für jede Worker-Instanz einzeln gilt. Beide Fassungen nennen dieselbe Migration und dieselbe Version.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25265,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 117,
+    "reasoning_output_tokens": 53
+   }
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "6216b9f7f0b7c846c114db60",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "variant": "naive-2",
+  "grader": "judge-ref"
+ },
+ "duration_ms": 4929,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Der Kandidat nennt weder die Umbenennung der Worker-Option noch die Umstellung auf ausschließlich ESM als Breaking Changes.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migrationsschritte fehlen: `stalledIntervalMs` in `stallCheckMs` umbenennen und quaykit mit `import` laden.\"},{\"criterion\":\"R5\",\"evidence\":\"Der Sicherheitshinweis zum Dashboard und die Upgrade-Empfehlung fehlen.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Kandidat enthält keine Einträge zum PostgresStore, zum Cron-Fix oder zur Änderung von `addBulk` und vermittelt damit keine nutzbaren Release-Informationen.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Versionsnummer 4.0.0 fehlt.\"}],\"reason\":\"Der Kandidat ist leer und lässt sämtliche wesentlichen Informationen der Referenz aus.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "Der Kandidat nennt weder die Umbenennung der Worker-Option noch die Umstellung auf ausschließlich ESM als Breaking Changes."
+   },
+   {
+    "criterion": "R3",
+    "evidence": "Die Migrationsschritte fehlen: `stalledIntervalMs` in `stallCheckMs` umbenennen und quaykit mit `import` laden."
+   },
+   {
+    "criterion": "R5",
+    "evidence": "Der Sicherheitshinweis zum Dashboard und die Upgrade-Empfehlung fehlen."
+   },
+   {
+    "criterion": "R8",
+    "evidence": "Der Kandidat enthält keine Einträge zum PostgresStore, zum Cron-Fix oder zur Änderung von `addBulk` und vermittelt damit keine nutzbaren Release-Informationen."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Versionsnummer 4.0.0 fehlt."
+   }
+  ],
+  "reason": "Der Kandidat ist leer und lässt sämtliche wesentlichen Informationen der Referenz aus.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25390,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 201,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-86ea-7443-974b-b6ca83130f80"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"Der Kandidat nennt weder die Umbenennung der Worker-Option noch die Umstellung auf ausschließlich ESM als Breaking Changes.\"},{\"criterion\":\"R3\",\"evidence\":\"Die Migrationsschritte fehlen: `stalledIntervalMs` in `stallCheckMs` umbenennen und quaykit mit `import` laden.\"},{\"criterion\":\"R5\",\"evidence\":\"Der Sicherheitshinweis zum Dashboard und die Upgrade-Empfehlung fehlen.\"},{\"criterion\":\"R8\",\"evidence\":\"Der Kandidat enthält keine Einträge zum PostgresStore, zum Cron-Fix oder zur Änderung von `addBulk` und vermittelt damit keine nutzbaren Release-Informationen.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Versionsnummer 4.0.0 fehlt.\"}],\"reason\":\"Der Kandidat ist leer und lässt sämtliche wesentlichen Informationen der Referenz aus.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25390,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 201,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

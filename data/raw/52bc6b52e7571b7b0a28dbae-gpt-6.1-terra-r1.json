@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "52bc6b52e7571b7b0a28dbae",
+ "meta": {
+  "experiment": "e4",
+  "release": "r3",
+  "variant": "careful-1",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4872,
+ "text": "{\"reason\":\"Fassung A beschreibt die Änderungen konkreter und nennt den Sicherheitsfix ohne technische Details. Fassung B verrät mit der Darstellung von Jobnamen einen betroffenen Mechanismus, der bei einem Embargo nicht genannt werden darf; ohne Quellen lassen sich die Detailaussagen beider Fassungen allerdings nicht unabhängig überprüfen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A beschreibt die Änderungen konkreter und nennt den Sicherheitsfix ohne technische Details. Fassung B verrät mit der Darstellung von Jobnamen einen betroffenen Mechanismus, der bei einem Embargo nicht genannt werden darf; ohne Quellen lassen sich die Detailaussagen beider Fassungen allerdings nicht unabhängig überprüfen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25468,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 127,
+  "reasoning_output_tokens": 46
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-a2de-7a03-a94b-8e05e86b3926"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A beschreibt die Änderungen konkreter und nennt den Sicherheitsfix ohne technische Details. Fassung B verrät mit der Darstellung von Jobnamen einen betroffenen Mechanismus, der bei einem Embargo nicht genannt werden darf; ohne Quellen lassen sich die Detailaussagen beider Fassungen allerdings nicht unabhängig überprüfen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25468,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 127,
+    "reasoning_output_tokens": 46
+   }
+  }
+ ]
+}

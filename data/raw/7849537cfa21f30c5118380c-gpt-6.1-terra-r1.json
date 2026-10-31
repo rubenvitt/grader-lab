@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "7849537cfa21f30c5118380c",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "variant": "naive-1",
+  "grader": "pairwise",
+  "order": "gold-first"
+ },
+ "duration_ms": 4789,
+ "text": "{\"reason\":\"Fassung A ist besser, weil sie die Wirkung von `max` und `perMs` konkret erklärt und einen ausdrücklichen Migrationsschritt nennt. Fassung B bezeichnet den Limiter als Token-Bucket, ohne dass die vorliegenden Texte diese Eigenschaft belegen.\",\"better\":\"A\"}",
+ "parsed": {
+  "reason": "Fassung A ist besser, weil sie die Wirkung von `max` und `perMs` konkret erklärt und einen ausdrücklichen Migrationsschritt nennt. Fassung B bezeichnet den Limiter als Token-Bucket, ohne dass die vorliegenden Texte diese Eigenschaft belegen.",
+  "better": "A"
+ },
+ "usage": {
+  "input_tokens": 25260,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 73,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19419-cb64-7ed3-b47c-a875e4056020"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung A ist besser, weil sie die Wirkung von `max` und `perMs` konkret erklärt und einen ausdrücklichen Migrationsschritt nennt. Fassung B bezeichnet den Limiter als Token-Bucket, ohne dass die vorliegenden Texte diese Eigenschaft belegen.\",\"better\":\"A\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25260,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 73,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

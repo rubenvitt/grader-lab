@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "2858749d8f52834d4cadbca1",
+ "meta": {
+  "experiment": "e4-r1",
+  "release": "r1",
+  "variant": "naive-1",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4828,
+ "text": "{\"reason\":\"Fassung B kennzeichnet die Änderung des Defaults als Breaking Change, nennt einen konkreten Migrationsschritt und verwendet dafür eine passende Major-Version. Fassung A führt dieselbe Änderung nur unter Performance auf und verwendet trotz Feature und Breaking Change eine Patch-Version.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B kennzeichnet die Änderung des Defaults als Breaking Change, nennt einen konkreten Migrationsschritt und verwendet dafür eine passende Major-Version. Fassung A führt dieselbe Änderung nur unter Performance auf und verwendet trotz Feature und Breaking Change eine Patch-Version.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25314,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 68,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19417-196a-7e62-a0f5-0304905447cd"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B kennzeichnet die Änderung des Defaults als Breaking Change, nennt einen konkreten Migrationsschritt und verwendet dafür eine passende Major-Version. Fassung A führt dieselbe Änderung nur unter Performance auf und verwendet trotz Feature und Breaking Change eine Patch-Version.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25314,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 68,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

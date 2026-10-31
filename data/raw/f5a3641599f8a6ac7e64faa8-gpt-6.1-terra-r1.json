@@ -1,0 +1,67 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "f5a3641599f8a6ac7e64faa8",
+ "meta": {
+  "experiment": "e3",
+  "release": "r4",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 6967,
+ "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung nennt den Rate Limiter „proven“. Die Quellen enthalten keinen Beleg für diese Eigenschaft.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, das Limit werde zuverlässig und ausnahmslos von allen Workern einer Queue geteilt. Der Diff von #376 legt dagegen ausdrücklich einen eigenen, nicht geteilten Token Bucket pro Worker-Instanz an.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Formulierungen „proven rate limiter“ und „reliably … without exception“ sind werblich beziehungsweise übersteigernd.\"}],\"reason\":\"Die Versionsnummer 4.1.0 passt zu Feature und Deprecation. Die Notes geben die endgültigen Optionsnamen und die Migration korrekt wieder, enthalten aber unbelegte und dem Diff widersprechende Aussagen zum Rate Limiter.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R2",
+    "evidence": "Die Einleitung nennt den Rate Limiter „proven“. Die Quellen enthalten keinen Beleg für diese Eigenschaft."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes behaupten, das Limit werde zuverlässig und ausnahmslos von allen Workern einer Queue geteilt. Der Diff von #376 legt dagegen ausdrücklich einen eigenen, nicht geteilten Token Bucket pro Worker-Instanz an."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Formulierungen „proven rate limiter“ und „reliably … without exception“ sind werblich beziehungsweise übersteigernd."
+   }
+  ],
+  "reason": "Die Versionsnummer 4.1.0 passt zu Feature und Deprecation. Die Notes geben die endgültigen Optionsnamen und die Migration korrekt wieder, enthalten aber unbelegte und dem Diff widersprechende Aussagen zum Rate Limiter.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 25471,
+  "cached_input_tokens": 22528,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 194,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19415-c736-7fc2-9684-f98b65d45b69"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R2\",\"evidence\":\"Die Einleitung nennt den Rate Limiter „proven“. Die Quellen enthalten keinen Beleg für diese Eigenschaft.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes behaupten, das Limit werde zuverlässig und ausnahmslos von allen Workern einer Queue geteilt. Der Diff von #376 legt dagegen ausdrücklich einen eigenen, nicht geteilten Token Bucket pro Worker-Instanz an.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Formulierungen „proven rate limiter“ und „reliably … without exception“ sind werblich beziehungsweise übersteigernd.\"}],\"reason\":\"Die Versionsnummer 4.1.0 passt zu Feature und Deprecation. Die Notes geben die endgültigen Optionsnamen und die Migration korrekt wieder, enthalten aber unbelegte und dem Diff widersprechende Aussagen zum Rate Limiter.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25471,
+    "cached_input_tokens": 22528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 194,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

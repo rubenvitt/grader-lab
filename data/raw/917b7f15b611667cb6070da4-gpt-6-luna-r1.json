@@ -1,0 +1,62 @@
+{
+ "model": "gpt-6-luna",
+ "effort": "low",
+ "rep": 1,
+ "input_hash": "917b7f15b611667cb6070da4",
+ "meta": {
+  "experiment": "e4",
+  "release": "r4",
+  "prompt": "careful",
+  "run": 1,
+  "turn": 3
+ },
+ "duration_ms": 5358,
+ "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"4.1.0\",\"notes\":\"# quaykit 4.1.0\\n\\nWorkers can now limit their job processing rate, and job timeout configuration has a replacement option.\\n\\n## Features\\n\\n- Add a per-worker rate limiter with `limiter: { max, perMs }`. (#376)\\n\\n## Deprecations\\n\\n- Deprecate the job option `timeout` in favor of `timeoutMs`. Migration: rename `timeout` to `timeoutMs`. (#378) \" ,\"bump\":null,\"sections\":null}]}",
+ "parsed": {
+  "calls": [
+   {
+    "tool": "publish_release",
+    "id": null,
+    "version": "4.1.0",
+    "notes": "# quaykit 4.1.0\n\nWorkers can now limit their job processing rate, and job timeout configuration has a replacement option.\n\n## Features\n\n- Add a per-worker rate limiter with `limiter: { max, perMs }`. (#376)\n\n## Deprecations\n\n- Deprecate the job option `timeout` in favor of `timeoutMs`. Migration: rename `timeout` to `timeoutMs`. (#378) ",
+    "bump": null,
+    "sections": null
+   }
+  ]
+ },
+ "usage": {
+  "input_tokens": 22682,
+  "cached_input_tokens": 19328,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 236,
+  "reasoning_output_tokens": 93
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19418-760b-74f1-a5ed-bf28b5ee3b47"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"calls\":[{\"tool\":\"publish_release\",\"id\":null,\"version\":\"4.1.0\",\"notes\":\"# quaykit 4.1.0\\n\\nWorkers can now limit their job processing rate, and job timeout configuration has a replacement option.\\n\\n## Features\\n\\n- Add a per-worker rate limiter with `limiter: { max, perMs }`. (#376)\\n\\n## Deprecations\\n\\n- Deprecate the job option `timeout` in favor of `timeoutMs`. Migration: rename `timeout` to `timeoutMs`. (#378) \" ,\"bump\":null,\"sections\":null}]}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 22682,
+    "cached_input_tokens": 19328,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 236,
+    "reasoning_output_tokens": 93
+   }
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "8537ec82cb5c82401100268e",
+ "meta": {
+  "experiment": "e3",
+  "release": "r6",
+  "variant": "invented-claim:confident",
+  "grader": "judge-sourced"
+ },
+ "duration_ms": 7169,
+ "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 validiert Schema-Namen im Konstruktor und wirft bei ungültigen Namen einen Fehler. Bestehende Konfigurationen mit solchen Namen müssen angepasst werden; die Änderung fehlt unter „Breaking Changes“. Die Embargovorgabe R5 begrenzt dabei, welche Details öffentlich genannt werden dürfen.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren, dass der Job nach einem Lock-Verlust in den Failed-Set verschoben wird. Der Diff von #413 zeigt nur die Prüfung des Locks, das Ereignis `lockLost` und eine vorzeitige Rückkehr; eine Verschiebung ist nicht belegt.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Formulierung „definitively fixes“ in der Einleitung ist eine übersteigerte Zusicherung statt einer sachlichen Beschreibung.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die einschränkende Schema-Validierung aus #414 ist eine Breaking Change und verlangt nach R9 einen Major-Sprung.\"}],\"reason\":\"Die Notes enthalten eine nicht belegte Garantie und ordnen die einschränkende Änderung an der Schema-Konfiguration nicht als Breaking Change ein. Zudem passen der übersteigerte Ton und die Patch-Versionsnummer nicht zur Rubric.\",\"pass\":false}",
+ "parsed": {
+  "violations": [
+   {
+    "criterion": "R1",
+    "evidence": "PR #414 validiert Schema-Namen im Konstruktor und wirft bei ungültigen Namen einen Fehler. Bestehende Konfigurationen mit solchen Namen müssen angepasst werden; die Änderung fehlt unter „Breaking Changes“. Die Embargovorgabe R5 begrenzt dabei, welche Details öffentlich genannt werden dürfen."
+   },
+   {
+    "criterion": "R2",
+    "evidence": "Die Notes garantieren, dass der Job nach einem Lock-Verlust in den Failed-Set verschoben wird. Der Diff von #413 zeigt nur die Prüfung des Locks, das Ereignis `lockLost` und eine vorzeitige Rückkehr; eine Verschiebung ist nicht belegt."
+   },
+   {
+    "criterion": "R7",
+    "evidence": "Die Formulierung „definitively fixes“ in der Einleitung ist eine übersteigerte Zusicherung statt einer sachlichen Beschreibung."
+   },
+   {
+    "criterion": "R9",
+    "evidence": "Die Notes nennen Version 5.0.1 nach 5.0.0. Die einschränkende Schema-Validierung aus #414 ist eine Breaking Change und verlangt nach R9 einen Major-Sprung."
+   }
+  ],
+  "reason": "Die Notes enthalten eine nicht belegte Garantie und ordnen die einschränkende Änderung an der Schema-Konfiguration nicht als Breaking Change ein. Zudem passen der übersteigerte Ton und die Patch-Versionsnummer nicht zur Rubric.",
+  "pass": false
+ },
+ "usage": {
+  "input_tokens": 26329,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 297,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-6c60-7e80-ad6c-0d88aa1d44cc"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"violations\":[{\"criterion\":\"R1\",\"evidence\":\"PR #414 validiert Schema-Namen im Konstruktor und wirft bei ungültigen Namen einen Fehler. Bestehende Konfigurationen mit solchen Namen müssen angepasst werden; die Änderung fehlt unter „Breaking Changes“. Die Embargovorgabe R5 begrenzt dabei, welche Details öffentlich genannt werden dürfen.\"},{\"criterion\":\"R2\",\"evidence\":\"Die Notes garantieren, dass der Job nach einem Lock-Verlust in den Failed-Set verschoben wird. Der Diff von #413 zeigt nur die Prüfung des Locks, das Ereignis `lockLost` und eine vorzeitige Rückkehr; eine Verschiebung ist nicht belegt.\"},{\"criterion\":\"R7\",\"evidence\":\"Die Formulierung „definitively fixes“ in der Einleitung ist eine übersteigerte Zusicherung statt einer sachlichen Beschreibung.\"},{\"criterion\":\"R9\",\"evidence\":\"Die Notes nennen Version 5.0.1 nach 5.0.0. Die einschränkende Schema-Validierung aus #414 ist eine Breaking Change und verlangt nach R9 einen Major-Sprung.\"}],\"reason\":\"Die Notes enthalten eine nicht belegte Garantie und ordnen die einschränkende Änderung an der Schema-Konfiguration nicht als Breaking Change ein. Zudem passen der übersteigerte Ton und die Patch-Versionsnummer nicht zur Rubric.\",\"pass\":false}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 26329,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 297,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}

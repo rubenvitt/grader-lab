@@ -1,0 +1,54 @@
+{
+ "model": "gpt-6.1-terra",
+ "effort": "low",
+ "rep": 3,
+ "input_hash": "f7a20895dcc6a184dbe8e0a3",
+ "meta": {
+  "experiment": "e3",
+  "release": "r6",
+  "variant": "invented-claim:confident",
+  "grader": "pairwise",
+  "order": "candidate-first"
+ },
+ "duration_ms": 4766,
+ "text": "{\"reason\":\"Fassung B verzichtet auf die zusätzlichen Garantien und die übersteigerte Formulierung in Fassung A. Ohne die zugrunde liegenden Diffs lässt sich deren Belegbarkeit nicht prüfen; B vermeidet damit vermeidbare, möglicherweise unbelegte Aussagen.\",\"better\":\"B\"}",
+ "parsed": {
+  "reason": "Fassung B verzichtet auf die zusätzlichen Garantien und die übersteigerte Formulierung in Fassung A. Ohne die zugrunde liegenden Diffs lässt sich deren Belegbarkeit nicht prüfen; B vermeidet damit vermeidbare, möglicherweise unbelegte Aussagen.",
+  "better": "B"
+ },
+ "usage": {
+  "input_tokens": 25248,
+  "cached_input_tokens": 23296,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 70,
+  "reasoning_output_tokens": 0
+ },
+ "tainted": false,
+ "events": [
+  {
+   "type": "thread.started",
+   "thread_id": "01a19416-7b26-7172-becd-6a33c25d9a5e"
+  },
+  {
+   "type": "turn.started"
+  },
+  {
+   "type": "item.completed",
+   "item": {
+    "id": "item_0",
+    "type": "agent_message",
+    "text": "{\"reason\":\"Fassung B verzichtet auf die zusätzlichen Garantien und die übersteigerte Formulierung in Fassung A. Ohne die zugrunde liegenden Diffs lässt sich deren Belegbarkeit nicht prüfen; B vermeidet damit vermeidbare, möglicherweise unbelegte Aussagen.\",\"better\":\"B\"}"
+   }
+  },
+  {
+   "type": "turn.completed",
+   "usage": {
+    "input_tokens": 25248,
+    "cached_input_tokens": 23296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 70,
+    "reasoning_output_tokens": 0
+   }
+  }
+ ]
+}
