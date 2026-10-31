@@ -80,6 +80,9 @@ test('schema: order free, requires conditional sections and PR references', () =
   assert.ok(!schema(artifact({ plan: { bump: 'major', version: '2.4.0', sections: ['Features'] } }), ctx(r)).pass);
   assert.ok(!schema(artifact({ notes_md: notes('2.4.0', '## Features\n\n- no reference.') }), ctx(r)).pass);
   assert.ok(!schema(artifact({ notes_md: notes('2.4.0', '## Internal\n\n- x (#1).'), plan: { bump: 'minor', version: '2.4.0', sections: ['Internal'] } }), ctx(r)).pass);
+  const breaking = artifact({ notes_md: notes('2.4.0', '## Breaking Changes\n\n- a (#1).'), plan: { bump: 'minor', version: '2.4.0', sections: ['Breaking Changes'] } });
+  assert.ok(!schema(breaking, ctx(r)).pass, 'sections imply a bigger bump');
+  assert.ok(!schema(artifact({ notes_md: notes('2.3.3', '## Features\n\n- a (#1).'), plan: { bump: 'patch', version: '2.3.3', sections: ['Features'] } }), ctx(r)).pass);
   const embargo = release([pr(1, 'fix: a', ['security', 'embargo'])]);
   assert.ok(!schema(artifact(), ctx(embargo)).pass);
 });

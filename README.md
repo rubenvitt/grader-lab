@@ -25,6 +25,8 @@ node src/run.mjs e1 --max-seconds 400 # auch e3, e4
 
 Läufe sind fortsetzbar: Jede Antwort liegt sofort unter `data/raw/`, ein erneuter Aufruf macht dort weiter. Exit-Code 2 heißt Teilstand, einfach wiederholen. Exit-Code 3 heißt Rate-Limit, Exit-Code 4 Budget erschöpft oder wiederholte Fehlschläge.
 
+Für den Anlauf von E4 begrenzt `--only r1` den Lauf auf ein Release, das Ergebnis landet dann in `e4-r1.json`.
+
 Der Runner begrenzt auf 6 parallele Aufrufe und 1.500 insgesamt, gezählt über alle Läufe aus dem, was unter `data/raw/` liegt.
 
 ## Grenzen
@@ -32,6 +34,7 @@ Der Runner begrenzt auf 6 parallele Aufrufe und 1.500 insgesamt, gezählt über 
 - Synthetische Fixtures, kleine Fallzahl
 - Mutationen stammen vom selben Autor wie die Grader
 - Ein Modellstand, keine menschlichen Labels
+- Die Wortlisten von `wording` sind nach den Mutationen entstanden, ihre Fundrate dort ist eine Obergrenze. Mehr dazu in [graders/prompts/v1/README.md](graders/prompts/v1/README.md).
 - Fassungen mit identischem Text teilen sich die Judge-Aufrufe. `gold`, `false-success`, `lucky-path` und `extra-diligent` sehen für Judges gleich aus und bekommen darum dasselbe Urteil. Das ist die Konstruktion, kein Zufall.
 
 ## Lizenz

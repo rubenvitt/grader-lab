@@ -47,7 +47,7 @@ Fixes #298`,
     },
     {
       number: 307, title: 'chore: reduce redis memory footprint', labels: ['chore'], author: 'bollard-dev', merged_at: '2026-03-06',
-      body: t`Busy queues keep a lot of finished entries around and the Redis instance grows without bound. This trims the memory profile and shortens a couple of internal key prefixes.`,
+      body: t`Busy queues keep a lot of finished entries around and the Redis instance grows without bound. This trims the memory profile.`,
       diff: t`--- a/src/defaults.ts
 +++ b/src/defaults.ts
 @@ -3,8 +3,8 @@
@@ -57,16 +57,7 @@ Fixes #298`,
 -  removeOnComplete: false,
 +  removeOnComplete: true,
    removeOnFail: false,
- };
---- a/src/store/keys.ts
-+++ b/src/store/keys.ts
-@@ -9,6 +9,6 @@ export function buildKeys(prefix: string, queue: string) {
-   return {
-     wait: prefix + ':' + queue + ':wait',
--    active: prefix + ':' + queue + ':active-jobs',
-+    active: prefix + ':' + queue + ':act',
-   };
- }`,
+ };`,
     },
     {
       number: 309, title: 'docs: fix typo in retries guide', labels: ['docs'], author: 'tidewatcher', merged_at: '2026-03-06',

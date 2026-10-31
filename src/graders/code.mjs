@@ -69,6 +69,8 @@ export function schema(artifact, { release, params }) {
   const { reverted } = revertState(release);
   const live = release.prs.filter((p) => !reverted.has(p.number));
   if (plan.bump === 'major' && !headings.includes('Breaking Changes')) findings.push('Major-Release ohne Abschnitt „Breaking Changes“');
+  if (headings.includes('Breaking Changes') && plan.bump !== 'major') findings.push(`Abschnitt „Breaking Changes“ bei Bump ${plan.bump}`);
+  if (plan.bump === 'patch' && headings.some((h) => ['Features', 'Deprecations'].includes(h))) findings.push('Features oder Deprecations bei Bump patch');
   if (live.some((p) => p.labels.includes('security')) && !headings.includes('Security')) findings.push('Security-Fix ohne Abschnitt „Security“');
   if (live.some((p) => p.labels.includes('deprecation')) && !headings.includes('Deprecations')) findings.push('Deprecation ohne Abschnitt „Deprecations“');
   return verdict(findings);

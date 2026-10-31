@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { appendFileSync, mkdtempSync, readFileSync, readdirSync } from 'node:fs';
+import { appendFileSync, mkdirSync, mkdtempSync, readFileSync, readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
@@ -61,7 +61,10 @@ test('the budget counts across sessions, including errors', async () => {
   assert.equal(s.summary().stopped, 'budget');
   appendFileSync(join(rawDir, 'errors.jsonl'), '{}\n');
   assert.equal(countUsed(rawDir), 3);
-  const next = createSession({ rawDir, callModel: ok, budget: 3 });
+  mkdirSync(join(rawDir, 'smoke'));
+  appendFileSync(join(rawDir, 'smoke/errors.jsonl'), '{}\n');
+  assert.equal(countUsed(rawDir), 4);
+  const next = createSession({ rawDir, callModel: ok, budget: 4 });
   await assert.rejects(next.call(call(4)), RunStopped);
 });
 

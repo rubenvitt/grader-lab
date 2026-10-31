@@ -1,4 +1,4 @@
-// CLI: node src/run.mjs <plan|smoke|e1|e3|e4> [--max-seconds N] [--concurrency N]
+// CLI: node src/run.mjs <plan|smoke|e1|e3|e4> [--max-seconds N] [--concurrency N] [--only <release>]
 import { appendFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { parseArgs } from 'node:util';
@@ -20,7 +20,7 @@ const ESTIMATED_AGENT_TURNS = 5;
 
 const { values, positionals } = parseArgs({
   allowPositionals: true,
-  options: { 'max-seconds': { type: 'string' }, concurrency: { type: 'string' } },
+  options: { 'max-seconds': { type: 'string' }, concurrency: { type: 'string' }, only: { type: 'string' } },
 });
 const command = positionals[0];
 const prompts = loadPrompts();
@@ -108,19 +108,20 @@ async function e3() {
 
 async function e4() {
   const s = session();
-  const jobs = fixtures.flatMap((fixture) => ['naive', 'careful'].flatMap((promptVariant) =>
+  const name = values.only ? `e4-${values.only}` : 'e4';
+  const jobs = fixtures.filter((f) => !values.only || f.release.id === values.only).flatMap((fixture) => ['naive', 'careful'].flatMap((promptVariant) =>
     Array.from({ length: prompts.params.agent.runs_per_prompt }, (_, i) => ({ fixture, promptVariant, run: i + 1 }))));
   const settled = await Promise.allSettled(jobs.map((j) => runAgent({ ...j, session: s, prompts })));
   const runs = jobs.flatMap((j, i) => (settled[i].status === 'fulfilled' ? [{
     release: j.fixture.release.id, variant: `${j.promptVariant}-${j.run}`, kind: 'agent', model: prompts.params.models.agent, ...settled[i].value,
   }] : []));
-  const rows = await gradeAll(runs, 'e4', prompts.params.repetitions.e4, s);
-  finish('e4', s, { runs, rows }, jobs.length);
+  const rows = await gradeAll(runs, name, prompts.params.repetitions.e4, s);
+  finish(name, s, { runs, rows }, jobs.length);
 }
 
 const commands = { plan, smoke, e1, e3, e4 };
 if (!commands[command]) {
-  console.error('usage: node src/run.mjs <plan|smoke|e1|e3|e4> [--max-seconds N] [--concurrency N]');
+  console.error('usage: node src/run.mjs <plan|smoke|e1|e3|e4> [--max-seconds N] [--concurrency N] [--only <release>]');
   process.exit(1);
 }
 await commands[command]();

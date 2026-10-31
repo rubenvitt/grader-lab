@@ -19,14 +19,14 @@ export function rawName(call) {
   return `${inputHash(call)}-${call.model}-r${call.rep ?? 0}.json`;
 }
 
-function errorFile(rawDir) {
-  return join(rawDir, 'errors.jsonl');
-}
+const errorFile = (rawDir) => join(rawDir, 'errors.jsonl');
 
 export function countUsed(rawDir) {
   if (!existsSync(rawDir)) return 0;
-  const answers = readdirSync(rawDir, { recursive: true }).filter((f) => String(f).endsWith('.json')).length;
-  const errors = existsSync(errorFile(rawDir)) ? readFileSync(errorFile(rawDir), 'utf8').split('\n').filter(Boolean).length : 0;
+  const files = readdirSync(rawDir, { recursive: true }).map(String);
+  const answers = files.filter((f) => f.endsWith('.json')).length;
+  const errors = files.filter((f) => f.endsWith('errors.jsonl'))
+    .reduce((n, f) => n + readFileSync(join(rawDir, f), 'utf8').split('\n').filter(Boolean).length, 0);
   return answers + errors;
 }
 

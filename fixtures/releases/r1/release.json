@@ -33,8 +33,8 @@
       ],
       "author": "bollard-dev",
       "merged_at": "2026-03-06",
-      "body": "Busy queues keep a lot of finished entries around and the Redis instance grows without bound. This trims the memory profile and shortens a couple of internal key prefixes.",
-      "diff": "--- a/src/defaults.ts\n+++ b/src/defaults.ts\n@@ -3,8 +3,8 @@\n export const DEFAULT_JOB_OPTIONS: JobOptions = {\n   attempts: 1,\n   backoffMs: 0,\n-  removeOnComplete: false,\n+  removeOnComplete: true,\n   removeOnFail: false,\n };\n--- a/src/store/keys.ts\n+++ b/src/store/keys.ts\n@@ -9,6 +9,6 @@ export function buildKeys(prefix: string, queue: string) {\n   return {\n     wait: prefix + ':' + queue + ':wait',\n-    active: prefix + ':' + queue + ':active-jobs',\n+    active: prefix + ':' + queue + ':act',\n   };\n }"
+      "body": "Busy queues keep a lot of finished entries around and the Redis instance grows without bound. This trims the memory profile.",
+      "diff": "--- a/src/defaults.ts\n+++ b/src/defaults.ts\n@@ -3,8 +3,8 @@\n export const DEFAULT_JOB_OPTIONS: JobOptions = {\n   attempts: 1,\n   backoffMs: 0,\n-  removeOnComplete: false,\n+  removeOnComplete: true,\n   removeOnFail: false,\n };"
     },
     {
       "number": 309,
