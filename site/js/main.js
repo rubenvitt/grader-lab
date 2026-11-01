@@ -253,7 +253,7 @@ function renderMatrix(matrix) {
     }
     return body;
   };
-  $('matrix').replaceChildren(thead, section('Eingebaute Fehler', MUTATIONS), section('Kontrollen, jeder Treffer ist ein Fehlalarm', { gold: 'Gold', ...CONTROLS }));
+  $('matrix').replaceChildren(thead, section('Eingebaute Fehler', MUTATIONS), section('Kontrollen, jeder Treffer ist ein Fehlalarm', { gold: 'Referenz', ...CONTROLS }));
 }
 
 async function runLive() {
