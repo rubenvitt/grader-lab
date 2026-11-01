@@ -15,15 +15,15 @@ const CODE = {
   'pr-refs': 'Jede #Nummer existiert und ist nicht zurückgenommen.',
   'semver-labels': 'Bump passt zu Labels und Commit-Präfixen.',
   wording: 'Keine verbotenen Wörter, Embargo-Begriffe, passende Länge.',
-  'ref-similarity': 'Text ist der Gold-Fassung ähnlich genug.',
+  'ref-similarity': 'Text ist der Referenz ähnlich genug.',
   functional: 'Sandbox: veröffentlicht, Version stimmt.',
   trajectory: 'Jeder Diff gelesen, bevor veröffentlicht wird.',
 };
 const MODEL = {
-  'judge-ref': 'Modell vergleicht mit der Gold-Fassung.',
+  'judge-ref': 'Modell vergleicht mit der Referenz.',
   'judge-sourced': 'Modell prüft die Rubric gegen PRs und Diffs.',
   'judge-blind': 'Modell prüft die Rubric, sieht nur die Notes.',
-  pairwise: 'Modell wählt zwischen Text und Gold, beide Reihenfolgen.',
+  pairwise: 'Modell wählt zwischen Text und Referenz, beide Reihenfolgen.',
 };
 const GRADERS = [...Object.keys(CODE), ...Object.keys(MODEL)];
 
@@ -87,21 +87,21 @@ function showRow(id, { kind, first = '', findings = [], note = '', label = STATU
 function renderDiff() {
   const box = $('diff');
   const gold = release.gold.notes_md;
-  if (state.notes === gold) return box.replaceChildren(el('span', 'dim', 'Text identisch mit Gold'));
-  if (state.notes.length > 20000) return box.replaceChildren(el('span', 'dim', 'Text zu lang für den Vergleich mit Gold'));
+  if (state.notes === gold) return box.replaceChildren(el('span', 'dim', 'Text identisch mit der Referenz'));
+  if (state.notes.length > 20000) return box.replaceChildren(el('span', 'dim', 'Text zu lang für den Vergleich mit der Referenz'));
   const parts = diffWords(gold, state.notes);
   const count = (type) => parts.filter((p) => p.type === type).flatMap((p) => p.text.split(/\s+/).filter(Boolean)).length;
   const marks = { add: 'ins', del: 'del', same: 'span', gap: 'span' };
   const [added, removed] = [count('add'), count('del')];
-  if (!added && !removed) return box.replaceChildren(el('span', 'dim', 'gegenüber Gold: nur Leerraum geändert'));
+  if (!added && !removed) return box.replaceChildren(el('span', 'dim', 'gegenüber der Referenz: nur Leerraum geändert'));
   box.replaceChildren(
-    el('span', 'dim', `gegenüber Gold: +${added} −${removed} Wörter `),
+    el('span', 'dim', `gegenüber der Referenz: +${added} −${removed} Wörter `),
     ...compactDiff(parts).map((p) => el(marks[p.type], p.type === 'gap' ? 'dim' : null, p.text)),
   );
 }
 
 function verdictFindings(v) {
-  return [...(v.violations ?? []).map((x) => `${x.criterion}: ${x.evidence}`), ...(v.reason ? [v.reason] : [])];
+  return [...(v.violations ?? []).map((x) => `${x.criterion}: ${x.evidence}`), ...(v.reason ? [v.reason.replace('Gold zuerst', 'Referenz zuerst')] : [])];
 }
 
 function grade() {
@@ -187,7 +187,7 @@ function renderRelease() {
   };
   const mutations = Object.entries(MUTATIONS).filter(([id]) => here.includes(id));
   $('variant').replaceChildren(
-    group('Gold', [['gold', 'Gold']]),
+    group('Referenz', [['gold', 'Referenz']]),
     group('Fehler', mutations),
     group('Kontrollen', Object.entries(CONTROLS).filter(([id]) => here.includes(id))),
     group('Echte Agent-Läufe', here.filter((v) => /^(naive|careful)-/.test(v)).map((v) => [v, agentLabel(v)])),
