@@ -1,613 +1,322 @@
-import { diffWords, int, num2, renderMarkdown, roganGladen } from './lib.js';
+// Wires the workbench to the DOM. All grading logic lives in lib.js and the copied grader modules.
+import { nextVersion } from './code.js';
+import { LIVE_CALLS, PROVIDERS, buildArtifact, compactDiff, diffWords, gradeCode, graderContext, modelVerdict, recordedFor, runJudges, stateFrom } from './lib.js';
 
-const LLM = ['judge-ref', 'judge-sourced', 'judge-blind', 'pairwise'];
-const LABEL = {
-  'missing-breaking': 'Breaking Change fehlt', 'wrong-bump': 'minor statt major', 'ghost-pr': 'Verweis auf PR, die es nicht gibt',
-  'invented-claim': 'erfundene Aussage', 'wrong-migration': 'falscher Optionsname in der Migration', 'reverted-listed': 'Zurückgenommenes steht drin',
-  'embargo-leak': 'Embargo-Details im Text', 'internal-noise': 'CI-Interna in den Notes', 'hype-tone': 'Inhalt korrekt, Ton Marketing',
-  'useless-true': 'alles wahr, nichts brauchbar', 'false-success': 'Notes korrekt, nie veröffentlicht', 'lucky-path': 'Ergebnis korrekt, Diffs nie gelesen',
-  gold: 'unverändert', paraphrase: 'gleiche Fakten, andere Worte', reordered: 'andere Reihenfolge der Abschnitte', 'extra-diligent': 'zusätzliche Tool-Aufrufe, korrekt',
-};
-const METHOD = {
-  schema: 'Struktur und Pflichtabschnitte', 'pr-refs': 'jede #n existiert und ist nicht zurückgenommen', 'semver-labels': 'Bump passt zu Labels und Commit-Präfixen',
-  wording: 'verbotene Wörter, Embargo-Begriffe, Länge', 'ref-similarity': 'Textähnlichkeit zur Gold-Fassung', functional: 'Sandbox: veröffentlicht, Version stimmt',
-  trajectory: 'jeder Diff gelesen, bevor veröffentlicht wird', 'judge-ref': 'LLM vergleicht mit Gold', 'judge-sourced': 'LLM prüft gegen PRs und Diffs, ohne Gold',
-  'judge-blind': 'LLM sieht nur die Notes', pairwise: 'LLM vergleicht mit Gold, ohne zu wissen, welche Fassung Gold ist, beide Reihenfolgen',
-};
-const RUNS = { 'careful-1': 'sorgfältig 1', 'careful-2': 'sorgfältig 2', 'naive-1': 'naiv 1', 'naive-2': 'naiv 2' };
-// Hand-picked for the game: one release, labels by construction. Gold of r1 is not flawless either (#304, docs/findings.md).
-const GAME_RELEASE = 'r1';
-const GAME = ['invented-claim', 'paraphrase', 'false-success', 'useless-true', 'wrong-migration', 'gold'];
-const CASES = [
-  ['r3', 'naive-2', 'Leere Notes bestehen', '`finish` mit lauter `null`, nichts veröffentlicht. `judge-blind` und `pr-refs` lassen das durch: Wer nichts sagt, sagt nichts Falsches.'],
-  ['r5', 'careful-2', 'Fast perfekt, nie veröffentlicht', 'Drei LLM-Grader sind zufrieden, nur `functional` sieht es. Zugleich deckt der Agent `pause(false)` ab, was Gold versäumt, und `judge-ref` wertet genau das als Verstoß.'],
-  ['r6', 'careful-2', 'Gleiches Urteil, Widerspruch in der Sache', 'Alle vier LLM-Grader lehnen ab. `pairwise` und `judge-ref` sehen ein Embargo-Leck, `judge-sourced` schreibt, das Embargo sei gewahrt, und lehnt wegen der Version ab.'],
-  ['r4', 'careful-1', 'Ein Leerzeichen am Zeilenende', '`functional` vergleicht bytegenau und fällt durch. Deterministisch heißt nicht fehlerfrei, auch dieser Grader ist nur ein System.'],
-];
-
-const h = (tag, props = {}, ...kids) => {
-  const el = document.createElement(tag);
-  for (const [key, value] of Object.entries(props)) {
-    if (key.startsWith('on')) el.addEventListener(key.slice(2), value);
-    else if (key.startsWith('aria-')) el.setAttribute(key, String(value)); // aria-pressed="false" is a state, not an absent attribute
-    else if (key === 'html') el.innerHTML = value; // only ever output of renderMarkdown, which escapes
-    else if (value === true) el.setAttribute(key, '');
-    else if (value != null && value !== false) el.setAttribute(key, value);
-  }
-  el.append(...kids.flat(Infinity).filter((kid) => kid != null && kid !== false));
-  return el;
-};
 const $ = (id) => document.getElementById(id);
-const code = (text) => h('code', {}, text);
-// Turns `backticks` in hand-written strings into code elements.
-const rich = (text) => text.split(/`([^`]+)`/).map((part, i) => (i % 2 ? code(part) : part));
-const scroller = (label, table) => h('div', { class: 'scroller', tabindex: 0, role: 'region', 'aria-label': label }, table);
-const verdictWord = (pass) => (pass ? 'bestanden' : 'durchgefallen');
-
-function segmented(label, options, value, onChange) {
-  const group = h('div', { class: 'seg', role: 'group', 'aria-label': label });
-  const select = (next) => {
-    for (const button of group.children) button.setAttribute('aria-pressed', button.dataset.value === next);
-    onChange(next);
-  };
-  group.append(...options.map(([key, text]) => h('button', { type: 'button', 'data-value': key, 'aria-pressed': key === value, onclick: () => select(key) }, text)));
-  return group;
-}
-
-// Blocked storage must not break anything, the state then simply lasts until reload.
-const ratings = {
-  key: 'grader-lab:ratings',
-  memory: {},
-  load() {
-    try {
-      const saved = JSON.parse(localStorage.getItem(this.key));
-      if (saved && typeof saved === 'object') this.memory = Object.fromEntries(Object.entries(saved).filter(([k, v]) => GAME.includes(k) && ['pass', 'fail'].includes(v)));
-    } catch { /* blocked or corrupt: start empty */ }
-    return this.memory;
-  },
-  save() {
-    try { localStorage.setItem(this.key, JSON.stringify(this.memory)); } catch { /* blocked: stays in memory */ }
-  },
+const el = (tag, className, text) => {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text != null) node.textContent = text;
+  return node;
 };
 
-function main(demo, summary) {
-  const releases = new Map(demo.releases.map((r) => [r.id, r]));
-  const entries = new Map([...demo.e1, ...demo.e3, ...demo.e4].map((e) => [`${e.release}|${e.variant}`, e]));
-  const entry = (release, variant) => entries.get(`${release}|${variant}`);
-  const graders = Object.keys(summary.matrix);
-  const mutations = summary.hypotheses.map((x) => x.variant);
-  const controls = Object.keys(summary.matrix.schema).filter((v) => !mutations.includes(v));
-  const passCount = (grader) => summary.e4.byPrompt.naive.passes[grader] + summary.e4.byPrompt.careful.passes[grader];
-  const countOf = ({ tnr, faulty }) => Math.round(tnr * faulty);
-  // Same text as gold, rejected just like gold: durchgefallen, but not a find.
-  const isNoise = (grader, variant) => grader === 'judge-sourced' && ['false-success', 'lucky-path'].includes(variant);
+const CODE = {
+  schema: 'Struktur und Pflichtabschnitte stimmen.',
+  'pr-refs': 'Jede #Nummer existiert und ist nicht zurückgenommen.',
+  'semver-labels': 'Bump passt zu Labels und Commit-Präfixen.',
+  wording: 'Keine verbotenen Wörter, Embargo-Begriffe, passende Länge.',
+  'ref-similarity': 'Text ist der Gold-Fassung ähnlich genug.',
+  functional: 'Sandbox: veröffentlicht, Version stimmt.',
+  trajectory: 'Jeder Diff gelesen, bevor veröffentlicht wird.',
+};
+const MODEL = {
+  'judge-ref': 'Modell vergleicht mit der Gold-Fassung.',
+  'judge-sourced': 'Modell prüft die Rubric gegen PRs und Diffs.',
+  'judge-blind': 'Modell prüft die Rubric, sieht nur die Notes.',
+  pairwise: 'Modell wählt zwischen Text und Gold, beide Reihenfolgen.',
+};
+const GRADERS = [...Object.keys(CODE), ...Object.keys(MODEL)];
 
-  function fillFacts() {
-    const { rogan: rg, runs } = summary.e4;
-    const spread = (values) => {
-      const known = values.filter((x) => x != null);
-      return `${num2(Math.min(...known))} bis ${num2(Math.max(...known))}`;
-    };
-    const range = ({ low, high }) => `${num2(low)} bis ${num2(high)}`;
-    const change = Object.values(summary.e3.change);
-    const sum = (key) => change.reduce((total, x) => total + x[key], 0);
-    const self = summary.tpr_without_self['judge-ref'];
-    const sim = summary.ref_similarity.by_variant.paraphrase;
-    const num3 = (x) => x.toFixed(3).replace('.', ',');
-    const { ranges } = summary;
-    const facts = {
-      faultKinds: mutations.length, graders: graders.length, calls: int(summary.raw.used), artifacts: summary.counts.artifacts,
-      mutations: summary.counts.mutations, controls: summary.counts.controls, runs: runs.length,
-      agentModel: demo.models.agent, judgeModel: demo.models.judge, effort: demo.models.effort,
-      jsrcTpr: num2(summary.rates['judge-sourced'].tpr), jsrcTnr: num2(summary.rates['judge-sourced'].tnr),
-      jrefMut: `${countOf(summary.rates_unique_text['judge-ref'])} von ${summary.rates_unique_text['judge-ref'].faulty}`,
-      jrefMutAll: `${countOf(summary.rates['judge-ref'])} von ${summary.rates['judge-ref'].faulty}`,
-      goldReleases: `${summary.gold_claim_releases} von ${demo.releases.length}`,
-      selfControls: `${summary.rates['judge-ref'].clean - self.total} von ${summary.rates['judge-ref'].clean}`,
-      noSelf: `${self.passes} von ${self.total}`, paraphrases: summary.matrix.schema.paraphrase.total,
-      simParaphrase: `${num3(sim.min)} bis ${num3(sim.max)}`,
-      jrefTnrRange: range(ranges.jref_tnr_text), jsrcTprRange: range(ranges.jsrc_tpr_text), jrefE4Range: range(ranges.jref_e4), jsrcE4Range: range(ranges.jsrc_e4), cellRange: range(ranges.cell_full_3),
-      invisible: summary.rates['judge-ref'].faulty - summary.rates_unique_text['judge-ref'].faulty,
-      jrefE4: `${passCount('judge-ref')} von ${runs.length}`, jsrcE4: `${passCount('judge-sourced')} von ${runs.length}`,
-      llmSplit: `${summary.e4.llm_split} von ${runs.length}`,
-      roganRange: spread(Object.values(rg).map((x) => x.corrected)), roganRangeText: spread(Object.values(rg).map((x) => x.by_text.corrected)),
-      orderMismatch: `${summary.pairwise_order.inconsistent} von ${summary.pairwise_order.total}`, orderFlips: summary.pairwise_order.flips,
-      orderNoSelf: `${summary.pairwise_order_without_self.inconsistent} von ${summary.pairwise_order_without_self.total}`,
-      softer: sum('softer') ? `${sum('softer')} Urteile` : 'kein Urteil', harsher: sum('harsher'),
-      pairConfident: summary.e3.pair_confident_fails, pairNeutral: `${summary.e3.pair_neutral_fails} von ${summary.e3.pair_neutral_total}`,
-      blindTone: `${summary.e3.blind_confident_fails_tone} von ${summary.e3.blind_confident_fails}`,
-      e3Flips: summary.e3.order.flips, e3Mismatch: summary.e3.order.inconsistent, e3Order: summary.e3.order.total,
-    };
-    for (const el of document.querySelectorAll('[data-fact]')) el.textContent = facts[el.dataset.fact];
-    $('hero-meta').hidden = false;
+const MUTATIONS = {
+  'missing-breaking': 'Breaking fehlt', 'wrong-bump': 'Bump zu klein', 'ghost-pr': 'Geister-PR', 'invented-claim': 'erfundene Aussage',
+  'wrong-migration': 'falsche Migration', 'reverted-listed': 'Revert drin', 'embargo-leak': 'Embargo verraten', 'internal-noise': 'CI-Interna',
+  'hype-tone': 'Werbeton', 'useless-true': 'wahr, aber leer', 'false-success': 'nie veröffentlicht', 'lucky-path': 'Diffs nie gelesen',
+};
+const CONTROLS = { paraphrase: 'umformuliert', reordered: 'umsortiert', 'extra-diligent': 'zusätzliche Aufrufe' };
+const AGENTS = { naive: 'Agent naiv', careful: 'Agent sorgfältig' };
+const agentLabel = (variant) => { const [prompt, run] = variant.split('-'); return `${AGENTS[prompt]} ${run}`; };
+
+const STATUS = { fail: 'schlägt an', pass: 'besteht', unchecked: 'nicht geprüft', running: 'läuft' };
+
+let demo, prompts;
+let release; // the selected release object
+let variant = 'gold';
+let state;
+let live = null;
+let running = false;
+const rows = new Map();
+
+const entry = (id = variant) => [...demo.e1, ...demo.e4].find((x) => x.release === release.id && x.variant === id);
+
+function buildRow(id, why) {
+  const details = el('details', 'row');
+  const summary = el('summary');
+  const status = el('span', 'status');
+  const name = el('code', 'name', id);
+  const first = el('span', 'first');
+  summary.append(status, name, first);
+  const more = el('div', 'more');
+  const line = el('p', 'why', why);
+  line.dataset.prose = '';
+  const list = el('ul', 'findings');
+  const note = el('p', 'note');
+  more.append(line, list, note);
+  details.append(summary, more);
+  const item = el('li');
+  item.append(details);
+  rows.set(id, { details, status, first, list, note, last: null });
+  return item;
+}
+
+function showRow(id, { kind, first = '', findings = [], note = '', label = STATUS[kind] }) {
+  const row = rows.get(id);
+  row.details.dataset.state = kind;
+  row.status.textContent = label;
+  row.first.textContent = first;
+  row.list.replaceChildren(...findings.map((f) => el('li', null, f)));
+  row.note.textContent = note;
+  if (row.last && row.last !== kind) {
+    row.details.classList.remove('changed');
+    void row.details.offsetWidth; // restart the animation
+    row.details.classList.add('changed');
   }
+  row.last = kind;
+  $('lamps').children[GRADERS.indexOf(id)].dataset.state = kind;
+}
 
-  function reference() {
-    const terms = (entries) => entries.map(([term, text]) => h('div', {}, h('dt', {}, term), h('dd', {}, text)));
-    $('rubric').append(...terms(demo.rubric.map(([id, name, text]) => [`${id} ${name}`, text])));
-    $('graders').append(...terms(graders.map((g) => [code(g), `${METHOD[g]}.`])));
+function renderDiff() {
+  const box = $('diff');
+  const gold = release.gold.notes_md;
+  if (state.notes === gold) return box.replaceChildren(el('span', 'dim', 'Text identisch mit Gold'));
+  if (state.notes.length > 20000) return box.replaceChildren(el('span', 'dim', 'Text zu lang für den Vergleich mit Gold'));
+  const parts = diffWords(gold, state.notes);
+  const count = (type) => parts.filter((p) => p.type === type).flatMap((p) => p.text.split(/\s+/).filter(Boolean)).length;
+  const marks = { add: 'ins', del: 'del', same: 'span', gap: 'span' };
+  const [added, removed] = [count('add'), count('del')];
+  if (!added && !removed) return box.replaceChildren(el('span', 'dim', 'gegenüber Gold: nur Leerraum geändert'));
+  box.replaceChildren(
+    el('span', 'dim', `gegenüber Gold: +${added} −${removed} Wörter `),
+    ...compactDiff(parts).map((p) => el(marks[p.type], p.type === 'gap' ? 'dim' : null, p.text)),
+  );
+}
+
+function verdictFindings(v) {
+  return [...(v.violations ?? []).map((x) => `${x.criterion}: ${x.evidence}`), ...(v.reason ? [v.reason] : [])];
+}
+
+function grade() {
+  const artifact = buildArtifact(state);
+  const code = gradeCode(artifact, graderContext(release, demo.params));
+  for (const [id, v] of Object.entries(code)) showRow(id, { kind: v.pass ? 'pass' : 'fail', first: v.findings[0] ?? '', findings: v.findings, note: v.score == null ? '' : `Ähnlichkeit ${v.score.toFixed(3)}` });
+
+  const recorded = recordedFor(demo, release.id, state.notes, variant);
+  const verdicts = Object.keys(MODEL).map((id) => [id, modelVerdict(id, { recorded, live, release: release.id, notes: state.notes, judgeModel: demo.models.judge })]);
+  for (const [id, v] of verdicts) {
+    if (running) { showRow(id, { kind: 'running' }); continue; }
+    if (v.state === 'unchecked') { showRow(id, { kind: 'unchecked', first: v.error ?? 'braucht ein Modell', findings: v.error ? ['braucht ein Modell'] : [] }); continue; }
+    const findings = verdictFindings(v);
+    const first = v.error ?? findings[0] ?? '';
+    const split = v.reps > 1 && v.passes !== 0 && v.passes !== v.reps ? `${v.passes} von ${v.reps} Wiederholungen bestehen. ` : '';
+    const note = `${split}${v.source}`;
+    if (v.state === 'stale') showRow(id, { kind: 'stale', label: `veraltet, ${v.pass ? 'bestand' : 'schlug an'}`, first: 'Text seit dem Lauf geändert', findings, note });
+    else showRow(id, { kind: v.pass ? 'pass' : 'fail', first, findings: v.error ? [v.error, ...findings] : findings, note });
   }
+  const sources = [...new Set(verdicts.map(([, v]) => v.source).filter(Boolean))];
+  $('model-source').textContent = running ? `${LIVE_CALLS} Aufrufe laufen` : sources.join(', ');
 
-  function heroMap() {
-    const cell = (grader, variant, control) => {
-      const { found, total } = summary.matrix[grader][variant];
-      const state = !found ? 'none' : isNoise(grader, variant) ? 'noise' : found < total ? 'part' : 'full';
-      return h('span', { class: `dot dot-${state}${control ? ' dot-control' : ''}` });
-    };
-    const rows = graders.map((grader) => [
-      h('span', { class: 'map-label' }, grader),
-      mutations.map((v) => cell(grader, v, false)),
-      h('span', { class: 'map-gap' }),
-      controls.map((v) => cell(grader, v, true)),
-    ]);
-    $('hero-map').append(h('span', { class: 'map', 'aria-hidden': 'true' }, rows));
-  }
+  const states = GRADERS.map((id) => rows.get(id).details.dataset.state);
+  const fails = states.filter((s) => s === 'fail').length;
+  const open = states.filter((s) => s !== 'fail' && s !== 'pass').length;
+  $('count').textContent = `${fails} von ${GRADERS.length} ${fails === 1 ? 'schlägt' : 'schlagen'} an${open ? `, ${open} nicht geprüft` : ''}`;
+  renderDiff();
+  renderRun();
+}
 
-  /* ---------- shared pieces ---------- */
+function renderRun() {
+  const key = $('key').value;
+  $('run').hidden = !key;
+  $('run').disabled = running;
+  $('run').textContent = running ? 'läuft …' : `Judges prüfen, ${LIVE_CALLS} Aufrufe`;
+}
 
-  const notesView = (artifact) => (artifact.notes_md
-    ? h('div', { class: 'notes', html: renderMarkdown(artifact.notes_md) })
-    : h('p', { class: 'notes-empty' }, 'Die Notes sind leer.'));
+function renderSwitches() {
+  const { plan, published, readDiffs } = state;
+  $('bump').value = plan.bump ?? '';
+  $('version').value = plan.version ?? '';
+  $('published').checked = published;
+  $('diffs').checked = readDiffs.length === release.prs.length;
+  $('diffs').indeterminate = readDiffs.length > 0 && readDiffs.length < release.prs.length;
+  $('diff-count').textContent = `${readDiffs.length} von ${release.prs.length}`;
+}
 
-  const prList = (release) => h('ol', { class: 'prs' }, release.prs.map((pr) => h('li', {}, h('details', {},
-    h('summary', {}, h('span', { class: 'pr-no' }, `#${pr.number}`), h('span', {}, pr.title), pr.labels.map((label) => h('span', { class: 'label' }, label))),
-    h('p', { class: 'pr-body' }, pr.body),
-    h('pre', { class: 'code', tabindex: 0 }, pr.diff),
-  ))));
+function renderPicks() {
+  for (const b of $('releases').children) b.setAttribute('aria-pressed', String(b.dataset.id === release.id));
+  for (const b of $('chips').querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.id === variant));
+  $('variant').value = variant;
+}
 
-  const transcriptView = (transcript) => {
-    const turns = Object.groupBy(transcript, (call) => call.turn);
-    return h('pre', { class: 'code', tabindex: 0 }, Object.entries(turns)
-      .map(([turn, calls]) => `Zug ${turn}\n${calls.map((c) => `  ${c.tool}(${c.id ?? ''})${c.ok ? '' : '  fehlgeschlagen'}`).join('\n')}`).join('\n'));
+function touched() {
+  const base = stateFrom(entry().artifact);
+  $('reset').disabled = JSON.stringify(state) === JSON.stringify(base);
+}
+
+function change(patch) {
+  Object.assign(state, patch);
+  renderSwitches();
+  touched();
+  grade();
+}
+
+function load(id) {
+  variant = id;
+  state = stateFrom(entry().artifact);
+  $('notes').value = state.notes;
+  renderPicks();
+  renderSwitches();
+  touched();
+  grade();
+}
+
+function renderRelease() {
+  const here = [...demo.e1, ...demo.e4].filter((x) => x.release === release.id).map((x) => x.variant);
+  const group = (label, items) => {
+    const box = el('optgroup');
+    box.label = label;
+    for (const [value, text] of items) { const o = el('option', null, text); o.value = value; box.append(o); }
+    return box;
   };
-
-  const diffsRead = (e) => new Set(e.artifact.transcript.filter((c) => c.tool === 'get_diff').map((c) => c.id)).size;
-
-  const factLine = (e) => {
-    const { plan, sandbox, transcript } = e.artifact;
-    const items = [
-      ['Bump im Plan', plan.bump ?? 'keiner'],
-      ['Version im Plan', plan.version ?? 'keine'],
-      ['Veröffentlicht', sandbox.published ? `ja, ${sandbox.version}` : 'nein'],
-      transcript && ['Diffs gelesen', `${diffsRead(e)} von ${releases.get(e.release).prs.length}`],
-    ].filter(Boolean);
-    return h('dl', { class: 'facts' }, items.map(([key, value]) => h('div', {}, h('dt', {}, key), h('dd', {}, value))));
-  };
-
-  const verdictList = (e) => h('ul', { class: 'verdicts' }, graders.map((grader) => {
-    const v = e.verdicts[grader];
-    return h('li', { class: v.pass ? 'is-pass' : 'is-fail' },
-      h('code', {}, grader),
-      h('span', {}, `${verdictWord(v.pass)}${v.reps > 1 ? `, ${v.passes} von ${v.reps}` : ''}`));
+  const mutations = Object.entries(MUTATIONS).filter(([id]) => here.includes(id));
+  $('variant').replaceChildren(
+    group('Gold', [['gold', 'Gold']]),
+    group('Fehler', mutations),
+    group('Kontrollen', Object.entries(CONTROLS).filter(([id]) => here.includes(id))),
+    group('Echte Agent-Läufe', here.filter((v) => /^(naive|careful)-/.test(v)).map((v) => [v, agentLabel(v)])),
+  );
+  $('chips').replaceChildren(el('span', 'chips-label', 'Fehler einbauen'), ...mutations.map(([id, text]) => {
+    const b = el('button', 'chip', text);
+    b.type = 'button';
+    b.dataset.id = id;
+    b.addEventListener('click', () => load(variant === id ? 'gold' : id));
+    return b;
   }));
+  $('pr-count').textContent = String(release.prs.length);
+  $('prs').replaceChildren(...release.prs.map((pr) => {
+    const box = el('details', 'pr');
+    box.append(el('summary', null, `#${pr.number} ${pr.title}`), el('p', 'dim', pr.labels.join(', ') || 'keine Labels'), el('p', null, pr.body));
+    const pre = el('pre');
+    for (const line of pr.diff.split('\n')) pre.append(el('span', line.startsWith('+') ? 'plus' : line.startsWith('-') ? 'minus' : null, `${line}\n`));
+    box.append(pre);
+    return box;
+  }));
+}
 
-  const diffView = (from, to) => {
-    if (from === to) return h('p', { class: 'note' }, 'Der Text ist identisch.');
-    return h('pre', { class: 'diff', tabindex: 0 }, diffWords(from, to).map((part) => (part.type === 'same' ? part.text : h(part.type === 'add' ? 'ins' : 'del', {}, part.text))));
-  };
+function pick(id, version = 'gold') {
+  release = demo.releases.find((r) => r.id === id);
+  renderRelease();
+  load(version);
+}
 
-  /* ---------- detail dialog ---------- */
-
-  const criterion = (id) => demo.rubric.find(([key]) => key === id)?.[1] ?? '';
-  const reasonView = (grader, v) => h('div', { class: 'reason' },
-    h('h3', {}, `${grader}: ${verdictWord(v.pass)}`),
-    h('p', { class: 'note' }, `${METHOD[grader]}.${v.reps > 1 ? ` ${v.passes} von ${v.reps} Wiederholungen bestanden. Begründung aus einer Wiederholung mit diesem Urteil.` : ''}`),
-    v.reason && h('p', {}, rich(v.reason)),
-    v.violations && h('ul', {}, v.violations.map((x) => h('li', {}, h('strong', {}, `${x.criterion} ${criterion(x.criterion)}:`), ' ', rich(x.evidence)))),
-    v.findings && h('ul', {}, v.findings.slice(0, 6).map((x) => h('li', {}, x)), v.findings.length > 6 && h('li', {}, `und ${v.findings.length - 6} weitere`)),
-    !v.reason && !v.findings && h('p', {}, 'Keine Beanstandung.'),
-    v.score != null && h('p', { class: 'note' }, `Ähnlichkeit ${String(v.score).replace('.', ',')}, Schwelle 0,7.`));
-
-  function artifactView(e, grader, intro) {
-    const gold = releases.get(e.release).gold;
-    return [
-      intro,
-      grader && reasonView(grader, e.verdicts[grader]),
-      h('h3', {}, e.kind === 'agent' ? 'Ergebnis des Laufs' : 'Artefakt'),
-      factLine(e),
-      e.artifact.sandbox.differs && h('div', { class: 'note' }, 'Der veröffentlichte Text weicht von den gemeldeten Notes ab. An der ersten abweichenden Stelle steht:',
-        h('pre', { class: 'code', tabindex: 0 }, `gemeldet:      ${JSON.stringify(e.artifact.sandbox.differs.reported)}\nveröffentlicht: ${JSON.stringify(e.artifact.sandbox.differs.published)}`)),
-      h('h3', {}, 'Diff zur Gold-Fassung'),
-      e.artifact.notes_md ? diffView(gold.notes_md, e.artifact.notes_md) : h('p', { class: 'notes-empty' }, 'Die Notes sind leer.'),
-      h('p', { class: 'note' }, 'Gold-Plan: ', gold.plan.bump, ', ', gold.plan.version, '.'),
-      e.artifact.transcript && h('details', { class: 'fold' }, h('summary', {}, 'Transcript'), transcriptView(e.artifact.transcript)),
-      h('details', { class: 'fold' }, h('summary', {}, 'Alle Grader zu dieser Fassung'), verdictList(e)),
-    ];
-  }
-
-  function openDetail(title, subtitle, body) {
-    $('detail-body').replaceChildren(h('h2', { id: 'detail-title' }, title), h('p', { class: 'meta' }, subtitle), ...[body].flat(Infinity).filter(Boolean));
-    if (!$('detail').open) $('detail').showModal();
-    $('detail').scrollTop = 0;
-  }
-
-  function openCell(grader, variant) {
-    const cases = demo.releases.map((r) => ({ id: r.id, e: entry(r.id, variant), missing: demo.limits.not_applicable.find((x) => x.release === r.id && x.variant === variant) }));
-    const available = cases.filter((c) => c.e);
-    const first = available.find((c) => !c.e.verdicts[grader].pass) ?? available[0];
-    const render = (id, refocus) => {
-      const picked = cases.find((c) => c.id === id);
-      const picker = segmented('Release', available.map((c) => [c.id, `${c.id}: ${verdictWord(c.e.verdicts[grader].pass)}`]), id, (next) => render(next, true));
-      const undefinedHere = cases.filter((c) => c.missing).map((c) => h('li', {}, `${c.id}: nicht definiert. ${c.missing.reason}`));
-      openDetail(variant, `${LABEL[variant]}, ${grader}`, [picker, undefinedHere.length > 0 && h('ul', { class: 'note' }, undefinedHere), artifactView(picked.e, grader)]);
-      // The picker is rebuilt with the dialog body, so keep the keyboard position on it.
-      if (refocus) picker.querySelector(`[data-value="${id}"]`).focus({ preventScroll: true });
-    };
-    render(first.id);
-  }
-
-  /* ---------- agent ---------- */
-
-  function agentSection() {
-    const state = { release: 'r1', run: 'careful-1' };
-    const view = h('div', { class: 'agent-view' });
-    const render = () => {
-      const release = releases.get(state.release);
-      const e = entry(state.release, state.run);
-      const { sandbox, transcript } = e.artifact;
-      const turns = new Set(transcript.map((c) => c.turn)).size;
-      view.replaceChildren(
-        h('div', {},
-          h('h3', {}, `Eingabe: ${release.prs.length} gemergte PRs seit ${release.previous_version}`),
-          prList(release)),
-        h('div', {},
-          h('h3', {}, 'Ausgabe'),
-          h('p', { class: `run-state ${sandbox.published ? '' : 'is-fail'}` }, sandbox.published ? `Veröffentlicht als ${sandbox.version}` : 'Nichts veröffentlicht'),
-          factLine(e),
-          notesView(e.artifact),
-          h('details', { class: 'fold' }, h('summary', {}, `Transcript: ${transcript.length} Tool-Aufrufe in ${turns} Zügen`), transcriptView(transcript)),
-          h('details', { class: 'fold' }, h('summary', {}, 'Urteile der Grader zu diesem Lauf'), verdictList(e))),
-      );
-    };
-    const set = (key) => (value) => { state[key] = value; render(); };
-    $('agent-app').append(
-      h('div', { class: 'controls' },
-        h('div', {}, h('span', { class: 'control-label' }, 'Release'), segmented('Release', demo.releases.map((r) => [r.id, `${r.id}, ${r.gold.plan.version}`]), state.release, set('release'))),
-        h('div', {}, h('span', { class: 'control-label' }, 'Lauf'), segmented('Lauf', Object.entries(RUNS), state.run, set('run')))),
-      view);
-    render();
-  }
-
-  /* ---------- game ---------- */
-
-  function gameSection(onReveal) {
-    const answers = ratings.load();
-    const status = h('p', { class: 'meta game-status', tabindex: -1, 'aria-live': 'polite' });
-    const root = h('div');
-    $('game-app').append(status, root);
-    const release = releases.get(GAME_RELEASE);
-    const letter = (i) => 'ABCDEF'[i];
-    let step = Math.max(0, GAME.findIndex((v) => !answers[v]));
-    const done = () => GAME.every((v) => answers[v]);
-    // The next text replaces the current one, so show its start. CSS turns the smooth scroll off under reduced motion.
-    const bringIntoView = (el) => {
-      el.focus({ preventScroll: true });
-      el.scrollIntoView({ block: 'start' });
-    };
-    const show = () => { rate(); bringIntoView(status); };
-
-    const answer = (verdict) => {
-      answers[GAME[step]] = verdict;
-      ratings.save();
-      if (done()) { reveal(); bringIntoView(root.querySelector('h3')); } else {
-        const next = GAME.findIndex((v, i) => i > step && !answers[v]);
-        step = next === -1 ? GAME.findIndex((v) => !answers[v]) : next;
-        show();
+function renderMatrix(matrix) {
+  const head = el('tr');
+  head.append(el('th', null, 'Fassung'));
+  for (const g of GRADERS) { const th = el('th', null, g); th.scope = 'col'; head.append(th); }
+  const thead = el('thead');
+  thead.append(head);
+  const section = (title, labels) => {
+    const body = el('tbody');
+    const titleRow = el('tr', 'band');
+    const cell = el('th', null, title);
+    cell.colSpan = GRADERS.length + 1;
+    cell.scope = 'colgroup';
+    titleRow.append(cell);
+    body.append(titleRow);
+    for (const [id, label] of Object.entries(labels)) {
+      const row = el('tr');
+      const th = el('th');
+      th.scope = 'row';
+      const go = el('button', null, label);
+      go.type = 'button';
+      th.append(go);
+      row.append(th);
+      for (const g of GRADERS) {
+        const { found, total } = matrix[g][id];
+        const td = el('td', found === 0 ? 'none' : found === total ? 'all' : 'some', `${found}/${total}`);
+        row.append(td);
       }
-    };
-
-    function rate() {
-      const variant = GAME[step];
-      const chosen = answers[variant];
-      const pending = GAME.filter((v) => !answers[v]).length;
-      status.hidden = false;
-      status.textContent = `Fassung ${letter(step)} von ${letter(GAME.length - 1)}, noch ${pending} offen`;
-      root.replaceChildren(h('div', { class: 'game' },
-        h('div', {},
-          notesView(entry(GAME_RELEASE, variant).artifact),
-          h('div', { class: 'game-actions' },
-            h('button', { type: 'button', class: 'btn', 'aria-pressed': chosen === 'pass', onclick: () => answer('pass') }, 'Bestehen lassen'),
-            h('button', { type: 'button', class: 'btn', 'aria-pressed': chosen === 'fail', onclick: () => answer('fail') }, 'Durchfallen lassen'),
-            step > 0 && h('button', { type: 'button', class: 'btn btn-ghost', onclick: () => { step--; show(); } }, 'Zurück'))),
-        h('div', {},
-          h('details', { class: 'fold' }, h('summary', {}, `Quellen: ${release.prs.length} PRs mit Diff`), prList(release)))));
-    }
-
-    function reveal() {
-      const correct = (variant, verdict) => (verdict === 'pass') === (entry(GAME_RELEASE, variant).kind === 'control');
-      const score = (verdictOf) => GAME.filter((v) => correct(v, verdictOf(v))).length;
-      const you = score((v) => answers[v]);
-      const others = graders.map((grader) => ({ grader, right: score((v) => (entry(GAME_RELEASE, v).verdicts[grader].pass ? 'pass' : 'fail')) }))
-        .sort((a, b) => b.right - a.right);
-      const rows = GAME.map((variant, i) => {
-        const e = entry(GAME_RELEASE, variant);
-        const failed = graders.filter((grader) => !e.verdicts[grader].pass);
-        return h('tr', {},
-          h('th', { scope: 'row' }, letter(i)),
-          h('td', {}, e.kind === 'control' ? 'ohne eingebauten Fehler' : 'eingebauter Fehler'),
-          h('td', {}, `${verdictWord(answers[variant] === 'pass')}, ${correct(variant, answers[variant]) ? 'stimmt' : 'stimmt nicht'}`),
-          h('td', {}, code(variant), h('br'), LABEL[variant]),
-          h('td', {}, failed.length ? failed.map((g, n) => [n > 0 && ', ', code(g)]) : 'keiner'),
-          h('td', {}, h('button', { type: 'button', class: 'btn btn-s', 'aria-label': `Fassung ${letter(i)} ansehen`, onclick: () => openDetail(variant, `${LABEL[variant]}, Fassung ${letter(i)}`, artifactView(e)) }, 'Ansehen')));
+      row.addEventListener('click', () => {
+        const target = demo.e1.find((x) => x.variant === id && x.release === release.id) ?? demo.e1.find((x) => x.variant === id);
+        pick(target.release, id);
+        document.querySelector('.bench').scrollIntoView({ block: 'start' });
+        $('notes').focus({ preventScroll: true });
       });
-      status.hidden = true;
-      root.replaceChildren(h('div', { class: 'reveal' },
-        h('h3', { tabindex: -1 }, `Du liegst bei ${you} von ${GAME.length} richtig`),
-        h('p', {}, rich('Die Fassungen C und F haben denselben Text. C wurde nie veröffentlicht. Das steht in keinem Text, weder du noch ein Judge kann es sehen, nur `functional` prüft die Sandbox. `judge-sourced` lehnt C zwar ab, aber F genauso.')),
-        scroller('Auflösung', h('table', {},
-          h('caption', {}, 'Auflösung der sechs Fassungen aus Release r1'),
-          h('thead', {}, h('tr', {}, ['Fassung', 'Tatsächlich', 'Dein Urteil', 'Was drinsteckt', 'Durchfallen ließen', ''].map((t) => h('th', { scope: 'col' }, t)))),
-          h('tbody', {}, rows))),
-        h('h3', {}, 'Treffer auf diesen sechs Fassungen'),
-        h('ul', { class: 'bars' },
-          h('li', { class: 'is-you' }, h('span', {}, 'du'), h('span', { class: 'bar', style: `--v:${you / GAME.length}` }), h('span', {}, `${you}/${GAME.length}`)),
-          others.map(({ grader, right }) => h('li', {}, h('code', {}, grader), h('span', { class: 'bar', style: `--v:${right / GAME.length}` }), h('span', {}, `${right}/${GAME.length}`)))),
-        h('p', { class: 'note' }, 'Sechs handverlesene Fassungen aus einem Release, das ist kein Leistungsvergleich. „Ohne eingebauten Fehler“ heißt nicht fehlerlos, siehe „Was hier nicht gezeigt wird“. Deine Urteile stehen jetzt in der Spalte „Du“ der Matrix.'),
-        h('button', { type: 'button', class: 'btn btn-ghost', onclick: restart }, 'Noch einmal bewerten')));
-      onReveal(answers);
+      body.append(row);
     }
-
-    function restart() {
-      for (const key of Object.keys(answers)) delete answers[key];
-      ratings.save();
-      step = 0;
-      onReveal({});
-      show();
-    }
-
-    if (done()) reveal(); else rate();
-  }
-
-  /* ---------- matrix ---------- */
-
-  function matrixSection() {
-    const humanCells = new Map();
-
-    const cell = (grader, variant, r, c) => {
-      const { found, total } = summary.matrix[grader][variant];
-      const control = controls.includes(variant);
-      const noise = isNoise(grader, variant);
-      const state = !found ? 'none' : control ? 'alarm' : noise ? 'noise' : found < total ? 'part' : 'full';
-      const mark = control && found ? ' !' : noise ? ' †' : '';
-      const reading = control ? `${found} von ${total} Fehlalarme` : noise ? `${found} von ${total} durchgefallen, kein echter Fund` : `${found} von ${total} gefunden`;
-      return h('td', {}, h('button', {
-        type: 'button', class: `cell cell-${state}`, tabindex: r === 0 && c === 0 ? 0 : -1, 'data-r': r, 'data-c': c,
-        'aria-label': `${grader}, ${variant}: ${reading}`, onclick: () => openCell(grader, variant),
-      }, `${found}/${total}${mark}`));
-    };
-
-    const row = (variant, r) => {
-      const human = h('td', { class: 'human' }, h('span', { class: 'cell cell-empty' }, h('span', { 'aria-hidden': 'true' }, '–'), h('span', { class: 'sr' }, 'nicht bewertet')));
-      humanCells.set(variant, human);
-      return h('tr', {},
-        h('th', { scope: 'row' }, h('code', {}, variant), h('span', { class: 'row-label' }, LABEL[variant])),
-        graders.map((grader, c) => cell(grader, variant, r, c)), human);
-    };
-
-    const group = (title, variants, offset) => h('tbody', {},
-      h('tr', { class: 'group' }, h('th', { scope: 'rowgroup', colspan: graders.length + 2 }, h('span', {}, title))),
-      variants.map((v, i) => row(v, offset + i)));
-
-    const noModel = graders.filter((g) => !LLM.includes(g)).length;
-    const table = h('table', { class: 'matrix' },
-      h('caption', { class: 'sr' }, 'Grader mal Fehlerart: durchgefallene Artefakte je Zelle'),
-      h('thead', {},
-        h('tr', { class: 'head-group' },
-          h('td'),
-          h('th', { scope: 'colgroup', colspan: noModel }, 'ohne Modell'),
-          h('th', { scope: 'colgroup', colspan: LLM.length }, 'mit Modell'),
-          h('th', { scope: 'col', rowspan: 2, class: 'head-you' }, 'Du')),
-        h('tr', {},
-          h('th', { scope: 'col', class: 'head-corner' }, 'Fehlerart'),
-          graders.map((g) => h('th', { scope: 'col', class: 'head-grader', title: METHOD[g] }, h('span', {}, g))))),
-      group('Mutationen: durchgefallen heißt gefunden', mutations, 0),
-      group('Kontrollen: durchgefallen heißt Fehlalarm', controls, mutations.length));
-
-    const rowCount = mutations.length + controls.length;
-    table.addEventListener('keydown', (event) => {
-      const from = event.target.closest('button.cell');
-      if (!from) return;
-      let [r, c] = [Number(from.dataset.r), Number(from.dataset.c)];
-      if (event.key === 'ArrowRight') c++;
-      else if (event.key === 'ArrowLeft') c--;
-      else if (event.key === 'ArrowDown') r++;
-      else if (event.key === 'ArrowUp') r--;
-      else if (event.key === 'Home') c = 0;
-      else if (event.key === 'End') c = graders.length - 1;
-      else return;
-      event.preventDefault();
-      if (r < 0 || r >= rowCount || c < 0 || c >= graders.length) return;
-      from.tabIndex = -1;
-      const to = table.querySelector(`[data-r="${r}"][data-c="${c}"]`);
-      to.tabIndex = 0;
-      to.focus({ preventScroll: true });
-      // focus() alone leaves a cell half under the sticky row header, scrollIntoView honours the scroll padding.
-      to.scrollIntoView({ block: 'nearest', inline: 'nearest' });
-    });
-    table.addEventListener('focusin', (event) => {
-      const to = event.target.closest('button.cell');
-      if (!to) return;
-      for (const other of table.querySelectorAll('button.cell[tabindex="0"]')) other.tabIndex = -1;
-      to.tabIndex = 0;
-    });
-
-    $('matrix-app').append(scroller('Matrix, seitlich scrollbar', table));
-
-    // The "Du" column holds nothing but what this reader rated, in the same unit as the other cells.
-    return (answers) => {
-      for (const [variant, td] of humanCells) {
-        const verdict = answers[variant];
-        td.firstChild.replaceChildren(...(verdict
-          ? [h('span', { 'aria-hidden': 'true' }, verdict === 'fail' ? '1/1' : '0/1'), h('span', { class: 'sr' }, `Du: ${verdictWord(verdict === 'pass')}`)]
-          : [h('span', { 'aria-hidden': 'true' }, '–'), h('span', { class: 'sr' }, 'nicht bewertet')]));
-        td.firstChild.className = `cell ${verdict ? 'cell-you' : 'cell-empty'}`;
-      }
-    };
-  }
-
-  function hypotheses() {
-    const rows = summary.hypotheses.map((x) => h('tr', {},
-      h('th', { scope: 'row' }, code(x.variant)),
-      h('td', {}, x.expected),
-      h('td', {}, x.graders.map((g, i) => [i > 0 && ', ', `${g} ${x.found[g].found}/${x.found[g].total}`])),
-      h('td', {}, x.outcome),
-      h('td', {}, x.note ? rich(x.note) : '–'),
-      h('td', {}, x.others.join(', ') || 'keiner')));
-    $('hypotheses').append(scroller('Erwartung und Ergebnis', h('table', {},
-      h('caption', { class: 'sr' }, 'Erwartung aus der Spezifikation gegen Messung'),
-      h('thead', {}, h('tr', {}, ['Fehler', 'Erwartung', 'Gemessen bei den Erwarteten', 'Ergebnis', 'Anmerkung', 'Fanden außerdem'].map((t) => h('th', { scope: 'col' }, t)))),
-      h('tbody', {}, rows))));
-  }
-
-  function goldClaims() {
-    $('gold-claims').append(scroller('Vorwürfe gegen Gold', h('table', {},
-      h('caption', { class: 'sr' }, 'Vorwürfe von judge-sourced gegen die Gold-Texte, je Release'),
-      h('thead', {}, h('tr', {}, ['Release', 'Vorwurf', 'Wiederholungen'].map((t) => h('th', { scope: 'col' }, t)))),
-      h('tbody', {}, summary.gold_claims.map((x) => h('tr', {},
-        h('th', { scope: 'row' }, x.release),
-        h('td', {}, rich(x.topic)),
-        h('td', {}, `${x.hits} von ${x.reps}`)))))));
-  }
-
-  /* ---------- trust ---------- */
-
-  function rates() {
-    const pct = (rate) => h('span', { class: 'rate' }, h('span', { class: 'bar', style: `--v:${rate}` }), num2(rate));
-    const rows = graders.map((grader) => {
-      const r = summary.rates[grader];
-      const unique = summary.rates_unique_text[grader];
-      return h('tr', {},
-        h('th', { scope: 'row' }, code(grader), h('span', { class: 'row-label' }, METHOD[grader])),
-        h('td', {}, pct(r.tpr)),
-        h('td', {}, pct(r.tnr)),
-        h('td', {}, unique ? num2(unique.tpr) : '–'),
-        h('td', {}, unique ? num2(unique.tnr) : '–'),
-        h('td', {}, `${passCount(grader)} von ${summary.e4.runs.length}`));
-    });
-    const { clean, faulty } = summary.rates.schema;
-    $('rates').append(scroller('TPR und TNR', h('table', {},
-      h('caption', { class: 'sr' }, 'TPR und TNR je Grader und bestandene Läufe des echten Agenten'),
-      h('thead', {}, h('tr', {}, [`TPR (${clean} fehlerfrei)`, `TNR (${faulty} fehlerhaft)`, 'TPR je Text', 'TNR je Text', 'Agent-Läufe bestanden'].reduce((cells, t) => [...cells, h('th', { scope: 'col' }, t)], [h('th', { scope: 'col' }, 'Grader')]))),
-      h('tbody', {}, rows))));
-  }
-
-  function cases() {
-    $('cases').append(...CASES.map(([release, variant, title, text]) => h('li', {},
-      h('h4', {}, title),
-      h('p', {}, rich(text)),
-      h('button', {
-        type: 'button', class: 'btn btn-s', onclick: () => {
-          const e = entry(release, variant);
-          openDetail(title, `${release}, Lauf ${RUNS[variant]}`, [h('h3', {}, 'Alle Grader zu diesem Lauf'), verdictList(e), artifactView(e).slice(0, -1)]);
-        },
-      }, `${release} ${RUNS[variant]} ansehen`))));
-  }
-
-  function rogan() {
-    const data = summary.e4.rogan;
-    // The observed rates are counts out of the agent runs, so the slider moves in runs and hits them exactly.
-    const total = summary.e4.runs.length;
-    const passes = (grader) => Math.round(data[grader].observed * total);
-    const state = { grader: 'judge-blind', basis: 'artifact', passes: passes('judge-blind') };
-    const output = h('output', { class: 'rogan-result', for: 'observed' });
-    const slider = h('input', {
-      type: 'range', id: 'observed', min: 0, max: total, step: 1, value: state.passes,
-      oninput: (event) => { state.passes = Number(event.target.value); render(); },
-    });
-    const sliderLabel = h('label', { for: 'observed' });
-    function render() {
-      const { tpr, tnr } = state.basis === 'text' ? data[state.grader].by_text : data[state.grader];
-      const shown = state.passes / total;
-      const corrected = roganGladen(shown, tpr, tnr);
-      sliderLabel.textContent = `Beobachtete Pass-Rate: ${state.passes} von ${total} Läufen bestanden, ${num2(shown)}. Gemessen wurden ${passes(state.grader)} von ${total}.`;
-      const raw = tpr + tnr - 1 > 0 ? (shown + tnr - 1) / (tpr + tnr - 1) : null;
-      const remark = corrected == null ? `TPR + TNR − 1 = ${num2(tpr + tnr - 1)}, die Formel gibt hier nichts her.`
-        : raw !== corrected ? 'Das Rohergebnis liegt außerhalb von 0 bis 1 und wird begrenzt.' : '';
-      output.replaceChildren(
-        h('span', { class: 'formula' }, `(${num2(shown)} + ${num2(tnr)} − 1) / (${num2(tpr)} + ${num2(tnr)} − 1)`),
-        h('strong', {}, corrected == null ? 'nicht definiert' : num2(corrected)),
-        h('span', { class: 'note' }, remark));
-    }
-    const pick = segmented('Grader', LLM.map((g) => [g, g]), state.grader, (grader) => {
-      state.grader = grader;
-      state.passes = passes(grader);
-      slider.value = state.passes;
-      render();
-    });
-    const basis = segmented('Zählweise', [['artifact', 'je Artefakt'], ['text', 'je Text']], state.basis, (next) => { state.basis = next; render(); });
-    const shownValue = (x) => (x.corrected == null ? 'nicht definiert' : num2(x.corrected));
-    const table = h('table', {},
-      h('caption', { class: 'sr' }, 'Korrektur der Pass-Rate auf dem echten Agenten'),
-      h('thead', {}, h('tr', {}, ['Grader', 'beobachtet', 'TPR', 'TNR', 'korrigiert', 'TNR je Text', 'korrigiert je Text'].map((t) => h('th', { scope: 'col' }, t)))),
-      h('tbody', {}, LLM.map((g) => h('tr', {},
-        h('th', { scope: 'row' }, code(g)),
-        ['observed', 'tpr', 'tnr'].map((k) => h('td', {}, num2(data[g][k]))),
-        h('td', {}, shownValue(data[g])),
-        h('td', {}, num2(data[g].by_text.tnr)),
-        h('td', {}, shownValue(data[g].by_text))))));
-    $('rogan').append(pick, basis, sliderLabel, slider, output, scroller('Korrektur je Grader', table));
-    render();
-  }
-
-  function flakiness() {
-    const percent = ({ disagreeing, total, rate }) => `${disagreeing}/${total} (${Math.round(rate * 100)} %)`;
-    $('flakiness').append(scroller('Stabilität', h('table', {},
-      h('caption', { class: 'sr' }, 'Uneinige Fälle je LLM-Grader'),
-      h('thead', {}, h('tr', {}, ['Grader', 'je Artefakt', 'je Text'].map((t) => h('th', { scope: 'col' }, t)))),
-      h('tbody', {}, LLM.map((g) => h('tr', {},
-        h('th', { scope: 'row' }, code(g)),
-        h('td', {}, percent(summary.flakiness[g])),
-        h('td', {}, percent(summary.flakiness_unique_text[g]))))))));
-  }
-
-  /* ---------- distraction ---------- */
-
-  function distraction() {
-    const shown = (x) => h('td', { class: x.passes ? 'is-wrong' : '' }, `${x.passes}/${x.reps}${x.passes ? ' !' : ''}`);
-    const table = h('table', { class: 'e3' },
-      h('caption', { class: 'sr' }, 'Bestandene Wiederholungen je Release, neutral und selbstbewusst'),
-      h('thead', {},
-        h('tr', {}, h('td'), LLM.map((g) => h('th', { scope: 'colgroup', colspan: 2 }, g))),
-        h('tr', {}, h('th', { scope: 'col' }, 'Release'), LLM.map(() => [h('th', { scope: 'col' }, 'neutral'), h('th', { scope: 'col' }, 'selbstbewusst')]))),
-      h('tbody', {}, summary.e3.rows.map((row) => h('tr', {},
-        h('th', { scope: 'row' }, row.release),
-        LLM.map((g) => [shown(row[g].neutral), shown(row[g].confident)])))),
-      h('tfoot', {}, h('tr', {},
-        h('th', { scope: 'row' }, 'Releases bestanden'),
-        LLM.map((g) => [h('td', {}, summary.e3.change[g].pass_neutral), h('td', {}, summary.e3.change[g].pass_confident)]))));
-    $('distraction').append(scroller('Ablenkung', table));
-    $('distraction').append(h('p', { class: 'note' }, 'Zellen zeigen bestandene Wiederholungen, ! markiert ein Fehlurteil. `judge-sourced` lässt auch alle Kontrollen durchfallen, seine Nullen sagen hier wenig.'.replaceAll('`', '')));
-    const [neutral, confident] = ['neutral', 'confident'].map((tone) => entry('r1', `invented-claim:${tone}`).artifact.notes_md);
-    $('distraction-diff').append(diffView(neutral, confident));
-  }
-
-  fillFacts();
-  reference();
-  heroMap();
-  agentSection();
-  gameSection(matrixSection());
-  hypotheses();
-  goldClaims();
-  rates();
-  cases();
-  rogan();
-  flakiness();
-  distraction();
-  $('detail').addEventListener('click', (e) => { if (e.target === $('detail')) $('detail').close(); });
+    return body;
+  };
+  $('matrix').replaceChildren(thead, section('Eingebaute Fehler', MUTATIONS), section('Kontrollen, jeder Treffer ist ein Fehlalarm', { gold: 'Gold', ...CONTROLS }));
 }
 
-const notice = $('load-error');
-try {
-  const [demo, summary] = await Promise.all(['data/demo.json', 'data/summary.json'].map(async (url) => {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(`${url}: ${response.status}`);
-    return response.json();
+async function runLive() {
+  const notes = state.notes;
+  const connection = { provider: $('provider').value, key: $('key').value, model: $('model').value.trim() };
+  running = true;
+  grade();
+  live = await runJudges(connection, release, notes, prompts);
+  running = false;
+  grade();
+}
+
+let timer;
+function wire() {
+  $('notes').addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { state.notes = $('notes').value; touched(); grade(); }, 120);
+  });
+  $('variant').addEventListener('change', () => load($('variant').value));
+  $('bump').addEventListener('change', () => {
+    const bump = $('bump').value || null;
+    change({ plan: { ...state.plan, bump, version: bump ? nextVersion(release.previous_version, bump) : state.plan.version } });
+  });
+  $('version').addEventListener('input', () => { state.plan = { ...state.plan, version: $('version').value || null }; touched(); grade(); });
+  $('published').addEventListener('change', () => change({ published: $('published').checked }));
+  $('diffs').addEventListener('change', () => change({ readDiffs: $('diffs').checked ? release.prs.map((p) => p.number) : [] }));
+  $('reset').addEventListener('click', () => load(variant));
+  $('run').addEventListener('click', runLive);
+  $('key').addEventListener('input', renderRun);
+  $('provider').addEventListener('change', () => {
+    $('key').value = ''; // a key of one provider must never travel to the other
+    $('model').value = PROVIDERS[$('provider').value].model;
+    renderRun();
+  });
+}
+
+async function start() {
+  const base = new URL('../data/', import.meta.url);
+  const [data, summary] = await Promise.all(['demo.json', 'summary.json'].map((f) => fetch(new URL(f, base)).then((r) => r.json())));
+  demo = data;
+  prompts = { ...demo.prompts, params: demo.params };
+
+  $('lamps').replaceChildren(...GRADERS.map(() => el('li')));
+  $('code-rows').replaceChildren(...Object.entries(CODE).map(([id, why]) => buildRow(id, why)));
+  $('model-rows').replaceChildren(...Object.entries(MODEL).map(([id, why]) => buildRow(id, why)));
+  $('releases').replaceChildren(...demo.releases.map((r) => {
+    const b = el('button', null, r.id);
+    b.type = 'button';
+    b.dataset.id = r.id;
+    b.addEventListener('click', () => pick(r.id));
+    return b;
   }));
-  main(demo, summary);
-} catch (error) {
-  notice.hidden = false;
-  notice.textContent = location.protocol === 'file:'
-    ? 'Die Ergebnisdaten lassen sich nicht direkt aus dem Dateisystem laden. Starte im Ordner site einen lokalen Server, zum Beispiel: python3 -m http.server'
-    : `Die Ergebnisdaten ließen sich nicht laden oder darstellen (${error.message}). Lade die Seite neu.`;
-  throw error;
+  for (const [id, { label, model }] of Object.entries(PROVIDERS)) {
+    const o = el('option', null, label);
+    o.value = id;
+    $('provider').append(o);
+    if ($('provider').options.length === 1) $('model').value = model;
+  }
+  renderMatrix(summary.matrix);
+  wire();
+  pick(demo.releases[0].id);
 }
+
+start().catch(() => {
+  $('count').textContent = 'Daten konnten nicht geladen werden. Lade die Seite neu.';
+});

@@ -1,5 +1,5 @@
 // Recomputes every figure from data/results (itself replayed from data/raw by `npm run report`)
-// and writes summary.json, demo.json and docs/findings.md, and copies both JSONs into site/data for the demo.
+// and writes summary.json, demo.json and docs/findings.md, and copies both JSONs and the browser-safe grader code into site/.
 import { copyFileSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { flakiness, matrix, ratesByGrader, roganGladen, verdicts } from './aggregate.mjs';
@@ -273,7 +273,15 @@ function similaritySensitivity(e1, e4) {
   };
 }
 
-function compactArtifact(a, keep) {
+// Same reading as the trajectory grader: only diffs the agent had seen before it decided to publish.
+export function readDiffs(artifact, release) {
+  const published = artifact.transcript.find((c) => c.tool === 'publish_release' && c.ok);
+  const seenBy = published ? published.turn : Infinity;
+  const read = new Set(artifact.transcript.filter((c) => c.tool === 'get_diff' && c.ok && c.turn < seenBy).map((c) => c.args.id));
+  return release.prs.map((p) => p.number).filter((n) => read.has(n));
+}
+
+function compactArtifact(a, keep, release) {
   const [reported, published] = [a.notes_md, a.sandbox.notes ?? ''];
   const same = published === reported;
   // Where a published text departs from the reported one, as a short excerpt: a trailing space is invisible otherwise.
@@ -283,8 +291,9 @@ function compactArtifact(a, keep) {
     notes_md: a.notes_md, plan: a.plan,
     sandbox: {
       published: a.sandbox.published, version: a.sandbox.version, same_text: same,
-      ...(at == null ? {} : { differs: { reported: reported.slice(from, from + 40), published: published.slice(from, from + 40) } }),
+      ...(at == null ? {} : { notes: published, differs: { reported: reported.slice(from, from + 40), published: published.slice(from, from + 40) } }),
     },
+    read_diffs: readDiffs(a, release),
     ...(keep ? { transcript: a.transcript.map((c) => ({ turn: c.turn, tool: c.tool, id: c.args.id ?? null, ok: c.ok })) } : {}),
   };
 }
@@ -302,16 +311,19 @@ function verdictDetail(rows, item) {
 }
 
 function demoData({ e1, e3, e4, fixtures, artifacts, key }, prompts) {
+  const byId = new Map(fixtures.map((f) => [f.release.id, f.release]));
   const group = (rows) => {
     const out = {};
     for (const v of verdicts(rows)) ((out[`${v.release}|${v.variant}`] ??= { release: v.release, variant: v.variant, kind: v.kind, verdicts: {} }).verdicts[v.grader] = verdictDetail(rows, v));
-    return Object.values(out).map((x) => ({ ...x, artifact: compactArtifact(artifacts.get(key(x.release, x.variant)), x.kind === 'agent' || ['gold', 'false-success', 'lucky-path', 'extra-diligent'].includes(x.variant)) }));
+    return Object.values(out).map((x) => ({ ...x, artifact: compactArtifact(artifacts.get(key(x.release, x.variant)), x.kind === 'agent' || ['gold', 'false-success', 'lucky-path', 'extra-diligent'].includes(x.variant), byId.get(x.release)) }));
   };
   return {
     models: prompts.params.models,
+    params: prompts.params,
+    prompts: { rubric: prompts.rubric, ...Object.fromEntries([...JUDGES, 'pairwise'].map((g) => [g, prompts[g]])) },
     rubric: prompts.rubric.split('\n').map((line) => line.match(/^(R\d+) ([^:]+): (.+)$/).slice(1)),
     limits: { not_applicable: e1.not_applicable },
-    releases: fixtures.map(({ release, gold }) => ({ id: release.id, package: release.package, previous_version: release.previous_version, prs: release.prs, issues: release.issues, gold: { notes_md: gold.notes_md, plan: gold.plan } })),
+    releases: fixtures.map(({ release, gold, cases }) => ({ id: release.id, package: release.package, previous_version: release.previous_version, prs: release.prs, issues: release.issues, cases, gold: { notes_md: gold.notes_md, plan: gold.plan } })),
     e1: group(e1.rows), e3: group(e3.rows), e4: group(e4.rows),
   };
 }
@@ -370,5 +382,7 @@ if (import.meta.main) {
   writeFileSync(join(RESULTS, 'demo.json'), `${JSON.stringify(demoData(inputs, prompts))}\n`);
   writeFileSync(join(root, 'docs/findings.md'), renderFindings(summary, inputs));
   for (const file of ['summary.json', 'demo.json']) copyFileSync(join(RESULTS, file), join(root, 'site/data', file));
+  // The browser runs these very files. `.js` because static hosts do not all serve `.mjs` as a module.
+  for (const name of ['code', 'llm-core']) copyFileSync(join(root, `src/graders/${name}.mjs`), join(root, `site/js/${name}.js`));
   console.log(JSON.stringify({ used: summary.raw.used, summary_kb: readFileSync(join(RESULTS, 'summary.json')).length >> 10, demo_kb: readFileSync(join(RESULTS, 'demo.json')).length >> 10 }));
 }

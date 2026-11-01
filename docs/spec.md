@@ -73,9 +73,7 @@ Fakten, andere Worte, einzeln umformuliert), `reordered` (andere Reihenfolge der
 | `pairwise` | LLM vergleicht mit Gold-Fassung A/B, beide Reihenfolgen | Pairwise, LLM |
 | `functional` | Sandbox-Zustand: veröffentlicht, Version stimmt | Task-Success, Code |
 | `trajectory` | jeder Diff gelesen, bevor veröffentlicht wird | Trajectory, Code |
-| Mensch | der Leser in der Demo | Human |
 
-Die Spalte „Mensch" enthält keine erfundenen Werte. Sie zeigt nur, was der Leser in der Demo selbst bewertet.
 
 ## Experimente
 
@@ -112,18 +110,23 @@ Die Spalte „Mensch" enthält keine erfundenen Werte. Sie zeigt nur, was der Le
 
 ## Demo (statisch, GitHub Pages, deutsch)
 
-Eine Seite, kein Build-Zwang: `site/` mit HTML, CSS, JS-Modulen und den aggregierten JSONs. Keine API-Schlüssel, keine
-Laufzeit-Modellaufrufe. Abschnitte:
+Eine Werkbank, kein Artikel: `site/` mit HTML, CSS, JS-Modulen und den JSONs aus dem Report, ohne Build und ohne
+Laufzeit-Abhängigkeiten. Man baut Fehler in Release Notes ein und sieht sofort, welcher Grader anschlägt.
 
-1. **Der Agent:** Release wählen, PRs links, Notes rechts, Transcript aufklappbar. Sofort klar: das ist kein Chat.
-2. **Du bist der Grader:** ein paar Fassungen bewerten, danach Auflösung, Vergleich mit den Gradern. Stand nur lokal im Browser.
-3. **Die Matrix:** Heatmap Grader × Fehlerart, Klick auf eine Zelle zeigt konkretes Artefakt, Diff zur Gold-Fassung und Begründung des Judges.
-4. **Wem kannst du trauen:** TPR/TNR, Flakiness, Rechenbeispiel Pass-Rate-Korrektur mit Regler.
-5. **Ablenkung:** Ergebnis aus E3.
-6. **Was hier nicht gezeigt wird:** Grenzen, Repo-Link, Link zum Blogpost.
+- **Links, Artefakt:** Release und Fassung wählen (Gold, Mutationen, Kontrollen, echte Agent-Läufe aus E4), Chips zum
+  Einbauen eines Fehlers, editierbarer Text mit Diff zu Gold, Schalter für Bump, Version, „veröffentlicht“ und „alle Diffs
+  gelesen“, aufklappbar die PRs mit Diff.
+- **Rechts, Grader:** Die 7 Code-Grader laufen bei jeder Änderung im Browser. `npm run report` kopiert dafür
+  `src/graders/code.mjs` und `src/graders/llm-core.mjs` nach `site/js/`, ein Test prüft Byte-Gleichheit.
+- **Modell-Grader, drei Zustände:** Ist der Text aufgezeichnet, zeigt die Seite das aufgezeichnete Urteil samt Modell und
+  Wiederholungen. Ist er geändert und kein Key da, steht dort „nicht geprüft, braucht ein Modell“. Mit eigenem Key startet
+  „Judges prüfen“ 5 Aufrufe, das Ergebnis ist mit „live“ markiert und veraltet, sobald sich der Text ändert.
+- **Key:** nur im Eingabefeld der Seite, nicht in Storage, Cookie oder URL, geht direkt an OpenAI oder Anthropic. Fehlertexte
+  stammen von uns, Antworttexte der Anbieter werden bei Fehlern nie gelesen.
+- **Darunter:** Matrix Grader × Fehlerart als Tabelle, eine Zeile lädt die Fassung in die Werkbank. Dazu Grenzen und Links.
 
-Optik wie rubeen.dev: Tokens aus `design-system/`, orange Akzent, hell und dunkel, funktioniert auf dem Handy, Tastatur
-und Screenreader (Tabelle bleibt eine echte Tabelle, Farbe nie allein der Informationsträger).
+Optik wie rubeen.dev (Tokens aus dem Design-System „Lagebild“), hell und dunkel, funktioniert auf dem Handy, Tastatur und
+Screenreader, Farbe nie allein der Informationsträger.
 
 ## Struktur
 

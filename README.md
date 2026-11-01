@@ -10,15 +10,17 @@ Details in [docs/findings.md](docs/findings.md), Ablauf und Pannen in [docs/run-
 
 ## Demo
 
-`site/` ist die statische Demo, reines HTML, CSS und JS ohne Build und ohne Modellaufrufe. Sie braucht wegen `fetch` einen lokalen Server, alle Pfade sind relativ:
+`site/` ist eine statische Werkbank ohne Build: Fehler in Release Notes einbauen und sehen, welcher Grader anschlägt. Sie braucht wegen `fetch` einen lokalen Server, alle Pfade sind relativ:
 
 ```sh
 python3 -m http.server -d site 8000
 ```
 
-`npm run report` kopiert `summary.json` und `demo.json` nach `site/data/`. Alle Tabellen kommen von dort. Im Browser rechnet nur zweierlei: der Regler zur Pass-Rate, ein Test hält seine Formel gleich mit `src/aggregate.mjs`, und die Treffer-Balken im Bewertungsspiel, gezählt aus den Urteilen in `demo.json`.
+Die 7 Code-Grader laufen im Browser. `npm run report` kopiert dafür `src/graders/code.mjs` und `src/graders/llm-core.mjs` nach `site/js/`, dazu `summary.json` und `demo.json` nach `site/data/`. Ein Test baut jedes Artefakt aus E1 und E4 so nach wie die Seite und vergleicht mit den aufgezeichneten Urteilen.
 
-`scripts/check-site.cjs` spielt die Seite mit Playwright durch. Playwright ist bewusst keine Abhängigkeit, die Kopfzeile des Skripts sagt, wie es läuft.
+Die Modell-Grader zeigen aufgezeichnete Urteile, solange der Text einer Aufzeichnung entspricht. Für geänderten Text kann man mit eigenem OpenAI- oder Anthropic-Key live prüfen, das sind 5 Aufrufe pro Lauf. Der Key bleibt im Speicher der Seite und geht direkt an den Anbieter. Bei Anthropic läuft das Schema über `output_config.format`, weil erzwungenes `tool_choice` auf `claude-sonnet-5-5` mit 400 endet.
+
+`scripts/check-site.cjs` spielt die Seite mit Playwright durch, die Anbieter sind dabei gemockt. Playwright ist bewusst keine Abhängigkeit, die Kopfzeile des Skripts sagt, wie es läuft.
 
 ## Aufbau
 
@@ -28,7 +30,7 @@ python3 -m http.server -d site 8000
 - `graders/prompts/v1/`: eingefrorene Prompts und Parameter, siehe [README dort](graders/prompts/v1/README.md)
 - `data/raw/`: Rohantworten, `data/raw/smoke/` enthält nur Technik-Tests auf einer Toy-Fixture außerhalb der Auswertung
 - `data/results/`: Ergebnisse der Läufe, dazu `summary.json` (alle Kennzahlen) und `demo.json` (Daten für die Demo)
-- `site/`: statische Demo
+- `site/`: statische Werkbank
 
 ## Reproduzieren
 

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <title>Grader Lab</title>
-  <meta name="description" content="Fehler mit Absicht eingebaut, elf Grader gemessen: Jede Eval-Methode hat einen blinden Fleck.">
+  <meta name="description" content="Baue Fehler in Release Notes ein und sieh, welcher von elf Gradern anschlägt.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,201 +14,84 @@
   <script type="module" src="js/main.js"></script>
 </head>
 <body>
-  <a class="skip" href="#inhalt">Zum Inhalt</a>
-  <header class="site-header">
-    <a class="brand" href="https://rubeen.dev/"><span class="brand-mark" aria-hidden="true"></span>rubeen<span class="brand-tld">.dev</span></a>
-    <nav aria-label="Abschnitte">
-      <a href="#agent">Agent</a>
-      <a href="#grader">Selbst bewerten</a>
-      <a href="#matrix">Matrix</a>
-      <a href="#vertrauen">Vertrauen</a>
-      <a href="#ablenkung">Ablenkung</a>
-      <a href="#grenzen">Grenzen</a>
-    </nav>
-  </header>
+  <a class="skip" href="#board">Zu den Gradern</a>
+  <div class="top">
+    <header class="id">
+      <h1 class="brand"><span class="brand-mark" aria-hidden="true"></span>Grader Lab</h1>
+      <p class="pitch" data-prose>Baue Fehler in Release Notes ein und sieh, welcher Grader anschlägt.</p>
+    </header>
+    <div class="tally">
+      <ol class="lamps" id="lamps" aria-hidden="true"></ol>
+      <p class="count" id="count" role="status"></p>
+    </div>
+  </div>
 
-  <main id="inhalt">
-    <noscript><p class="wrap notice">Diese Demo rechnet nichts, braucht aber JavaScript, um die Ergebnisdaten darzustellen. Die Befunde stehen auch als Text in <a href="https://github.com/rubenvitt/grader-lab/blob/main/docs/findings.md"><code>docs/findings.md</code></a> im Repo.</p></noscript>
-    <p id="load-error" class="wrap notice" role="alert" hidden></p>
-
-    <section class="hero wrap">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-text">
-        <p class="meta" id="hero-meta" hidden>Grader Lab: <span data-fact="faultKinds"></span> Fehlerarten, <span data-fact="graders"></span> Grader, <span data-fact="calls"></span> Modellaufrufe</p>
-        <h1>Jede Eval-Methode hat einen <mark>blinden Fleck</mark></h1>
-        <p class="lead">Ein Agent schreibt Release Notes. Wir testen die Grader, die ihn bewerten, wie Code: Beim Mutation Testing bauen wir Fehler mit Absicht ein und messen, welcher Grader welchen findet. Kein Grader findet alle zwölf, und der strengste lässt auch alle nur annähernd fehlerfreien Kontrollen durchfallen.</p>
-        <p class="lead">Daraus folgt: Ein Grader ist selbst ein System, das getestet werden muss. Und hohe Werte auf Mutationen beweisen wenig für echte Läufe.</p>
+  <main class="bench">
+    <section class="artifact" aria-label="Artefakt">
+      <div class="pick">
+        <div class="seg" id="releases" role="group" aria-label="Release"></div>
+        <label class="field">Fassung <select id="variant"></select></label>
+        <button type="button" class="quiet" id="reset">Zurücksetzen</button>
       </div>
-      <figure class="hero-map">
-        <a href="#matrix" aria-label="Zur Matrix: Grader mal Fehlerart" id="hero-map"></a>
-        <figcaption>Volle Felder: alle Fälle gefunden. Halbe: ein Teil. Leere: blinder Fleck. Schraffiert: durchgefallen, aber kein Fund. Rechts vier Kontrollen ohne eingebauten Fehler, ein Feld dort ist Fehlalarm.</figcaption>
-      </figure>
-    </section>
-
-    <section id="begriffe" class="wrap" aria-labelledby="h-terms">
-      <div class="intro">
-        <h2 id="h-terms">Begriffe</h2>
-      </div>
-      <dl class="terms">
-        <div><dt>Eval</dt><dd>Eine automatische Prüfung, ob ein KI-System seine Aufgabe gut erledigt.</dd></div>
-        <div><dt>Grader</dt><dd>Der Teil eines Evals, der ein Ergebnis bestehen oder durchfallen lässt: Code, ein Wortfilter oder ein Sprachmodell.</dd></div>
-        <div><dt>Judge</dt><dd>Ein Grader, bei dem ein Sprachmodell urteilt.</dd></div>
-        <div><dt>Rubric</dt><dd>Die Kriterienliste, nach der die Judges urteilen, hier R1 bis R9.</dd></div>
-        <div><dt>Gold-Fassung</dt><dd>Das einzeln geschriebene Musterergebnis zu einem Release, nicht generiert und selbst nicht fehlerfrei.</dd></div>
-        <div><dt>Mutation</dt><dd>Eine Gold-Fassung mit einem absichtlich eingebauten Fehler.</dd></div>
-        <div><dt>Kontrolle</dt><dd>Eine Fassung ohne eingebauten Fehler. Sie darf keinen Alarm auslösen.</dd></div>
-        <div><dt>Label</dt><dd>Das Urteil, das als richtig gilt. Hier: ob wir einen Fehler eingebaut haben.</dd></div>
-        <div><dt>Bump</dt><dd>Welcher Teil der Versionsnummer steigt: major, minor oder patch.</dd></div>
-      </dl>
-      <details class="fold">
-        <summary>Die Rubric: R1 bis R9</summary>
-        <dl class="terms" id="rubric"></dl>
+      <div class="chips" id="chips" role="group" aria-label="Fehler einbauen"></div>
+      <label class="sr" for="notes">Release Notes</label>
+      <textarea id="notes" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+      <div class="diff" id="diff"></div>
+      <fieldset class="switches">
+        <legend class="sr">Was nicht im Text steht</legend>
+        <label class="field">Bump
+          <select id="bump">
+            <option value="major">major</option><option value="minor">minor</option><option value="patch">patch</option><option value="">keiner</option>
+          </select>
+        </label>
+        <label class="field">Version <input id="version" autocomplete="off" spellcheck="false"></label>
+        <label class="check"><input type="checkbox" id="published"> veröffentlicht</label>
+        <label class="check"><input type="checkbox" id="diffs"> alle Diffs gelesen <span class="dim" id="diff-count"></span></label>
+      </fieldset>
+      <details class="prs">
+        <summary>PRs dieses Release <span class="dim" id="pr-count"></span></summary>
+        <div id="prs"></div>
       </details>
     </section>
 
-    <section id="agent" class="wrap" aria-labelledby="h-agent">
-      <div class="intro">
-        <h2 id="h-agent">Der Agent</h2>
-        <p>Kein Chat, kein Dialog. Der Agent bekommt die gemergten PRs seit dem letzten Tag der fiktiven TypeScript-Bibliothek <code>quaykit</code>, liest PRs und Diffs, legt die Version fest, schreibt die Notes und veröffentlicht. Alle Läufe unten sind echt, gefahren mit <code data-fact="agentModel"></code>, mit einem knappen und einem ausführlichen Prompt. Der sorgfältige sagt unter anderem: Lies jeden Diff, Titel können täuschen.</p>
+    <section class="board" id="board" aria-label="Grader">
+      <div class="group-head"><h2>Code, läuft sofort</h2></div>
+      <ul class="rows" id="code-rows"></ul>
+      <div class="group-head">
+        <h2>Modell</h2>
+        <p class="source" id="model-source"></p>
+        <button type="button" id="run" hidden></button>
       </div>
-      <div id="agent-app"></div>
-    </section>
-
-    <section id="grader" class="wrap" aria-labelledby="h-grader">
-      <div class="intro">
-        <h2 id="h-grader">Du bist der Grader</h2>
-        <p>Sechs Fassungen derselben Notes zu einem Release. Einige sind ohne eingebauten Fehler, in anderen steckt einer. Du siehst die Notes, PRs und Diffs lassen sich daneben aufklappen. Würdest du die Fassung bestehen lassen? Danach zeigen wir, was drinsteckt und wie die Grader geurteilt haben. Dein Stand bleibt in deinem Browser.</p>
-        <p><strong>Maßstab:</strong> Jede Aussage ist belegt, Breaking Changes stehen unter „Breaking Changes“, ein Nutzer erkennt, was er tun muss, der Ton ist sachlich.</p>
-      </div>
-      <div id="game-app"></div>
-    </section>
-
-    <section id="matrix" class="wrap" aria-labelledby="h-matrix">
-      <div class="intro">
-        <h2 id="h-matrix">Die Matrix</h2>
-        <p>Zeilen sind Fehlerarten, Spalten Grader, jede Zelle zählt die durchgefallenen Artefakte. Bei Mutationen ist das die Fundrate, bei den Kontrollen die Zahl der Fehlalarme. Ob ein Fehler drinsteckt, wissen wir, weil wir ihn selbst eingebaut haben: <span data-fact="artifacts"></span> Artefakte, davon <span data-fact="mutations"></span> Mutationen und <span data-fact="controls"></span> Kontrollen. Ein Nenner unter 6 heißt, dass die Fehlerart in manchen Releases nicht definiert ist, etwa ein Embargo-Leck ohne Embargo-Fix.</p>
-        <p>Eine Zelle öffnet das Artefakt, den Diff zur Gold-Fassung und die Begründung. In der Tabelle bewegen dich die Pfeiltasten, Enter öffnet.</p>
-      </div>
-      <p class="scroll-hint">Die Tabelle lässt sich seitlich scrollen. Die Grader mit Modell stehen rechts.</p>
-      <div id="matrix-app"></div>
-      <ul class="legend" aria-label="Legende">
-        <li><span class="swatch cell-full">6/6</span> alle gefunden</li>
-        <li><span class="swatch cell-part">2/6</span> ein Teil gefunden</li>
-        <li><span class="swatch cell-none">0/6</span> blinder Fleck, bei Kontrollen: kein Fehlalarm</li>
-        <li><span class="swatch cell-alarm">6/6 !</span> Fehlalarm auf einer Kontrolle</li>
-        <li><span class="swatch cell-noise">6/6 †</span> kein Fund, siehe unten</li>
-        <li><span class="swatch cell-you">1/1</span> Du: durchfallen lassen, 0/1 heißt bestehen lassen</li>
-      </ul>
-      <div class="grader-list">
-        <h3>Die elf Grader</h3>
-        <dl class="terms" id="graders"></dl>
-      </div>
-      <div class="reading">
-        <h3>Was hier auffällt</h3>
-        <ul>
-          <li><code>judge-sourced</code> füllt seine ganze Spalte, auch bei den <span data-fact="controls"></span> Kontrollen: TPR <span data-fact="jsrcTpr"></span>, TNR <span data-fact="jsrcTnr"></span>. Seine Fundrate von 100 % sagt allein deshalb nichts. Eine Zusatzprüfung, nach den Läufen definiert, zeigt: Er meldet meist wirklich den eingebauten Fehler, lehnt daneben aber auch Texte ohne eingebauten Fehler ab. Er ist streng und zugleich teils im Recht, ohne Labels ist das nicht trennbar: In <span data-fact="goldReleases"></span> Releases wiederholt er Vorwürfe gegen Gold in allen drei Wiederholungen. Die TPR von <span data-fact="jsrcTpr"></span> beschreibt also Grader, Rubric, Gold und Diff-Ausschnitte zusammen.</li>
-          <li>† Bei <code>false-success</code> und <code>lucky-path</code> ist der Treffer von <code>judge-sourced</code> kein Fund. Er sieht denselben Text wie bei Gold und lehnt ihn genauso ab. Diese beiden Fehler finden nur <code>functional</code> und <code>trajectory</code>.</li>
-          <li><code>judge-blind</code> findet Fehler in Form und Ton, inhaltliche kaum: 1/6 erfundene Aussagen, 0/6 Verweise auf nicht existierende PRs. Das liegt auch am Prompt: „Was sich ohne Quellen nicht prüfen lässt, gilt als erfüllt.“</li>
-          <li><code>pairwise</code> sieht die erfundene PR-Nummer und nennt sie im Klartext. Ohne Quellen gelten ihm beide Fassungen trotzdem als gleichwertig, 0/6. Er erfährt nicht, welche Fassung Gold ist, und soll nur beurteilen, was sich aus den beiden Texten ergibt. <code>pr-refs</code> findet alle sechs und kostet keinen Modellaufruf.</li>
-          <li><code>ref-similarity</code> schlägt bei allen 6 Paraphrasen falsch an und übersieht jeden fehlenden Breaking Change: Fehlerfälle liegen näher an Gold als korrekte Paraphrasen. Eine fehlende Zeile bleibt über der Schwelle von 0,7. Die Schwelle ist dabei knapp, die Paraphrasen liegen bei <span data-fact="simParaphrase"></span>. Bei 0,55 bestünden alle, ohne dass ein Fund verloren geht, das ist eine nachträgliche Rechnung.</li>
-        </ul>
-        <details class="fold">
-          <summary>Was <code>judge-sourced</code> den Gold-Texten vorwirft</summary>
-          <p>Die Themen sind von Hand benannt, die Zahlen stammen aus den Rohdaten. Ob ein Vorwurf trifft, entscheidet kein Label. Vorwürfe aus nur einer Wiederholung fehlen. Die Zeilen mit 0 von 3 stehen hier, weil Gold in r2 und r6 denselben Satz enthält wie in r3, gemeldet hat er ihn dort aber nie.</p>
-          <div id="gold-claims"></div>
-        </details>
-        <details class="fold">
-          <summary>Was wir vorher erwartet haben, und was eintrat</summary>
-          <p>Die Erwartung stand vor den Läufen fest. Die Einstufung in der Spalte „Ergebnis“ ist eine nachträgliche Lesart, keine Fundzahl ändert sich dadurch. „Eingetreten“ heißt: Alle Erwarteten finden alle Fälle, bei „nur“ findet zudem kein anderer etwas.</p>
-          <div id="hypotheses"></div>
-        </details>
-      </div>
-    </section>
-
-    <section id="vertrauen" class="wrap" aria-labelledby="h-trust">
-      <div class="intro">
-        <h2 id="h-trust">Wem kannst du trauen</h2>
-        <p>Vorsicht bei der Richtung: Hier heißt „positiv“ bestanden. <strong>TPR</strong> ist der Anteil fehlerfreier Fälle, die der Grader bestehen lässt. <strong>TNR</strong> ist der Anteil fehlerhafter Fälle, die er durchfallen lässt. Beides stammt aus dem Experiment mit eingebauten Fehlern: TPR aus den Kontrollen, TNR aus den Mutationen. Die letzte Spalte zeigt dieselben Grader auf den <span data-fact="runs"></span> Läufen des echten Agenten. Dort gibt es keine Labels und deshalb weder TPR noch TNR, nur die Zahl der bestandenen Läufe.</p>
-      </div>
-      <div id="rates"></div>
-      <p class="note">„Je Text“ gilt nur für LLM-Grader: <code>gold</code>, <code>extra-diligent</code>, <code>false-success</code> und <code>lucky-path</code> haben denselben Text und teilen sich die Judge-Aufrufe. Die erste TNR zählt sie mehrfach, <code>false-success</code> und <code>lucky-path</code> senken sie, obwohl kein Judge diese Fehler sehen kann.</p>
-
-      <p class="note">Die TPR von 1,00 entsteht zum großen Teil durch die Konstruktion: <span data-fact="selfControls"></span> Kontrollen sind Gold selbst. Ohne diesen Selbstvergleich bestehen bei <code>judge-ref</code>, <code>judge-blind</code> und <code>pairwise</code> <span data-fact="noSelf"></span> Texten, davon nur <span data-fact="paraphrases"></span> Paraphrasen vom selben Autor.</p>
-      <p class="note">Die Fallzahlen sind klein. 95-%-Bereiche: <code>judge-ref</code> TNR je Text <span data-fact="jrefTnrRange"></span>, <code>judge-sourced</code> TPR je Text <span data-fact="jsrcTprRange"></span>, bestandene Agent-Läufe <code>judge-ref</code> <span data-fact="jrefE4Range"></span> und <code>judge-sourced</code> <span data-fact="jsrcE4Range"></span>. Eine Matrixzelle mit 3/3 entspricht <span data-fact="cellRange"></span>. Alle Fälle stammen aus sechs Releases eines Autors, die Bereiche sind also eher zu eng.</p>
-
-      <div class="prose-block">
-        <h3>Mutationen ersetzen keine echten Läufe</h3>
-        <p><code>judge-ref</code> findet auf den Mutationen <span data-fact="jrefMut"></span> Fehlern im Text (gezählt über alle Mutationen <span data-fact="jrefMutAll"></span>), ohne einen Fehlalarm. Auf echten Agent-Texten lässt er nur <span data-fact="jrefE4"></span> bestehen. Er verlangt jedes Detail der Referenz, und Mutationen sind per Bau nah an ihr, echte Texte nicht. Wie viele dieser Ablehnungen berechtigt sind, bleibt ohne Labels offen. <code>judge-sourced</code> läuft umgekehrt: alle Kontrollen durchgefallen, aber <span data-fact="jsrcE4"></span> Agent-Texte bestanden.</p>
-        <p>Die vier LLM-Grader sind sich in <span data-fact="llmSplit"></span> Läufen uneinig. Jeder urteilt dort nur einmal, die Zahl kann also Rauschen enthalten. Vier Läufe zeigen, wie unterschiedlich das aussehen kann:</p>
-      </div>
-      <ul class="cases" id="cases"></ul>
-
-      <div class="split">
-        <div>
-          <h3>Rechenbeispiel: Pass-Rate korrigieren</h3>
-          <p>Mit TPR und TNR lässt sich eine beobachtete Pass-Rate nach Rogan-Gladen korrigieren. Die Formel setzt voraus, dass beide Werte auf den neuen Daten gelten. Hier gelten sie nachweislich nicht. Dieselben <span data-fact="runs"></span> Texte ergeben je nach Grader Werte von <span data-fact="roganRange"></span>, mit den Werten je Text von <span data-fact="roganRangeText"></span>. Die Spanne hängt also auch an der Zählweise. Bei <code>judge-ref</code> entsteht die Null nur durch die <span data-fact="invisible"></span> Fälle, die kein Judge sehen kann. Das Beispiel zeigt die Grenze der Korrektur, nicht die Qualität des Agenten.</p>
-          <div id="rogan"></div>
+      <ul class="rows" id="model-rows"></ul>
+      <details class="token" id="token" open>
+        <summary>Mit eigenem Key live prüfen</summary>
+        <div class="token-fields">
+          <label class="field">Anbieter <select id="provider"></select></label>
+          <label class="field grow">Key <input type="password" id="key" autocomplete="off" spellcheck="false" autocapitalize="off" data-1p-ignore data-lpignore="true" data-bwignore></label>
+          <label class="field">Modell <input id="model" autocomplete="off" spellcheck="false"></label>
         </div>
-        <div>
-          <h3>Stabilität</h3>
-          <p>Anteil der Fälle, in denen die drei Wiederholungen nicht einig sind. Auf diesen gold-nahen Texten ist die Flakiness gering. Auf echten Texten ist sie nicht gemessen, dort urteilt jeder LLM-Grader genau einmal.</p>
-          <div id="flakiness"></div>
-          <p class="note">Die Reihenfolge wirkt stärker: Bei <code>pairwise</code> antworten beide Reihenfolgen in <span data-fact="orderMismatch"></span> Wiederholungen nicht gleich, ohne die Selbstvergleiche sind es <span data-fact="orderNoSelf"></span>. Davon war <span data-fact="orderFlips"></span> eine echte Umkehr. Die Regel lässt eine Fassung nur durchfallen, wenn Gold in beiden Reihenfolgen gewinnt. Das fängt die Fälle ab, drückt aber auch die Fundrate.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="ablenkung" class="wrap" aria-labelledby="h-distraction">
-      <div class="intro">
-        <h2 id="h-distraction">Ablenkung</h2>
-        <p>Lässt sich ein Vergleich von selbstbewusstem Ton eher täuschen als eine absolute Bewertung? So fragen Tripathi et al. Hier eine kleine Nachstellung: Pro Release eine erfundene Aussage, einmal neutral, einmal selbstbewusst formuliert. Alle Fassungen sind fehlerhaft, jedes Bestehen ist ein Fehlurteil.</p>
-        <p class="claim">Mit diesem Aufbau nicht prüfbar: Die selbstbewussten Fassungen verletzen die Rubric zusätzlich und ändern den Inhalt.</p>
-      </div>
-      <div id="distraction"></div>
-      <div class="prose-block">
-        <p>Selbstbewusster Ton machte <span data-fact="softer"></span> milder und <span data-fact="harsher"></span> strenger. Das sagt über Ablenkung nichts. Geplant war gleicher Inhalt, die selbstbewussten Fassungen fügen aber in allen sechs Releases neue Zusicherungen hinzu, etwa „guaranteed“, „without exception“ oder „proven“. Damit verstoßen sie gegen die Kriterien R7 (Ton) und R2 (Belegt), und die Judges wenden die Regeln korrekt an.</p>
-        <p>Bei <code>pairwise</code> fallen alle <span data-fact="pairConfident"></span> selbstbewussten Wiederholungen durch, neutral <span data-fact="pairNeutral"></span>. In allen Begründungen stehen unbelegte Garantien oder Aussagen, nicht nur der Ton. Bei <code>judge-blind</code> nennen <span data-fact="blindTone"></span> durchgefallenen Wiederholungen den Ton, die Erfindung bleibt laut Begründung ungeprüft. Die Reihenfolge spielt hier kaum eine Rolle: <span data-fact="e3Flips"></span> echte Umkehrungen und <span data-fact="e3Mismatch"></span> ungleiche Antworten in <span data-fact="e3Order"></span> Wiederholungen.</p>
-        <p><code>pairwise</code> vergleicht zudem nur gegen Gold, nie neutral gegen selbstbewusst, und n sind sechs Releases. Eine Fassung, die im Ton innerhalb der Rubric bleibt und den Inhalt nicht ändert, wäre ein neuer Lauf.</p>
-      </div>
-      <details class="fold">
-        <summary>Beide Fassungen im Vergleich (r1)</summary>
-        <div id="distraction-diff"></div>
+        <p class="hint" data-prose>Der Key bleibt im Browser, geht direkt an den Anbieter und kostet dich Tokens.</p>
       </details>
-    </section>
-
-    <section id="grenzen" class="wrap" aria-labelledby="h-limits">
-      <div class="intro">
-        <h2 id="h-limits">Was hier nicht gezeigt wird</h2>
-        <p>Das Experiment ist klein. Diese Grenzen gehören zum Ergebnis.</p>
-      </div>
-      <ul class="limits">
-        <li><strong>Synthetische Fixtures, kleine Fallzahl.</strong> Sechs Releases einer erfundenen Bibliothek, <span data-fact="artifacts"></span> Artefakte, vier von zwölf Fehlerarten mit nur drei Fällen. Die Unterschiede zwischen Gradern sind Hinweise, keine Benchmarks.</li>
-        <li><strong>Ein Autor.</strong> Mutationen, Gold und Grader stammen von derselben Hand. Die Wortlisten von <code>wording</code> sind nach den Mutationen entstanden, seine Fundrate dort ist eine Obergrenze.</li>
-        <li><strong>Gold ist nicht fehlerfrei.</strong> In r5 übergeht die Gold-Migration <code>pause(false)</code>, <code>judge-sourced</code> hat dort recht. Stabile Vorwürfe gegen Gold gibt es in <span data-fact="goldReleases"></span> Releases. Die Kontrollen sind also nur annähernd fehlerfrei. Fixtures und Labels bleiben trotzdem unverändert.</li>
-        <li><strong>Ein Modellstand.</strong> Agent <code data-fact="agentModel"></code>, Judges <code data-fact="judgeModel"></code>, Effort <code data-fact="effort"></code>. Andere Modelle sind nicht gemessen.</li>
-        <li><strong>Keine menschlichen Labels.</strong> Die Spalte „Du“ zeigt nur, was du selbst bewertet hast. Für die Läufe des echten Agenten gibt es kein Label, nur Widersprüche zwischen Gradern. Die Einordnung der Beispiele stammt vom Autor, nicht aus einer Messung.</li>
-        <li><strong>Kontrollen vergleichen teils Gold mit sich selbst.</strong> Das stützt die Werte von <code>judge-ref</code>, <code>judge-blind</code> und <code>pairwise</code>, echt gefordert sind sie nur auf <span data-fact="paraphrases"></span> Paraphrasen.</li>
-        <li><strong>Die Prompts bestimmen die blinden Flecken mit.</strong> <code>judge-blind</code> soll als erfüllt werten, was sich ohne Quellen nicht prüfen lässt. <code>pairwise</code> erfährt nicht, welche Fassung die Referenz ist. Ein Teil der Fundraten beider Grader folgt aus diesen Anweisungen, nicht allein aus der Methode.</li>
-        <li><strong>Diffs sind Ausschnitte.</strong> Das begünstigt die „unbelegt“-Vorwürfe von <code>judge-sourced</code>. Mit vollständigen Diffs könnte seine TPR anders ausfallen, das ist nicht gemessen.</li>
-        <li><strong>Nachträgliche Prüfung.</strong> Die Rubrics und Prompts wurden vor der Messung der Matrix eingefroren und blieben unverändert. Nachträglich entstanden die Auswertungen je Text, die Zuordnung der Hypothesen und die Trefferprüfung.</li>
-      </ul>
-      <p class="links">
-        <a class="btn btn-primary" href="https://rubeen.dev/blog/">Zum Blog</a>
-        <a class="btn" href="https://github.com/rubenvitt/grader-lab">Code und Rohdaten ansehen</a>
-      </p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <span>Grader Lab, Apache-2.0</span>
-    <a href="https://rubeen.dev/">rubeen.dev</a>
-  </footer>
-
-  <dialog id="detail" aria-labelledby="detail-title">
-    <div class="dialog-inner">
-      <form method="dialog" class="dialog-close"><button class="btn btn-s">Schließen</button></form>
-      <div id="detail-body"></div>
+  <section class="matrix" aria-labelledby="matrix-title">
+    <div class="group-head">
+      <h2 id="matrix-title">Grader × Fehlerart</h2>
+      <p class="source">gefunden von Fällen, Zeile lädt die Fassung</p>
     </div>
-  </dialog>
+    <div class="matrix-scroll" tabindex="0" role="region" aria-labelledby="matrix-title">
+      <table id="matrix"></table>
+    </div>
+  </section>
+
+  <footer class="limits">
+    <p data-prose>Grenzen: synthetische Daten, kleine Fallzahl, Grader und Fehler aus einer Hand, keine menschlichen Labels, Gold selbst nicht fehlerfrei.</p>
+    <nav aria-label="Weiterlesen">
+      <a href="https://rubeen.dev/blog/">Blogpost</a>
+      <a href="https://github.com/rubenvitt/grader-lab">Repo</a>
+      <a href="https://github.com/rubenvitt/grader-lab/blob/main/docs/findings.md">docs/findings.md</a>
+    </nav>
+  </footer>
 </body>
 </html>
