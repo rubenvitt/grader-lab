@@ -25,7 +25,7 @@ Warum dieses Beispiel: Entwickler beurteilen Release Notes selbst auf einen Blic
 ## Fixtures (komplett synthetisch)
 
 6 Releases in `fixtures/releases/<id>/`, je 6 bis 10 PRs mit Titel, Labels, Body, Diff-Ausschnitt, optional Issue.
-Dazu pro Release eine Gold-Fassung (`gold.json`, von Hand geschrieben). Jede Fallart kommt mindestens in zwei
+Dazu pro Release eine Gold-Fassung (`gold.json`, einzeln geschrieben). Jede Fallart kommt mindestens in zwei
 Releases vor:
 
 - versteckter Breaking Change (`chore:`-Titel, Diff ändert Default oder benennt öffentliche Option um)
@@ -37,7 +37,7 @@ Releases vor:
 
 ## Mutationen (Label durch Konstruktion)
 
-Jede Mutation ist eine kleine, von Hand für das jeweilige Release formulierte Änderung am Gold-Artefakt.
+Jede Mutation ist eine kleine, einzeln für das jeweilige Release formulierte Änderung am Gold-Artefakt.
 
 | ID | Fehler | Erwartung, wer ihn sehen kann |
 |---|---|---|
@@ -55,7 +55,7 @@ Jede Mutation ist eine kleine, von Hand für das jeweilige Release formulierte �
 | `lucky-path` | Ergebnis korrekt, Diffs nie gelesen | nur Trajectory |
 
 Dazu **fehlerfreie Kontrollen**, die keinen Alarm auslösen dürfen: `gold` (unverändert), `paraphrase` (gleiche
-Fakten, andere Worte, von Hand umformuliert), `reordered` (andere Reihenfolge der Abschnitte), `extra-diligent`
+Fakten, andere Worte, einzeln umformuliert), `reordered` (andere Reihenfolge der Abschnitte), `extra-diligent`
 (Agent ruft zusätzlich `get_issue` auf, korrekt, aber abweichender Weg).
 
 ## Grader

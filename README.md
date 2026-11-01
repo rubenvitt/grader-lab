@@ -22,7 +22,7 @@ python3 -m http.server -d site 8000
 
 ## Aufbau
 
-- `fixtures/src/`: von Hand geschriebene Releases der fiktiven Bibliothek quaykit, Mutationen und Kontrollen
+- `fixtures/src/`: einzeln geschriebene (nicht generierte) Releases der fiktiven Bibliothek quaykit, Mutationen und Kontrollen
 - `fixtures/releases/`: daraus erzeugte JSON-Dateien (`npm run fixtures`)
 - `src/`: Engine, Grader, Mutationen, Agent, Aggregation, Runner
 - `graders/prompts/v1/`: eingefrorene Prompts und Parameter, siehe [README dort](graders/prompts/v1/README.md)
@@ -52,9 +52,9 @@ Der Runner begrenzt auf 6 parallele Aufrufe und 1.500 insgesamt, gezählt über 
 ## Grenzen
 
 - Synthetische Fixtures, kleine Fallzahl
-- Mutationen stammen vom selben Autor wie die Grader
+- Mutationen stammen vom selben Autor wie die Grader, einem Coding Agent, der das Lab nach der Spezifikation gebaut hat
 - Ein Modellstand, keine menschlichen Labels
-- Gold ist von Hand geschrieben und nicht fehlerfrei, die Kontrollen sind also nur annähernd fehlerfrei. Beispiele in [docs/findings.md](docs/findings.md).
+- Gold ist einzeln geschrieben, stammt wie Fixtures, Mutationen, Rubric und Grader vom Coding Agent, der dieses Lab im Auftrag gebaut hat, und ist nicht fehlerfrei, die Kontrollen sind also nur annähernd fehlerfrei. Beispiele in [docs/findings.md](docs/findings.md).
 - Ein Teil der Kontrollen vergleicht Gold mit sich selbst, echt gefordert sind die Grader nur auf 6 Paraphrasen.
 - Die Prompts von `judge-blind` und `pairwise` bestimmen deren Fundraten mit: `judge-blind` wertet Ungeprüftes als erfüllt, `pairwise` erfährt nicht, welche Fassung die Referenz ist.
 - Nachträglich entstanden die Auswertungen je Text, die Zuordnung der Hypothesen, die Trefferprüfung und die Schwellen-Tabelle zu `ref-similarity`. Die eingefrorenen Regeln und Spec-Zahlen stehen daneben.
